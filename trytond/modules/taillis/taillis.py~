@@ -1,0 +1,42 @@
+#coding: utf-8
+"""
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2013 Pascal Obstetar
+Copyright (c) 2013 Pierre-Louis Bonicoli
+
+"""
+
+from trytond.model import ModelView, ModelSQL, fields
+
+__all__ = ['Taillis']
+
+class Taillis(ModelSQL, ModelView):
+    'Taillis'
+    __name__ = 'taillis.taillis'
+    _rec_name = 'tai_dispositif'
+
+    tai_dispositif = fields.Many2One('dispositif.dispositif', 'Dispositif', required=True, help='Dispositif')
+    tai_essence = fields.Many2One('essence.essence', 'Essence', required=True, help='Essence')
+    tai_cycle = fields.Integer('Cycle', help='num du cycle')
+    tai_placette = fields.Integer('Placette', help='Num de la placette')
+    tai_quart = fields.Integer('Quart', help='Quart de la placette')
+    tai_azimut = fields.Integer('Azimut')
+    tai_distance = fields.Float('Distance', help='Distance en dm')
+    tai_nombre = fields.Integer('Nombre', help='Nombre de brins')
+    tai_diam_moy = fields.Integer(u'Diamètre moyen')
+    tai_haut_moy = fields.Float('Hauteur moyenne')
+    tai_observation = fields.Text('Observation')

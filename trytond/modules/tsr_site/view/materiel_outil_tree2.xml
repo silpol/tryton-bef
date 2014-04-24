@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Matériel - Outil">
+    <field name="materiel" />  
+    <field name="code" />
+    <field name="name" />
+</tree>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Subdivision Section">
+    <field name="subdsect" />
+    <field name="idu" />				    
+    <field name="qupl" />
+    <field name="copl" />    
+    <field name="eor" />
+    <field name="dedi" />
+    <field name="icl" />
+    <field name="dis" />
+    <field name="inp" />
+    <field name="dred" />
+</tree>

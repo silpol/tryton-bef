@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<form string="Plot popular" col="2">
+    <notebook colspan="2">
+        <page string="Général" id="general">
+            <label name="idp" />
+            <field name="idp" />
+            <label name="dep" />
+            <field name="dep" />
+            <label name="entp" />
+            <field name="entp" />
+            <label name="csa" />
+            <field name="csa" />
+            <label name="uta1" />
+            <field name="uta1" />
+            <label name="uta2" />
+            <field name="uta2" />
+            <label name="tm2" />
+            <field name="tm2" />
+            <label name="plisi" />
+            <field name="plisi" />
+            <label name="elisi" />
+            <field name="elisi" />
+            <label name="incid" />
+            <field name="incid" />
+            <label name="peupnr" />
+            <field name="peupnr" />
+            <label name="dc" />
+            <field name="dc" />
+            <label name="dcespar1" />
+            <field name="dcespar1" />
+            <label name="dcespar2" />
+            <field name="dcespar2" />
+            <label name="tplant" />
+            <field name="tplant" />
+            <label name="dist" />
+            <field name="dist" />
+            <label name="iti" />
+            <field name="iti" />
+            <label name="pentexp" />
+            <field name="pentexp" />
+            <label name="portance" />
+            <field name="portance" />
+            <label name="asperite" />
+            <field name="asperite" />
+            <label name="cac" />
+            <field name="cac" />
+        </page>
+        <page string="Map" id="map">
+            <label name="noeud"/>
+            <field name="noeud"/>
+        </page>
+    </notebook>
+</form>

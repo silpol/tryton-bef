@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Coarse">
+    <field name="species" />
+    <field name="plot" />
+    <field name="num" />
+    <field name="measure" />
+</tree>

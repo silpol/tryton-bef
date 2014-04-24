@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.action.act_window" id="act_script">
+            <field name="name">Script</field>
+            <field name="res_model">rtryton.script</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_data">
+            <field name="name">Data</field>
+            <field name="res_model">rtryton.data</field>
+        </record>
+
+        <menuitem id="script" icon="tryton-list" action="act_script"/>
+        <menuitem id="data" icon="tryton-list" action="act_data"/>
+    </data>
+</tryton>

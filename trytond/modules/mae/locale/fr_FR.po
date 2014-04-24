@@ -1,0 +1,816 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstétar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:allo_quoi.allo:"
+msgid "The address is invalid, no city is defined!"
+msgstr "L'adresse est invalide, pas de ville définie !"
+
+msgctxt "field:allo_quoi.allo,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:allo_quoi.allo,address:"
+msgid "Address"
+msgstr "Adresse"
+
+msgctxt "field:allo_quoi.allo,comment:"
+msgid "Commentaires"
+msgstr "Commentaires"
+
+msgctxt "field:allo_quoi.allo,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:allo_quoi.allo,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:allo_quoi.allo,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:allo_quoi.allo,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:allo_quoi.allo,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:allo_quoi.allo,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:allo_quoi.allo,image_all:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:allo_quoi.allo,image_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:allo_quoi.allo,image_map_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:allo_quoi.allo,party:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:allo_quoi.allo,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:allo_quoi.allo,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:allo_quoi.allo,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:allo_quoi.allo,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:allo_quoi.typologie,code:"
+msgid "Code du type d'incident"
+msgstr "Code du type d'incident"
+
+msgctxt "field:allo_quoi.typologie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:allo_quoi.typologie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:allo_quoi.typologie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:allo_quoi.typologie,lib_long:"
+msgid "Libellé long du code de l'incident"
+msgstr "Libellé long du code de l'incident"
+
+msgctxt "field:allo_quoi.typologie,name:"
+msgid "Libellé court du code de l'incident"
+msgstr "Libellé court du code de l'incident"
+
+msgctxt "field:allo_quoi.typologie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:allo_quoi.typologie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:allo_quoi.typologie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:garden.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:garden.code,name:"
+msgid "Short name of code"
+msgstr "Nom du code"
+
+msgctxt "field:garden.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.convention,abri:"
+msgid "Abri"
+msgstr "Abri"
+
+msgctxt "field:garden.convention,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:garden.convention,cloture:"
+msgid "Cloture"
+msgstr "Cloture"
+
+msgctxt "field:garden.convention,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.convention,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.convention,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:garden.convention,entretien:"
+msgid "Entretien"
+msgstr "Entretien"
+
+msgctxt "field:garden.convention,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "field:garden.convention,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.convention,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:garden.convention,owner:"
+msgid "Owner"
+msgstr "Propriétaire"
+
+msgctxt "field:garden.convention,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:garden.convention,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.convention,utilisation:"
+msgid "Utilisation"
+msgstr "Utilisation"
+
+msgctxt "field:garden.convention,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.convention,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.convention-garden.abri,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:garden.convention-garden.abri,convention:"
+msgid "convention"
+msgstr ""
+
+msgctxt "field:garden.convention-garden.abri,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.convention-garden.abri,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.convention-garden.abri,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.convention-garden.abri,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.convention-garden.abri,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.convention-garden.abri,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.convention-garden.cloture,code:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:garden.convention-garden.cloture,convention:"
+msgid "convention"
+msgstr ""
+
+msgctxt "field:garden.convention-garden.cloture,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.convention-garden.cloture,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.convention-garden.cloture,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.convention-garden.cloture,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.convention-garden.cloture,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.convention-garden.cloture,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.convention-garden.entretien,code:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:garden.convention-garden.entretien,convention:"
+msgid "convention"
+msgstr ""
+
+msgctxt "field:garden.convention-garden.entretien,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.convention-garden.entretien,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.convention-garden.entretien,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.convention-garden.entretien,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.convention-garden.entretien,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.convention-garden.entretien,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.convention-garden.utilisation,code:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:garden.convention-garden.utilisation,convention:"
+msgid "convention"
+msgstr ""
+
+msgctxt "field:garden.convention-garden.utilisation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.convention-garden.utilisation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.convention-garden.utilisation,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.convention-garden.utilisation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.convention-garden.utilisation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.convention-garden.utilisation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.garden,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:garden.garden,address:"
+msgid "Address"
+msgstr "Adresse"
+
+msgctxt "field:garden.garden,convention:"
+msgid "Convention"
+msgstr ""
+
+msgctxt "field:garden.garden,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.garden,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.garden,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.garden,image_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:garden.garden,image_map:"
+msgid "Image map"
+msgstr "Image"
+
+msgctxt "field:garden.garden,lieudit:"
+msgid "Lieu-dit"
+msgstr ""
+
+msgctxt "field:garden.garden,name:"
+msgid "Rivoli"
+msgstr ""
+
+msgctxt "field:garden.garden,parcelle:"
+msgid "Parcelle"
+msgstr ""
+
+msgctxt "field:garden.garden,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.garden,section:"
+msgid "Section"
+msgstr ""
+
+msgctxt "field:garden.garden,situation_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:garden.garden,situation_map:"
+msgid "Situation map"
+msgstr "Carte de Situation"
+
+msgctxt "field:garden.garden,surfacedgi:"
+msgid "Surface DGI"
+msgstr ""
+
+msgctxt "field:garden.garden,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.garden,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.geo_lieudit,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.geo_lieudit,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.geo_lieudit,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:garden.geo_lieudit,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.geo_lieudit,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.geo_lieudit,tex:"
+msgid "Short name of code"
+msgstr "Nom du code"
+
+msgctxt "field:garden.geo_lieudit,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.geo_lieudit,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.geo_parcelle,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.geo_parcelle,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.geo_parcelle,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:garden.geo_parcelle,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.geo_parcelle,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.geo_parcelle,tex:"
+msgid "Short name of code"
+msgstr "Nom du code"
+
+msgctxt "field:garden.geo_parcelle,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.geo_parcelle,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:garden.geo_section,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:garden.geo_section,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:garden.geo_section,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:garden.geo_section,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:garden.geo_section,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:garden.geo_section,tex:"
+msgid "Short name of code"
+msgstr "Nom du code"
+
+msgctxt "field:garden.geo_section,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:garden.geo_section,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:allo_quoi.allo,comment:"
+msgid "Observations sur l'incident."
+msgstr "Observations sur l'incident."
+
+msgctxt "help:allo_quoi.allo,date:"
+msgid "Date de l'incident"
+msgstr "Date de l'incident"
+
+msgctxt "help:allo_quoi.allo,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:allo_quoi.allo,party:"
+msgid "Contact pour être tenu informé des suites données."
+msgstr "Contact pour être tenu informé des suites données."
+
+msgctxt "help:allo_quoi.allo,typo:"
+msgid "Type d'incident"
+msgstr "Type d'incident"
+
+msgctxt "help:garden.convention,date:"
+msgid "Date of convention"
+msgstr "Date de la convention"
+
+msgctxt "help:garden.garden,name:"
+msgid "Code RIVOLI"
+msgstr ""
+
+msgctxt "help:garden.geo_lieudit,geom:"
+msgid "Geometry point (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:garden.geo_parcelle,geom:"
+msgid "Geometry polygon (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:garden.geo_section,geom:"
+msgid "Geometry polygon (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "model:allo_quoi.allo,name:"
+msgid "Allo"
+msgstr "Allo"
+
+msgctxt "model:allo_quoi.typologie,name:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "model:garden.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:garden.convention,name:"
+msgid "Convention"
+msgstr ""
+
+msgctxt "model:garden.convention-garden.abri,name:"
+msgid "Convention - Abri"
+msgstr ""
+
+msgctxt "model:garden.convention-garden.cloture,name:"
+msgid "Convention - Cloture"
+msgstr ""
+
+msgctxt "model:garden.convention-garden.entretien,name:"
+msgid "Convention - Entretien"
+msgstr ""
+
+msgctxt "model:garden.convention-garden.utilisation,name:"
+msgid "Convention - Utilisation"
+msgstr ""
+
+msgctxt "model:garden.garden,name:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:garden.geo_lieudit,name:"
+msgid "Lieu-dit"
+msgstr ""
+
+msgctxt "model:garden.geo_parcelle,name:"
+msgid "Parcelle"
+msgstr ""
+
+msgctxt "model:garden.geo_section,name:"
+msgid "Section"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_garden_code_form"
+msgid "Code garden"
+msgstr "Code du jardin"
+
+msgctxt "model:ir.action,name:act_garden_convention_form"
+msgid "Convention garden"
+msgstr "Convention du jardin"
+
+msgctxt "model:ir.action,name:act_garden_garden_form"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:ir.action,name:act_garden_geo_lieudit_form"
+msgid "Lieudit garden"
+msgstr "Lieu-dit"
+
+msgctxt "model:ir.action,name:act_garden_geo_parcelle_form"
+msgid "Parcelle garden"
+msgstr "Parcelle"
+
+msgctxt "model:ir.action,name:act_garden_geo_section_form"
+msgid "Section garden"
+msgstr "Section"
+
+msgctxt "model:ir.action,name:report_garden"
+msgid "Fiche jardin"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_garden_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_garden"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_garden_code_form"
+msgid "Code garden"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_garden_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_garden_convention_form"
+msgid "Convention garden"
+msgstr "Convention"
+
+msgctxt "model:ir.ui.menu,name:menu_garden_garden_form"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_garden_geo_lieudit_form"
+msgid "Lieudit garden"
+msgstr "Lieu-dit"
+
+msgctxt "model:ir.ui.menu,name:menu_garden_geo_parcelle_form"
+msgid "Parcelle garden"
+msgstr "Parcelle"
+
+msgctxt "model:ir.ui.menu,name:menu_garden_geo_section_form"
+msgid "Section garden"
+msgstr "Section"
+
+msgctxt "odt:garden.garden:"
+msgid "("
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid ")"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "00"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Adresse"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Code Rivoli"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "odt:garden.garden:"
+msgid "Convention en date du"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Coordonnées du locataire"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Entretien du terrain"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Fiche Parcellaire :"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Mise à jour"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "N° Parcelle"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Présence d'un abri et son état"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Présence d'une clôture et son état"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Section"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Surface DGI"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "Type d'utilisation du terrain"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "dimanche 17 novembre 2013"
+msgstr ""
+
+msgctxt "odt:garden.garden:"
+msgid "m²"
+msgstr ""
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Allo voirie"
+msgstr "Allo voirie"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Comment and Map"
+msgstr "Commentaire et Carte"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:allo_quoi.typologie:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "view:garden.code:"
+msgid "code"
+msgstr ""
+
+msgctxt "view:garden.convention:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:garden.convention:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:garden.convention:"
+msgid "convention"
+msgstr ""
+
+msgctxt "view:garden.garden:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:garden.garden:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:garden.garden:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:garden.garden:"
+msgid "garden"
+msgstr "jardin"
+
+msgctxt "view:garden.geo_lieudit:"
+msgid "geo_lieudit"
+msgstr ""
+
+msgctxt "view:garden.geo_parcelle:"
+msgid "geo_parcelle"
+msgstr ""
+
+msgctxt "view:garden.geo_section:"
+msgid "geo_section"
+msgstr ""

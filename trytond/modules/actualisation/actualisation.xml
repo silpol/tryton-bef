@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="actualisation_view_tree">            
+            <field name="model">actualisation.actualisation</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Actualisation">
+                    <field name="act_annee_source" expand="1" />
+                    <field name="act_annee_cible" expand="1" />
+                    <field name="act_coefficient" expand="1" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="actualisation_view_form">            
+            <field name="model">actualisation.actualisation</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Actualisation">
+                    <label name="act_annee_source"/>
+                    <field name="act_annee_source"/>
+                    <label name="act_annee_cible"/>
+                    <field name="act_annee_cible"/>
+                    <label name="act_coefficient"/>
+                    <field name="act_coefficient"/>
+                </form>
+                ]]>
+            </field>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_actualisation_form">
+            <field name="name">Actualisation</field>
+            <field name="res_model">actualisation.actualisation</field>
+                        
+        </record>
+        
+        <record model="ir.action.act_window.view" id="act_actualisation_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="actualisation_view_tree"/>
+            <field name="act_window" ref="act_actualisation_form"/>        
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_actualisation_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="actualisation_view_form"/>
+            <field name="act_window" ref="act_actualisation_form"/>        
+        </record>
+
+        <menuitem parent="ir.menu_administration" sequence="10" id="menu_actualisation_form" icon="tryton-list" action="act_actualisation_form"/>
+
+    </data>
+</tryton>

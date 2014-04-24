@@ -1,0 +1,260 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:allo_quoi.allo:"
+msgid "The address is invalid, no city is defined!"
+msgstr "L'adresse est invalide, pas de ville définie !"
+
+msgctxt "field:allo_quoi.allo,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:allo_quoi.allo,address:"
+msgid "Address"
+msgstr "Adresse"
+
+msgctxt "field:allo_quoi.allo,comment:"
+msgid "Commentaires"
+msgstr "Commentaires"
+
+msgctxt "field:allo_quoi.allo,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:allo_quoi.allo,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:allo_quoi.allo,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:allo_quoi.allo,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:allo_quoi.allo,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:allo_quoi.allo,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:allo_quoi.allo,image_all:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:allo_quoi.allo,image_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:allo_quoi.allo,image_map_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:allo_quoi.allo,party:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:allo_quoi.allo,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:allo_quoi.allo,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:allo_quoi.allo,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:allo_quoi.allo,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:allo_quoi.typologie,code:"
+msgid "Code du type d'incident"
+msgstr "Code du type d'incident"
+
+msgctxt "field:allo_quoi.typologie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:allo_quoi.typologie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:allo_quoi.typologie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:allo_quoi.typologie,lib_long:"
+msgid "Libellé long du code de l'incident"
+msgstr "Libellé long du code de l'incident"
+
+msgctxt "field:allo_quoi.typologie,name:"
+msgid "Libellé court du code de l'incident"
+msgstr "Libellé court du code de l'incident"
+
+msgctxt "field:allo_quoi.typologie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:allo_quoi.typologie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:allo_quoi.typologie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:allo_quoi.allo,comment:"
+msgid "Observations sur l'incident."
+msgstr "Observations sur l'incident."
+
+msgctxt "help:allo_quoi.allo,date:"
+msgid "Date de l'incident"
+msgstr "Date de l'incident"
+
+msgctxt "help:allo_quoi.allo,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:allo_quoi.allo,party:"
+msgid "Contact pour être tenu informé des suites données."
+msgstr "Contact pour être tenu informé des suites données."
+
+msgctxt "help:allo_quoi.allo,typo:"
+msgid "Type d'incident"
+msgstr "Type d'incident"
+
+msgctxt "model:allo_quoi.allo,name:"
+msgid "Allo"
+msgstr "Allo"
+
+msgctxt "model:allo_quoi.typologie,name:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_dechets"
+msgid "Déchets"
+msgstr "Déchets"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_eau_assainissement"
+msgid "Eau assainissement"
+msgstr "Eau assainissement"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_eclairage_public"
+msgid "Éclairage public"
+msgstr "Éclairage public"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_espaces_verts_arbres"
+msgid "Espaces verts et Arbres"
+msgstr "Espaces verts et Arbres"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_incident"
+msgid "Incidents"
+msgstr "Incidents"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_mobilier_urbain"
+msgid "Mobiler urbain"
+msgstr "Mobiler urbain"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_nettoiement"
+msgid "Nettoiement"
+msgstr "Nettoiement"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_signalisation"
+msgid "Signalisation"
+msgstr "Signalisation"
+
+msgctxt "model:ir.action,name:act_allo_quoi_form_voirie"
+msgid "Voirie"
+msgstr "Voirie"
+
+msgctxt "model:ir.action,name:act_allo_quoi_typologie_form"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "model:ir.action,name:report_lol_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_allo_dechets"
+msgid "Déchets"
+msgstr "Déchets"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_eau_assainissement"
+msgid "Eau assainissement"
+msgstr "Eau assainissement"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_eclairage_public"
+msgid "Éclairage public"
+msgstr "Éclairage public"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_espaces_verts_arbres"
+msgid "Espaces verts et Arbres"
+msgstr "Espaces verts et Arbres"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_mobilier_urbain"
+msgid "Mobiler urbain"
+msgstr "Mobiler urbain"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_nettoiement"
+msgid "Nettoiement"
+msgstr "Nettoiement"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_quoi"
+msgid "Allo voirie"
+msgstr "Allo voirie"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_quoi_typologie_form"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_signalisation"
+msgid "Signalisation"
+msgstr "Signalisation"
+
+msgctxt "model:ir.ui.menu,name:menu_allo_voirie"
+msgid "Voirie"
+msgstr "Voirie"
+
+msgctxt "model:ir.ui.menu,name:menu_incident"
+msgid "Incidents"
+msgstr "Incidents"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Allo voirie"
+msgstr "Allo voirie"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Comment and Map"
+msgstr "Commentaire et Carte"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:allo_quoi.allo:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:allo_quoi.typologie:"
+msgid "Typologie"
+msgstr "Typologie"

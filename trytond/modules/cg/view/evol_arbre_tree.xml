@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<tree string="Évolution des arbres">
+    <field name="date" />                    
+    <field name="mecanique" />
+    <field name="vigueur" />
+    <field name="conduite" />
+    <field name="paysager" />
+    <field name="ht" />                   
+    <field name="hfut" />
+    <field name="diamhoup" />
+    <field name="larghoupvoie" />
+    <field name="larghoupriv" />
+    <field name="diamtronc" />                    
+    <field name="grille" />
+    <field name="lignelec" />
+    <field name="sonde" />
+    <field name="empmat" />
+    <field name="surfacepiedarbre" />
+    <field name="arrosage" />
+    <field name="environnement" />
+    <field name="bilan" />                                        
+</tree>

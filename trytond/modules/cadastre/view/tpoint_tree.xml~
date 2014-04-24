@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Objet ponctuel divers">
+    <field name="commune" />    
+    <field name="ori" />
+    <field name="tex" />
+    <field name="sym" />
+</tree>

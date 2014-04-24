@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Pascal Obstétar
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+-->
+<tryton>
+    <data>      
+                
+        <record model="ir.ui.view" id="party_code_view_tree">
+            <field name="model">party.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="party_code_view_form">
+            <field name="model">party.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_party_code_form">
+            <field name="name">Code</field>
+            <field name="res_model">party.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="party_code_view_tree"/>
+            <field name="act_window" ref="act_party_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party_code_view_form"/>
+            <field name="act_window" ref="act_party_code_form"/>
+        </record>
+        
+        <menuitem parent="party.menu_configuration" id="menu_party_code_form" icon="tryton-list" action="act_party_code_form"/>  
+     
+        <record model="ir.ui.view" id="act_party_party_view_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+					<xpath
+                        expr="/form/label[@name=&quot;name&quot;]" position="before">                        
+						<label name="civility"/>
+                        <field name="civility"/>
+                    </xpath>                
+					<xpath
+                        expr="/form/notebook/page[@id=&quot;accounting&quot;]" position="after">
+                        <page string="Theme" states="{'invisible': If(Equal(Eval('civility'), '4'), True, False)}" id="theme">
+                            <field name="theme"/>
+                        </page>
+                    </xpath>                
+					<xpath
+                        expr="/form/notebook/page[@id=&quot;accounting&quot;]" position="after">
+                        <page string="Preference" states="{'invisible': If(Equal(Eval('civility'), '4'), True, False)}" id="preference">						
+                            <field name="preference"/>
+                        </page>
+                    </xpath>                                                          
+                </data>
+                ]]>
+            </field>
+        </record>
+
+    </data>
+</tryton>
+

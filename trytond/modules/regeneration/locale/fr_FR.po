@@ -1,0 +1,160 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:regeneration.regeneration,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:regeneration.regeneration,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:regeneration.regeneration,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:regeneration.regeneration,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:regeneration.regeneration,reg_abroutissement:"
+msgid "Abroutissement"
+msgstr "Abroutissement"
+
+msgctxt "field:regeneration.regeneration,reg_classe1:"
+msgid "Class1"
+msgstr "Classe1"
+
+msgctxt "field:regeneration.regeneration,reg_classe2:"
+msgid "Class2"
+msgstr "Classe2"
+
+msgctxt "field:regeneration.regeneration,reg_classe3:"
+msgid "Class3"
+msgstr "Classe3"
+
+msgctxt "field:regeneration.regeneration,reg_comment:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:regeneration.regeneration,reg_cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:regeneration.regeneration,reg_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:regeneration.regeneration,reg_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:regeneration.regeneration,reg_placette:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:regeneration.regeneration,reg_recouvrement:"
+msgid "Recovery"
+msgstr "Recouvrement"
+
+msgctxt "field:regeneration.regeneration,reg_souille:"
+msgid "Coppice"
+msgstr "Taillis"
+
+msgctxt "field:regeneration.regeneration,reg_sous_placette:"
+msgid "Subplot"
+msgstr "Sous-placette"
+
+msgctxt "field:regeneration.regeneration,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:regeneration.regeneration,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:regeneration.regeneration,reg_abroutissement:"
+msgid "Abroutissement"
+msgstr "Abroutissement"
+
+msgctxt "help:regeneration.regeneration,reg_classe1:"
+msgid "Number of seedlings of class1"
+msgstr "Nombre de semis de classe 1"
+
+msgctxt "help:regeneration.regeneration,reg_classe2:"
+msgid "Number of seedlings of class2"
+msgstr "Nombre de semis de classe 2"
+
+msgctxt "help:regeneration.regeneration,reg_classe3:"
+msgid "Number of seedlings of class3"
+msgstr "Nombre de semis de classe 3"
+
+msgctxt "help:regeneration.regeneration,reg_comment:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:regeneration.regeneration,reg_cycle:"
+msgid "Cycle number on the extent of regeneration measure"
+msgstr "Numéro du Cycle de la mesure de la régénération"
+
+msgctxt "help:regeneration.regeneration,reg_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:regeneration.regeneration,reg_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "help:regeneration.regeneration,reg_placette:"
+msgid "Plot number"
+msgstr "Placette"
+
+msgctxt "help:regeneration.regeneration,reg_recouvrement:"
+msgid "Percentage seedling below 50cm"
+msgstr "Pourcentage de semis inférieur à 50cm"
+
+msgctxt "help:regeneration.regeneration,reg_souille:"
+msgid "Origin of coppice"
+msgstr "Origine du taillis"
+
+msgctxt "help:regeneration.regeneration,reg_sous_placette:"
+msgid "Subplot"
+msgstr "Sous-placette"
+
+msgctxt "model:ir.action,name:act_regeneration_form"
+msgid "Regeneration"
+msgstr "Régénération"
+
+msgctxt "model:ir.ui.menu,name:menu_regeneration_form"
+msgid "Regeneration"
+msgstr "Régénération"
+
+msgctxt "model:regeneration.regeneration,name:"
+msgid "Regeneration"
+msgstr "Régénération"
+
+msgctxt "selection:regeneration.regeneration,reg_sous_placette:"
+msgid "1"
+msgstr "1"
+
+msgctxt "selection:regeneration.regeneration,reg_sous_placette:"
+msgid "2"
+msgstr "2"
+
+msgctxt "selection:regeneration.regeneration,reg_sous_placette:"
+msgid "3"
+msgstr "3"
+
+msgctxt "view:regeneration.regeneration:"
+msgid "Regeneration"
+msgstr "Régénération"

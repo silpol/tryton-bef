@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<form string="Comment">
+    <label name="date"/>
+    <field name="date"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="codcom"/>
+    <field name="codcom"/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="standard"/>
+    <field name="standard"/>
+    <label name="lastname"/>
+    <field name="lastname"/>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="directline"/>
+    <field name="directline"/>
+    <label name="fonction"/>
+    <field name="fonction"/>
+    <label name="portable"/>
+    <field name="portable"/>
+    <newline/>
+    <label name="comment"/>
+    <field name="comment" colspan="6"/>                 
+</form>

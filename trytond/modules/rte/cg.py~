@@ -1,0 +1,1501 @@
+#coding: utf-8
+"""
+GPLv3
+"""
+
+from collections import OrderedDict
+from datetime import date
+import os
+
+from osgeo import osr
+
+from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
+from trytond.pyson import Bool, Eval, Not
+from trytond.pool import PoolMeta, Pool
+
+from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect
+from trytond.modules.map.map_render import MapRender
+from trytond.modules.qgis.qgis import QGis
+
+
+__all__ = ['statut_voirie', 'UgOperation', 'UgCommune', 'hierarchisation', 'equipement', 'operation', 'securite', 'ug', 'proprietaire', 'gestionnaire', 'station',
+            'StationCommune', 'emplacement', 'cause', 'indispo', 'evol_emplacement', 'motif', 'plantation', 'arbre', 'evol_arbre', 'ArbreTaxon', 'EquipementUg',
+            'bilan', 'paysager', 'UgStation', 'StationEmplacement', 'EquipementQGis', 'UgQGis', 'StationQGis', 'EmplacementQGis', 'ArbreQGis', 'ArbreEvolArbre',
+            'EmplacementEvolEmplacement', 'EmplacementArbre',]
+
+STATES = {
+    'readonly': ~Eval('active', True),
+}
+
+DEPENDS = ['active']
+
+_TYPES = [
+    ('public', u"""Public"""),
+    ('prive', u"""Privé"""),
+]
+
+_SITUATIONS = [
+    ('solitaire', u"""Solitaire"""),
+    ('groupe', u"""Groupe"""),
+]
+
+_FOSSES = [
+    ('terre', u"""Terre/Pierre"""),
+    ('dalle', u"""Dalle de répartition"""),
+]
+
+_MECANIQUES = [
+    ('1', u"""Aucun défaut"""),
+    ('2', u"""Défaut intense"""),
+    ('3', u"""Défaut limité"""),
+    ('4', u"""Défaut présent"""),
+    ('5', u"""Défaut critique"""),
+]
+
+_VIGUEURS = [
+    ('1', u"""Bonne"""),
+    ('2', u"""Passable"""),
+    ('3', u"""Moyenne"""),
+    ('4', u"""Faible"""),
+    ('5', u"""Dépérissement irréversible"""),
+]
+
+_CONDUITES = [
+    ('libre', u"""Libre"""),
+    ('archi', u"""Architecturée"""),
+]
+
+_HAUTEURS = [
+    ('1', u"""0 <= ht < 10"""),
+    ('2', u"""10 <= ht < 20"""),
+    ('3', u"""ht >= 20"""),
+]
+
+_ENVIRONNEMENTS = [
+    ('1', u"""Banquette stabilisée"""),
+    ('2', u"""Banquette engazonnée"""),
+    ('3', u"""Banquette enrobée"""),
+    ('4', u"""Jardinière"""),
+    ('5', u"""Terre végétale"""),
+    ('6', u"""Grille"""),
+]
+          
+class statut_voirie(ModelSQL, ModelView):
+    u"""Satut de la voirie"""
+    __name__ = 'cg.statut_voirie'
+    _rec_name = 'name'
+
+    code = fields.Char(
+            string = u"""Code de la voirie""",
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du code de voirie""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du code de voirie""",
+        )
+        
+        
+class hierarchisation(ModelSQL, ModelView):
+    u"""Hiérachisation"""
+    __name__ = 'cg.hierarchisation'
+    _rec_name = 'name'
+
+    code = fields.Char(
+            string = u"""Code de hiérarchisation""",
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du code de hiérarchisation""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du code de hiérarchisation""",
+        )
+        
+class equipement(ModelSQL, ModelView):
+    u"""Équipement"""
+    __name__ = 'cg.equipement'
+    _rec_name = 'name'
+
+    code = fields.Char(
+            string = u"""Code équipement""",
+        )
+
+    name = fields.Char(
+            string = u"""Nom de la route""",
+        )
+        
+    coder = fields.Char(
+            string = u"""Code de la route""",
+        ) 
+        
+    statut = fields.Many2One(
+            'cg.statut_voirie',
+            ondelete='CASCADE',
+            string=u'Statut',
+            help=u"""Statut de la voirie""",
+            readonly=False,
+        )
+        
+    hierarchie = fields.Many2One(
+            'cg.hierarchisation',
+            ondelete='CASCADE',
+            string=u"""Hiérarchisation""",
+            help=u"""Hiérachisation de l'équipement""",
+            readonly=False,
+        )
+
+    ug = fields.Many2Many('cg.equipement-cg.ug',
+            'equipement',
+            'ug',
+            string=u"""Unités de gestion""",
+            states=STATES,
+            depends=DEPENDS
+        )   
+            
+    active = fields.Boolean('Active', select=True)    
+
+    geom = fields.MultiLineString(string=u"""Geometry""", srid=2154,
+            required=False, readonly=False, select=True)
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+    image_map = fields.Binary('Image', filename='image_map_filename')
+    image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['code']), '_get_equipement_filename')                        
+    
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.1)
+    
+    def get_image(self, ids):
+        if self.geom is None:
+            return buffer('')
+
+        lines, envelope, _area = get_as_epsg4326([self.geom])
+        
+        if areas == []:
+            return buffer('')
+            
+        _envelope = bbox_aspect(envelope, 640, 480)    
+            
+        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
+        envelope = [
+            _envelope[0] - 0.001,
+            _envelope[1] + 0.001,
+            _envelope[2] - 0.001,
+            _envelope[3] + 0.001,
+        ]                    
+
+        m = MapRender(640, 480, envelope, True)
+        
+        m.plot_geom(lines[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+        return buffer(m.render())     
+    
+
+    @classmethod
+    def __setup__(cls):
+        super(equipement, cls).__setup__()
+        cls._buttons.update({           
+            'equipement_edit': {},
+            'generate': {},
+        })
+
+    def _get_equipement_filename(self, ids):
+        """Equipement map filename"""
+        return '%s - Equipement map.jpg' % self.code
+               
+    @classmethod
+    @ModelView.button_action('cg.report_equipement_edit')
+    def equipement_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.code is None:
+                continue
+                                   
+            lines, _envelope, _line = get_as_epsg4326([record.geom])
+            
+            # Léger dézoom pour afficher correctement les zones qui touchent la bbox
+            envelope = [
+                _envelope[0] - 0.001,
+                _envelope[1] + 0.001,
+                _envelope[2] - 0.001,
+                _envelope[3] + 0.001,
+            ]            
+            
+            m = MapRender(640, 480, envelope, True)
+            m.add_bg()
+                      
+            m.plot_geom(lines[0], None, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
+           
+            data = m.render()
+            cls.write([record], {'image_map': buffer(data)})
+
+    @staticmethod
+    def default_image_map_filename():
+        return 'Carte all.jpg'
+
+    @staticmethod
+    def default_active():
+        return True
+
+class EquipementQGis(QGis):
+    'EquipementQGis'
+    __name__ = 'cg.equipement.qgis'
+    TITLES = {
+        'cg.equipement': u'Equipement',
+        }
+
+class EquipementUg(ModelSQL):
+    'Equipement - Ug'
+    __name__ = 'cg.equipement-cg.ug'
+    _table = 'equipement_ug_rel'
+    equipement = fields.Many2One('cg.equipement', 'code',
+        ondelete='CASCADE', required=True, select=True)
+    ug = fields.Many2One('cg.ug', 'code', ondelete='CASCADE',
+            required=True, select=True)    
+
+class operation(ModelSQL, ModelView):
+    u"""Opérations spécifiques"""
+    __name__ = 'cg.operation'
+    _rec_name = 'code'
+    
+    code = fields.Char(
+            string = u"""Code de l'opération""",
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du code de l'opération""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du code de l'opération""",
+        )  
+        
+class securite(ModelSQL, ModelView):
+    u"""Niveau de sécurité"""
+    __name__ = 'cg.securite'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code du niveau de sécurité""",
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du niveau de sécurité""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du niveau de sécurité""",
+        )      
+            
+class ug(ModelSQL, ModelView):
+    u"""Unité de gestion"""
+    __name__ = 'cg.ug'
+    _rec_name = 'code'    
+    
+    equipement = fields.Many2One(
+            'cg.equipement',
+            ondelete='CASCADE',
+            string=u"""Équipement""",
+            help=u"""Équipement de rattachement""",
+            states=STATES,
+            depends=DEPENDS,
+        )
+
+    code = fields.Char(
+            string = u"""Code UG""",
+            help=u"""Unité de gestion""",
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    active = fields.Boolean('Active', select=True)
+
+    rue = fields.Char(
+            string = u"""Nom de la rue""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    debut = fields.Char(
+            string = u"""Debut de tronçon""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        ) 
+        
+    fin = fields.Char(
+            string = u"""Fin de tronçon""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        ) 
+        
+    elagage = fields.Char(
+            string = u"""Secteur élagage""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    operation = fields.Many2Many('cg.ug-cg.operation',
+            'ug',
+            'operation',
+            string=u"""Opérations""",
+            states=STATES,
+            depends=DEPENDS
+        )
+               
+    contrainte = fields.Char(
+            string = u"""Contraintes""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )        
+
+    commune = fields.Many2Many('cg.ug-commune.commune',
+            'ug',
+            'commune',
+            string='Communes',
+            help=u"""Communes de localisation de l'unité de gestion""",
+            required=False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    referenceug = fields.Char(
+            string = u"""Référence UG""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+
+    sequenceroute = fields.Char(
+            string = u"""Séquence route""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    securite = fields.Many2One(
+            'cg.securite',
+            ondelete='CASCADE',
+            string=u"""Sécurité""",
+            help=u"""Niveau de sécurité""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+
+    station = fields.Many2Many('cg.ug-cg.station',
+            'ug',
+            'station',
+            string=u"""Stations""",
+            states=STATES,
+            depends=DEPENDS
+        )
+
+    geom = fields.MultiPolygon(string=u"""Geometry""", srid=2154,
+            required=False, readonly=False, select=True)
+            
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+    image_map = fields.Binary('Image', filename='image_map_filename')
+    image_map_filename = image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['code']), '_get_ug_filename')                        
+    
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.1)
+    
+    def get_image(self, ids):
+        if self.geom is None:
+            return buffer('')
+
+        aires, envelope, _aire = get_as_epsg4326([self.geom])
+        
+        if aires == []:
+            return buffer('')
+            
+        _envelope = bbox_aspect(envelope, 640, 480)    
+            
+        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
+        envelope = [
+            _envelope[0] - 0.001,
+            _envelope[1] + 0.001,
+            _envelope[2] - 0.001,
+            _envelope[3] + 0.001,
+        ]                    
+
+        m = MapRender(640, 480, envelope, True)
+        
+        m.plot_geom(aires[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+        return buffer(m.render())     
+    
+
+    @classmethod
+    def __setup__(cls):
+        super(ug, cls).__setup__()
+        cls._buttons.update({           
+            'ug_edit': {},
+            'generate': {},
+        })
+
+    def _get_ug_filename(self, ids):
+        """UG map filename"""
+        return '%s - UG map.jpg' % self.code
+               
+    @classmethod
+    @ModelView.button_action('cg.report_ug_edit')
+    def ug_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.code is None:
+                continue
+                                   
+            aires, _envelope, _aire = get_as_epsg4326([record.geom])
+            
+            # Léger dézoom pour afficher correctement les zones qui touchent la bbox
+            envelope = [
+                _envelope[0] - 0.001,
+                _envelope[1] + 0.001,
+                _envelope[2] - 0.001,
+                _envelope[3] + 0.001,
+            ]            
+            
+            m = MapRender(640, 480, envelope, True)
+            m.add_bg()
+                      
+            m.plot_geom(aires[0], record.code, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
+           
+            data = m.render()
+            cls.write([record], {'image_map': buffer(data)})
+
+    @staticmethod
+    def default_image_map_filename():
+        return 'Carte all.jpg'
+
+    @staticmethod
+    def default_active():
+        return True
+
+class UgQGis(QGis):
+    'UgQGis'
+    __name__ = 'cg.ug.qgis'
+    TITLES = {
+        'cg.ug': u'UG',
+        }
+
+class UgStation(ModelSQL):
+    'Ug - Station'
+    __name__ = 'cg.ug-cg.station'
+    _table = 'ug_station_rel'    
+    ug = fields.Many2One('cg.ug', 'code',
+        ondelete='CASCADE', required=True, select=True)
+    station = fields.Many2One('cg.station', 'code',
+        ondelete='CASCADE', required=True, select=True)    
+        
+class UgOperation(ModelSQL):
+    'Ug - Operation'
+    __name__ = 'cg.ug-cg.operation'
+    _table = 'ug_operation_rel'
+    ug = fields.Many2One('cg.ug', 'code',
+        ondelete='CASCADE',required=True, select=True)
+    operation = fields.Many2One('cg.operation', 'code',
+        ondelete='CASCADE', required=True, select=True)
+        
+class UgCommune(ModelSQL):
+    'Ug - Commune'
+    __name__ = 'cg.ug-commune.commune'
+    _table = 'ug_commune_rel'
+    ug = fields.Many2One('cg.ug', 'code',
+        ondelete='CASCADE', required=True, select=True)
+    commune = fields.Many2One('commune.commune', 'name',
+        ondelete='CASCADE', required=True, select=True)
+        
+        
+class proprietaire(ModelSQL, ModelView):
+    u"""Propriétaire"""
+    __name__ = 'cg.proprietaire'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code propriétaire""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du propriétaire""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du propriétaire""",
+        )              
+
+class gestionnaire(ModelSQL, ModelView):
+    u"""Gestionnaire"""
+    __name__ = 'cg.gestionnaire'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code gestionnaire""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du gestionnaire""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du gestionnaire""",
+        )
+
+class station(ModelSQL, ModelView):
+    u"""Stations"""
+    __name__ = 'cg.station'
+    _rec_name = 'code'
+
+    equipement = fields.Many2One(
+            'cg.equipement',
+            ondelete='CASCADE',
+            string=u"""Équipement""",
+            help=u"""Équipement de rattachement""",
+            states=STATES,
+            depends=DEPENDS,
+        )    
+    
+    ug = fields.Many2One(
+            'cg.ug',
+            ondelete='CASCADE',
+            string=u"""Unité de Gestion""",
+            help=u"""Unité de gestion""",
+            states=STATES,
+            depends=DEPENDS,
+        )
+
+    code = fields.Char(
+            string = u"""Code station""",
+            help=u"""Code de la station""",
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    active = fields.Boolean('Active', select=True)
+
+    proprietaire = fields.Many2One(
+            'cg.proprietaire',
+            ondelete='CASCADE',
+            string = u"""Proprétaire""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    domaine = fields.Selection(
+            _TYPES, 
+            'Type',
+            required=True,
+            states=STATES,
+            sort=False,
+            depends=DEPENDS)
+        
+    gestionnaire = fields.Many2One(
+            'cg.gestionnaire',
+            ondelete='CASCADE',
+            string = u"""Gestionnaire""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    distance = fields.Char(
+            string = u"""Distance""",
+            help=u"""Distance du bâti""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )       
+
+    commune = fields.Many2Many('cg.station-commune.commune',
+            'station',
+            'commune',
+            string=u"""Communes""",
+            help=u"""Communes de localisation de l'unité de gestion""",
+            required=False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+
+    emplacement = fields.Many2Many('cg.station-cg.emplacement',
+            'station',
+            'emplacement',
+            string=u"""Emplacements""",
+            states=STATES,
+            depends=DEPENDS
+        )     
+
+    geom = fields.MultiLineString(string=u"""Geometry""", srid=2154,
+            required=False, readonly=False, select=True)            
+            
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+    image_map = fields.Binary('Image', filename='image_map_filename')
+    image_map_filename = image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['code']), '_get_station_filename')                        
+    
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.1)
+    
+    def get_image(self, ids):
+        if self.geom is None:
+            return buffer('')
+
+        aires, envelope, _aire = get_as_epsg4326([self.ug.geom])
+        lines, _envelope, _line = get_as_epsg4326([self.geom])
+        
+        if lines == []:
+            return buffer('')
+            
+        _envelope = bbox_aspect(envelope, 640, 480)    
+            
+        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
+        envelope = [
+            _envelope[0] - 0.001,
+            _envelope[1] + 0.001,
+            _envelope[2] - 0.001,
+            _envelope[3] + 0.001,
+        ]                    
+
+        m = MapRender(640, 480, envelope, True)
+        
+        m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
+        m.plot_geom(lines[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+        return buffer(m.render())     
+    
+
+    @classmethod
+    def __setup__(cls):
+        super(station, cls).__setup__()
+        cls._buttons.update({           
+            'station_edit': {},
+            'generate': {},
+        })
+
+    def _get_station_filename(self, ids):
+        """Station map filename"""
+        return '%s - Station map.jpg' % self.code
+               
+    @classmethod
+    @ModelView.button_action('cg.report_station_edit')
+    def station_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.code is None:
+                continue
+            
+            aires, envelope, _aire = get_as_epsg4326([record.ug.geom])                       
+            lines, _envelope, _area = get_as_epsg4326([record.geom])
+            
+            # Léger dézoom pour afficher correctement les zones qui touchent la bbox
+            envelope = [
+                _envelope[0] - 0.001,
+                _envelope[1] + 0.001,
+                _envelope[2] - 0.001,
+                _envelope[3] + 0.001,
+            ]            
+            
+            m = MapRender(640, 480, envelope, True)
+            m.add_bg()
+            
+            m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))          
+            m.plot_geom(lines[0], record.code, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
+           
+            data = m.render()
+            cls.write([record], {'image_map': buffer(data)})
+
+    @staticmethod
+    def default_image_map_filename():
+        return 'Carte all.jpg'
+
+    @staticmethod
+    def default_active():
+        return True
+
+class StationQGis(QGis):
+    'StationQGis'
+    __name__ = 'cg.station.qgis'
+    TITLES = {
+        'cg.station': u'Station',
+        }
+
+class StationEmplacement(ModelSQL):
+    'Station - Emplacement'
+    __name__ = 'cg.station-cg.emplacement'
+    _table = 'station_emplacement_rel'        
+    station = fields.Many2One('cg.station', 'code',
+        ondelete='CASCADE', required=True, select=True)
+    emplacement = fields.Many2One('cg.emplacement', 'code', ondelete='CASCADE',
+            required=True, select=True)
+        
+class StationCommune(ModelSQL):
+    'Station - Commune'
+    __name__ = 'cg.station-commune.commune'
+    _table = 'station_commune_rel'
+    station = fields.Many2One('cg.station', 'code', ondelete='CASCADE',
+            required=True, select=True)
+    commune = fields.Many2One('commune.commune', 'name',
+        ondelete='CASCADE', required=True, select=True)
+        
+class emplacement(ModelSQL, ModelView):
+    u"""Emplacement"""
+    __name__ = 'cg.emplacement'
+    _rec_name = 'code'
+
+    equipement = fields.Many2One(
+            'cg.equipement',
+            ondelete='CASCADE',
+            string=u"""Équipement""",
+            help=u"""Équipement de rattachement""",
+            states=STATES,
+            depends=DEPENDS,
+        )    
+    
+    ug = fields.Many2One(
+            'cg.ug',
+            ondelete='CASCADE',
+            string=u"""UG""",
+            help=u"""Unité de gestion""",
+            states=STATES,
+            depends=DEPENDS,
+        )  
+    
+    station = fields.Many2One(
+            'cg.station',
+            ondelete='CASCADE',
+            string=u"""Station""",
+            help=u"""Station""",
+            states=STATES,
+            depends=DEPENDS,
+        )
+
+    code = fields.Char(
+            string = u"""Code emplacement""",
+            help=u"""Code de l'emplacement""",
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    active = fields.Boolean('Active', select=True)
+
+    numpostal = fields.Char(
+            string = u"""Code postal""",
+            help=u"""Code postal de l'emplacement""",
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    coteoppose = fields.Boolean(             
+            string = u"""Côté opposé""",
+            help=u"""Côté opposé""",            
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    x = fields.Float(
+            string = u"""X""",
+            help=u"""Coordonnées X (Grillet)""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    y = fields.Float(
+            string = u"""Y""",
+            help=u"""Coordonnées Y (Grillet)""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+        
+    z = fields.Float(
+            string = u"""Z""",
+            help=u"""Coordonnées Z (Grillet)""",
+            required = False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+
+    evol_emplacement = fields.Many2Many('cg.emplacement-cg.evol_emplacement',
+            'emplacement',
+            'evol_emplacement',
+            string=u"""Evolutions des emplacements""",
+            states=STATES,
+            depends=DEPENDS
+        )
+
+    arbre = fields.Many2Many('cg.emplacement-cg.arbre',
+            'emplacement',
+            'arbre',
+            string=u"""Arbres""",
+            states=STATES,
+            depends=DEPENDS
+        )
+
+    geom = fields.MultiPoint(string=u"""Geometry""", srid=2154,
+            required=False, readonly=False, select=True)
+            
+            
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+    image_map = fields.Binary('Image', filename='image_map_filename')
+    image_map_filename = image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['code']), '_get_emplacement_filename')                        
+    
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.1)
+    
+    def get_image(self, ids):
+        if self.geom is None:
+            return buffer('')
+                
+        aires, envelope, _aire = get_as_epsg4326([self.ug.geom])
+        lines, _envelope, _line = get_as_epsg4326([self.station.geom])
+        pts, _envelope, _line = get_as_epsg4326([self.geom])
+
+        EmpObj = Pool().get(self.__name__)
+        objs = EmpObj.search([('equipement', '=', self.equipement.id), ('ug', '=', self.ug.id), ('station', '=', self.station.id)])
+        points, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
+        
+        if points == []:
+            return buffer('')
+            
+        _envelope = bbox_aspect(envelope, 640, 480)    
+            
+        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
+        envelope = [
+            _envelope[0] - 0.001,
+            _envelope[1] + 0.001,
+            _envelope[2] - 0.001,
+            _envelope[3] + 0.001,
+        ]                    
+
+        m = MapRender(640, 480, envelope, True)
+        
+        m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
+        m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))
+        for record in points:
+            if len(points) == 0:
+                continue            
+            if record == get_as_epsg4326([self.geom])[0][0]:                
+                m.plot_geom(record, self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+            else:                
+                m.plot_geom(record, None, None, color=(0, 0, 1, 0.5), bgcolor=self.BGCOLOR)
+        m.plot_geom(pts[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+        return buffer(m.render())    
+    
+
+    @classmethod
+    def __setup__(cls):
+        super(emplacement, cls).__setup__()
+        cls._buttons.update({           
+            'emplacement_edit': {},
+            'generate': {},
+        })
+
+    def _get_emplacement_filename(self, ids):
+        """Emplacement map filename"""
+        return '%s - Emplacement map.jpg' % self.code
+               
+    @classmethod
+    @ModelView.button_action('cg.report_emplacement_edit')
+    def emplacement_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.code is None:
+                continue
+            
+            aires, envelope, _aire = get_as_epsg4326([record.ug.geom])
+            lines, _envelope, _line = get_as_epsg4326([record.station.geom])                                   
+
+            EmpObj = Pool().get(record.__name__)
+            objs = EmpObj.search([('equipement', '=', record.equipement.id), ('ug', '=', record.ug.id), ('station', '=', record.station.id)])
+            pts, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
+
+            points, _envelope, _area = get_as_epsg4326([record.geom])
+            
+            # Léger dézoom pour afficher correctement les zones qui touchent la bbox
+            envelope = [
+                _envelope[0] - 0.001,
+                _envelope[1] + 0.001,
+                _envelope[2] - 0.001,
+                _envelope[3] + 0.001,
+            ]            
+            
+            m = MapRender(640, 480, envelope, True)
+            m.add_bg()
+
+            m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
+            m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))                      
+            for entry in pts:
+                if len(pts) == 0:
+                    continue            
+                if entry == get_as_epsg4326([record.geom])[0][0]:                
+                    m.plot_geom(entry, entry.code, None, color=record.COLOR, bgcolor=record.BGCOLOR)
+                else:                
+                    m.plot_geom(entry, None, None, color=(0, 0, 1, 0.5), bgcolor=record.BGCOLOR)
+            m.plot_geom(points[0], record.code, None, color=record.COLOR, bgcolor=record.BGCOLOR)
+            data = m.render()
+            cls.write([record], {'image_map': buffer(data)})
+
+    @staticmethod
+    def default_image_map_filename():
+        return 'Carte all.jpg'
+
+    @staticmethod
+    def default_active():
+        return True
+
+class EmplacementQGis(QGis):
+    'EmplacementQGis'
+    __name__ = 'cg.emplacement.qgis'
+    TITLES = {
+        'cg.emplacement': u'Emplacement',
+        }
+
+class EmplacementArbre(ModelSQL):
+    'Emplacement - Arbre'
+    __name__ = 'cg.emplacement-cg.arbre'
+    _table = 'emplacement_arbre_rel'
+    emplacement = fields.Many2One('cg.emplacement', 'code',
+        ondelete='CASCADE', required=True, select=True)
+    arbre = fields.Many2One('cg.arbre', 'code',
+        ondelete='CASCADE', required=True, select=True)
+        
+class cause(ModelSQL, ModelView):
+    u"""Cause"""
+    __name__ = 'cg.cause'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code cause""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court de la cause""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long de la cause""",
+        )        
+
+class indispo(ModelSQL, ModelView):
+    u"""Indisponible"""
+    __name__ = 'cg.indispo'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code manquant""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du manquant""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du manquant""",
+        )        
+        
+class evol_emplacement(ModelSQL, ModelView):
+    u"""Évolution d'un emplacement"""
+    __name__ = 'cg.evol_emplacement'    
+    
+    date = fields.Date(
+            string = u"""Date""",            
+            help=u"""Date du constat""",
+        )        
+
+    nature = fields.Char(
+            string = u"""Nature""",
+            help=u"""Nature de l'emplacement""",
+            required = False,
+        )
+        
+    cause = fields.Many2One(
+            'cg.cause',
+            ondelete='CASCADE',
+            string=u"""Cause""",
+            help=u"""Cause de l'évolution de l'emplacement""",
+        )
+        
+    diametre = fields.Float(
+            string = u"""Diamètre""",
+            help=u"""Diamètre de la souche""",
+        )
+        
+    indispo = fields.Many2One(
+            'cg.indispo',
+            ondelete='CASCADE',
+            string=u"""Indisponible""",
+            help=u"""Indisponible/Manquant""",
+        )
+        
+    observation = fields.Text(
+            string = u"""Observations""",
+            help=u"""Observations""",
+        )
+                        
+    @staticmethod
+    def default_active():
+        return True
+
+class EmplacementEvolEmplacement(ModelSQL):
+    'Emplacement - EvolEmplacement'
+    __name__ = 'cg.emplacement-cg.evol_emplacement'
+    _table = 'emplacement_evol_rel'
+    emplacement = fields.Many2One('cg.emplacement', 'code', ondelete='CASCADE',
+            required=True, select=True)
+    evol_emplacement = fields.Many2One('cg.evol_emplacement', 'date',
+        ondelete='CASCADE', required=True, select=True)
+        
+class motif(ModelSQL, ModelView):
+    u"""Motif"""
+    __name__ = 'cg.motif'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code motif""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du motif""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du motif""",
+        )        
+
+class plantation(ModelSQL, ModelView):
+    u"""Plantation"""
+    __name__ = 'cg.plantation'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code plantation""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court plantation""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long plantation""",
+        )
+
+class paysager(ModelSQL, ModelView):
+    u"""Paysager"""
+    __name__ = 'cg.paysager'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code paysager""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du paysager""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du paysager""",
+        )
+
+class bilan(ModelSQL, ModelView):
+    u"""Bilan"""
+    __name__ = 'cg.bilan'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u"""Code bilan""",
+            readonly = False,
+        )
+
+    name = fields.Char(
+            string = u"""Libellé court du bilan""",
+        )
+        
+    lib_long = fields.Char(
+            string = u"""Libellé long du bilan""",
+        )     
+        
+class arbre(ModelSQL, ModelView):
+    u"""Arbres"""
+    __name__ = 'cg.arbre'
+    _rec_name = 'code'
+
+    equipement = fields.Many2One(
+            'cg.equipement',
+            ondelete='CASCADE',
+            string=u"""Équipement""",
+            help=u"""Équipement de rattachement""",       
+        )    
+    
+    ug = fields.Many2One(
+            'cg.ug',
+            ondelete='CASCADE',
+            string=u"""UG""",
+            help=u"""Unité de gestion""",
+        )  
+    
+    station = fields.Many2One(
+            'cg.station',
+            ondelete='CASCADE',
+            string=u"""Station""",
+            help=u"""Station""",
+        )           
+
+    emplacement = fields.Many2One(
+            'cg.emplacement',
+            ondelete='CASCADE',
+            string=u"""Emplacement""",
+            help=u"""Emplacement de référence""",
+        )
+        
+    code = fields.Char(
+            string = u"""Code arbre""",
+        )      
+
+    compteur = fields.Integer(
+            string = u"""Compteur""",
+            help=u"""Compteur arbre : indique combien d'arbres ont été planté successivement sur cet emplacement""",            
+        )
+        
+    an = fields.Integer(
+            string = u"""Année""",            
+            help=u"""Année de plantation""",
+        )
+        
+    diametre = fields.Float(
+            string = u"""Diamètre""",
+            help=u"""Diamètre du tronc""",
+        )
+        
+    plantation = fields.Many2One(
+            'cg.plantation',
+            ondelete='CASCADE',
+            string=u"""Plantation""",
+            help=u"""Modalité de plantation""",
+        )
+        
+    situation = fields.Selection(
+            _SITUATIONS, 
+            'Situation',
+        )
+        
+    fosse = fields.Selection(
+            _FOSSES, 
+            'Fosse',
+        )
+        
+    essence = fields.Many2Many('cg.arbre-taxinomie.taxinomie',
+            'arbre',
+            'taxon',           
+            string=u"""Essence""",
+            help=u"""Nom de l'essence""",
+            domain=[('regne', '=', 'Plantae')],
+        )               
+        
+    date = fields.Date(
+            string = u"""Date""",            
+            help=u"""Date de suppression""",
+            required = False,
+        )
+        
+    motif = fields.Many2One(
+            'cg.motif',
+            ondelete='CASCADE',
+            string=u"""Motif""",
+            help=u"""Motif de suppression""",
+        )
+
+    evol_arbre = fields.Many2Many('cg.arbre-cg.evol_arbre',
+            'arbre',
+            'evol_arbre',
+            string=u"""Evolutions des arbres""",
+        )
+
+    photo = fields.Binary('Photo')
+            
+    active = fields.Boolean('Active', select=True)
+            
+    geom = fields.MultiPoint(string=u"""Geometry""", srid=2154,
+            required=False, readonly=False)
+            
+            
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+    image_map = fields.Binary('Image', filename='image_map_filename')
+    image_map_filename = image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['code']), '_get_arbre_filename')                        
+    
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.1)
+    
+    def get_image(self, ids):
+        if self.geom is None:
+            return buffer('')
+                
+        aires, envelope, _aire = get_as_epsg4326([self.ug.geom])
+        lines, _envelope, _line = get_as_epsg4326([self.station.geom])
+        pts, _envelope, _line = get_as_epsg4326([self.geom])
+
+        EmpObj = Pool().get(self.__name__)
+        objs = EmpObj.search([('equipement', '=', self.equipement.id), ('ug', '=', self.ug.id), ('station', '=', self.station.id)])
+        points, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
+        
+        if points == []:
+            return buffer('')
+            
+        _envelope = bbox_aspect(envelope, 640, 480)    
+            
+        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
+        envelope = [
+            _envelope[0] - 0.001,
+            _envelope[1] + 0.001,
+            _envelope[2] - 0.001,
+            _envelope[3] + 0.001,
+        ]                    
+
+        m = MapRender(640, 480, envelope, True)
+        
+        m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
+        m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))
+        for record in points:
+            if len(points) == 0:
+                continue            
+            if record == get_as_epsg4326([self.geom])[0][0]:                
+                m.plot_geom(record, self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+            else:                
+                m.plot_geom(record, None, None, color=(0, 0, 1, 0.5), bgcolor=self.BGCOLOR)
+        m.plot_geom(pts[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+        return buffer(m.render())     
+    
+
+    @classmethod
+    def __setup__(cls):
+        super(arbre, cls).__setup__()
+        cls._buttons.update({           
+            'arbre_edit': {},
+            'generate': {},
+        })
+
+    def _get_arbre_filename(self, ids):
+        """Arbre map filename"""
+        return '%s - Arbre map.jpg' % self.code
+               
+    @classmethod
+    @ModelView.button_action('cg.report_arbre_edit')
+    def arbre_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        if record.code is None:
+                continue
+            
+        aires, envelope, _aire = get_as_epsg4326([record.ug.geom])
+        lines, _envelope, _line = get_as_epsg4326([record.station.geom])                                   
+
+        EmpObj = Pool().get(record.__name__)
+        objs = EmpObj.search([('equipement', '=', record.equipement.id), ('ug', '=', record.ug.id), ('station', '=', record.station.id)])
+        pts, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
+
+        points, _envelope, _area = get_as_epsg4326([record.geom])
+        
+        # Léger dézoom pour afficher correctement les zones qui touchent la bbox
+        envelope = [
+            _envelope[0] - 0.001,
+            _envelope[1] + 0.001,
+            _envelope[2] - 0.001,
+            _envelope[3] + 0.001,
+        ]            
+        
+        m = MapRender(640, 480, envelope, True)
+        m.add_bg()
+
+        m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
+        m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))                      
+        for entry in pts:
+            if len(pts) == 0:
+                continue            
+            if entry == get_as_epsg4326([record.geom])[0][0]:                
+                m.plot_geom(entry, entry.code, None, color=record.COLOR, bgcolor=record.BGCOLOR)
+            else:                
+                m.plot_geom(entry, None, None, color=(0, 0, 1, 0.5), bgcolor=record.BGCOLOR)
+        m.plot_geom(points[0], record.code, None, color=record.COLOR, bgcolor=record.BGCOLOR)
+        data = m.render()
+        cls.write([record], {'image_map': buffer(data)})
+
+    @staticmethod
+    def default_image_map_filename():
+        return 'Carte all.jpg'
+
+    @staticmethod
+    def default_active():
+        return True 
+        
+    @staticmethod
+    def default_compteur():
+        return 1
+
+class ArbreQGis(QGis):
+    'ArbreQGis'
+    __name__ = 'cg.arbre.qgis'
+    TITLES = {
+        'cg.arbre': u'Arbre',
+        }
+        
+class ArbreTaxon(ModelSQL):
+    'Arbre - Taxon'
+    __name__ = 'cg.arbre-taxinomie.taxinomie'
+    _table = 'arbre_taxon_rel'
+    arbre = fields.Many2One('cg.arbre', 'code',
+        ondelete='CASCADE', required=True, select=True)
+    taxon = fields.Many2One('taxinomie.taxinomie', 'nom_complet',
+        ondelete='CASCADE', required=True, select=True)
+
+class evol_arbre(ModelSQL, ModelView):
+    u"""Évolution d'un arbre"""
+    __name__ = 'cg.evol_arbre'
+
+    date = fields.Date(
+            string = u"""Date""",            
+            help=u"""Date du constat""",
+        )       
+
+    mecanique = fields.Selection(
+            _MECANIQUES, 
+            'Mecanique',
+        )
+        
+    vigueur = fields.Selection(
+            _VIGUEURS, 
+            'Vigueur',
+        )
+        
+    conduite = fields.Selection(
+            _CONDUITES, 
+            'Conduite',
+        )
+
+    paysager = fields.Many2One(
+            'cg.paysager',
+            ondelete='CASCADE',
+            string=u"""Paysager""",
+            help=u"""Paysager""",
+        )
+        
+    ht = fields.Selection(
+            _HAUTEURS,
+            'ht',
+            help='Hauteur totale',
+        )
+        
+    hfut = fields.Integer(
+            string = u"""Hauteur du fût""",
+            help=u"""Hauteur du fût""",
+        )      
+
+    diamhoup = fields.Integer(
+            string = u"""Diamètre du houppier""",
+            help=u"""Diamètre du houppier""",
+        )
+            
+    larghoupvoie = fields.Float(
+            string = u"""Largeur du houppier""",
+            help=u"""Largeur du houppier""",
+        )
+
+    larghoupriv = fields.Float(
+            string = u"""Largeur riverain""",
+            help=u"""Largeur du houppier sur riverain""",
+        )
+
+    diamtronc = fields.Integer(
+            string = u"""Diamètre du tronc""",
+            help=u"""Diamètre du tronc""",
+        )
+
+    surfacepiedarbre = fields.Numeric(
+            string = u"""Surface du pied d'arbre""",
+            help=u"""Surface du pied d'arbre""",
+        )
+
+    grille = fields.Boolean(
+            string = u"""Grille""",
+            help=u"""Grille""",
+        )
+
+    lignelec = fields.Boolean(
+            string = u"""Ligne électrique""",
+            help=u"""Présence d'une ligne électrique""",
+        )
+
+    sonde = fields.Boolean(
+            string = u"""Sonde""",
+            help=u"""Présence d'une sonde tensiométrque""",
+        )
+
+    empmat = fields.Boolean(
+            string = u"""Emplacement""",
+            help=u"""Emplacement""",
+        )
+
+    arrosage = fields.Boolean(
+            string = u"""Arrosage""",
+            help=u"""Dispositif d'arrosage""",
+        )
+
+    environnement = fields.Selection(
+            _ENVIRONNEMENTS,
+            'Environnement',
+        )
+
+    bilan = fields.Many2One(
+            'cg.bilan',
+            ondelete='CASCADE',
+            string=u"""Bilan""",
+            help=u"""Bilan""",
+        )
+    
+    photo = fields.Binary('Photo')
+
+    active = fields.Boolean('Active', select=True)
+         
+    @staticmethod
+    def default_active():
+        return True
+
+class ArbreEvolArbre(ModelSQL):
+    'Arbre - EvolArbre'
+    __name__ = 'cg.arbre-cg.evol_arbre'
+    _table = 'arbre_evol_rel'
+    arbre = fields.Many2One('cg.arbre', 'code',
+        ondelete='CASCADE', required=True, select=True)
+    evol_arbre = fields.Many2One('cg.evol_arbre', 'date',
+        ondelete='CASCADE', required=True, select=True)          
+
+                           

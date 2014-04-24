@@ -1,0 +1,174 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:pefc.pefc:"
+msgid "You must provide a PEFC certification ID in the form \"XX-XX-XX/XXX\"."
+msgstr ""
+"Vous devez définir un code de certification PEFC de la forme \"XX-XX-"
+"XX/XXX\"."
+
+msgctxt "error:pefc.pefc_notify_recipient:"
+msgid ""
+"Recipients of PEFC expiration notifications must have a valid mail address."
+msgstr ""
+"Les destinataires des notifications PEFc doivent avoir une adresse EMail "
+"valide."
+
+msgctxt "error:pefc.pefc_notify_recipient:"
+msgid "The notification must be unique"
+msgstr "La notification doit être unique"
+
+msgctxt "field:party.party,pefc:"
+msgid "PEFC certifications"
+msgstr "Certifications PEFC"
+
+msgctxt "field:pefc.pefc,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:pefc.pefc,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:pefc.pefc,date:"
+msgid "Certification date"
+msgstr "Date de certification"
+
+msgctxt "field:pefc.pefc,description_sheet:"
+msgid "Properties"
+msgstr "Propriétés"
+
+msgctxt "field:pefc.pefc,duration:"
+msgid "Certificate duration in months"
+msgstr "Durée de la certification en mois"
+
+msgctxt "field:pefc.pefc,enabled:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:pefc.pefc,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:pefc.pefc,label:"
+msgid "Label"
+msgstr "Label"
+
+msgctxt "field:pefc.pefc,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:pefc.pefc,pefc_no:"
+msgid "PEFC ID"
+msgstr "Code PEFC"
+
+msgctxt "field:pefc.pefc,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:pefc.pefc,validity:"
+msgid "Validity"
+msgstr "Validité"
+
+msgctxt "field:pefc.pefc,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:pefc.pefc,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:pefc.pefc_notify_recipient,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:pefc.pefc_notify_recipient,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:pefc.pefc_notify_recipient,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:pefc.pefc_notify_recipient,msg_content:"
+msgid "Message content"
+msgstr "Contenu"
+
+msgctxt "field:pefc.pefc_notify_recipient,msg_subject:"
+msgid "Message subject"
+msgstr "Sujet"
+
+msgctxt "field:pefc.pefc_notify_recipient,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:pefc.pefc_notify_recipient,recipient:"
+msgid "Recipient"
+msgstr "Destinataire"
+
+msgctxt "field:pefc.pefc_notify_recipient,sender:"
+msgid "Sender"
+msgstr "Émetteur"
+
+msgctxt "field:pefc.pefc_notify_recipient,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:pefc.pefc_notify_recipient,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:pefc.pefc,pefc_no:"
+msgid "PEFC ID number in the form \"XX-XX-XX/XXX\""
+msgstr "Identifiant PEFC de la forme \"XX-XX-XX/XXX\""
+
+msgctxt "help:pefc.pefc_notify_recipient,recipient:"
+msgid ""
+"User that will receive mail notifications about PEFC certification "
+"expiration"
+msgstr ""
+"L'utilisateur qui recevra les mails de notification d'expiraation PEFC"
+
+msgctxt "help:pefc.pefc_notify_recipient,sender:"
+msgid ""
+"User used for the From address in notifications about PEFC certification "
+"expiration"
+msgstr ""
+"Utilisateur utilisé dans le champs From des notifications d'expiration PEFC"
+
+msgctxt "model:ir.action,name:act_pefc_form_view"
+msgid "PEFC certification"
+msgstr "Certification PEFC"
+
+msgctxt "model:ir.action,name:act_pefc_notify_form_view"
+msgid "PEFC notifications"
+msgstr "Notifications PEFC"
+
+msgctxt "model:ir.action,name:act_wood_party_form"
+msgid "Owner parties"
+msgstr "Tiers propriétaires"
+
+msgctxt "model:ir.cron,name:pefc_certification_cron"
+msgid "PEFC certification check"
+msgstr "Validité de la certification PEFC"
+
+msgctxt "model:ir.ui.menu,name:menu_pefc_notify"
+msgid "PEFC notifications"
+msgstr "Notification PEFC"
+
+msgctxt "model:ir.ui.menu,name:menu_wood_party"
+msgid "Owner parties"
+msgstr "Tiers propriétaires"
+
+msgctxt "model:pefc.pefc,name:"
+msgid "PEFC certificate"
+msgstr "Certificat PEFC"
+
+msgctxt "model:pefc.pefc_notify_recipient,name:"
+msgid "PEFCNotifyRecipient"
+msgstr "Destinataire de la notification PEFC"
+
+msgctxt "view:party.party:"
+msgid "PEFC"
+msgstr "PEFC"

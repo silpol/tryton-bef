@@ -1,0 +1,1271 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:cubing.adrian:"
+msgid "Height classes must define an height range from 0 to infinite meters."
+msgstr ""
+"Les classes de hauteur doivent définir une hauteur comprise entre 0m et une "
+"taille infinie."
+
+msgctxt "error:cubing.adrian:"
+msgid "The scale must be unique"
+msgstr "Le tarif doit être unique"
+
+msgctxt "error:cubing.algan_fast:"
+msgid "The scale must be ranging from 1 to 20"
+msgstr "Le tarif doit être compris entre 1 et 20"
+
+msgctxt "error:items_sheet.items_sheet:"
+msgid ""
+"A party to contact for visits with a valid phone number has to be defined."
+msgstr "Un tiers avec un numéro de téléphone valide doit être défini."
+
+msgctxt "error:items_sheet.items_sheet:"
+msgid "Trunks must all be from the same marking sheet"
+msgstr "Les tiges doivent toutes provenir de la même fiche de martelage"
+
+msgctxt "error:marking_sheet.marking_sheet:"
+msgid "The ID must be unique"
+msgstr "L'ID doit être unique"
+
+msgctxt "error:trunks.count:"
+msgid "The height of the tree must be higher than 0."
+msgstr "La hauteur de l'arbre doit être supérieure à 0."
+
+msgctxt "error:trunks.count:"
+msgid "The trunks count must be higher than 0."
+msgstr "Le nombre de tiges doit être supérieur à 0."
+
+msgctxt "error:trunks.trunks:"
+msgid "Please select a scale for the cubing method."
+msgstr "Veuillez sélectionner un tarif pour la méthode de cubage."
+
+msgctxt "error:trunks.trunks:"
+msgid ""
+"The height of one of the tree is missing. Add it or change the cubing method"
+msgstr ""
+"La hauteur d'un des arbres est manquante. Veuillez la définir ou changer la "
+"méthode de cubage."
+
+msgctxt "error:wood_diameter.class:"
+msgid "Diameters must be higher or equal to 0."
+msgstr "Les diamètres doivent être supérieur ou égal à 0."
+
+msgctxt "error:wood_diameter.class:"
+msgid "The minimal diameters must be inferior to the maximal diameter."
+msgstr "Le diamètre minimal doit être inférieur au diamètre maximal."
+
+msgctxt "error:wood_diameter.classification:"
+msgid "Diameter classes must be uninterrupted and cannot overlap."
+msgstr ""
+"Les classes de diamètre doivent être initerrompues et ne peuvent pas se "
+"recouper."
+
+msgctxt "error:wood_diameter.classification:"
+msgid "The name must be unique"
+msgstr "Le nom doit être unique"
+
+msgctxt "error:wood_variety.tree_quality:"
+msgid "The name must be unique"
+msgstr "Le nom doit être unique"
+
+msgctxt "error:wood_variety.variety:"
+msgid "The code must be unique"
+msgstr "Le code doit être unique"
+
+msgctxt "error:wood_variety.variety:"
+msgid "The name must be unique"
+msgstr "Le nom doit être unique"
+
+msgctxt "error:wood_variety.wood_quality:"
+msgid "The name must be unique"
+msgstr "Le nom doit être unique"
+
+msgctxt "field:cubing.adrian,classes:"
+msgid "Height classes"
+msgstr "Classes de hauteur"
+
+msgctxt "field:cubing.adrian,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cubing.adrian,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cubing.adrian,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:cubing.adrian,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cubing.adrian,scale:"
+msgid "Scale number"
+msgstr "Tarif"
+
+msgctxt "field:cubing.adrian,variety:"
+msgid "Variety"
+msgstr "Essence"
+
+msgctxt "field:cubing.adrian,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cubing.adrian,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cubing.adrian_class,a:"
+msgid "a"
+msgstr ""
+
+msgctxt "field:cubing.adrian_class,adrian_cubing:"
+msgid "Adrian cubing"
+msgstr "Cubage Adrian"
+
+msgctxt "field:cubing.adrian_class,b:"
+msgid "b"
+msgstr ""
+
+msgctxt "field:cubing.adrian_class,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cubing.adrian_class,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cubing.adrian_class,height_max:"
+msgid "Maximal height"
+msgstr "Hauteur maximale"
+
+msgctxt "field:cubing.adrian_class,height_min:"
+msgid "Minimal height"
+msgstr "Hauteur minimale"
+
+msgctxt "field:cubing.adrian_class,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:cubing.adrian_class,k:"
+msgid "k"
+msgstr ""
+
+msgctxt "field:cubing.adrian_class,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cubing.adrian_class,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cubing.adrian_class,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cubing.algan_fast,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cubing.algan_fast,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cubing.algan_fast,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:cubing.algan_fast,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cubing.algan_fast,scale:"
+msgid "Scale number"
+msgstr "Tarif"
+
+msgctxt "field:cubing.algan_fast,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cubing.algan_fast,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:items_sheet.items_sheet,contract_type:"
+msgid "Contract type"
+msgstr "Type de contrat"
+
+msgctxt "field:items_sheet.items_sheet,contract_type_rw:"
+msgid "Contract type"
+msgstr "Type de contrat"
+
+msgctxt "field:items_sheet.items_sheet,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:items_sheet.items_sheet,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:items_sheet.items_sheet,debardage:"
+msgid "Debardage"
+msgstr "Débardage"
+
+msgctxt "field:items_sheet.items_sheet,debardage_etf:"
+msgid "ETF"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,debardage_etf_rw:"
+msgid "ETF"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,debardage_rw:"
+msgid "Debardage"
+msgstr "Débardage"
+
+msgctxt "field:items_sheet.items_sheet,houppier:"
+msgid "Houppier"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,houppier_rw:"
+msgid "Houppier"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:items_sheet.items_sheet,main_variety:"
+msgid "Main variety"
+msgstr "Essence principale"
+
+msgctxt "field:items_sheet.items_sheet,marking_sheet:"
+msgid "MarkingID"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,mean_volume:"
+msgid "Mean volume"
+msgstr "Volume moyen"
+
+msgctxt "field:items_sheet.items_sheet,mean_volume_uom:"
+msgid "Mean volume unit"
+msgstr "Unité du volume moyen"
+
+msgctxt "field:items_sheet.items_sheet,mean_volume_uom_digits:"
+msgid "Mean volume UOM digits"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,mise_a_port:"
+msgid "Mise à port"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,mise_a_port_rw:"
+msgid "Mise à port"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,ms:"
+msgid "MS"
+msgstr "FM"
+
+msgctxt "field:items_sheet.items_sheet,paths:"
+msgid "Paths"
+msgstr "Chemins"
+
+msgctxt "field:items_sheet.items_sheet,paths_rw:"
+msgid "Paths"
+msgstr "Chemins"
+
+msgctxt "field:items_sheet.items_sheet,period:"
+msgid "Period"
+msgstr "Période"
+
+msgctxt "field:items_sheet.items_sheet,period_rw:"
+msgid "Period"
+msgstr "Pérdiode"
+
+msgctxt "field:items_sheet.items_sheet,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:items_sheet.items_sheet,rechic:"
+msgid "Rechic"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,rechic_rw:"
+msgid "Rechic"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,residuals:"
+msgid "Residuals"
+msgstr "Rémanents"
+
+msgctxt "field:items_sheet.items_sheet,residuals_rw:"
+msgid "Residuals"
+msgstr "Rémanents"
+
+msgctxt "field:items_sheet.items_sheet,total_trunks_count:"
+msgid "Total trunks count"
+msgstr "Nombre de tiges total"
+
+msgctxt "field:items_sheet.items_sheet,total_volume:"
+msgid "Total volume"
+msgstr "Volume total"
+
+msgctxt "field:items_sheet.items_sheet,total_volume_uom:"
+msgid "Total volume unit"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,total_volume_uom_digits:"
+msgid "Total volume UOM digits"
+msgstr ""
+
+msgctxt "field:items_sheet.items_sheet,trunks:"
+msgid "Bundles"
+msgstr "Lots"
+
+msgctxt "field:items_sheet.items_sheet,visit:"
+msgid "Visits"
+msgstr "Visites"
+
+msgctxt "field:items_sheet.items_sheet,visit_party:"
+msgid "Ask to"
+msgstr "Demander à "
+
+msgctxt "field:items_sheet.items_sheet,visit_str:"
+msgid "Visits"
+msgstr "Visites"
+
+msgctxt "field:items_sheet.items_sheet,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:items_sheet.items_sheet,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:items_sheet.wood_text,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:items_sheet.wood_text,category:"
+msgid "Category"
+msgstr "Catégorie"
+
+msgctxt "field:items_sheet.wood_text,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:items_sheet.wood_text,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:items_sheet.wood_text,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:items_sheet.wood_text,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:items_sheet.wood_text,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:items_sheet.wood_text,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:items_sheet.wood_text,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:items_sheet.wood_text,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:marking_sheet.marking_sheet,certificate_expired:"
+msgid "Certification expired"
+msgstr "Certification expirée"
+
+msgctxt "field:marking_sheet.marking_sheet,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:marking_sheet.marking_sheet,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:marking_sheet.marking_sheet,cut_kind:"
+msgid "Cut kind"
+msgstr "Type de coupe"
+
+msgctxt "field:marking_sheet.marking_sheet,expert:"
+msgid "Forest expert"
+msgstr "Expert forestier"
+
+msgctxt "field:marking_sheet.marking_sheet,forest:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "field:marking_sheet.marking_sheet,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:marking_sheet.marking_sheet,id_for_year:"
+msgid "ID for year"
+msgstr ""
+
+msgctxt "field:marking_sheet.marking_sheet,limit:"
+msgid "Limit"
+msgstr "Limite"
+
+msgctxt "field:marking_sheet.marking_sheet,limit_rw:"
+msgid "Limit"
+msgstr "Limite"
+
+msgctxt "field:marking_sheet.marking_sheet,marking:"
+msgid "Marking"
+msgstr "Marquage"
+
+msgctxt "field:marking_sheet.marking_sheet,marking_id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:marking_sheet.marking_sheet,mean_volume:"
+msgid "Mean volume"
+msgstr "Volume moyen"
+
+msgctxt "field:marking_sheet.marking_sheet,mean_volume_uom:"
+msgid "Mean volume unit"
+msgstr "Unité du volume moyen"
+
+msgctxt "field:marking_sheet.marking_sheet,mean_volume_uom_digits:"
+msgid "Mean volume UOM digits"
+msgstr ""
+
+msgctxt "field:marking_sheet.marking_sheet,pefc_certificate:"
+msgid "PEFC certificate"
+msgstr "Certificat PEFC"
+
+msgctxt "field:marking_sheet.marking_sheet,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:marking_sheet.marking_sheet,reserve:"
+msgid "Reserve"
+msgstr "Réserve"
+
+msgctxt "field:marking_sheet.marking_sheet,reserve_rw:"
+msgid "Reserve"
+msgstr "Réserve"
+
+msgctxt "field:marking_sheet.marking_sheet,surface:"
+msgid "Surface"
+msgstr "Surface"
+
+msgctxt "field:marking_sheet.marking_sheet,surface_ha:"
+msgid "Surface in ha"
+msgstr "Surface en ha"
+
+msgctxt "field:marking_sheet.marking_sheet,surface_uom:"
+msgid "Surface unit"
+msgstr "Unité de la surface"
+
+msgctxt "field:marking_sheet.marking_sheet,total_trunks_count:"
+msgid "Total trunks count"
+msgstr "Nombre total de tiges"
+
+msgctxt "field:marking_sheet.marking_sheet,total_volume:"
+msgid "Total volume"
+msgstr "Volume total"
+
+msgctxt "field:marking_sheet.marking_sheet,total_volume_uom:"
+msgid "Total volume unit"
+msgstr ""
+
+msgctxt "field:marking_sheet.marking_sheet,total_volume_uom_digits:"
+msgid "Total volume UOM digits"
+msgstr ""
+
+msgctxt "field:marking_sheet.marking_sheet,trunks:"
+msgid "Trunks"
+msgstr "Tiges"
+
+msgctxt "field:marking_sheet.marking_sheet,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:marking_sheet.marking_sheet,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:marking_sheet.marking_sheet,year:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "field:trunks.count,count:"
+msgid "Count"
+msgstr "Nombre"
+
+msgctxt "field:trunks.count,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:trunks.count,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:trunks.count,diam_class:"
+msgid "Diameter"
+msgstr "Diamètre"
+
+msgctxt "field:trunks.count,height:"
+msgid "Height"
+msgstr "Hauteur"
+
+msgctxt "field:trunks.count,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:trunks.count,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:trunks.count,trunks:"
+msgid "Trunks"
+msgstr "Tiges"
+
+msgctxt "field:trunks.count,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:trunks.count,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:trunks.trunks,adrian_scale:"
+msgid "Adrian scale"
+msgstr "Tarif Adrian"
+
+msgctxt "field:trunks.trunks,algan_fast_scale:"
+msgid "Algan fast scale"
+msgstr "Tarif Algan rapide"
+
+msgctxt "field:trunks.trunks,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:trunks.trunks,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:trunks.trunks,diameter_classification:"
+msgid "Diameters class"
+msgstr "Classe de diamètre"
+
+msgctxt "field:trunks.trunks,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:trunks.trunks,items_sheet:"
+msgid "Items sheet"
+msgstr "Fiche articles"
+
+msgctxt "field:trunks.trunks,marking_id:"
+msgid "MS ID"
+msgstr "ID FM"
+
+msgctxt "field:trunks.trunks,marking_sheet:"
+msgid "Marking sheet"
+msgstr "Fiche de martelage"
+
+msgctxt "field:trunks.trunks,method:"
+msgid "Cubing method"
+msgstr "Méthode de cubage"
+
+msgctxt "field:trunks.trunks,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:trunks.trunks,total_cubing:"
+msgid "Total cubing"
+msgstr "Cubage total"
+
+msgctxt "field:trunks.trunks,total_trunks_count:"
+msgid "Total trunks count"
+msgstr "Nombre de tiges total"
+
+msgctxt "field:trunks.trunks,tree_quality:"
+msgid "Tree quality"
+msgstr "Qualité arbre"
+
+msgctxt "field:trunks.trunks,trunks_count:"
+msgid "Trunks count"
+msgstr "Nombre de tiges"
+
+msgctxt "field:trunks.trunks,variety:"
+msgid "Variety"
+msgstr "Essence"
+
+msgctxt "field:trunks.trunks,wood_quality:"
+msgid "Wood quality"
+msgstr "Qualité bois"
+
+msgctxt "field:trunks.trunks,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:trunks.trunks,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:wood_diameter.class,classification:"
+msgid "Diameters classification"
+msgstr "Classification de diamètre"
+
+msgctxt "field:wood_diameter.class,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:wood_diameter.class,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:wood_diameter.class,diameter_max:"
+msgid "Maximal diameter"
+msgstr "Diamètre maximal"
+
+msgctxt "field:wood_diameter.class,diameter_min:"
+msgid "Minimal diameter"
+msgstr "Diamètre minimal"
+
+msgctxt "field:wood_diameter.class,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:wood_diameter.class,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_diameter.class,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_diameter.class,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:wood_diameter.class,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:wood_diameter.classification,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:wood_diameter.classification,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:wood_diameter.classification,diameter_classes:"
+msgid "Diameters classes"
+msgstr "Classes de diamètre"
+
+msgctxt "field:wood_diameter.classification,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:wood_diameter.classification,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_diameter.classification,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_diameter.classification,variety:"
+msgid "Wood variety"
+msgstr "Essence"
+
+msgctxt "field:wood_diameter.classification,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:wood_diameter.classification,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:wood_product.marking_to_items.start,contract_type:"
+msgid "Contract type"
+msgstr "Type de contrat"
+
+msgctxt "field:wood_product.marking_to_items.start,contract_type_rw:"
+msgid "Contract type"
+msgstr "Type de contrat"
+
+msgctxt "field:wood_product.marking_to_items.start,debardage:"
+msgid "Debardage"
+msgstr "Débardage"
+
+msgctxt "field:wood_product.marking_to_items.start,debardage_etf:"
+msgid "ETF"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,debardage_etf_rw:"
+msgid "ETF"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,debardage_rw:"
+msgid "Debardage"
+msgstr "Débardage"
+
+msgctxt "field:wood_product.marking_to_items.start,houppier:"
+msgid "Houppier"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,houppier_rw:"
+msgid "Houppier"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:wood_product.marking_to_items.start,main_variety:"
+msgid "Main variety"
+msgstr "Essence principale"
+
+msgctxt "field:wood_product.marking_to_items.start,marking_sheet:"
+msgid "MarkingID"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,mean_volume:"
+msgid "Mean volume"
+msgstr "Volume moyen"
+
+msgctxt "field:wood_product.marking_to_items.start,mean_volume_uom:"
+msgid "Mean volume unit"
+msgstr "Unité du volume moyen"
+
+msgctxt "field:wood_product.marking_to_items.start,mean_volume_uom_digits:"
+msgid "Mean volume UOM digits"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,mise_a_port:"
+msgid "Mise à port"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,mise_a_port_rw:"
+msgid "Mise à port"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,ms:"
+msgid "MS"
+msgstr "FM"
+
+msgctxt "field:wood_product.marking_to_items.start,paths:"
+msgid "Paths"
+msgstr "Chemins"
+
+msgctxt "field:wood_product.marking_to_items.start,paths_rw:"
+msgid "Paths"
+msgstr "Chemins"
+
+msgctxt "field:wood_product.marking_to_items.start,period:"
+msgid "Period"
+msgstr "Période"
+
+msgctxt "field:wood_product.marking_to_items.start,period_rw:"
+msgid "Period"
+msgstr "Période"
+
+msgctxt "field:wood_product.marking_to_items.start,rechic:"
+msgid "Rechic"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,rechic_rw:"
+msgid "Rechic"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,residuals:"
+msgid "Residuals"
+msgstr "Rémanents"
+
+msgctxt "field:wood_product.marking_to_items.start,residuals_rw:"
+msgid "Residuals"
+msgstr "Rémanents"
+
+msgctxt "field:wood_product.marking_to_items.start,total_trunks_count:"
+msgid "Total trunks count"
+msgstr "Nombre total de tiges"
+
+msgctxt "field:wood_product.marking_to_items.start,total_volume:"
+msgid "Total volume"
+msgstr "Volume total"
+
+msgctxt "field:wood_product.marking_to_items.start,total_volume_uom:"
+msgid "Total volume unit"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,total_volume_uom_digits:"
+msgid "Total volume UOM digits"
+msgstr ""
+
+msgctxt "field:wood_product.marking_to_items.start,trunks:"
+msgid "Bundles"
+msgstr "Lots"
+
+msgctxt "field:wood_product.marking_to_items.start,visit:"
+msgid "Visits"
+msgstr "Visites"
+
+msgctxt "field:wood_product.marking_to_items.start,visit_party:"
+msgid "Ask to"
+msgstr "Demander à "
+
+msgctxt "field:wood_product.marking_to_items.start,visit_str:"
+msgid "Visits"
+msgstr "Visites"
+
+msgctxt "field:wood_variety.tree_quality,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:wood_variety.tree_quality,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:wood_variety.tree_quality,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:wood_variety.tree_quality,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_variety.tree_quality,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_variety.tree_quality,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:wood_variety.tree_quality,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:wood_variety.variety,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:wood_variety.variety,children:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:wood_variety.variety,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:wood_variety.variety,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:wood_variety.variety,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:wood_variety.variety,description:"
+msgid "Long wording"
+msgstr "Description"
+
+msgctxt "field:wood_variety.variety,diameter_classification:"
+msgid "Diameters classification"
+msgstr "Classification de diamètre"
+
+msgctxt "field:wood_variety.variety,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:wood_variety.variety,name:"
+msgid "Short wording"
+msgstr "Libellé court"
+
+msgctxt "field:wood_variety.variety,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:wood_variety.variety,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_variety.variety,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:wood_variety.variety,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:wood_variety.wood_quality,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:wood_variety.wood_quality,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:wood_variety.wood_quality,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:wood_variety.wood_quality,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_variety.wood_quality,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:wood_variety.wood_quality,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:wood_variety.wood_quality,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "model:cubing.adrian,name:"
+msgid "CubingAdrian"
+msgstr "Cubage Adrian"
+
+msgctxt "model:cubing.adrian_class,name:"
+msgid "CubingAdrianClass"
+msgstr "Tarif de cubage Adrian"
+
+msgctxt "model:cubing.algan_fast,name:"
+msgid "CubingAlganFast"
+msgstr "Tarif de cubage Algan rapide"
+
+msgctxt "model:ir.action,name:act_adrian_form_view"
+msgid "Adrian"
+msgstr "Adrian"
+
+msgctxt "model:ir.action,name:act_diameter_class_form_view"
+msgid "Trunks count"
+msgstr "Nombre de tiges"
+
+msgctxt "model:ir.action,name:act_items_sheet_form_view"
+msgid "Items sheets"
+msgstr "Fiches articles"
+
+msgctxt "model:ir.action,name:act_marking_sheet_form_view"
+msgid "Marking sheets"
+msgstr "Fiches de martelage"
+
+msgctxt "model:ir.action,name:act_trunks_form_view"
+msgid "Trunks"
+msgstr "Tiges"
+
+msgctxt "model:ir.action,name:act_wood_text_form_view"
+msgid "Codifications of items sheets"
+msgstr "Codifications des Fiches articles"
+
+msgctxt "model:ir.action,name:report_items_sheet"
+msgid "Items sheets"
+msgstr "Fiches articles"
+
+msgctxt "model:ir.action,name:wiz_marking_to_items"
+msgid "Convert to an items sheet"
+msgstr "Convertir en fiche article"
+
+msgctxt "model:ir.ui.menu,name:menu_cubing"
+msgid "Cubing tarif"
+msgstr "Tarif de cubage"
+
+msgctxt "model:ir.ui.menu,name:menu_cubing_adrian"
+msgid "Adrian"
+msgstr "Adrian"
+
+msgctxt "model:ir.ui.menu,name:menu_items_sheet"
+msgid "Items sheets"
+msgstr "Fiches articles"
+
+msgctxt "model:ir.ui.menu,name:menu_marking_sheet"
+msgid "Marking sheets"
+msgstr "Fiches de martelage"
+
+msgctxt "model:ir.ui.menu,name:menu_wood_text"
+msgid "Codifications of items sheets"
+msgstr "Codifications des Fiches articles"
+
+msgctxt "model:ir.ui.menu,name:submenu_marking_sheet"
+msgid "Marking sheets"
+msgstr "Fiches de martelage"
+
+msgctxt "model:items_sheet.items_sheet,name:"
+msgid "Items sheet"
+msgstr "Fiche articles"
+
+msgctxt "model:items_sheet.wood_text,name:"
+msgid "Codifications of items sheets"
+msgstr "Codifications des Fiches articles"
+
+msgctxt "model:marking_sheet.marking_sheet,name:"
+msgid "Marking sheet"
+msgstr "Fiche de martelage"
+
+msgctxt "model:trunks.count,name:"
+msgid "Trunks count"
+msgstr "Nombre de tiges"
+
+msgctxt "model:trunks.trunks,name:"
+msgid "Trunks"
+msgstr "Tiges"
+
+msgctxt "model:wood_diameter.class,name:"
+msgid "DiameterClass"
+msgstr "Classe de diamètre"
+
+msgctxt "model:wood_diameter.classification,name:"
+msgid "DiametersClassification"
+msgstr "Classification de diamètre"
+
+msgctxt "model:wood_product.marking_to_items.start,name:"
+msgid "Items sheet"
+msgstr "Fiche articles"
+
+msgctxt "model:wood_variety.tree_quality,name:"
+msgid "TreeQuality"
+msgstr "Qualité arbre"
+
+msgctxt "model:wood_variety.variety,name:"
+msgid "Wood variety"
+msgstr "Essence"
+
+msgctxt "model:wood_variety.wood_quality,name:"
+msgid "WoodQuality"
+msgstr "Qualité bois"
+
+msgctxt "odt:items_sheet.report:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Article N°"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "B.O.20 et +"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "BI ="
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Bois d'industrie ="
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "C.V.O. réglée par :"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Conditions particlières"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Délai de vidange :"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Essence"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "L'acquéreur :"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Nombre de pieds"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Nombre de pieds BO"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Paiement :"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Prix de vente :"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Sa caution :"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "T.V.A."
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "TOTAL"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Visite :"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Volume moyen"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "Volume présumé"
+msgstr ""
+
+msgctxt "odt:items_sheet.report:"
+msgid "pm"
+msgstr ""
+
+msgctxt "selection:items_sheet.items_sheet,visit:"
+msgid "Ask the owner's agent: "
+msgstr "Demander à l'agent du propriétaire:"
+
+msgctxt "selection:items_sheet.items_sheet,visit:"
+msgid "See the map or ask the expert."
+msgstr "Voir la carte ou demander à l'expert."
+
+msgctxt "selection:items_sheet.items_sheet,visit:"
+msgid "See the map or ask the forest ranger: "
+msgstr "Voir la carte ou demander au garde forestier: "
+
+msgctxt "selection:items_sheet.items_sheet,visit:"
+msgid "See the map."
+msgstr "Voir la carte."
+
+msgctxt "selection:items_sheet.wood_text,category:"
+msgid "Contract type"
+msgstr "Type de contrat"
+
+msgctxt "selection:items_sheet.wood_text,category:"
+msgid "Cut kind"
+msgstr "Type de coupe"
+
+msgctxt "selection:items_sheet.wood_text,category:"
+msgid "Debardage"
+msgstr "Débardage"
+
+msgctxt "selection:items_sheet.wood_text,category:"
+msgid "Limit"
+msgstr "Limite"
+
+msgctxt "selection:items_sheet.wood_text,category:"
+msgid "Marking"
+msgstr "Marquage"
+
+msgctxt "selection:items_sheet.wood_text,category:"
+msgid "Reserve"
+msgstr "Réserve"
+
+msgctxt "selection:trunks.trunks,method:"
+msgid "Adrian"
+msgstr "Adrian"
+
+msgctxt "selection:trunks.trunks,method:"
+msgid "Algan fast"
+msgstr "Algan rapide"
+
+msgctxt "selection:wood_product.marking_to_items.start,visit:"
+msgid "Ask the owner's agent: "
+msgstr "Demander à l'agent du propriétaire:"
+
+msgctxt "selection:wood_product.marking_to_items.start,visit:"
+msgid "See the map or ask the expert."
+msgstr "Voir la carte ou demander à l'expert."
+
+msgctxt "selection:wood_product.marking_to_items.start,visit:"
+msgid "See the map or ask the forest ranger: "
+msgstr "Voir la carte ou demander au garde forestier: "
+
+msgctxt "selection:wood_product.marking_to_items.start,visit:"
+msgid "See the map."
+msgstr "Voir la carte."
+
+msgctxt "view:cubing.adrian:"
+msgid "Adrian scales"
+msgstr "Tarifs Adrian"
+
+msgctxt "view:cubing.algan_fast:"
+msgid "Algan fast scales"
+msgstr "Tarifs Algan rapide"
+
+msgctxt "view:cubing.algan_fast:"
+msgid "description"
+msgstr ""
+
+msgctxt "view:items_sheet.items_sheet:"
+msgid "Bundles"
+msgstr "Lots"
+
+msgctxt "view:items_sheet.items_sheet:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:items_sheet.items_sheet:"
+msgid "Items sheet"
+msgstr "Fiches articles"
+
+msgctxt "view:items_sheet.items_sheet:"
+msgid "Particular terms"
+msgstr "Conditions particulières"
+
+msgctxt "view:marking_sheet.marking_sheet:"
+msgid "Create an items sheet based on this marking sheet"
+msgstr "Créer une fiche article à partir de cette fiche de martelage"
+
+msgctxt "view:marking_sheet.marking_sheet:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:marking_sheet.marking_sheet:"
+msgid "Trunks"
+msgstr "Tiges"
+
+msgctxt "view:marking_sheet.marking_sheet:"
+msgid "Warning! This PEFC certificate isn't valid."
+msgstr "Attention! Le certificat PEFC n'est pas valide."
+
+msgctxt "view:trunks.count:"
+msgid "Trunks count by diameter"
+msgstr "Nombre de tiges par diamètre"
+
+msgctxt "view:trunks.trunks:"
+msgid "Trunks"
+msgstr "Tiges"
+
+msgctxt "view:wood_diameter.class:"
+msgid "Diameter class"
+msgstr "Classe de diamètre"
+
+msgctxt "view:wood_diameter.classification:"
+msgid "description"
+msgstr ""
+
+msgctxt "view:wood_variety.variety:"
+msgid "variety"
+msgstr "essence"
+
+msgctxt "wizard_button:wood_product.marking_to_items,start,do_create:"
+msgid "Create"
+msgstr "Créer"
+
+msgctxt "wizard_button:wood_product.marking_to_items,start,end:"
+msgid "Cancel"
+msgstr "Annuler"

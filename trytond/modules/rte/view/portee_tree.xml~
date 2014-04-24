@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="portee">
+    <field name="equipement" />
+    <field name="code" />
+    <field name="active" />    
+    <field name="operation" />
+    <field name="commune" />
+    <field name="pylone" />                   
+</tree>

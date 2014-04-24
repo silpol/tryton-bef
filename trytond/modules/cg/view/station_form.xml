@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<form string="Station" col="2">
+    <notebook colspan="6">
+        <page string="Général" id="general">
+            <label name="code"/>
+            <field name="code"/>
+            <label name="ug"/>
+            <field name="ug"/>                             
+            <label name="proprietaire"/>
+            <field name="proprietaire" widget="selection"/>
+            <label name="domaine"/>
+            <field name="domaine"/>
+            <label name="gestionnaire"/>
+            <field name="gestionnaire" widget="selection"/>                                                       
+            <label name="distance"/>
+            <field name="distance"/>
+            <label name="commune"/>
+            <field name="commune"/>
+            <label name="active"/>
+            <field name="active"/>                         
+        </page>
+        <page string="Emplacements" id="emplacement">                            
+            <field name="emplacement"/>
+        </page>
+        <page string="Map" id="map" col="2">                            
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="station_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

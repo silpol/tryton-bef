@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Species Taxon" col="2">
+    <label name="essence" />
+    <field name="essence" />
+    <label name="taxon" />
+    <field name="taxon" />
+</form>

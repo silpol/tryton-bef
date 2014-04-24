@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Ecology">
+    <label name="libelle"/>
+    <field name="libelle"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="active"/>
+    <field name="active"/>
+    <label name="parent"/>
+    <field name="parent"/>
+</form>

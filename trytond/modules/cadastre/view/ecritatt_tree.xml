@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree string="Écriture - Attribut">
+    <field name="fon" />
+    <field name="hei" />
+    <field name="tyu" />
+    <field name="cef" />
+    <field name="csp" />
+    <field name="di1" />
+    <field name="di2" />
+    <field name="di3" />
+    <field name="di4" />
+    <field name="tpa" />
+    <field name="hta" />
+    <field name="vta" />
+    <field name="atr" />
+</tree>

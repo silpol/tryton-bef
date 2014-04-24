@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<graph string="Basal areas" type="vbar" legend="1">
+    <x>
+        <field name="essence" />
+    </x>
+    <y>
+        <field name="g_total" />
+        <field name="g_inf30" />
+        <field name="g_sup30" />
+    </y>
+</graph>

@@ -1,0 +1,891 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstétar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:site.site:"
+msgid "The commune is invalid, no commune is defined!"
+msgstr "Cette commune est invalide, pas de commune définie !"
+
+msgctxt "error:site.site:"
+msgid "You cannot set duplicated site ID!"
+msgstr "Vous ne pouvez pas dupliquer cet identifiant !"
+
+msgctxt "field:site.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:site.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:site.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_line,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_line,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_line,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_line,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_line,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_line,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_line,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_line,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_line,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_line,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_point,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_point,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_poly,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_poly,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_poly,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site,area:"
+msgid "Area"
+msgstr "Surface"
+
+msgctxt "field:site.site,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:site.site,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site,dead_line_work:"
+msgid "Deadline"
+msgstr "Date de fin de travaux"
+
+msgctxt "field:site.site,direccte:"
+msgid "DIRECCTE"
+msgstr "DIRECCTE"
+
+msgctxt "field:site.site,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.site,gps:"
+msgid "GPS"
+msgstr "GPS"
+
+msgctxt "field:site.site,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site,image_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site.site,image_map:"
+msgid "Image map"
+msgstr "Carte locale"
+
+msgctxt "field:site.site,lot:"
+msgid "Lot"
+msgstr "Lot"
+
+msgctxt "field:site.site,misc_obj_line:"
+msgid "Miscellaneous line objects"
+msgstr "Linéaire"
+
+msgctxt "field:site.site,misc_obj_point:"
+msgid "Miscellaneous point objects"
+msgstr "Point"
+
+msgctxt "field:site.site,misc_obj_poly:"
+msgid "Miscellaneous polygon objects"
+msgstr "Zone"
+
+msgctxt "field:site.site,moa:"
+msgid "MOA"
+msgstr "MOA"
+
+msgctxt "field:site.site,moe:"
+msgid "MOE"
+msgstr "MOE"
+
+msgctxt "field:site.site,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site,nature:"
+msgid "Nature"
+msgstr "Nature"
+
+msgctxt "field:site.site,ouvrage:"
+msgid "Ouvrages divers"
+msgstr "Ouvrages divers"
+
+msgctxt "field:site.site,owner:"
+msgid "Owner"
+msgstr "Propriétaire"
+
+msgctxt "field:site.site,pefc:"
+msgid "PEFC"
+msgstr "PEFC"
+
+msgctxt "field:site.site,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site,risque:"
+msgid "Autres risques"
+msgstr "Autres risques"
+
+msgctxt "field:site.site,site_date:"
+msgid "Site date"
+msgstr "Date"
+
+msgctxt "field:site.site,site_supervision:"
+msgid "Site supervision"
+msgstr "Suivi de chantier"
+
+msgctxt "field:site.site,situation_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site.site,situation_map:"
+msgid "Situation map"
+msgstr "Carte de situation"
+
+msgctxt "field:site.site,taxon:"
+msgid "Taxons"
+msgstr "Essences"
+
+msgctxt "field:site.site,voie:"
+msgid "Voies de circulation"
+msgstr "Voies de circulation"
+
+msgctxt "field:site.site,volume:"
+msgid "Volume"
+msgstr "Volume"
+
+msgctxt "field:site.site,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.nature,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.nature,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.nature,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.nature,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.nature,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.nature,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.nature,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.nature,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.ouvrage,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.ouvrage,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.ouvrage,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.ouvrage,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.ouvrage,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.ouvrage,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.ouvrage,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.ouvrage,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.risque,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.risque,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.risque,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.risque,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.risque,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.risque,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.risque,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.risque,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.taxon,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.taxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.taxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.taxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.taxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.taxon,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.taxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.taxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.voie,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.voie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.voie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.voie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.voie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.voie,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.voie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.voie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:site.site,dead_line_work:"
+msgid "Deadline for completion of work"
+msgstr "Date de fin de chantier"
+
+msgctxt "help:site.site,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "model:ir.action,name:act_site_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.action,name:act_site_misc_obj_line_form"
+msgid "Lines"
+msgstr "Linéaires"
+
+msgctxt "model:ir.action,name:act_site_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:act_site_misc_obj_poly_form"
+msgid "Polygons"
+msgstr "Zones"
+
+msgctxt "model:ir.action,name:act_site_site_form"
+msgid "Sites"
+msgstr "Chantiers"
+
+msgctxt "model:ir.action,name:report_misc_obj_line_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_misc_obj_point_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_misc_obj_poly_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_site"
+msgid "Fiche de chantier"
+msgstr "Fiche de chantier"
+
+msgctxt "model:ir.action,name:report_site_edit"
+msgid "Open Site in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.action,name:report_sites_edit"
+msgid "Open Sites in QGis..."
+msgstr "Ouvrir le(s) chantier(s) dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_site_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_site_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj"
+msgid "Misc objects"
+msgstr "Objets divers"
+
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_line_form"
+msgid "Lines"
+msgstr "Linéaires"
+
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_poly_form"
+msgid "Polygons"
+msgstr "Zones"
+
+msgctxt "model:ir.ui.menu,name:menu_site_site_form"
+msgid "Sites"
+msgstr "Chantiers"
+
+msgctxt "model:ir.ui.menu,name:menu_sites"
+msgid "Sites"
+msgstr "Chantiers"
+
+msgctxt "model:site.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:site.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr "Linéaire"
+
+msgctxt "model:site.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr "Point"
+
+msgctxt "model:site.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr "Zone"
+
+msgctxt "model:site.site,name:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "model:site.site-site.nature,name:"
+msgid "Site - Nature"
+msgstr ""
+
+msgctxt "model:site.site-site.ouvrage,name:"
+msgid "Site - Ouvrage"
+msgstr ""
+
+msgctxt "model:site.site-site.risque,name:"
+msgid "Site - Risque"
+msgstr ""
+
+msgctxt "model:site.site-site.taxon,name:"
+msgid "Site - Taxon"
+msgstr ""
+
+msgctxt "model:site.site-site.voie,name:"
+msgid "Site - Voie"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "(1 par équipe de moins de 5 jusqu'à décembre 2013)"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "/"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Arrêté du 31 mars relatif à la fiche de chantier"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Autres risques :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "C"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "D"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Décret n°2010-1603 du 17 décembre 2010"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Définir les distances de sécurité entre les travailleurs."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Email :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Essence(s) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Extincteur valide sur les engins ou les voitures (Cf. Décret départementaux)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "F"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Fiche de chantier N°"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "L"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Minimum 2 sauveteurs secouristes du travail par équipe."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "N"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Nom du (des) donneur(s) d'ordres (propriétaire ou entreprise) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Nom du propriétaire ou gestionnaire :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "N° de Lot :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Ouvrages divers :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Port des EPI pour tous (casque complet, chaussures de sécurité, pantalon de "
+"sécurité, gants)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Pour les bûcherons : 2 fois la longueur des arbres à abattre."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Pour les porteurs et têtes abatteuse : voir conformité des engins (distance "
+"dédié sur les grues)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Pour les skidders : une longueur de câble déroulé."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "R"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Rappeler les consignes de sécurité au nouveau personnel (formation "
+"d'embauche)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Renseignements généraux"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Règles de sécurité pour les intervenants"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "S"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Si présence, indiquer les consignes à respecter :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Stationner les véhicules dans le sens du départ et laisser la voie d'accès "
+"libre."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Suivi chantier :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Trousse de sécurité sur le chantier et à portée de mains du matériel leur "
+"permettant d'arrêter un saignement abondant."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Tél :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "V"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Voies de circulation :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Vêtements de couleur vive."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ate :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ature des travaux :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ax :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ieu-dit :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "olume (m3) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ommune :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "oordonnées GPS (en général place de dépôt) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "urface du chantier :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "° PEFC :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "éférence parcellaire ou cadastrale :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "élai de réalisation des travaux :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "épartement :"
+msgstr ""
+
+msgctxt "view:site.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:site.code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "view:site.misc_obj_line:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_line:"
+msgid "Miscellaneous line object"
+msgstr "Linéaire"
+
+msgctxt "view:site.misc_obj_point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_point:"
+msgid "Miscellaneous point object"
+msgstr "Point"
+
+msgctxt "view:site.misc_obj_poly:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_poly:"
+msgid "Miscellaneous polygon object"
+msgstr "Zone"
+
+msgctxt "view:site.site:"
+msgid "Codes"
+msgstr "Codes"
+
+msgctxt "view:site.site:"
+msgid "Edit geometries"
+msgstr "Éditer"
+
+msgctxt "view:site.site:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site.site:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site.site:"
+msgid "Image"
+msgstr "Carte de situation"
+
+msgctxt "view:site.site:"
+msgid "Lines"
+msgstr "Linéaires"
+
+msgctxt "view:site.site:"
+msgid "Map"
+msgstr "Carte locale"
+
+msgctxt "view:site.site:"
+msgid "Misc. obj."
+msgstr "Objets divers"
+
+msgctxt "view:site.site:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:site.site:"
+msgid "Polygones"
+msgstr "Zones"
+
+msgctxt "view:site.site:"
+msgid "site"
+msgstr "chantier"

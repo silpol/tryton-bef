@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Species">
+    <field name="dispositif" />
+    <field name="cycle" />
+    <field name="strate" />
+    <field name="essence" />
+    <field name="classe" />
+    <field name="accd" />
+</tree>

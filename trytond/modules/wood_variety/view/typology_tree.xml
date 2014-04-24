@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<field name="code"/>
+    <field name="name"/>
+    <field name="description" expand="1"/>
+    <field name="parent" tree_invisible="1"/>
+    <field name="children" tree_invisible="1"/>
+</tree>

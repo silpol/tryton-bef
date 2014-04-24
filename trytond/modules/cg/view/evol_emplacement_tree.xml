@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Évolution des emplacements">
+    <field name="date" />                    
+    <field name="nature" />
+    <field name="cause" />
+    <field name="diametre" />
+    <field name="anindispo" />
+    <field name="repere" />
+    <field name="observation" />                   
+</tree>

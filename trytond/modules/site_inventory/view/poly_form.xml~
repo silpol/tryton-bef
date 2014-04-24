@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form string="Miscellaneous polygon object" col="2">
+    <label name="site" />
+    <field name="site" />
+    <label name="name" />
+    <field name="name" />
+    <field name="comment" />
+    <field colspan="2" name="image" widget="image" img_width="640" img_height="480"/>
+    <button colspan="2" string="Edit" name="misc_obj_poly_edit" icon="tryton-executable" />
+</form>

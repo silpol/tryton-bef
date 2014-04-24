@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<form string="Dispositifs">
+	<label name="dis_num"/>
+	<field name="dis_num"/>
+	<label name="name"/>
+	<field name="name"/>
+	<label name="dis_type"/>
+	<field name="dis_type"/>
+	<label name="dis_surf"/>
+	<field name="dis_surf"/>
+	<label name="dis_surface_foret"/>
+	<field name="dis_surface_foret"/>									
+	<label name="dis_date_instal"/>
+	<field name="dis_date_instal"/>
+	<label name="dis_ess1"/>
+	<field name="dis_ess1"/>
+	<label name="dis_hdom1"/>
+	<field name="dis_hdom1"/>
+	<label name="dis_ess2"/>
+	<field name="dis_ess2"/>
+	<label name="dis_hdom2"/>
+	<field name="dis_hdom2"/>
+	<label name="dis_rege_ess1"/>
+	<field name="dis_rege_ess1"/>
+	<label name="dis_rege_ess2"/>
+	<field name="dis_rege_ess2"/>
+	<label name="dis_rege_ess3"/>
+	<field name="dis_rege_ess3"/>
+	<label name="dis_rege_ess4"/>
+	<field name="dis_rege_ess4"/>
+	<label name="dis_rege_ess5"/>
+	<field name="dis_rege_ess5"/>
+    <label name="dis_country"/>
+	<field name="dis_country"/>
+	<notebook colspan="6">
+        <page string="Cycles" id="cycle">					
+            <field name="dis_cycle"/>
+        </page>
+        <page string="Partners" id="partenaire">					
+            <field name="dis_party"/>
+        </page>
+        <page string="Regeneration prices" id="prixrege">
+			<field name="dis_prix_rege"/>
+        </page>
+        <page string="Unit prices" id="prixunit">
+			<field name="dis_prix_unit"/>
+        </page>
+        <page string="Related dispositif" id="dispositifassocie">
+			<field name="dis_ass"/>
+        </page>
+        <page string="Observations" id="observations">
+			<field name="dis_observation"/>
+        </page>
+        <page string="Map" id="map" col="2">                                                
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
+            <button string="Edit" name="dispositif_edit" icon="tryton-executable" />
+            <button string="Generate" name="dispositif_image_map_gen" icon="tryton-executable" />
+            <field name="situation_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="parcelle_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="dispositif_situation_map_gen" icon="tryton-executable" />
+            <button string="Generate" name="dispositif_parcelle_map_gen" icon="tryton-executable" />
+        </page>                                                                 
+    </notebook>
+</form>

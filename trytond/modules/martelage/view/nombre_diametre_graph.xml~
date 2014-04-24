@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<graph string="Répartition des tiges par classe de diamètre" type="vbar">
+    <x>
+        <field name="diametre"/>
+    </x>
+    <y>
+        <field name="nombre"/>
+    </y>
+</graph>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<form string="portee" col="2">
+    <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="equipement"/>
+            <field name="equipement"/>
+            <label name="code"/>
+            <field name="code"/>
+            <field name="proprio"/>            
+            <field name="commune" colspan="4" view_ids="commune.commune_view_tree"/>            
+            <label name="active"/>
+            <field name="active"/>                        
+        </page>
+        <page string="Pylones" id="pylone">
+            <field name="pylone"/>
+        </page>
+        <page string="Map" id="map" col="2">
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>                                 
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="portee_edit" icon="tryton-executable" />                           
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

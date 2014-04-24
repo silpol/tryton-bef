@@ -1,0 +1,17 @@
+[tryton]
+version=1.0
+depends:
+    ir
+    res
+    company
+    map
+    qgis
+    geotools
+    wfs
+    town_fr
+    town_fr_geo
+    commune
+    google_maps
+    address_fr
+xml:
+    forest.xml

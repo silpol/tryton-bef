@@ -1,0 +1,1644 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:gri.typo_absenteeism:"
+msgid "The label of a code absenteeism must be unique by parent!"
+msgstr "Le label du code d'absence doit être unique"
+
+msgctxt "error:gri.typo_absenteeism:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer de code récursif !"
+
+msgctxt "error:gri.typo_absenteeism:"
+msgid "You can not use \" / \" in name field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans le champ nom !"
+
+msgctxt "error:gri.typo_committee:"
+msgid "The label of a code committee must be unique by parent!"
+msgstr "Le label du code du comité doit être unique par parent !"
+
+msgctxt "error:gri.typo_committee:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer de code récursif !"
+
+msgctxt "error:gri.typo_committee:"
+msgid "You can not use \" / \" in name field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans le champ nom !"
+
+msgctxt "error:gri.typo_employee:"
+msgid "The label of a code employee must be unique by parent!"
+msgstr "Le label du code employé doit être unique par parent !"
+
+msgctxt "error:gri.typo_employee:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer de code récursif !"
+
+msgctxt "error:gri.typo_employee:"
+msgid "You can not use \" / \" in name field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans le champ nom !"
+
+msgctxt "field:company.company,prestations:"
+msgid "Prestations"
+msgstr "Prestations"
+
+msgctxt "field:company.company-gri.evol_prestations,company:"
+msgid "party"
+msgstr "Tiers"
+
+msgctxt "field:company.company-gri.evol_prestations,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:company.company-gri.evol_prestations,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:company.company-gri.evol_prestations,evol_prestations:"
+msgid "dateb"
+msgstr "Date de fin"
+
+msgctxt "field:company.company-gri.evol_prestations,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:company.company-gri.evol_prestations,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:company.company-gri.evol_prestations,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:company.company-gri.evol_prestations,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:company.employee,absenteeism:"
+msgid "Absenteeism"
+msgstr "Absence"
+
+msgctxt "field:company.employee,age:"
+msgid "Age"
+msgstr "Âge"
+
+msgctxt "field:company.employee,boolminot:"
+msgid "BoolMinNot"
+msgstr "BoolMinNot"
+
+msgctxt "field:company.employee,collective:"
+msgid "Collective"
+msgstr "Convention"
+
+msgctxt "field:company.employee,committee:"
+msgid "Committee"
+msgstr "Comité"
+
+msgctxt "field:company.employee,contract:"
+msgid "Contract"
+msgstr "Contrat"
+
+msgctxt "field:company.employee,dob:"
+msgid "DoB"
+msgstr "Né(e) le"
+
+msgctxt "field:company.employee,dobc:"
+msgid "DoBC"
+msgstr "Début"
+
+msgctxt "field:company.employee,dodc:"
+msgid "DoDC"
+msgstr "Fin"
+
+msgctxt "field:company.employee,photo:"
+msgid "Picture"
+msgstr "Photo"
+
+msgctxt "field:company.employee,pminot:"
+msgid "DMinNot"
+msgstr "DMinNot"
+
+msgctxt "field:company.employee,prestations:"
+msgid "Prestations"
+msgstr "Prestations"
+
+msgctxt "field:company.employee,sex:"
+msgid "Sex"
+msgstr "Sexe"
+
+msgctxt "field:company.employee,ssn:"
+msgid "SSN"
+msgstr "NSS"
+
+msgctxt "field:company.employee,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,employee:"
+msgid "party"
+msgstr "Tiers"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,evol_absenteeism:"
+msgid "dateb"
+msgstr "Date de début"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:company.employee-gri.evol_absenteeism,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:company.employee-gri.evol_committee,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:company.employee-gri.evol_committee,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:company.employee-gri.evol_committee,employee:"
+msgid "party"
+msgstr "tiers"
+
+msgctxt "field:company.employee-gri.evol_committee,evol_committee:"
+msgid "dateb"
+msgstr "Date de fin"
+
+msgctxt "field:company.employee-gri.evol_committee,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:company.employee-gri.evol_committee,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:company.employee-gri.evol_committee,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:company.employee-gri.evol_committee,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:company.employee-gri.evol_prestations,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:company.employee-gri.evol_prestations,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:company.employee-gri.evol_prestations,employee:"
+msgid "party"
+msgstr "tiers"
+
+msgctxt "field:company.employee-gri.evol_prestations,evol_prestations:"
+msgid "dateb"
+msgstr "Date de début"
+
+msgctxt "field:company.employee-gri.evol_prestations,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:company.employee-gri.evol_prestations,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:company.employee-gri.evol_prestations,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:company.employee-gri.evol_prestations,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.evol_absenteeism,absenteeism:"
+msgid "Absenteeism"
+msgstr "Absence"
+
+msgctxt "field:gri.evol_absenteeism,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.evol_absenteeism,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.evol_absenteeism,dateb:"
+msgid "Begin date"
+msgstr "Date de début"
+
+msgctxt "field:gri.evol_absenteeism,datee:"
+msgid "End date"
+msgstr "Date de fin"
+
+msgctxt "field:gri.evol_absenteeism,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.evol_absenteeism,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.evol_absenteeism,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.evol_absenteeism,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.evol_committee,committee:"
+msgid "Committee"
+msgstr "Comité"
+
+msgctxt "field:gri.evol_committee,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.evol_committee,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.evol_committee,dateb:"
+msgid "Begin date"
+msgstr "Date de début"
+
+msgctxt "field:gri.evol_committee,datee:"
+msgid "End date"
+msgstr "Date de fin"
+
+msgctxt "field:gri.evol_committee,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.evol_committee,percentage:"
+msgid "Percentage"
+msgstr "Pourcentage"
+
+msgctxt "field:gri.evol_committee,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.evol_committee,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.evol_committee,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.evol_prestations,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.evol_prestations,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.evol_prestations,dateb:"
+msgid "Begin date"
+msgstr "Date de début"
+
+msgctxt "field:gri.evol_prestations,datee:"
+msgid "End date"
+msgstr "Date de fin"
+
+msgctxt "field:gri.evol_prestations,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.evol_prestations,prestations:"
+msgid "Prestations"
+msgstr "Prestations"
+
+msgctxt "field:gri.evol_prestations,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.evol_prestations,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.evol_prestations,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.la1,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:gri.la1,contract:"
+msgid "Contract"
+msgstr "Contrat"
+
+msgctxt "field:gri.la1,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "field:gri.la1,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.la1,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.la1,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.la1,occ:"
+msgid "Occurences"
+msgstr "Occurrences"
+
+msgctxt "field:gri.la1,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.la1,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "field:gri.la1,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:gri.la1,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.la1,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.la13,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.la13,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.la13,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.la13,occ:"
+msgid "Occurences"
+msgstr "Occurrences"
+
+msgctxt "field:gri.la13,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.la13,sex:"
+msgid "Sex"
+msgstr "Sexe"
+
+msgctxt "field:gri.la13,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.la13,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.la2,age:"
+msgid "Age"
+msgstr "Âge"
+
+msgctxt "field:gri.la2,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "field:gri.la2,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.la2,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.la2,dodc:"
+msgid "DoDC"
+msgstr "Début"
+
+msgctxt "field:gri.la2,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.la2,occ:"
+msgid "Occurences"
+msgstr "Occurrences"
+
+msgctxt "field:gri.la2,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.la2,sex:"
+msgid "Sex"
+msgstr "Sexe"
+
+msgctxt "field:gri.la2,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "field:gri.la2,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.la2,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.la3,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:gri.la3,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.la3,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.la3,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.la3,occ:"
+msgid "Occurences"
+msgstr "Occurrences"
+
+msgctxt "field:gri.la3,prestations:"
+msgid "Prestations"
+msgstr "Prestations"
+
+msgctxt "field:gri.la3,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.la3,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.la3,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.la4,collective:"
+msgid "Collective"
+msgstr "Convention"
+
+msgctxt "field:gri.la4,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:gri.la4,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "field:gri.la4,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.la4,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.la4,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.la4,occ:"
+msgid "Occurences"
+msgstr "Occurrences"
+
+msgctxt "field:gri.la4,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.la4,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "field:gri.la4,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.la4,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.la5,boolminot:"
+msgid "BoolMinNot"
+msgstr "BoolMinNot"
+
+msgctxt "field:gri.la5,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:gri.la5,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "field:gri.la5,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.la5,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.la5,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.la5,pminot:"
+msgid "DMinNot"
+msgstr "DMinNot"
+
+msgctxt "field:gri.la5,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.la5,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "field:gri.la5,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.la5,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.typo_absenteeism,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:gri.typo_absenteeism,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:gri.typo_absenteeism,code:"
+msgid "Absenteeism code"
+msgstr "Code absence"
+
+msgctxt "field:gri.typo_absenteeism,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.typo_absenteeism,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.typo_absenteeism,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.typo_absenteeism,lib_long:"
+msgid "Absenteeism type description"
+msgstr "Description du type d'absence"
+
+msgctxt "field:gri.typo_absenteeism,name:"
+msgid "Absenteeism type short label"
+msgstr "Label du type d'absence"
+
+msgctxt "field:gri.typo_absenteeism,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:gri.typo_absenteeism,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.typo_absenteeism,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.typo_absenteeism,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.typo_collective,code:"
+msgid "Collective bargaining agreements code"
+msgstr "Code de la convention collective"
+
+msgctxt "field:gri.typo_collective,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.typo_collective,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.typo_collective,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.typo_collective,lib_long:"
+msgid "Collective bargaining agreements description"
+msgstr "Description de la convention collective"
+
+msgctxt "field:gri.typo_collective,name:"
+msgid "Collective bargaining agreements short label"
+msgstr "Label de la convention collective"
+
+msgctxt "field:gri.typo_collective,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.typo_collective,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.typo_collective,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.typo_committee,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:gri.typo_committee,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:gri.typo_committee,code:"
+msgid "Committee code"
+msgstr "Code du comité"
+
+msgctxt "field:gri.typo_committee,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.typo_committee,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.typo_committee,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.typo_committee,lib_long:"
+msgid "Committee type description"
+msgstr "Description du comité"
+
+msgctxt "field:gri.typo_committee,name:"
+msgid "Committee type short label"
+msgstr "Label du type de comité"
+
+msgctxt "field:gri.typo_committee,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:gri.typo_committee,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.typo_committee,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.typo_committee,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.typo_contracts,code:"
+msgid "Contracts code"
+msgstr "Code du contrat"
+
+msgctxt "field:gri.typo_contracts,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.typo_contracts,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.typo_contracts,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.typo_contracts,lib_long:"
+msgid "Contracts description"
+msgstr "Description du contrat"
+
+msgctxt "field:gri.typo_contracts,name:"
+msgid "Contracts short label"
+msgstr "Label du contrat"
+
+msgctxt "field:gri.typo_contracts,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.typo_contracts,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.typo_contracts,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.typo_employee,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:gri.typo_employee,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:gri.typo_employee,code:"
+msgid "Employee code"
+msgstr "Code employé"
+
+msgctxt "field:gri.typo_employee,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.typo_employee,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.typo_employee,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.typo_employee,lib_long:"
+msgid "Employee type description"
+msgstr "Description du type d'employé"
+
+msgctxt "field:gri.typo_employee,name:"
+msgid "Employee type short label"
+msgstr "Label du type d'employé"
+
+msgctxt "field:gri.typo_employee,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:gri.typo_employee,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.typo_employee,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.typo_employee,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:gri.typo_prestations,code:"
+msgid "Benefits provided to employees code"
+msgstr "Code de la prestation"
+
+msgctxt "field:gri.typo_prestations,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:gri.typo_prestations,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:gri.typo_prestations,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:gri.typo_prestations,lib_long:"
+msgid "Benefits provided to employees description"
+msgstr "Description de la prestation"
+
+msgctxt "field:gri.typo_prestations,name:"
+msgid "Benefits provided to employees short label"
+msgstr "Label de la prestation"
+
+msgctxt "field:gri.typo_prestations,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:gri.typo_prestations,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:gri.typo_prestations,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:company.company,prestations:"
+msgid "Benefits provided to employees"
+msgstr "Prestations versées aux employés"
+
+msgctxt "help:company.employee,absenteeism:"
+msgid "Absenteeism evolution"
+msgstr "Évolution des absences"
+
+msgctxt "help:company.employee,boolminot:"
+msgid ""
+"Boolean specify if Minimum notice period(s) in weeks, regarding significant "
+"operational changes, including whether it is specified in collective "
+"agreements."
+msgstr ""
+"Le booléen spécifie si dans le cas où l’organisation bénéficie d’une "
+"convention collective, le délai de notification préalable et/ou si des "
+"phases de consultation et de négociation y sont stipulés et prévus."
+
+msgctxt "help:company.employee,collective:"
+msgid "Collective bargaining agreements"
+msgstr "Conventions collectives"
+
+msgctxt "help:company.employee,committee:"
+msgid "Committee evolution"
+msgstr "Évolution comité"
+
+msgctxt "help:company.employee,contract:"
+msgid "Work contract"
+msgstr "Contrat de travail"
+
+msgctxt "help:company.employee,dob:"
+msgid "Date of Birth"
+msgstr "Date de naissance"
+
+msgctxt "help:company.employee,dobc:"
+msgid "Date of Birth Contract"
+msgstr "Date de début de contrat"
+
+msgctxt "help:company.employee,dodc:"
+msgid "Date of Death Contract"
+msgstr "Date de fin de contrat"
+
+msgctxt "help:company.employee,pminot:"
+msgid ""
+"Minimum notice period(s) in weeks, regarding significant operational "
+"changes, including whether it is specified in collective agreements."
+msgstr ""
+"Délai minimal (en nombre de semaines) de notification préalable laissé aux "
+"salariés et à leurs élus syndicaux avant la mise en œuvre de toute "
+"modification d’organisation susceptible d’avoir des répercussions "
+"importantes sur leur travail."
+
+msgctxt "help:company.employee,prestations:"
+msgid "Benefits provided to employees"
+msgstr "Prestations versées aux employés"
+
+msgctxt "help:company.employee,ssn:"
+msgid "Social Secure Number"
+msgstr "Numéro de Sécurité Social"
+
+msgctxt "help:company.employee,typo:"
+msgid "Employee type"
+msgstr "Typologie d'employé"
+
+msgctxt "help:gri.evol_absenteeism,absenteeism:"
+msgid "Absenteeism type"
+msgstr "Typologie absence"
+
+msgctxt "help:gri.evol_absenteeism,dateb:"
+msgid "Absenteeism begin date"
+msgstr "Date de début d'absence"
+
+msgctxt "help:gri.evol_absenteeism,datee:"
+msgid "Absenteeism end date"
+msgstr "Date de fin d'absence"
+
+msgctxt "help:gri.evol_committee,committee:"
+msgid "Committee type"
+msgstr "Typologie comité"
+
+msgctxt "help:gri.evol_committee,dateb:"
+msgid "Committee begin date"
+msgstr "Date de début d'appartenance au comité"
+
+msgctxt "help:gri.evol_committee,datee:"
+msgid "Committee end date"
+msgstr "Date de fin d'appartenance au comité"
+
+msgctxt "help:gri.evol_prestations,dateb:"
+msgid "Prestations begin date"
+msgstr "Date de début de prestation"
+
+msgctxt "help:gri.evol_prestations,datee:"
+msgid "Prestations end date"
+msgstr "Date de fin de prestation"
+
+msgctxt "help:gri.evol_prestations,prestations:"
+msgid "Prestations type"
+msgstr "Typologie prestation"
+
+msgctxt "help:gri.la1,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "help:gri.la1,contract:"
+msgid "Work contract"
+msgstr "Contrat de travail"
+
+msgctxt "help:gri.la1,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "help:gri.la1,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "help:gri.la1,typo:"
+msgid "Employee type"
+msgstr "Typologie employé"
+
+msgctxt "help:gri.la2,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "help:gri.la2,dodc:"
+msgid "Date of Death Contract"
+msgstr "Date de fin de contrat"
+
+msgctxt "help:gri.la2,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "help:gri.la3,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "help:gri.la3,prestations:"
+msgid "Prestations type"
+msgstr "Type de prestation"
+
+msgctxt "help:gri.la4,collective:"
+msgid "Collective bargaining agreements"
+msgstr "Conventions collectives"
+
+msgctxt "help:gri.la4,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "help:gri.la4,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "help:gri.la4,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "help:gri.la5,boolminot:"
+msgid ""
+"Boolean specify if Minimum notice period(s) in weeks, regarding significant "
+"operational changes, including whether it is specified in collective "
+"agreements."
+msgstr ""
+"Le booléen spécifie si le délai minimal (en nombre de semaines) de "
+"notification préalable laissé aux salariés et à leurs élus syndicaux avant "
+"la mise en œuvre de toute modification d’organisation susceptible d’avoir "
+"des répercussions importantes sur leur travail est prévu dans une convention "
+"collective."
+
+msgctxt "help:gri.la5,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "help:gri.la5,country:"
+msgid "Country"
+msgstr "Pays"
+
+msgctxt "help:gri.la5,pminot:"
+msgid ""
+"Minimum notice period(s) in weeks, regarding significant operational "
+"changes, including whether it is specified in collective agreements."
+msgstr ""
+"Délai minimal (en nombre de semaines) de notification préalable laissé aux "
+"salariés et à leurs élus syndicaux avant la mise en œuvre de toute "
+"modification d’organisation susceptible d’avoir des répercussions "
+"importantes sur leur travail spécifié dans une convention collective."
+
+msgctxt "help:gri.la5,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivision"
+
+msgctxt "model:company.company-gri.evol_prestations,name:"
+msgid "Company - Prestations"
+msgstr "Société - Prestations"
+
+msgctxt "model:company.employee-gri.evol_absenteeism,name:"
+msgid "Employee - Absenteeism"
+msgstr "Employé - Absences"
+
+msgctxt "model:company.employee-gri.evol_committee,name:"
+msgid "Employee - Committee"
+msgstr "Employé - Comité"
+
+msgctxt "model:company.employee-gri.evol_prestations,name:"
+msgid "Employee - Prestations"
+msgstr "Employé - Prestations"
+
+msgctxt "model:gri.evol_absenteeism,name:"
+msgid "Absenteeism evolution"
+msgstr "Évolution des absences"
+
+msgctxt "model:gri.evol_committee,name:"
+msgid "Committee evolution"
+msgstr "Évolution comité"
+
+msgctxt "model:gri.evol_prestations,name:"
+msgid "Prestations evolution"
+msgstr "Évolution prestations"
+
+msgctxt "model:gri.la1,name:"
+msgid "LA1"
+msgstr "LA1"
+
+msgctxt "model:gri.la13,name:"
+msgid "LA13"
+msgstr "LA13"
+
+msgctxt "model:gri.la2,name:"
+msgid "LA2"
+msgstr "LA2"
+
+msgctxt "model:gri.la3,name:"
+msgid "LA3"
+msgstr "LA3"
+
+msgctxt "model:gri.la4,name:"
+msgid "LA4"
+msgstr "LA4"
+
+msgctxt "model:gri.la5,name:"
+msgid "LA5"
+msgstr "LA5"
+
+msgctxt "model:gri.typo_absenteeism,name:"
+msgid "Absenteeism type"
+msgstr "Typologie absence"
+
+msgctxt "model:gri.typo_collective,name:"
+msgid "Collective bargaining agreements"
+msgstr "Conventions collectives"
+
+msgctxt "model:gri.typo_committee,name:"
+msgid "Committee type"
+msgstr "Typologie comité"
+
+msgctxt "model:gri.typo_contracts,name:"
+msgid "Contracts type"
+msgstr "Type de contrat"
+
+msgctxt "model:gri.typo_employee,name:"
+msgid "Employee type"
+msgstr "Typologie employé"
+
+msgctxt "model:gri.typo_prestations,name:"
+msgid "Benefits provided to employees"
+msgstr "Prestations dont bénéficie l'employé"
+
+msgctxt "model:ir.action,name:act_employee_evol_committee_rel_form"
+msgid "Committee"
+msgstr "Comité"
+
+msgctxt "model:ir.action,name:act_gri_evol_absenteeism_form"
+msgid "Absenteeism evolution"
+msgstr "Évolution des absences"
+
+msgctxt "model:ir.action,name:act_gri_evol_prestations_form"
+msgid "Prestations evolution"
+msgstr "Évolution prestations"
+
+msgctxt "model:ir.action,name:act_gri_typo_collective_form"
+msgid "Collective bargaining agreements"
+msgstr "Conventions collectives"
+
+msgctxt "model:ir.action,name:act_gri_typo_contracts_form"
+msgid "Contracts type"
+msgstr "Typologie contrat"
+
+msgctxt "model:ir.action,name:act_gri_typo_prestations_form"
+msgid "Benefits provided to employees"
+msgstr "Prestations versées aux employés"
+
+msgctxt "model:ir.action,name:act_la13_form"
+msgid "LA13 - Ratio Male/Female"
+msgstr "LA13 - Proportion Homme/Femme"
+
+msgctxt "model:ir.action,name:act_la1_form"
+msgid "LA1 - Employment Contract/Type/Country/Subdivision"
+msgstr "LA1 - Personnel Contrat/Type/Pays/Département"
+
+msgctxt "model:ir.action,name:act_la2_form"
+msgid "LA2 - Employment Turnover"
+msgstr "LA2 -  Turnover du personnel"
+
+msgctxt "model:ir.action,name:act_la3_form"
+msgid "LA3 - Benefits provided to full-time employees"
+msgstr "LA3 - Prestations versées aux salariés à temps plein"
+
+msgctxt "model:ir.action,name:act_la4_form"
+msgid "LA4 - Employees covered by collective bargaining agreements"
+msgstr "LA4 - Pourcentage de salariés couverts par une convention collective "
+
+msgctxt "model:ir.action,name:act_la5_form"
+msgid ""
+"LA5 - Minimum notice period(s) regarding significant operational changes"
+msgstr ""
+"LA5 - Délai minimal de notification préalable à toute modification "
+"d’organisation, en indiquant si ce délai est précisé dans une convention "
+"collective"
+
+msgctxt "model:ir.action,name:act_typo_absenteeism_list"
+msgid "Absenteeism type"
+msgstr "Typologie absence"
+
+msgctxt "model:ir.action,name:act_typo_absenteeism_tree"
+msgid "Absenteeism type"
+msgstr "Typologie absence"
+
+msgctxt "model:ir.action,name:act_typo_committee_list"
+msgid "Committee type"
+msgstr "Typologie comité"
+
+msgctxt "model:ir.action,name:act_typo_committee_tree"
+msgid "Committee type"
+msgstr "Typologie comité"
+
+msgctxt "model:ir.action,name:act_typo_employee_list"
+msgid "Employee type"
+msgstr "Typologie personnel"
+
+msgctxt "model:ir.action,name:act_typo_employee_tree"
+msgid "Employee type"
+msgstr "Typologie personnel"
+
+msgctxt "model:ir.ui.menu,name:menu_ec"
+msgid "EC - Economic"
+msgstr "EC - Economie"
+
+msgctxt "model:ir.ui.menu,name:menu_ecep"
+msgid "Economic performance"
+msgstr "Performance économique"
+
+msgctxt "model:ir.ui.menu,name:menu_eciei"
+msgid "Indirect Economic Impacts"
+msgstr "Impacts Économique Indirects"
+
+msgctxt "model:ir.ui.menu,name:menu_ecmp"
+msgid "Market presence"
+msgstr "Présence sur le marché"
+
+msgctxt "model:ir.ui.menu,name:menu_ecpe"
+msgid "Economic performance"
+msgstr "Performance économique"
+
+msgctxt "model:ir.ui.menu,name:menu_en"
+msgid "EN - Environmental"
+msgstr "EN - Environnement"
+
+msgctxt "model:ir.ui.menu,name:menu_enbi"
+msgid "Biodiversity"
+msgstr "Biodiversité"
+
+msgctxt "model:ir.ui.menu,name:menu_enco"
+msgid "Compliance"
+msgstr "Conformité"
+
+msgctxt "model:ir.ui.menu,name:menu_eneew"
+msgid "Emissions, Effluents, and Waste"
+msgstr "Émissions, Effluents et Déchets"
+
+msgctxt "model:ir.ui.menu,name:menu_enen"
+msgid "Energy"
+msgstr "Énergie"
+
+msgctxt "model:ir.ui.menu,name:menu_enma"
+msgid "Materials"
+msgstr "Matière"
+
+msgctxt "model:ir.ui.menu,name:menu_enov"
+msgid "Overall"
+msgstr "Global"
+
+msgctxt "model:ir.ui.menu,name:menu_enps"
+msgid "Products and Services"
+msgstr "Produits et Services"
+
+msgctxt "model:ir.ui.menu,name:menu_entr"
+msgid "Transport"
+msgstr "Transport"
+
+msgctxt "model:ir.ui.menu,name:menu_enwa"
+msgid "Water"
+msgstr "Eau"
+
+msgctxt "model:ir.ui.menu,name:menu_gri"
+msgid "Global Reporting Initiative (GRI)"
+msgstr "Global Reporting Initiative (GRI)"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_codes"
+msgid "Codes"
+msgstr "Codes"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_la1"
+msgid "LA1 - Employment Contract/Type/Country/Subdivision"
+msgstr "LA1 - Personnel Contrat/Type/Pays"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_la13"
+msgid "LA13 - Ratio Male/Female"
+msgstr "LA13 - Pourcentage Homme/Femme"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_la2"
+msgid "LA2 - Employment Turnover"
+msgstr "LA2 - Turnover des salariés"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_la3"
+msgid "LA3 - Benefits provided to full-time employees"
+msgstr "LA3 - Prestations versées aux salariés à temps plein"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_la4"
+msgid "LA4 - Employees covered by collective bargaining agreements"
+msgstr "LA4 - Salariés couverts par une convention collective"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_la5"
+msgid ""
+"LA5 - Minimum notice period(s) regarding significant operational changes"
+msgstr ""
+"LA5 - Délai minimal de notification préalable à toute modification "
+"d'organisation, en indiquant si ce délai est précisé dans une convention "
+"collective."
+
+msgctxt "model:ir.ui.menu,name:menu_gri_typo_collective_form"
+msgid "Collective bargaining agreements"
+msgstr "Conventions collectives"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_typo_contracts_form"
+msgid "Contracts type"
+msgstr "Typologie contrat"
+
+msgctxt "model:ir.ui.menu,name:menu_gri_typo_prestations_form"
+msgid "Benefits provided to employees"
+msgstr "Prestations"
+
+msgctxt "model:ir.ui.menu,name:menu_la"
+msgid "LA - Labor Practices and Decent Work"
+msgstr "LA - Emploi, relations sociales et travail"
+
+msgctxt "model:ir.ui.menu,name:menu_la1"
+msgid ""
+"LA1 - Total workforce by employment type, employment contract, and region"
+msgstr ""
+"LA1 - Effectif total par type d’emploi, contrat de travail et zone "
+"géographique"
+
+msgctxt "model:ir.ui.menu,name:menu_la13"
+msgid ""
+"LA13 - Composition of governance bodies and breakdown of employees per "
+"category according to gender, age group, minority group membership, and "
+"other indicators of diversity"
+msgstr ""
+"LA13 - Composition des organes de gouvernance et répartition des employés "
+"par sexe, tranche d’âge, appartenance à une minorité et autres indicateurs "
+"de diversité"
+
+msgctxt "model:ir.ui.menu,name:menu_la2"
+msgid ""
+"LA2 - Total number and rate of employee turnover by age group, gender, and "
+"region"
+msgstr ""
+"LA2 - Turnover du personnel en nombre de salariés et en pourcentage par "
+"tranche d’âge, sexe et zone géographique "
+
+msgctxt "model:ir.ui.menu,name:menu_la3"
+msgid ""
+"LA3 - Benefits provided to full-time employees that are not provided to "
+"temporary or part-time employees, by major operations"
+msgstr ""
+"LA3 - Prestations versées aux salariés à temps plein qui ne sont pas versées "
+"aux intérimaires, ni aux salariés en contrat à durée déterminée, ni aux "
+"salariés à temps partiel, par activités majeures"
+
+msgctxt "model:ir.ui.menu,name:menu_la4"
+msgid ""
+"LA4 - Percentage of employees covered by collective bargaining agreements"
+msgstr "LA4 - Pourcentage de salariés couverts par une convention collective"
+
+msgctxt "model:ir.ui.menu,name:menu_la5"
+msgid ""
+"LA5 - Minimum notice period(s) regarding significant operational changes, "
+"including whether it is specified in     collective agreements"
+msgstr ""
+"LA5 - Délai minimal de notification préalable à toute modification "
+"d’organisation, en indiquant si ce délai est précisé dans une convention "
+"collective"
+
+msgctxt "model:ir.ui.menu,name:menu_la6"
+msgid ""
+"LA6 - Percentage of total workforce represented in formal joint management-"
+"worker health and safety committees that help monitor and advise on "
+"occupational health and safety programs"
+msgstr ""
+"LA6 - Pourcentage de l’effectif total représenté dans des comités mixtes "
+"direction-salariés d’hygiène et de sécurité au travail visant à surveiller "
+"et à donner des avis sur les programmes de santé et de sécurité au travail "
+
+msgctxt "model:ir.ui.menu,name:menu_ladeo"
+msgid "Diversity and equal opportunity"
+msgstr "Diversité et égalité des chances"
+
+msgctxt "model:ir.ui.menu,name:menu_laem"
+msgid "Employment"
+msgstr "Emploi"
+
+msgctxt "model:ir.ui.menu,name:menu_laerwm"
+msgid "Equal remuneration for women and men"
+msgstr "Égalité de rémunération entre homme et femme"
+
+msgctxt "model:ir.ui.menu,name:menu_lalmr"
+msgid "Labor/Management relations"
+msgstr "Relations entre la direction et les salariés"
+
+msgctxt "model:ir.ui.menu,name:menu_laohs"
+msgid "Occupational health and safety"
+msgstr "Santé et sécurité au travail"
+
+msgctxt "model:ir.ui.menu,name:menu_late"
+msgid "Training and education"
+msgstr "Formation et Éducation"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_absenteeism_list"
+msgid "Absenteeism type"
+msgstr "Typologie absence"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_absenteeism_tree"
+msgid "Absenteeism type"
+msgstr "Typologie absence"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_committee_list"
+msgid "Committee type"
+msgstr "Typologie comité"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_committee_tree"
+msgid "Committee type"
+msgstr "Typologie comité"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_employee_list"
+msgid "Employee type"
+msgstr "Typologie salarié"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_employee_tree"
+msgid "Employee type"
+msgstr "Typologie salarié"
+
+msgctxt "selection:company.employee,sex:"
+msgid "Female"
+msgstr "Féminin"
+
+msgctxt "selection:company.employee,sex:"
+msgid "Male"
+msgstr "Masculin"
+
+msgctxt "selection:gri.evol_committee,percentage:"
+msgid "Between 25% and 50%"
+msgstr "Entre 25% et 50%"
+
+msgctxt "selection:gri.evol_committee,percentage:"
+msgid "Between 50% and 75%"
+msgstr "Entre 50% et 75%"
+
+msgctxt "selection:gri.evol_committee,percentage:"
+msgid "None"
+msgstr "Non renseigné"
+
+msgctxt "selection:gri.evol_committee,percentage:"
+msgid "Over 75%"
+msgstr "Plus de 75%"
+
+msgctxt "selection:gri.evol_committee,percentage:"
+msgid "Up to 25%"
+msgstr "Moins de 25%"
+
+msgctxt "selection:gri.la13,sex:"
+msgid "Female"
+msgstr "Féminin"
+
+msgctxt "selection:gri.la13,sex:"
+msgid "Male"
+msgstr "Male"
+
+msgctxt "selection:gri.la2,age:"
+msgid "30-50"
+msgstr "30-50"
+
+msgctxt "selection:gri.la2,age:"
+msgid "<30"
+msgstr "<30"
+
+msgctxt "selection:gri.la2,age:"
+msgid ">50"
+msgstr ">50"
+
+msgctxt "selection:gri.la2,sex:"
+msgid "Female"
+msgstr "Féminin"
+
+msgctxt "selection:gri.la2,sex:"
+msgid "Male"
+msgstr "Male"
+
+msgctxt "view:cg.evol_absenteeism:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:cg.evol_absenteeism:"
+msgid "Évolution des absenteeisms"
+msgstr "Évolution des absences"
+
+msgctxt "view:cg.evol_prestations:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:cg.evol_prestations:"
+msgid "Prestations evolution"
+msgstr "Évolution prestations"
+
+msgctxt "view:cg.evol_prestations:"
+msgid "Évolution des prestations"
+msgstr "Évolution des prestations"
+
+msgctxt "view:company.company:"
+msgid "Prestations"
+msgstr "Prestations"
+
+msgctxt "view:company.employee-gri.evol_committee:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:company.employee:"
+msgid "Absenteesim"
+msgstr "Absences"
+
+msgctxt "view:company.employee:"
+msgid "Committee"
+msgstr "Comité"
+
+msgctxt "view:company.employee:"
+msgid "Contract"
+msgstr "Contrat"
+
+msgctxt "view:company.employee:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:company.employee:"
+msgid "Main Info"
+msgstr "Informations générales"
+
+msgctxt "view:company.employee:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:company.employee:"
+msgid "Prestations"
+msgstr "Prestations"
+
+msgctxt "view:gri.la13:"
+msgid "Ratio Male/Female"
+msgstr "Pourcentage Homme/Femme"
+
+msgctxt "view:gri.la13:"
+msgid "la13"
+msgstr "la13"
+
+msgctxt "view:gri.la13:"
+msgid "la3"
+msgstr "la3"
+
+msgctxt "view:gri.la1:"
+msgid "Employment la1"
+msgstr "Salarié la1"
+
+msgctxt "view:gri.la1:"
+msgid "Employment la1 contract"
+msgstr "Salarié la1 contrat"
+
+msgctxt "view:gri.la1:"
+msgid "Employment la1 country"
+msgstr "Salarié la1 pays"
+
+msgctxt "view:gri.la1:"
+msgid "Employment la1 subdivision"
+msgstr "Salarié la1 département"
+
+msgctxt "view:gri.la1:"
+msgid "Employment la1 type"
+msgstr "Salarié la1 type"
+
+msgctxt "view:gri.la2:"
+msgid "Employment la2"
+msgstr "Salarié la2"
+
+msgctxt "view:gri.la2:"
+msgid "Employment la2 age"
+msgstr "Salarié la2 âge"
+
+msgctxt "view:gri.la2:"
+msgid "Employment la2 country"
+msgstr "Salarié la2 pays"
+
+msgctxt "view:gri.la2:"
+msgid "Employment la2 sex"
+msgstr "Salarié la2 sexe"
+
+msgctxt "view:gri.la2:"
+msgid "Employment la2 subdivision"
+msgstr "Salarié la2 département"
+
+msgctxt "view:gri.la3:"
+msgid "Benefits provided to full-time employees"
+msgstr "Prestations versées aux salariés à temps plein"
+
+msgctxt "view:gri.la3:"
+msgid "la3"
+msgstr "la3"
+
+msgctxt "view:gri.la4:"
+msgid "Employment la4"
+msgstr "Salarié la4"
+
+msgctxt "view:gri.la4:"
+msgid "Employment la4 collective"
+msgstr "Salarié la4 convention collective"
+
+msgctxt "view:gri.la4:"
+msgid "Employment la4 country"
+msgstr "Salarié la4 pays"
+
+msgctxt "view:gri.la4:"
+msgid "Employment la4 subdivision"
+msgstr "Salarié la4 département"
+
+msgctxt "view:gri.la5:"
+msgid "Employment la5"
+msgstr "Salarié la5"
+
+msgctxt "view:gri.la5:"
+msgid "Employment la5 Minimum"
+msgstr "Salarié la5 minimum"
+
+msgctxt "view:gri.la5:"
+msgid "Employment la5 country"
+msgstr "Salarié la5 pays"
+
+msgctxt "view:gri.la5:"
+msgid "Employment la5 subdivision"
+msgstr "Salarié la5 département"
+
+msgctxt "view:gri.typo_absenteeism:"
+msgid "typo_absenteeism"
+msgstr "typo_absenteeism"
+
+msgctxt "view:gri.typo_collective:"
+msgid "typo_collective"
+msgstr "typo_collective"
+
+msgctxt "view:gri.typo_committee:"
+msgid "typo_committee"
+msgstr "typo_committee"
+
+msgctxt "view:gri.typo_contracts:"
+msgid "typo_contracts"
+msgstr "typo_committee"
+
+msgctxt "view:gri.typo_employee:"
+msgid "typo_employee"
+msgstr "typo_committee"
+
+msgctxt "view:gri.typo_prestations:"
+msgid "typo_prestations"
+msgstr "typo_committee"

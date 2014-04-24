@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<tree string="Cycle">
+    <field name="dispositif" expand="1" />
+    <field name="cycle" />
+    <field name="startdate" />
+    <field name="enddate" />
+    <field name="operateur" />
+    <field name="facpb" />
+    <field name="facgb" />
+    <field name="tarif" />
+    <field name="observation" />
+    <field name="nombre_placette" />
+    <field name="raison" />
+    <field name="caracteristique" />
+    <field name="party" />
+    <field name="strate_obs" />
+</tree>

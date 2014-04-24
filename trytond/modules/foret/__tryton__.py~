@@ -1,0 +1,20 @@
+#coding: utf-8
+# GPLv3
+
+{
+    'name': u"""foret""",
+    'version': u"""2.2.0""",
+    'author': """Pascal Obstétar""",
+    'email': u"""pascal.obstetar@bioecoforests.com""",
+    'website': u"""http://www.bioecoforests.com""",
+    'description': """Référentiel des forêts de France.""",
+    'depends': [
+	    'ir',
+
+        ],
+    'xml': [
+	    u"""foret.xml""",
+        ],
+    'translation': [
+    ],
+}

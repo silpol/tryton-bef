@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<form string="Regeneration">
+    <label name="reg_dispositif"/>
+	<field name="reg_dispositif"/>
+    <label name="reg_essence"/>
+	<field name="reg_essence"/>
+	<label name="reg_cycle"/>
+	<field name="reg_cycle"/>
+	<label name="reg_placette"/>
+	<field name="reg_placette"/>
+	<label name="reg_sous_placette"/>
+	<field name="reg_sous_placette"/>
+	<label name="reg_classe1"/>
+	<field name="reg_classe1"/>
+	<label name="reg_classe2"/>
+	<field name="reg_classe2"/>
+	<label name="reg_classe3"/>
+	<field name="reg_classe3"/>
+	<label name="reg_recouvrement"/>
+	<field name="reg_recouvrement"/>
+	<label name="reg_souille"/>
+	<field name="reg_souille"/>
+	<label name="reg_abroutissement"/>
+	<field name="reg_abroutissement"/>
+    <newline/>
+	<label name="reg_comment"/>
+	<field name="reg_comment" colspan="3"/>
+    
+</form>

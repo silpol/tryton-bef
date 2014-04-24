@@ -1,0 +1,228 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstétar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:corine_land_cover.clc:"
+msgid "CORINE LAND COVER code must be unique by parent!"
+msgstr "Le code Corine Land Cover doit être unique par parent !"
+
+msgctxt "error:corine_land_cover.clc:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer de code récursif !"
+
+msgctxt "error:corine_land_cover.clc:"
+msgid "You can not use \" / \" in code field!"
+msgstr "Vous ne pouvez pas utiliser \"/\" dans le nom du code !"
+
+msgctxt "field:corine_land_cover.clc,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:corine_land_cover.clc,blue:"
+msgid "Blue"
+msgstr "Bleu"
+
+msgctxt "field:corine_land_cover.clc,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:corine_land_cover.clc,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:corine_land_cover.clc,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:corine_land_cover.clc,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:corine_land_cover.clc,green:"
+msgid "Green"
+msgstr "Vert"
+
+msgctxt "field:corine_land_cover.clc,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:corine_land_cover.clc,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:corine_land_cover.clc,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:corine_land_cover.clc,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:corine_land_cover.clc,red:"
+msgid "Red"
+msgstr "Rouge"
+
+msgctxt "field:corine_land_cover.clc,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:corine_land_cover.clc,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:corine_land_cover.clc_geo,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:corine_land_cover.clc_geo,annee:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:corine_land_cover.clc_geo,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:corine_land_cover.clc_geo,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:corine_land_cover.clc_geo,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:corine_land_cover.clc_geo,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:corine_land_cover.clc_geo,gid:"
+msgid "GID"
+msgstr "GID"
+
+msgctxt "field:corine_land_cover.clc_geo,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:corine_land_cover.clc_geo,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:corine_land_cover.clc_geo,image_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:corine_land_cover.clc_geo,image_map_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:corine_land_cover.clc_geo,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:corine_land_cover.clc_geo,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:corine_land_cover.clc_geo,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:corine_land_cover.clc,blue:"
+msgid "Color blue of code"
+msgstr "Couleur bleue du code"
+
+msgctxt "help:corine_land_cover.clc,code:"
+msgid "1 or 2 numbers followed by at most 6 decimal numbers"
+msgstr "1 ou 2 chiffres suivi de 6 décimales"
+
+msgctxt "help:corine_land_cover.clc,green:"
+msgid "Color green of code"
+msgstr "Couleur verte du code"
+
+msgctxt "help:corine_land_cover.clc,red:"
+msgid "Color red of code"
+msgstr "Couleur rouge du code"
+
+msgctxt "help:corine_land_cover.clc_geo,code:"
+msgid "Code Corine Land Cover"
+msgstr "Code Corine Land Cover"
+
+msgctxt "help:corine_land_cover.clc_geo,geom:"
+msgid "Géométrie multipolygonale"
+msgstr "Géométrie multipolygonale"
+
+msgctxt "model:corine_land_cover.clc,name:"
+msgid "CORINE LAND COVER"
+msgstr "CORINE LAND COVER"
+
+msgctxt "model:corine_land_cover.clc_geo,name:"
+msgid "CORINE LAND COVER GEO"
+msgstr "CORINE LAND COVER GEO"
+
+msgctxt "model:ir.action,name:act_corine_land_cover_clc_list"
+msgid "Corine Biotopes"
+msgstr "Corine Land Cover"
+
+msgctxt "model:ir.action,name:act_corine_land_cover_clc_tree"
+msgid "Corine Biotopes"
+msgstr "Corine Land Cover"
+
+msgctxt "model:ir.action,name:act_corine_land_cover_geo_form"
+msgid "Corine Land Cover"
+msgstr "Corine Land Cover"
+
+msgctxt "model:ir.action,name:report_clc_geo_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_corine_land_cover"
+msgid "Corine Land Cover"
+msgstr "Corine Land Cover"
+
+msgctxt "model:ir.ui.menu,name:menu_corine_land_cover_clc_geo"
+msgid "Corine Land Cover"
+msgstr "Corine Land Cover"
+
+msgctxt "model:ir.ui.menu,name:menu_corine_land_cover_clc_list"
+msgid "Corine Biotopes"
+msgstr "Corine Land Cover"
+
+msgctxt "model:ir.ui.menu,name:menu_corine_land_cover_clc_tree"
+msgid "Corine Biotopes"
+msgstr "Corine Land Cover"
+
+msgctxt "model:ir.ui.menu,name:menu_corine_land_cover_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "view:corine_land_cover.clc:"
+msgid "clc"
+msgstr "clc"
+
+msgctxt "view:corine_land_cover.clc_geo:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:corine_land_cover.clc_geo:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:corine_land_cover.clc_geo:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:corine_land_cover.clc_geo:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:corine_land_cover.clc_geo:"
+msgid "clc_geo"
+msgstr "clc_geo"

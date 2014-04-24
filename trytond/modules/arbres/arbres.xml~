@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+
+<tryton>
+    <data>
+
+        <menuitem parent="ir.menu_administration" sequence="1" name="Configuration" id="menu_arbres_configuration" icon="tryton-preferences"/>
+
+        <record model="ir.ui.view" id="arbres_code_view_tree">
+            <field name="model">arbres.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="arbres_code_view_form">
+            <field name="model">arbres.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_arbres_code_form">
+            <field name="name">Code</field>
+            <field name="res_model">arbres.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_arbres_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="arbres_code_view_tree"/>
+            <field name="act_window" ref="act_arbres_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_arbres_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="arbres_code_view_form"/>
+            <field name="act_window" ref="act_arbres_code_form"/>
+        </record>
+        
+        <menuitem parent="menu_arbres_configuration" id="menu_arbres_code_form" icon="tryton-list" action="act_arbres_code_form"/>
+
+        <record model="ir.ui.view" id="measure_view_tree">
+            <field name="model">arbres.measure</field>
+            <field name="type">tree</field>
+            <field name="name">measure_tree</field>
+        </record>
+        <record model="ir.ui.view" id="measure_view_form">
+            <field name="model">arbres.measure</field>
+            <field name="type">form</field>
+            <field name="name">measure_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_arbres_evol_arbre_form">
+            <field name="name">Tree evolution</field>
+            <field name="res_model">arbres.evol_arbre</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_arbres_evol_arbre_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="measure_view_tree"/>
+            <field name="act_window" ref="act_arbres_evol_arbre_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_arbres_evol_arbre_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="measure_view_form"/>
+            <field name="act_window" ref="act_arbres_evol_arbre_form"/>
+        </record>
+
+        <record model="ir.ui.view" id="arbres_view_tree">
+            <field name="model">arbres.arbres</field>
+            <field name="type">tree</field>
+            <field name="name">tree_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="arbres_view_form">
+            <field name="model">arbres.arbres</field>
+            <field name="type">form</field>
+            <field name="name">tree_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="measure_ecologie_rel_view_tree">
+            <field name="model">arbres.measure-ecologie.ecologie</field>
+            <field name="type">tree</field>
+            <field name="name">measure_ecology_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="measure_ecologie_rel_view_form">
+            <field name="model">arbres.measure-ecologie.ecologie</field>
+            <field name="type">form</field>
+            <field name="name">measure_ecology_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_arbres_form">
+            <field name="name">Trees</field>
+            <field name="res_model">arbres.arbres</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_arbres_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="arbres_view_tree"/>
+            <field name="act_window" ref="act_arbres_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_arbres_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="arbres_view_form"/>
+            <field name="act_window" ref="act_arbres_form"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_measure_ecologie_rel_form">
+            <field name="name">Code ecologique</field>
+            <field name="res_model">arbres.measure-ecologie.ecologie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_measure_ecologie_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="measure_ecologie_rel_view_tree"/>
+            <field name="act_window" ref="act_measure_ecologie_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_measure_ecologie_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="measure_ecologie_rel_view_form"/>
+          <field name="act_window" ref="act_measure_ecologie_rel_form"/>
+        </record>
+
+        <menuitem parent="ir.menu_administration" sequence="20" id="menu_arbres_form" icon="tryton-list" action="act_arbres_form"/>
+    </data>
+</tryton>

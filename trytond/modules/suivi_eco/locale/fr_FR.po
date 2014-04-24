@@ -1,0 +1,128 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:suivi_eco.suivi_eco,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:suivi_eco.suivi_eco,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_annees_bi:"
+msgid "Year cutting wood industry"
+msgstr "Année de coupe BI"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_annees_bo:"
+msgid "Year cutting lumber"
+msgstr "Année de coupe BO"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_annees_chablis:"
+msgid "Year cutting chablis"
+msgstr "Année de coupe chablis"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_annees_prev:"
+msgid "Years planned cuts"
+msgstr "Année de coupe planifiée"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_depart:"
+msgid "Start year"
+msgstr "Année de départ"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_miseajour:"
+msgid "Update"
+msgstr "Mise à jour"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_rotation:"
+msgid "Turnover"
+msgstr "Rotation"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_suivi_den:"
+msgid "Dendrologic monitoring"
+msgstr "Suivi dendrologique"
+
+msgctxt "field:suivi_eco.suivi_eco,eco_suiviecol:"
+msgid "Ecological monitoring"
+msgstr "Suivi écologique"
+
+msgctxt "field:suivi_eco.suivi_eco,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:suivi_eco.suivi_eco,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:suivi_eco.suivi_eco,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:suivi_eco.suivi_eco,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_annees_bi:"
+msgid "Year cutting wood industry"
+msgstr "Année de coupe BI"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_annees_bo:"
+msgid "Year cutting lumber"
+msgstr "Année de coupe BO"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_annees_chablis:"
+msgid "Year cutting chablis"
+msgstr "Année de coupe chablis"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_annees_prev:"
+msgid "Years planned cuts"
+msgstr "Année de coupe planifiée"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_depart:"
+msgid "Start year"
+msgstr "Année de départ"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_miseajour:"
+msgid "Update year"
+msgstr "Année de mise à jour"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_rotation:"
+msgid "Rotating cutting lumber"
+msgstr "Rotation BO"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_suivi_den:"
+msgid "Dendrologic monitoring"
+msgstr "Suivi dendrologique"
+
+msgctxt "help:suivi_eco.suivi_eco,eco_suiviecol:"
+msgid "Ecological monitoring"
+msgstr "Suivi écologique"
+
+msgctxt "model:ir.action,name:act_suivi_eco_form"
+msgid "Suivi économique"
+msgstr "Suivi économique"
+
+msgctxt "model:ir.ui.menu,name:menu_suivi_eco_form"
+msgid "Suivi économique"
+msgstr "Suivi économique"
+
+msgctxt "model:suivi_eco.suivi_eco,name:"
+msgid "Economic monitoring"
+msgstr "Suivi économique"

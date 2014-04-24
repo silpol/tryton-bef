@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<form string="Voirie" col="2">
+    <label name="codlot" />
+    <field name="codlot" />
+    <label name="voie" />
+    <field name="voie" />
+    <label name="codcomm" />
+    <field name="codcomm" />
+    <label name="rivoli" />
+    <field name="rivoli"/>
+    <label name="clerivoli" />
+    <field name="clerivoli" />
+    <label name="nature" />
+    <field name="nature" />
+    <label name="libelle" />
+    <field name="libelle" />
+    <label name="typecomm" />
+    <field name="typecomm" widget="selection"/>
+    <label name="ruractuel" />
+    <field name="ruractuel" widget="selection"/>
+    <label name="caractere" />
+    <field name="caractere" widget="selection"/>
+    <label name="indpop" />
+    <field name="indpop" />
+    <label name="annulat" />
+    <field name="annulat" />
+    <label name="datannul" />
+    <field name="datannul" />
+    <label name="datcre" />
+    <field name="datcre" />
+    <label name="codmajic2" />
+    <field name="codmajic2" />
+    <label name="type" />
+    <field name="type" />
+    <label name="indlieu" />
+    <field name="indlieu" widget="selection"/>
+    <label name="motclass" />
+    <field name="motclass" />
+</form>

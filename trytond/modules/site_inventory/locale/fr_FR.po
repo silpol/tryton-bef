@@ -1,0 +1,997 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:site_inventory.site_inventory:"
+msgid "The commune is invalid, no commune is defined!"
+msgstr "La commune est invalide, pas de commune définie !"
+
+msgctxt "error:site_inventory.site_inventory:"
+msgid "You cannot set duplicated site ID!"
+msgstr "Vous ne pouvez pas dupliquer l'identifiant !"
+
+msgctxt "field:site_inventory.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site_inventory.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:site_inventory.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:site_inventory.code,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:site_inventory.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.inventory,conclusion:"
+msgid "Conclusion"
+msgstr "Conclusion"
+
+msgctxt "field:site_inventory.inventory,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.inventory,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.inventory,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:site_inventory.inventory,fonction:"
+msgid "Fonction"
+msgstr "Fonction"
+
+msgctxt "field:site_inventory.inventory,gite:"
+msgid "Gîtes"
+msgstr "Gîtes"
+
+msgctxt "field:site_inventory.inventory,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.inventory,occsol:"
+msgid "Occupation"
+msgstr "Occupation"
+
+msgctxt "field:site_inventory.inventory,owner:"
+msgid "Inventor"
+msgstr "Inventeur"
+
+msgctxt "field:site_inventory.inventory,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.inventory,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_inventory.inventory,taxon:"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "field:site_inventory.inventory,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.inventory,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.misc_obj_line,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site_inventory.misc_obj_line,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.misc_obj_line,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.misc_obj_line,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site_inventory.misc_obj_line,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.misc_obj_line,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_inventory.misc_obj_line,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.misc_obj_line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.misc_obj_line,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_inventory.misc_obj_line,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.misc_obj_line,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.misc_obj_point,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site_inventory.misc_obj_point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.misc_obj_point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.misc_obj_point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site_inventory.misc_obj_point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_inventory.misc_obj_point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.misc_obj_point,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_inventory.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.misc_obj_poly,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site_inventory.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site_inventory.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_inventory.misc_obj_poly,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.misc_obj_poly,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_inventory.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.site_inventory,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:site_inventory.site_inventory,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.site_inventory,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.site_inventory,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site_inventory.site_inventory,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.site_inventory,image_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site_inventory.site_inventory,image_map:"
+msgid "Image map"
+msgstr "Carte"
+
+msgctxt "field:site_inventory.site_inventory,inventory:"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "field:site_inventory.site_inventory,misc_obj_line:"
+msgid "Miscellaneous line objects"
+msgstr "Objets ligne"
+
+msgctxt "field:site_inventory.site_inventory,misc_obj_point:"
+msgid "Miscellaneous point objects"
+msgstr "Objets point"
+
+msgctxt "field:site_inventory.site_inventory,misc_obj_poly:"
+msgid "Miscellaneous polygon objects"
+msgstr "Objets polygone"
+
+msgctxt "field:site_inventory.site_inventory,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.site_inventory,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.site_inventory,situation_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site_inventory.site_inventory,situation_map:"
+msgid "Situation map"
+msgstr "Carte de situation"
+
+msgctxt "field:site_inventory.site_inventory,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.site_inventory,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,site:"
+msgid "site"
+msgstr "site"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.fonc,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,site:"
+msgid "site"
+msgstr "site"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.gite,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.occsol,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt ""
+"field:site_inventory.site_inventory-site_inventory.occsol,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.occsol,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.occsol,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:site_inventory.site_inventory-site_inventory.occsol,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.occsol,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.occsol,site:"
+msgid "site"
+msgstr "site"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.occsol,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.occsol,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,number:"
+msgid "Number"
+msgstr "Nombre"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,site:"
+msgid "site"
+msgstr "site"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.site_inventory-site_inventory.taxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_inventory.species,code:"
+msgid "Code species to identify"
+msgstr "Espèce à identifier"
+
+msgctxt "field:site_inventory.species,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_inventory.species,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_inventory.species,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_inventory.species,lib_long:"
+msgid "Long name of species"
+msgstr "Nom d'espèce"
+
+msgctxt "field:site_inventory.species,name:"
+msgid "Short name of species"
+msgstr "Libellé espèce"
+
+msgctxt "field:site_inventory.species,photo1:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:site_inventory.species,photo2:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:site_inventory.species,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_inventory.species,taxon:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:site_inventory.species,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_inventory.species,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:site_inventory.inventory,conclusion:"
+msgid "Concluion"
+msgstr "Conclusion"
+
+msgctxt "help:site_inventory.inventory,date:"
+msgid "Date of site inventory"
+msgstr "Date d'inventaire"
+
+msgctxt "help:site_inventory.inventory,owner:"
+msgid "Inventor"
+msgstr "Inventeur"
+
+msgctxt "help:site_inventory.inventory,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "help:site_inventory.site_inventory,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "help:site_inventory.site_inventory,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:site_inventory.site_inventory,inventory:"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "help:site_inventory.site_inventory,name:"
+msgid "Name of inventor"
+msgstr "Nom de l'inventeur"
+
+msgctxt "help:site_inventory.site_inventory-site_inventory.fonc,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:site_inventory.site_inventory-site_inventory.gite,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:site_inventory.site_inventory-site_inventory.occsol,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:site_inventory.site_inventory-site_inventory.taxon,number:"
+msgid "Number"
+msgstr "Nombre"
+
+msgctxt "help:site_inventory.site_inventory-site_inventory.taxon,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:site_inventory.species,taxon:"
+msgid "Taxon to identify"
+msgstr "Taxon à identifier"
+
+msgctxt "model:ir.action,name:act_site_inventory_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.action,name:act_site_inventory_fonc_rel_form"
+msgid "Fonctionnalité"
+msgstr "Fonctionnalité"
+
+msgctxt "model:ir.action,name:act_site_inventory_gite_rel_form"
+msgid "Gîte"
+msgstr "Gîte"
+
+msgctxt "model:ir.action,name:act_site_inventory_inventory_form"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "model:ir.action,name:act_site_inventory_misc_obj_line_form"
+msgid "Lines"
+msgstr "Lignes"
+
+msgctxt "model:ir.action,name:act_site_inventory_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:act_site_inventory_misc_obj_poly_form"
+msgid "Polygons"
+msgstr "Polygones"
+
+msgctxt "model:ir.action,name:act_site_inventory_occsol_rel_form"
+msgid "Occupation du sol"
+msgstr "Occupation du sol"
+
+msgctxt "model:ir.action,name:act_site_inventory_site_form"
+msgid "Sites"
+msgstr "Sites"
+
+msgctxt "model:ir.action,name:act_site_inventory_species_form"
+msgid "Species"
+msgstr "Espèce"
+
+msgctxt "model:ir.action,name:act_site_inventory_taxon_rel_form"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "model:ir.action,name:report_misc_obj_line_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_misc_obj_point_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_misc_obj_poly_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_site_inventories_edit"
+msgid "Open Sites in QGis..."
+msgstr "Ouvrir les sites dans QGIS..."
+
+msgctxt "model:ir.action,name:report_site_inventory"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "model:ir.action,name:report_site_inventory_edit"
+msgid "Open Site in QGis..."
+msgstr "Ouvrir le site dans QGIS..."
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_misc_obj"
+msgid "Misc objects"
+msgstr "Objets divers"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_misc_obj_line_form"
+msgid "Lines"
+msgstr "Lignes"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_misc_obj_poly_form"
+msgid "Polygons"
+msgstr "Polygones"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_site_form"
+msgid "Sites"
+msgstr "Sites"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_sites"
+msgid "Sites"
+msgstr "Sites"
+
+msgctxt "model:ir.ui.menu,name:menu_site_inventory_species_form"
+msgid "Species"
+msgstr "Espèce"
+
+msgctxt "model:site_inventory.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:site_inventory.inventory,name:"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "model:site_inventory.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr "Objets ligne"
+
+msgctxt "model:site_inventory.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr "Objets point"
+
+msgctxt "model:site_inventory.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr "Objets polygone"
+
+msgctxt "model:site_inventory.site_inventory,name:"
+msgid "Site inventory"
+msgstr "Site inventorié"
+
+msgctxt "model:site_inventory.site_inventory-site_inventory.fonc,name:"
+msgid "Site - Fonction"
+msgstr "Site - Fonction"
+
+msgctxt "model:site_inventory.site_inventory-site_inventory.gite,name:"
+msgid "Site - Gite"
+msgstr "Site - Gite"
+
+msgctxt "model:site_inventory.site_inventory-site_inventory.occsol,name:"
+msgid "Site - Occupation Sol"
+msgstr "Site - Occupation Sol"
+
+msgctxt "model:site_inventory.site_inventory-site_inventory.taxon,name:"
+msgid "Site - Taxon"
+msgstr "Site - Taxon"
+
+msgctxt "model:site_inventory.species,name:"
+msgid "Species"
+msgstr "Espèce"
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "(1 par équipe de moins de 5 jusqu'à décembre 2013)"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "/"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Arrêté du 31 mars relatif à la fiche de chantier"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Autres risques :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "C"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "D"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Décret n°2010-1603 du 17 décembre 2010"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Définir les distances de sécurité entre les travailleurs."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Email :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Essence(s) :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid ""
+"Extincteur valide sur les engins ou les voitures (Cf. Décret départementaux)."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "F"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Fiche de chantier N°"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Minimum 2 sauveteurs secouristes du travail par équipe."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "N"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Nom du (des) donneur(s) d'ordres (propriétaire ou entreprise) :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Nom du propriétaire ou gestionnaire :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "N° de Lot :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Ouvrages divers :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid ""
+"Port des EPI pour tous (casque complet, chaussures de sécurité, pantalon de "
+"sécurité, gants)."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Pour les bûcherons : 2 fois la longueur des arbres à abattre."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid ""
+"Pour les porteurs et têtes abatteuse : voir conformité des engins (distance "
+"dédié sur les grues)."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Pour les skidders : une longueur de câble déroulé."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid ""
+"Rappeler les consignes de sécurité au nouveau personnel (formation "
+"d'embauche)."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Renseignements généraux"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Règles de sécurité pour les intervenants"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Si présence, indiquer les consignes à respecter :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid ""
+"Stationner les véhicules dans le sens du départ et laisser la voie d'accès "
+"libre."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Suivi chantier :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid ""
+"Trousse de sécurité sur le chantier et à portée de mains du matériel leur "
+"permettant d'arrêter un saignement abondant."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Tél :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "V"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Voies de circulation :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "Vêtements de couleur vive."
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "ate :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "ature des travaux :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "ax :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "olume (m3) :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "ommune :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "° PEFC :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "élai de réalisation des travaux :"
+msgstr ""
+
+msgctxt "odt:site_inventory.site_inventory:"
+msgid "épartement :"
+msgstr ""
+
+msgctxt "view:site_inventory.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:site_inventory.code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "view:site_inventory.inventory:"
+msgid "inventory"
+msgstr "inventaire"
+
+msgctxt "view:site_inventory.misc_obj_line:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site_inventory.misc_obj_line:"
+msgid "Miscellaneous line object"
+msgstr "Objets ligne"
+
+msgctxt "view:site_inventory.misc_obj_point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site_inventory.misc_obj_point:"
+msgid "Miscellaneous point object"
+msgstr "Objets point"
+
+msgctxt "view:site_inventory.misc_obj_poly:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site_inventory.misc_obj_poly:"
+msgid "Miscellaneous polygon object"
+msgstr "Objets polygone"
+
+msgctxt "view:site_inventory.site_inventory-site_inventory.fonc:"
+msgid "Fonctionnalité"
+msgstr "Fonctionnalité"
+
+msgctxt "view:site_inventory.site_inventory-site_inventory.gite:"
+msgid "Gîte"
+msgstr "Gîte"
+
+msgctxt "view:site_inventory.site_inventory-site_inventory.occsol:"
+msgid "Occupation du sol"
+msgstr "Occupation du sol"
+
+msgctxt "view:site_inventory.site_inventory-site_inventory.taxon:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Edit geometries"
+msgstr "Éditer les géométries"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Lines"
+msgstr "Lignes"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Misc. obj."
+msgstr "Objets"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "Polygones"
+msgstr "Polygones"
+
+msgctxt "view:site_inventory.site_inventory:"
+msgid "site"
+msgstr "site"
+
+msgctxt "view:site_inventory.species:"
+msgid "Species"
+msgstr "Espèce"

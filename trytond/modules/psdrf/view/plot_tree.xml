@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<tree string="Plot">
+    <field name="dispositif" />
+    <field name="num" />
+    <field name="strat" />
+    <field name="forest_name" />
+    <field name="date" />
+    <field name="acc" />
+    <field name="slope" />
+    <field name="exp" />
+    <field name="corine_code" />
+    <field name="charact" />
+    <field name="relasco" />
+    <field name="precount_diameter" />
+    <field name="course" />
+    <field name="centre" />
+    <field name="last_year_exploit" />
+</tree>

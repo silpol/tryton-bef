@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Species">
+    <label name="code"/>
+    <field name="code"/>
+    <label name="taxon"/>
+    <field name="taxon"/>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="lib_long"/>
+    <field name="lib_long"/>
+    <field name="photo1" colspan="2" widget="image" img_width="400" img_height="300"/>                  
+    <field name="photo2" colspan="2" widget="image" img_width="400" img_height="300"/>
+</form>

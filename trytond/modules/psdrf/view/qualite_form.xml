@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Quality" col="2">
+    <label name="measure" />
+    <field name="measure" />
+    <label name="ecologie" />
+    <field name="ecologie" />
+    <label name="note" />
+    <field name="note" />
+</form>

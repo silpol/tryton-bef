@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="qualite_view_tree">            
+            <field name="model">qualite.qualite</field>
+            <field name="type">tree</field>
+            <field name="name">quality_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="qualite_view_form">            
+            <field name="model">qualite.qualite</field>
+            <field name="type">form</field>
+            <field name="name">quality_form</field>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_qualite_form">
+            <field name="name">Qualité</field>
+            <field name="res_model">qualite.qualite</field>                        
+        </record>
+        
+        <record model="ir.action.act_window.view" id="act_qualite_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="qualite_view_tree"/>
+            <field name="act_window" ref="act_qualite_form"/>        
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_qualite_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="qualite_view_form"/>
+            <field name="act_window" ref="act_qualite_form"/>        
+        </record>
+
+        <menuitem parent="ir.menu_administration" sequence="160" id="menu_qualite_form" icon="tryton-list" action="act_qualite_form"/>
+        
+    </data>
+</tryton>

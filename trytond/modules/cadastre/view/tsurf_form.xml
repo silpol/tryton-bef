@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form string="Objet surfacique divers" col="2">
+    <label name="commune"/>
+    <field name="commune"/>
+    <label name="tex"/>
+    <field name="tex"/>
+    <label name="sym"/>
+    <field name="sym" widget="selection"/>
+    <notebook colspan="2">
+        <page string="MAP" col="1" id="map" >
+            <field name="image" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="tsurf_edit" icon="tryton-executable" />
+        </page>
+        <page string="ECRITURE" col="1" id="ecritatt" >
+            <field name="ecritatt" />            
+        </page>
+    </notebook>                   
+</form>

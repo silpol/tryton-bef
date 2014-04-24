@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form string="Plot" col="2">
+        <label name="idu" />
+        <field name="idu" />
+        <notebook colspan="2">
+            <page string="Map" col="1" id="map" >
+                <field name="image" widget="image" img_width="640" img_height="480"/>
+                <button string="Edit" name="plot_edit" icon="tryton-executable" />
+            </page>
+        </notebook>
+    </form>		            
+</form>

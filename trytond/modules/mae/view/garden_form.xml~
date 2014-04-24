@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<form string="garden">
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="name" />
+            <field name="name" />
+            <label name="lieudit" />
+            <field name="lieudit" />
+            <label name="parcelle" />
+            <field name="parcelle" />
+            <label name="surfacedgi" />
+            <field name="surfacedgi" />
+            <label name="section" />
+            <field name="section" />
+            <label name="address" />
+            <field name="address" />
+            <field name="convention" colspan="6"/>
+            <label name="active" />
+            <field name="active" />
+        </page>         
+        <page string="Map" id="map">
+            <field name="situation_map" colspan="2" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="2" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="situation_map_gen" icon="tryton-executable" />                           
+            <button string="Generate" name="image_map_gen" icon="tryton-executable" />                                                             
+        </page>                     
+    </notebook>                   
+</form>

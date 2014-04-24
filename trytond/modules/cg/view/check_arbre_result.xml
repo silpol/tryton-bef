@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Arbre à préconiser" col="2">
+    <label name="typetravaux"/>
+    <field name="typetravaux"/>
+    <label name="description"/>
+    <field name="description"/>
+    <field name="arbres_succeed" view_ids="cg.se_secteur_view_tree" colspan="2"/>
+    <field name="arbres_failed" view_ids="cg.se_secteur_view_tree" colspan="2"/>
+</form>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<form string="Plot" col="2">
+    <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="dispositif" />
+            <field name="dispositif" />
+            <label name="num" />
+            <field name="num" />
+            <label name="strat" />
+            <field name="strat" />
+            <label name="forest_name" />
+            <field name="forest_name" />
+            <label name="date" />
+            <field name="date" />
+            <label name="acc" />
+            <field name="acc" />
+            <label name="slope" />
+            <field name="slope" />
+            <label name="exp" />
+            <field name="exp" />
+            <label name="corine_code" />
+            <field name="corine_code" />
+            <label name="relasco" />
+            <field name="relasco" />
+            <label name="precount_diameter" />
+            <field name="precount_diameter" />
+            <label name="last_year_exploit" />
+            <field name="last_year_exploit" />
+            <notebook>
+                <page string="Stations" id="station" col="4">
+                    <field name="charact" />
+                </page>
+                <page string="Centre" id="centre" col="4">
+                    <field name="centre" />
+                </page>
+                <page string="Course" id="course" col="4">
+                    <field name="course" />
+                </page>
+            </notebook>
+        </page>
+        <page string="Map" id="map" col="2">				                                                            
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
+            <button string="Edit" name="plot_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

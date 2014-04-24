@@ -1,0 +1,1078 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Pascal Obstetar
+Copyright (c) 2012-2013 Pierre-Louis Bonicoli
+-->
+<tryton>
+    <data>
+
+    <record model="ir.ui.view" id="ifn_datemort_view_tree">
+        <field name="model">ifn.datemort</field>
+        <field name="type">tree</field>
+        <field name="name">datemort_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_datemort_view_form">
+        <field name="model">ifn.datemort</field>
+        <field name="type">form</field>
+        <field name="name">datemort_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_datemort_form">
+        <field name="name">Estimated date of death of the tree</field>
+        <field name="res_model">ifn.datemort</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_datemort_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_datemort_view_tree"/>
+        <field name="act_window" ref="act_ifn_datemort_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_datemort_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_datemort_view_form"/>
+        <field name="act_window" ref="act_ifn_datemort_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_datemort_form" icon="tryton-list" action="act_ifn_datemort_form"/>
+
+    <record model="ir.ui.view" id="ifn_clon_view_tree">
+        <field name="model">ifn.clon</field>
+        <field name="type">tree</field>
+        <field name="name">clone_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_clon_view_form">
+        <field name="model">ifn.clon</field>
+        <field name="type">form</field>
+        <field name="name">clone_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_clon_form">
+        <field name="name">Clone</field>
+        <field name="res_model">ifn.clon</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_clon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_clon_view_tree"/>
+        <field name="act_window" ref="act_ifn_clon_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_clon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_clon_view_form"/>
+        <field name="act_window" ref="act_ifn_clon_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_clon_form" icon="tryton-list" action="act_ifn_clon_form"/>
+
+    <record model="ir.ui.view" id="ifn_lib_view_tree">
+        <field name="model">ifn.lib</field>
+        <field name="type">tree</field>
+        <field name="name">lib_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_lib_view_form">
+        <field name="model">ifn.lib</field>
+        <field name="type">form</field>
+        <field name="name">lib_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_lib_form">
+        <field name="name">Class free rate covered tree</field>
+        <field name="res_model">ifn.lib</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_lib_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_lib_view_tree"/>
+        <field name="act_window" ref="act_ifn_lib_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_lib_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_lib_view_form"/>
+        <field name="act_window" ref="act_ifn_lib_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_lib_form" icon="tryton-list" action="act_ifn_lib_form"/>
+
+    <record model="ir.ui.view" id="ifn_ori_view_tree">
+        <field name="model">ifn.ori</field>
+        <field name="type">tree</field>
+        <field name="name">ori_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_ori_view_form">
+        <field name="model">ifn.ori</field>
+        <field name="type">form</field>
+        <field name="name">ori_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_ori_form">
+        <field name="name">Behind the tree</field>
+        <field name="res_model">ifn.ori</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_ori_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_ori_view_tree"/>
+        <field name="act_window" ref="act_ifn_ori_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_ori_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_ori_view_form"/>
+        <field name="act_window" ref="act_ifn_ori_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_ori_form" icon="tryton-list" action="act_ifn_ori_form"/>
+
+    <record model="ir.ui.view" id="ifn_espar_view_tree">
+        <field name="model">ifn.espar</field>
+        <field name="type">tree</field>
+        <field name="name">espar_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_espar_view_form">
+        <field name="model">ifn.espar</field>
+        <field name="type">form</field>
+        <field name="name">espar_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_espar_form">
+        <field name="name">Tree species</field>
+        <field name="res_model">ifn.espar</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_espar_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_espar_view_tree"/>
+        <field name="act_window" ref="act_ifn_espar_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_espar_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_espar_view_form"/>
+        <field name="act_window" ref="act_ifn_espar_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_espar_form" icon="tryton-list" action="act_ifn_espar_form"/>
+
+    <record model="ir.ui.view" id="ifn_acci_view_tree">
+        <field name="model">ifn.acci</field>
+        <field name="type">tree</field>
+        <field name="name">acci_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_acci_view_form">
+        <field name="model">ifn.acci</field>
+        <field name="type">form</field>
+        <field name="name">acci_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_acci_form">
+        <field name="name">Accident tree</field>
+        <field name="res_model">ifn.acci</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_acci_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_acci_view_tree"/>
+        <field name="act_window" ref="act_ifn_acci_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_acci_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_acci_view_form"/>
+        <field name="act_window" ref="act_ifn_acci_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_acci_form" icon="tryton-list" action="act_ifn_acci_form"/>
+
+    <record model="ir.ui.view" id="ifn_simplif_view_tree">
+        <field name="model">ifn.simplif</field>
+        <field name="type">tree</field>
+        <field name="name">simplif_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_simplif_view_form">
+        <field name="model">ifn.simplif</field>
+        <field name="type">form</field>
+        <field name="name">simplif_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_simplif_form">
+        <field name="name">Indicator simplified tree</field>
+        <field name="res_model">ifn.simplif</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_simplif_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_simplif_view_tree"/>
+        <field name="act_window" ref="act_ifn_simplif_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_simplif_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_simplif_view_form"/>
+        <field name="act_window" ref="act_ifn_simplif_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_simplif_form" icon="tryton-list" action="act_ifn_simplif_form"/>
+
+    <record model="ir.ui.view" id="ifn_veget_view_tree">
+        <field name="model">ifn.veget</field>
+        <field name="type">tree</field>
+        <field name="name">veget_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_veget_view_form">
+        <field name="model">ifn.veget</field>
+        <field name="type">form</field>
+        <field name="name">veget_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_veget_form">
+        <field name="name">State of vegetation</field>
+        <field name="res_model">ifn.veget</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_veget_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_veget_view_tree"/>
+        <field name="act_window" ref="act_ifn_veget_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_veget_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_veget_view_form"/>
+        <field name="act_window" ref="act_ifn_veget_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_veget_form" icon="tryton-list" action="act_ifn_veget_form"/>
+
+    <record model="ir.ui.view" id="ifn_forme_view_tree">
+        <field name="model">ifn.forme</field>
+        <field name="type">tree</field>
+        <field name="name">forme_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_forme_view_form">
+        <field name="model">ifn.forme</field>
+        <field name="type">form</field>
+        <field name="name">forme_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_forme_form">
+        <field name="name">Crown form</field>
+        <field name="res_model">ifn.forme</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_forme_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_forme_view_tree"/>
+        <field name="act_window" ref="act_ifn_forme_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_forme_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_forme_view_form"/>
+        <field name="act_window" ref="act_ifn_forme_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_forme_form" icon="tryton-list" action="act_ifn_forme_form"/>
+
+    <record model="ir.ui.view" id="ifn_tige_view_tree">
+        <field name="model">ifn.tige</field>
+        <field name="type">tree</field>
+        <field name="name">tige_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_tige_view_form">
+        <field name="model">ifn.tige</field>
+        <field name="type">form</field>
+        <field name="name">tige_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_tige_form">
+        <field name="name">Stem form</field>
+        <field name="res_model">ifn.tige</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_tige_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_tige_view_tree"/>
+        <field name="act_window" ref="act_ifn_tige_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_tige_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_tige_view_form"/>
+        <field name="act_window" ref="act_ifn_tige_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_tige_form" icon="tryton-list" action="act_ifn_tige_form"/>
+
+    <record model="ir.ui.view" id="ifn_mortb_view_tree">
+        <field name="model">ifn.mortb</field>
+        <field name="type">tree</field>
+        <field name="name">mortb_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_mortb_view_form">
+        <field name="model">ifn.mortb</field>
+        <field name="type">form</field>
+        <field name="name">mortb_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_mortb_form">
+        <field name="name">Mortality of branches in the crown</field>
+        <field name="res_model">ifn.mortb</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_mortb_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_mortb_view_tree"/>
+        <field name="act_window" ref="act_ifn_mortb_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_mortb_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_mortb_view_form"/>
+        <field name="act_window" ref="act_ifn_mortb_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_mortb_form" icon="tryton-list" action="act_ifn_mortb_form"/>
+
+    <record model="ir.ui.view" id="ifn_sfgui_view_tree">
+        <field name="model">ifn.sfgui</field>
+        <field name="type">tree</field>
+        <field name="name">sfgui_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_sfgui_view_form">
+        <field name="model">ifn.sfgui</field>
+        <field name="type">form</field>
+        <field name="name">sfgui_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_sfgui_form">
+        <field name="name">Presence of mistletoe</field>
+        <field name="res_model">ifn.sfgui</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfgui_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_sfgui_view_tree"/>
+        <field name="act_window" ref="act_ifn_sfgui_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfgui_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_sfgui_view_form"/>
+        <field name="act_window" ref="act_ifn_sfgui_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_sfgui_form" icon="tryton-list" action="act_ifn_sfgui_form"/>
+
+    <record model="ir.ui.view" id="ifn_sfgeliv_view_tree">
+        <field name="model">ifn.sfgeliv</field>
+        <field name="type">tree</field>
+        <field name="name">sfgeliv_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_sfgeliv_view_form">
+        <field name="model">ifn.sfgeliv</field>
+        <field name="type">form</field>
+        <field name="name">sfgeliv_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_sfgeliv_form">
+        <field name="name">Presence of winter injury</field>
+        <field name="res_model">ifn.sfgeliv</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfgeliv_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_sfgeliv_view_tree"/>
+        <field name="act_window" ref="act_ifn_sfgeliv_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfgeliv_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_sfgeliv_view_form"/>
+        <field name="act_window" ref="act_ifn_sfgeliv_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_sfgeliv_form" icon="tryton-list" action="act_ifn_sfgeliv_form"/>
+
+    <record model="ir.ui.view" id="ifn_sfpied_view_tree">
+        <field name="model">ifn.sfpied</field>
+        <field name="type">tree</field>
+        <field name="name">sfpied_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_sfpied_view_form">
+        <field name="model">ifn.sfpied</field>
+        <field name="type">form</field>
+        <field name="name">sfpied_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_sfpied_form">
+        <field name="name">Injury or foot rot</field>
+        <field name="res_model">ifn.sfpied</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfpied_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_sfpied_view_tree"/>
+        <field name="act_window" ref="act_ifn_sfpied_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfpied_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_sfpied_view_form"/>
+        <field name="act_window" ref="act_ifn_sfpied_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_sfpied_form" icon="tryton-list" action="act_ifn_sfpied_form"/>
+
+    <record model="ir.ui.view" id="ifn_sfdorge_view_tree">
+        <field name="model">ifn.sfdorge</field>
+        <field name="type">tree</field>
+        <field name="name">sfdorge_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_sfdorge_view_form">
+        <field name="model">ifn.sfdorge</field>
+        <field name="type">form</field>
+        <field name="name">sfdorge_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_sfdorge_form">
+        <field name="name">Dorge and brooms on trees</field>
+        <field name="res_model">ifn.sfdorge</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfdorge_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_sfdorge_view_tree"/>
+        <field name="act_window" ref="act_ifn_sfdorge_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfdorge_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_sfdorge_view_form"/>
+        <field name="act_window" ref="act_ifn_sfdorge_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_sfdorge_form" icon="tryton-list" action="act_ifn_sfdorge_form"/>
+
+    <record model="ir.ui.view" id="ifn_sfcoeur_view_tree">
+        <field name="model">ifn.sfcoeur</field>
+        <field name="type">tree</field>
+        <field name="name">sfcoeur_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_sfcoeur_view_form">
+        <field name="model">ifn.sfcoeur</field>
+        <field name="type">form</field>
+        <field name="name">sfcoeur_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_sfcoeur_form">
+        <field name="name">Heart rot</field>
+        <field name="res_model">ifn.sfcoeur</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfcoeur_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_sfcoeur_view_tree"/>
+        <field name="act_window" ref="act_ifn_sfcoeur_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfcoeur_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_sfcoeur_view_form"/>
+        <field name="act_window" ref="act_ifn_sfcoeur_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_sfcoeur_form" icon="tryton-list" action="act_ifn_sfcoeur_form"/>
+
+    <record model="ir.ui.view" id="ifn_decoupe_view_tree">
+        <field name="model">ifn.decoupe</field>
+        <field name="type">tree</field>
+        <field name="name">decoupe_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_decoupe_view_form">
+        <field name="model">ifn.decoupe</field>
+        <field name="type">form</field>
+        <field name="name">decoupe_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_decoupe_form">
+        <field name="name">Cut Type</field>
+        <field name="res_model">ifn.decoupe</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_decoupe_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_decoupe_view_tree"/>
+        <field name="act_window" ref="act_ifn_decoupe_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_decoupe_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_decoupe_view_form"/>
+        <field name="act_window" ref="act_ifn_decoupe_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_decoupe_form" icon="tryton-list" action="act_ifn_decoupe_form"/>
+
+    <record model="ir.ui.view" id="ifn_csa_view_tree">
+        <field name="model">ifn.csa</field>
+        <field name="type">tree</field>
+        <field name="name">csa_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_csa_view_form">
+        <field name="model">ifn.csa</field>
+        <field name="type">form</field>
+        <field name="name">csa_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_csa_form">
+        <field name="name">Ground cover</field>
+        <field name="res_model">ifn.csa</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_csa_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_csa_view_tree"/>
+        <field name="act_window" ref="act_ifn_csa_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_csa_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_csa_view_form"/>
+        <field name="act_window" ref="act_ifn_csa_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_csa_form" icon="tryton-list" action="act_ifn_csa_form"/>
+
+    <record model="ir.ui.view" id="ifn_uta_view_tree">
+        <field name="model">ifn.uta</field>
+        <field name="type">tree</field>
+        <field name="name">uta_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_uta_view_form">
+        <field name="model">ifn.uta</field>
+        <field name="type">form</field>
+        <field name="name">uta_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_uta_form">
+        <field name="name">Using ground 1</field>
+        <field name="res_model">ifn.uta</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_uta_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_uta_view_tree"/>
+        <field name="act_window" ref="act_ifn_uta_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_uta_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_uta_view_form"/>
+        <field name="act_window" ref="act_ifn_uta_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_uta_form" icon="tryton-list" action="act_ifn_uta_form"/>
+
+    <record model="ir.ui.view" id="ifn_tm2_view_tree">
+        <field name="model">ifn.tm2</field>
+        <field name="type">tree</field>
+        <field name="name">tm2_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_tm2_view_form">
+        <field name="model">ifn.tm2</field>
+        <field name="type">form</field>
+        <field name="name">tm2_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_tm2_form">
+        <field name="name">Size solid</field>
+        <field name="res_model">ifn.tm2</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_tm2_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_tm2_view_tree"/>
+        <field name="act_window" ref="act_ifn_tm2_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_tm2_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_tm2_view_form"/>
+        <field name="act_window" ref="act_ifn_tm2_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_tm2_form" icon="tryton-list" action="act_ifn_tm2_form"/>
+
+    <record model="ir.ui.view" id="ifn_plisi_view_tree">
+        <field name="model">ifn.plisi</field>
+        <field name="type">tree</field>
+        <field name="name">plisi_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_plisi_view_form">
+        <field name="model">ifn.plisi</field>
+        <field name="type">form</field>
+        <field name="name">plisi_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_plisi_form">
+        <field name="name">Presence of edge</field>
+        <field name="res_model">ifn.plisi</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_plisi_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_plisi_view_tree"/>
+        <field name="act_window" ref="act_ifn_plisi_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_plisi_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_plisi_view_form"/>
+        <field name="act_window" ref="act_ifn_plisi_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_plisi_form" icon="tryton-list" action="act_ifn_plisi_form"/>
+
+    <record model="ir.ui.view" id="ifn_sfo_view_tree">
+        <field name="model">ifn.sfo</field>
+        <field name="type">tree</field>
+        <field name="name">sfo_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_sfo_view_form">
+        <field name="model">ifn.sfo</field>
+        <field name="type">form</field>
+        <field name="name">sfo_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_sfo_form">
+        <field name="name">Forest structure</field>
+        <field name="res_model">ifn.sfo</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfo_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_sfo_view_tree"/>
+        <field name="act_window" ref="act_ifn_sfo_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_sfo_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_sfo_view_form"/>
+        <field name="act_window" ref="act_ifn_sfo_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_sfo_form" icon="tryton-list" action="act_ifn_sfo_form"/>
+
+    <record model="ir.ui.view" id="ifn_gest_view_tree">
+        <field name="model">ifn.gest</field>
+        <field name="type">tree</field>
+        <field name="name">gest_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_gest_view_form">
+        <field name="model">ifn.gest</field>
+        <field name="type">form</field>
+        <field name="name">gest_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_gest_form">
+        <field name="name">Forest management</field>
+        <field name="res_model">ifn.gest</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_gest_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_gest_view_tree"/>
+        <field name="act_window" ref="act_ifn_gest_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_gest_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_gest_view_form"/>
+        <field name="act_window" ref="act_ifn_gest_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_gest_form" icon="tryton-list" action="act_ifn_gest_form"/>
+
+    <record model="ir.ui.view" id="ifn_incidence_view_tree">
+        <field name="model">ifn.incid</field>
+        <field name="type">tree</field>
+        <field name="name">incid_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_incidence_view_form">
+        <field name="model">ifn.incid</field>
+        <field name="type">form</field>
+        <field name="name">incid_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_incidence_form">
+        <field name="name">Impact</field>
+        <field name="res_model">ifn.incid</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_incidence_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_incidence_view_tree"/>
+        <field name="act_window" ref="act_ifn_incidence_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_incidence_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_incidence_view_form"/>
+        <field name="act_window" ref="act_ifn_incidence_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_incidence_form" icon="tryton-list" action="act_ifn_incidence_form"/>
+
+    <record model="ir.ui.view" id="ifn_peupnr_view_tree">
+        <field name="model">ifn.peupnr</field>
+        <field name="type">tree</field>
+        <field name="name">peupnr_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_peupnr_view_form">
+        <field name="model">ifn.peupnr</field>
+        <field name="type">form</field>
+        <field name="name">peupnr_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_peupnr_form">
+        <field name="name">Not countable stand</field>
+        <field name="res_model">ifn.peupnr</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_peupnr_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_peupnr_view_tree"/>
+        <field name="act_window" ref="act_ifn_peupnr_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_peupnr_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_peupnr_view_form"/>
+        <field name="act_window" ref="act_ifn_peupnr_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_peupnr_form" icon="tryton-list" action="act_ifn_peupnr_form"/>
+
+    <record model="ir.ui.view" id="ifn_dc_view_tree">
+        <field name="model">ifn.dc</field>
+        <field name="type">tree</field>
+        <field name="name">dc_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_dc_view_form">
+        <field name="model">ifn.dc</field>
+        <field name="type">form</field>
+        <field name="name">dc_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_dc_form">
+        <field name="name">Type of cut</field>
+        <field name="res_model">ifn.dc</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_dc_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_dc_view_tree"/>
+        <field name="act_window" ref="act_ifn_dc_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_dc_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_dc_view_form"/>
+        <field name="act_window" ref="act_ifn_dc_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_dc_form" icon="tryton-list" action="act_ifn_dc_form"/>
+
+    <record model="ir.ui.view" id="ifn_tplant_view_tree">
+        <field name="model">ifn.tplant</field>
+        <field name="type">tree</field>
+        <field name="name">tplant_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_tplant_view_form">
+        <field name="model">ifn.tplant</field>
+        <field name="type">form</field>
+        <field name="name">tplant_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_tplant_form">
+        <field name="name">Type of plantation</field>
+        <field name="res_model">ifn.tplant</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_tplant_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_tplant_view_tree"/>
+        <field name="act_window" ref="act_ifn_tplant_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_tplant_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_tplant_view_form"/>
+        <field name="act_window" ref="act_ifn_tplant_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_tplant_form" icon="tryton-list" action="act_ifn_tplant_form"/>
+
+    <record model="ir.ui.view" id="ifn_dist_view_tree">
+        <field name="model">ifn.dist</field>
+        <field name="type">tree</field>
+        <field name="name">dist_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_dist_view_form">
+        <field name="model">ifn.dist</field>
+        <field name="type">form</field>
+        <field name="name">dist_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_dist_form">
+        <field name="name">Skidding distance</field>
+        <field name="res_model">ifn.dist</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_dist_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_dist_view_tree"/>
+        <field name="act_window" ref="act_ifn_dist_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_dist_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_dist_view_form"/>
+        <field name="act_window" ref="act_ifn_dist_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_dist_form" icon="tryton-list" action="act_ifn_dist_form"/>
+
+    <record model="ir.ui.view" id="ifn_iti_view_tree">
+        <field name="model">ifn.iti</field>
+        <field name="type">tree</field>
+        <field name="name">iti_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_iti_view_form">
+        <field name="model">ifn.iti</field>
+        <field name="type">form</field>
+        <field name="name">iti_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_iti_form">
+        <field name="name">Directions skid</field>
+        <field name="res_model">ifn.iti</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_iti_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_iti_view_tree"/>
+        <field name="act_window" ref="act_ifn_iti_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_iti_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_iti_view_form"/>
+        <field name="act_window" ref="act_ifn_iti_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_iti_form" icon="tryton-list" action="act_ifn_iti_form"/>
+
+    <record model="ir.ui.view" id="ifn_pentexp_view_tree">
+        <field name="model">ifn.pentexp</field>
+        <field name="type">tree</field>
+        <field name="name">pentexp_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_pentexp_view_form">
+        <field name="model">ifn.pentexp</field>
+        <field name="type">form</field>
+        <field name="name">pentexp_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_pentexp_form">
+        <field name="name">Indicator of maximum slope skidding</field>
+        <field name="res_model">ifn.pentexp</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_pentexp_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_pentexp_view_tree"/>
+        <field name="act_window" ref="act_ifn_pentexp_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_pentexp_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_pentexp_view_form"/>
+        <field name="act_window" ref="act_ifn_pentexp_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_pentexp_form" icon="tryton-list" action="act_ifn_pentexp_form"/>
+
+    <record model="ir.ui.view" id="ifn_portance_view_tree">
+        <field name="model">ifn.portance</field>
+        <field name="type">tree</field>
+        <field name="name">portance_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_portance_view_form">
+        <field name="model">ifn.portance</field>
+        <field name="type">form</field>
+        <field name="name">portance_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_portance_form">
+        <field name="name">Bearing</field>
+        <field name="res_model">ifn.portance</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_portance_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_portance_view_tree"/>
+        <field name="act_window" ref="act_ifn_portance_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_portance_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_portance_view_form"/>
+        <field name="act_window" ref="act_ifn_portance_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_portance_form" icon="tryton-list" action="act_ifn_portance_form"/>
+
+    <record model="ir.ui.view" id="ifn_asperite_view_tree">
+        <field name="model">ifn.asperite</field>
+        <field name="type">tree</field>
+        <field name="name">asperite_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_asperite_view_form">
+        <field name="model">ifn.asperite</field>
+        <field name="type">form</field>
+        <field name="name">asperite_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_asperite_form">
+        <field name="name">Asperity</field>
+        <field name="res_model">ifn.asperite</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_asperite_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_asperite_view_tree"/>
+        <field name="act_window" ref="act_ifn_asperite_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_asperite_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_asperite_view_form"/>
+        <field name="act_window" ref="act_ifn_asperite_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_asperite_form" icon="tryton-list" action="act_ifn_asperite_form"/>
+
+    <record model="ir.ui.view" id="ifn_cac_view_tree">
+        <field name="model">ifn.cac</field>
+        <field name="type">tree</field>
+        <field name="name">cac_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_cac_view_form">
+        <field name="model">ifn.cac</field>
+        <field name="type">form</field>
+        <field name="name">cac_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_cac_form">
+        <field name="name">Age group</field>
+        <field name="res_model">ifn.cac</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_cac_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_cac_view_tree"/>
+        <field name="act_window" ref="act_ifn_cac_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_cac_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_cac_view_form"/>
+        <field name="act_window" ref="act_ifn_cac_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_cac_form" icon="tryton-list" action="act_ifn_cac_form"/>
+
+    <record model="ir.ui.view" id="ifn_entp_view_tree">
+        <field name="model">ifn.entp</field>
+        <field name="type">tree</field>
+        <field name="name">entp_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ifn_entp_view_form">
+        <field name="model">ifn.entp</field>
+        <field name="type">form</field>
+        <field name="name">entp_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ifn_entp_form">
+        <field name="name">Maintenance poplar</field>
+        <field name="res_model">ifn.entp</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_entp_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ifn_entp_view_tree"/>
+        <field name="act_window" ref="act_ifn_entp_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ifn_entp_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ifn_entp_view_form"/>
+        <field name="act_window" ref="act_ifn_entp_form"/>
+    </record>
+
+    <menuitem parent="menu_ifn_codes" sequence="1" id="menu_ifn_entp_form" icon="tryton-list" action="act_ifn_entp_form"/>
+
+    </data>
+</tryton>

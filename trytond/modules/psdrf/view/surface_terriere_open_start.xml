@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Basal area">
+    <label name="dispositif"/>
+    <field name="dispositif"/>
+    <label name="type"/>
+    <field name="type"/>
+</form>

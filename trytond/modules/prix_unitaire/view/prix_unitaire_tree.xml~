@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="Unit price">
+    <field name="pru_year" />
+    <field name="pru_essence" />
+    <field name="pru_qualite" />
+	<field name="pru_diam" />
+	<field name="pru_prix" />
+</tree>

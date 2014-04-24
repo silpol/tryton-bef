@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="evol_emplacement">
+    <field name="date" />
+    <field name="emplacement" />
+    <field name="nature" />
+    <field name="cause" />
+    <field name="diametre" />
+    <field name="indispo" />
+    <field name="observation" />                   
+</tree>

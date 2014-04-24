@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<tree string="Deadwood">
+    <field name="bom_dispositif" />
+    <field name="bom_essence" />
+	<field name="bom_cycle" />
+	<field name="bom_placette" />
+	<field name="bom_diam_initial" />
+	<field name="bom_diam_final" />
+	<field name="bom_diam_median" />
+	<field name="bom_longueur" />
+	<field name="bom_contact" />
+	<field name="bom_chablis" />
+	<field name="bom_stade" />
+	<field name="bom_comment" />
+</tree>

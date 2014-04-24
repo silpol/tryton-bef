@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<form string="convention">
+    <notebook>
+        <page string="General" id="general" col="4">
+            <label name="mae"/>            
+            <field name="mae"/>
+            <label name="active"/>            
+            <field name="active"/>
+            <label name="ilot"/>            
+            <field name="ilot"/>
+            <label name="date"/>            
+            <field name="date"/>
+            <label name="owner"/>            
+            <field name="owner"/>                                     
+            <label name="typemae"/>            
+            <field name="typemae"/>
+            <label name="nivexpert"/>            
+            <field name="nivexpert"/>
+            <label name="nivfinal"/>            
+            <field name="nivfinal"/>
+            <field name="parcelle" colspan="4"/>                      
+            <label name="observation"/>            
+            <field name="observation" colspan="4"/>
+        </page>
+        <page string="Modalités de gestion actuelles" id="modgest" col="4">
+            <group id="group_paturage_fauche" colspan="4">
+                <label name="paturage"/>            
+                <field name="paturage"/>
+                <newline/>
+                <group id="group_pat" colspan="4">
+                    <label name="periodePat"/>            
+                    <field name="periodePat"/>
+                    <label name="surfacePat"/>            
+                    <field name="surfacePat"/>
+                    <label name="chargementMoyenPat"/>            
+                    <field name="chargementMoyenPat"/>
+                    <label name="chargementInstantanePat"/>
+                    <field name="chargementInstantanePat"/>
+                    <label name="naturePat"/>            
+                    <field name="naturePat"/>
+                    <label name="pratiquesPat"/>            
+                    <field name="pratiquesPat"/>
+                    <label name="observationPat"/>            
+                    <field name="observationPat" colspan="3"/>
+                </group>            
+                <label name="fauche"/>            
+                <field name="fauche"/>
+                <newline/>
+                <group id="group_fau" colspan="4">
+                    <label name="nombreFau"/>            
+                    <field name="nombreFau"/>
+                    <label name="dateFau"/>            
+                    <field name="dateFau"/>
+                    <label name="surfaceFau"/>            
+                    <field name="surfaceFau"/>
+                    <label name="typeFau"/>            
+                    <field name="typeFau"/>                         
+                    <label name="sympaFau"/>            
+                    <field name="sympaFau" colspan="3"/>
+                    <label name="observationFau"/>            
+                    <field name="observationFau" colspan="3"/>
+                </group>                
+                <label name="gestionPatFau"/>            
+                <field name="gestionPatFau"/>
+                <newline/>
+                <label name="observationPatFau"/>            
+                <field name="observationPatFau" colspan="3"/>
+            </group>
+            <separator colspan="4"/>                                     
+            <group id="group_occupation" colspan="4">
+                <label name="occupation"/>            
+                <field name="occupation"/>
+                <newline/>
+                <group id="group_occ" colspan="4">
+                    <label name="natureOcc"/>            
+                    <field name="natureOcc"/>
+                    <label name="autreOcc"/>            
+                    <field name="autreOcc"/>
+                    <label name="pourcentageOcc"/>            
+                    <field name="pourcentageOcc" colspan="3"/>
+                    <label name="typeEntretienOcc"/>            
+                    <field name="typeEntretienOcc"/>
+                    <label name="clotureOcc"/>            
+                    <field name="clotureOcc"/>
+                    <label name="observationOcc"/>            
+                    <field name="observationOcc" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>            
+            <group id="group_engrais" colspan="4">
+                <label name="engrais"/>            
+                <field name="engrais"/>
+                <newline/>
+                <group id="group_eng" colspan="4">
+                    <group id="group_minerale" colspan="4">
+                        <label name="mineraleEng"/>            
+                        <field name="mineraleEng"/>
+                        <newline/>
+                        <group id="group_npk" colspan="4" col="6">
+                            <label name="NEng"/>            
+                            <field name="NEng"/>
+                            <label name="PEng"/>            
+                            <field name="PEng"/>
+                            <label name="KEng"/>            
+                            <field name="KEng"/>
+                        </group>
+                    </group>                
+                    <group id="group_organic" colspan="4">
+                        <label name="organicEng"/>            
+                        <field name="organicEng"/>
+                        <newline/>
+                        <label name="natureEng"/>            
+                        <field name="natureEng"/>
+                    </group>
+                    <label name="observationEng"/>            
+                    <field name="observationEng"/>
+                </group>                
+            </group>
+            <separator colspan="4"/>            
+            <group id="group_baisse" colspan="4">
+                <label name="baisse"/>            
+                <field name="baisse"/>
+                <newline/>
+                <group id="group_bai" colspan="4">
+                    <group id="group_eneau" colspan="4">
+                        <label name="eneau"/>            
+                        <field name="eneau"/>
+                        <newline/>
+                        <group id="group_eau" colspan="4" col="6">
+                            <label name="paran"/>            
+                            <field name="paran"/>
+                            <label name="duree"/>            
+                            <field name="duree"/>
+                            <label name="evacuation"/>            
+                            <field name="evacuation"/>
+                            <label name="connectee"/>            
+                            <field name="connectee"/>
+                            <label name="maitrisee"/>            
+                            <field name="maitrisee"/>
+                        </group>
+                    </group>                
+                    <label name="observationBai"/>            
+                    <field name="observationBai"/>
+                </group>                
+            </group>
+            <separator colspan="4"/>            
+            <group id="group_maretrou" colspan="4">
+                <label name="maretrou"/>            
+                <field name="maretrou"/>
+                <newline/>
+                <group id="group_tro" colspan="4">                    
+                    <label name="nombreTrou"/>            
+                    <field name="nombreTrou"/>
+                    <label name="surfaceTrou"/>            
+                    <field name="surfaceTrou"/>
+                    <label name="atterrissement"/>            
+                    <field name="atterrissement"/>
+                    <label name="penteTrou"/>            
+                    <field name="penteTrou"/>
+                    <label name="fonctionnelle"/>            
+                    <field name="fonctionnelle"/>
+                    <label name="dateTrou"/>            
+                    <field name="dateTrou"/>
+                    <newline/>
+                    <group id="group_amgt" colspan="4" col="6">
+                        <label name="amgtcynegetique"/>            
+                        <field name="amgtcynegetique"/>
+                        <label name="nombreCyn"/>            
+                        <field name="nombreCyn"/>
+                        <label name="etatCyn"/>            
+                        <field name="etatCyn"/>
+                    </group>
+                    <label name="observationTro"/>            
+                    <field name="observationTro" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>            
+            <group id="group_canfos" colspan="4">
+                <label name="canfos"/>            
+                <field name="canfos"/>
+                <newline/>
+                <group id="group_can" colspan="4">                    
+                    <label name="nombreFac"/>            
+                    <field name="nombreFac"/>
+                    <label name="eneauCan"/>            
+                    <field name="eneauCan"/>
+                    <label name="niveauCan"/>            
+                    <field name="niveauCan"/>
+                    <label name="espaqua"/>            
+                    <field name="espaqua"/>
+                    <label name="atterrissementCan"/>            
+                    <field name="atterrissementCan"/>
+                    <newline/>
+                    <group id="group_ent" colspan="4" col="8">
+                        <label name="entretienCan"/>            
+                        <field name="entretienCan"/>
+                        <label name="typeEnt"/>            
+                        <field name="typeEnt"/>
+                        <label name="periodiciteEnt"/>            
+                        <field name="periodiciteEnt"/>
+                        <label name="periodeEnt"/>            
+                        <field name="periodeEnt"/>
+                    </group>
+                    <newline/>
+                    <group id="group_con" colspan="4" col="6">
+                        <label name="connexionCan"/>            
+                        <field name="connexionCan"/>
+                        <label name="libreCon"/>            
+                        <field name="libreCon"/>
+                        <label name="barrageCon"/>            
+                        <field name="barrageCon"/>
+                    </group>
+                </group>
+                <label name="arbhaie"/>            
+                <field name="arbhaie"/>
+                <newline/>
+                <group id="group_arb" colspan="4">
+                    <label name="pourcentArb"/>            
+                    <field name="pourcentArb"/>
+                    <label name="entretienArb"/>            
+                    <field name="entretienArb"/>
+                    <group id="group_tet" colspan="4" col="6">
+                        <label name="tetardsArb"/>            
+                        <field name="tetardsArb"/>
+                        <label name="especeTet"/>            
+                        <field name="especeTet"/>
+                    </group>
+                    <group id="group_arbr" colspan="4" col="6">
+                        <label name="arbreArb"/>            
+                        <field name="arbreArb"/>
+                        <label name="especeIso"/>            
+                        <field name="especeIso"/>
+                    </group>
+                    <group id="group_arbu" colspan="4" col="6">
+                        <label name="arbusteArb"/>            
+                        <field name="arbusteArb"/>
+                        <label name="especeArbu"/>            
+                        <field name="especeArbu"/>
+                    </group>
+                    <label name="plantationArb"/>            
+                    <field name="plantationArb"/>
+                    <group id="group_haie" colspan="4" col="8">
+                        <label name="haieArb"/>            
+                        <field name="haieArb"/>
+                        <label name="especeHaie"/>            
+                        <field name="especeHaie"/>
+                        <label name="lineaireHaie"/>            
+                        <field name="lineaireHaie"/>
+                    </group>
+                </group>
+                <label name="observationCan"/>            
+                <field name="observationCan"/>
+            </group>
+            <separator colspan="4"/>            
+            <group id="group_rigole" colspan="4">
+                <label name="rigole"/>
+                <field name="rigole"/>
+                <newline/>
+                <group id="group_rig" colspan="4">                    
+                    <label name="nombreRig"/>            
+                    <field name="nombreRig"/>
+                    <label name="lineaireRig"/>            
+                    <field name="lineaireRig"/>
+                    <label name="fonctionnelRig"/>            
+                    <field name="fonctionnelRig"/>
+                    <label name="vegetationRig"/>            
+                    <field name="vegetationRig"/>
+                    <label name="observationRig"/>            
+                    <field name="observationRig" colspan="3"/>
+                </group>                
+            </group>
+            <separator colspan="4"/>            
+            <group id="group_jas" colspan="4">
+                <label name="jas"/>
+                <field name="jas"/>
+                <newline/>
+                <group id="group_rig" colspan="4">                    
+                    <label name="nombreJas"/>            
+                    <field name="nombreJas"/>
+                    <newline/>
+                    <label name="observationJas"/>            
+                    <field name="observationJas" colspan="3"/>
+                </group>                
+            </group>
+        </page>
+        <page string="Propositions, échanges, remarques" id="propos" col="2">
+            <label name="observationProp" xalign="0" colspan="2"/>
+            <field name="observationProp" colspan="2"/>
+            <label name="observationEspe" xalign="0" colspan="2"/>            
+            <field name="observationEspe" colspan="2"/>
+            <label name="observationActi" xalign="0" colspan="2"/>            
+            <field name="observationActi" colspan="2"/>
+            <label name="observationGene" xalign="0" colspan="2"/>            
+            <field name="observationGene" colspan="2"/>
+        </page>
+        <page string="Type d'habitats" id="habitat" col="4">           
+            <group id="group_frenaie" colspan="4">
+                <label name="frenaie"/>            
+                <field name="frenaie"/>
+                <newline/>
+                <group id="group_fre" colspan="4">
+                    <label name="selectionFre"/>            
+                    <field name="selectionFre"/>
+                    <label name="pourcentageFre"/>            
+                    <field name="pourcentageFre"/> 
+                    <label name="observationFre"/>            
+                    <field name="observationFre" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>
+            <group id="group_subhalo" colspan="4">
+                <label name="subhalo"/>            
+                <field name="subhalo"/>
+                <newline/>
+                <group id="group_hal" colspan="4">
+                    <label name="selectionHal"/>            
+                    <field name="selectionHal"/>
+                    <label name="pourcentageHal"/>            
+                    <field name="pourcentageHal"/> 
+                    <label name="observationHal"/>            
+                    <field name="observationHal" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>
+            <group id="group_doux" colspan="4">
+                <label name="doux"/>            
+                <field name="doux"/>
+                <newline/>
+                <group id="group_dou" colspan="4">
+                    <label name="selectionDou"/>            
+                    <field name="selectionDou"/>
+                    <label name="pourcentageDou"/>            
+                    <field name="pourcentageDou"/> 
+                    <label name="observationDou"/>            
+                    <field name="observationDou" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>
+            <group id="group_humi" colspan="4">
+                <label name="zonhumi"/>            
+                <field name="zonhumi"/>
+                <newline/>
+                <group id="group_hum" colspan="4">
+                    <label name="selectionHum"/>            
+                    <field name="selectionHum"/>
+                    <label name="pourcentageHum"/>            
+                    <field name="pourcentageHum"/> 
+                    <label name="observationHum"/>            
+                    <field name="observationHum" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>
+            <group id="group_agri" colspan="4">
+                <label name="agri"/>            
+                <field name="agri"/>
+                <newline/>
+                <group id="group_agr" colspan="4">
+                    <label name="selectionAgr"/>            
+                    <field name="selectionAgr"/>
+                    <label name="pourcentageAgr"/>            
+                    <field name="pourcentageAgr"/> 
+                    <label name="observationAgr"/>            
+                    <field name="observationAgr" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>
+            <group id="group_peup" colspan="4">
+                <label name="peup"/>            
+                <field name="peup"/>
+                <newline/>
+                <group id="group_peu" colspan="4">
+                    <label name="selectionPeu"/>            
+                    <field name="selectionPeu"/>
+                    <label name="pourcentagePeu"/>            
+                    <field name="pourcentagePeu"/> 
+                    <label name="observationPeu"/>            
+                    <field name="observationPeu" colspan="3"/>
+                </group>
+            </group>
+            <separator colspan="4"/>
+            <group id="group_aut" colspan="4">
+                <label name="autre"/>            
+                <field name="autre"/>
+                <newline/>
+                <group id="group_aut" colspan="4"> 
+                    <label name="observationAut"/>            
+                    <field name="observationAut" colspan="3"/>
+                </group>
+            </group>
+        </page>
+        <page string="Flore" id="flore" col="4">
+            <notebook>
+                <page string="Espèces patrimoniales" id="esppat" col="4">
+                    <field name="floreSpeciesPat"/>
+                </page>
+                <page string="Autres espèces" id="autesp" col="4">
+                    <field name="autreSpecies"/>
+                </page>
+            </notebook>
+        </page>
+        <page string="Faune" id="faune" col="4">
+            <notebook>
+                <page string="Avifaune" id="avifaune" col="4">
+                    <field name="aviSpecies"/>
+                </page>
+                <page string="Mammifères" id="mammal" col="4">
+                    <field name="mamSpecies"/>
+                </page>
+                <page string="Batraciens/Reptiles" id="batrep" col="4">
+                    <field name="batrepSpecies"/>
+                </page>
+                <page string="Entomofaune observée" id="entomo" col="4">
+                    <group id="group_odo" colspan="4" col="6">
+                        <label name="odonate"/>            
+                        <field name="odonate"/>
+                        <label name="especeOdo"/>            
+                        <field name="especeOdo"/>
+                    </group>
+                    <group id="group_sau" colspan="4" col="6">
+                        <label name="criquet"/>            
+                        <field name="criquet"/>
+                        <label name="especeSau"/>            
+                        <field name="especeSau"/>
+                    </group>
+                    <group id="group_col" colspan="4" col="6">
+                        <label name="coleoptere"/>            
+                        <field name="coleoptere"/>
+                        <label name="especeCol"/>            
+                        <field name="especeCol"/>
+                    </group>
+                    <group id="group_gue" colspan="4" col="6">
+                        <label name="guepe"/>            
+                        <field name="guepe"/>
+                        <label name="especeGue"/>            
+                        <field name="especeGue"/>
+                    </group>
+                    <group id="group_pap" colspan="4" col="6">
+                        <label name="papillon"/>            
+                        <field name="papillon"/>
+                        <label name="especePap"/>            
+                        <field name="especePap"/>
+                    </group>
+                    <group id="group_ara" colspan="4" col="6">
+                        <label name="araignee"/>            
+                        <field name="araignee"/>
+                        <label name="especeAra"/>            
+                        <field name="especeAra"/>
+                    </group>
+                    <group id="group_aqu" colspan="4" col="6">
+                        <label name="aquatiq"/>            
+                        <field name="aquatiq"/>
+                        <label name="especeAqu"/>            
+                        <field name="especeAqu"/>
+                    </group>
+                    <label name="observationEnto" xalign="0"/>
+                    <newline/>
+                    <field name="observationEnto" colspan="4"/>
+                </page>
+            </notebook>
+        </page>
+        <page string="Photo" id="photo">
+            <field name="photo" widget="image" img_width="800" img_height="600"/>                                                                
+        </page> 
+    </notebook>                   
+</form>

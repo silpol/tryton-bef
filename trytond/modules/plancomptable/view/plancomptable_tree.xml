@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Account">
+	<field name="plc_code" />
+	<field name="name" />
+	<field name="plc_cat" />
+	<field name="plc_detail" />
+</tree>

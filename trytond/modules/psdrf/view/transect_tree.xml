@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Transect">
+    <field name="cycle" />
+    <field name="plot" />
+    <field name="num" />
+    <field name="species" />
+    <field name="diam" />
+    <field name="angle" />
+    <field name="contact" />
+    <field name="windfall" />
+    <field name="bark_stage" />
+    <field name="rot_stage" />
+    <field name="observation" />
+</tree>

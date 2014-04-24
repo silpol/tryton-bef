@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form string="Diagnostic - Taxinomie - Batraciens - Reptiles">
+    <label name="taxinomie"/>
+    <field name="taxinomie"/>
+    <newline/>
+    <label name="ethologie"/> 
+    <field name="ethologie"/>
+    <newline/>
+    <label name="etatActuel"/> 
+    <field name="etatActuel"/>
+    <label name="etatPotentiel"/> 
+    <field name="etatPotentiel"/>
+    <newline/>
+    <label name="observation"/> 
+    <field name="observation" colspan="3"/>
+</form>

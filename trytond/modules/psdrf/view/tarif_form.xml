@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Tarif" col="2">
+    <label name="dispositif" />
+    <field name="dispositif" />
+    <label name="essence" />
+    <field name="essence" />
+    <label name="name" />
+    <field name="name" />
+    <label name="number" />
+    <field name="number" />
+</form>

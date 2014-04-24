@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Account">
+	<label name="plc_code"/>
+	<field name="plc_code"/>
+	<label name="name"/>
+	<field name="name"/>
+	<label name="plc_cat"/>
+	<field name="plc_cat"/>
+	<label name="plc_detail"/>
+	<field name="plc_detail"/>
+</form>

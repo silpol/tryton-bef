@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="commune_view_tree">
+            <field name="model">commune.commune</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="commune">
+                    <field name="name" />
+                    <field name="canton" />
+                    <field name="dep" />
+                    <field name="population" />
+                    <field name="insee" />
+                    <field name="postal" />                  
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="commune_view_form">
+            <field name="model">commune.commune</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="commune">
+                    <label name="name"/>
+                    <field name="name"/>
+                    <label name="canton"/>
+                    <field name="canton"/>
+                    <label name="dep"/>
+                    <field name="dep"/>
+                    <label name="insee"/>
+                    <field name="insee"/>
+                    <label name="postal"/>
+                    <field name="postal"/>                  
+                    <notebook>
+                        <page string="Population" id="population">
+                            <field name="population"/>
+                        </page>
+                        <page string="Map" id="map">
+                            <label name="geom"/>
+                            <field name="geom"/>
+                        </page>
+                    </notebook>
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_commune_form">
+            <field name="name">Commune</field>
+            <field name="res_model">commune.commune</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commune_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="commune_view_tree"/>
+            <field name="act_window" ref="act_commune_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commune_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="commune_view_form"/>
+            <field name="act_window" ref="act_commune_form"/>
+        </record>
+        
+        <menuitem name="Commune" parent="ir.menu_administration" id="menu_commune_admin"/>
+        <menuitem parent="menu_commune_admin" id="menu_commune_form" icon="tryton-list" action="act_commune_form"/>
+    </data>
+</tryton>

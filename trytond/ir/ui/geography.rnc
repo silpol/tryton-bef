@@ -1,0 +1,18 @@
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+
+geography = element geography { attlist.geography, (field)* }
+attlist.geography &= [a:defaultValue = "Geography"] attribute string {text}?
+
+field = element field { attlist.field }
+attlist.field &= attribute name {text}
+attlist.field &= attribute geometry {text}
+
+data = element data {attlist.data, xpath*}
+attlist.data &= empty
+
+xpath = element xpath {attlist.xpath, field*}
+attlist.xpath &= attribute expr {text}
+attlist.xpath &= [a:defaultValue="inside"] attribute position {
+    "replace" | "replace_attributes" | "after" | "before" }?
+
+start = data | geography

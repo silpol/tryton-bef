@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Pascal Obstétar
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+-->
+<tryton>
+    <data>        
+        <record model="ir.ui.view" id="act_sale_opportunity_view_form">
+            <field name="model">sale.opportunity</field>
+            <field name="inherit" ref="sale_opportunity.opportunity_view_form" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+					<xpath
+                        expr="/form/label[@name=&quot;party&quot;]" position="before">                        
+						<label name="reference"/>
+                        <field name="reference"/>
+                    </xpath>                    
+                    <xpath
+                        expr="/form/field[@name=&quot;address&quot;]" position="after">
+                        <label name="period"/>
+                        <field name="period"/>
+                        <label name="numberof"/>
+                        <field name="numberof"/>
+                    </xpath>                    
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="act_sale_opportunity_view_tree">
+            <field name="model">sale.opportunity</field>
+            <field name="inherit" ref="sale_opportunity.opportunity_view_tree" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+ 					<xpath
+                        expr="/tree/field[@name=&quot;start_date&quot;]" position="before">
+                        <field name="reference"/>
+                    </xpath>
+                    <xpath
+                        expr="/tree/field[@name=&quot;party&quot;]" position="after">
+                        <field name="period"/>
+                        <field name="numberof"/>
+                    </xpath>
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="act_contact_mechanism_view_tree">
+            <field name="model">party.contact_mechanism</field>
+            <field name="inherit" ref="party.contact_mechanism_view_tree_sequence" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+                    <xpath
+                        expr="/tree/field[@name=&quot;value&quot;]" position="after">
+                            <field name="comment"/>
+                    </xpath>
+                </data>
+                ]]>
+            </field>
+        </record>
+
+		<record model="ir.action.report" id="report_bulletin1">
+            <field name="name">Bulletin</field>
+            <field name="model">sale.opportunity</field>
+            <field name="report_name">sale.opportunity.label1</field>
+            <field name="report">bef_sale_opportunity_travel/bulletin.odt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_bulletin1_party">
+            <field name="keyword">form_print</field>
+            <field name="model">sale.opportunity,-1</field>
+            <field name="action" ref="report_bulletin1"/>
+        </record>
+		<record model="ir.action.report" id="report_label1">
+            <field name="name">Labels1</field>
+            <field name="model">party.party</field>
+            <field name="report_name">party.label1</field>
+            <field name="report">bef_sale_opportunity_travel/label1.odt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_label1_party">
+            <field name="keyword">form_print</field>
+            <field name="model">party.party,-1</field>
+            <field name="action" ref="report_label1"/>
+        </record>
+    </data>
+</tryton>
+

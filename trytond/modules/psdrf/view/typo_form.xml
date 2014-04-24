@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Typo" col="2">
+    <label name="code" />
+    <field name="code" />
+    <label name="libelle" />
+    <field name="libelle" />
+    <label name="observation" />
+    <field name="observation" />
+</form>

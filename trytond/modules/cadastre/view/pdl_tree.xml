@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<tree string="Propriétaire">
+    <field name="codlot" />
+    <field name="pdl" />
+    <field name="codparc" />
+    <field name="dnupdl" />
+    <field name="dnivim" />
+    <field name="ctpdl" />
+    <field name="dnompdl" />
+    <field name="dmrpdl" />
+    <field name="gprmut" />
+    <field name="dnuprol" />
+    <field name="ccocif" />
+    <field name="cenr" />
+</tree>

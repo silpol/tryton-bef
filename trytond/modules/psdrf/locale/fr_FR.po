@@ -1,0 +1,2036 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:psdrf.coarse:"
+msgid ""
+"There can be no two pieces of wood with an identical number in the same plot."
+msgstr ""
+"Il ne peut pas y avoir deux arbres avec un numéro identique dans la même "
+"parcelle."
+
+msgctxt "error:psdrf.cycle:"
+msgid "It can not be two identical cycles for a same device."
+msgstr ""
+"Il ne peut pas y avoir deux cycles avec le même numéro dans le même "
+"dispositif."
+
+msgctxt "error:psdrf.cycle:"
+msgid "The cycle start date must be before the end date of the cycle."
+msgstr "La date de début de cycle doit commencer avant celle de fin de cycle."
+
+msgctxt "error:psdrf.dispositif:"
+msgid "The dispositif name must be unique!"
+msgstr "Le nom du dispositif doit être unique !"
+
+msgctxt "error:psdrf.ecologie:"
+msgid "The label of a psdrf ecologie must be unique by parent!"
+msgstr "Le libellé du code écologique doit être unique par parent !"
+
+msgctxt "error:psdrf.ecologie:"
+msgid "You can not create recursive label!"
+msgstr "Vous ne pouvez pas créer de libellé récursif !"
+
+msgctxt "error:psdrf.ecologie:"
+msgid "You can not use \" / \" in name field!"
+msgstr "Vous ne pouvez pas utiliser \"/\" dans un nom de champ !"
+
+msgctxt "error:psdrf.essence:"
+msgid "The species code must be unique."
+msgstr "Le code essence doit être unique."
+
+msgctxt "error:psdrf.measure:"
+msgid "It can not be two measurements on the same tree for the same cycle."
+msgstr ""
+"Il ne peut pas y avoir deux mesures sur le même arbre pour le même cycle."
+
+msgctxt "error:psdrf.plot:"
+msgid ""
+"The angle must be relascopique a number greater than or equal to 1 and less "
+"than or equal to 5."
+msgstr ""
+"L'angle relascopique est un nombre supérieur ou égal à 1 et inférieur ou "
+"égal à 5."
+
+msgctxt "error:psdrf.plot:"
+msgid "The last year of operation is incorrect."
+msgstr "La dernière année d'exploitation est incorrecte."
+
+msgctxt "error:psdrf.plot:"
+msgid "The précomptable diameter must be greater than or equal to 10 numbers."
+msgstr "Le diamètre pré-comptable doit être supérieur ou égal à 10."
+
+msgctxt "error:psdrf.stand_tree-psdrf.ecologie:"
+msgid "You can not edit the code of a green tree!"
+msgstr "Vous ne pouvez pas éditer le code écologique d'un arbre !"
+
+msgctxt "error:psdrf.stand_tree:"
+msgid "Le champ 'num' est requis."
+msgstr "Le champ 'num' est requis."
+
+msgctxt "field:psdrf.bark,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:psdrf.bark,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.bark,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.bark,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.bark,libelle:"
+msgid "Label"
+msgstr "Libellé"
+
+msgctxt "field:psdrf.bark,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.bark,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.bark,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.bark,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.coarse,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.coarse,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.coarse,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.coarse,measure:"
+msgid "Measure"
+msgstr "Mesure"
+
+msgctxt "field:psdrf.coarse,num:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:psdrf.coarse,plot:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:psdrf.coarse,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.coarse,species:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:psdrf.coarse,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.coarse,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.cycle,caracteristique:"
+msgid "Specifications"
+msgstr "Spécifications"
+
+msgctxt "field:psdrf.cycle,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.cycle,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.cycle,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:psdrf.cycle,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.cycle,enddate:"
+msgid "End date"
+msgstr "Date de fin"
+
+msgctxt "field:psdrf.cycle,facgb:"
+msgid "Factor GB"
+msgstr "Facteur GB"
+
+msgctxt "field:psdrf.cycle,facpb:"
+msgid "Factor PB"
+msgstr "Facteur PB"
+
+msgctxt "field:psdrf.cycle,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.cycle,nombre_placette:"
+msgid "Number"
+msgstr "Nombre"
+
+msgctxt "field:psdrf.cycle,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.cycle,operateur:"
+msgid "Operators"
+msgstr "Opérateurs"
+
+msgctxt "field:psdrf.cycle,party:"
+msgid "Funders"
+msgstr "Financeurs"
+
+msgctxt "field:psdrf.cycle,raison:"
+msgid "Reason"
+msgstr "Raison"
+
+msgctxt "field:psdrf.cycle,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.cycle,startdate:"
+msgid "Start date"
+msgstr "Date de début"
+
+msgctxt "field:psdrf.cycle,strate_obs:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.cycle,tarif:"
+msgid "Tarif SL"
+msgstr "Tarif SL"
+
+msgctxt "field:psdrf.cycle,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.cycle,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.cycle-party.party_backer,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.cycle-party.party_backer,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.cycle-party.party_backer,cycle_many:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:psdrf.cycle-party.party_backer,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.cycle-party.party_backer,party_many:"
+msgid "Financial partners"
+msgstr "Partenaires financiers"
+
+msgctxt "field:psdrf.cycle-party.party_backer,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.cycle-party.party_backer,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.cycle-party.party_backer,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.cycle-party.party_operator,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.cycle-party.party_operator,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.cycle-party.party_operator,cycle_many:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:psdrf.cycle-party.party_operator,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.cycle-party.party_operator,party_many:"
+msgid "Operator"
+msgstr "Opérateurs"
+
+msgctxt "field:psdrf.cycle-party.party_operator,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.cycle-party.party_operator,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.cycle-party.party_operator,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.dispositif,altitudemax:"
+msgid "MAX altitude"
+msgstr "Altitude MAX"
+
+msgctxt "field:psdrf.dispositif,altitudemin:"
+msgid "MIN altitude"
+msgstr "Altitude MIN"
+
+msgctxt "field:psdrf.dispositif,altitudemoy:"
+msgid "MED altitude"
+msgstr "Altitude MOY"
+
+msgctxt "field:psdrf.dispositif,codernf:"
+msgid "Other Code"
+msgstr "Autre code"
+
+msgctxt "field:psdrf.dispositif,country:"
+msgid "Communes"
+msgstr "Communes"
+
+msgctxt "field:psdrf.dispositif,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.dispositif,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.dispositif,cycles:"
+msgid "Cycles"
+msgstr "Cycles"
+
+msgctxt "field:psdrf.dispositif,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:psdrf.dispositif,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.dispositif,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.dispositif,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.dispositif,party:"
+msgid "Partner"
+msgstr "Partenaires"
+
+msgctxt "field:psdrf.dispositif,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.dispositif,status:"
+msgid "Statuts"
+msgstr "Statuts"
+
+msgctxt "field:psdrf.dispositif,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.dispositif,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.dispositif-commune.commune,commune_many:"
+msgid "name"
+msgstr "nom"
+
+msgctxt "field:psdrf.dispositif-commune.commune,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.dispositif-commune.commune,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.dispositif-commune.commune,dispositif_many:"
+msgid "name"
+msgstr "nom"
+
+msgctxt "field:psdrf.dispositif-commune.commune,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.dispositif-commune.commune,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.dispositif-commune.commune,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.dispositif-commune.commune,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.dispositif-party.party,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.dispositif-party.party,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.dispositif-party.party,dispositif_many:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.dispositif-party.party,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.dispositif-party.party,party_many:"
+msgid "Partner"
+msgstr "Partenaire"
+
+msgctxt "field:psdrf.dispositif-party.party,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.dispositif-party.party,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.dispositif-party.party,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.dispositif-protection.area,area_many:"
+msgid "Status"
+msgstr "Statuts"
+
+msgctxt "field:psdrf.dispositif-protection.area,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.dispositif-protection.area,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.dispositif-protection.area,dispositif_many:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.dispositif-protection.area,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.dispositif-protection.area,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.dispositif-protection.area,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.dispositif-protection.area,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.ecologie,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:psdrf.ecologie,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:psdrf.ecologie,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:psdrf.ecologie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.ecologie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.ecologie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.ecologie,libelle:"
+msgid "Label"
+msgstr "Libellé"
+
+msgctxt "field:psdrf.ecologie,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:psdrf.ecologie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.ecologie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.ecologie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.essence,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:psdrf.essence,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.essence,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.essence,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.essence,libelle:"
+msgid "Label"
+msgstr "Libellé"
+
+msgctxt "field:psdrf.essence,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.essence,taxons:"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "field:psdrf.essence,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.essence,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,essence:"
+msgid "essence"
+msgstr "essence"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,taxon:"
+msgid "taxon"
+msgstr "taxon"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.essence-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.measure,bark_stage:"
+msgid "Bark stage"
+msgstr "Stade écorce"
+
+msgctxt "field:psdrf.measure,coppice:"
+msgid "Clump"
+msgstr "Cépée"
+
+msgctxt "field:psdrf.measure,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.measure,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.measure,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:psdrf.measure,dbh1:"
+msgid "Diameter 1"
+msgstr "Diamètre 1"
+
+msgctxt "field:psdrf.measure,dbh2:"
+msgid "Diameter 2"
+msgstr "Diamètre 2"
+
+msgctxt "field:psdrf.measure,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.measure,eco_engref:"
+msgid "Ecological code"
+msgstr "Code écologique"
+
+msgctxt "field:psdrf.measure,height:"
+msgid "Height"
+msgstr "Hauteur"
+
+msgctxt "field:psdrf.measure,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.measure,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.measure,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.measure,rot_stage:"
+msgid "Decay stage"
+msgstr "Stade pourriture"
+
+msgctxt "field:psdrf.measure,tree:"
+msgid "Tree"
+msgstr "Arbre"
+
+msgctxt "field:psdrf.measure,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:psdrf.measure,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.measure,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.measure_coarse,bark_stage:"
+msgid "Bark"
+msgstr "Écorce"
+
+msgctxt "field:psdrf.measure_coarse,base_diam:"
+msgid "Start diameter"
+msgstr "Diamètre de début"
+
+msgctxt "field:psdrf.measure_coarse,coarse:"
+msgid "Coarse"
+msgstr "Bois mort"
+
+msgctxt "field:psdrf.measure_coarse,contact:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:psdrf.measure_coarse,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.measure_coarse,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.measure_coarse,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:psdrf.measure_coarse,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.measure_coarse,length:"
+msgid "Length"
+msgstr "Longueur"
+
+msgctxt "field:psdrf.measure_coarse,mid_diam:"
+msgid "Median diameter"
+msgstr "Diamètre médian"
+
+msgctxt "field:psdrf.measure_coarse,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.measure_coarse,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.measure_coarse,rot_stage:"
+msgid "Decay"
+msgstr "Pourriture"
+
+msgctxt "field:psdrf.measure_coarse,top_diam:"
+msgid "End diameter"
+msgstr "Diamètre de fin"
+
+msgctxt "field:psdrf.measure_coarse,windfall:"
+msgid "Chablis"
+msgstr "Chablis"
+
+msgctxt "field:psdrf.measure_coarse,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.measure_coarse,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.plot,acc:"
+msgid "Precision"
+msgstr "Précision"
+
+msgctxt "field:psdrf.plot,centre:"
+msgid "Spotting"
+msgstr "Centre"
+
+msgctxt "field:psdrf.plot,charact:"
+msgid "Characters stationnels"
+msgstr "Caractères stationnels"
+
+msgctxt "field:psdrf.plot,corine_code:"
+msgid "CORINE Code"
+msgstr "Code CORINE"
+
+msgctxt "field:psdrf.plot,course:"
+msgid "Tracking"
+msgstr "Cheminement"
+
+msgctxt "field:psdrf.plot,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.plot,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.plot,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:psdrf.plot,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.plot,exp:"
+msgid "Exposure"
+msgstr "Exposition"
+
+msgctxt "field:psdrf.plot,forest_name:"
+msgid "Forest"
+msgstr "Forêts"
+
+msgctxt "field:psdrf.plot,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:psdrf.plot,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.plot,last_year_exploit:"
+msgid "Last exploitation"
+msgstr "Dernière exploitation"
+
+msgctxt "field:psdrf.plot,num:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:psdrf.plot,precount_diameter:"
+msgid "Precomptable diameter"
+msgstr "Diamètre pré-comptable"
+
+msgctxt "field:psdrf.plot,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.plot,relasco:"
+msgid "Relascopique angle"
+msgstr "Angle relascopique"
+
+msgctxt "field:psdrf.plot,slope:"
+msgid "Slope"
+msgstr "Pente"
+
+msgctxt "field:psdrf.plot,strat:"
+msgid "Strata"
+msgstr "Strate"
+
+msgctxt "field:psdrf.plot,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.plot,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.regeneration,browsing:"
+msgid "Abrouti"
+msgstr "Abrouti"
+
+msgctxt "field:psdrf.regeneration,class1:"
+msgid "Class 1"
+msgstr "Classe 1"
+
+msgctxt "field:psdrf.regeneration,class2:"
+msgid "Class 2"
+msgstr "Classe 2"
+
+msgctxt "field:psdrf.regeneration,class3:"
+msgid "Class 3"
+msgstr "Classe 3"
+
+msgctxt "field:psdrf.regeneration,coppice:"
+msgid "Clump"
+msgstr "Cépée"
+
+msgctxt "field:psdrf.regeneration,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.regeneration,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.regeneration,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:psdrf.regeneration,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.regeneration,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.regeneration,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.regeneration,plot:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:psdrf.regeneration,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.regeneration,seed_cover:"
+msgid "Recovery"
+msgstr "Recouvrement"
+
+msgctxt "field:psdrf.regeneration,species:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:psdrf.regeneration,subplot:"
+msgid "Sub-plot"
+msgstr "Sous-placette"
+
+msgctxt "field:psdrf.regeneration,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.regeneration,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.rot,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:psdrf.rot,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.rot,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.rot,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.rot,libelle:"
+msgid "Lablel"
+msgstr "Libellé"
+
+msgctxt "field:psdrf.rot,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.rot,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.rot,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.rot,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.stand_tree,azimut:"
+msgid "Azimut"
+msgstr "Azimut"
+
+msgctxt "field:psdrf.stand_tree,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.stand_tree,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.stand_tree,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.stand_tree,distance:"
+msgid "Distance"
+msgstr "Distance"
+
+msgctxt "field:psdrf.stand_tree,essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:psdrf.stand_tree,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.stand_tree,measure:"
+msgid "Measure"
+msgstr "Mesures"
+
+msgctxt "field:psdrf.stand_tree,num:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:psdrf.stand_tree,plot:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:psdrf.stand_tree,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.stand_tree,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.stand_tree,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,arbre:"
+msgid "Tree number"
+msgstr "Numéro arbre"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,ecologie:"
+msgid "Ecological code"
+msgstr "Code écologique"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,full_code:"
+msgid "Full Code"
+msgstr "Code complet"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,note:"
+msgid "Ecological note"
+msgstr "Note écologique"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.stand_tree-psdrf.ecologie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.tarif,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.tarif,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.tarif,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.tarif,essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:psdrf.tarif,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.tarif,name:"
+msgid "Schaeffer type"
+msgstr "Type Schaeffer"
+
+msgctxt "field:psdrf.tarif,number:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:psdrf.tarif,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.tarif,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.tarif,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.transect,angle:"
+msgid "Angle"
+msgstr "Angle"
+
+msgctxt "field:psdrf.transect,bark_stage:"
+msgid "Bark stage"
+msgstr "Stade écorce"
+
+msgctxt "field:psdrf.transect,contact:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:psdrf.transect,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.transect,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.transect,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:psdrf.transect,diam:"
+msgid "Diameter"
+msgstr "Diamètre"
+
+msgctxt "field:psdrf.transect,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:psdrf.transect,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.transect,num:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:psdrf.transect,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.transect,plot:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:psdrf.transect,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.transect,rot_stage:"
+msgid "Decomposition stage"
+msgstr "Stade de décomposition"
+
+msgctxt "field:psdrf.transect,species:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:psdrf.transect,windfall:"
+msgid "Chablis"
+msgstr "Chablis"
+
+msgctxt "field:psdrf.transect,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.transect,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:psdrf.typo,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:psdrf.typo,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:psdrf.typo,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:psdrf.typo,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:psdrf.typo,libelle:"
+msgid "Label"
+msgstr "Libellé"
+
+msgctxt "field:psdrf.typo,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:psdrf.typo,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:psdrf.typo,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:psdrf.typo,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:psdrf.bark,code:"
+msgid "Bark code"
+msgstr "Code écorce"
+
+msgctxt "help:psdrf.bark,libelle:"
+msgid "Bark label"
+msgstr "Libellé écorce"
+
+msgctxt "help:psdrf.bark,observation:"
+msgid "Bark observations"
+msgstr "Observations écorce"
+
+msgctxt "help:psdrf.coarse,measure:"
+msgid "Coarse measure"
+msgstr "Mesure Bois mort"
+
+msgctxt "help:psdrf.coarse,num:"
+msgid "Part Number wood sampled (possible repeat)"
+msgstr "Bois échantillonné (répétition possible)"
+
+msgctxt "help:psdrf.coarse,plot:"
+msgid "Plot identification"
+msgstr "Identification placette"
+
+msgctxt "help:psdrf.coarse,species:"
+msgid "Measured species"
+msgstr "Essence mesurée"
+
+msgctxt "help:psdrf.cycle,caracteristique:"
+msgid "Cycle specifications"
+msgstr "Caractéristiques du cycle"
+
+msgctxt "help:psdrf.cycle,cycle:"
+msgid "Cycle number"
+msgstr "Numéro du cycle"
+
+msgctxt "help:psdrf.cycle,dispositif:"
+msgid "Associated device to cycle"
+msgstr "Dispositifs associés au cycle"
+
+msgctxt "help:psdrf.cycle,enddate:"
+msgid "End date measurement cycle"
+msgstr "Date de fin de mesure de cycle"
+
+msgctxt "help:psdrf.cycle,facgb:"
+msgid "Slenderness factor of large timber"
+msgstr "Facteur d'élancement de gros bois"
+
+msgctxt "help:psdrf.cycle,facpb:"
+msgid "Slenderness factor of small wood"
+msgstr "Facteur d'élancement des petits bois"
+
+msgctxt "help:psdrf.cycle,nombre_placette:"
+msgid "Number of measured plot"
+msgstr "Nombre de placette mesurée"
+
+msgctxt "help:psdrf.cycle,observation:"
+msgid "Observations of cycle"
+msgstr "Observations sur le cycle"
+
+msgctxt "help:psdrf.cycle,operateur:"
+msgid "Operators who made ​​the measurement cycle"
+msgstr "Opérateurs ayant réalisés la mesure du cycle"
+
+msgctxt "help:psdrf.cycle,party:"
+msgid "Cycle funders"
+msgstr "Financeurs du cycle"
+
+msgctxt "help:psdrf.cycle,raison:"
+msgid "Reason of cycle"
+msgstr "Raison du cycle"
+
+msgctxt "help:psdrf.cycle,startdate:"
+msgid "Date on which the cycle was performed"
+msgstr "Date à laquelle le cycle a été effectuée"
+
+msgctxt "help:psdrf.cycle,strate_obs:"
+msgid "Strata observations"
+msgstr "Observations sur la strate"
+
+msgctxt "help:psdrf.cycle,tarif:"
+msgid "Tarif number Schaeffer Lent default"
+msgstr "Numéro de tarif Schaeffer par défaut"
+
+msgctxt "help:psdrf.dispositif,altitudemax:"
+msgid "Maximum altitude of the dispositif"
+msgstr "Altitude maximale du dispositif"
+
+msgctxt "help:psdrf.dispositif,altitudemin:"
+msgid "Minimum altitude of the dispositif"
+msgstr "Altitude minimale du dispositif"
+
+msgctxt "help:psdrf.dispositif,altitudemoy:"
+msgid "Medium altitude of the dispositif"
+msgstr "Altitude moyenne du dispositif"
+
+msgctxt "help:psdrf.dispositif,codernf:"
+msgid "Dispositif code (RNF, ONF,...)"
+msgstr "Code du dispositif (RNF, ONF,...)"
+
+msgctxt "help:psdrf.dispositif,country:"
+msgid "Communes situation of the dispositif"
+msgstr "Communes de situation du dispositif"
+
+msgctxt "help:psdrf.dispositif,date:"
+msgid "Arrest date of the dispositif"
+msgstr "Date d'arrêt du dispositif"
+
+msgctxt "help:psdrf.dispositif,name:"
+msgid "Dispositif name"
+msgstr "Nom du dispositif"
+
+msgctxt "help:psdrf.dispositif,observation:"
+msgid "Observation of the dispositif"
+msgstr "Observations sur le dispositif"
+
+msgctxt "help:psdrf.dispositif,party:"
+msgid "Dispositif partner of the dispositif"
+msgstr "Partenaires du dispositif"
+
+msgctxt "help:psdrf.dispositif,status:"
+msgid "Protection status"
+msgstr "Statuts de protection"
+
+msgctxt "help:psdrf.essence,code:"
+msgid "Species group code"
+msgstr "Code groupe essence"
+
+msgctxt "help:psdrf.essence,libelle:"
+msgid "Group species label"
+msgstr "Libellé groupe essence"
+
+msgctxt "help:psdrf.essence,taxons:"
+msgid "Group species taxon"
+msgstr "Taxon groupe essence"
+
+msgctxt "help:psdrf.measure,bark_stage:"
+msgid "Stage of decomposition bark"
+msgstr "Stade de décomposition de l'écorce"
+
+msgctxt "help:psdrf.measure,coppice:"
+msgid "Tree derived from clump"
+msgstr "Arbre originaire d'une cépée"
+
+msgctxt "help:psdrf.measure,cycle:"
+msgid "Cycle number on the extent of the tree"
+msgstr "Nombre de cycle sur l'arbre"
+
+msgctxt "help:psdrf.measure,dbh1:"
+msgid "1.30m diameter, perpendicular to the radius of the plot (cm)"
+msgstr ""
+"Diamètre à 1,30m, perpendiculaire à l'axe du centre de la placette (cm)"
+
+msgctxt "help:psdrf.measure,dbh2:"
+msgid "Diameter 1.30 m, parallel to the radius of the plot (cm)"
+msgstr "Diamètre à 1,30m, parallèle à l'axe du centre de la placette (cm)"
+
+msgctxt "help:psdrf.measure,eco_engref:"
+msgid "Ecological code ENGREF/IRSTEA/ProSilva"
+msgstr "Code écologique ENGREF/IRSTEA/ProSilva"
+
+msgctxt "help:psdrf.measure,height:"
+msgid "tree height"
+msgstr "Hauteur arbre"
+
+msgctxt "help:psdrf.measure,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:psdrf.measure,rot_stage:"
+msgid "Stage of decomposition rot"
+msgstr "Stade de décomposition de la pourriture"
+
+msgctxt "help:psdrf.measure,tree:"
+msgid "Tree concerned by the measures"
+msgstr "Arbre concerné par la mesure"
+
+msgctxt "help:psdrf.measure,typo:"
+msgid "Type dead standing tree"
+msgstr "Type d'arbre mort debout"
+
+msgctxt "help:psdrf.measure_coarse,bark_stage:"
+msgid "Stage of decomposition bark"
+msgstr "Stade de décomposition de l'écorce"
+
+msgctxt "help:psdrf.measure_coarse,base_diam:"
+msgid "Initial diameter of the wood piece sampled (cm)"
+msgstr "Diamètre initial de la pièce de bois échantillonnée (cm)"
+
+msgctxt "help:psdrf.measure_coarse,contact:"
+msgid "Percentage of contacting the piece of timber with soil (%)"
+msgstr "Pourcentage de contact de la pièce de bois avec le sol (%)"
+
+msgctxt "help:psdrf.measure_coarse,cycle:"
+msgid "Cycle number on the extent of the tree"
+msgstr "Nombre de cycle de la mesure de l'arbre"
+
+msgctxt "help:psdrf.measure_coarse,length:"
+msgid "Length of the sampled piece of wood (m)"
+msgstr "Longueur de la pièce de bois échantillonnée (m)"
+
+msgctxt "help:psdrf.measure_coarse,mid_diam:"
+msgid "Median diameter of the wood piece sampled (cm)"
+msgstr "Diamètre médian de la pièce de bois échantillonnée (cm)"
+
+msgctxt "help:psdrf.measure_coarse,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:psdrf.measure_coarse,rot_stage:"
+msgid "Stage of decomposition rot"
+msgstr "Stade de décomposition de la pourriture"
+
+msgctxt "help:psdrf.measure_coarse,top_diam:"
+msgid "Final diameter of the workpiece sampled (cm)"
+msgstr "Diamètre final de la pièce de bois échantillonnée (cm)"
+
+msgctxt "help:psdrf.measure_coarse,windfall:"
+msgid "Chablis (checked if the piece of wood is attached to the stem)"
+msgstr "Chablis (coché si la pièce de bois est fixé à la racine)"
+
+msgctxt "help:psdrf.plot,acc:"
+msgid "Accuracy of the measurement (m)"
+msgstr "Précision de la mesure (m)"
+
+msgctxt "help:psdrf.plot,centre:"
+msgid "Locating the center of the plot"
+msgstr "Localisation du centre de la placette"
+
+msgctxt "help:psdrf.plot,charact:"
+msgid "Stationnels characters plot"
+msgstr "Caractères stationnels de la placette"
+
+msgctxt "help:psdrf.plot,corine_code:"
+msgid "CORINE code of the plot"
+msgstr "Code CORINE de la placette"
+
+msgctxt "help:psdrf.plot,course:"
+msgid "Path to access the plot"
+msgstr "Cheminement pour accéder à la placette"
+
+msgctxt "help:psdrf.plot,date:"
+msgid "Measurement date of the plot"
+msgstr "Date de mesure de la placette"
+
+msgctxt "help:psdrf.plot,dispositif:"
+msgid "Dispositif of the placette"
+msgstr "Dispositif de la placette"
+
+msgctxt "help:psdrf.plot,exp:"
+msgid "Exposure of the plot (gr)"
+msgstr "Exposition de la placette (gr)"
+
+msgctxt "help:psdrf.plot,forest_name:"
+msgid "Forest name"
+msgstr "Nom de la forêt"
+
+msgctxt "help:psdrf.plot,geom:"
+msgid "Geometry plot"
+msgstr "Géométrie de la placette"
+
+msgctxt "help:psdrf.plot,last_year_exploit:"
+msgid "Last year operating"
+msgstr "Année de la dernière exploitation"
+
+msgctxt "help:psdrf.plot,num:"
+msgid "Number of the plot"
+msgstr "Numéro de la placette"
+
+msgctxt "help:psdrf.plot,relasco:"
+msgid "Coefficient used to measure angles of the basal area (1, 2, 3, 4, 5)"
+msgstr ""
+"Coefficient utilisé pour la mesure de la surface terrière (1, 2, 3, 4, 5)"
+
+msgctxt "help:psdrf.plot,slope:"
+msgid "Slope of the plot (%)"
+msgstr "Pente de la placette (%)"
+
+msgctxt "help:psdrf.plot,strat:"
+msgid "identifying the stratum belongs plot"
+msgstr "Identification des strates de la placette"
+
+msgctxt "help:psdrf.regeneration,browsing:"
+msgid "Sowing abrouti"
+msgstr "Semis abrouti"
+
+msgctxt "help:psdrf.regeneration,class1:"
+msgid "Number of seedlings Class 1"
+msgstr "Nombre de semis de classe 1"
+
+msgctxt "help:psdrf.regeneration,class2:"
+msgid "Number of seedlings Class 2"
+msgstr "Nombre de semis de classe 2"
+
+msgctxt "help:psdrf.regeneration,class3:"
+msgid "Number of seedlings Class 3"
+msgstr "Nombre de semis de classe 3"
+
+msgctxt "help:psdrf.regeneration,coppice:"
+msgid "Clump of seedlings from"
+msgstr "Cépée"
+
+msgctxt "help:psdrf.regeneration,cycle:"
+msgid "Cycle number involved in the regeneration"
+msgstr "Nombre de cycle impliqués dans la régénération"
+
+msgctxt "help:psdrf.regeneration,observation:"
+msgid "Regeneration observation"
+msgstr "Observations sur la régénération"
+
+msgctxt "help:psdrf.regeneration,plot:"
+msgid "Plot identification"
+msgstr "Identification de la placette"
+
+msgctxt "help:psdrf.regeneration,seed_cover:"
+msgid "Recovery percentage of seedlings (%)"
+msgstr "Pourcentage de recouvrement des semis (%)"
+
+msgctxt "help:psdrf.regeneration,species:"
+msgid "Species measured"
+msgstr "Essence mesurée"
+
+msgctxt "help:psdrf.regeneration,subplot:"
+msgid "Number subplot (1, 2 or 3)"
+msgstr "Numéro de la sous-placette (1, 2 ou 3)"
+
+msgctxt "help:psdrf.rot,code:"
+msgid "Code of rot"
+msgstr "Code pourriture"
+
+msgctxt "help:psdrf.rot,libelle:"
+msgid "Label of rot"
+msgstr "Libellé pourriture"
+
+msgctxt "help:psdrf.rot,observation:"
+msgid "Rot observations"
+msgstr "Observations pourriture"
+
+msgctxt "help:psdrf.stand_tree,azimut:"
+msgid "Azimut to the center of the plot"
+msgstr "Azimut au centre de la placette"
+
+msgctxt "help:psdrf.stand_tree,distance:"
+msgid "Distance to the center of the plot"
+msgstr "Distance au centre de la placette"
+
+msgctxt "help:psdrf.stand_tree,essence:"
+msgid "Measured species"
+msgstr "Essence mesurée"
+
+msgctxt "help:psdrf.stand_tree,measure:"
+msgid "Tree measure"
+msgstr "Arbre mesuré"
+
+msgctxt "help:psdrf.stand_tree,num:"
+msgid "Tree number sampled"
+msgstr "Numéro d'arbre échantillonné"
+
+msgctxt "help:psdrf.stand_tree,plot:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "help:psdrf.tarif,dispositif:"
+msgid "Device on which the tarif applies"
+msgstr "Dispositif sur lequel le tarif s'applique"
+
+msgctxt "help:psdrf.tarif,name:"
+msgid "Choosing a type of fare Schaeffer"
+msgstr "Choisissez un type de tarif Schaeffer"
+
+msgctxt "help:psdrf.tarif,number:"
+msgid "Tarif number"
+msgstr "Numéro de tarif"
+
+msgctxt "help:psdrf.transect,angle:"
+msgid "Angle (deg) of the workpiece relative to the ground"
+msgstr "Anlge (deg) de la pièce de bois avec le sol"
+
+msgctxt "help:psdrf.transect,bark_stage:"
+msgid "Stage of decomposition bark"
+msgstr "Stade de décomposition de l'écorce"
+
+msgctxt "help:psdrf.transect,contact:"
+msgid "Contact or not the piece of timber with the ground"
+msgstr "Contact ou pas de la pièce de bois avec le sol"
+
+msgctxt "help:psdrf.transect,cycle:"
+msgid "Cycle number on the extent of the transect"
+msgstr "Numéro de cycle du transect"
+
+msgctxt "help:psdrf.transect,diam:"
+msgid "Diameter taken at the place where the piece of wood cut transect (cm)"
+msgstr "Diamètre pris à l'endroit où la pièce de bois coupe le transect (cm)"
+
+msgctxt "help:psdrf.transect,num:"
+msgid "Transect number"
+msgstr "Numéro de transect"
+
+msgctxt "help:psdrf.transect,observation:"
+msgid "Transect observations"
+msgstr "Observations sur le transect"
+
+msgctxt "help:psdrf.transect,plot:"
+msgid "Plot identification"
+msgstr "Identification de la placette"
+
+msgctxt "help:psdrf.transect,rot_stage:"
+msgid "Stage of decomposition rot"
+msgstr "Stade de décomposition de la pourriture"
+
+msgctxt "help:psdrf.transect,species:"
+msgid "Measured species"
+msgstr "Essence mesurée"
+
+msgctxt "help:psdrf.transect,windfall:"
+msgid "Chablis (checked if the piece of wood is attached to the stem)"
+msgstr "Chablis (coché si la tige attachée à la racine)"
+
+msgctxt "help:psdrf.typo,code:"
+msgid "Code of typo"
+msgstr "Code typologique"
+
+msgctxt "help:psdrf.typo,libelle:"
+msgid "Label of typo"
+msgstr "Libellé typologie"
+
+msgctxt "help:psdrf.typo,observation:"
+msgid "Observations of typo"
+msgstr "Observations sur la typologie"
+
+msgctxt "model:ir.action,name:act_arbres_measure_coarse_form"
+msgid "Tree evolution"
+msgstr "Évolution arbre"
+
+msgctxt "model:ir.action,name:act_ecologie_list"
+msgid "Ecology"
+msgstr "Écologie"
+
+msgctxt "model:ir.action,name:act_ecologie_tree"
+msgid "Ecology"
+msgstr "Écologie"
+
+msgctxt "model:ir.action,name:act_measure_form"
+msgid "Tree evolution"
+msgstr "Évolution arbre"
+
+msgctxt "model:ir.action,name:act_open_g"
+msgid "Basal area"
+msgstr "Surface terrière"
+
+msgctxt "model:ir.action,name:act_open_g_cmp"
+msgid "Comparing basal areas"
+msgstr "Comparaison de surfaces terrières"
+
+msgctxt "model:ir.action,name:act_open_g_diametre"
+msgid "Basal area by diameter class"
+msgstr "Surface terrière par classe de diamètre"
+
+msgctxt "model:ir.action,name:act_open_gs"
+msgid "Basal areas"
+msgstr "Surfaces terrières"
+
+msgctxt "model:ir.action,name:act_psdrf_bark_form"
+msgid "Bark"
+msgstr "Écorce"
+
+msgctxt "model:ir.action,name:act_psdrf_coarse_form"
+msgid "Diameter >= 30cm"
+msgstr "Diamètre >= 30cm"
+
+msgctxt "model:ir.action,name:act_psdrf_cycle_form"
+msgid "Cycles"
+msgstr "Cycles"
+
+msgctxt "model:ir.action,name:act_psdrf_dispositif_form"
+msgid "Dispositifs"
+msgstr "Dispositifs"
+
+msgctxt "model:ir.action,name:act_psdrf_essence_form"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "model:ir.action,name:act_psdrf_essence_taxon_form"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "model:ir.action,name:act_psdrf_plot_form"
+msgid "Plot"
+msgstr "Placettes"
+
+msgctxt "model:ir.action,name:act_psdrf_regeneration_form"
+msgid "Regeneration"
+msgstr "Régénération"
+
+msgctxt "model:ir.action,name:act_psdrf_rot_form"
+msgid "Rot"
+msgstr "Pourriture"
+
+msgctxt "model:ir.action,name:act_psdrf_stand_tree"
+msgid "Trees"
+msgstr "Arbres"
+
+msgctxt "model:ir.action,name:act_psdrf_stand_tree_psdrf_ecologie_rel_form"
+msgid "Ecological code"
+msgstr "Code écologique"
+
+msgctxt "model:ir.action,name:act_psdrf_tarif_form"
+msgid "Tarif"
+msgstr "Tarif"
+
+msgctxt "model:ir.action,name:act_psdrf_transect_form"
+msgid "Diameter < 30cm"
+msgstr "Diamètre <30cm"
+
+msgctxt "model:ir.action,name:act_psdrf_typo_form"
+msgid "Typology"
+msgstr "Typologie"
+
+msgctxt "model:ir.action,name:act_surface_terriere"
+msgid "Basal area"
+msgstr "Surface terrière"
+
+msgctxt "model:ir.action,name:act_surface_terriere_cmp"
+msgid "Comparaison surfaces terrieres"
+msgstr "Comparaison de surfaces terrières"
+
+msgctxt "model:ir.action,name:act_surface_terriere_diametre"
+msgid "Basal area by diameter class"
+msgstr "Surface terrière par classe de diamètre"
+
+msgctxt "model:ir.action,name:act_surfaces_terrieres"
+msgid "Basal areas"
+msgstr "Surfaces terrières"
+
+msgctxt "model:ir.ui.menu,name:menu_ecologie_list"
+msgid "Ecology"
+msgstr "Écologie"
+
+msgctxt "model:ir.ui.menu,name:menu_ecologie_tree"
+msgid "Ecology"
+msgstr "Écologie"
+
+msgctxt "model:ir.ui.menu,name:menu_open_g"
+msgid "Basal area"
+msgstr "Surface terrière"
+
+msgctxt "model:ir.ui.menu,name:menu_open_g_cmp"
+msgid "Comparing basal areas"
+msgstr "Comparaison de surfaces terrières"
+
+msgctxt "model:ir.ui.menu,name:menu_open_g_diametre"
+msgid "Basal area by diameter class"
+msgstr "Surface terrière par classe de diamètre"
+
+msgctxt "model:ir.ui.menu,name:menu_open_gs"
+msgid "Basal areas"
+msgstr "Surfaces terrières"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf"
+msgid "Protocole"
+msgstr "Protocole"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_bark_form"
+msgid "Bark"
+msgstr "Écorce"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_bois_mort"
+msgid "Coarse"
+msgstr "Bois mort"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_bois_mort_au_sol"
+msgid "Downed dead wood"
+msgstr "Bois mort au sol"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_bois_mort_coarse"
+msgid "Diameter >= 30cm"
+msgstr "Diamètre >= 30cm"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_codes"
+msgid "Codes"
+msgstr "Codes"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_cycle_form"
+msgid "Cycles"
+msgstr "Cycles"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_dispositif_form"
+msgid "Dispositifs"
+msgstr "Dispositifs"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_essence"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_essence_taxon"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_plot_form"
+msgid "Plot"
+msgstr "Placettes"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_rapports"
+msgid "Reports"
+msgstr "Rapports"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_regeneration_form"
+msgid "Regeneration"
+msgstr "Régénération"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_rot_form"
+msgid "Rot"
+msgstr "Pourriture"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_stand_tree_form"
+msgid "Trees"
+msgstr "Arbres"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_tarif_form"
+msgid "Tarif"
+msgstr "Tarif"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_transect_form"
+msgid "Diameter < 30cm"
+msgstr "Diamètre < 30cm"
+
+msgctxt "model:ir.ui.menu,name:menu_psdrf_typo_form"
+msgid "Typology"
+msgstr "Typlogie"
+
+msgctxt "model:psdrf.bark,name:"
+msgid "Bark"
+msgstr "Écorce"
+
+msgctxt "model:psdrf.coarse,name:"
+msgid "Coarse"
+msgstr "Bois mort"
+
+msgctxt "model:psdrf.cycle,name:"
+msgid "Cycles"
+msgstr "Cycles"
+
+msgctxt "model:psdrf.cycle-party.party_backer,name:"
+msgid "Psdrf Cycle_party - Party.party (Backer)"
+msgstr "Psdrf Cycle_party - Party.party (Backer)"
+
+msgctxt "model:psdrf.cycle-party.party_operator,name:"
+msgid "Psdrf Cycle - Party.party (Operator)"
+msgstr "Psdrf Cycle - Party.party (Operator)"
+
+msgctxt "model:psdrf.dispositif,name:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "model:psdrf.dispositif-commune.commune,name:"
+msgid "Psdrf Dispositif - Commune"
+msgstr "Psdrf Dispositif - Commune"
+
+msgctxt "model:psdrf.dispositif-party.party,name:"
+msgid "Psdrf Dispositif - Party.party"
+msgstr "Psdrf Dispositif - Tiers"
+
+msgctxt "model:psdrf.dispositif-protection.area,name:"
+msgid "Psdrf Dispositif - Protection Area"
+msgstr "Psdrf Dispositif - Statuts de Protection"
+
+msgctxt "model:psdrf.ecologie,name:"
+msgid "Ecology"
+msgstr "Écologie"
+
+msgctxt "model:psdrf.essence,name:"
+msgid "Essence"
+msgstr "Essence"
+
+msgctxt "model:psdrf.essence-taxinomie.taxinomie,name:"
+msgid "Essence - Taxon"
+msgstr "Essence - Taxon"
+
+msgctxt "model:psdrf.measure,name:"
+msgid "Tree specifications"
+msgstr "Spécifications arbre"
+
+msgctxt "model:psdrf.measure_coarse,name:"
+msgid "Evolution of a dead wood"
+msgstr "Évolution du bois mort"
+
+msgctxt "model:psdrf.plot,name:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "model:psdrf.regeneration,name:"
+msgid "Regeneration"
+msgstr "Régénération"
+
+msgctxt "model:psdrf.rot,name:"
+msgid "Rot"
+msgstr "Pourriture"
+
+msgctxt "model:psdrf.stand_tree,name:"
+msgid "StandTree"
+msgstr "Arbre debout"
+
+msgctxt "model:psdrf.stand_tree-psdrf.ecologie,name:"
+msgid "Tree - Ecology"
+msgstr "Arbre - Écologie"
+
+msgctxt "model:psdrf.tarif,name:"
+msgid "Tarif"
+msgstr "Tarif"
+
+msgctxt "model:psdrf.transect,name:"
+msgid "Transect"
+msgstr "Transect"
+
+msgctxt "model:psdrf.typo,name:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "selection:psdrf.tarif,name:"
+msgid "Schaeffer lent"
+msgstr "Schaeffer lent"
+
+msgctxt "selection:psdrf.tarif,name:"
+msgid "Schaeffer rapide"
+msgstr "Schaeffer rapide"
+
+msgctxt "view:psdrf.bark:"
+msgid "Bark"
+msgstr "Écorce"
+
+msgctxt "view:psdrf.coarse:"
+msgid "Coarse"
+msgstr "Bois mort"
+
+msgctxt "view:psdrf.coarse:"
+msgid "Tree death evolution"
+msgstr "Évolution du bois mort"
+
+msgctxt "view:psdrf.cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "view:psdrf.cycle:"
+msgid "Features"
+msgstr "Caractéristiques"
+
+msgctxt "view:psdrf.cycle:"
+msgid "Financial partner"
+msgstr "Partenaires financiers"
+
+msgctxt "view:psdrf.cycle:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:psdrf.cycle:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "view:psdrf.cycle:"
+msgid "Operators"
+msgstr "Opérateurs"
+
+msgctxt "view:psdrf.cycle:"
+msgid "Reasons"
+msgstr "Raisons"
+
+msgctxt "view:psdrf.cycle:"
+msgid "Strata observation"
+msgstr "Observations strate"
+
+msgctxt "view:psdrf.dispositif:"
+msgid "Communes"
+msgstr "Communes"
+
+msgctxt "view:psdrf.dispositif:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:psdrf.dispositif:"
+msgid "Partners"
+msgstr "Partenaires"
+
+msgctxt "view:psdrf.dispositif:"
+msgid "Protection status"
+msgstr "Statuts de protection"
+
+msgctxt "view:psdrf.dispositif:"
+msgid "dispositif"
+msgstr "dispositif"
+
+msgctxt "view:psdrf.ecologie:"
+msgid "Ecology"
+msgstr "Écologie"
+
+msgctxt "view:psdrf.essence-taxinomie.taxinomie:"
+msgid "Species Taxon"
+msgstr "Essence Taxon"
+
+msgctxt "view:psdrf.essence:"
+msgid "species"
+msgstr "Essence"
+
+msgctxt "view:psdrf.measure:"
+msgid "Ecological code"
+msgstr "Code écologique"
+
+msgctxt "view:psdrf.measure:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:psdrf.measure:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "view:psdrf.measure:"
+msgid "Tree evolution"
+msgstr "Évolution arbre"
+
+msgctxt "view:psdrf.measure_coarse:"
+msgid "Death tree evolution"
+msgstr "Évolution bois mort"
+
+msgctxt "view:psdrf.measure_coarse:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:psdrf.measure_coarse:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "view:psdrf.plot:"
+msgid "Centre"
+msgstr "Centre"
+
+msgctxt "view:psdrf.plot:"
+msgid "Course"
+msgstr "Chemin"
+
+msgctxt "view:psdrf.plot:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:psdrf.plot:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:psdrf.plot:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "view:psdrf.plot:"
+msgid "Stations"
+msgstr "Stations"
+
+msgctxt "view:psdrf.regeneration:"
+msgid "Regeneration"
+msgstr "Régénération"
+
+msgctxt "view:psdrf.rot:"
+msgid "Rot"
+msgstr "Pourriture"
+
+msgctxt "view:psdrf.stand_tree-psdrf.ecologie:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "view:psdrf.stand_tree:"
+msgid "Stand tree"
+msgstr "Arbre debout"
+
+msgctxt "view:psdrf.stand_tree:"
+msgid "Tree measure"
+msgstr "Mesure arbre"
+
+msgctxt "view:psdrf.tarif:"
+msgid "Tarif"
+msgstr "Tarif"
+
+msgctxt "view:psdrf.transect:"
+msgid "Transect"
+msgstr "Transect"
+
+msgctxt "view:psdrf.typo:"
+msgid "Typo"
+msgstr "Typo"

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Regeneration">
+    <field name="cycle" />
+    <field name="plot" />
+    <field name="subplot" />
+    <field name="species" />
+    <field name="coppice" />
+    <field name="class1" />
+    <field name="class2" />
+    <field name="class3" />
+    <field name="seed_cover" />
+    <field name="browsing" />
+    <field name="observation" />
+</tree>

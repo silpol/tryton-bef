@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+    <menuitem parent="ir.menu_administration" sequence="120" name="Plots" id="menu_plots" icon="tryton-list"/>
+
+    <record model="ir.ui.view" id="placettes_regroupement_view_form">
+        <field name="model">placettes.regroupement</field>
+        <field name="type">form</field>
+        <field name="name">code_form</field>
+    </record>
+
+	<record model="ir.ui.view" id="placettes_regroupement_view_tree">
+		<field name="model">placettes.regroupement</field>
+		<field name="type">tree</field>
+        <field name="field_childs">childs</field>
+		<field name="name">code_tree</field>
+    </record>
+    <record model="ir.ui.view" id="placettes_regroupement_view_list">
+        <field name="model">placettes.regroupement</field>
+        <field name="type">tree</field>
+        <field name="priority" eval="10"/>
+        <field name="name">code_list</field>
+    </record>
+    <record model="ir.action.act_window" id="act_placettes_regroupement_tree">
+        <field name="name">Group code</field>
+        <field name="res_model">placettes.regroupement</field>
+        <field name="domain">[('parent', '=', False)]</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_placettes_regroupement_tree_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="placettes_regroupement_view_tree"/>
+        <field name="act_window" ref="act_placettes_regroupement_tree"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_placettes_regroupement_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="placettes_regroupement_view_form"/>
+        <field name="act_window" ref="act_placettes_regroupement_tree"/>
+    </record>
+
+    <menuitem parent="menu_placettes_form" sequence="1" id="menu_placettes_regroupement_tree" icon="tryton-list" action="act_placettes_regroupement_tree"/>
+
+    <record model="ir.action.act_window" id="act_placettes_regroupement_list">
+            <field name="name">Group code</field>
+            <field name="res_model">placettes.regroupement</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_placettes_regroupement_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="placettes_regroupement_view_list"/>
+            <field name="act_window" ref="act_placettes_regroupement_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_placettes_regroupement_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="placettes_regroupement_view_form"/>
+            <field name="act_window" ref="act_placettes_regroupement_list"/>
+        </record>
+    <menuitem parent="menu_placettes_regroupement_tree" sequence="1" id="menu_placettes_regroupement_list" icon="tryton-list" action="act_placettes_regroupement_list"/>
+
+
+		<record model="ir.ui.view" id="placettes_view_tree">			
+			<field name="model">placettes.placettes</field>
+			<field name="type">tree</field>
+			<field name="name">plot_tree</field>
+		</record>
+
+		<record model="ir.ui.view" id="placettes_view_form">			
+			<field name="model">placettes.placettes</field>
+			<field name="type">form</field>
+			<field name="name">plot_form</field>
+		</record>
+		
+		<record model="ir.action.act_window" id="act_placettes_form">
+			<field name="name">Plot</field>
+			<field name="res_model">placettes.placettes</field>						
+		</record>
+		
+		<record model="ir.action.act_window.view" id="act_placettes_form_view1">
+		    <field name="sequence" eval="10"/>
+		    <field name="view" ref="placettes_view_tree"/>
+		    <field name="act_window" ref="act_placettes_form"/>		
+		</record>
+
+		<record model="ir.action.act_window.view" id="act_placettes_form_view2">
+		    <field name="sequence" eval="20"/>
+		    <field name="view" ref="placettes_view_form"/>
+		    <field name="act_window" ref="act_placettes_form"/>		
+		</record>
+
+        <record model="ir.action.report" id="report_placettes_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">placettes.placettes</field>
+            <field name="report_name">placettes.placettes.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_placettes_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">placettes.placettes,-1</field>
+            <field name="action" ref="report_placettes_edit"/>
+        </record> 
+
+		<menuitem parent="ir.menu_administration" sequence="120" id="menu_placettes_form" icon="tryton-list" action="act_placettes_form"/>
+		
+	</data>
+</tryton>

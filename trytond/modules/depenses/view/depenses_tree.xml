@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Outgoings">
+    <field name="dep_dispositif" />
+	<field name="dep_annee" />
+	<field name="dep_plancomptable" />
+	<field name="dep_mois" />
+	<field name="dep_quant" />
+	<field name="dep_unit" />
+	<field name="dep_pu" />
+	<field name="dep_total" />
+	<field name="dep_nature" />					
+	<field name="dep_observation" />
+</tree>

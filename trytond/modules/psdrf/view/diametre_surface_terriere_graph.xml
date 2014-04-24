@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<graph string="Basal area by diameter class" type="vbar">
+    <x>
+        <field name="classe"/>
+    </x>
+    <y>
+        <field name="g" />
+    </y>
+</graph>

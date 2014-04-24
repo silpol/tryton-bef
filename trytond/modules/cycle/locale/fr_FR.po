@@ -1,0 +1,436 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:cycle.cycle,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cycle.cycle,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cycle.cycle,cyc_annee:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "field:cycle.cycle,cyc_comment:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "field:cycle.cycle,cyc_cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:cycle.cycle,cyc_date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:cycle.cycle,cyc_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:cycle.cycle,cyc_financeurs:"
+msgid "Funders"
+msgstr "Financeurs"
+
+msgctxt "field:cycle.cycle,cyc_operateurs:"
+msgid "Operators"
+msgstr "Opérateurs"
+
+msgctxt "field:cycle.cycle,cyc_strate:"
+msgid "Strates"
+msgstr "Strates"
+
+msgctxt "field:cycle.cycle,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cycle.cycle,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cycle.cycle,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cycle.cycle,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cycle.cycle-party.financeur,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cycle.cycle-party.financeur,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cycle.cycle-party.financeur,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:cycle.cycle-party.financeur,financeur:"
+msgid "Financeur"
+msgstr "Financeur"
+
+msgctxt "field:cycle.cycle-party.financeur,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cycle.cycle-party.financeur,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cycle.cycle-party.financeur,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cycle.cycle-party.financeur,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cycle.cycle-party.operateur,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cycle.cycle-party.operateur,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cycle.cycle-party.operateur,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:cycle.cycle-party.operateur,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cycle.cycle-party.operateur,operateur:"
+msgid "Operateur"
+msgstr "Opérateur"
+
+msgctxt "field:cycle.cycle-party.operateur,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cycle.cycle-party.operateur,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cycle.cycle-party.operateur,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cycle.strate,bmp:"
+msgid "Deadwood"
+msgstr "Bois mort"
+
+msgctxt "field:cycle.strate,code:"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "field:cycle.strate,coefficient:"
+msgid "Coefficient"
+msgstr "Coefficient"
+
+msgctxt "field:cycle.strate,comment:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "field:cycle.strate,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cycle.strate,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cycle.strate,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:cycle.strate,diamlim1:"
+msgid "DiamLim 1"
+msgstr "DiamLim 1"
+
+msgctxt "field:cycle.strate,diamlim2:"
+msgid "DiamLim 2"
+msgstr "DiamLim 2"
+
+msgctxt "field:cycle.strate,diamlim3:"
+msgid "DiamLim 3"
+msgstr "DiamLim 3"
+
+msgctxt "field:cycle.strate,diamlim:"
+msgid "DiamLim"
+msgstr "DiamLim"
+
+msgctxt "field:cycle.strate,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cycle.strate,lib_long:"
+msgid "Label of strate"
+msgstr "Libellé"
+
+msgctxt "field:cycle.strate,limpcqm:"
+msgid "Limit PCQM"
+msgstr "Limite PCQM"
+
+msgctxt "field:cycle.strate,lineaire:"
+msgid "Lineaire"
+msgstr "Linéaire"
+
+msgctxt "field:cycle.strate,name:"
+msgid "Name of strate"
+msgstr "Nom"
+
+msgctxt "field:cycle.strate,nbplacettes:"
+msgid "Plot number"
+msgstr "Placette"
+
+msgctxt "field:cycle.strate,nbssplacettes:"
+msgid "Sub Plot number"
+msgstr "Numéro de ss-placette"
+
+msgctxt "field:cycle.strate,rayon1:"
+msgid "Rayon 1"
+msgstr "Rayon 1"
+
+msgctxt "field:cycle.strate,rayon2:"
+msgid "Rayon 2"
+msgstr "Rayon 2"
+
+msgctxt "field:cycle.strate,rayon3:"
+msgid "Rayon 3"
+msgstr "Rayon 3"
+
+msgctxt "field:cycle.strate,rayonssplacettes:"
+msgid "Rayon Sub Plot"
+msgstr "Rayon ss-placette"
+
+msgctxt "field:cycle.strate,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cycle.strate,taillis:"
+msgid "Coppice"
+msgstr "Taillis"
+
+msgctxt "field:cycle.strate,tarifnumbmp:"
+msgid "Schaeffer number"
+msgstr "Numéro Schaeffer"
+
+msgctxt "field:cycle.strate,tariftypebmp:"
+msgid "Schaeffer type"
+msgstr "Type de Schaeffer"
+
+msgctxt "field:cycle.strate,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cycle.strate,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:cycle.cycle,cyc_annee:"
+msgid "Year of measure"
+msgstr "Année de le mesure"
+
+msgctxt "help:cycle.cycle,cyc_comment:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "help:cycle.cycle,cyc_cycle:"
+msgid "Cycle number"
+msgstr "Numéro du cycle"
+
+msgctxt "help:cycle.cycle,cyc_date:"
+msgid "Date of measure"
+msgstr "Date de la mesure"
+
+msgctxt "help:cycle.cycle,cyc_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:cycle.cycle,cyc_financeurs:"
+msgid "Funders cycle"
+msgstr "Financeurs du cycle"
+
+msgctxt "help:cycle.cycle,cyc_operateurs:"
+msgid "Cycle operators"
+msgstr "Opérateurs du cycle"
+
+msgctxt "help:cycle.cycle,cyc_strate:"
+msgid "Strates of cycle"
+msgstr "Strates du cycle"
+
+msgctxt "help:cycle.strate,bmp:"
+msgid "Stand Deadwood"
+msgstr "Bois mort debout"
+
+msgctxt "help:cycle.strate,code:"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "help:cycle.strate,coefficient:"
+msgid "Selected angle (%)"
+msgstr "Angle relascopique"
+
+msgctxt "help:cycle.strate,comment:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "help:cycle.strate,diamlim1:"
+msgid "Diametrer limit 1"
+msgstr "Diamètre limite 1"
+
+msgctxt "help:cycle.strate,diamlim2:"
+msgid "Diametrer limit 2"
+msgstr "Diamètre limite 2"
+
+msgctxt "help:cycle.strate,diamlim3:"
+msgid "Diametrer limit 3"
+msgstr "Diamètre limite 3"
+
+msgctxt "help:cycle.strate,diamlim:"
+msgid "Diametrer limit"
+msgstr "Diamètre limite"
+
+msgctxt "help:cycle.strate,lib_long:"
+msgid "Label of strate"
+msgstr "Libellé de la strate"
+
+msgctxt "help:cycle.strate,limpcqm:"
+msgid "Limit PCQM"
+msgstr "Limite PCQM"
+
+msgctxt "help:cycle.strate,lineaire:"
+msgid "Lineaire"
+msgstr "Linéaire"
+
+msgctxt "help:cycle.strate,name:"
+msgid "Name of strate"
+msgstr "Nom de la strate"
+
+msgctxt "help:cycle.strate,nbplacettes:"
+msgid "Plot number"
+msgstr "Nombre de placette"
+
+msgctxt "help:cycle.strate,nbssplacettes:"
+msgid "Sub Plot number"
+msgstr "Numéro de la sous-placette"
+
+msgctxt "help:cycle.strate,rayon1:"
+msgid "Rayon 1"
+msgstr "Rayon 1"
+
+msgctxt "help:cycle.strate,rayon2:"
+msgid "Rayon 2"
+msgstr "Rayon 2"
+
+msgctxt "help:cycle.strate,rayon3:"
+msgid "Rayon 3"
+msgstr "Rayon 3"
+
+msgctxt "help:cycle.strate,rayonssplacettes:"
+msgid "Rayon Sub Plot"
+msgstr "Rayon de la sous-placette"
+
+msgctxt "help:cycle.strate,taillis:"
+msgid "Method coppice"
+msgstr "Méthode de mesure du taillis"
+
+msgctxt "help:cycle.strate,tarifnumbmp:"
+msgid "Choice of rate number for stand deadwood"
+msgstr "Choix du numéro de tarif pour la mesure du bois mort debout"
+
+msgctxt "help:cycle.strate,tariftypebmp:"
+msgid "Choice of Schaeffer rate for stand deadwood"
+msgstr "Choix du tarif Schaeffer pour le bois mort debout"
+
+msgctxt "model:cycle.cycle,name:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "model:cycle.cycle-party.financeur,name:"
+msgid "Cycle - Financeur"
+msgstr "Cycle - Financeur"
+
+msgctxt "model:cycle.cycle-party.operateur,name:"
+msgid "Cycle - Operateur"
+msgstr "Cycle - Operateur"
+
+msgctxt "model:cycle.strate,name:"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "model:ir.action,name:act_cycle_form"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "model:ir.action,name:act_strate_form"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "model:ir.ui.menu,name:menu_cycle_form"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "model:ir.ui.menu,name:menu_strate_form"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "selection:cycle.strate,tariftypebmp:"
+msgid "Schaeffer intermédiaire"
+msgstr "Schaeffer intermédiaire"
+
+msgctxt "selection:cycle.strate,tariftypebmp:"
+msgid "Schaeffer lent"
+msgstr "Schaeffer lent"
+
+msgctxt "selection:cycle.strate,tariftypebmp:"
+msgid "Schaeffer rapide"
+msgstr "Schaeffer rapide"
+
+msgctxt "view:cycle.cycle:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "view:cycle.cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "view:cycle.cycle:"
+msgid "Funders"
+msgstr "Financeurs"
+
+msgctxt "view:cycle.cycle:"
+msgid "Operators"
+msgstr "Opérateurs"
+
+msgctxt "view:cycle.cycle:"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "view:cycle.strate:"
+msgid "%"
+msgstr "%"
+
+msgctxt "view:cycle.strate:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "view:cycle.strate:"
+msgid "Strate"
+msgstr "Strate"

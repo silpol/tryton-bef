@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree string="Arbre">
+    <field name="emplacement" />                 
+    <field name="code" />
+    <field name="date" />                    
+    <field name="compteur" />
+    <field name="an" />
+    <field name="diametre" />
+    <field name="plantation" />
+    <field name="situation" />
+    <field name="fosse" />
+    <field name="essence" />
+    <field name="motif" />
+    <field name="conduite" />
+    <field name="evolution" />                    
+</tree>

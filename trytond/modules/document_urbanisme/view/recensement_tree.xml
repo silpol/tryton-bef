@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<tree string="Recensement">
+    <field name="service" />  
+    <field name="attributaire" />
+    <field name="dept" />
+    <field name="commune" />
+    <field name="name" />
+    <field name="numero" />
+    <field name="categorie" />
+    <field name="quantite" />
+    <field name="servitude" />
+    <field name="active" /> 
+    <field name="sommeil" />
+    <field name="observation" />
+</tree>

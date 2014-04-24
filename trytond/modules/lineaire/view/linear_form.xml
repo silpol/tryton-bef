@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<form string="Linear">
+    <label name="lin_dispositif"/>
+	<field name="lin_dispositif"/>
+	<label name="lin_essence"/>
+	<field name="lin_essence"/>
+	<label name="lin_cycle"/>
+	<field name="lin_cycle"/>
+	<label name="lin_placette"/>
+	<field name="lin_placette"/>
+	<label name="lin_transect"/>
+	<field name="lin_transect"/>
+	<label name="lin_diam"/>
+	<field name="lin_diam"/>
+	<label name="lin_angle"/>
+	<field name="lin_angle"/>
+	<label name="lin_contact"/>
+	<field name="lin_contact"/>
+	<label name="lin_chablis"/>
+	<field name="lin_chablis"/>
+	<label name="lin_stade"/>
+	<field name="lin_stade"/>	
+    <notebook colspan="6">
+	    <page string="Observations" id="observations">					        
+	        <field name="lin_observation"/>
+	    </page>									    
+    </notebook>
+</form>

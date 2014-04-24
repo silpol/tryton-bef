@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form string="Transect" col="2">
+    <label name="cycle" />
+    <field name="cycle" />
+    <label name="plot" />
+    <field name="plot" />
+    <label name="num" />
+    <field name="num" />
+    <label name="species" />
+    <field name="species" />
+    <label name="diam" />
+    <field name="diam" />
+    <label name="angle" />
+    <field name="angle" />
+    <label name="contact" />
+    <field name="contact" />
+    <label name="windfall" />
+    <field name="windfall" />
+    <label name="bark_stage" />
+    <field name="bark_stage" />
+    <label name="rot_stage" />
+    <field name="rot_stage" />
+    <label name="observation" />
+    <field name="observation" />
+</form>

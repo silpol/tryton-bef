@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="convention">
+    <field name="date" />
+    <field name="garden" />
+    <field name="owner" />
+    <field name="abri" />
+    <field name="cloture" />
+    <field name="utilisation" />
+    <field name="entretien" />
+    <field name="observation" />    
+    <field name="active" /> 
+</tree>

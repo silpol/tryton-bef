@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Partners">                    
+    <label name="party"/>
+    <field name="party"/>
+    <label name="category"/>
+    <field name="category"/>
+</form>

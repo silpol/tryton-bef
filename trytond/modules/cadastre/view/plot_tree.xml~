@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree string="Parcelles">
+    <field name="par_serie_tarif" />
+    <field name="par_subdivision_fiscale" />
+    <field name="par_groupe" />
+    <field name="par_classe" />			        
+    <field name="par_nature_culture" />
+    <field name="par_contenance" />
+    <field name="par_revenu_cadastral" />
+    <field name="par_collecte" />
+    <field name="par_nature_exoneration" />
+    <field name="par_an_retour" />
+    <field name="par_fraction_exoneration" />
+    <field name="par_pourcentage_exoneration" />
+    <field name="par_tc" />				    
+</tree>

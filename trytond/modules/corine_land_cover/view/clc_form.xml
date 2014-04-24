@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="clc" col="2">
+    <label name="code" />
+    <field name="code" />
+    <label name="name" />
+    <field name="name" />
+    <label name="blue" />
+    <field name="blue" />
+    <label name="red" />
+    <field name="red" />
+    <label name="green" />
+    <field name="green" />
+    <label name="parent"/>
+    <field name="parent"/>
+</form>

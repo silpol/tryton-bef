@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<form string="Secteur élagage" col="2">
+    <notebook colspan="6">
+        <page string="Général" id="general">
+            <label name="equipement"/>
+            <field name="equipement"/>
+            <label name="code"/>
+            <field name="code"/>            
+            <label name="refug"/>
+            <field name="refug"/>
+            <label name="rue"/>
+            <field name="rue"/>
+            <label name="debut"/>
+            <field name="debut"/>
+            <label name="fin"/>
+            <field name="fin"/>
+            <label name="elagage"/>
+            <field name="elagage"/>
+            <field name="commune" colspan="4" view_ids="commune.commune_view_tree"/>
+        </page>        
+    </notebook>
+</form>

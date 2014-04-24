@@ -1,0 +1,12 @@
+[tryton]
+version=2.8.0
+depends:
+    company
+    company_work_time
+    ir
+    res
+    product
+xml:
+    timesheet.xml
+    work.xml
+    line.xml

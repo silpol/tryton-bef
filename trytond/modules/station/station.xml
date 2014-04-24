@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+		<record model="ir.ui.view" id="station_view_tree">			
+			<field name="model">station.station</field>
+			<field name="type">tree</field>
+			<field name="name">station_tree</field>
+		</record>
+
+		<record model="ir.ui.view" id="station_view_form">			
+			<field name="model">station.station</field>
+			<field name="type">form</field>
+			<field name="name">station_form</field>
+		</record>
+		
+		<record model="ir.action.act_window" id="act_station_form">
+			<field name="name">Station</field>
+			<field name="res_model">station.station</field>						
+		</record>
+		
+		<record model="ir.action.act_window.view" id="act_station_form_view1">
+		    <field name="sequence" eval="10"/>
+		    <field name="view" ref="station_view_tree"/>
+		    <field name="act_window" ref="act_station_form"/>		
+		</record>
+
+		<record model="ir.action.act_window.view" id="act_station_form_view2">
+		    <field name="sequence" eval="20"/>
+		    <field name="view" ref="station_view_form"/>
+		    <field name="act_window" ref="act_station_form"/>		
+		</record>
+
+		<menuitem parent="ir.menu_administration" sequence="210" id="menu_station_form" icon="tryton-list" action="act_station_form"/>
+		
+	</data>
+</tryton>

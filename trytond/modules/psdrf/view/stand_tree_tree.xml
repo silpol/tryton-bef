@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Stand tree">
+    <field name="dispositif" />
+    <field name="plot" />
+    <field name="num" />
+    <field name="essence" />
+    <field name="azimut" />
+    <field name="distance" />
+    <field name="measure" />
+</tree>

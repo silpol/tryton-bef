@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Tree evolution">
+    <field name="cycle" />
+    <field name="tree" />
+    <field name="dbh1" />
+    <field name="dbh2" />
+    <field name="height" />
+    <field name="coppice" />
+    <field name="typo" />
+    <field name="bark_stage" />
+    <field name="rot_stage" />
+    <field name="observation" />
+    <field name="eco_engref" />
+</tree>

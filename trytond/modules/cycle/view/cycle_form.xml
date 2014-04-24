@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form string="Cycle" col="6">
+    <label name="cyc_dispositif"/>
+	<field name="cyc_dispositif" colspan="5"/>
+	<label name="cyc_cycle"/>
+	<field name="cyc_cycle"/>
+	<label name="cyc_date"/>
+	<field name="cyc_date"/>
+	<label name="cyc_annee"/>
+	<field name="cyc_annee"/>
+	<notebook colspan="6">
+        <page string="Strate" id="strate">					       
+	        <field name="cyc_strate"/>
+	    </page>
+	    <page string="Funders" id="financeurs">					       
+	        <field name="cyc_financeurs"/>
+	    </page>
+	    <page string="Operators" id="operateurs">					        
+	        <field name="cyc_operateurs"/>
+	    </page>
+	    <page string="Comment" id="commentaires">					        
+	        <field name="cyc_comment"/>                         
+        </page>
+    </notebook>
+</form>

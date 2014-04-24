@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<form string="Coppice">
+    <label name="tai_dispositif"/>
+	<field name="tai_dispositif"/>
+    <label name="tai_essence"/>
+	<field name="tai_essence"/>
+	<label name="tai_cycle"/>
+	<field name="tai_cycle"/>
+	<label name="tai_placette"/>
+	<field name="tai_placette"/>
+	<label name="tai_quart"/>
+	<field name="tai_quart"/>
+	<label name="tai_azimut"/>
+	<field name="tai_azimut"/>
+	<label name="tai_distance"/>
+	<field name="tai_distance"/>
+	<label name="tai_nombre"/>
+	<field name="tai_nombre"/>
+	<label name="tai_diam_moy"/>
+	<field name="tai_diam_moy"/>
+	<label name="tai_haut_moy"/>
+	<field name="tai_haut_moy"/>
+    <notebook>
+	    <page string="Observations" id="observations">
+	        <field name="tai_observation" colspan="5"/>
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Pascal Obstétar
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+-->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="act_sale_opportunity_view_form">
+            <field name="model">sale.opportunity</field>
+            <field name="inherit" ref="sale_opportunity.opportunity_view_form" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+                    <xpath
+                        expr="/form/notebook/page[@id=&quot;opportunity&quot;]/separator[@name=&quot;comment&quot;]" position="replace">
+                    </xpath>                
+                    <xpath
+                        expr="/form/notebook/page[@id=&quot;opportunity&quot;]/field[@name=&quot;comment&quot;]" position="replace">
+                        <notebook>
+                            <page string="Comment" id="comment">
+                                <field name="comment"/>
+                            </page>
+                            <page string="Contacts" id="contacts">
+                                <field name="contacts" view_ids="bef_sale_opportunity.bef_sale_opportunity_view_form"/>
+                            </page>
+                        </notebook>
+                    </xpath>                                       
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="act_sale_opportunity_view_tree">
+            <field name="model">sale.opportunity</field>
+            <field name="inherit" ref="sale_opportunity.opportunity_view_tree" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+                    <xpath
+                        expr="/tree">
+                    </xpath>
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="act_contact_mechanism_view_tree">
+            <field name="model">party.contact_mechanism</field>
+            <field name="inherit" ref="party.contact_mechanism_view_tree_sequence" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+                    <xpath
+                        expr="/tree/field[@name=&quot;value&quot;]">
+                            <field name="comment"/>
+                    </xpath>
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="bef_sale_opportunity_view_form">
+            <field name="model">bef_sale_opportunity.contact</field>
+            <field name="type">form</field>
+            <field name="name">bef_sale_opportunity_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="bef_sale_opportunity_view_tree">
+            <field name="model">bef_sale_opportunity.contact</field>
+            <field name="type">tree</field>
+            <field name="name">bef_sale_opportunity_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_bef_sale_opportunity_form">
+            <field name="name">Comments</field>
+            <field name="res_model">bef_sale_opportunity.contact</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_bef_sale_opportunity_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="bef_sale_opportunity_view_tree"/>
+            <field name="act_window" ref="act_bef_sale_opportunity_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_bef_sale_opportunity_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="bef_sale_opportunity_view_form"/>
+            <field name="act_window" ref="act_bef_sale_opportunity_form"/>
+        </record>
+
+        <menuitem parent="sale.menu_sale" action="act_bef_sale_opportunity_form" id="menu_bef_sale_opportunity_form" sequence="6"/>
+    </data>
+</tryton>
+

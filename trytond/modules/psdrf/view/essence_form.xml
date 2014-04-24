@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="species" col="2">
+    <label name="code" />
+    <field name="code" />
+    <label name="libelle" />
+    <field name="libelle" />
+    <label name="taxons" />
+    <field name="taxons" colspan="4" view_ids="psdrf.psdrf_essence_view_tree,psdrf.psdrf_essence_taxon_view_form" />
+</form>

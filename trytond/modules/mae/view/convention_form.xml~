@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="convention">
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="date" />            
+            <field name="date" />
+            <label name="garden" />            
+            <field name="garden" />
+            <label name="owner" />            
+            <field name="owner" />
+            <label name="active" />            
+            <field name="active" />                         
+            <field name="abri" colspan="2"/>                       
+            <field name="cloture" colspan="2"/>                       
+            <field name="utilisation" colspan="2"/>                        
+            <field name="entretien" colspan="2"/>
+            <label name="observation" />            
+            <field name="observation" colspan="6"/>                                                                        
+        </page>                     
+    </notebook>                   
+</form>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Prescription">
+    <field name="idDocumentUrba" />  
+    <field name="libelle" />
+    <field name="etiquette" />
+    <field name="type" />
+    <field name="texteReglement" />
+    <field name="urlReglement" />
+    <field name="dateValidation" /> 
+    <field name="active" /> 
+</tree>

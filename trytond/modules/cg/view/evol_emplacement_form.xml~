@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<form string="Évolution des emplacements" col="2">
+    <notebook colspan="6">
+        <page string="Général" id="general">                           
+            <label name="date"/>
+            <field name="date"/>
+            <label name="repere"/>
+            <field name="repere"/>
+            <label name="nature"/>
+            <field name="nature" widget="selection"/>                            
+            <label name="diametre"/>
+            <field name="diametre"  widget="selection"/>
+            <label name="diam"/>
+            <field name="diam"/>
+            <label name="cause"/>
+            <field name="cause" widget="selection"/>
+            <label name="anindispo"/>
+            <field name="anindispo"/>
+            <newline/>
+            <label name="observation"/>
+            <field name="observation" colspan="4"/>                        
+        </page>
+    </notebook>
+</form>

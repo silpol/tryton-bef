@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Species">
+    <field name="code" />
+    <field name="taxon" />
+    <field name="name" />
+    <field name="lib_long" />
+</tree>

@@ -1,0 +1,120 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:tarif.tarif,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:tarif.tarif,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:tarif.tarif,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:tarif.tarif,name:"
+msgid "Schaeffer type"
+msgstr "Type de Schaeffer"
+
+msgctxt "field:tarif.tarif,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:tarif.tarif,tar_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:tarif.tarif,tar_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:tarif.tarif,tar_ifn:"
+msgid "IFN Schaeffer type"
+msgstr "Type de Schaeffer IFN"
+
+msgctxt "field:tarif.tarif,tar_ifn_numero:"
+msgid "IFN Schaeffer number"
+msgstr "Numéro de Schaeffer IFN"
+
+msgctxt "field:tarif.tarif,tar_numero:"
+msgid "Schaeffer number"
+msgstr "Numéro Schaeffer"
+
+msgctxt "field:tarif.tarif,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:tarif.tarif,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:tarif.tarif,name:"
+msgid "Choice of Schaeffer rate"
+msgstr "Choix du numéro de tarif Schaeffer"
+
+msgctxt "help:tarif.tarif,tar_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:tarif.tarif,tar_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "help:tarif.tarif,tar_ifn:"
+msgid "Choice of IFN Schaeffer type"
+msgstr "Choix du type de Schaeffer IFN"
+
+msgctxt "help:tarif.tarif,tar_ifn_numero:"
+msgid "Choice of IFN rate number"
+msgstr "Choix du numéro de tarif Schaeffer IFN"
+
+msgctxt "help:tarif.tarif,tar_numero:"
+msgid "Choice of rate number"
+msgstr "Choix du numéro de tarif"
+
+msgctxt "model:ir.action,name:act_tarif_form"
+msgid "Tarif"
+msgstr "Tarif"
+
+msgctxt "model:ir.ui.menu,name:menu_tarif_form"
+msgid "Tarif"
+msgstr "Tarif"
+
+msgctxt "model:tarif.tarif,name:"
+msgid "Rate"
+msgstr "Tarif"
+
+msgctxt "selection:tarif.tarif,name:"
+msgid "Schaeffer intermédiaire"
+msgstr "Schaeffer intermédiaire"
+
+msgctxt "selection:tarif.tarif,name:"
+msgid "Schaeffer lent"
+msgstr "Schaeffer lent"
+
+msgctxt "selection:tarif.tarif,name:"
+msgid "Schaeffer rapide"
+msgstr "Schaeffer rapide"
+
+msgctxt "selection:tarif.tarif,tar_ifn:"
+msgid "Schaeffer intermédiaire"
+msgstr "Schaeffer intermédiaire"
+
+msgctxt "selection:tarif.tarif,tar_ifn:"
+msgid "Schaeffer lent"
+msgstr "Schaeffer lent"
+
+msgctxt "selection:tarif.tarif,tar_ifn:"
+msgid "Schaeffer rapide"
+msgstr "Schaeffer rapide"

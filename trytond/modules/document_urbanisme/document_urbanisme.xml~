@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+   
+        <record model="ir.ui.icon" id="urba_urba">
+            <field name="name">tryton-urba</field>
+            <field name="path">icons/tryton-urba.svg</field>
+        </record>
+
+        <record model="ir.ui.icon" id="urba_tab">
+            <field name="name">tryton-tab</field>
+            <field name="path">icons/tryton-tab.svg</field>
+        </record>           
+
+        <menuitem name="Urbanisme" id="menu_urba" icon="tryton-urba"/>
+        <menuitem name="Défense" id="menu_def" icon="tryton-tab"/>
+        <menuitem parent="menu_urba" sequence="0" name="Configuration" id="menu_urba_configuration" icon="tryton-preferences"/>                  
+        
+        <record model="ir.ui.view" id="urba_secteurcc_view_tree">
+            <field name="model">urba.secteurcc</field>
+            <field name="type">tree</field>
+            <field name="name">secteurcc_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="urba_secteurcc_view_form">
+            <field name="model">urba.secteurcc</field>
+            <field name="type">form</field>
+            <field name="name">secteurcc_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_urba_secteurcc_form">
+            <field name="name">Secteur Carte Communale</field>
+            <field name="res_model">urba.secteurcc</field></record>
+
+        <record model="ir.action.act_window.view" id="act_urba_secteurcc_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_secteurcc_view_tree"/>
+            <field name="act_window" ref="act_urba_secteurcc_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_urba_secteurcc_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_secteurcc_view_form"/>
+            <field name="act_window" ref="act_urba_secteurcc_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_urba_secteurcc_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">urba.secteurcc</field>
+            <field name="report_name">urba.secteurcc.qgis</field>
+            <field name="report">qgis/secteurcc.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_urba_secteurcc_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">urba.secteurcc,-1</field>
+            <field name="action" ref="report_urba_secteurcc_edit"/>
+        </record>
+
+        <record model="ir.action.report" id="report_urba_secteurcc">
+            <field name="name">Secteur Carte Communale</field>
+            <field name="model">urba.secteurcc</field>
+            <field name="report_name">urba.secteurcc</field>
+            <field name="report">document_urbanisme/secteurcc.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_urba_secteurcc_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">urba.secteurcc,-1</field>
+            <field name="action" ref="report_urba_secteurcc"/>
+        </record> 
+
+        <menuitem parent="menu_urba" id="menu_urba_secteurcc_form" icon="tryton-urba" action="act_urba_secteurcc_form"/>           
+	
+        <record model="ir.ui.view" id="urba_code_view_tree">
+            <field name="model">urba.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="urba_code_view_form">
+            <field name="model">urba.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_urba_code_form">
+            <field name="name">Code</field>
+            <field name="res_model">urba.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_code_view_tree"/>
+            <field name="act_window" ref="act_urba_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_code_view_form"/>
+            <field name="act_window" ref="act_urba_code_form"/>
+        </record>
+        
+        <menuitem parent="menu_urba_configuration" id="menu_urba_code_form" icon="tryton-list" action="act_urba_code_form"/>
+
+        <record model="ir.ui.view" id="urba_epci_view_tree">
+            <field name="model">urba.epci</field>
+            <field name="type">tree</field>
+            <field name="name">epci_tree</field>
+        </record>
+        <record model="ir.ui.view" id="urba_epci_view_form">
+            <field name="model">urba.epci</field>
+            <field name="type">form</field>
+            <field name="name">epci_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_urba_epci_form">
+            <field name="name">EPCI</field>
+            <field name="res_model">urba.epci</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_epci_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_epci_view_tree"/>
+            <field name="act_window" ref="act_urba_epci_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_epci_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_epci_view_form"/>
+            <field name="act_window" ref="act_urba_epci_form"/>
+        </record>
+        
+        <menuitem parent="menu_urba_configuration" id="menu_urba_epci_form" icon="tryton-list" action="act_urba_epci_form"/>
+
+        <record model="ir.ui.view" id="urba_document_view_tree">
+            <field name="model">urba.documenturba</field>
+            <field name="type">tree</field>
+            <field name="name">document_tree</field>
+        </record>
+        <record model="ir.ui.view" id="urba_document_view_form">
+            <field name="model">urba.documenturba</field>
+            <field name="type">form</field>
+            <field name="name">document_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_urba_document_form">
+            <field name="name">Document Urbanisme</field>
+            <field name="res_model">urba.documenturba</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_document_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_document_view_tree"/>
+            <field name="act_window" ref="act_urba_document_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_document_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_document_view_form"/>
+            <field name="act_window" ref="act_urba_document_form"/>
+        </record>
+        
+        <menuitem parent="menu_urba" id="menu_urba_document_form" icon="tryton-urba" action="act_urba_document_form"/>
+
+        <record model="ir.ui.view" id="urba_information_view_tree">
+            <field name="model">urba.information</field>
+            <field name="type">tree</field>
+            <field name="name">information_tree</field>
+        </record>
+        <record model="ir.ui.view" id="urba_information_view_form">
+            <field name="model">urba.information</field>
+            <field name="type">form</field>
+            <field name="name">information_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_urba_information_form">
+            <field name="name">Information</field>
+            <field name="res_model">urba.information</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_information_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_information_view_tree"/>
+            <field name="act_window" ref="act_urba_information_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_information_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_information_view_form"/>
+            <field name="act_window" ref="act_urba_information_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_information_edit">
+            <field name="name">Open Information in QGis...</field>
+            <field name="model">urba.information</field>
+            <field name="report_name">information.qgis</field>
+            <field name="report">qgis/information.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_information_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">urba.information,-1</field>
+            <field name="action" ref="report_information_edit"/>
+        </record>
+        
+        <menuitem parent="menu_urba" id="menu_urba_information_form" icon="tryton-urba" action="act_urba_information_form"/>
+
+        <record model="ir.ui.view" id="urba_zoneurba_view_tree">
+            <field name="model">urba.zoneurba</field>
+            <field name="type">tree</field>
+            <field name="name">zoneurba_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="urba_zoneurba_view_form">
+            <field name="model">urba.zoneurba</field>
+            <field name="type">form</field>
+            <field name="name">zoneurba_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_urba_zoneurba_form">
+            <field name="name">Zone Urbaine</field>
+            <field name="res_model">urba.zoneurba</field></record>
+
+        <record model="ir.action.act_window.view" id="act_urba_zoneurba_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_zoneurba_view_tree"/>
+            <field name="act_window" ref="act_urba_zoneurba_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_urba_zoneurba_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_zoneurba_view_form"/>
+            <field name="act_window" ref="act_urba_zoneurba_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_urba_zoneurba_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">urba.zoneurba</field>
+            <field name="report_name">urba.zoneurba.qgis</field>
+            <field name="report">qgis/zoneurba.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_urba_zoneurba_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">urba.zoneurba,-1</field>
+            <field name="action" ref="report_urba_zoneurba_edit"/>
+        </record>
+
+        <record model="ir.action.report" id="report_urba_zoneurba">
+            <field name="name">Zone Urbaine</field>
+            <field name="model">urba.zoneurba</field>
+            <field name="report_name">urba.zoneurba</field>
+            <field name="report">document_urbanisme/zoneurba.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_urba_zoneurba_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">urba.zoneurba,-1</field>
+            <field name="action" ref="report_urba_zoneurba"/>
+        </record> 
+
+        <menuitem parent="menu_urba" id="menu_urba_zoneurba_form" icon="tryton-urba" action="act_urba_zoneurba_form"/>
+
+        <record model="ir.ui.view" id="urba_prescription_view_tree">
+            <field name="model">urba.prescription</field>
+            <field name="type">tree</field>
+            <field name="name">prescription_tree</field>
+        </record>
+        <record model="ir.ui.view" id="urba_prescription_view_form">
+            <field name="model">urba.prescription</field>
+            <field name="type">form</field>
+            <field name="name">prescription_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_urba_prescription_form">
+            <field name="name">Prescription</field>
+            <field name="res_model">urba.prescription</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_prescription_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_prescription_view_tree"/>
+            <field name="act_window" ref="act_urba_prescription_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_urba_prescription_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_prescription_view_form"/>
+            <field name="act_window" ref="act_urba_prescription_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_prescription_edit">
+            <field name="name">Open Prescription in QGis...</field>
+            <field name="model">urba.prescription</field>
+            <field name="report_name">prescription.qgis</field>
+            <field name="report">qgis/prescription.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_prescription_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">urba.prescription,-1</field>
+            <field name="action" ref="report_prescription_edit"/>
+        </record>
+
+        <record model="ir.action.report" id="report_prescriptions_edit">
+            <field name="name">Open Prescription in QGis...</field>
+            <field name="model">urba.prescription</field>
+            <field name="report_name">urba.prescription.qgis</field>
+            <field name="report">qgis/prescriptions.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_prescriptions_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">urba.prescription,-1</field>
+            <field name="action" ref="report_prescriptions_edit"/>
+        </record>
+        
+        <menuitem parent="menu_urba" id="menu_urba_prescription_form" icon="tryton-urba" action="act_urba_prescription_form"/>
+
+        <record model="ir.ui.view" id="urba_recensement_view_tree">
+            <field name="model">urba.recensement</field>
+            <field name="type">tree</field>
+            <field name="name">recensement_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="urba_recensement_view_form">
+            <field name="model">urba.recensement</field>
+            <field name="type">form</field>
+            <field name="name">recensement_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_urba_recensement_form">
+            <field name="name">Recensement</field>
+            <field name="res_model">urba.recensement</field></record>
+
+        <record model="ir.action.act_window.view" id="act_urba_recensement_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="urba_recensement_view_tree"/>
+            <field name="act_window" ref="act_urba_recensement_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_urba_recensement_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="urba_recensement_view_form"/>
+            <field name="act_window" ref="act_urba_recensement_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_urba_recensement">
+            <field name="name">Recensement</field>
+            <field name="model">urba.recensement</field>
+            <field name="report_name">urba.recensement</field>
+            <field name="report">document_urbanisme/recensement.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_urba_recensement_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">urba.recensement,-1</field>
+            <field name="action" ref="report_urba_recensement"/>
+        </record>     
+
+        <menuitem parent="menu_def" id="menu_urba_recensement_form" icon="tryton-tab" action="act_urba_recensement_form"/>
+   
+    </data>
+</tryton>

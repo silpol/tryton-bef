@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Préconisation des arbres">
+    <field name="equipement"/>                      
+    <field name="ug"/>
+    <field name="rue"/>
+    <field name="debut"/>
+    <field name="fin"/>
+    <field name="conduite"/>
+    <field name="essence"/>
+    <field name="quantite"/>
+</tree>

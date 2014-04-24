@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<form string="Information">
+    <notebook>
+        <page string="General" id="general" col="4">
+            <label name="idDocumentUrba" />            
+            <field name="idDocumentUrba" colspan="3"  widget="selection"/>
+            <label name="libelle" />            
+            <field name="libelle" />
+            <label name="etiquette" />            
+            <field name="etiquette" />
+            <label name="typeI" />            
+            <field name="typeI" colspan="3"  widget="selection"/>
+            <label name="typeP" />            
+            <field name="typeP" colspan="3"  widget="selection"/>
+            <label name="referenceTexte" />            
+            <field name="referenceTexte" />                                     
+            <label name="urlTexte" />            
+            <field name="urlTexte" widget="url"/>            
+            <label name="active" />            
+            <field name="active" />
+        </page>
+        <page string="Map" col="1" id="map">                        
+            <field name="situation_map" widget="image" img_width="1280" img_height="960" />
+            <button string="Generate" name="situation_map_gen" icon="tryton-executable" />
+        </page>                           
+        <page string="Polygones" id="misc_obj_poly">            
+            <field name="misc_obj_poly" />
+        </page>
+        <page string="Lines" id="misc_obj_line">
+            <field name="misc_obj_line" />
+        </page>
+        <page string="Points" id="misc_obj_point">
+            <field name="misc_obj_point" />
+        </page>                                      
+    </notebook>                   
+</form>

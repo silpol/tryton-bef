@@ -1,0 +1,1517 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+    <record model="ir.ui.icon" id="gri_icon">
+        <field name="name">tryton-gri</field>
+        <field name="path">icons/tryton-gri.svg</field>
+    </record>
+    
+    <record model="ir.ui.icon" id="ifn_codes">
+        <field name="name">tryton-codes</field>
+        <field name="path">icons/tryton-codes.svg</field>
+    </record>
+    
+    <!-- MENU DATA -->
+        
+    <menuitem name="Global Reporting Initiative (GRI)" id="menu_gri"/>
+    <menuitem parent="menu_gri" name="EC - Economic" id="menu_ec"/>
+    <menuitem parent="menu_ec" name="Economic performance" id="menu_ecep"/>
+    <menuitem parent="menu_ec" name="Market presence" id="menu_ecmp"/>
+    <menuitem parent="menu_ec" name="Indirect Economic Impacts" id="menu_eciei"/>
+    <menuitem parent="menu_ec" name="Economic performance" id="menu_ecpe"/>
+    
+    <menuitem parent="menu_gri" name="EN - Environmental" id="menu_en"/>
+    <menuitem parent="menu_en" name="Materials" id="menu_enma"/>
+    <menuitem parent="menu_en" name="Energy" id="menu_enen"/>
+    <menuitem parent="menu_en" name="Water" id="menu_enwa"/>
+    <menuitem parent="menu_en" name="Biodiversity" id="menu_enbi"/>
+    <menuitem parent="menu_en" name="Emissions, Effluents, and Waste" id="menu_eneew"/>
+    <menuitem parent="menu_en" name="Products and Services" id="menu_enps"/>
+    <menuitem parent="menu_en" name="Compliance" id="menu_enco"/>
+    <menuitem parent="menu_en" name="Transport" id="menu_entr"/>
+    <menuitem parent="menu_en" name="Overall" id="menu_enov"/>
+    <menuitem parent="menu_en" name="Materials" id="menu_enma"/>
+    
+    <menuitem parent="menu_gri" name="LA - Labor Practices and Decent Work" id="menu_la"/>
+    <menuitem parent="menu_la" name="Employment" id="menu_laem"/>
+    <menuitem parent="menu_laem" sequence="1" name="LA1 - Total workforce by employment type, employment contract, and region" id="menu_la1"/>
+    <menuitem parent="menu_laem" sequence="2" name="LA2 - Total number and rate of employee turnover by age group, gender, and region" id="menu_la2"/>
+    <menuitem parent="menu_laem" sequence="3" name="LA3 - Benefits provided to full-time employees that are not provided to temporary or part-time employees, by major operations" id="menu_la3"/>           
+    <menuitem parent="menu_la" name="Labor/Management relations" id="menu_lalmr"/>
+    <menuitem parent="menu_lalmr" sequence="4" name="LA4 - Percentage of employees covered by collective bargaining agreements" id="menu_la4"/>
+    <menuitem parent="menu_lalmr" sequence="5" name="LA5 - Minimum notice period(s) regarding significant operational changes, including whether it is specified in     collective agreements" id="menu_la5"/>
+    <menuitem parent="menu_la" name="Occupational health and safety" id="menu_laohs"/>
+    <menuitem parent="menu_laohs" sequence="6" name="LA6 - Percentage of total workforce represented in formal joint management-worker health and safety committees that help monitor and advise on occupational health and safety programs" id="menu_la6"/>
+    <menuitem parent="menu_laohs" sequence="7" name="LA7 - Rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities by region" id="menu_la7"/>
+    <menuitem parent="menu_laohs" sequence="8" name="LA8 - Education, training, counseling, prevention, and risk-control programs in place to assist workforce members, their families, or community members regarding serious diseases" id="menu_la8"/>
+    <menuitem parent="menu_laohs" sequence="9" name="LA9 - Health and safety topics covered in formal agreements with trade unions.Health and safety topics covered in formal agreements with trade unions" id="menu_la9"/>
+    <menuitem parent="menu_la" name="Training and education" id="menu_late"/>
+    <menuitem parent="menu_late" sequence="10" name="LA10 - Average hours of training per year per employee by employee category" id="menu_la10"/>
+    <menuitem parent="menu_late" sequence="11" name="LA11 - Programs for skills management and lifelong learning that support the continued employability of employees and assist them in managing career endings" id="menu_la11"/>
+    <menuitem parent="menu_late" sequence="12" name="LA12 - Percentage of employees receiving regular performance and career development reviews" id="menu_la12"/>
+    <menuitem parent="menu_la" name="Diversity and equal opportunity" id="menu_ladeo"/>
+    <menuitem parent="menu_ladeo" sequence="13" name="LA13 - Composition of governance bodies and breakdown of employees per category according to gender, age group, minority group membership, and other indicators of diversity" id="menu_la13"/>
+    <menuitem parent="menu_ladeo" sequence="14" name="LA14 - Ratio of basic salary of men to women by employee category" id="menu_la14"/>
+    
+    
+<!-- EMPLOYEE DATA -->
+
+    <menuitem parent="party.menu_configuration" id="menu_gri_codes" name="Codes" icon="tryton-codes"/>
+    
+    <record model="ir.ui.view" id="gri_typo_contracts_view_tree">
+        <field name="model">gri.typo_contracts</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="typo_contracts">                
+                <field name="code" />
+                <field name="name" />
+                <field name="lib_long" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="gri_typo_contracts_view_form">
+        <field name="model">gri.typo_contracts</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="typo_contracts">                   
+                <label name="code"/>
+                <field name="code"/>
+                <label name="name"/>
+                <field name="name"/>
+                <label name="lib_long"/>
+                <field name="lib_long" colspan="4"/>                   
+            </form>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.action.act_window" id="act_gri_typo_contracts_form">
+        <field name="name">Contracts type</field>
+        <field name="res_model">gri.typo_contracts</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_gri_typo_contracts_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="gri_typo_contracts_view_tree"/>
+        <field name="act_window" ref="act_gri_typo_contracts_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_gri_typo_contracts_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="gri_typo_contracts_view_form"/>
+        <field name="act_window" ref="act_gri_typo_contracts_form"/>
+    </record>
+    
+    <menuitem parent="menu_gri_codes" id="menu_gri_typo_contracts_form" icon="tryton-list" action="act_gri_typo_contracts_form"/>
+    
+    <record model="ir.ui.view" id="gri_typo_collective_view_tree">
+        <field name="model">gri.typo_collective</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="typo_collective">                
+                <field name="code" />
+                <field name="name" />
+                <field name="lib_long" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="gri_typo_collective_view_form">
+        <field name="model">gri.typo_collective</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="typo_collective">                   
+                <label name="code"/>
+                <field name="code"/>
+                <label name="name"/>
+                <field name="name"/>
+                <label name="lib_long"/>
+                <field name="lib_long" colspan="4"/>                   
+            </form>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.action.act_window" id="act_gri_typo_collective_form">
+        <field name="name">Collective bargaining agreements</field>
+        <field name="res_model">gri.typo_collective</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_gri_typo_collective_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="gri_typo_collective_view_tree"/>
+        <field name="act_window" ref="act_gri_typo_collective_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_gri_typo_collective_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="gri_typo_collective_view_form"/>
+        <field name="act_window" ref="act_gri_typo_collective_form"/>
+    </record>
+    
+    <menuitem parent="menu_gri_codes" id="menu_gri_typo_collective_form" icon="tryton-list" action="act_gri_typo_collective_form"/>        
+        
+    <record model="ir.ui.view" id="gri_typo_employee_view_tree">
+		<field name="model">gri.typo_employee</field>
+		<field name="type">tree</field>
+        <field name="field_childs">childs</field>
+		<field name="arch" type="xml">
+            <![CDATA[
+            <tree string="typo_employee">
+                <field name="code" />
+                <field name="name" /> 
+                <field name="lib_long" />            
+                <field name="parent" tree_invisible="1"/>
+                <field name="childs" tree_invisible="1"/>
+            </tree>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="gri_typo_employee_view_list">
+        <field name="model">gri.typo_employee</field>
+        <field name="type">tree</field>
+        <field name="priority" eval="10"/>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="typo_employee">
+                <field name="rec_name" expand="1"/>
+            </tree>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="gri_typo_employee_view_form">
+        <field name="model">gri.typo_employee</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="typo_employee">                   
+                <label name="code"/>
+                <field name="code"/>
+                <label name="name"/>
+                <field name="name"/>                
+                <label name="active"/>
+                <field name="active"/>
+                <label name="parent"/>
+                <field name="parent"/>
+                <label name="lib_long"/>
+                <field name="lib_long" colspan="4"/>                 
+            </form>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.action.act_window" id="act_typo_employee_tree">
+        <field name="name">Employee type</field>
+        <field name="res_model">gri.typo_employee</field>
+        <field name="domain">[('parent', '=', False)]</field>
+    </record>    
+    <record model="ir.action.act_window.view" id="act_typo_employee_tree_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="gri_typo_employee_view_tree"/>
+        <field name="act_window" ref="act_typo_employee_tree"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_typo_employee_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="gri_typo_employee_view_form"/>
+        <field name="act_window" ref="act_typo_employee_tree"/>
+    </record>
+
+    <menuitem parent="menu_gri_codes" sequence="1" id="menu_typo_employee_tree" icon="tryton-list" action="act_typo_employee_tree"/>
+
+    <record model="ir.action.act_window" id="act_typo_employee_list">
+        <field name="name">Employee type</field>
+        <field name="res_model">gri.typo_employee</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_typo_employee_list_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="gri_typo_employee_view_list"/>
+        <field name="act_window" ref="act_typo_employee_list"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_typo_employee_list_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="gri_typo_employee_view_form"/>
+        <field name="act_window" ref="act_typo_employee_list"/>
+    </record>
+
+    <menuitem parent="menu_typo_employee_tree" sequence="1" id="menu_typo_employee_list" icon="tryton-list" action="act_typo_employee_list"/>
+    
+<!-- PROGRAM -->    
+    
+    <record model="ir.ui.view" id="gri_typo_program_view_tree">
+		<field name="model">gri.typo_program</field>
+		<field name="type">tree</field>
+        <field name="field_childs">childs</field>
+		<field name="arch" type="xml">
+            <![CDATA[
+            <tree string="typo_program">
+                <field name="code" />
+                <field name="name" /> 
+                <field name="lib_long" />            
+                <field name="parent" tree_invisible="1"/>
+                <field name="childs" tree_invisible="1"/>
+            </tree>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="gri_typo_program_view_list">
+        <field name="model">gri.typo_program</field>
+        <field name="type">tree</field>
+        <field name="priority" eval="10"/>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="typo_program">
+                <field name="rec_name" expand="1"/>
+            </tree>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="gri_typo_program_view_form">
+        <field name="model">gri.typo_program</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="typo_program">                   
+                <label name="code"/>
+                <field name="code"/>
+                <label name="name"/>
+                <field name="name"/>                
+                <label name="active"/>
+                <field name="active"/>
+                <label name="parent"/>
+                <field name="parent"/>
+                <label name="lib_long"/>
+                <field name="lib_long" colspan="4"/>                 
+            </form>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.action.act_window" id="act_typo_program_tree">
+        <field name="name">Program type</field>
+        <field name="res_model">gri.typo_program</field>
+        <field name="domain">[('parent', '=', False)]</field>
+    </record>    
+    <record model="ir.action.act_window.view" id="act_typo_program_tree_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="gri_typo_program_view_tree"/>
+        <field name="act_window" ref="act_typo_program_tree"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_typo_program_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="gri_typo_program_view_form"/>
+        <field name="act_window" ref="act_typo_program_tree"/>
+    </record>
+
+    <menuitem parent="menu_gri_codes" sequence="1" id="menu_typo_program_tree" icon="tryton-list" action="act_typo_program_tree"/>
+
+    <record model="ir.action.act_window" id="act_typo_program_list">
+        <field name="name">Program type</field>
+        <field name="res_model">gri.typo_program</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_typo_program_list_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="gri_typo_program_view_list"/>
+        <field name="act_window" ref="act_typo_program_list"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_typo_program_list_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="gri_typo_program_view_form"/>
+        <field name="act_window" ref="act_typo_program_list"/>
+    </record>
+
+    <menuitem parent="menu_typo_program_tree" sequence="1" id="menu_typo_program_list" icon="tryton-list" action="act_typo_program_list"/>
+
+    <record model="ir.ui.view" id="company_evol_program_rel_view_tree">
+        <field name="model">company.company-gri.evol_program</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="Program">                    
+                <field name="company"/>
+                <field name="evol_program" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="company_evol_program_rel_view_form">
+        <field name="model">company.company-gri.evol_program</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Program">
+                <label name="company"/>
+                <field name="company"/>
+                <label name="evol_program"/>
+                <field name="evol_program"/>
+            </form>
+            ]]>
+        </field>
+    </record>
+    
+    <record model="ir.action.act_window" id="act_company_evol_program_rel_form">
+        <field name="name">Program</field>
+        <field name="res_model">company.company-gri.evol_program</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_company_evol_program_rel_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="company_evol_program_rel_view_tree"/>
+        <field name="act_window" ref="act_company_evol_program_rel_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_company_evol_program_rel_form_view2">
+      <field name="sequence" eval="20"/>
+      <field name="view" ref="company_evol_program_rel_view_form"/>
+      <field name="act_window" ref="act_company_evol_program_rel_form"/>
+    </record>
+        
+
+<!-- EMPLOYEE -->
+    <record model="ir.ui.view" id="gri_man_view_form">
+        <field name="model">company.employee</field>
+        <field name="inherit" ref="company.employee_view_form" />       
+        <field name="arch" type="xml">
+            <![CDATA[
+            <data>                
+                <xpath
+                    expr="/form/field[@name=&quot;company&quot;]"
+                        position="after" >                        
+                        <notebook colspan="6">
+                            <page string="General" id="general">
+                                <group string="Main Info" id="main_info" colspan="2">
+                                    <label name="ssn"/>
+                                    <field name="ssn" colspan="3"/>
+                                    <label name="sex"/>
+                                    <field name="sex" colspan="3"/>                                                
+                                    <label name="dob"/>
+                                    <field name="dob" colspan="3"/>
+                                    <label name="age"/>
+                                    <field name="age" colspan="3"/>
+                                </group>
+                                <group string="Photo" id="man_picture" colspan="2">
+                                    <field name="photo" img_width="155" img_height="155"
+                                        height="155" width="155" widget="image"/>
+                                </group>                                                               
+                            </page>                                                
+                            <page string="Contract" id="contract">                           
+                                <label name="contract"/>
+                                <field name="contract" widget="selection"/>
+                                <label name="typo"/>
+                                <field name="typo"/>
+                                <label name="dobc"/>
+                                <field name="dobc"/>
+                                <label name="dodc"/>
+                                <field name="dodc"/> 
+                                <label name="collective"/>
+                                <field name="collective"/>
+                                <label name="pminot"/>
+                                <field name="pminot"/>
+                                <label name="boolminot"/>
+                                <field name="boolminot"/>                                                                      
+                            </page>                                                        
+                            <page string="Absenteesim" id="absenteeism">                                
+                                <field name="absenteeism" />
+                            </page>
+                        </notebook>
+                        <newline/>                                                            
+                 </xpath>                   
+            </data>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="gri_man_tree">
+        <field name="model">company.employee</field>
+        <field name="inherit" ref="company.employee_view_tree"/>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <data>
+                <xpath
+                    expr="/tree/field[@name=&quot;company&quot;]"
+                        position="after">                                                              
+                        <field name="ssn" expand="1"/>                        
+                    </xpath>
+            </data>
+            ]]>
+        </field>
+    </record>
+
+<!-- COMPANY -->
+    <record model="ir.ui.view" id="gri_company_view_form">
+        <field name="model">company.company</field>
+        <field name="inherit" ref="company.company_view_form" />       
+        <field name="arch" type="xml">
+            <![CDATA[
+            <data>                
+                <xpath
+                    expr="/form/notebook/page[@id=&quot;company&quot;]"
+                    position="after">                                                
+                        <page string="Prestations" id="prestations">                               
+                            <field name="prestations"/>
+                        </page>
+                        <page string="Committee" id="committee">                               
+                            <field name="committee"/>
+                        </page>
+                        <page string="Program" id="program">                               
+                            <field name="program"/>
+                        </page>                                                                                 
+                 </xpath>                   
+            </data>
+            ]]>
+        </field>
+    </record>
+         
+
+<!-- LA1 -->        
+    
+        <record model="ir.ui.view" id="la1_contract_view_tree">
+            <field name="model">gri.la1</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Employment la1">
+                    <field name="contract" widget="selection"/>
+                    <field name="typo" widget="selection"/>
+                    <field name="company" widget="selection"/>
+                    <field name="country" widget="selection"/>
+                    <field name="subdivision" widget="selection"/>
+                    <field name="occ" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la1_contract_view_graph">
+            <field name="model">gri.la1</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la1 contract" type="pie">
+                    <x>
+                        <field name="contract" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la1_typo_view_graph">
+            <field name="model">gri.la1</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la1 type" type="pie">
+                    <x>
+                        <field name="typo" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la1_country_view_graph">
+            <field name="model">gri.la1</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la1 country" type="pie">
+                    <x>
+                        <field name="country" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la1_subdivision_view_graph">
+            <field name="model">gri.la1</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la1 subdivision" type="pie">
+                    <x>
+                        <field name="subdivision" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_la1_form">
+            <field name="name">LA1 - Employment Contract/Type/Country/Subdivision</field>
+            <field name="res_model">gri.la1</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la1_contract_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la1_contract_view_graph"/>
+            <field name="act_window" ref="act_la1_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la1_typo_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="la1_typo_view_graph"/>
+            <field name="act_window" ref="act_la1_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la1_country_form_view3">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="la1_country_view_graph"/>
+            <field name="act_window" ref="act_la1_form"/>
+        </record>                 
+        <record model="ir.action.act_window.view"
+            id="act_la1_subdivision_form_view4">
+            <field name="sequence" eval="40"/>
+            <field name="view" ref="la1_subdivision_view_graph"/>
+            <field name="act_window" ref="act_la1_form"/>
+        </record> 
+        <menuitem parent="menu_la1" action="act_la1_form" icon="tryton-graph" id="menu_gri_la1"/>
+        
+<!-- LA2 -->        
+    
+        <record model="ir.ui.view" id="la2_view_tree">
+            <field name="model">gri.la2</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Employment la2">
+                    <field name="sex" />
+                    <field name="dodc" />
+                    <field name="age" />
+                    <field name="country" widget="selection"/>
+                    <field name="subdivision" widget="selection"/>
+                    <field name="occ" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la2_sex_view_graph">
+            <field name="model">gri.la2</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la2 sex" type="pie">
+                    <x>
+                        <field name="sex" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la2_age_view_graph">
+            <field name="model">gri.la2</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la2 age" type="pie">
+                    <x>
+                        <field name="age" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la2_country_view_graph">
+            <field name="model">gri.la2</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la2 country" type="pie">
+                    <x>
+                        <field name="country" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la2_subdivision_view_graph">
+            <field name="model">gri.la2</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la2 subdivision" type="pie">
+                    <x>
+                        <field name="subdivision" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_la2_form">
+            <field name="name">LA2 - Employment Turnover</field>
+            <field name="res_model">gri.la2</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la2_sex_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la2_sex_view_graph"/>
+            <field name="act_window" ref="act_la2_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la2_age_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="la2_age_view_graph"/>
+            <field name="act_window" ref="act_la2_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la2_country_form_view3">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="la2_country_view_graph"/>
+            <field name="act_window" ref="act_la2_form"/>
+        </record>                 
+        <record model="ir.action.act_window.view"
+            id="act_la2_subdivision_form_view4">
+            <field name="sequence" eval="40"/>
+            <field name="view" ref="la2_subdivision_view_graph"/>
+            <field name="act_window" ref="act_la2_form"/>
+        </record> 
+        <menuitem parent="menu_la2" action="act_la2_form" icon="tryton-graph" id="menu_gri_la2"/>
+        
+<!-- LA3 -->
+     
+    <record model="ir.ui.view" id="la3_view_tree">
+            <field name="model">gri.la3</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="la3">
+                    <field name="prestations" widget="selection"/>
+                    <field name="occ" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la3_view_graph">
+            <field name="model">gri.la3</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Benefits provided to full-time employees" type="pie">
+                    <x>
+                        <field name="prestations" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_la3_form">
+            <field name="name">LA3 - Benefits provided to full-time employees</field>
+            <field name="res_model">gri.la3</field>
+        </record>       
+        <record model="ir.action.act_window.view"
+            id="act_la3_form_view2">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la3_view_graph"/>
+            <field name="act_window" ref="act_la3_form"/>
+        </record>    
+    
+        <menuitem parent="menu_la3" action="act_la3_form" icon="tryton-graph" id="menu_gri_la3"/>        
+        
+<!-- LA4 -->        
+    
+        <record model="ir.ui.view" id="la4_view_tree">
+            <field name="model">gri.la4</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Employment la4">                    
+                    <field name="company" widget="selection"/>
+                    <field name="country" widget="selection"/>
+                    <field name="subdivision" widget="selection"/>
+                    <field name="collective" widget="selection"/>
+                    <field name="occ" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la4_collective_view_graph">
+            <field name="model">gri.la4</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la4 collective" type="pie">
+                    <x>
+                        <field name="collective" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>        
+        <record model="ir.ui.view" id="la4_country_view_graph">
+            <field name="model">gri.la4</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la4 country" type="pie">
+                    <x>
+                        <field name="country" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la4_subdivision_view_graph">
+            <field name="model">gri.la4</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la4 subdivision" type="pie">
+                    <x>
+                        <field name="subdivision" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_la4_form">
+            <field name="name">LA4 - Employees covered by collective bargaining agreements</field>
+            <field name="res_model">gri.la4</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la4_collective_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la4_collective_view_graph"/>
+            <field name="act_window" ref="act_la4_form"/>
+        </record>        
+        <record model="ir.action.act_window.view"
+            id="act_la4_country_form_view3">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="la4_country_view_graph"/>
+            <field name="act_window" ref="act_la4_form"/>
+        </record>                 
+        <record model="ir.action.act_window.view"
+            id="act_la4_subdivision_form_view4">
+            <field name="sequence" eval="40"/>
+            <field name="view" ref="la4_subdivision_view_graph"/>
+            <field name="act_window" ref="act_la4_form"/>
+        </record> 
+        <menuitem parent="menu_la4" action="act_la4_form" icon="tryton-graph" id="menu_gri_la4"/>
+        
+<!-- LA5 -->        
+    
+        <record model="ir.ui.view" id="la5_view_tree">
+            <field name="model">gri.la5</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Employment la5">                    
+                    <field name="company" widget="selection"/>
+                    <field name="country" widget="selection"/>
+                    <field name="subdivision" widget="selection"/>
+                    <field name="pminot" />
+                    <field name="boolminot" widget="selection"/>                    
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la5_pminot_view_graph">
+            <field name="model">gri.la5</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Employment la5 Minimum" type="vbar">
+                    <x>
+                        <field name="company" />
+                    </x>
+                    <y>
+                        <field name="pminot"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>        
+        
+        <record model="ir.action.act_window" id="act_la5_form">
+            <field name="name">LA5 - Minimum notice period(s) regarding significant operational changes</field>
+            <field name="res_model">gri.la5</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la5_pminot_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la5_pminot_view_graph"/>
+            <field name="act_window" ref="act_la5_form"/>
+        </record>        
+        
+        <menuitem parent="menu_la5" action="act_la5_form" icon="tryton-graph" id="menu_gri_la5"/>
+        
+<!-- LA6 -->
+     
+    <record model="ir.ui.view" id="la6_view_tree">
+            <field name="model">gri.la6</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="la6">
+                    <field name="committee" widget="selection"/>
+                    <field name="percentage"/>
+                    <field name="occ" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la6_view_graph1">
+            <field name="model">gri.la6</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Total workforce represented in formal joint management-worker" type="vbar">
+                    <x>
+                        <field name="company" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la6_view_graph2">
+            <field name="model">gri.la6</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Percentage of total workforce represented in formal joint management-worker" type="pie">
+                    <x>
+                        <field name="percentage" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_la6_form">
+            <field name="name">LA6 - Percentage of total workforce represented in formal joint management-worker health and safety committees</field>
+            <field name="res_model">gri.la6</field>
+        </record>       
+        <record model="ir.action.act_window.view"
+            id="act_la6_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la6_view_graph1"/>
+            <field name="act_window" ref="act_la6_form"/>
+        </record>  
+        <record model="ir.action.act_window.view"
+            id="act_la6_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="la6_view_graph2"/>
+            <field name="act_window" ref="act_la6_form"/>
+        </record>   
+    
+        <menuitem parent="menu_la6" action="act_la6_form" icon="tryton-graph" id="menu_gri_la6"/>
+        
+<!-- LA7 -->
+     
+    <record model="ir.ui.view" id="la7_view_tree">
+            <field name="model">gri.la7</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="la7">
+                    <field name="company" widget="selection"/>
+                    <field name="country" widget="selection"/>
+                    <field name="subdivision" widget="selection"/>
+                    <field name="absenteeism" widget="selection"/>
+                    <field name="nbj" />
+                    <field name="occ" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la7_view_graph1">
+            <field name="model">gri.la7</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities by region" type="pie">
+                    <x>
+                        <field name="company" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la7_view_graph2">
+            <field name="model">gri.la7</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities by region" type="pie">
+                    <x>
+                        <field name="country" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>        
+        <record model="ir.ui.view" id="la7_view_graph3">
+            <field name="model">gri.la7</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities by region" type="pie">
+                    <x>
+                        <field name="subdivision" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la7_view_graph4">
+            <field name="model">gri.la7</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities by region" type="pie">
+                    <x>
+                        <field name="absenteeism" />
+                    </x>
+                    <y>
+                        <field name="nbj"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la7_view_graph5">
+            <field name="model">gri.la7</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities by region" type="vbar">
+                    <x>
+                        <field name="absenteeism" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_la7_form">
+            <field name="name">LA7 - Rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities by region</field>
+            <field name="res_model">gri.la7</field>
+        </record>       
+        <record model="ir.action.act_window.view"
+            id="act_la7_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la7_view_graph1"/>
+            <field name="act_window" ref="act_la7_form"/>
+        </record>  
+        <record model="ir.action.act_window.view"
+            id="act_la7_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="la7_view_graph2"/>
+            <field name="act_window" ref="act_la7_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la7_form_view3">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="la7_view_graph3"/>
+            <field name="act_window" ref="act_la7_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_la7_form_view4">
+            <field name="sequence" eval="40"/>
+            <field name="view" ref="la7_view_graph4"/>
+            <field name="act_window" ref="act_la7_form"/>
+        </record>  
+        <record model="ir.action.act_window.view"
+            id="act_la7_form_view5">
+            <field name="sequence" eval="50"/>
+            <field name="view" ref="la7_view_graph5"/>
+            <field name="act_window" ref="act_la7_form"/>
+        </record>
+        <menuitem parent="menu_la7" action="act_la7_form" icon="tryton-graph" id="menu_gri_la7"/>                               
+    
+<!-- LA13 -->
+     
+    <record model="ir.ui.view" id="la13_view_tree">
+            <field name="model">gri.la13</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="la13">
+                    <field name="sex" widget="selection"/>
+                    <field name="occ" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="la13_view_graph">
+            <field name="model">gri.la13</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <graph string="Ratio Male/Female" type="pie">
+                    <x>
+                        <field name="sex" />
+                    </x>
+                    <y>
+                        <field name="occ"/>
+                    </y>
+                </graph>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_la13_form">
+            <field name="name">LA13 - Ratio Male/Female</field>
+            <field name="res_model">gri.la13</field>
+        </record>       
+        <record model="ir.action.act_window.view"
+            id="act_la13_form_view2">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="la13_view_graph"/>
+            <field name="act_window" ref="act_la13_form"/>
+        </record>    
+    
+        <menuitem parent="menu_la13" action="act_la13_form" icon="tryton-graph" id="menu_gri_la13"/>
+
+
+<!-- Committee -->        
+
+        <record model="ir.ui.view" id="gri_typo_committee_view_tree">
+	        <field name="model">gri.typo_committee</field>
+	        <field name="type">tree</field>
+            <field name="field_childs">childs</field>
+	        <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="typo_committee">
+                    <field name="code" />
+                    <field name="name" /> 
+                    <field name="lib_long" />            
+                    <field name="parent" tree_invisible="1"/>
+                    <field name="childs" tree_invisible="1"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="gri_typo_committee_view_list">
+            <field name="model">gri.typo_committee</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="typo_committee">
+                    <field name="rec_name" expand="1"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="gri_typo_committee_view_form">
+            <field name="model">gri.typo_committee</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="typo_committee">                   
+                    <label name="code"/>
+                    <field name="code"/>
+                    <label name="name"/>
+                    <field name="name"/>                    
+                    <label name="active"/>
+                    <field name="active"/>
+                    <label name="parent"/>
+                    <field name="parent"/>
+                    <label name="lib_long"/>
+                    <field name="lib_long" colspan="4"/>               
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_typo_committee_tree">
+            <field name="name">Committee type</field>
+            <field name="res_model">gri.typo_committee</field>
+            <field name="domain">[('parent', '=', False)]</field>
+        </record>    
+        <record model="ir.action.act_window.view" id="act_typo_committee_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gri_typo_committee_view_tree"/>
+            <field name="act_window" ref="act_typo_committee_tree"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_typo_committee_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gri_typo_committee_view_form"/>
+            <field name="act_window" ref="act_typo_committee_tree"/>
+        </record>
+
+        <menuitem parent="menu_gri_codes" sequence="1" id="menu_typo_committee_tree" icon="tryton-list" action="act_typo_committee_tree"/>
+
+        <record model="ir.action.act_window" id="act_typo_committee_list">
+            <field name="name">Committee type</field>
+            <field name="res_model">gri.typo_committee</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_typo_committee_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gri_typo_committee_view_list"/>
+            <field name="act_window" ref="act_typo_committee_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_typo_committee_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gri_typo_committee_view_form"/>
+            <field name="act_window" ref="act_typo_committee_list"/>
+        </record>
+
+        <menuitem parent="menu_typo_committee_tree" sequence="1" id="menu_typo_committee_list" icon="tryton-list" action="act_typo_committee_list"/>
+
+        <record model="ir.ui.view" id="company_evol_committee_rel_view_tree">
+            <field name="model">company.company-gri.evol_committee</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Committee">                    
+                    <field name="company"/>
+                    <field name="evol_committee" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="company_evol_committee_rel_view_form">
+            <field name="model">company.company-gri.evol_committee</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Committee">
+                    <label name="company"/>
+                    <field name="company"/>
+                    <label name="evol_committee"/>
+                    <field name="evol_committee"/>
+                </form>
+                ]]>
+            </field>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_company_evol_committee_rel_form">
+            <field name="name">Committee</field>
+            <field name="res_model">company.company-gri.evol_committee</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_company_evol_committee_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="company_evol_committee_rel_view_tree"/>
+            <field name="act_window" ref="act_company_evol_committee_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_company_evol_committee_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="company_evol_committee_rel_view_form"/>
+          <field name="act_window" ref="act_company_evol_committee_rel_form"/>
+        </record>
+
+<!-- Absenteeism -->        
+
+        <record model="ir.ui.view" id="gri_typo_absenteeism_view_tree">
+	        <field name="model">gri.typo_absenteeism</field>
+	        <field name="type">tree</field>
+            <field name="field_childs">childs</field>
+	        <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="typo_absenteeism">
+                    <field name="code" />
+                    <field name="name" /> 
+                    <field name="lib_long" />            
+                    <field name="parent" tree_invisible="1"/>
+                    <field name="childs" tree_invisible="1"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="gri_typo_absenteeism_view_list">
+            <field name="model">gri.typo_absenteeism</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="typo_absenteeism">
+                    <field name="rec_name" expand="1"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="gri_typo_absenteeism_view_form">
+            <field name="model">gri.typo_absenteeism</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="typo_absenteeism">                   
+                    <label name="code"/>
+                    <field name="code"/>
+                    <label name="name"/>
+                    <field name="name"/>                    
+                    <label name="active"/>
+                    <field name="active"/>
+                    <label name="parent"/>
+                    <field name="parent"/>
+                    <label name="lib_long"/>
+                    <field name="lib_long" colspan="4"/>               
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_typo_absenteeism_tree">
+            <field name="name">Absenteeism type</field>
+            <field name="res_model">gri.typo_absenteeism</field>
+            <field name="domain">[('parent', '=', False)]</field>
+        </record>    
+        <record model="ir.action.act_window.view" id="act_typo_absenteeism_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gri_typo_absenteeism_view_tree"/>
+            <field name="act_window" ref="act_typo_absenteeism_tree"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_typo_absenteeism_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gri_typo_absenteeism_view_form"/>
+            <field name="act_window" ref="act_typo_absenteeism_tree"/>
+        </record>
+
+        <menuitem parent="menu_gri_codes" sequence="1" id="menu_typo_absenteeism_tree" icon="tryton-list" action="act_typo_absenteeism_tree"/>
+
+        <record model="ir.action.act_window" id="act_typo_absenteeism_list">
+            <field name="name">Absenteeism type</field>
+            <field name="res_model">gri.typo_absenteeism</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_typo_absenteeism_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gri_typo_absenteeism_view_list"/>
+            <field name="act_window" ref="act_typo_absenteeism_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_typo_absenteeism_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gri_typo_absenteeism_view_form"/>
+            <field name="act_window" ref="act_typo_absenteeism_list"/>
+        </record>
+
+        <menuitem parent="menu_typo_absenteeism_tree" sequence="1" id="menu_typo_absenteeism_list" icon="tryton-list" action="act_typo_absenteeism_list"/>
+
+        <record model="ir.ui.view" id="gri_evol_absenteeism_view_tree">
+            <field name="model">cg.evol_absenteeism</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Évolution des absenteeisms">
+                    <field name="dateb" />                    
+                    <field name="datee" />
+                    <field name="absenteeism" />                                                            
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="gri_evol_absenteeism_view_form">
+            <field name="model">cg.evol_absenteeism</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Évolution des absenteeisms" col="2">
+                    <notebook colspan="6">
+                        <page string="General" id="general">                            
+                            <label name="dateb"/>
+                            <field name="dateb"/>
+                            <label name="datee"/>
+                            <field name="datee"/>
+                            <label name="absenteeism"/>
+                            <field name="absenteeism" widget="selection"/>                                                                             
+                        </page>
+                    </notebook>
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_gri_evol_absenteeism_form">
+            <field name="name">Absenteeism evolution</field>
+            <field name="res_model">cg.evol_absenteeism</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gri_evol_absenteeism_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gri_evol_absenteeism_view_tree"/>
+            <field name="act_window" ref="act_gri_evol_absenteeism_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gri_evol_absenteeism_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gri_evol_absenteeism_view_form"/>
+            <field name="act_window" ref="act_gri_evol_absenteeism_form"/>
+        </record>
+
+
+<!-- Prestations -->
+        <record model="ir.ui.view" id="gri_typo_prestations_view_tree">
+            <field name="model">gri.typo_prestations</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="typo_prestations">                
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="lib_long" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="gri_typo_prestations_view_form">
+            <field name="model">gri.typo_prestations</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="typo_prestations">                   
+                    <label name="code"/>
+                    <field name="code"/>
+                    <label name="name"/>
+                    <field name="name"/>
+                    <label name="lib_long"/>
+                    <field name="lib_long" colspan="4"/>                   
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_gri_typo_prestations_form">
+            <field name="name">Prestations</field>
+            <field name="res_model">gri.typo_prestations</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gri_typo_prestations_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gri_typo_prestations_view_tree"/>
+            <field name="act_window" ref="act_gri_typo_prestations_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gri_typo_prestations_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gri_typo_prestations_view_form"/>
+            <field name="act_window" ref="act_gri_typo_prestations_form"/>
+        </record>
+        
+        <menuitem parent="menu_gri_codes" id="menu_gri_typo_prestations_form" icon="tryton-list" action="act_gri_typo_prestations_form"/>
+
+        <record model="ir.ui.view" id="gri_evol_prestations_view_tree">
+            <field name="model">cg.evol_prestations</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Prestations evolution">
+                    <field name="dateb" />                    
+                    <field name="datee" />
+                    <field name="prestations" />                                                            
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="gri_evol_prestations_view_form">
+            <field name="model">cg.evol_prestations</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Prestations evolution" col="2">
+                    <notebook colspan="6">
+                        <page string="General" id="general">                            
+                            <label name="dateb"/>
+                            <field name="dateb"/>
+                            <label name="datee"/>
+                            <field name="datee"/>
+                            <label name="prestations"/>
+                            <field name="prestations" widget="selection"/>                                                                             
+                        </page>
+                    </notebook>
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_gri_evol_prestations_form">
+            <field name="name">Prestations evolution</field>
+            <field name="res_model">cg.evol_prestations</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gri_evol_prestations_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gri_evol_prestations_view_tree"/>
+            <field name="act_window" ref="act_gri_evol_prestations_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gri_evol_prestations_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gri_evol_prestations_view_form"/>
+            <field name="act_window" ref="act_gri_evol_prestations_form"/>
+        </record>
+        
+        <record model="ir.ui.view" id="company_evol_prestations_rel_view_tree">
+            <field name="model">company.company-gri.evol_prestations</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Prestations">                    
+                    <field name="company"/>                            
+                    <field name="evol_prestations"/>                    
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="company_evol_prestations_rel_view_form">
+            <field name="model">company.company-gri.evol_prestations</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Prestations">
+                    <label name="company"/>
+                    <field name="company"/>
+                    <label name="evol_prestations"/>
+                    <field name="evol_prestations"/>
+                </form>
+                ]]>
+            </field>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_company_evol_prestations_rel_form">
+            <field name="name">Prestations</field>
+            <field name="res_model">company.company-gri.evol_prestations</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_company_evol_prestations_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="company_evol_prestations_rel_view_tree"/>
+            <field name="act_window" ref="act_company_evol_prestations_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_company_evol_prestations_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="company_evol_prestations_rel_view_form"/>
+          <field name="act_window" ref="act_company_evol_prestations_rel_form"/>
+        </record>
+
+   
+        </data>
+</tryton>

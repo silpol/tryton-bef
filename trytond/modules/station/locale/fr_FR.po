@@ -1,0 +1,184 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:station.station,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:station.station,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:station.station,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:station.station,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:station.station,sta_cartegeol:"
+msgid "Geological map"
+msgstr "Carte géologique"
+
+msgctxt "field:station.station,sta_cartepedo:"
+msgid "Soil map"
+msgstr "Carte pédologique"
+
+msgctxt "field:station.station,sta_catalogue:"
+msgid "Catalog"
+msgstr "Catalogue"
+
+msgctxt "field:station.station,sta_date_catalogue:"
+msgid "Date catalog"
+msgstr "Date du catalogue"
+
+msgctxt "field:station.station,sta_date_desc:"
+msgid "Date description"
+msgstr "Date de la description"
+
+msgctxt "field:station.station,sta_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:station.station,sta_ech:"
+msgid "Scale"
+msgstr "Échelle"
+
+msgctxt "field:station.station,sta_groupepedo:"
+msgid "Pedology group"
+msgstr "Groupe pédologique"
+
+msgctxt "field:station.station,sta_nom_desc:"
+msgid "Descriptor"
+msgstr "Descripteur"
+
+msgctxt "field:station.station,sta_nom_regifn:"
+msgid "IFN Region name"
+msgstr "Nom de la région IFN"
+
+msgctxt "field:station.station,sta_num_ifn:"
+msgid "IFN Region number"
+msgstr "Numéro de la région IFN"
+
+msgctxt "field:station.station,sta_obs:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:station.station,sta_pedo:"
+msgid "Pedology"
+msgstr "Pédologie"
+
+msgctxt "field:station.station,sta_region:"
+msgid "Region"
+msgstr "Région"
+
+msgctxt "field:station.station,sta_roche:"
+msgid "Rock"
+msgstr "Roche"
+
+msgctxt "field:station.station,sta_strate_geol:"
+msgid "Strata"
+msgstr "Strate"
+
+msgctxt "field:station.station,sta_type_station:"
+msgid "Station"
+msgstr "Station"
+
+msgctxt "field:station.station,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:station.station,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:station.station,sta_cartegeol:"
+msgid "Number geological map"
+msgstr "Numéro de la carte géologique"
+
+msgctxt "help:station.station,sta_cartepedo:"
+msgid "Soil map name"
+msgstr "Nom de la carte pédologique"
+
+msgctxt "help:station.station,sta_catalogue:"
+msgid "Catalog name"
+msgstr "Nom du catalogue"
+
+msgctxt "help:station.station,sta_date_catalogue:"
+msgid "Date of catalog"
+msgstr "Date du catalogue"
+
+msgctxt "help:station.station,sta_date_desc:"
+msgid "Date of description"
+msgstr "Date de la description"
+
+msgctxt "help:station.station,sta_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:station.station,sta_ech:"
+msgid "Geological map scale"
+msgstr "Échelle de la carte géologique"
+
+msgctxt "help:station.station,sta_groupepedo:"
+msgid "Pedology group"
+msgstr "Groupe pédologique"
+
+msgctxt "help:station.station,sta_nom_desc:"
+msgid "Descriptor name"
+msgstr "Nom du descripteur"
+
+msgctxt "help:station.station,sta_nom_regifn:"
+msgid "IFN Region name"
+msgstr "Nom de la région IFN"
+
+msgctxt "help:station.station,sta_num_ifn:"
+msgid "IFN Region number"
+msgstr "Numéro de la région IFN"
+
+msgctxt "help:station.station,sta_obs:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:station.station,sta_pedo:"
+msgid "Pedology"
+msgstr "Pédologie"
+
+msgctxt "help:station.station,sta_region:"
+msgid "Region name"
+msgstr "Nom de la région"
+
+msgctxt "help:station.station,sta_roche:"
+msgid "Rock"
+msgstr "Roche mère"
+
+msgctxt "help:station.station,sta_strate_geol:"
+msgid "Geological strata name"
+msgstr "Nom de la strate géologique"
+
+msgctxt "help:station.station,sta_type_station:"
+msgid "Station number"
+msgstr "Numéro de la station"
+
+msgctxt "model:ir.action,name:act_station_form"
+msgid "Station"
+msgstr "Station"
+
+msgctxt "model:ir.ui.menu,name:menu_station_form"
+msgid "Station"
+msgstr "Station"
+
+msgctxt "model:station.station,name:"
+msgid "Station"
+msgstr "Station"

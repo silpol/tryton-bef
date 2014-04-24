@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Note déficience sanitaire" colors="If(Less(Eval('note',0), 5.01), '#ccff00', If(Less(Eval('note',0), 10.01), '#ddaa00', If(Less(Eval('note',0), 15.01), '#ee5500', '#ff0000')))">
+    <field name="equipement"/>                      
+    <field name="ug"/>
+    <field name="station"/>
+    <field name="emplacement"/>
+    <field name="arbre"/>
+    <field name="date"/>
+    <field name="note"/>
+</tree>

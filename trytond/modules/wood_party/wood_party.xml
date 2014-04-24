@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Laurent Defert
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+-->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="wood_owner_view_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form" />
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+                    <xpath
+                        expr="/form/notebook/page[@id=&quot;general&quot;]"
+                        position="after">
+                            <page string="PEFC" col="1" id="property">
+                            <field name="pefc"/>
+                        </page>
+                    </xpath>
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <!-- PEFC certification notifications -->
+        <record model="ir.ui.view" id="pefc_notify_view_tree">
+            <field name="model">pefc.pefc_notify_recipient</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="sender"/>
+                        <field name="recipient"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="pefc_notify_view_form">
+            <field name="model">pefc.pefc_notify_recipient</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="PEFC notifications recipient" col="2">
+                        <label name="sender"/>
+                        <field name="sender"/>
+                        <label name="recipient"/>
+                        <field name="recipient"/>
+                        <label name="msg_subject"/>
+                        <field name="msg_subject"/>
+                        <label name="msg_content"/>
+                        <field name="msg_content"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_pefc_notify_form_view">
+            <field name="name">PEFC notifications</field>
+            <field name="res_model">pefc.pefc_notify_recipient</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_pefc_notify_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="pefc_notify_view_tree"/>
+            <field name="act_window" ref="act_pefc_notify_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_pefc_notify_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pefc_notify_view_form"/>
+            <field name="act_window" ref="act_pefc_notify_form_view"/>
+        </record>
+
+        <record model="ir.ui.view" id="pefc_view_tree">
+            <field name="model">pefc.pefc</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="enabled"/>
+                        <field name="region"/>
+                        <field name="pefc_no"/>
+                        <field name="date"/>
+                        <field name="duration"/>
+                        <field name="validity"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pefc_view_form">
+            <field name="model">pefc.pefc</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="PEFC certificate" col="2">
+                        <label name="enabled"/>
+                        <field name="enabled"/>
+                        <label name="region"/>
+                        <field name="region" widget="selection"/>
+                        <label name="pefc_no"/>
+                        <field name="pefc_no"/>
+                        <label name="date"/>
+                        <field name="date"/>
+                        <label name="duration"/>
+                        <field name="duration"/>
+                        <label name="validity"/>
+                        <field name="validity"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_pefc_form_view">
+            <field name="name">PEFC certification</field>
+            <field name="res_model">pefc.pefc</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_pefc_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="pefc_view_tree"/>
+            <field name="act_window" ref="act_pefc_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_pefc_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pefc_view_form"/>
+            <field name="act_window" ref="act_pefc_form_view"/>
+        </record>
+
+        <menuitem parent="ir.menu_administration" sequence="0" id="menu_pefc_notify" icon="tryton-list" action="act_pefc_notify_form_view"/>
+
+        <record model="ir.ui.view" id="wood_party_view">
+            <field name="model">party.party</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="name"/>
+                        <field name="pefc"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_wood_party_form">
+            <field name="name">Owner parties</field>
+            <field name="res_model">party.party</field>
+            <!-- For the following context and categories, 1 is the "Owner" category -->
+            <field name="context">{'categories': [1]}</field>
+            <field name="domain">[('categories', 'child_of', [1], 'parent')]</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_wood_party_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="wood_party_view"/>
+            <field name="act_window" ref="act_wood_party_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_wood_party_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party.party_view_form"/>
+            <field name="act_window" ref="act_wood_party_form"/>
+        </record>
+
+        <menuitem parent="party.menu_party_form" sequence="0" id="menu_wood_party" icon="tryton-list" action="act_wood_party_form"/>
+
+    </data>
+</tryton>
+

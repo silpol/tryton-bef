@@ -1,0 +1,128 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:recettes.recettes,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:recettes.recettes,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:recettes.recettes,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:recettes.recettes,rec_annee:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "field:recettes.recettes,rec_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:recettes.recettes,rec_ess_cat:"
+msgid "Species and Category"
+msgstr "Essence et catégorie"
+
+msgctxt "field:recettes.recettes,rec_mode_vente:"
+msgid "Sell ​​Fashion"
+msgstr "Mode de vente"
+
+msgctxt "field:recettes.recettes,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:recettes.recettes,rec_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:recettes.recettes,rec_plancomptable:"
+msgid "Account"
+msgstr "Plan comptable"
+
+msgctxt "field:recettes.recettes,rec_pu:"
+msgid "Unit price"
+msgstr "Prix unitaires"
+
+msgctxt "field:recettes.recettes,rec_quant:"
+msgid "Quantity"
+msgstr "Quantité"
+
+msgctxt "field:recettes.recettes,rec_total:"
+msgid "Total"
+msgstr "Total"
+
+msgctxt "field:recettes.recettes,rec_unit:"
+msgid "Unit"
+msgstr "Unité"
+
+msgctxt "field:recettes.recettes,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:recettes.recettes,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:recettes.recettes,rec_annee:"
+msgid "4-digit year"
+msgstr "Année sur 4 chiffres"
+
+msgctxt "help:recettes.recettes,rec_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:recettes.recettes,rec_ess_cat:"
+msgid "Species and Category"
+msgstr "Essence et catégorie"
+
+msgctxt "help:recettes.recettes,rec_mode_vente:"
+msgid "Wholesale fashion board or on foot"
+msgstr "Mode de vente en bloc ou sur pied"
+
+msgctxt "help:recettes.recettes,rec_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:recettes.recettes,rec_plancomptable:"
+msgid "Description of the recipe"
+msgstr "Description de la recette"
+
+msgctxt "help:recettes.recettes,rec_pu:"
+msgid "Unit price in euro"
+msgstr "Prix unitaire en euro"
+
+msgctxt "help:recettes.recettes,rec_quant:"
+msgid "Volume (m3)"
+msgstr "Volume (m3)"
+
+msgctxt "help:recettes.recettes,rec_total:"
+msgid "Total"
+msgstr "Total"
+
+msgctxt "help:recettes.recettes,rec_unit:"
+msgid "Unit of quantity"
+msgstr "Unité de la quantité"
+
+msgctxt "model:ir.action,name:act_recettes_form"
+msgid "Recettes"
+msgstr "Recettes"
+
+msgctxt "model:ir.ui.menu,name:menu_recettes_form"
+msgid "Recettes"
+msgstr "Recettes"
+
+msgctxt "model:recettes.recettes,name:"
+msgid "Recipe"
+msgstr "Recettes"

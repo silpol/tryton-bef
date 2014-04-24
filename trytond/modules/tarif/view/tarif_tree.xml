@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Rate">
+    <field name="tar_dispositif" />
+    <field name="tar_essence" />				    
+	<field name="name" />
+	<field name="tar_numero" />
+    <field name="tar_ifn" />
+    <field name="tar_ifn_numero" />
+</tree>

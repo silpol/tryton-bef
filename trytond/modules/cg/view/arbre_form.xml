@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<form string="Arbre" col="2">
+    <notebook colspan="6">
+        <page string="Général" id="general">
+            <label name="code"/>
+            <field name="code"/>
+            <label name="emplacement"/>
+            <field name="emplacement"/>
+            <label name="date"/>
+            <field name="date"/>
+            <label name="compteur"/>
+            <field name="compteur"/>                            
+            <label name="an"/>
+            <field name="an"/>
+            <label name="diametre"/>
+            <field name="diametre" widget="selection"/>
+            <label name="plantation"/>
+            <field name="plantation" widget="selection"/>
+            <label name="situation"/>
+            <field name="situation"/>
+            <label name="fosse"/>
+            <field name="fosse" widget="selection"/>
+            <label name="essence"/>
+            <field name="essence" view_ids="cg.cg_taxinomie_view_tree"/>
+            <label name="conduite"/>
+            <field name="conduite"/>
+            <label name="active"/>
+            <field name="active"/>
+        </page>
+        <page string="Évolutions" id="evol">                            
+            <field name="evolution"/>
+        </page>
+        <page string="Map" id="map" col="2">
+            <group col="2" colspan="6" id="group1">
+                <label name="code"/>
+                <field name="code"/>
+            </group>                         
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="arbre_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+        <page string="Photo" id="photo">
+            <label name="code"/>
+            <field name="code"/>                                                                       
+            <field name="photo" colspan="6" widget="image" img_width="640" img_height="480"/>                                    
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Diagno - Taxinomie">
+    <field name="taxinomie"/>
+    <field name="note"/>                 
+</tree>
+

@@ -1,0 +1,14 @@
+[tryton]
+version=1.0
+depends:
+    country
+    commune
+    res
+    ir
+    taxinomie
+    map
+    geotools
+    qgis
+    wfs    
+xml:
+    cg.xml

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<tree string="Unité de Gestion">
+    <field name="equipement" />
+    <field name="code" />
+    <field name="statut" />
+    <field name="refug" />
+    <field name="rue" />
+    <field name="debut" />
+    <field name="fin" />
+    <field name="elagage" />
+    <field name="operation" />
+    <field name="contrainte" />
+    <field name="commune" />
+    <field name="sequenceroute" />
+    <field name="securite" />
+    <field name="remsecurite"/>
+    <field name="station" />
+    <field name="acequipement" />
+    <field name="acug95" />
+    <field name="acug06" />
+    <field name="acug09" />
+    <field name="domanialtype" />
+    <field name="domanialdate" />
+    <field name="active" />
+</tree>

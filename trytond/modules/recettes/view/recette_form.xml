@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<form string="Recipe">
+    <label name="rec_dispositif"/>
+	<field name="rec_dispositif"/>
+	<label name="rec_annee"/>
+	<field name="rec_annee"/>
+	<label name="rec_plancomptable"/>
+	<field name="rec_plancomptable"/>
+	<label name="rec_ess_cat"/>
+	<field name="rec_ess_cat"/>
+	<label name="rec_quant"/>
+	<field name="rec_quant"/>
+	<label name="rec_unit"/>
+	<field name="rec_unit"/>					
+	<label name="rec_pu"/>
+	<field name="rec_pu"/>
+	<label name="rec_total"/>
+	<field name="rec_total"/>
+	<label name="rec_mode_vente"/>
+	<field name="rec_mode_vente"/>
+    <notebook colspan="6">
+	    <page string="Observations" id="observations">					        
+	        <field name="rec_observation"/>
+	    </page>									    
+    </notebook>					
+</form>

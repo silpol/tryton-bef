@@ -1,0 +1,542 @@
+<tryton>
+	<data>
+
+        <menuitem parent="menu_cadastre" sequence="3" name="Relevés" icon="tryton-list" id="menu_cadastre_releve"/>
+        <menuitem parent="menu_cadastre_releve" sequence="4" name="Propriétaire" icon="tryton-list" id="menu_cadastre_releve_proprio"/>
+        <menuitem parent="menu_cadastre_releve" sequence="5" name="Propriétés non bâties" icon="tryton-list" id="menu_cadastre_releve_nbati"/>
+        <menuitem parent="menu_cadastre_releve" sequence="5" name="Propriétés bâties" icon="tryton-list" id="menu_cadastre_releve_batiment"/>    
+    
+        <!-- Code DGI -->
+        <record model="ir.ui.view" id="releve_code_view_tree">
+            <field name="model">releve.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_code_view_form">
+            <field name="model">releve.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_code_form">
+            <field name="name">Code DGI</field>
+            <field name="res_model">releve.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_code_view_tree"/>
+            <field name="act_window" ref="act_releve_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_code_view_form"/>
+            <field name="act_window" ref="act_releve_code_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_configuration" id="menu_releve_code_form" icon="tryton-list" action="act_releve_code_form"/>
+
+        <!-- Exopev -->
+        <record model="ir.ui.view" id="releve_exopev_view_tree">
+            <field name="model">releve.exopev</field>
+            <field name="type">tree</field>
+            <field name="name">exopev_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_exopev_view_form">
+            <field name="model">releve.exopev</field>
+            <field name="type">form</field>
+            <field name="name">exopev_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_exopev_form">
+            <field name="name">Éxonération de la partie d'évaluation</field>
+            <field name="res_model">releve.exopev</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_exopev_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_exopev_view_tree"/>
+            <field name="act_window" ref="act_releve_exopev_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_exopev_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_exopev_view_form"/>
+            <field name="act_window" ref="act_releve_exopev_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_nbati" id="menu_releve_exopev_form" icon="tryton-list" action="act_releve_exopev_form"/>
+
+        <!-- Pev -->
+        <record model="ir.ui.view" id="releve_pev_view_tree">
+            <field name="model">releve.pev</field>
+            <field name="type">tree</field>
+            <field name="name">pev_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_pev_view_form">
+            <field name="model">releve.pev</field>
+            <field name="type">form</field>
+            <field name="name">pev_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_pev_form">
+            <field name="name">Partie d'évaluation</field>
+            <field name="res_model">releve.pev</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_pev_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_pev_view_tree"/>
+            <field name="act_window" ref="act_releve_pev_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_pev_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_pev_view_form"/>
+            <field name="act_window" ref="act_releve_pev_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_nbati" id="menu_releve_pev_form" icon="tryton-list" action="act_releve_pev_form"/>
+
+        <!-- Phab -->
+        <record model="ir.ui.view" id="releve_phab_view_tree">
+            <field name="model">releve.phab</field>
+            <field name="type">tree</field>
+            <field name="name">phab_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_phab_view_form">
+            <field name="model">releve.phab</field>
+            <field name="type">form</field>
+            <field name="name">phab_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_phab_form">
+            <field name="name">Partie principale d'habitation</field>
+            <field name="res_model">releve.phab</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_phab_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_phab_view_tree"/>
+            <field name="act_window" ref="act_releve_phab_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_phab_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_phab_view_form"/>
+            <field name="act_window" ref="act_releve_phab_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_phab_form" icon="tryton-list" action="act_releve_phab_form"/>
+
+        <!-- Voie -->
+        <record model="ir.ui.view" id="releve_voie_view_tree">
+            <field name="model">releve.voie</field>
+            <field name="type">tree</field>
+            <field name="name">voie_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_voie_view_form">
+            <field name="model">releve.voie</field>
+            <field name="type">form</field>
+            <field name="name">voie_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_voie_form">
+            <field name="name">Voirie</field>
+            <field name="res_model">releve.voie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_voie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_voie_view_tree"/>
+            <field name="act_window" ref="act_releve_voie_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_voie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_voie_view_form"/>
+            <field name="act_window" ref="act_releve_voie_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_voie_form" icon="tryton-list" action="act_releve_voie_form"/>
+
+        <!-- Partie principale professionnelle -->
+        <record model="ir.ui.view" id="releve_pprof_view_tree">
+            <field name="model">releve.pprof</field>
+            <field name="type">tree</field>
+            <field name="name">pprof_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_pprof_view_form">
+            <field name="model">releve.pprof</field>
+            <field name="type">form</field>
+            <field name="name">pprof_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_pprof_form">
+            <field name="name">Partie principale professionnelle</field>
+            <field name="res_model">releve.pprof</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_pprof_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_pprof_view_tree"/>
+            <field name="act_window" ref="act_releve_pprof_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_pprof_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_pprof_view_form"/>
+            <field name="act_window" ref="act_releve_pprof_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_pprof_form" icon="tryton-list" action="act_releve_pprof_form"/>
+
+        <!-- Taxation de la partie d'évaluation -->
+        <record model="ir.ui.view" id="releve_taxpev_view_tree">
+            <field name="model">releve.taxpev</field>
+            <field name="type">tree</field>
+            <field name="name">taxpev_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_taxpev_view_form">
+            <field name="model">releve.taxpev</field>
+            <field name="type">form</field>
+            <field name="name">taxpev_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_taxpev_form">
+            <field name="name">Taxation de la partie d'évaluation</field>
+            <field name="res_model">releve.taxpev</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_taxpev_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_taxpev_view_tree"/>
+            <field name="act_window" ref="act_releve_taxpev_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_taxpev_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_taxpev_view_form"/>
+            <field name="act_window" ref="act_releve_taxpev_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_nbati" id="menu_releve_taxpev_form" icon="tryton-list" action="act_releve_taxpev_form"/>
+
+        <!-- Dépendance de pev -->
+        <record model="ir.ui.view" id="releve_dep_view_tree">
+            <field name="model">releve.dep</field>
+            <field name="type">tree</field>
+            <field name="name">dep_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_dep_view_form">
+            <field name="model">releve.dep</field>
+            <field name="type">form</field>
+            <field name="name">dep_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_dep_form">
+            <field name="name">Dépendance de pev</field>
+            <field name="res_model">releve.dep</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_dep_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_dep_view_tree"/>
+            <field name="act_window" ref="act_releve_dep_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_dep_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_dep_view_form"/>
+            <field name="act_window" ref="act_releve_dep_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_dep_form" icon="tryton-list" action="act_releve_dep_form"/>
+
+        <!-- Propriétés non bâties -->
+        <record model="ir.ui.view" id="releve_nbati_view_tree">
+            <field name="model">releve.nbati</field>
+            <field name="type">tree</field>
+            <field name="name">nbati_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_nbati_view_form">
+            <field name="model">releve.nbati</field>
+            <field name="type">form</field>
+            <field name="name">nbati_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_nbati_form">
+            <field name="name">Propriétés non bâties</field>
+            <field name="res_model">releve.nbati</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_nbati_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_nbati_view_tree"/>
+            <field name="act_window" ref="act_releve_nbati_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_nbati_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_nbati_view_form"/>
+            <field name="act_window" ref="act_releve_nbati_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_nbati" sequence="1" id="menu_releve_nbati_form" icon="tryton-list" action="act_releve_nbati_form"/>
+
+        <!-- Invariant -->
+        <record model="ir.ui.view" id="releve_invar_view_tree">
+            <field name="model">releve.invar</field>
+            <field name="type">tree</field>
+            <field name="name">invar_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_invar_view_form">
+            <field name="model">releve.invar</field>
+            <field name="type">form</field>
+            <field name="name">invar_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_invar_form">
+            <field name="name">Invariant</field>
+            <field name="res_model">releve.invar</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_invar_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_invar_view_tree"/>
+            <field name="act_window" ref="act_releve_invar_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_invar_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_invar_view_form"/>
+            <field name="act_window" ref="act_releve_invar_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_invar_form" icon="tryton-list" action="act_releve_invar_form"/>
+
+        <!-- Propriétaire -->
+        <record model="ir.ui.view" id="releve_prop_view_tree">
+            <field name="model">releve.prop</field>
+            <field name="type">tree</field>
+            <field name="name">prop_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_prop_view_form">
+            <field name="model">releve.prop</field>
+            <field name="type">form</field>
+            <field name="name">prop_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_prop_form">
+            <field name="name">Propriétaire</field>
+            <field name="res_model">releve.prop</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_prop_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_prop_view_tree"/>
+            <field name="act_window" ref="act_releve_prop_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_prop_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_prop_view_form"/>
+            <field name="act_window" ref="act_releve_prop_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_proprio" id="menu_releve_prop_form" icon="tryton-list" action="act_releve_prop_form"/>
+
+        <!-- Assises de pdl -->
+        <record model="ir.ui.view" id="releve_assisepdl_view_tree">
+            <field name="model">releve.assisepdl</field>
+            <field name="type">tree</field>
+            <field name="name">assisepdl_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_assisepdl_view_form">
+            <field name="model">releve.assisepdl</field>
+            <field name="type">form</field>
+            <field name="name">assisepdl_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_assisepdl_form">
+            <field name="name">Assises de parcelle divisée en lot</field>
+            <field name="res_model">releve.assisepdl</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_assisepdl_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_assisepdl_view_tree"/>
+            <field name="act_window" ref="act_releve_assisepdl_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_assisepdl_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_assisepdl_view_form"/>
+            <field name="act_window" ref="act_releve_assisepdl_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_assisepdl_form" icon="tryton-list" action="act_releve_assisepdl_form"/>
+
+        <!-- Propriétés divisées en lot -->
+        <record model="ir.ui.view" id="releve_pdl_view_tree">
+            <field name="model">releve.pdl</field>
+            <field name="type">tree</field>
+            <field name="name">pdl_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_pdl_view_form">
+            <field name="model">releve.pdl</field>
+            <field name="type">form</field>
+            <field name="name">pdl_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_pdl_form">
+            <field name="name">Propriétés divisées en lot</field>
+            <field name="res_model">releve.pdl</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_pdl_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_pdl_view_tree"/>
+            <field name="act_window" ref="act_releve_pdl_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_pdl_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_pdl_view_form"/>
+            <field name="act_window" ref="act_releve_pdl_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_pdl_form" icon="tryton-list" action="act_releve_pdl_form"/>
+
+        <!-- Local -->
+        <record model="ir.ui.view" id="releve_local_view_tree">
+            <field name="model">releve.local</field>
+            <field name="type">tree</field>
+            <field name="name">local_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_local_view_form">
+            <field name="model">releve.local</field>
+            <field name="type">form</field>
+            <field name="name">local_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_local_form">
+            <field name="name">Local</field>
+            <field name="res_model">releve.local</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_local_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_local_view_tree"/>
+            <field name="act_window" ref="act_releve_local_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_local_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_local_view_form"/>
+            <field name="act_window" ref="act_releve_local_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_local_form" icon="tryton-list" action="act_releve_local_form"/>
+
+        <!-- Subdivision fiscale -->
+        <record model="ir.ui.view" id="releve_suf_view_tree">
+            <field name="model">releve.suf</field>
+            <field name="type">tree</field>
+            <field name="name">suf_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_suf_view_form">
+            <field name="model">releve.suf</field>
+            <field name="type">form</field>
+            <field name="name">suf_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_suf_form">
+            <field name="name">Subdivision fiscale</field>
+            <field name="res_model">releve.suf</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_suf_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_suf_view_tree"/>
+            <field name="act_window" ref="act_releve_suf_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_suf_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_suf_view_form"/>
+            <field name="act_window" ref="act_releve_suf_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_nbati" id="menu_releve_suf_form" icon="tryton-list" action="act_releve_suf_form"/>
+
+        <!-- Taxation unité foncière -->
+        <record model="ir.ui.view" id="releve_taxsuf_view_tree">
+            <field name="model">releve.taxsuf</field>
+            <field name="type">tree</field>
+            <field name="name">taxsuf_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_taxsuf_view_form">
+            <field name="model">releve.taxsuf</field>
+            <field name="type">form</field>
+            <field name="name">taxsuf_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_taxsuf_form">
+            <field name="name">Taxation unité foncière</field>
+            <field name="res_model">releve.taxsuf</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_taxsuf_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_taxsuf_view_tree"/>
+            <field name="act_window" ref="act_releve_taxsuf_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_taxsuf_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_taxsuf_view_form"/>
+            <field name="act_window" ref="act_releve_taxsuf_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_nbati" id="menu_releve_taxsuf_form" icon="tryton-list" action="act_releve_taxsuf_form"/>
+
+        <!-- Éxonération unité foncière -->
+        <record model="ir.ui.view" id="releve_exosuf_view_tree">
+            <field name="model">releve.exosuf</field>
+            <field name="type">tree</field>
+            <field name="name">exosuf_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_exosuf_view_form">
+            <field name="model">releve.exosuf</field>
+            <field name="type">form</field>
+            <field name="name">exosuf_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_exosuf_form">
+            <field name="name">Éxonération unité foncière</field>
+            <field name="res_model">releve.exosuf</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_exosuf_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_exosuf_view_tree"/>
+            <field name="act_window" ref="act_releve_exosuf_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_exosuf_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_exosuf_view_form"/>
+            <field name="act_window" ref="act_releve_exosuf_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_nbati" id="menu_releve_exosuf_form" icon="tryton-list" action="act_releve_exosuf_form"/>
+
+        <!-- Lot -->
+        <record model="ir.ui.view" id="releve_lot_view_tree">
+            <field name="model">releve.lot</field>
+            <field name="type">tree</field>
+            <field name="name">lot_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_lot_view_form">
+            <field name="model">releve.lot</field>
+            <field name="type">form</field>
+            <field name="name">lot_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_lot_form">
+            <field name="name">Lot</field>
+            <field name="res_model">releve.lot</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_lot_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_lot_view_tree"/>
+            <field name="act_window" ref="act_releve_lot_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_lot_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_lot_view_form"/>
+            <field name="act_window" ref="act_releve_lot_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_lot_form" icon="tryton-list" action="act_releve_lot_form"/>
+
+        <!-- Lot loc-->
+        <record model="ir.ui.view" id="releve_lotloc_view_tree">
+            <field name="model">releve.lotloc</field>
+            <field name="type">tree</field>
+            <field name="name">lotloc_tree</field>
+        </record>
+        <record model="ir.ui.view" id="releve_lotloc_view_form">
+            <field name="model">releve.lotloc</field>
+            <field name="type">form</field>
+            <field name="name">lotloc_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_releve_lotloc_form">
+            <field name="name">Lot loc</field>
+            <field name="res_model">releve.lotloc</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_lotloc_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="releve_lotloc_view_tree"/>
+            <field name="act_window" ref="act_releve_lotloc_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_releve_lotloc_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="releve_lotloc_view_form"/>
+            <field name="act_window" ref="act_releve_lotloc_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_releve_batiment" id="menu_releve_lotloc_form" icon="tryton-list" action="act_releve_lotloc_form"/>
+
+	</data>
+</tryton>

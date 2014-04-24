@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="Préconisation des arbres">
+    <notebook colspan="6">
+        <page string="Équipement" id="equipement">             
+            <field name="equipement" mode="tree" view_ids="cg.cg_equipement_view_tree"/>
+        </page>
+        <page string="Unité de gestion" id="ug">             
+            <field name="ug" mode="tree" view_ids="cg.cg_ug_view_tree"/>
+        </page>
+        <page string="General" id="general">
+            <label name="conduite"/> 
+            <field name="conduite"/>
+            <label name="essence"/> 
+            <field name="essence"/>
+        </page>
+    </notebook>
+</form>

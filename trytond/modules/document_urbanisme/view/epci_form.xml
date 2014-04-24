@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="EPCI" col="2">
+    <label name="epci"/>
+    <field name="epci"/>
+    <label name="libepci"/>
+    <field name="libepci"/>
+    <label name="nature"/>
+    <field name="nature"/>                                                                         
+</form>

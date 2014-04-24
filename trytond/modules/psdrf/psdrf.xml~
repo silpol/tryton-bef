@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+    <record model="ir.ui.icon" id="psdrf_icon">
+        <field name="name">tryton-psdrf</field>
+        <field name="path">icons/applications-development.svg</field>
+    </record>
+
+    <record model="ir.ui.icon" id="psdrf_codes">
+        <field name="name">tryton-codes</field>
+        <field name="path">icons/applications-system.svg</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_dispositif_view_tree">
+        <field name="model">psdrf.dispositif</field>
+        <field name="type">tree</field>
+        <field name="name">dispositif_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_dispositif_view_form">
+        <field name="model">psdrf.dispositif</field>
+        <field name="type">form</field>
+        <field name="name">dispositif_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_dispositif_form">
+        <field name="name">Dispositifs</field>
+        <field name="res_model">psdrf.dispositif</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_dispositif_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_dispositif_view_tree"/>
+        <field name="act_window" ref="act_psdrf_dispositif_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_dispositif_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_dispositif_view_form"/>
+        <field name="act_window" ref="act_psdrf_dispositif_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_essence_view_tree">
+        <field name="model">psdrf.essence</field>
+        <field name="type">tree</field>
+        <field name="name">essence_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_essence_view_form">
+        <field name="model">psdrf.essence</field>
+        <field name="type">form</field>
+        <field name="name">essence_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_essence_form">
+        <field name="name">Species</field>
+        <field name="res_model">psdrf.essence</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_essence_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_essence_view_tree"/>
+        <field name="act_window" ref="act_psdrf_essence_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_essence_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_essence_view_form"/>
+        <field name="act_window" ref="act_psdrf_essence_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_essence_taxon_view_tree">
+        <field name="model">psdrf.essence-taxinomie.taxinomie</field>
+        <field name="type">tree</field>
+        <field name="name">essence_taxon_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_essence_taxon_view_form">
+        <field name="model">psdrf.essence-taxinomie.taxinomie</field>
+        <field name="type">form</field>
+        <field name="name">essence_taxon_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_essence_taxon_form">
+        <field name="name">Taxons</field>
+        <field name="res_model">psdrf.essence-taxinomie.taxinomie</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_essence_taxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_essence_taxon_view_tree"/>
+        <field name="act_window" ref="act_psdrf_essence_taxon_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_essence_taxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_essence_taxon_view_form"/>
+        <field name="act_window" ref="act_psdrf_essence_taxon_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_typo_view_tree">
+        <field name="model">psdrf.typo</field>
+        <field name="type">tree</field>
+        <field name="name">typo_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_typo_view_form">
+        <field name="model">psdrf.typo</field>
+        <field name="type">form</field>
+        <field name="name">typo_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_typo_form">
+        <field name="name">Typology</field>
+        <field name="res_model">psdrf.typo</field></record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_typo_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_typo_view_tree"/>
+        <field name="act_window" ref="act_psdrf_typo_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_typo_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_typo_view_form"/>
+        <field name="act_window" ref="act_psdrf_typo_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_rot_view_tree">
+       <field name="model">psdrf.rot</field>
+       <field name="type">tree</field>
+       <field name="name">rot_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_rot_view_form">
+       <field name="model">psdrf.rot</field>
+       <field name="type">form</field>
+       <field name="name">rot_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_rot_form">
+        <field name="name">Rot</field>
+        <field name="res_model">psdrf.rot</field></record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_rot_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_rot_view_tree"/>
+        <field name="act_window" ref="act_psdrf_rot_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_rot_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_rot_view_form"/>
+        <field name="act_window" ref="act_psdrf_rot_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_bark_view_tree">
+        <field name="model">psdrf.bark</field>
+        <field name="type">tree</field>
+        <field name="name">bark_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_bark_view_form">
+        <field name="model">psdrf.bark</field>
+        <field name="type">form</field>
+        <field name="name">bark_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_bark_form">
+        <field name="name">Bark</field>
+        <field name="res_model">psdrf.bark</field></record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_bark_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_bark_view_tree"/>
+        <field name="act_window" ref="act_psdrf_bark_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_bark_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_bark_view_form"/>
+        <field name="act_window" ref="act_psdrf_bark_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_plot_view_tree">
+        <field name="model">psdrf.plot</field>
+        <field name="type">tree</field>
+        <field name="name">plot_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_plot_view_form">
+        <field name="model">psdrf.plot</field>
+        <field name="type">form</field>
+        <field name="name">plot_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_plot_form">
+        <field name="name">Plot</field>
+        <field name="res_model">psdrf.plot</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_plot_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_plot_view_tree"/>
+        <field name="act_window" ref="act_psdrf_plot_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_plot_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_plot_view_form"/>
+        <field name="act_window" ref="act_psdrf_plot_form"/>
+    </record>
+
+    <record model="ir.action.report" id="report_plot_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">psdrf.plot</field>
+        <field name="report_name">psdrf.plot.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_plot_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">psdrf.plot,-1</field>
+        <field name="action" ref="report_plot_edit"/>
+    </record> 
+
+   <record model="ir.ui.view" id="ecologie_view_form">
+        <field name="model">psdrf.ecologie</field>
+        <field name="type">form</field>
+        <field name="name">ecologie_tree</field>
+    </record>
+    <record model="ir.ui.view" id="ecologie_view_tree">
+        <field name="model">psdrf.ecologie</field>
+        <field name="type">tree</field>
+        <field name="field_childs">childs</field>
+        <field name="name">ecologie_form</field>
+    </record>
+    <record model="ir.ui.view" id="ecologie_view_list">
+        <field name="model">psdrf.ecologie</field>
+        <field name="type">tree</field>
+        <field name="priority" eval="10"/>
+        <field name="name">ecologie_list</field>
+    </record>
+    <record model="ir.action.act_window" id="act_ecologie_tree">
+        <field name="name">Ecology</field>
+        <field name="res_model">psdrf.ecologie</field>
+        <field name="domain">[('parent', '=', False)]</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_ecologie_tree_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ecologie_view_tree"/>
+        <field name="act_window" ref="act_ecologie_tree"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_ecologie_tree_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ecologie_view_form"/>
+        <field name="act_window" ref="act_ecologie_tree"/>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ecologie_list">
+        <field name="name">Ecology</field>
+        <field name="res_model">psdrf.ecologie</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_ecologie_list_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ecologie_view_list"/>
+        <field name="act_window" ref="act_ecologie_list"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_ecologie_list_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ecologie_view_form"/>
+        <field name="act_window" ref="act_ecologie_list"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_cycle_view_tree">
+        <field name="model">psdrf.cycle</field>
+        <field name="type">tree</field>
+        <field name="name">cycle_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_cycle_view_form">
+        <field name="model">psdrf.cycle</field>
+        <field name="type">form</field>
+        <field name="name">cycle_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_cycle_form">
+        <field name="name">Cycles</field>
+        <field name="res_model">psdrf.cycle</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_cycle_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_cycle_view_tree"/>
+        <field name="act_window" ref="act_psdrf_cycle_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_cycle_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_cycle_view_form"/>
+        <field name="act_window" ref="act_psdrf_cycle_form"/>
+    </record>
+
+	<record model="ir.ui.view" id="measure_view_tree">
+        <field name="model">psdrf.measure</field>
+        <field name="type">tree</field>
+        <field name="name">measure_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="measure_view_form">
+        <field name="model">psdrf.measure</field>
+        <field name="type">form</field>
+        <field name="name">measure_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_measure_form">
+        <field name="name">Tree evolution</field>
+        <field name="res_model">psdrf.measure</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_measure_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="measure_view_tree"/>
+        <field name="act_window" ref="act_measure_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_measure_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="measure_view_form"/>
+        <field name="act_window" ref="act_measure_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="view_tree_psdrf_stand_tree">
+        <field name="model">psdrf.stand_tree</field>
+        <field name="type">tree</field>
+        <field name="name">stand_tree_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="view_form_psdrf_stand_tree">
+        <field name="model">psdrf.stand_tree</field>
+        <field name="type">form</field>
+        <field name="name">stand_tree_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_stand_tree">
+        <field name="name">Trees</field>
+        <field name="res_model">psdrf.stand_tree</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_view_psdrf_stand_tree_tree">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="view_tree_psdrf_stand_tree"/>
+        <field name="act_window" ref="act_psdrf_stand_tree"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_view_psdrf_stand_tree_form">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="view_form_psdrf_stand_tree"/>
+        <field name="act_window" ref="act_psdrf_stand_tree"/>
+    </record>
+
+    <record model="ir.ui.view" id="arbres_measure_coarse_view_tree">
+        <field name="model">psdrf.measure_coarse</field>
+        <field name="type">tree</field>
+        <field name="name">measure_coarse_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="arbres_measure_coarse_view_form">
+        <field name="model">psdrf.measure_coarse</field>
+        <field name="type">form</field>
+        <field name="name">measure_coarse_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_arbres_measure_coarse_form">
+        <field name="name">Tree evolution</field>
+        <field name="res_model">psdrf.measure_coarse</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_arbres_measure_coarse_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="arbres_measure_coarse_view_tree"/>
+        <field name="act_window" ref="act_arbres_measure_coarse_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_arbres_measure_coarse_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="arbres_measure_coarse_view_form"/>
+        <field name="act_window" ref="act_arbres_measure_coarse_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_coarse_view_tree">
+        <field name="model">psdrf.coarse</field>
+        <field name="type">tree</field>
+        <field name="name">coarse_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_coarse_view_form">
+        <field name="model">psdrf.coarse</field>
+        <field name="type">form</field>
+        <field name="name">coarse_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_coarse_form">
+        <field name="name">Diameter &gt;= 30cm</field>
+        <field name="res_model">psdrf.coarse</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_coarse_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_coarse_view_tree"/>
+        <field name="act_window" ref="act_psdrf_coarse_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_coarse_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_coarse_view_form"/>
+        <field name="act_window" ref="act_psdrf_coarse_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_transect_view_tree">
+        <field name="model">psdrf.transect</field>
+        <field name="type">tree</field>
+        <field name="name">transect_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_transect_view_form">
+        <field name="model">psdrf.transect</field>
+        <field name="type">form</field>
+        <field name="name">transect_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_transect_form">
+        <field name="name">Diameter &lt; 30cm</field>
+        <field name="res_model">psdrf.transect</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_transect_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_transect_view_tree"/>
+        <field name="act_window" ref="act_psdrf_transect_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_transect_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_transect_view_form"/>
+        <field name="act_window" ref="act_psdrf_transect_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_regeneration_view_tree">
+        <field name="model">psdrf.regeneration</field>
+        <field name="type">tree</field>
+        <field name="name">regeneration_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_regeneration_view_form">
+        <field name="model">psdrf.regeneration</field>
+        <field name="type">form</field>
+        <field name="name">regeneration_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_regeneration_form">
+        <field name="name">Regeneration</field>
+        <field name="res_model">psdrf.regeneration</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_regeneration_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_regeneration_view_tree"/>
+        <field name="act_window" ref="act_psdrf_regeneration_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_regeneration_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_regeneration_view_form"/>
+        <field name="act_window" ref="act_psdrf_regeneration_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_tarif_view_tree">
+        <field name="model">psdrf.tarif</field>
+        <field name="type">tree</field>
+        <field name="name">tarif_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_tarif_view_form">
+        <field name="model">psdrf.tarif</field>
+        <field name="type">form</field>
+        <field name="name">tarif_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_psdrf_tarif_form">
+        <field name="name">Tarif</field>
+        <field name="res_model">psdrf.tarif</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_tarif_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_tarif_view_tree"/>
+        <field name="act_window" ref="act_psdrf_tarif_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_tarif_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_tarif_view_form"/>
+        <field name="act_window" ref="act_psdrf_tarif_form"/>
+    </record>    
+
+    <record model="ir.action.act_window" id="act_psdrf_measure_psdrf_ecologie_rel_form">
+        <field name="name">Ecological code</field>
+        <field name="res_model">psdrf.measure-psdrf.ecologie</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_measure_psdrf_ecologie_rel_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="psdrf_measure_psdrf_ecologie_rel_view_tree"/>
+        <field name="act_window" ref="act_psdrf_measure_psdrf_ecologie_rel_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_psdrf_measure_psdrf_ecologie_rel_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="psdrf_measure_psdrf_ecologie_rel_view_form"/>
+        <field name="act_window" ref="act_psdrf_measure_psdrf_ecologie_rel_form"/>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_measure_psdrf_ecologie_rel_view_tree">
+        <field name="model">psdrf.measure-psdrf.ecologie</field>
+        <field name="type">tree</field>
+        <field name="name">qualite_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="psdrf_measure_psdrf_ecologie_rel_view_form">
+        <field name="model">psdrf.measure-psdrf.ecologie</field>
+        <field name="type">form</field>
+        <field name="name">qualite_form</field>
+    </record>
+
+    <!-- surface terriere -->
+    <record model="ir.ui.view" id="surface_terriere_tree">
+        <field name="type">tree</field>
+        <field name="model">psdrf.surface_terriere</field>
+        <field name="name">surface_terriere_tree</field>
+    </record>
+    <record model="ir.ui.view" id="surface_terriere_graph">
+        <field name="type">graph</field>
+        <field name="model">psdrf.surface_terriere</field>
+        <field name="name">surface_terriere_graph</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_surface_terriere">
+        <field name="name">Basal area</field>
+        <field name="res_model">psdrf.surface_terriere</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_surface_terriere_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="surface_terriere_tree"/>
+        <field name="act_window" ref="act_surface_terriere"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_surface_terriere_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="surface_terriere_graph"/>
+        <field name="act_window" ref="act_surface_terriere"/>
+    </record>
+
+    <record model="ir.ui.view" id="surface_terriere_open_start_view_form">
+        <field name="model">psdrf.surface_terriere.open.start</field>
+        <field name="type">form</field>
+        <field name="name">surface_terriere_open_start</field>
+    </record>
+
+    <record model="ir.action.wizard" id="act_open_g">
+        <field name="name">Basal area</field>
+        <field name="wiz_name">psdrf.surface_terriere.open</field>
+    </record>
+
+    <!-- surfaces terrieres -->
+    <record model="ir.ui.view" id="surfaces_terrieres_tree">
+        <field name="type">tree</field>
+        <field name="model">psdrf.surface_terriere</field>
+        <field name="name">surface_terrieres_tree</field>
+    </record>
+    <record model="ir.ui.view" id="surfaces_terrieres_graph">
+        <field name="type">graph</field>
+        <field name="model">psdrf.surface_terriere</field>
+        <field name="name">surface_terrieres_graph</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_surfaces_terrieres">
+        <field name="name">Basal areas</field>
+        <field name="res_model">psdrf.surface_terriere</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_surfaces_terrieres_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="surfaces_terrieres_tree"/>
+        <field name="act_window" ref="act_surfaces_terrieres"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_surfaces_terrieres_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="surfaces_terrieres_graph"/>
+        <field name="act_window" ref="act_surfaces_terrieres"/>
+    </record>
+
+    <record model="ir.ui.view" id="surfaces_terrieres_open_start_view_form">
+        <field name="model">psdrf.surfaces_terrieres.open.start</field>
+        <field name="type">form</field>
+        <field name="name">surface_terrieres_start_open</field>
+    </record>
+
+    <record model="ir.action.wizard" id="act_open_gs">
+        <field name="name">Basal areas</field>
+        <field name="wiz_name">psdrf.surfaces_terrieres.open</field>
+    </record>
+
+    <!-- Comparatif Surface Terriere -->
+
+    <record model="ir.ui.view" id="dynamic_view">
+        <field name="model"></field>
+        <field name="type">board</field>
+        <field name="name">comparaison_surface_terriere_board</field>
+    </record>
+
+    <!--
+    <record model="ir.ui.view" id="surface_terriere_cmp_view_graph">
+        <field name="model">psdrf.surface_terriere_cmp</field>
+        <field name="type">graph</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <graph string="Comparaison surfaces terrieres" type="vbar">
+                <x>
+                    <field name="classe" />
+                </x>
+                <y>
+                    <field name="g" />
+                </y>
+            </graph>
+            ]]>
+        </field>
+    </record>
+    -->
+
+    <record model="ir.action.act_window" id="act_surface_terriere_cmp">
+        <field name="name">Comparaison surfaces terrieres</field>
+        <field name="res_model"></field>
+        <field name="type">ir.action.act_window</field>
+        <!--<field name="res_model">psdrf.surface_terriere</field>-->
+        <!--<field name="domain" eval="'[(\'parent\', \'=\', Get(Eval(\'_active_%s\', {}), \'id\', False))]' % ref('act_work_tree2')"/>-->
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_surface_terriere_cmp_view">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="dynamic_view"/>
+        <!--<field name="view" ref="surface_terriere_cmp_view_graph"/>-->
+        <field name="act_window" ref="act_surface_terriere_cmp"/>
+    </record>
+
+
+    <!--
+    <record model="ir.ui.view" id="surface_terriere_cmp_board">
+        <field name="type">board</field>
+        <field name="model"></field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <board string="Comparaison surfaces terrieres">
+                <hpaned id="panel_surface_terriere_cmp">
+                    <child id="graph">
+                        <action name="%(act_surface_terriere_cmp)s"/>
+                    </child>
+                    <child id="graph">
+                        <action name="%(act_surface_terriere_cmp)s"/>
+                    </child>
+                </hpaned>
+            </board>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.action.act_window" id="act_surface_terriere_cmp_board">
+        <field name="name">Comparaison surfaces terrieres</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_surface_terriere_cmp_board_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="surface_terriere_cmp_board"/>
+        <field name="act_window" ref="act_surface_terriere_cmp_board"/>
+    </record>
+    -->
+    <record model="ir.ui.view" id="surface_terriere_cmp_open_start_view_form">
+        <field name="model">psdrf.surface_terriere_cmp.open.start</field>
+        <field name="type">form</field>
+        <field name="name">comparaison_surface_terriere_open_start</field>
+    </record>
+
+    <record model="ir.action.wizard" id="act_open_g_cmp">
+        <field name="name">Comparing basal areas</field>
+        <field name="wiz_name">psdrf.surface_terriere_cmp.open</field>
+    </record>
+
+    <!-- surface terriere diametre -->
+    <record model="ir.ui.view" id="surface_terriere_diametre_tree">
+        <field name="type">tree</field>
+        <field name="model">psdrf.surface_terriere_diametre</field>
+        <field name="name">diametre_surface_terriere_tree</field>
+    </record>
+    <record model="ir.ui.view" id="surface_terriere_diametre_graph">
+        <field name="type">graph</field>
+        <field name="model">psdrf.surface_terriere_diametre</field>
+        <field name="name">diametre_surface_terriere_graph</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_surface_terriere_diametre">
+        <field name="name">Basal area by diameter class</field>
+        <field name="res_model">psdrf.surface_terriere_diametre</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_surface_terriere_diametre_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="surface_terriere_diametre_tree"/>
+        <field name="act_window" ref="act_surface_terriere_diametre"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_surface_terriere_diametre_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="surface_terriere_diametre_graph"/>
+        <field name="act_window" ref="act_surface_terriere_diametre"/>
+    </record>
+
+    <record model="ir.ui.view" id="surface_terriere_diametre_open_start_view_form">
+        <field name="model">psdrf.surface_terriere_diametre.open.start</field>
+        <field name="type">form</field>
+        <field name="name">diametre_surface_terriere_open_start</field>
+    </record>
+
+    <record model="ir.action.wizard" id="act_open_g_diametre">
+        <field name="name">Basal area by diameter class</field>
+        <field name="wiz_name">psdrf.surface_terriere_diametre.open</field>
+    </record>
+
+    <menuitem name="Protocole" id="menu_psdrf" icon="tryton-psdrf"/>
+
+    <menuitem parent="menu_psdrf" sequence="1" id="menu_psdrf_codes" name="Codes" icon="tryton-codes"/>
+    <menuitem parent="menu_psdrf" sequence="2" id="menu_psdrf_dispositif_form" icon="tryton-list" action="act_psdrf_dispositif_form"/>
+
+    <menuitem parent="menu_psdrf_codes" sequence="1" id="menu_psdrf_essence" icon="tryton-list" action="act_psdrf_essence_form"/>
+    <menuitem parent="menu_psdrf_codes" sequence="2" id="menu_psdrf_typo_form" icon="tryton-list" action="act_psdrf_typo_form"/>
+    <menuitem parent="menu_psdrf_codes" sequence="3" id="menu_psdrf_rot_form" icon="tryton-list" action="act_psdrf_rot_form"/>
+    <menuitem parent="menu_psdrf_codes" sequence="4" id="menu_psdrf_bark_form" icon="tryton-list" action="act_psdrf_bark_form"/>
+    <menuitem parent="menu_psdrf_codes" sequence="5" id="menu_ecologie_tree" icon="tryton-list" action="act_ecologie_tree"/>
+    <menuitem parent="menu_ecologie_tree" sequence="1" id="menu_ecologie_list" icon="tryton-list" action="act_ecologie_list"/>
+    <menuitem parent="menu_psdrf_codes" sequence="6" id="menu_psdrf_tarif_form" icon="tryton-list" action="act_psdrf_tarif_form"/>
+
+    <menuitem parent="menu_psdrf_essence" sequence="1" id="menu_psdrf_essence_taxon" icon="tryton-list" action="act_psdrf_essence_taxon_form"/>
+
+    <menuitem parent="menu_psdrf" sequence="3" id="menu_psdrf_cycle_form" icon="tryton-list" action="act_psdrf_cycle_form"/>
+    <menuitem parent="menu_psdrf" sequence="4" id="menu_psdrf_plot_form" icon="tryton-list" action="act_psdrf_plot_form"/>
+    <menuitem parent="menu_psdrf" sequence="5" id="menu_psdrf_stand_tree_form" icon="tryton-list" action="act_psdrf_stand_tree"/>
+    <!-- TODO
+    <menuitem parent="menu_psdrf" sequence="6" id="menu_psdrf_stand_tree_form" icon="tryton-list" action="act_psdrf_stand_tree_vivant" />
+    -->
+    <menuitem parent="menu_psdrf" sequence="6" id="menu_psdrf_bois_mort" icon="tryton-list" name="Coarse" />
+    <!--
+    <menuitem parent="menu_psdrf_bois_mort" sequence="1" id="menu_psdrf_bois_mort_sur_pied" icon="tryton-list" action="act_psdrf_stand_tree_mort" />
+    -->
+    <menuitem parent="menu_psdrf_bois_mort" sequence="2" id="menu_psdrf_bois_mort_au_sol" icon="tryton-list" name="Downed dead wood" />
+
+    <menuitem parent="menu_psdrf_bois_mort_au_sol" sequence="1" id="menu_psdrf_bois_mort_coarse" icon="tryton-list" action="act_psdrf_coarse_form" />
+    <menuitem parent="menu_psdrf_bois_mort_au_sol" sequence="2" id="menu_psdrf_transect_form" icon="tryton-list" action="act_psdrf_transect_form"/>
+
+    <menuitem parent="menu_psdrf" sequence="7" id="menu_psdrf_regeneration_form" icon="tryton-list" action="act_psdrf_regeneration_form"/>
+    <menuitem parent="menu_psdrf" sequence="8" id="menu_psdrf_rapports" name="Reports" icon="tryton-graph"/>
+
+    <menuitem parent="menu_psdrf_rapports" sequence="1" action="act_open_g" id="menu_open_g" icon="tryton-graph" />
+    <menuitem parent="menu_psdrf_rapports" sequence="2" action="act_open_gs" id="menu_open_gs" icon="tryton-graph" />
+    <menuitem parent="menu_psdrf_rapports" sequence="3" action="act_open_g_diametre" id="menu_open_g_diametre" icon="tryton-graph" />
+    <menuitem parent="menu_psdrf_rapports" sequence="4" action="act_open_g_cmp" id="menu_open_g_cmp" icon="tryton-graph" />
+
+    </data>
+</tryton>

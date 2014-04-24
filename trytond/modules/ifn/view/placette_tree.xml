@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<tree string="Plot">
+    <field name="idp" />
+    <field name="dep" />
+    <field name="csa" />
+    <field name="uta1" />
+    <field name="uta2" />
+    <field name="tm2" />
+    <field name="plisi" />
+    <field name="elisi" />
+    <field name="incid" />
+    <field name="peupnr" />
+    <field name="dc" />
+    <field name="dcespar1" />
+    <field name="dcespar2" />
+    <field name="tplant" />
+    <field name="dist" />
+    <field name="iti" />
+    <field name="pentexp" />
+    <field name="portance" />
+    <field name="asperite" />
+    <field name="cac" />
+</tree>

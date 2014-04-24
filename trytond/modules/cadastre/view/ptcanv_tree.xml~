@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Point de canevas">
+    <field name="idu" />				    
+    <field name="tex" />
+    <field name="subdsect" />
+</tree>

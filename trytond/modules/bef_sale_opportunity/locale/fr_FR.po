@@ -1,0 +1,176 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstétar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:bef_sale_opportunity.contact,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:bef_sale_opportunity.contact,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:bef_sale_opportunity.contact,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:bef_sale_opportunity.contact,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:bef_sale_opportunity.contact,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:bef_sale_opportunity.contact,directline:"
+msgid "Direct Line"
+msgstr "Ligne directe"
+
+msgctxt "field:bef_sale_opportunity.contact,fonction:"
+msgid "Fonction"
+msgstr "Fonction"
+
+msgctxt "field:bef_sale_opportunity.contact,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:bef_sale_opportunity.contact,lastname:"
+msgid "Last Name"
+msgstr "Prénom"
+
+msgctxt "field:bef_sale_opportunity.contact,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:bef_sale_opportunity.contact,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:bef_sale_opportunity.contact,portable:"
+msgid "Portable"
+msgstr "Portable"
+
+msgctxt "field:bef_sale_opportunity.contact,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:bef_sale_opportunity.contact,standard:"
+msgid "Standard"
+msgstr "Standard"
+
+msgctxt "field:bef_sale_opportunity.contact,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:bef_sale_opportunity.contact,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:sale.opportunity,contacts:"
+msgid "Contacts"
+msgstr "Contacts"
+
+msgctxt "field:sale.opportunity,icon:"
+msgid "icon"
+msgstr "icône"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,comment:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,opportunity:"
+msgid "Opportunity"
+msgstr "Opportunité"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:sale.opportunity-bef_sale_opportunity.contact,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "model:bef_sale_opportunity.contact,name:"
+msgid "Sale Opportunity Contact"
+msgstr "Contact"
+
+msgctxt "model:ir.action,name:act_bef_sale_opportunity_form"
+msgid "Comments"
+msgstr "Gestion des contacts"
+
+msgctxt "model:ir.ui.menu,name:menu_bef_sale_opportunity_form"
+msgid "Comments"
+msgstr "Gestion des contacts"
+
+msgctxt "model:sale.opportunity-bef_sale_opportunity.contact,name:"
+msgid "Opportunity - Contact"
+msgstr "Opportunités - Contact"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Client"
+msgstr "Client"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Moins urgent"
+msgstr "Moins urgent"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Propale en cours"
+msgstr "Propale en cours"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Rebut"
+msgstr "Rebut"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Rebut momentane"
+msgstr "Rebut momentané"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Urgent"
+msgstr "Urgent"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Vivier"
+msgstr "Vivier"
+
+msgctxt "selection:bef_sale_opportunity.contact,code:"
+msgid "Vivier qualifie"
+msgstr "Vivier qualifié"
+
+msgctxt "view:bef_sale_opportunity.contact:"
+msgid "Comment"
+msgstr "Gestion des contacts"
+
+msgctxt "view:sale.opportunity:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:sale.opportunity:"
+msgid "Contacts"
+msgstr "Contacts"

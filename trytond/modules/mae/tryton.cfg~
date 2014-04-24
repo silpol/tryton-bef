@@ -1,0 +1,20 @@
+[tryton]
+version=1.0
+depends:
+    ir
+    res
+    party
+    country
+    commune
+    google_maps    
+    town_fr
+    town_fr_geo
+    map
+    geotools
+    qgis
+    wfs
+    address_fr
+    protection
+    taxinomie
+xml:
+    mae.xml    

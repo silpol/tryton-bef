@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form string="Diagnostic - Taxinomie mammifères">
+    <label name="taxinomie"/>
+    <field name="taxinomie"/>
+    <newline/>
+    <label name="indice"/> 
+    <field name="indice"/>
+    <label name="observation"/> 
+    <field name="observation"/>
+    <label name="photo"/> 
+    <field name="photo"/>
+</form>

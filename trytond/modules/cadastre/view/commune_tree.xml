@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Plot">
+    <field name="idu" />				    
+    <field name="tex2" />
+    <field name="section" />
+    <field name="ptcanv" />
+    <field name="tpoint" />
+    <field name="tline" />
+    <field name="tsurf" />
+    <field name="ecritatt" />
+</tree>

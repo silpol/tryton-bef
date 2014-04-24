@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+		<record model="ir.ui.view" id="lineaire_view_tree">			
+			<field name="model">lineaire.lineaire</field>
+			<field name="type">tree</field>
+			<field name="name">linear_tree</field>
+		</record>
+
+		<record model="ir.ui.view" id="lineaire_view_form">			
+			<field name="model">lineaire.lineaire</field>
+			<field name="type">form</field>
+			<field name="name">linear_form</field>
+		</record>
+		
+		<record model="ir.action.act_window" id="act_lineaire_form">
+			<field name="name">Linear</field>
+			<field name="res_model">lineaire.lineaire</field>						
+		</record>
+		
+		<record model="ir.action.act_window.view" id="act_lineaire_form_view1">
+		    <field name="sequence" eval="10"/>
+		    <field name="view" ref="lineaire_view_tree"/>
+		    <field name="act_window" ref="act_lineaire_form"/>		
+		</record>
+
+		<record model="ir.action.act_window.view" id="act_lineaire_form_view2">
+		    <field name="sequence" eval="20"/>
+		    <field name="view" ref="lineaire_view_form"/>
+		    <field name="act_window" ref="act_lineaire_form"/>		
+		</record>
+
+		<menuitem parent="ir.menu_administration" sequence="100" id="menu_lineaire_form" icon="tryton-list" action="act_lineaire_form"/>
+		
+	</data>
+</tryton>

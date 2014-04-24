@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Basal areas">
+    <field name="essence" />
+    <field name="g_total" />
+    <field name="g_inf30" />
+    <field name="g_sup30" />
+</tree>

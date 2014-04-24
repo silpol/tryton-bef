@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<form string="Zone de communication" col="2">
+    <label name="tex"/>
+    <field name="tex"/>
+    <label name="tex2"/>
+    <field name="tex2"/>
+    <label name="tex3"/>
+    <field name="tex3"/>
+    <label name="tex4"/>
+    <field name="tex4"/>
+    <label name="tex5"/>
+    <field name="tex5"/>
+    <label name="tex6"/>
+    <field name="tex6"/>
+    <label name="tex7"/>
+    <field name="tex7"/>
+    <label name="tex8"/>
+    <field name="tex8"/>
+    <label name="tex9"/>
+    <field name="tex9"/>
+    <label name="tex10"/>
+    <field name="tex10"/>
+    <notebook colspan="2">
+        <page string="MAP" col="1" id="map" >
+            <field name="image" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="zoncommuni_edit" icon="tryton-executable" />
+        </page>
+    </notebook>                   
+</form>

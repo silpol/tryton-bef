@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Tarif">
+    <field name="dispositif" />
+    <field name="essence" />
+    <field name="name" />
+    <field name="number" />
+</tree>

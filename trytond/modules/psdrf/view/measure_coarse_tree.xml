@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Death tree evolution">
+    <field name="cycle" />
+    <field name="base_diam" />
+    <field name="top_diam" />
+    <field name="mid_diam" />
+    <field name="length" />
+    <field name="contact" />
+    <field name="windfall" />
+    <field name="bark_stage" />
+    <field name="rot_stage" />
+    <field name="observation" />
+</tree>

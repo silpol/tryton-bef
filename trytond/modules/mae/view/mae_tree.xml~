@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Mae">
+    <field name="name" />
+    <field name="party" />
+    <field name="commune" />
+    <field name="parcelle" />
+    <field name="surface" />
+    <field name="status" />
+    <field name="diagno" />
+    <field name="active" />
+</tree>

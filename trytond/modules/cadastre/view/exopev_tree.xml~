@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree string="Éxonération de la partie d'évaluation">
+    <field name="codlot" />
+    <field name="invar" />
+    <field name="pev" />
+    <field name="janbil" />
+    <field name="dnupev" />
+    <field name="dnuexb" />
+    <field name="ccolloc" />
+    <field name="pexb" />
+    <field name="gnextl" />
+    <field name="jandeb" />
+    <field name="janimp" />
+    <field name="dvldif2" />
+    <field name="dvldif2a" />
+</tree>

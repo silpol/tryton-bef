@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Laurent Defert
+-->
+<tryton>
+    <data>
+        <!-- Tree qualities -->
+        <record model="ir.ui.view" id="tree_quality_view_tree">
+            <field name="model">wood_variety.tree_quality</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="name"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tree_quality_view_form">
+            <field name="model">wood_variety.tree_quality</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Tree quality" col="2">
+                        <label name="name" />
+                        <field name="name" />
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_tree_quality_form_view">
+            <field name="name">Tree qualities</field>
+            <field name="res_model">wood_variety.tree_quality</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_tree_quality_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tree_quality_view_tree"/>
+            <field name="act_window" ref="act_tree_quality_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_tree_quality_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tree_quality_view_form"/>
+            <field name="act_window" ref="act_tree_quality_form_view"/>
+        </record>
+
+        <menuitem parent="wood_menu.menu_wood_product_configuration" sequence="0" id="menu_tree_quality" icon="tryton-list" action="act_tree_quality_form_view"/>
+
+        <!-- Wood qualities -->
+        <record model="ir.ui.view" id="wood_quality_view_wood">
+            <field name="model">wood_variety.wood_quality</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="name"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wood_quality_view_form">
+            <field name="model">wood_variety.wood_quality</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Wood quality" col="2">
+                        <label name="name" />
+                        <field name="name" />
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_wood_quality_form_view">
+            <field name="name">Wood qualities</field>
+            <field name="res_model">wood_variety.wood_quality</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_wood_quality_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="wood_quality_view_wood"/>
+            <field name="act_window" ref="act_wood_quality_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_wood_quality_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="wood_quality_view_form"/>
+            <field name="act_window" ref="act_wood_quality_form_view"/>
+        </record>
+
+        <menuitem parent="wood_menu.menu_wood_product_configuration" sequence="0" id="menu_wood_quality" icon="tryton-list" action="act_wood_quality_form_view"/>
+    </data>
+</tryton>

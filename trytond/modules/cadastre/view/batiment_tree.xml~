@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Bâtiment">
+    <field name="parcelle" />    
+    <field name="dur" />
+    <field name="tex" />
+</tree>

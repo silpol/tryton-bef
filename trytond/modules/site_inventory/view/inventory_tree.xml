@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="owner" />
+    <field name="date" />
+    <field name="taxon" />
+    <field name="occsol" />
+    <field name="fonction" />
+    <field name="gite" />
+    <field name="conclusion" />
+</tree>

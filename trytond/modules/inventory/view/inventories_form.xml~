@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<form string="Allo voirie" col="6">
+    <notebook>
+        <page string="General" id="general">                            
+            <label name="date" />
+            <field name="date" />
+            <label name="party" />
+            <field name="party" />
+            <label name="typo" />
+            <field name="typo" widget="selection"/>
+            <label name="address" />
+            <field name="address" />
+            <label name="active" />
+            <field name="active" />
+            <notebook>
+                <page string="Comment and Map" id="comment" col="2">
+                    <field name="comment" colspan="2"/>
+                    <field name="image_all" colspan="1" widget="image" img_width="640" img_height="480"/>
+                    <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+                    <button string="Edit" name="lol_edit" icon="tryton-executable" />
+                    <button string="Generate" name="generate" icon="tryton-executable" />
+                </page>
+           </notebook>
+        </page>
+    </notebook>
+</form>

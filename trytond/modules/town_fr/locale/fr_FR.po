@@ -1,0 +1,75 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:town_fr.town_fr:"
+msgid "The subdivion's type must be \"Commune\"."
+msgstr "Le type de la sous-division doit être \"Commune\"."
+
+msgctxt "error:town_fr.town_fr:"
+msgid "The subdivision's country must be France."
+msgstr "Le pays de la sous-division doit être la France."
+
+msgctxt "error:town_fr.town_fr:"
+msgid "The subdivision's parent must be a department."
+msgstr "Le parent de la sous-division doit être un département."
+
+msgctxt "field:town_fr.town_fr,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:town_fr.town_fr,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:town_fr.town_fr,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:town_fr.town_fr,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:town_fr.town_fr,postal_code:"
+msgid "Postal code"
+msgstr "Code postal"
+
+msgctxt "field:town_fr.town_fr,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:town_fr.town_fr,subdivision:"
+msgid "Subdivision"
+msgstr "Sous-division"
+
+msgctxt "field:town_fr.town_fr,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:town_fr.town_fr,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "model:ir.action,name:act_town_fr_form"
+msgid "French towns"
+msgstr "Villes françaises"
+
+msgctxt "model:ir.ui.menu,name:menu_town_fr_form"
+msgid "French towns"
+msgstr "Villes françaises"
+
+msgctxt "model:town_fr.town_fr,name:"
+msgid "French towns"
+msgstr "Villes françaises"
+
+msgctxt "view:town_fr.town_fr:"
+msgid "Department"
+msgstr "Département"
+
+msgctxt "view:town_fr.town_fr:"
+msgid "French town"
+msgstr "Ville française"
+
+msgctxt "view:town_fr.town_fr:"
+msgid "Postal code"
+msgstr "Code postal"

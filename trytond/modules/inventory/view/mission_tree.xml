@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Mission">
+    <field name="name" />
+    <field name="inventory" />
+    <field name="active" />
+</tree>

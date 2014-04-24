@@ -1,0 +1,47 @@
+#coding: utf-8
+"""
+GPLv3
+"""
+
+from trytond.model import ModelView, ModelSQL, fields
+from trytond.pyson import Bool, Eval
+
+__all__ = ['forest']
+
+STATES = {
+    'readonly': ~Eval('active', True),
+}
+DEPENDS = ['active']
+
+
+class foret(ModelSQL, ModelView):
+     u"""Forêts"""
+    __name__ = 'forest.forest
+    _rec_name = 'name'
+
+
+    identifiant = fields.Char(
+            string = u"""IDENTIFIANT NATIONAL""",
+            required = False,
+            readonly = False,
+        )
+        
+    categories = fields.Many2Many('party.party-party.category',
+        'party', 'category', 'Categories', states=STATES, depends=DEPENDS)
+        
+    active = fields.Boolean('Active', select=True)
+
+    name = fields.Char(
+            string = u"""NOM DE LA FORET""",
+            required = False,
+            readonly = False,
+        )
+
+    domanial = fields.Char(
+            string = u"""FORET DOMANIALE""",
+            required = False,
+            readonly = False,
+        )
+
+    geom = fields.MultiPolygon(string=u"""Geometry""", srid=2154,
+            required=False, readonly=False, select=True)

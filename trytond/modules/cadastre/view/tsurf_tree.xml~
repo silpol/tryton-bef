@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Objet surfacique divers">
+    <field name="commune" />
+    <field name="tex" />
+    <field name="sym" />
+</tree>

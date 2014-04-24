@@ -1,0 +1,296 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:placettes.regroupement:"
+msgid ""
+"Invalid regroupement name \"%s\": You can not use \" / \" in name field."
+msgstr ""
+"Nom du regroupement \"%s\" invalide : vous ne pouvez pas utiliser \"/ \" "
+"dans le nom du champ."
+
+msgctxt "error:placettes.regroupement:"
+msgid "The name of a regroupement must be unique by parent."
+msgstr "Le nom du regroupement doit être unique par parent."
+
+msgctxt "field:placettes.placettes,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:placettes.placettes,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:placettes.placettes,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:placettes.placettes,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:placettes.placettes,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:placettes.placettes,image_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:placettes.placettes,image_map:"
+msgid "Image map"
+msgstr "Carte"
+
+msgctxt "field:placettes.placettes,pla_comment:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "field:placettes.placettes,pla_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:placettes.placettes,pla_num:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:placettes.placettes,pla_regroupement:"
+msgid "Group"
+msgstr "Groupe"
+
+msgctxt "field:placettes.placettes,pla_slope:"
+msgid "Slope"
+msgstr "Pente"
+
+msgctxt "field:placettes.placettes,pla_slopeval:"
+msgid "Value"
+msgstr "Valeur"
+
+msgctxt "field:placettes.placettes,pla_strate:"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "field:placettes.placettes,pla_weight:"
+msgid "Weight"
+msgstr "Poids"
+
+msgctxt "field:placettes.placettes,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:placettes.placettes,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:placettes.placettes,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,placettes:"
+msgid "Plot"
+msgstr "Placettes"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,regroupement:"
+msgid "Group"
+msgstr "Groupe"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:placettes.placettes-placettes.regroupement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:placettes.regroupement,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:placettes.regroupement,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:placettes.regroupement,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:placettes.regroupement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:placettes.regroupement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:placettes.regroupement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:placettes.regroupement,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:placettes.regroupement,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:placettes.regroupement,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:placettes.regroupement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:placettes.regroupement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:placettes.regroupement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:placettes.placettes,geom:"
+msgid "Geometry point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:placettes.placettes,pla_comment:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "help:placettes.placettes,pla_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:placettes.placettes,pla_num:"
+msgid "Plot number"
+msgstr "Nombre de placette"
+
+msgctxt "help:placettes.placettes,pla_regroupement:"
+msgid "Group"
+msgstr "Groupe"
+
+msgctxt "help:placettes.placettes,pla_slope:"
+msgid "Plot slope"
+msgstr "Pente de la placette"
+
+msgctxt "help:placettes.placettes,pla_slopeval:"
+msgid "Plot slope value"
+msgstr "Valeur de la pente"
+
+msgctxt "help:placettes.placettes,pla_strate:"
+msgid "Strate"
+msgstr "Strate"
+
+msgctxt "help:placettes.placettes,pla_weight:"
+msgid "Plot weight"
+msgstr "Poids de la palcette"
+
+msgctxt "help:placettes.regroupement,code:"
+msgid "Code : Do not put a space character in the code"
+msgstr ""
+"Code : vous ne pouvez pas utiliser d'espace dans le code du regroupement"
+
+msgctxt "help:placettes.regroupement,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "model:ir.action,name:act_placettes_form"
+msgid "Plot"
+msgstr "Placettes"
+
+msgctxt "model:ir.action,name:act_placettes_regroupement_list"
+msgid "Group code"
+msgstr "Code de regroupement"
+
+msgctxt "model:ir.action,name:act_placettes_regroupement_tree"
+msgid "Group code"
+msgstr "Code de regroupement"
+
+msgctxt "model:ir.action,name:report_placettes_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_placettes_form"
+msgid "Plot"
+msgstr "Placettes"
+
+msgctxt "model:ir.ui.menu,name:menu_placettes_regroupement_list"
+msgid "Group code"
+msgstr "Regroupement"
+
+msgctxt "model:ir.ui.menu,name:menu_placettes_regroupement_tree"
+msgid "Group code"
+msgstr "Regroupement"
+
+msgctxt "model:ir.ui.menu,name:menu_plots"
+msgid "Plots"
+msgstr "Placettes"
+
+msgctxt "model:placettes.placettes,name:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "model:placettes.placettes-placettes.regroupement,name:"
+msgid "PlacettesRegroupement"
+msgstr "Placettes - Regroupement"
+
+msgctxt "model:placettes.regroupement,name:"
+msgid "Regroupement"
+msgstr "Regroupement"
+
+msgctxt "view:placettes.placettes:"
+msgid "Comment"
+msgstr "Commentaires"
+
+msgctxt "view:placettes.placettes:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:placettes.placettes:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:placettes.placettes:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:placettes.placettes:"
+msgid "Group"
+msgstr "Groupe"
+
+msgctxt "view:placettes.placettes:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:placettes.placettes:"
+msgid "Plot"
+msgstr "Placettes"
+
+msgctxt "view:placettes.regroupement:"
+msgid "Regroupement"
+msgstr "Regroupement"

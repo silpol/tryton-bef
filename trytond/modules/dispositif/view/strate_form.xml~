@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form string="Strate">
+    <label name="dispositif"/>
+    <field name="dispositif"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="name"/>
+    <field name="name"/>
+    <newline/>
+    <label name="lib_long"/>
+    <field name="lib_long" colspan="3"/>                   
+</form>

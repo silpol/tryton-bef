@@ -1,0 +1,448 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:inventory.inventory,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.inventory,comment:"
+msgid "Commentaires"
+msgstr "Commentaires"
+
+msgctxt "field:inventory.inventory,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.inventory,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.inventory,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:inventory.inventory,forest:"
+msgid "Forest"
+msgstr "Forêts"
+
+msgctxt "field:inventory.inventory,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.inventory,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.inventory,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.inventory,image_filename:"
+msgid "Filename"
+msgstr "Nom du fichier"
+
+msgctxt "field:inventory.inventory,image_map:"
+msgid "Image map"
+msgstr "Image"
+
+msgctxt "field:inventory.inventory,mission:"
+msgid "Mission"
+msgstr "Mission"
+
+msgctxt "field:inventory.inventory,name:"
+msgid "Name of inventory"
+msgstr "Inventaire"
+
+msgctxt "field:inventory.inventory,party:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:inventory.inventory,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:inventory.inventory,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.inventory,species:"
+msgid "Species"
+msgstr "Espèce"
+
+msgctxt "field:inventory.inventory,town:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:inventory.inventory,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.inventory,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.mission,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.mission,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.mission,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.mission,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.mission,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.mission,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.mission,image_filename:"
+msgid "Filename"
+msgstr "Nom du fichier"
+
+msgctxt "field:inventory.mission,image_map:"
+msgid "Image map"
+msgstr "Image"
+
+msgctxt "field:inventory.mission,inventory:"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "field:inventory.mission,name:"
+msgid "Name of mission"
+msgstr "Mission"
+
+msgctxt "field:inventory.mission,parcelle_filename:"
+msgid "Filename"
+msgstr "Nom du fichier"
+
+msgctxt "field:inventory.mission,parcelle_map:"
+msgid "Parcelle map"
+msgstr "Carte de la parcelle"
+
+msgctxt "field:inventory.mission,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.mission,situation_filename:"
+msgid "Filename"
+msgstr "Nom du fichier"
+
+msgctxt "field:inventory.mission,situation_map:"
+msgid "Situation map"
+msgstr "Carte de situation"
+
+msgctxt "field:inventory.mission,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.mission,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.species,code:"
+msgid "Code species to identify"
+msgstr "Code de l'espèce à identifier"
+
+msgctxt "field:inventory.species,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.species,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.species,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.species,lib_long:"
+msgid "Long name of species"
+msgstr "Nom de l'espèce"
+
+msgctxt "field:inventory.species,name:"
+msgid "Short name of species"
+msgstr "Libellé de l'espèce"
+
+msgctxt "field:inventory.species,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.species,taxon:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:inventory.species,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.species,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:inventory.inventory,comment:"
+msgid "Observation of inventory."
+msgstr "Observation."
+
+msgctxt "help:inventory.inventory,date:"
+msgid "Date of inventory."
+msgstr "Date de l'inventaire."
+
+msgctxt "help:inventory.inventory,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.inventory,mission:"
+msgid "Mission of inventory."
+msgstr "Mission de l'inventaire."
+
+msgctxt "help:inventory.inventory,party:"
+msgid "Contact of inventory."
+msgstr "Contact de l'inventaire."
+
+msgctxt "help:inventory.inventory,species:"
+msgid "Species of inventory"
+msgstr "Espèce de l'inventaire"
+
+msgctxt "help:inventory.species,taxon:"
+msgid "Taxon to identify"
+msgstr "Taxon à identifier"
+
+msgctxt "model:inventory.inventory,name:"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "model:inventory.mission,name:"
+msgid "Mission"
+msgstr "Mission"
+
+msgctxt "model:inventory.species,name:"
+msgid "Species"
+msgstr "Espèce"
+
+msgctxt "model:ir.action,name:act_inventory_form_inventories"
+msgid "Inventories"
+msgstr "Inventaires"
+
+msgctxt "model:ir.action,name:act_inventory_form_lepido"
+msgid "Inventory"
+msgstr "Inventaires (Euphydryas maturna)"
+
+msgctxt "model:ir.action,name:act_inventory_mission_form"
+msgid "Mission"
+msgstr "Mission"
+
+msgctxt "model:ir.action,name:act_inventory_species_form"
+msgid "Species"
+msgstr "Espèce"
+
+msgctxt "model:ir.action,name:report_inventory"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "model:ir.action,name:report_inventory_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_mission"
+msgid "Mission"
+msgstr "Mission"
+
+msgctxt "model:ir.action,name:report_mission_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_inventory"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "model:ir.ui.menu,name:menu_inventory_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_inventory_lepido"
+msgid "Inventory"
+msgstr "Inventaires (Euphydryas maturna)"
+
+msgctxt "model:ir.ui.menu,name:menu_inventory_mission_form"
+msgid "Mission"
+msgstr "Mission"
+
+msgctxt "model:ir.ui.menu,name:menu_inventory_second"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "model:ir.ui.menu,name:menu_inventory_species_form"
+msgid "Species"
+msgstr "Espèce"
+
+msgctxt "odt:inventory.report_inventory:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "Commentaire :"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "D"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "Date :"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "E"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "INVENTAIRES"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "Mission"
+msgstr "Mission"
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "Point :"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "spèce :"
+msgstr ""
+
+msgctxt "odt:inventory.report_inventory:"
+msgid "écouvreur :"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "Commentaires :"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "D"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "Date :"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "E"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "Forêt :"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "MISSIONS"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "Mission :"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "Point"
+msgstr "Point"
+
+msgctxt "odt:inventory.report_mission:"
+msgid "Point d'inventaire"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "spèce :"
+msgstr ""
+
+msgctxt "odt:inventory.report_mission:"
+msgid "écouvreur :"
+msgstr ""
+
+msgctxt "view:inventory.inventory:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:inventory.inventory:"
+msgid "Comment and Map"
+msgstr "Commentaire et carte"
+
+msgctxt "view:inventory.inventory:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.inventory:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.inventory:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.inventory:"
+msgid "Inventories"
+msgstr "Inventaires"
+
+msgctxt "view:inventory.inventory:"
+msgid "Inventory"
+msgstr "Inventaire"
+
+msgctxt "view:inventory.inventory:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.inventory:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:inventory.mission:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.mission:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.mission:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.mission:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.mission:"
+msgid "Mission"
+msgstr "Mission"
+
+msgctxt "view:inventory.species:"
+msgid "Species"
+msgstr "Espèce"

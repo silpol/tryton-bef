@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Inventory"> 
+    <field name="mission" />
+    <field name="name" />                 
+    <field name="date" />
+    <field name="party" />
+    <field name="active" />
+    <field name="species" /> 
+    <field name="abundance"/>               
+    <field name="forest" />
+    <field name="town" />
+    <field name="comment" />
+</tree>

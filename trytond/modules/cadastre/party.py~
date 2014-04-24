@@ -1,0 +1,15 @@
+#coding: utf-8
+"""
+GPLv3
+"""
+
+from trytond.model import ModelView, ModelSQL, fields
+from trytond.pool import PoolMeta, Pool
+
+__metaclass__ = PoolMeta
+
+class party:
+    __name__ = 'party.party'
+
+    parcelles = fields.One2Many('cadastre.parcelle', 'cad_proprietaire_indivision',
+            'Parcelles')

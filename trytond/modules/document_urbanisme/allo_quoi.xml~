@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+   
+        <record model="ir.ui.icon" id="allo_allo">
+            <field name="name">tryton-allo</field>
+            <field name="path">icons/tryton-allo.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_codes">
+            <field name="name">tryton-codes</field>
+            <field name="path">icons/tryton-codes.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_dechets">
+            <field name="name">tryton-dechets</field>
+            <field name="path">icons/tryton-dechets.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_eau_assainissement">
+            <field name="name">tryton-eau_assainissement</field>
+            <field name="path">icons/tryton-eau_assainissement.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_eclairage_public">
+            <field name="name">tryton-eclairage_public</field>
+            <field name="path">icons/tryton-eclairage_public.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_espaces_verts_arbres">
+            <field name="name">tryton-espaces_verts_arbres</field>
+            <field name="path">icons/tryton-espaces_verts_arbres.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_mobilier_urbain">
+            <field name="name">tryton-mobilier_urbain</field>
+            <field name="path">icons/tryton-mobilier_urbain.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_nettoiement">
+            <field name="name">tryton-nettoiement</field>
+            <field name="path">icons/tryton-nettoiement.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_signalisation">
+            <field name="name">tryton-signalisation</field>
+            <field name="path">icons/tryton-signalisation.svg</field>
+        </record>
+        
+        <record model="ir.ui.icon" id="allo_voirie">
+            <field name="name">tryton-voirie</field>
+            <field name="path">icons/tryton-voirie.svg</field>
+        </record>
+
+        <menuitem name="Allo voirie" id="menu_allo_quoi" icon="tryton-allo"/>                    
+        
+        <record model="ir.ui.view" id="allo_quoi_view_tree">
+		    <field name="model">allo_quoi.allo</field>
+		    <field name="type">tree</field>
+		    <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Allo voirie">                    
+                    <field name="date" />
+		            <field name="party" />
+                    <field name="active" />
+                    <field name="typo" />                
+                    <field name="comment" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="allo_quoi_view_form">
+            <field name="model">allo_quoi.allo</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Allo voirie" col="6">
+                    <notebook>
+                        <page string="General" id="general">                            
+                            <label name="date" />
+                            <field name="date" />
+                            <label name="party" />
+                            <field name="party" />
+                            <label name="typo" />
+                            <field name="typo" widget="selection"/>
+                            <label name="address" />
+                            <field name="address" />
+                            <label name="active" />
+                            <field name="active" />
+                            <notebook>
+                                <page string="Comment and Map" id="comment">                                    
+                                    <field name="comment" colspan="6"/>
+                                    <field name="image" colspan="6" widget="image" img_width="640" img_height="480"/>                            
+                                    <button string="Edit" colspan="6" name="lol_edit" icon="tryton-executable" />
+                                </page>
+                           </notebook>
+                        </page>                                               
+                    </notebook>                        
+                </form>
+                ]]>
+            </field>
+        </record>        
+
+        <record model="ir.ui.view" id="allo_quoi_view_form_incident">
+            <field name="model">allo_quoi.allo</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Allo voirie" col="6">
+                    <notebook>
+                        <page string="General" id="general">                            
+                            <label name="date" />
+                            <field name="date" />
+                            <label name="party" />
+                            <field name="party" />
+                            <label name="typo" />
+                            <field name="typo" widget="selection"/>
+                            <label name="address" />
+                            <field name="address" />
+                            <label name="active" />
+                            <field name="active" />
+                            <notebook>
+                                <page string="Comment and Map" id="comment" col="2">
+                                    <field name="comment" colspan="2"/>
+                                    <field name="image_all" colspan="1" widget="image" img_width="640" img_height="480"/>
+                                    <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+                                    <button string="Edit" name="lol_edit" icon="tryton-executable" />
+                                    <button string="Generate" name="generate" icon="tryton-executable" />
+                                </page>
+                           </notebook>
+                        </page>
+                    </notebook>
+                </form>
+                ]]>
+            </field>
+        </record>        
+
+        <record model="ir.action.report" id="report_lol_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">allo_quoi.allo</field>
+            <field name="report_name">allo_quoi.allo.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_lol_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">allo_quoi.allo,-1</field>
+            <field name="action" ref="report_lol_edit"/>
+        </record>        
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_incident">
+            <field name="name">Incidents</field>
+            <field name="res_model">allo_quoi.allo</field>            
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view121">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_incident"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view122">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form_incident"/>
+            <field name="act_window" ref="act_allo_quoi_form_incident"/>
+        </record>
+        
+        <record model="ir.action.report" id="report_allo_quoi">
+            <field name="name">Incidents</field>
+            <field name="model">allo_quoi.allo</field>
+            <field name="report_name">allo_quoi.report_incident</field>
+            <field name="report">allo_quoi/allo_quoi.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_allo_quoi_pro">
+            <field name="keyword">form_print</field>
+            <field name="model">allo_quoi.allo,-1</field>
+            <field name="action" ref="report_allo_quoi"/>
+        </record>
+        
+        <menuitem name="Incidents" id="menu_incident" icon="tryton-allo" action="act_allo_quoi_form_incident"/>
+
+        <record model="ir.action.act_window" id="act_allo_quoi_form_dechets">
+            <field name="name">Déchets</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'dec')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_dechets"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_dechets"/>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_eau_assainissement">
+            <field name="name">Eau assainissement</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'eau')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view3">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_eau_assainissement"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view4">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_eau_assainissement"/>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_eclairage_public">
+            <field name="name">Éclairage public</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'ecl')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view5">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_eclairage_public"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view6">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_eclairage_public"/>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_espaces_verts_arbres">
+            <field name="name">Espaces verts et Arbres</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'arb')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view7">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_espaces_verts_arbres"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view8">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_espaces_verts_arbres"/>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_mobilier_urbain">
+            <field name="name">Mobiler urbain</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'mob')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view9">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_mobilier_urbain"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view10">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_mobilier_urbain"/>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_nettoiement">
+            <field name="name">Nettoiement</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'net')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view11">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_nettoiement"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view12">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_nettoiement"/>
+        </record>                
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_signalisation">
+            <field name="name">Signalisation</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'sig')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view13">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_signalisation"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view14">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_signalisation"/>
+        </record>
+        
+        <record model="ir.action.act_window" id="act_allo_quoi_form_voirie">
+            <field name="name">Voirie</field>
+            <field name="res_model">allo_quoi.allo</field>
+            <field name="domain">['OR', [('typo.code', '=', 'none')], [('typo.code', '=', 'voi')]]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view15">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_form_voirie"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_allo_quoi_form_view16">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_form_voirie"/>
+        </record>
+        
+        <menuitem parent="menu_allo_quoi" id="menu_allo_dechets" icon="tryton-dechets" action="act_allo_quoi_form_dechets"/>
+        <menuitem parent="menu_allo_quoi" id="menu_allo_eau_assainissement" icon="tryton-eau_assainissement" action="act_allo_quoi_form_eau_assainissement"/>
+        <menuitem parent="menu_allo_quoi" id="menu_allo_eclairage_public" icon="tryton-eclairage_public" action="act_allo_quoi_form_eclairage_public"/>
+        <menuitem parent="menu_allo_quoi" id="menu_allo_espaces_verts_arbres" icon="tryton-espaces_verts_arbres" action="act_allo_quoi_form_espaces_verts_arbres"/>
+        <menuitem parent="menu_allo_quoi" id="menu_allo_mobilier_urbain" icon="tryton-mobilier_urbain" action="act_allo_quoi_form_mobilier_urbain"/>
+        <menuitem parent="menu_allo_quoi" id="menu_allo_nettoiement" icon="tryton-nettoiement" action="act_allo_quoi_form_nettoiement"/>
+        <menuitem parent="menu_allo_quoi" id="menu_allo_signalisation" icon="tryton-signalisation" action="act_allo_quoi_form_signalisation"/>
+        <menuitem parent="menu_allo_quoi" id="menu_allo_voirie" icon="tryton-voirie" action="act_allo_quoi_form_voirie"/>
+	
+        <record model="ir.ui.view" id="allo_quoi_typologie_view_tree">
+            <field name="model">allo_quoi.typologie</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Typologie">
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="lib_long" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="allo_quoi_typologie_view_form">
+            <field name="model">allo_quoi.typologie</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Typologie">
+                    <label name="code"/>
+                    <field name="code"/>
+                    <label name="name"/>
+                    <field name="name"/>
+                    <label name="lib_long"/>
+                    <field name="lib_long"/>                   
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_allo_quoi_typologie_form">
+            <field name="name">Typologie</field>
+            <field name="res_model">allo_quoi.typologie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_allo_quoi_typologie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="allo_quoi_typologie_view_tree"/>
+            <field name="act_window" ref="act_allo_quoi_typologie_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_allo_quoi_typologie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="allo_quoi_typologie_view_form"/>
+            <field name="act_window" ref="act_allo_quoi_typologie_form"/>
+        </record>
+        
+        <menuitem parent="ir.menu_administration" id="menu_allo_quoi_typologie_form" icon="tryton-list" action="act_allo_quoi_typologie_form"/>        
+   
+    </data>
+</tryton>

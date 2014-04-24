@@ -1,0 +1,1974 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstétar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:cg.arbre,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:cg.arbre,an:"
+msgid "Année"
+msgstr "Année"
+
+msgctxt "field:cg.arbre,code:"
+msgid "Code arbre"
+msgstr "Code arbre"
+
+msgctxt "field:cg.arbre,compteur:"
+msgid "Compteur"
+msgstr "Compteur"
+
+msgctxt "field:cg.arbre,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.arbre,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.arbre,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:cg.arbre,diametre:"
+msgid "Diamètre"
+msgstr "Diamètre"
+
+msgctxt "field:cg.arbre,emplacement:"
+msgid "Emplacement"
+msgstr "Emplacement"
+
+msgctxt "field:cg.arbre,equipement:"
+msgid "Équipement"
+msgstr "Équipement"
+
+msgctxt "field:cg.arbre,essence:"
+msgid "Essence"
+msgstr "Essence"
+
+msgctxt "field:cg.arbre,evol_arbre:"
+msgid "Evolutions des arbres"
+msgstr "Evolutions des arbres"
+
+msgctxt "field:cg.arbre,fosse:"
+msgid "Fosse"
+msgstr ""
+
+msgctxt "field:cg.arbre,geom:"
+msgid "Geometry"
+msgstr ""
+
+msgctxt "field:cg.arbre,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.arbre,image:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.arbre,image_map:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.arbre,image_map_filename:"
+msgid "Filename"
+msgstr ""
+
+msgctxt "field:cg.arbre,motif:"
+msgid "Motif"
+msgstr ""
+
+msgctxt "field:cg.arbre,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:cg.arbre,plantation:"
+msgid "Plantation"
+msgstr ""
+
+msgctxt "field:cg.arbre,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.arbre,situation:"
+msgid "Situation"
+msgstr ""
+
+msgctxt "field:cg.arbre,station:"
+msgid "Station"
+msgstr ""
+
+msgctxt "field:cg.arbre,ug:"
+msgid "UG"
+msgstr ""
+
+msgctxt "field:cg.arbre,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.arbre,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.arbre-cg.evol_arbre,arbre:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.arbre-cg.evol_arbre,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.arbre-cg.evol_arbre,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.arbre-cg.evol_arbre,evol_arbre:"
+msgid "date"
+msgstr ""
+
+msgctxt "field:cg.arbre-cg.evol_arbre,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.arbre-cg.evol_arbre,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.arbre-cg.evol_arbre,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.arbre-cg.evol_arbre,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,arbre:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,taxon:"
+msgid "nom_complet"
+msgstr ""
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.arbre-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.bilan,code:"
+msgid "Code bilan"
+msgstr ""
+
+msgctxt "field:cg.bilan,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.bilan,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.bilan,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.bilan,lib_long:"
+msgid "Libellé long du bilan"
+msgstr ""
+
+msgctxt "field:cg.bilan,name:"
+msgid "Libellé court du bilan"
+msgstr ""
+
+msgctxt "field:cg.bilan,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.bilan,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.bilan,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.cause,code:"
+msgid "Code cause"
+msgstr ""
+
+msgctxt "field:cg.cause,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.cause,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.cause,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.cause,lib_long:"
+msgid "Libellé long de la cause"
+msgstr ""
+
+msgctxt "field:cg.cause,name:"
+msgid "Libellé court de la cause"
+msgstr ""
+
+msgctxt "field:cg.cause,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.cause,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.cause,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.emplacement,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:cg.emplacement,arbre:"
+msgid "Arbres"
+msgstr ""
+
+msgctxt "field:cg.emplacement,code:"
+msgid "Code emplacement"
+msgstr ""
+
+msgctxt "field:cg.emplacement,coteoppose:"
+msgid "Côté opposé"
+msgstr ""
+
+msgctxt "field:cg.emplacement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.emplacement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.emplacement,equipement:"
+msgid "Équipement"
+msgstr ""
+
+msgctxt "field:cg.emplacement,evol_emplacement:"
+msgid "Evolutions des emplacements"
+msgstr ""
+
+msgctxt "field:cg.emplacement,geom:"
+msgid "Geometry"
+msgstr ""
+
+msgctxt "field:cg.emplacement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.emplacement,image:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.emplacement,image_map:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.emplacement,image_map_filename:"
+msgid "Filename"
+msgstr ""
+
+msgctxt "field:cg.emplacement,numpostal:"
+msgid "Code postal"
+msgstr ""
+
+msgctxt "field:cg.emplacement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.emplacement,station:"
+msgid "Station"
+msgstr ""
+
+msgctxt "field:cg.emplacement,ug:"
+msgid "UG"
+msgstr ""
+
+msgctxt "field:cg.emplacement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.emplacement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.emplacement,x:"
+msgid "X"
+msgstr ""
+
+msgctxt "field:cg.emplacement,y:"
+msgid "Y"
+msgstr ""
+
+msgctxt "field:cg.emplacement,z:"
+msgid "Z"
+msgstr ""
+
+msgctxt "field:cg.emplacement-cg.arbre,arbre:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.emplacement-cg.arbre,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.emplacement-cg.arbre,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.emplacement-cg.arbre,emplacement:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.emplacement-cg.arbre,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.emplacement-cg.arbre,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.emplacement-cg.arbre,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.emplacement-cg.arbre,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,emplacement:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,evol_emplacement:"
+msgid "date"
+msgstr ""
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.emplacement-cg.evol_emplacement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.equipement,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:cg.equipement,code:"
+msgid "Code équipement"
+msgstr ""
+
+msgctxt "field:cg.equipement,coder:"
+msgid "Code de la route"
+msgstr ""
+
+msgctxt "field:cg.equipement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.equipement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.equipement,geom:"
+msgid "Geometry"
+msgstr ""
+
+msgctxt "field:cg.equipement,hierarchie:"
+msgid "Hiérarchisation"
+msgstr ""
+
+msgctxt "field:cg.equipement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.equipement,image:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.equipement,image_map:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.equipement,image_map_filename:"
+msgid "Filename"
+msgstr ""
+
+msgctxt "field:cg.equipement,name:"
+msgid "Nom de la route"
+msgstr ""
+
+msgctxt "field:cg.equipement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.equipement,statut:"
+msgid "Statut"
+msgstr ""
+
+msgctxt "field:cg.equipement,ug:"
+msgid "Unités de gestion"
+msgstr ""
+
+msgctxt "field:cg.equipement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.equipement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.equipement-cg.ug,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.equipement-cg.ug,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.equipement-cg.ug,equipement:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.equipement-cg.ug,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.equipement-cg.ug,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.equipement-cg.ug,ug:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.equipement-cg.ug,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.equipement-cg.ug,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.evol_arbre,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:cg.evol_arbre,arrosage:"
+msgid "Arrosage"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,bilan:"
+msgid "Bilan"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,conduite:"
+msgid "Conduite"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.evol_arbre,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.evol_arbre,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:cg.evol_arbre,diamhoup:"
+msgid "Diamètre du houppier"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,diamtronc:"
+msgid "Diamètre du tronc"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,empmat:"
+msgid "Emplacement"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,environnement:"
+msgid "Environnement"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,grille:"
+msgid "Grille"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,hfut:"
+msgid "Hauteur du fût"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,ht:"
+msgid "ht"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.evol_arbre,larghoupriv:"
+msgid "Largeur riverain"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,larghoupvoie:"
+msgid "Largeur du houppier"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,lignelec:"
+msgid "Ligne électrique"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,mecanique:"
+msgid "Mecanique"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,paysager:"
+msgid "Paysager"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.evol_arbre,sonde:"
+msgid "Sonde"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,surfacepiedarbre:"
+msgid "Surface du pied d'arbre"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,vigueur:"
+msgid "Vigueur"
+msgstr ""
+
+msgctxt "field:cg.evol_arbre,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.evol_arbre,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.evol_emplacement,cause:"
+msgid "Cause"
+msgstr ""
+
+msgctxt "field:cg.evol_emplacement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.evol_emplacement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.evol_emplacement,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:cg.evol_emplacement,diametre:"
+msgid "Diamètre"
+msgstr ""
+
+msgctxt "field:cg.evol_emplacement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.evol_emplacement,indispo:"
+msgid "Indisponible"
+msgstr ""
+
+msgctxt "field:cg.evol_emplacement,nature:"
+msgid "Nature"
+msgstr ""
+
+msgctxt "field:cg.evol_emplacement,observation:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:cg.evol_emplacement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.evol_emplacement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.evol_emplacement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.gestionnaire,code:"
+msgid "Code gestionnaire"
+msgstr ""
+
+msgctxt "field:cg.gestionnaire,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.gestionnaire,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.gestionnaire,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.gestionnaire,lib_long:"
+msgid "Libellé long du gestionnaire"
+msgstr ""
+
+msgctxt "field:cg.gestionnaire,name:"
+msgid "Libellé court du gestionnaire"
+msgstr ""
+
+msgctxt "field:cg.gestionnaire,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.gestionnaire,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.gestionnaire,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.hierarchisation,code:"
+msgid "Code de hiérarchisation"
+msgstr ""
+
+msgctxt "field:cg.hierarchisation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.hierarchisation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.hierarchisation,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.hierarchisation,lib_long:"
+msgid "Libellé long du code de hiérarchisation"
+msgstr ""
+
+msgctxt "field:cg.hierarchisation,name:"
+msgid "Libellé court du code de hiérarchisation"
+msgstr ""
+
+msgctxt "field:cg.hierarchisation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.hierarchisation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.hierarchisation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.indispo,code:"
+msgid "Code manquant"
+msgstr ""
+
+msgctxt "field:cg.indispo,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.indispo,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.indispo,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.indispo,lib_long:"
+msgid "Libellé long du manquant"
+msgstr ""
+
+msgctxt "field:cg.indispo,name:"
+msgid "Libellé court du manquant"
+msgstr ""
+
+msgctxt "field:cg.indispo,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.indispo,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.indispo,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.motif,code:"
+msgid "Code motif"
+msgstr ""
+
+msgctxt "field:cg.motif,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.motif,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.motif,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.motif,lib_long:"
+msgid "Libellé long du motif"
+msgstr ""
+
+msgctxt "field:cg.motif,name:"
+msgid "Libellé court du motif"
+msgstr ""
+
+msgctxt "field:cg.motif,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.motif,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.motif,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.operation,code:"
+msgid "Code de l'opération"
+msgstr ""
+
+msgctxt "field:cg.operation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.operation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.operation,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.operation,lib_long:"
+msgid "Libellé long du code de l'opération"
+msgstr ""
+
+msgctxt "field:cg.operation,name:"
+msgid "Libellé court du code de l'opération"
+msgstr ""
+
+msgctxt "field:cg.operation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.operation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.operation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.paysager,code:"
+msgid "Code paysager"
+msgstr ""
+
+msgctxt "field:cg.paysager,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.paysager,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.paysager,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.paysager,lib_long:"
+msgid "Libellé long du paysager"
+msgstr ""
+
+msgctxt "field:cg.paysager,name:"
+msgid "Libellé court du paysager"
+msgstr ""
+
+msgctxt "field:cg.paysager,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.paysager,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.paysager,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.plantation,code:"
+msgid "Code plantation"
+msgstr ""
+
+msgctxt "field:cg.plantation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.plantation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.plantation,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.plantation,lib_long:"
+msgid "Libellé long plantation"
+msgstr ""
+
+msgctxt "field:cg.plantation,name:"
+msgid "Libellé court plantation"
+msgstr ""
+
+msgctxt "field:cg.plantation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.plantation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.plantation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.proprietaire,code:"
+msgid "Code propriétaire"
+msgstr ""
+
+msgctxt "field:cg.proprietaire,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.proprietaire,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.proprietaire,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.proprietaire,lib_long:"
+msgid "Libellé long du propriétaire"
+msgstr ""
+
+msgctxt "field:cg.proprietaire,name:"
+msgid "Libellé court du propriétaire"
+msgstr ""
+
+msgctxt "field:cg.proprietaire,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.proprietaire,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.proprietaire,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.securite,code:"
+msgid "Code du niveau de sécurité"
+msgstr ""
+
+msgctxt "field:cg.securite,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.securite,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.securite,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.securite,lib_long:"
+msgid "Libellé long du niveau de sécurité"
+msgstr ""
+
+msgctxt "field:cg.securite,name:"
+msgid "Libellé court du niveau de sécurité"
+msgstr ""
+
+msgctxt "field:cg.securite,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.securite,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.securite,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.station,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:cg.station,code:"
+msgid "Code station"
+msgstr ""
+
+msgctxt "field:cg.station,commune:"
+msgid "Communes"
+msgstr ""
+
+msgctxt "field:cg.station,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.station,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.station,distance:"
+msgid "Distance"
+msgstr ""
+
+msgctxt "field:cg.station,domaine:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:cg.station,emplacement:"
+msgid "Emplacements"
+msgstr ""
+
+msgctxt "field:cg.station,equipement:"
+msgid "Équipement"
+msgstr ""
+
+msgctxt "field:cg.station,geom:"
+msgid "Geometry"
+msgstr ""
+
+msgctxt "field:cg.station,gestionnaire:"
+msgid "Gestionnaire"
+msgstr ""
+
+msgctxt "field:cg.station,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.station,image:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.station,image_map:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.station,image_map_filename:"
+msgid "Filename"
+msgstr ""
+
+msgctxt "field:cg.station,proprietaire:"
+msgid "Proprétaire"
+msgstr ""
+
+msgctxt "field:cg.station,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.station,ug:"
+msgid "Unité de Gestion"
+msgstr ""
+
+msgctxt "field:cg.station,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.station,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.station-cg.emplacement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.station-cg.emplacement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.station-cg.emplacement,emplacement:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.station-cg.emplacement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.station-cg.emplacement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.station-cg.emplacement,station:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.station-cg.emplacement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.station-cg.emplacement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.station-commune.commune,commune:"
+msgid "name"
+msgstr ""
+
+msgctxt "field:cg.station-commune.commune,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.station-commune.commune,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.station-commune.commune,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.station-commune.commune,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.station-commune.commune,station:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.station-commune.commune,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.station-commune.commune,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.statut_voirie,code:"
+msgid "Code de la voirie"
+msgstr ""
+
+msgctxt "field:cg.statut_voirie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.statut_voirie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.statut_voirie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.statut_voirie,lib_long:"
+msgid "Libellé long du code de voirie"
+msgstr ""
+
+msgctxt "field:cg.statut_voirie,name:"
+msgid "Libellé court du code de voirie"
+msgstr ""
+
+msgctxt "field:cg.statut_voirie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.statut_voirie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.statut_voirie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.ug,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:cg.ug,code:"
+msgid "Code UG"
+msgstr ""
+
+msgctxt "field:cg.ug,commune:"
+msgid "Communes"
+msgstr ""
+
+msgctxt "field:cg.ug,contrainte:"
+msgid "Contraintes"
+msgstr ""
+
+msgctxt "field:cg.ug,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.ug,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.ug,debut:"
+msgid "Debut de tronçon"
+msgstr ""
+
+msgctxt "field:cg.ug,elagage:"
+msgid "Secteur élagage"
+msgstr ""
+
+msgctxt "field:cg.ug,equipement:"
+msgid "Équipement"
+msgstr ""
+
+msgctxt "field:cg.ug,fin:"
+msgid "Fin de tronçon"
+msgstr ""
+
+msgctxt "field:cg.ug,geom:"
+msgid "Geometry"
+msgstr ""
+
+msgctxt "field:cg.ug,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.ug,image:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.ug,image_map:"
+msgid "Image"
+msgstr ""
+
+msgctxt "field:cg.ug,image_map_filename:"
+msgid "Filename"
+msgstr ""
+
+msgctxt "field:cg.ug,operation:"
+msgid "Opérations"
+msgstr ""
+
+msgctxt "field:cg.ug,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.ug,referenceug:"
+msgid "Référence UG"
+msgstr ""
+
+msgctxt "field:cg.ug,rue:"
+msgid "Nom de la rue"
+msgstr ""
+
+msgctxt "field:cg.ug,securite:"
+msgid "Sécurité"
+msgstr ""
+
+msgctxt "field:cg.ug,sequenceroute:"
+msgid "Séquence route"
+msgstr ""
+
+msgctxt "field:cg.ug,station:"
+msgid "Stations"
+msgstr ""
+
+msgctxt "field:cg.ug,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.ug,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.ug-cg.operation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.ug-cg.operation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.ug-cg.operation,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.ug-cg.operation,operation:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.ug-cg.operation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.ug-cg.operation,ug:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.ug-cg.operation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.ug-cg.operation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.ug-cg.station,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.ug-cg.station,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.ug-cg.station,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.ug-cg.station,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.ug-cg.station,station:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.ug-cg.station,ug:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.ug-cg.station,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.ug-cg.station,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:cg.ug-commune.commune,commune:"
+msgid "name"
+msgstr ""
+
+msgctxt "field:cg.ug-commune.commune,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.ug-commune.commune,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.ug-commune.commune,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.ug-commune.commune,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.ug-commune.commune,ug:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:cg.ug-commune.commune,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.ug-commune.commune,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:cg.arbre,an:"
+msgid "Année de plantation"
+msgstr ""
+
+msgctxt "help:cg.arbre,compteur:"
+msgid ""
+"Compteur arbre : indique combien d'arbres ont été planté successivement sur "
+"cet emplacement"
+msgstr ""
+
+msgctxt "help:cg.arbre,date:"
+msgid "Date de suppression"
+msgstr ""
+
+msgctxt "help:cg.arbre,diametre:"
+msgid "Diamètre du tronc"
+msgstr ""
+
+msgctxt "help:cg.arbre,emplacement:"
+msgid "Emplacement de référence"
+msgstr ""
+
+msgctxt "help:cg.arbre,equipement:"
+msgid "Équipement de rattachement"
+msgstr ""
+
+msgctxt "help:cg.arbre,essence:"
+msgid "Nom de l'essence"
+msgstr ""
+
+msgctxt "help:cg.arbre,motif:"
+msgid "Motif de suppression"
+msgstr ""
+
+msgctxt "help:cg.arbre,plantation:"
+msgid "Modalité de plantation"
+msgstr ""
+
+msgctxt "help:cg.arbre,station:"
+msgid "Station"
+msgstr ""
+
+msgctxt "help:cg.arbre,ug:"
+msgid "Unité de gestion"
+msgstr ""
+
+msgctxt "help:cg.emplacement,code:"
+msgid "Code de l'emplacement"
+msgstr ""
+
+msgctxt "help:cg.emplacement,coteoppose:"
+msgid "Côté opposé"
+msgstr ""
+
+msgctxt "help:cg.emplacement,equipement:"
+msgid "Équipement de rattachement"
+msgstr ""
+
+msgctxt "help:cg.emplacement,numpostal:"
+msgid "Code postal de l'emplacement"
+msgstr ""
+
+msgctxt "help:cg.emplacement,station:"
+msgid "Station"
+msgstr ""
+
+msgctxt "help:cg.emplacement,ug:"
+msgid "Unité de gestion"
+msgstr ""
+
+msgctxt "help:cg.emplacement,x:"
+msgid "Coordonnées X (Grillet)"
+msgstr ""
+
+msgctxt "help:cg.emplacement,y:"
+msgid "Coordonnées Y (Grillet)"
+msgstr ""
+
+msgctxt "help:cg.emplacement,z:"
+msgid "Coordonnées Z (Grillet)"
+msgstr ""
+
+msgctxt "help:cg.equipement,hierarchie:"
+msgid "Hiérachisation de l'équipement"
+msgstr ""
+
+msgctxt "help:cg.equipement,statut:"
+msgid "Statut de la voirie"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,arrosage:"
+msgid "Dispositif d'arrosage"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,bilan:"
+msgid "Bilan"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,date:"
+msgid "Date du constat"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,diamhoup:"
+msgid "Diamètre du houppier"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,diamtronc:"
+msgid "Diamètre du tronc"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,empmat:"
+msgid "Emplacement"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,grille:"
+msgid "Grille"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,hfut:"
+msgid "Hauteur du fût"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,ht:"
+msgid "Hauteur totale"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,larghoupriv:"
+msgid "Largeur du houppier sur riverain"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,larghoupvoie:"
+msgid "Largeur du houppier"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,lignelec:"
+msgid "Présence d'une ligne électrique"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,paysager:"
+msgid "Paysager"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,sonde:"
+msgid "Présence d'une sonde tensiométrque"
+msgstr ""
+
+msgctxt "help:cg.evol_arbre,surfacepiedarbre:"
+msgid "Surface du pied d'arbre"
+msgstr ""
+
+msgctxt "help:cg.evol_emplacement,cause:"
+msgid "Cause de l'évolution de l'emplacement"
+msgstr ""
+
+msgctxt "help:cg.evol_emplacement,date:"
+msgid "Date du constat"
+msgstr ""
+
+msgctxt "help:cg.evol_emplacement,diametre:"
+msgid "Diamètre de la souche"
+msgstr ""
+
+msgctxt "help:cg.evol_emplacement,indispo:"
+msgid "Indisponible/Manquant"
+msgstr ""
+
+msgctxt "help:cg.evol_emplacement,nature:"
+msgid "Nature de l'emplacement"
+msgstr ""
+
+msgctxt "help:cg.evol_emplacement,observation:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "help:cg.station,code:"
+msgid "Code de la station"
+msgstr ""
+
+msgctxt "help:cg.station,commune:"
+msgid "Communes de localisation de l'unité de gestion"
+msgstr ""
+
+msgctxt "help:cg.station,distance:"
+msgid "Distance du bâti"
+msgstr ""
+
+msgctxt "help:cg.station,equipement:"
+msgid "Équipement de rattachement"
+msgstr ""
+
+msgctxt "help:cg.station,ug:"
+msgid "Unité de gestion"
+msgstr ""
+
+msgctxt "help:cg.ug,code:"
+msgid "Unité de gestion"
+msgstr ""
+
+msgctxt "help:cg.ug,commune:"
+msgid "Communes de localisation de l'unité de gestion"
+msgstr ""
+
+msgctxt "help:cg.ug,equipement:"
+msgid "Équipement de rattachement"
+msgstr ""
+
+msgctxt "help:cg.ug,securite:"
+msgid "Niveau de sécurité"
+msgstr ""
+
+msgctxt "model:cg.arbre,name:"
+msgid "Arbres"
+msgstr ""
+
+msgctxt "model:cg.arbre-cg.evol_arbre,name:"
+msgid "Arbre - EvolArbre"
+msgstr ""
+
+msgctxt "model:cg.arbre-taxinomie.taxinomie,name:"
+msgid "Arbre - Taxon"
+msgstr ""
+
+msgctxt "model:cg.bilan,name:"
+msgid "Bilan"
+msgstr ""
+
+msgctxt "model:cg.cause,name:"
+msgid "Cause"
+msgstr ""
+
+msgctxt "model:cg.emplacement,name:"
+msgid "Emplacement"
+msgstr ""
+
+msgctxt "model:cg.emplacement-cg.arbre,name:"
+msgid "Emplacement - Arbre"
+msgstr ""
+
+msgctxt "model:cg.emplacement-cg.evol_emplacement,name:"
+msgid "Emplacement - EvolEmplacement"
+msgstr ""
+
+msgctxt "model:cg.equipement,name:"
+msgid "Équipement"
+msgstr ""
+
+msgctxt "model:cg.equipement-cg.ug,name:"
+msgid "Equipement - Ug"
+msgstr ""
+
+msgctxt "model:cg.evol_arbre,name:"
+msgid "Évolution d'un arbre"
+msgstr ""
+
+msgctxt "model:cg.evol_emplacement,name:"
+msgid "Évolution d'un emplacement"
+msgstr ""
+
+msgctxt "model:cg.gestionnaire,name:"
+msgid "Gestionnaire"
+msgstr ""
+
+msgctxt "model:cg.hierarchisation,name:"
+msgid "Hiérachisation"
+msgstr ""
+
+msgctxt "model:cg.indispo,name:"
+msgid "Indisponible"
+msgstr ""
+
+msgctxt "model:cg.motif,name:"
+msgid "Motif"
+msgstr ""
+
+msgctxt "model:cg.operation,name:"
+msgid "Opérations spécifiques"
+msgstr ""
+
+msgctxt "model:cg.paysager,name:"
+msgid "Paysager"
+msgstr ""
+
+msgctxt "model:cg.plantation,name:"
+msgid "Plantation"
+msgstr ""
+
+msgctxt "model:cg.proprietaire,name:"
+msgid "Propriétaire"
+msgstr ""
+
+msgctxt "model:cg.securite,name:"
+msgid "Niveau de sécurité"
+msgstr ""
+
+msgctxt "model:cg.station,name:"
+msgid "Stations"
+msgstr ""
+
+msgctxt "model:cg.station-cg.emplacement,name:"
+msgid "Station - Emplacement"
+msgstr ""
+
+msgctxt "model:cg.station-commune.commune,name:"
+msgid "Station - Commune"
+msgstr ""
+
+msgctxt "model:cg.statut_voirie,name:"
+msgid "Satut de la voirie"
+msgstr ""
+
+msgctxt "model:cg.ug,name:"
+msgid "Unité de gestion"
+msgstr ""
+
+msgctxt "model:cg.ug-cg.operation,name:"
+msgid "Ug - Operation"
+msgstr ""
+
+msgctxt "model:cg.ug-cg.station,name:"
+msgid "Ug - Station"
+msgstr ""
+
+msgctxt "model:cg.ug-commune.commune,name:"
+msgid "Ug - Commune"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_arbre_form"
+msgid "Arbres"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_bilan_form"
+msgid "Bilan"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_cause_form"
+msgid "Cause"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_emplacement_form"
+msgid "Emplacements"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_equipement_form"
+msgid "Équipements"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_evol_arbre_form"
+msgid "Évolution des arbres"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_evol_emplacement_form"
+msgid "Évolution des emplacements"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_gestionnaire_form"
+msgid "Gestionnaire"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_hierarchisation_form"
+msgid "Hiérarchisation"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_indispo_form"
+msgid "Indisponible"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_motif_form"
+msgid "Motif"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_operation_form"
+msgid "Opérations"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_paysager_form"
+msgid "Paysager"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_plantation_form"
+msgid "Plantation"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_proprietaire_form"
+msgid "Proprétaire"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_securite_form"
+msgid "Niveau de sécurité"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_station_form"
+msgid "Stations"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_statut_voirie_form"
+msgid "Statut voirie"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_ug_form"
+msgid "Unité de gestion"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_arbre"
+msgid "Fiche arbre"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_arbre_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.action,name:report_emplacement_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.action,name:report_equipement"
+msgid "Fiche équipement"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_equipement_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.action,name:report_station_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.action,name:report_ug_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_cg_arbre_form"
+msgid "Arbres"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_bilan_form"
+msgid "Bilan"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_cause_form"
+msgid "Cause"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_emplacement_form"
+msgid "Emplacements"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_equipement_admin"
+msgid "Arbres voirie"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_equipement_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_cg_equipement_form"
+msgid "Équipements"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_gestionnaire_form"
+msgid "Gestionnaire"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_hierarchisation_form"
+msgid "Hiérarchisation"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_indispo_form"
+msgid "Indisponible"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_motif_form"
+msgid "Motif"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_operation_form"
+msgid "Opérations"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_paysager_form"
+msgid "Paysager"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_plantation_form"
+msgid "Plantation"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_proprietaire_form"
+msgid "Proprétaire"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_securite_form"
+msgid "Niveau de sécurité"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_station_form"
+msgid "Stations"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_statut_voirie_form"
+msgid "Statut voirie"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_ug_form"
+msgid "Unité de gestion"
+msgstr ""
+
+msgctxt "selection:cg.arbre,fosse:"
+msgid "Dalle de répartition"
+msgstr ""
+
+msgctxt "selection:cg.arbre,fosse:"
+msgid "Terre/Pierre"
+msgstr ""
+
+msgctxt "selection:cg.arbre,situation:"
+msgid "Groupe"
+msgstr ""
+
+msgctxt "selection:cg.arbre,situation:"
+msgid "Solitaire"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,conduite:"
+msgid "Architecturée"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,conduite:"
+msgid "Libre"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,environnement:"
+msgid "Banquette engazonnée"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,environnement:"
+msgid "Banquette enrobée"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,environnement:"
+msgid "Banquette stabilisée"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,environnement:"
+msgid "Grille"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,environnement:"
+msgid "Jardinière"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,environnement:"
+msgid "Terre végétale"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,ht:"
+msgid "0 <= ht < 10"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,ht:"
+msgid "10 <= ht < 20"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,ht:"
+msgid "ht >= 20"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,mecanique:"
+msgid "Aucun défaut"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,mecanique:"
+msgid "Défaut critique"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,mecanique:"
+msgid "Défaut intense"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,mecanique:"
+msgid "Défaut limité"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,mecanique:"
+msgid "Défaut présent"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,vigueur:"
+msgid "Bonne"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,vigueur:"
+msgid "Dépérissement irréversible"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,vigueur:"
+msgid "Faible"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,vigueur:"
+msgid "Moyenne"
+msgstr ""
+
+msgctxt "selection:cg.evol_arbre,vigueur:"
+msgid "Passable"
+msgstr ""
+
+msgctxt "selection:cg.station,domaine:"
+msgid "Privé"
+msgstr ""
+
+msgctxt "selection:cg.station,domaine:"
+msgid "Public"
+msgstr ""

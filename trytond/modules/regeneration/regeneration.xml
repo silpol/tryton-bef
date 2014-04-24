@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+		<record model="ir.ui.view" id="regeneration_view_tree">			
+			<field name="model">regeneration.regeneration</field>
+			<field name="type">tree</field>
+			<field name="name">regeneration_tree</field>
+		</record>
+
+		<record model="ir.ui.view" id="regeneration_view_form">			
+			<field name="model">regeneration.regeneration</field>
+			<field name="type">form</field>
+			<field name="name">regeneration_form</field>
+		</record>
+		
+		<record model="ir.action.act_window" id="act_regeneration_form">
+			<field name="name">Regeneration</field>
+			<field name="res_model">regeneration.regeneration</field>						
+		</record>
+		
+		<record model="ir.action.act_window.view" id="act_regeneration_form_view1">
+		    <field name="sequence" eval="10"/>
+		    <field name="view" ref="regeneration_view_tree"/>
+		    <field name="act_window" ref="act_regeneration_form"/>		
+		</record>
+
+		<record model="ir.action.act_window.view" id="act_regeneration_form_view2">
+		    <field name="sequence" eval="20"/>
+		    <field name="view" ref="regeneration_view_form"/>
+		    <field name="act_window" ref="act_regeneration_form"/>		
+		</record>
+
+		<menuitem parent="ir.menu_administration" sequence="200" id="menu_regeneration_form" icon="tryton-list" action="act_regeneration_form"/>
+		
+	</data>
+</tryton>

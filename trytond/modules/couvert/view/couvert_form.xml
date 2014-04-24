@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Covered">
+    <label name="cou_dispositif"/>
+	<field name="cou_dispositif"/>
+    <label name="cou_essence"/>
+	<field name="cou_essence"/>
+	<label name="cou_coeff_a"/>
+	<field name="cou_coeff_a"/>
+	<label name="cou_coeff_b"/>
+	<field name="cou_coeff_b"/>
+	<label name="cou_estimation"/>
+	<field name="cou_estimation"/>
+</form>

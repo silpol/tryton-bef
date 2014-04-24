@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<form string="Line object" col="2">
+    <label name="name" />
+    <field name="name" />
+    <field colspan="2" name="image" widget="image" img_width="640" img_height="480"/>    
+</form>

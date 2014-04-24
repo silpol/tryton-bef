@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<form string="Forest" col="2">
+    <label name="owner"/>
+    <field name="owner"/>
+    <label name="short_name"/>
+    <field name="short_name"/>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="address"/>
+    <field name="address"/>
+    <label name="proximity"/>
+    <field name="proximity"/>
+    <label name="place_name"/>
+    <field name="place_name"/>
+    <button colspan="2" string="Edit geometries" name="forest_edit" icon="tryton-executable" />
+
+    <notebook colspan="2">
+        <page string="Map" col="1" id="map">
+            <notebook>
+                <page string="Situation map" col="1" id="situation_map">
+                    <field name="situation_map" widget="image" img_width="640" img_height="480" />
+                    <button string="Generate" name="situation_map_gen" icon="tryton-executable" />
+                </page>
+                <page string="Situation map closeup" col="1" id="situation_closeup_map">
+                    <field name="situation_closeup_map" widget="image" img_width="640" img_height="480" />
+                    <button string="Generate" name="situation_closeup_map_gen" icon="tryton-executable" />
+                </page>
+                <page string="Cadastral and forest plots" col="1" id="plots_map">
+                    <field name="plots_map" widget="image" img_width="640" img_height="480" />
+                    <button string="Generate" name="plots_map_gen" icon="tryton-executable" />
+                </page>
+                <page string="Varieties map" col="1" id="varieties_map">
+                    <field name="varieties_map" widget="image" img_width="640" img_height="480" />
+                    <button string="Generate" name="varieties_map_gen" icon="tryton-executable" />
+                </page>
+                <page string="Tracks map" col="1" id="tracks_map">
+                    <field name="tracks_map" widget="image" img_width="640" img_height="480" />
+                    <button string="Generate" name="tracks_map_gen" icon="tryton-executable" />
+                </page>
+            </notebook>
+        </page>
+        <page string="Cadastral plots" id="cad_plots">
+            <field name="cad_plots" />
+        </page>
+        <page string="Plots" id="plots">
+            <field name="plots" />
+        </page>
+        <page string="Varieties" id="varieties">
+            <field name="varieties" />
+        </page>
+        <page string="Misc. obj." id="misc_obj">
+            <notebook colspan="1">
+                <page string="Polygons" id="misc_obj_poly">
+                    <field name="misc_obj_poly" />
+                </page>
+                <page string="Lines" id="misc_obj_line">
+                    <field name="misc_obj_line" />
+                </page>
+                <page string="Points" id="misc_obj_point">
+                    <field name="misc_obj_point" />
+                </page>
+            </notebook>
+        </page>
+    </notebook>
+</form>

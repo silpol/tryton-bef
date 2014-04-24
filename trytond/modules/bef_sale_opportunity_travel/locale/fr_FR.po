@@ -1,0 +1,76 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:sale.opportunity,numberof:"
+msgid "Number of"
+msgstr "Nb participants"
+
+msgctxt "field:sale.opportunity,period:"
+msgid "Period"
+msgstr "Période"
+
+msgctxt "field:sale.opportunity,reference:"
+msgid "Reference"
+msgstr "Référence"
+
+msgctxt "help:sale.opportunity,numberof:"
+msgid "Number of participants"
+msgstr "Nombre de participants au projet"
+
+msgctxt "help:sale.opportunity,period:"
+msgid "Project period"
+msgstr "Période du projet"
+
+msgctxt "help:sale.opportunity,reference:"
+msgid "Reference of opportunity"
+msgstr "Référence du dossier"
+
+msgctxt "model:ir.action,name:report_bulletin1"
+msgid "Bulletin"
+msgstr "Bulletin"
+
+msgctxt "model:ir.action,name:report_label1"
+msgid "Labels1"
+msgstr ""
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "/"
+msgstr "/"
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "05/12/13"
+msgstr ""
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "BULLETIN D'INSCRIPTION – CONTRAT DE VENTE"
+msgstr ""
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "Bulletin d'inscription n° :"
+msgstr ""
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "FORFAIT TOURISTIQUE"
+msgstr ""
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "ORGINAL"
+msgstr ""
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "Émis le :"
+msgstr ""
+
+msgctxt "odt:sale.opportunity.label1:"
+msgid "État du dossier :"
+msgstr ""

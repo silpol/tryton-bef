@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<graph string="Préconisation" type="vbar">
+    <x>
+        <field name="equipement" />
+    </x>
+    <y>
+        <field name="quantite"/>                            
+    </y>
+</graph>

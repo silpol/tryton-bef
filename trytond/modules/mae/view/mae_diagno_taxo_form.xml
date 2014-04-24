@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Diagnostic - Taxinomie">
+    <label name="taxinomie"/>
+    <field name="taxinomie"/>
+    <label name="abondance"/> 
+    <field name="abondance"/>
+    <label name="observation"/> 
+    <field name="observation" colspan="3"/>
+</form>

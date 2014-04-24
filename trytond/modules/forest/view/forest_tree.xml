@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="owner" />
+    <field name="short_name" />
+    <field name="name" />
+    <field name="address" />
+    <field name="cad_plots" />
+    <field name="plots" />
+    <field name="varieties" />
+    <field name="tracks" />
+</tree>

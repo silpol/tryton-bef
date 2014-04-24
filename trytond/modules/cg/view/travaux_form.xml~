@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<form string="Travaux" col="2">
+    <label name="arbre"/>
+    <field name="arbre"/>
+    <label name="typetravaux"/>
+    <field name="typetravaux"/>
+    <label name="description"/>
+    <field name="description"/>
+    <label name="start_date"/>
+    <field name="start_date"/>            
+    <label name="end_date"/>
+    <field name="end_date"/>    
+    <group col="6" colspan="2" id="buttons">
+        <label name="state"/>
+        <field name="state"/>
+        <button name="annuler" string="Annuler"
+            icon="tryton-cancel"/>
+        <button name="apreconiser" string="À préconiser"
+            icon="tryton-go-previous"/>
+        <button name="preconise" string="Préconisé"
+            icon="tryton-go-next"/>
+        <button name="realise" string="Réalisé"
+            icon="tryton-go-next"/>
+    </group>
+    <notebook colspan="4" states="{'invisible': Eval('state') != 'annuler'}">
+        <page string="Cancel comment" id="comment">            
+            <field name="annule_reason"/>
+        </page>
+    </notebook>
+    <label name="active"/>
+    <field name="active"/>
+</form>

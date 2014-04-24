@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<form string="Outgoings">
+    <label name="dep_dispositif"/>
+	<field name="dep_dispositif"/>
+	<label name="dep_annee"/>
+	<field name="dep_annee"/>
+	<label name="dep_plancomptable"/>
+	<field name="dep_plancomptable"/>
+	<label name="dep_mois"/>
+	<field name="dep_mois"/>
+	<label name="dep_quant"/>
+	<field name="dep_quant"/>
+	<label name="dep_unit"/>
+	<field name="dep_unit"/>
+	<label name="dep_pu"/>
+	<field name="dep_pu"/>
+	<label name="dep_total"/>
+	<field name="dep_total"/>
+	<label name="dep_nature"/>
+	<field name="dep_nature"/>
+	<notebook colspan="6">
+	    <page string="Observations" id="observations">					        
+	        <field name="dep_observation"/>
+	    </page>									    
+    </notebook>
+</form>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+     This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2014 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2014 Pascal Obstetar
+-->
+<tryton>
+    <data> 
+
+        <!-- Forest track lines objects -->
+        <record model="ir.ui.view" id="forest_track_view_tree">
+            <field name="model">forest.track</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree>
+                    <field name="forest" />
+                    <field name="name" />
+                    <field name="typo" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="forest_track_view_form">
+            <field name="model">forest.track</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Track object" col="2">
+                    <label name="forest" />
+                    <field name="forest" />
+                    <label name="name" />
+                    <field name="name" />
+                    <field colspan="2" name="image" widget="image" img_width="640" img_height="480"/>
+                    <button colspan="2" string="Edit" name="track_edit" icon="tryton-executable" />
+                </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_forest_track_form">
+            <field name="name">Tracks</field>
+            <field name="res_model">forest.track</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_forest_track_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="forest_track_view_tree"/>
+            <field name="act_window" ref="act_forest_track_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_forest_track_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="forest_track_view_form"/>
+            <field name="act_window" ref="act_forest_track_form"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_forest_track_list_view">
+            <field name="name">Tracks</field>
+            <field name="res_model">forest.track</field>
+        </record>
+
+        <record model="ir.action.report" id="report_track_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">forest.track</field>
+            <field name="report_name">forest.track.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_track_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">forest.track,-1</field>
+            <field name="action" ref="report_track_edit"/>
+        </record>
+
+        <menuitem parent="menu_forests" sequence="0" id="menu_forest_track_form" icon="tryton-list" action="act_forest_track_list_view"/>
+    </data>
+</tryton>

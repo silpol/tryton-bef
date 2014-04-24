@@ -1,0 +1,200 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:prix_rege.default,classe:"
+msgid "Class"
+msgstr "Classe"
+
+msgctxt "field:prix_rege.default,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:prix_rege.default,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:prix_rege.default,default:"
+msgid "Value"
+msgstr "Valeur"
+
+msgctxt "field:prix_rege.default,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:prix_rege.default,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:prix_rege.default,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:prix_rege.default,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:prix_rege.prix_rege,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:prix_rege.prix_rege,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:prix_rege.prix_rege,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:prix_rege.prix_rege,pre_classe1:"
+msgid "Class1"
+msgstr "Classe1"
+
+msgctxt "field:prix_rege.prix_rege,pre_classe2:"
+msgid "Class2"
+msgstr "Classe2"
+
+msgctxt "field:prix_rege.prix_rege,pre_classe3:"
+msgid "Class3"
+msgstr "Classe3"
+
+msgctxt "field:prix_rege.prix_rege,pre_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:prix_rege.prix_rege,pre_facilite:"
+msgid "Facility"
+msgstr "Facilité"
+
+msgctxt "field:prix_rege.prix_rege,pre_region:"
+msgid "Region"
+msgstr "Région"
+
+msgctxt "field:prix_rege.prix_rege,raw_classe1:"
+msgid "Class1"
+msgstr "Classe1"
+
+msgctxt "field:prix_rege.prix_rege,raw_classe2:"
+msgid "Class2"
+msgstr "Classe2"
+
+msgctxt "field:prix_rege.prix_rege,raw_classe3:"
+msgid "Class3"
+msgstr "Classe3"
+
+msgctxt "field:prix_rege.prix_rege,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:prix_rege.prix_rege,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:prix_rege.prix_rege,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:prix_rege.default,default:"
+msgid "Default value of 1ha"
+msgstr "Valeur par défaut pour 1ha"
+
+msgctxt "help:prix_rege.prix_rege,pre_classe1:"
+msgid "Value of 1ha of class1"
+msgstr "Valeur pour 1ha de classe1"
+
+msgctxt "help:prix_rege.prix_rege,pre_classe2:"
+msgid "Value of 1ha of class2"
+msgstr "Valeur pour 1ha de classe2"
+
+msgctxt "help:prix_rege.prix_rege,pre_classe3:"
+msgid "Value of 1ha of class3"
+msgstr "Valeur pour 1ha de classe3"
+
+msgctxt "help:prix_rege.prix_rege,pre_essence:"
+msgid "SPecies"
+msgstr "Essence"
+
+msgctxt "help:prix_rege.prix_rege,pre_facilite:"
+msgid "Regeneration facility"
+msgstr "Facilité de régénération"
+
+msgctxt "help:prix_rege.prix_rege,pre_region:"
+msgid "Regeneration region"
+msgstr "Région de régénération"
+
+msgctxt "help:prix_rege.prix_rege,raw_classe1:"
+msgid "Value of 1ha of class1"
+msgstr "Valeur pour 1ha de classe1"
+
+msgctxt "help:prix_rege.prix_rege,raw_classe2:"
+msgid "Value of 1ha of class2"
+msgstr "Valeur pour 1ha de classe1"
+
+msgctxt "help:prix_rege.prix_rege,raw_classe3:"
+msgid "Value of 1ha of class3"
+msgstr "Valeur pour 1ha de classe1"
+
+msgctxt "model:ir.action,name:act_default"
+msgid "Default price regeneration"
+msgstr "Prix de la régénération par défaut"
+
+msgctxt "model:ir.action,name:act_prix_rege_form"
+msgid "Regeneration price"
+msgstr "Prix de la régénération"
+
+msgctxt "model:ir.ui.menu,name:menu_prix_rege_default"
+msgid "Default price regeneration"
+msgstr "Prix de la régénération par défaut"
+
+msgctxt "model:ir.ui.menu,name:menu_prix_rege_form"
+msgid "Regeneration price"
+msgstr "Prix de la régénération"
+
+msgctxt "model:prix_rege.default,name:"
+msgid "Default regeneration price"
+msgstr "Prix de la régénération par défaut"
+
+msgctxt "model:prix_rege.prix_rege,name:"
+msgid "Regeneration price"
+msgstr "Prix de la régénération"
+
+msgctxt "selection:prix_rege.default,classe:"
+msgid "Class1"
+msgstr "Classe1"
+
+msgctxt "selection:prix_rege.default,classe:"
+msgid "Class2"
+msgstr "Classe2"
+
+msgctxt "selection:prix_rege.default,classe:"
+msgid "Class3"
+msgstr "Classe3"
+
+msgctxt "selection:prix_rege.prix_rege,pre_facilite:"
+msgid "difficile"
+msgstr "difficile"
+
+msgctxt "selection:prix_rege.prix_rege,pre_facilite:"
+msgid "facile"
+msgstr "facile"
+
+msgctxt "selection:prix_rege.prix_rege,pre_facilite:"
+msgid "très difficile"
+msgstr "très difficile"
+
+msgctxt "view:prix_rege.default:"
+msgid "Default regeneration price"
+msgstr "Prix de la régénération par défaut"
+
+msgctxt "view:prix_rege.prix_rege:"
+msgid "Regeneration price"
+msgstr "Prix de la régénération"

@@ -1,0 +1,412 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:arbres.arbres,azimut:"
+msgid "Azimuth"
+msgstr "Azimut"
+
+msgctxt "field:arbres.arbres,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:arbres.arbres,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:arbres.arbres,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:arbres.arbres,distance:"
+msgid "Distance"
+msgstr "Distance"
+
+msgctxt "field:arbres.arbres,essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:arbres.arbres,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:arbres.arbres,measure:"
+msgid "Evolutions"
+msgstr "Évolutions"
+
+msgctxt "field:arbres.arbres,num:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:arbres.arbres,plot:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:arbres.arbres,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:arbres.arbres,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:arbres.arbres,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:arbres.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:arbres.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:arbres.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:arbres.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:arbres.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:arbres.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:arbres.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:arbres.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:arbres.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:arbres.measure,arb_coupe:"
+msgid "Nature cutting"
+msgstr "Nature de coupe"
+
+msgctxt "field:arbres.measure,arb_diam1:"
+msgid "Diameter1"
+msgstr "Diamètre 1"
+
+msgctxt "field:arbres.measure,arb_diam2:"
+msgid "Diameter2"
+msgstr "Diamètre 2"
+
+msgctxt "field:arbres.measure,arb_diam_houp1:"
+msgid "Diam crown1"
+msgstr "Diam. houp. 1"
+
+msgctxt "field:arbres.measure,arb_diam_houp2:"
+msgid "Diam crown2"
+msgstr "Diam. houp. 2"
+
+msgctxt "field:arbres.measure,arb_haut_large:"
+msgid "Large height"
+msgstr "Largeur"
+
+msgctxt "field:arbres.measure,arb_haut_tot:"
+msgid "Total height"
+msgstr "Hauteur totale"
+
+msgctxt "field:arbres.measure,arb_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:arbres.measure,arb_rayon1:"
+msgid "Radius1"
+msgstr "Rayon 1"
+
+msgctxt "field:arbres.measure,arb_rayon2:"
+msgid "Radius2"
+msgstr "Rayon 2"
+
+msgctxt "field:arbres.measure,arb_stade:"
+msgid "Stage"
+msgstr "Stade"
+
+msgctxt "field:arbres.measure,arb_type:"
+msgid "Type tree"
+msgstr "Type arbre"
+
+msgctxt "field:arbres.measure,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:arbres.measure,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:arbres.measure,cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:arbres.measure,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:arbres.measure,ecologie:"
+msgid "Ecological Code"
+msgstr "Code écologique"
+
+msgctxt "field:arbres.measure,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:arbres.measure,qualite:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "field:arbres.measure,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:arbres.measure,tree:"
+msgid "Tree"
+msgstr "Arbre"
+
+msgctxt "field:arbres.measure,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:arbres.measure,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,ecologie:"
+msgid "Ecological code"
+msgstr "Code écologique"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,measure:"
+msgid "Number of measure"
+msgstr "Numéro de la mesure"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,note:"
+msgid "Ecological note"
+msgstr "Note écologique"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:arbres.measure-ecologie.ecologie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:arbres.arbres,azimut:"
+msgid "Azimuth to the center of the plot"
+msgstr "Azimut vers le centre de la placette"
+
+msgctxt "help:arbres.arbres,distance:"
+msgid "Distance to the center of the plot"
+msgstr "Distance au centre de la placette"
+
+msgctxt "help:arbres.arbres,essence:"
+msgid "Species measured"
+msgstr "Mesure de l'essence"
+
+msgctxt "help:arbres.arbres,measure:"
+msgid "Evolutions of tree"
+msgstr "Évolutions des mesures de l'arbre"
+
+msgctxt "help:arbres.arbres,num:"
+msgid "Number of tree"
+msgstr "Numéro de l'arbre mesuré"
+
+msgctxt "help:arbres.arbres,plot:"
+msgid "Number of plot"
+msgstr "Nombre de placette"
+
+msgctxt "help:arbres.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "help:arbres.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "help:arbres.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "help:arbres.measure,arb_coupe:"
+msgid "Nature of cutting"
+msgstr "Nature de la coupe"
+
+msgctxt "help:arbres.measure,arb_diam1:"
+msgid "The first diameter of measure"
+msgstr "Le premier diamètre de la mesure"
+
+msgctxt "help:arbres.measure,arb_diam2:"
+msgid "The second diameter of measure"
+msgstr "Le second diamètre de la mesure"
+
+msgctxt "help:arbres.measure,arb_diam_houp1:"
+msgid "The first crown diameter of measure"
+msgstr "Le premier diamètre du houppier"
+
+msgctxt "help:arbres.measure,arb_diam_houp2:"
+msgid "The second crown diameter of measure"
+msgstr "Le second diamètre du houppier"
+
+msgctxt "help:arbres.measure,arb_haut_large:"
+msgid "Large height of measure"
+msgstr "Largeur hauteur de la mesure"
+
+msgctxt "help:arbres.measure,arb_haut_tot:"
+msgid "Total height of measure"
+msgstr "Hauteur totale de la mesure"
+
+msgctxt "help:arbres.measure,arb_observation:"
+msgid "Observations of measure"
+msgstr "Observations sur la mesure"
+
+msgctxt "help:arbres.measure,arb_rayon1:"
+msgid "Radius one of measure"
+msgstr "Premier rayon de la mesure"
+
+msgctxt "help:arbres.measure,arb_rayon2:"
+msgid "Radius two of measure"
+msgstr "Deuxième rayon de la mesure"
+
+msgctxt "help:arbres.measure,arb_stade:"
+msgid "Stage of decomposition"
+msgstr "Stade de décomposition"
+
+msgctxt "help:arbres.measure,arb_type:"
+msgid "Used for scaling"
+msgstr "Utilisé pour le cubage"
+
+msgctxt "help:arbres.measure,cycle:"
+msgid "Cycle number on the extent of the tree"
+msgstr "Nombre de cycle mesuré"
+
+msgctxt "help:arbres.measure,ecologie:"
+msgid "Ecological Code"
+msgstr "Code écologique"
+
+msgctxt "help:arbres.measure,qualite:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "help:arbres.measure,tree:"
+msgid "Tree concerned by the measures"
+msgstr "Arbre concerné par la mesure"
+
+msgctxt "help:arbres.measure-ecologie.ecologie,note:"
+msgid "Ecological note of tree"
+msgstr "Note écologique de l'arbre"
+
+msgctxt "model:arbres.arbres,name:"
+msgid "Trees"
+msgstr "Arbres"
+
+msgctxt "model:arbres.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:arbres.measure,name:"
+msgid "Évolution d'un arbre"
+msgstr "Évolution d'un arbre"
+
+msgctxt "model:arbres.measure-ecologie.ecologie,name:"
+msgid "MeasureEcologie"
+msgstr "MesureEcologie"
+
+msgctxt "model:ir.action,name:act_arbres_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.action,name:act_arbres_evol_arbre_form"
+msgid "Tree evolution"
+msgstr "Évolution de l'arbre"
+
+msgctxt "model:ir.action,name:act_arbres_form"
+msgid "Trees"
+msgstr "Arbres"
+
+msgctxt "model:ir.action,name:act_measure_ecologie_rel_form"
+msgid "Code ecologique"
+msgstr "Code écologique"
+
+msgctxt "model:ir.ui.menu,name:menu_arbres_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_arbres_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_arbres_form"
+msgid "Trees"
+msgstr "Arbres"
+
+msgctxt "view:arbres.arbres:"
+msgid "Evolutions"
+msgstr "Évolutions"
+
+msgctxt "view:arbres.arbres:"
+msgid "Trees"
+msgstr "Arbres"
+
+msgctxt "view:arbres.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:arbres.code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "view:arbres.measure-ecologie.ecologie:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:arbres.measure:"
+msgid "Code écologique"
+msgstr "Code écologique"
+
+msgctxt "view:arbres.measure:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:arbres.measure:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "view:arbres.measure:"
+msgid "Tree evolution"
+msgstr "Évolution de l'arbre"

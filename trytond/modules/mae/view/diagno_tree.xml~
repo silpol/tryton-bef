@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<tree string="convention">
+    <field name="mae" />
+    <field name="ilot" />
+    <field name="date" />
+    <field name="owner" />
+    <field name="parcelle" />
+    <field name="typemae" />
+    <field name="nivexpert" />
+    <field name="nivfinal" />
+    <field name="observation" />
+    <field name="paturage" />
+    <field name="fauche" />
+    <field name="occupation" />
+    <field name="cloture" />
+    <field name="utilisation" />
+    <field name="entretien" />   
+    <field name="active" /> 
+</tree>

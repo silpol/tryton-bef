@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Cycle">
+    <field name="cyc_dispositif"/>
+	<field name="cyc_cycle"/>
+	<field name="cyc_date"/>
+	<field name="cyc_annee"/>
+	<field name="cyc_operateurs"/>
+	<field name="cyc_financeurs"/>
+    <field name="cyc_strate"/>
+	<field name="cyc_comment"/>
+</tree>

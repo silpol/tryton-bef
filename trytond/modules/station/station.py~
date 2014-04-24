@@ -1,0 +1,48 @@
+#coding: utf-8
+"""
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2013 Pascal Obstetar
+Copyright (c) 2013 Pierre-Louis Bonicoli
+
+"""
+
+from trytond.model import ModelView, ModelSQL, fields
+
+__all__ = ['Station']
+
+class Station(ModelSQL, ModelView):
+    'Station'
+    __name__ = 'station.station'
+    _rec_name = 'sta_dispositif'
+
+    sta_dispositif = fields.Many2One('dispositif.dispositif', 'Dispositif', required=True, help='Dispositif')
+    sta_num_ifn = fields.Char(u'Numéro région IFN', help=u'Numéro région IFN')
+    sta_nom_regifn = fields.Char(u'Nom de la région IFN', help=u'Nom de la région IFN')
+    sta_nom_desc = fields.Char('Descripteur', help='Nom du descripteur')
+    sta_date_desc = fields.Char('Date description', help='Date de la description')
+    sta_catalogue = fields.Char('Catalogue', help='Nom du catalogue')
+    sta_date_catalogue = fields.Date('Date catalogue', help='Date du catalogue')
+    sta_type_station = fields.Char('Stations', help=u'Numéros de station')
+    sta_cartegeol = fields.Char(u'Carte géologique', help=u'Numéro carte géologique')
+    sta_ech = fields.Char('Echelle', help=u'Echelle carte géologique')
+    sta_strate_geol = fields.Char('Strates', help=u'Nom des strates géologiques')
+    sta_roche = fields.Char('Roche', help=u'Roche-mère')
+    sta_cartepedo = fields.Char(u'Carte pédo', help=u'Nom carte pédo')
+    sta_pedo = fields.Char(u'Pédologie', help='Type de sols')
+    sta_groupepedo = fields.Char(u'Groupe pédo', help='Groupe pedo')
+    sta_region = fields.Char(u'Région', help=u'Nom des grandes régions')
+    sta_obs = fields.Char('Observations', help='Observations')

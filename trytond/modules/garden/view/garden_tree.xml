@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="garden">
+    <field name="name" />
+    <field name="address" />
+    <field name="lieudit" />
+    <field name="parcelle" />
+    <field name="surfacedgi" />
+    <field name="section" />
+    <field name="convention" />
+    <field name="active" />
+</tree>

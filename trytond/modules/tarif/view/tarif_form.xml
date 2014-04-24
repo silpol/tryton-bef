@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Rate">				    
+    <label name="tar_dispositif"/>
+	<field name="tar_dispositif"/>
+	<label name="tar_essence"/>
+	<field name="tar_essence"/>
+	<label name="name"/>
+	<field name="name"/>
+	<label name="tar_numero"/>
+	<field name="tar_numero"/>
+    <label name="tar_ifn"/>
+	<field name="tar_ifn"/>
+	<label name="tar_ifn_numero"/>
+	<field name="tar_ifn_numero"/>
+</form>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<form string="Emplacement" col="2">
+    <notebook colspan="6">
+        <page string="Général" id="general">
+            <label name="code"/>
+            <field name="code"/> 
+            <label name="station"/>
+            <field name="station"/>                       
+            <label name="coteoppose"/>
+            <field name="coteoppose"/>
+            <label name="active"/>
+            <field name="active"/>
+            <label name="x"/>
+            <field name="x"/>                                                                                
+            <label name="y"/>
+            <field name="y"/>
+            <label name="adresse"/>
+            <field name="adresse" colspan="3"/>
+        </page>
+        <page string="Évolutions" id="evol">                            
+            <field name="evolution"/>
+        </page>
+        <page string="Arbres" id="arbres">                            
+            <field name="arbre"/>
+        </page>
+        <page string="Map" id="map" col="2">                            
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="emplacement_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

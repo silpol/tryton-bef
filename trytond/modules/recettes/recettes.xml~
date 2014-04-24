@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+
+		<record model="ir.ui.view" id="recettes_view_tree">			
+			<field name="model">recettes.recettes</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<![CDATA[
+				<tree string="recettes">
+				    <field name="rec_dispositif" />
+					<field name="rec_annee" />
+					<field name="rec_plancomptable" />
+					<field name="rec_ess_cat" />
+					<field name="rec_quant" />
+					<field name="rec_unit" />					
+					<field name="rec_pu" />
+					<field name="rec_total" />
+					<field name="rec_mode_vente" />
+					<field name="rec_observation" />
+								
+									
+				</tree>
+				]]>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="recettes_view_form">			
+			<field name="model">recettes.recettes</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<![CDATA[
+				<form string="recettes">
+				    <label name="rec_dispositif"/>
+					<field name="rec_dispositif"/>
+					<label name="rec_annee"/>
+					<field name="rec_annee"/>
+					<label name="rec_plancomptable"/>
+					<field name="rec_plancomptable"/>
+					<label name="rec_ess_cat"/>
+					<field name="rec_ess_cat"/>
+					<label name="rec_quant"/>
+					<field name="rec_quant"/>
+					<label name="rec_unit"/>
+					<field name="rec_unit"/>					
+					<label name="rec_pu"/>
+					<field name="rec_pu"/>
+					<label name="rec_total"/>
+					<field name="rec_total"/>
+					<label name="rec_mode_vente"/>
+					<field name="rec_mode_vente"/>
+                    <notebook colspan="6">
+					    <page string="Observations" id="observations">					        
+					        <field name="rec_observation"/>
+					    </page>									    
+				    </notebook>					
+				</form>
+				]]>
+			</field>
+		</record>
+		
+		
+		
+		<record model="ir.action.act_window" id="act_recettes_form">
+			<field name="name">Recettes</field>
+			<field name="res_model">recettes.recettes</field>
+						
+		</record>
+		
+		<record model="ir.action.act_window.view" id="act_recettes_form_view1">
+		    <field name="sequence" eval="10"/>
+		    <field name="view" ref="recettes_view_tree"/>
+		    <field name="act_window" ref="act_recettes_form"/>		
+		</record>
+
+		<record model="ir.action.act_window.view" id="act_recettes_form_view2">
+		    <field name="sequence" eval="20"/>
+		    <field name="view" ref="recettes_view_form"/>
+		    <field name="act_window" ref="act_recettes_form"/>		
+		</record>
+				
+		<menuitem parent="ir.menu_administration" sequence="180" id="menu_recettes_form" icon="tryton-list" action="act_recettes_form"/>        
+		
+	</data>
+</tryton>

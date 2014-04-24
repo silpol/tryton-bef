@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<tree string="species_taxon">
+    <field name="essence" />
+    <field name="taxon" expand="1" />
+</tree>

@@ -1,0 +1,705 @@
+# 
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:forest.forest:"
+msgid "The address is invalid (no city is defined)."
+msgstr "L'adresse n'est pas valide (aucune ville n'est définie)."
+
+msgctxt "error:forest.forest:"
+msgid "You cannot set duplicated forests ID!"
+msgstr "L'identifiant de la forêt existe déja"
+
+msgctxt "error:forest.plot:"
+msgid "Duplicate ID are not allowed for plot located in same forest!"
+msgstr "L'identifiant de la parcelle existe déja!"
+
+msgctxt "field:forest.cad_plot,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.cad_plot,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.cad_plot,forest:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "field:forest.cad_plot,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.cad_plot,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.cad_plot,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.cad_plot,name:"
+msgid "Plot number"
+msgstr "Numéro de parcelle"
+
+msgctxt "field:forest.cad_plot,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.cad_plot,short_name:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.cad_plot,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.cad_plot,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.forest,address:"
+msgid "Address"
+msgstr "Adresse"
+
+msgctxt "field:forest.forest,cad_plots:"
+msgid "Cadastral plots"
+msgstr "Parcelle cadastrale"
+
+msgctxt "field:forest.forest,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.forest,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.forest,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.forest,misc_obj_line:"
+msgid "Miscellaneous line objects"
+msgstr "Objets lignes divers"
+
+msgctxt "field:forest.forest,misc_obj_point:"
+msgid "Miscellaneous point objects"
+msgstr "Objets points divers"
+
+msgctxt "field:forest.forest,misc_obj_poly:"
+msgid "Miscellaneous polygon objects"
+msgstr "Objets polygones divers"
+
+msgctxt "field:forest.forest,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.forest,owner:"
+msgid "Owner"
+msgstr "Propriétaire"
+
+msgctxt "field:forest.forest,place_name:"
+msgid "Place name"
+msgstr "Lieu-dit"
+
+msgctxt "field:forest.forest,plots:"
+msgid "Plots"
+msgstr "Parcelles forestières"
+
+msgctxt "field:forest.forest,plots_map:"
+msgid "Cadastral and forest plots"
+msgstr "Parcelles cadastrales et forestières"
+
+msgctxt "field:forest.forest,proximity:"
+msgid "Proximity"
+msgstr "Proximité"
+
+msgctxt "field:forest.forest,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.forest,short_name:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.forest,situation_closeup_map:"
+msgid "Situation map closeup"
+msgstr "Plan de situation détaillé"
+
+msgctxt "field:forest.forest,situation_closeup_map_nl:"
+msgid "Situation map closeup"
+msgstr "Plan de situation détaillé"
+
+msgctxt "field:forest.forest,situation_map:"
+msgid "Situation map"
+msgstr "Plan de situation"
+
+msgctxt "field:forest.forest,situation_map_nl:"
+msgid "Situation map"
+msgstr "Plan de situation"
+
+msgctxt "field:forest.forest,varieties:"
+msgid "Variety"
+msgstr "Peuplement"
+
+msgctxt "field:forest.forest,varieties_map:"
+msgid "Varieties map"
+msgstr "Plan des peuplements"
+
+msgctxt "field:forest.forest,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.forest,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.misc_obj_line,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.misc_obj_line,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.misc_obj_line,forest:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "field:forest.misc_obj_line,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.misc_obj_line,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.misc_obj_line,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.misc_obj_line,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.misc_obj_line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.misc_obj_line,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.misc_obj_line,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.misc_obj_point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.misc_obj_point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.misc_obj_point,forest:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "field:forest.misc_obj_point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.misc_obj_point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.misc_obj_point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.misc_obj_poly,forest:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "field:forest.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.misc_obj_poly,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.plot,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.plot,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.plot,forest:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "field:forest.plot,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.plot,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.plot,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.plot,name:"
+msgid "Plot number"
+msgstr "Numéro de parcelle"
+
+msgctxt "field:forest.plot,splot:"
+msgid "Ss-Plot"
+msgstr "Sous-parcelle"
+
+msgctxt "field:forest.plot,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.plot,short_name:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.plot,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.plot,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.variety,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.variety,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.variety,forest:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "field:forest.variety,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.variety,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.variety,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.variety,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.variety,stand:"
+msgid "Stand"
+msgstr "Peuplement"
+
+msgctxt "field:forest.variety,domspecies1:"
+msgid "Dom species1"
+msgstr "Essence dom1"
+
+msgctxt "field:forest.variety,domspecies2:"
+msgid "Dom species2"
+msgstr "Essence dom2"
+
+msgctxt "field:forest.variety,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.variety,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "model:forest.cad_plot,name:"
+msgid "Cadastral plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "model:forest.forest,name:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "model:forest.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr "Objet ligne divers"
+
+msgctxt "model:forest.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr "Objet point divers"
+
+msgctxt "model:forest.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr "Objet polygone divers"
+
+msgctxt "model:forest.plot,name:"
+msgid "Plot"
+msgstr "Parcelle forestière"
+
+msgctxt "model:forest.variety,name:"
+msgid "Variety"
+msgstr "Peuplement"
+
+msgctxt "model:ir.action,name:act_forest_cad_plot_form"
+msgid "Cadastral plots"
+msgstr "Parcelle cadastrale"
+
+msgctxt "model:ir.action,name:act_forest_forest_form"
+msgid "Forests"
+msgstr "Forêts"
+
+msgctxt "model:ir.action,name:act_forest_form"
+msgid "Varieties"
+msgstr "Peuplements"
+
+msgctxt "model:ir.action,name:act_forest_list_view"
+msgid "Varieties"
+msgstr "Peuplements"
+
+msgctxt "model:ir.action,name:act_forest_misc_obj_line_form"
+msgid "Lines"
+msgstr "Lignes"
+
+msgctxt "model:ir.action,name:act_forest_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:act_forest_misc_obj_poly_form"
+msgid "Polygons"
+msgstr "Polygones"
+
+msgctxt "model:ir.action,name:act_forest_plot_form"
+msgid "Plots"
+msgstr "Parcelles forestières"
+
+msgctxt "model:ir.action,name:report_cad_plot_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_forest_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_misc_obj_line_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_misc_obj_point_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_misc_obj_poly_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_plot_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_variety_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_forest_cad_plot_form"
+msgid "Cadastral plots"
+msgstr "Parcelles"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_forest_form"
+msgid "Forests"
+msgstr "Forêts"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_list"
+msgid "Varieties"
+msgstr "Peuplements"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_misc_obj"
+msgid "Misc objects"
+msgstr "Objets divers"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_misc_obj_line_form"
+msgid "Lines"
+msgstr "Lignes"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_misc_obj_poly_form"
+msgid "Polygons"
+msgstr "Polygones"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_plot_form"
+msgid "Plots"
+msgstr "Parcelles forestières"
+
+msgctxt "model:ir.ui.menu,name:menu_forests"
+msgid "Forests"
+msgstr "Forêts"
+
+msgctxt "view:forest.cad_plot:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.cad_plot:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:forest.forest:"
+msgid "Cadastral and forest plots"
+msgstr "Parcelles cadastrales et forestières"
+
+msgctxt "view:forest.forest:"
+msgid "Cadastral plots"
+msgstr "Parcelles cadastrales"
+
+msgctxt "view:forest.forest:"
+msgid "Edit geometries"
+msgstr "Éditer les géométries"
+
+msgctxt "view:forest.forest:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:forest.forest:"
+msgid "Lines"
+msgstr "Lignes"
+
+msgctxt "view:forest.forest:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:forest.forest:"
+msgid "Misc. obj."
+msgstr "Obj. divers"
+
+msgctxt "view:forest.forest:"
+msgid "Plots"
+msgstr "Parcelles forestières"
+
+msgctxt "view:forest.forest:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:forest.forest:"
+msgid "Polygons"
+msgstr "Polygones"
+
+msgctxt "view:forest.forest:"
+msgid "Situation map"
+msgstr "Plan de situation"
+
+msgctxt "view:forest.forest:"
+msgid "Situation map closeup"
+msgstr "Plan de situation détaillé"
+
+msgctxt "view:forest.forest:"
+msgid "Varieties"
+msgstr "Peuplements"
+
+msgctxt "view:forest.forest:"
+msgid "Varieties map"
+msgstr "Plan des peuplements"
+
+msgctxt "view:forest.misc_obj_line:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.misc_obj_point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.misc_obj_poly:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.plot:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.plot:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:forest.plot:"
+msgid "Plot"
+msgstr "Parcelle forestière"
+
+msgctxt "view:forest.variety:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "field:forest.stand,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.stand,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.stand,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.stand,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.stand,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.stand,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:forest.stand,name:"
+msgid "Short label"
+msgstr "Libellé court"
+
+msgctxt "field:forest.stand,description:"
+msgid "Long wording"
+msgstr "Description"
+
+msgctxt "field:forest.stand,r:"
+msgid "Red color"
+msgstr "Rouge"
+
+msgctxt "field:forest.stand,g:"
+msgid "Green color"
+msgstr "Vert"
+
+msgctxt "field:forest.stand,b:"
+msgid "Blue color"
+msgstr "Bleu"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_stand"
+msgid "Stand"
+msgstr "Peuplement"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_stand_list"
+msgid "Stand"
+msgstr "Peuplement"
+
+msgctxt "model:ir.action,name:act_forest_stand_form_view"
+msgid "Stand"
+msgstr "Peuplement"
+
+msgctxt "model:ir.action,name:act_forest_stand_list_view"
+msgid "Stand"
+msgstr "Peuplement"
+
+msgctxt "field:forest.cad_plot,section:"
+msgid "Section"
+msgstr "Section"
+
+msgctxt "field:forest.cad_plot,lieudit:"
+msgid "Lieudit"
+msgstr "Lieu-dit"
+
+msgctxt "field:forest.track,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.track,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "view:forest.track:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "field:forest.track,forest:"
+msgid "Forest"
+msgstr "Forêts"
+
+msgctxt "field:forest.forest,tracks:"
+msgid "Tracks"
+msgstr "Dessertes"
+
+msgctxt "model:forest.variety,name:"
+msgid "Variety"
+msgstr "Peuplement"
+
+msgctxt "view:forest.forest:"
+msgid "Tracks"
+msgstr "Dessertes"
+
+msgctxt "view:forest.forest:"
+msgid "Tracks map"
+msgstr "Carte de la desserte"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_track_form"
+msgid "Tracks"
+msgstr "Dessertes"
+
+msgctxt "model:ir.action,name:act_forest_track_list_view"
+msgid "Tracks"
+msgstr "Dessertes"
+

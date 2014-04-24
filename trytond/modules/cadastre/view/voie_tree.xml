@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<tree string="Voirie">
+    <field name="codlot" />
+    <field name="voie" />
+    <field name="codcomm" />
+    <field name="rivoli" />
+    <field name="clerivoli" />
+    <field name="nature" />
+    <field name="libelle" />
+    <field name="typecomm" />
+    <field name="ruractuel" />
+    <field name="caractere" />
+    <field name="indpop" />
+    <field name="annulat" />
+    <field name="datannul" />
+    <field name="datcre" />
+    <field name="codmajic2" />
+    <field name="type" />
+    <field name="indlieu" />
+    <field name="motclass" />
+</tree>

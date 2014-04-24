@@ -1,0 +1,136 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:qualite.qualite,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:qualite.qualite,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:qualite.qualite,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:qualite.qualite,name:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "field:qualite.qualite,qua_regt1:"
+msgid "Pool 1"
+msgstr "Regroupement 1"
+
+msgctxt "field:qualite.qualite,qua_regt2:"
+msgid "Pool 2"
+msgstr "Regroupement 2"
+
+msgctxt "field:qualite.qualite,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:qualite.qualite,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:qualite.qualite,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:qualite.qualite,name:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "help:qualite.qualite,qua_regt1:"
+msgid "First Pool"
+msgstr "Premier regroupement"
+
+msgctxt "help:qualite.qualite,qua_regt2:"
+msgid "Second Pool"
+msgstr "Deuxième regroupement"
+
+msgctxt "model:ir.action,name:act_qualite_form"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "model:ir.ui.menu,name:menu_qualite_form"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "model:qualite.qualite,name:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "A"
+msgstr "A"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "A-"
+msgstr "A-"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "B"
+msgstr "B"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "B+"
+msgstr "B+"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "B-"
+msgstr "B-"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "C"
+msgstr "C"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "C+"
+msgstr "C+"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "C-"
+msgstr "C-"
+
+msgctxt "selection:qualite.qualite,name:"
+msgid "D"
+msgstr "D"
+
+msgctxt "selection:qualite.qualite,qua_regt1:"
+msgid "A"
+msgstr "A"
+
+msgctxt "selection:qualite.qualite,qua_regt1:"
+msgid "B"
+msgstr "B"
+
+msgctxt "selection:qualite.qualite,qua_regt1:"
+msgid "C"
+msgstr "C"
+
+msgctxt "selection:qualite.qualite,qua_regt1:"
+msgid "D"
+msgstr "D"
+
+msgctxt "selection:qualite.qualite,qua_regt2:"
+msgid "A+B"
+msgstr "A+B"
+
+msgctxt "selection:qualite.qualite,qua_regt2:"
+msgid "C+D"
+msgstr "C+D"
+
+msgctxt "view:qualite.qualite:"
+msgid "Quality"
+msgstr "Qualité"

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Econometric monitoring">
+    <field name="eco_dispositif" />					
+	<field name="eco_suivi_den" />
+	<field name="eco_suiviecol" />
+	<field name="eco_miseajour" />
+	<field name="eco_depart" />
+	<field name="eco_rotation" />
+	<field name="eco_annees_bo" />
+	<field name="eco_annees_bi" />
+	<field name="eco_annees_chablis" />
+	<field name="eco_annees_prev" />
+</tree>

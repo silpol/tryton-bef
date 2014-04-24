@@ -1,0 +1,13 @@
+[tryton]
+version=1.0
+depends:
+    ir
+    res
+    party
+    country
+    google_maps
+    protection
+    commune
+    uicn
+    place
+    rapport_environnemental  

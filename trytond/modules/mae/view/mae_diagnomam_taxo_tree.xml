@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Diagnostic - Taxinomie mammifères">
+    <field name="taxinomie"/>
+    <field name="indice"/>                 
+    <field name="observation"/>
+</tree>
+

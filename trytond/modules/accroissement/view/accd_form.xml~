@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Diameter growth">    
+    <label name="dispositif"/>
+    <field name="dispositif"/>
+    <label name="strate"/>
+    <field name="strate"/>
+    <label name="cycle"/>
+    <field name="cycle"/>
+    <label name="essence" />
+    <field name="essence" />
+    <label name="classe" />
+    <field name="classe" />
+    <label name="accd" />
+    <field name="accd" />
+</form>

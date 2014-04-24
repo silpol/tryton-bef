@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<tree string="Strate">
+    <field name="cycle"/>
+    <field name="code"/>
+    <field name="name"/>
+    <field name="lib_long"/>
+	<field name="coefficient">
+        <suffix string="%"/>
+    </field>
+    <field name="diamlim1"/>
+    <field name="rayon1"/>
+    <field name="diamlim2"/>
+    <field name="rayon2"/>
+    <field name="diamlim3"/>
+    <field name="rayon3"/>
+    <field name="diamlim"/>
+    <field name="nbplacettes"/>
+    <field name="nbssplacettes"/>
+    <field name="rayonssplacettes"/>
+    <field name="taillis"/>
+    <field name="bmp"/>
+    <field name="lineaire"/>
+    <field name="limpcqm"/>
+    <field name="tariftypebmp"/>
+    <field name="tarifnumbmp"/>
+    <field name="comment"/>
+</tree>

@@ -1,0 +1,1146 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        
+        <record model="ir.ui.icon" id="travaux_icon">
+            <field name="name">tryton-travaux</field>
+            <field name="path">icons/tryton-travaux.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="preconise_icon">
+            <field name="name">tryton-preconise</field>
+            <field name="path">icons/tryton-preconise.svg</field>
+        </record>
+    
+        <menuitem name="Arbres voirie" id="menu_cg_admin"/>
+        <menuitem name="Planification travaux" id="menu_cg_travaux" icon="tryton-travaux"/>
+        <menuitem parent="menu_cg_admin" sequence="0" name="Configuration" id="menu_cg_equipement_configuration" icon="tryton-preferences"/>
+
+        
+        <record model="ir.ui.view" id="cg_taxinomie_view_form">
+            <field name="model">taxinomie.taxinomie</field>
+            <field name="inherit" ref="taxinomie.taxinomie_view_form" />       
+            <field name="name">taxinomie_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="cg_taxinomie_view_tree">
+            <field name="model">taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">cg_taxinomie_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cg_taxinomie_form">
+            <field name="name">Taxinomie</field>
+            <field name="res_model">taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_taxinomie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_taxinomie_view_tree"/>
+            <field name="act_window" ref="act_cg_taxinomie_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_taxinomie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_taxinomie_view_form"/>
+            <field name="act_window" ref="act_cg_taxinomie_form"/>
+        </record>
+
+        <record model="ir.ui.view" id="cg_commune_view_form">
+            <field name="model">commune.commune</field>
+            <field name="inherit" ref="commune.commune_view_form" />       
+            <field name="name">commune_form</field>
+        </record>        
+
+        <record model="ir.action.act_window" id="act_cg_commune_form">
+            <field name="name">Commune</field>
+            <field name="res_model">commune.commune</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cg_commune_form_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_commune_view_form"/>
+            <field name="act_window" ref="act_cg_commune_form"/>
+        </record>
+        
+        <record model="ir.ui.view" id="cg_equipement_view_tree">
+            <field name="model">cg.equipement</field>
+            <field name="type">tree</field>
+            <field name="name">equipement_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_equipement_view_form">
+            <field name="model">cg.equipement</field>
+            <field name="type">form</field>
+            <field name="name">equipement_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_equipement_form">
+            <field name="name">Équipements</field>
+            <field name="res_model">cg.equipement</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_equipement_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_equipement_view_tree"/>
+            <field name="act_window" ref="act_cg_equipement_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_equipement_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_equipement_view_form"/>
+            <field name="act_window" ref="act_cg_equipement_form"/>
+        </record>
+        <record model="ir.action.report" id="report_equipement_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cg.equipement</field>
+            <field name="report_name">cg.equipement.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_equipement_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cg.equipement,-1</field>
+            <field name="action" ref="report_equipement_edit"/>
+        </record>
+        
+        <menuitem parent="menu_cg_admin" id="menu_cg_equipement_form" icon="tryton-list" action="act_cg_equipement_form"/>
+        
+        <record model="ir.ui.view" id="cg_statut_voirie_view_tree">
+            <field name="model">cg.statut_voirie</field>
+            <field name="type">tree</field>
+            <field name="name">statut_voirie_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_statut_voirie_view_form">
+            <field name="model">cg.statut_voirie</field>
+            <field name="type">form</field>
+            <field name="name">statut_voirie_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_statut_voirie_form">
+            <field name="name">Statuts de voirie</field>
+            <field name="res_model">cg.statut_voirie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_statut_voirie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_statut_voirie_view_tree"/>
+            <field name="act_window" ref="act_cg_statut_voirie_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_statut_voirie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_statut_voirie_view_form"/>
+            <field name="act_window" ref="act_cg_statut_voirie_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_statut_voirie_form" icon="tryton-list" action="act_cg_statut_voirie_form"/>
+        
+        <record model="ir.ui.view" id="cg_operation_view_tree">
+            <field name="model">cg.operation</field>
+            <field name="type">tree</field>
+            <field name="name">operation_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_operation_view_form">
+            <field name="model">cg.operation</field>
+            <field name="type">form</field>
+            <field name="name">operation_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_operation_form">
+            <field name="name">Opérations</field>
+            <field name="res_model">cg.operation</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_operation_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_operation_view_tree"/>
+            <field name="act_window" ref="act_cg_operation_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_operation_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_operation_view_form"/>
+            <field name="act_window" ref="act_cg_operation_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_operation_form" icon="tryton-list" action="act_cg_operation_form"/>
+
+        <record model="ir.ui.view" id="cg_elagage_view_tree">
+            <field name="model">cg.elagage</field>
+            <field name="type">tree</field>
+            <field name="name">elagage_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_elagage_view_form">
+            <field name="model">cg.elagage</field>
+            <field name="type">form</field>
+            <field name="name">elagage_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_elagage_form">
+            <field name="name">Secteur élagage</field>
+            <field name="res_model">cg.elagage</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_elagage_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_elagage_view_tree"/>
+            <field name="act_window" ref="act_cg_elagage_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_elagage_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_elagage_view_form"/>
+            <field name="act_window" ref="act_cg_elagage_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_elagage_form" icon="tryton-list" action="act_cg_elagage_form"/>
+
+        <record model="ir.ui.view" id="cg_domanialite_view_tree">
+            <field name="model">cg.domanialite</field>
+            <field name="type">tree</field>
+            <field name="name">domanialite_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_domanialite_view_form">
+            <field name="model">cg.domanialite</field>
+            <field name="type">form</field>
+            <field name="name">domanialite_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_domanialite_form">
+            <field name="name">Domanialité</field>
+            <field name="res_model">cg.domanialite</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_domanialite_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_domanialite_view_tree"/>
+            <field name="act_window" ref="act_cg_domanialite_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_domanialite_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_domanialite_view_form"/>
+            <field name="act_window" ref="act_cg_domanialite_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_domanialite_form" icon="tryton-list" action="act_cg_domanialite_form"/>
+
+        <record model="ir.ui.view" id="cg_nature_view_tree">
+            <field name="model">cg.nature</field>
+            <field name="type">tree</field>
+            <field name="name">nature_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_nature_view_form">
+            <field name="model">cg.nature</field>
+            <field name="type">form</field>
+            <field name="name">nature_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_nature_form">
+            <field name="name">Nature</field>
+            <field name="res_model">cg.nature</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_nature_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_nature_view_tree"/>
+            <field name="act_window" ref="act_cg_nature_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_nature_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_nature_view_form"/>
+            <field name="act_window" ref="act_cg_nature_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_nature_form" icon="tryton-list" action="act_cg_nature_form"/>                
+        
+        <record model="ir.ui.view" id="cg_securite_view_tree">
+            <field name="model">cg.securite</field>
+            <field name="type">tree</field>
+            <field name="name">securite_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_securite_view_form">
+            <field name="model">cg.securite</field>
+            <field name="type">form</field>
+            <field name="name">securite_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_securite_form">
+            <field name="name">Niveaux de sécurité</field>
+            <field name="res_model">cg.securite</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_securite_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_securite_view_tree"/>
+            <field name="act_window" ref="act_cg_securite_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_securite_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_securite_view_form"/>
+            <field name="act_window" ref="act_cg_securite_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_securite_form" icon="tryton-list" action="act_cg_securite_form"/>
+
+        <record model="ir.ui.view" id="cg_ug_acug_view_tree">
+            <field name="model">cg.ug-cg.ug</field>
+            <field name="type">tree</field>
+            <field name="name">cg_acug_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_ug_acug_view_form">
+            <field name="model">cg.ug-cg.ug</field>
+            <field name="type">form</field>
+            <field name="name">cg_acug_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_ug_acug_form">
+            <field name="name">Ancienne UG</field>
+            <field name="res_model">cg.ug-cg.ug</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_ug_acug_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_ug_acug_view_tree"/>
+            <field name="act_window" ref="act_cg_ug_acug_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_ug_acug_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_ug_acug_view_form"/>
+            <field name="act_window" ref="act_cg_ug_acug_form"/>
+        </record>
+        
+        <record model="ir.ui.view" id="cg_ug_view_tree">
+            <field name="model">cg.ug</field>
+            <field name="type">tree</field>
+            <field name="name">ug_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_ug_view_form">
+            <field name="model">cg.ug</field>
+            <field name="type">form</field>
+            <field name="name">ug_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_ug_form">
+            <field name="name">Unités de gestion</field>
+            <field name="res_model">cg.ug</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_ug_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_ug_view_tree"/>
+            <field name="act_window" ref="act_cg_ug_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_ug_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_ug_view_form"/>
+            <field name="act_window" ref="act_cg_ug_form"/>
+        </record>
+        
+        <record model="ir.action.report" id="report_ug_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cg.ug</field>
+            <field name="report_name">cg.ug.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_ug_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cg.ug,-1</field>
+            <field name="action" ref="report_ug_edit"/>
+        </record>
+        
+        <menuitem parent="menu_cg_admin" id="menu_cg_ug_form" icon="tryton-list" action="act_cg_ug_form"/>
+        
+        <record model="ir.ui.view" id="cg_proprietaire_view_tree">
+            <field name="model">cg.proprietaire</field>
+            <field name="type">tree</field>
+            <field name="name">proprietaire_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_proprietaire_view_form">
+            <field name="model">cg.proprietaire</field>
+            <field name="type">form</field>
+            <field name="name">proprietaire_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_proprietaire_form">
+            <field name="name">Propriétaires</field>
+            <field name="res_model">cg.proprietaire</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_proprietaire_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_proprietaire_view_tree"/>
+            <field name="act_window" ref="act_cg_proprietaire_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_proprietaire_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_proprietaire_view_form"/>
+            <field name="act_window" ref="act_cg_proprietaire_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_proprietaire_form" icon="tryton-list" action="act_cg_proprietaire_form"/>
+        
+        <record model="ir.ui.view" id="cg_gestionnaire_view_tree">
+            <field name="model">cg.gestionnaire</field>
+            <field name="type">tree</field>
+            <field name="name">gestionnaire_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_gestionnaire_view_form">
+            <field name="model">cg.gestionnaire</field>
+            <field name="type">form</field>
+            <field name="name">gestionnaire_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_gestionnaire_form">
+            <field name="name">Gestionnaires</field>
+            <field name="res_model">cg.gestionnaire</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_gestionnaire_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_gestionnaire_view_tree"/>
+            <field name="act_window" ref="act_cg_gestionnaire_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_gestionnaire_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_gestionnaire_view_form"/>
+            <field name="act_window" ref="act_cg_gestionnaire_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_gestionnaire_form" icon="tryton-list" action="act_cg_gestionnaire_form"/>
+        
+        <record model="ir.ui.view" id="cg_station_view_tree">
+            <field name="model">cg.station</field>
+            <field name="type">tree</field>
+            <field name="name">station_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_station_view_form">
+            <field name="model">cg.station</field>
+            <field name="type">form</field>
+            <field name="name">station_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_station_form">
+            <field name="name">Stations</field>
+            <field name="res_model">cg.station</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_station_view_tree"/>
+            <field name="act_window" ref="act_cg_station_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_station_view_form"/>
+            <field name="act_window" ref="act_cg_station_form"/>
+        </record>
+                
+        <record model="ir.action.report" id="report_station_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cg.station</field>
+            <field name="report_name">cg.station.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_station_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cg.station,-1</field>
+            <field name="action" ref="report_station_edit"/>
+        </record>
+        
+        <menuitem parent="menu_cg_admin" id="menu_cg_station_form" icon="tryton-list" action="act_cg_station_form"/>
+        
+        <record model="ir.ui.view" id="cg_emplacement_view_tree">
+            <field name="model">cg.emplacement</field>
+            <field name="type">tree</field>
+            <field name="name">emplacement_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_form">
+            <field name="model">cg.emplacement</field>
+            <field name="type">form</field>
+            <field name="name">emplacement_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_emplacement_form">
+            <field name="name">Emplacements</field>
+            <field name="res_model">cg.emplacement</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_emplacement_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_emplacement_view_tree"/>
+            <field name="act_window" ref="act_cg_emplacement_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_emplacement_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_emplacement_view_form"/>
+            <field name="act_window" ref="act_cg_emplacement_form"/>
+        </record>
+        <record model="ir.action.report" id="report_emplacement_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cg.emplacement</field>
+            <field name="report_name">cg.emplacement.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_emplacement_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cg.emplacement,-1</field>
+            <field name="action" ref="report_emplacement_edit"/>
+        </record>
+        
+        <menuitem parent="menu_cg_admin" id="menu_cg_emplacement_form" icon="tryton-list" action="act_cg_emplacement_form"/>
+        
+        <record model="ir.ui.view" id="cg_cause_view_tree">
+            <field name="model">cg.cause</field>
+            <field name="type">tree</field>
+            <field name="name">cause_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_cause_view_form">
+            <field name="model">cg.cause</field>
+            <field name="type">form</field>
+            <field name="name">cause_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_cause_form">
+            <field name="name">Causes</field>
+            <field name="res_model">cg.cause</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_cause_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_cause_view_tree"/>
+            <field name="act_window" ref="act_cg_cause_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_cause_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_cause_view_form"/>
+            <field name="act_window" ref="act_cg_cause_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_cause_form" icon="tryton-list" action="act_cg_cause_form"/>
+        
+        <record model="ir.ui.view" id="cg_indispo_view_tree">
+            <field name="model">cg.indispo</field>
+            <field name="type">tree</field>
+            <field name="name">indispo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_indispo_view_form">
+            <field name="model">cg.indispo</field>
+            <field name="type">form</field>
+            <field name="name">indispo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_indispo_form">
+            <field name="name">Indisponibilités</field>
+            <field name="res_model">cg.indispo</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_indispo_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_indispo_view_tree"/>
+            <field name="act_window" ref="act_cg_indispo_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_indispo_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_indispo_view_form"/>
+            <field name="act_window" ref="act_cg_indispo_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_indispo_form" icon="tryton-list" action="act_cg_indispo_form"/>
+        
+        <record model="ir.ui.view" id="cg_evol_emplacement_view_tree">
+            <field name="model">cg.evol_emplacement</field>
+            <field name="type">tree</field>
+            <field name="name">evol_emplacement_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_evol_emplacement_view_form">
+            <field name="model">cg.evol_emplacement</field>
+            <field name="type">form</field>
+            <field name="name">evol_emplacement_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_evol_emplacement_form">
+            <field name="name">Évolution des emplacements</field>
+            <field name="res_model">cg.evol_emplacement</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_evol_emplacement_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_evol_emplacement_view_tree"/>
+            <field name="act_window" ref="act_cg_evol_emplacement_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_evol_emplacement_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_evol_emplacement_view_form"/>
+            <field name="act_window" ref="act_cg_evol_emplacement_form"/>
+        </record>        
+        
+        <record model="ir.ui.view" id="cg_diametre_view_tree">
+            <field name="model">cg.diametre</field>
+            <field name="type">tree</field>
+            <field name="name">diametre_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_diametre_view_form">
+            <field name="model">cg.diametre</field>
+            <field name="type">form</field>
+            <field name="name">diametre_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_diametre_form">
+            <field name="name">Diamètre</field>
+            <field name="res_model">cg.diametre</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_diametre_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_diametre_view_tree"/>
+            <field name="act_window" ref="act_cg_diametre_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_diametre_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_diametre_view_form"/>
+            <field name="act_window" ref="act_cg_diametre_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_diametre_form" icon="tryton-list" action="act_cg_diametre_form"/>
+        
+        <record model="ir.ui.view" id="cg_plantation_view_tree">
+            <field name="model">cg.plantation</field>
+            <field name="type">tree</field>
+            <field name="name">plantation_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_plantation_view_form">
+            <field name="model">cg.plantation</field>
+            <field name="type">form</field>
+            <field name="name">plantation_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_plantation_form">
+            <field name="name">Plantation</field>
+            <field name="res_model">cg.plantation</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_plantation_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_plantation_view_tree"/>
+            <field name="act_window" ref="act_cg_plantation_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_plantation_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_plantation_view_form"/>
+            <field name="act_window" ref="act_cg_plantation_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_plantation_form" icon="tryton-list" action="act_cg_plantation_form"/>
+        
+        <record model="ir.ui.view" id="cg_arbre_view_tree">
+            <field name="model">cg.arbre</field>
+            <field name="type">tree</field>
+            <field name="name">arbre_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_arbre_view_form">
+            <field name="model">cg.arbre</field>
+            <field name="type">form</field>
+            <field name="name">arbre_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_arbre_form">
+            <field name="name">Arbres</field>
+            <field name="res_model">cg.arbre</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_arbre_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_arbre_view_tree"/>
+            <field name="act_window" ref="act_cg_arbre_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_arbre_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_arbre_view_form"/>
+            <field name="act_window" ref="act_cg_arbre_form"/>
+        </record>
+        <record model="ir.action.report" id="report_arbre_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cg.arbre</field>
+            <field name="report_name">cg.arbre.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_arbre_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cg.arbre,-1</field>
+            <field name="action" ref="report_arbre_edit"/>
+        </record>
+        
+        <menuitem parent="menu_cg_admin" id="menu_cg_arbre_form" icon="tryton-list" action="act_cg_arbre_form"/>
+        
+        <record model="ir.ui.view" id="cg_bilan_view_tree">
+            <field name="model">cg.bilan</field>
+            <field name="type">tree</field>
+            <field name="name">bilan_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_bilan_view_form">
+            <field name="model">cg.bilan</field>
+            <field name="type">form</field>
+            <field name="name">bilan_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_bilan_form">
+            <field name="name">Bilans</field>
+            <field name="res_model">cg.bilan</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_bilan_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_bilan_view_tree"/>
+            <field name="act_window" ref="act_cg_bilan_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_bilan_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_bilan_view_form"/>
+            <field name="act_window" ref="act_cg_bilan_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_bilan_form" icon="tryton-list" action="act_cg_bilan_form"/>
+        
+        <record model="ir.ui.view" id="cg_paysager_view_tree">
+            <field name="model">cg.paysager</field>
+            <field name="type">tree</field>
+            <field name="name">paysager_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_paysager_view_form">
+            <field name="model">cg.paysager</field>
+            <field name="type">form</field>
+            <field name="name">paysager_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_paysager_form">
+            <field name="name">Paysagers</field>
+            <field name="res_model">cg.paysager</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_paysager_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_paysager_view_tree"/>
+            <field name="act_window" ref="act_cg_paysager_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_paysager_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_paysager_view_form"/>
+            <field name="act_window" ref="act_cg_paysager_form"/>
+        </record>
+        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_paysager_form" icon="tryton-list" action="act_cg_paysager_form"/>
+        
+        <record model="ir.ui.view" id="cg_evol_arbre_view_tree">
+            <field name="model">cg.evol_arbre</field>
+            <field name="type">tree</field>
+            <field name="name">evol_arbre_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_evol_arbre_view_form">
+            <field name="model">cg.evol_arbre</field>
+            <field name="type">form</field>
+            <field name="name">evol_arbre_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_evol_arbre_form">
+            <field name="name">Évolution des arbres</field>
+            <field name="res_model">cg.evol_arbre</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_evol_arbre_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_evol_arbre_view_tree"/>
+            <field name="act_window" ref="act_cg_evol_arbre_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_evol_arbre_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_evol_arbre_view_form"/>
+            <field name="act_window" ref="act_cg_evol_arbre_form"/>
+        </record>
+        
+        <record model="ir.action.report" id="notation">
+            <field name="name">Notation</field>
+            <field name="model">cg.equipement</field>
+            <field name="report_name">cg.notation</field>
+            <field name="report">cg/notation.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="notation_equi">
+            <field name="keyword">form_print</field>
+            <field name="model">cg.equipement,-1</field>
+            <field name="action" ref="notation"/>
+        </record>
+
+        <record model="ir.action.report" id="rapport_note_defiance">
+            <field name="name">Équipement</field>
+            <field name="model">cg.equipement</field>
+            <field name="report_name">cg.equipement</field>
+            <field name="report">cg/equipement.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="rapport_note_defiance_equi">
+            <field name="keyword">form_print</field>
+            <field name="model">cg.equipement,-1</field>
+            <field name="action" ref="rapport_note_defiance"/>
+        </record>
+        
+        <record model="ir.action.report" id="arbre">
+            <field name="name">Arbres</field>
+            <field name="model">cg.arbre</field>
+            <field name="report_name">cg.arbre</field>
+            <field name="report">cg/arbre.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="arbre_arbre">
+            <field name="keyword">form_print</field>
+            <field name="model">cg.arbre,-1</field>
+            <field name="action" ref="arbre"/>
+        </record>
+        
+        <record model="ir.action.report" id="report_produit">
+            <field name="name">Rapport Produits</field>
+            <field name="model">cg.rapport_produit</field>
+            <field name="report_name">cg.rapport_produit</field>
+            <field name="report">cg/rapport_produit.ods</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_produit_pro">
+            <field name="keyword">form_print</field>
+            <field name="model">product.product,-1</field>
+            <field name="action" ref="report_produit"/>
+        </record>
+
+        <record model="ir.action.report" id="report_preconisation">
+            <field name="name">Rapport préconisations</field>
+            <field name="model">cg.preconisation</field>
+            <field name="report_name">cg.rapport_preconisation</field>
+            <field name="report">cg/rapport_preconisation.ods</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_preconisation_pro">
+            <field name="keyword">form_print</field>
+            <field name="model">cg.preconisation,-1</field>
+            <field name="action" ref="report_preconisation"/>
+        </record>
+                 
+        <menuitem name="Rapports" id="menu_cg_rapport"/>
+
+        <record model="ir.ui.view" id="note_view_tree">
+            <field name="model">cg.note</field>
+            <field name="type">tree</field>
+            <field name="name">note_tree</field>
+        </record>
+        <record model="ir.ui.view" id="note_view_graph">
+            <field name="model">cg.note</field>
+            <field name="type">graph</field>
+            <field name="name">note_graph</field>
+        </record> 
+
+        <record model="ir.action.act_window" id="act_note_form">
+            <field name="name">Note de Défiance Sanitaire des arbres</field>
+            <field name="res_model">cg.note</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_note_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="note_view_tree"/>
+            <field name="act_window" ref="act_note_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_note_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="note_view_graph"/>
+            <field name="act_window" ref="act_note_form"/>
+        </record>                       
+        
+        <menuitem parent="menu_cg_rapport" action="act_note_form" icon="tryton-graph" id="menu_note"/>
+
+        <record model="ir.ui.view" id="preconisation_view_tree">
+            <field name="model">cg.preconisation</field>
+            <field name="type">tree</field>
+            <field name="name">preconisation_tree</field>
+        </record>
+        <record model="ir.ui.view" id="preconisation_view_form">
+            <field name="model">cg.preconisation</field>
+            <field name="type">form</field>
+            <field name="name">preconisation_form</field>
+        </record> 
+
+        <record model="ir.action.act_window" id="act_preconisation_form">
+            <field name="name">Préconisation des arbres</field>
+            <field name="res_model">cg.preconisation</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_preconisation_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="preconisation_view_tree"/>
+            <field name="act_window" ref="act_preconisation_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_preconisation_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="preconisation_view_form"/>
+            <field name="act_window" ref="act_preconisation_form"/>
+        </record>                       
+        
+        <menuitem parent="menu_cg_travaux" action="act_preconisation_form" icon="tryton-list" id="menu_preconisation"/>
+
+        <!-- Arbres Secteur élagage -->
+        <record model="ir.ui.view" id="se_secteur_view_tree">
+            <field name="model">cg.arbre</field>
+            <field name="type">tree</field>
+            <field name="name">se_secteur_tree</field>
+        </record>
+        <record model="ir.ui.view" id="se_secteur_view_form">
+            <field name="model">cg.arbre</field>
+            <field name="type">form</field>
+            <field name="name">se_secteur_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_secteur">
+            <field name="name">Secteurs élagage</field>
+            <field name="res_model">cg.arbre</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_secteur_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_secteur"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_secteur_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_secteur"/>
+        </record>
+
+        <record model="ir.ui.view" id="check_arbre_open_start_view_form">
+            <field name="model">cg.check_arbre.open.start</field>
+            <field name="type">form</field>
+            <field name="name">check_arbre_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_check_arbre_open">
+            <field name="name">Arbre(s) à préconiser par Type de travaux</field>
+            <field name="wiz_name">cg.check_arbre.open</field>
+            <field name="model">cg.arbre</field>
+        </record>
+        <record model="ir.action.keyword" id="check_arbre_open_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">cg.arbre,-1</field>
+            <field name="action" ref="wizard_check_arbre_open"/>
+        </record>        
+
+        <record model="ir.ui.view" id="check_arbre_result">
+            <field name="model">cg.check_arbre.result</field>
+            <field name="type">form</field>
+            <field name="name">check_arbre_result</field>
+        </record>
+        <menuitem parent="menu_cg_travaux" sequence="1" id="menu_secteur" icon="tryton-list" action="window_secteur"/>
+
+        <!-- Arbres Secteur élagage CENTRE-->
+        <record model="ir.action.act_window" id="window_se_centre">
+            <field name="name">CENTRE</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'CENTRE')]</field>
+            <field name="context">{'elagage': 'CENTRE'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_centre_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_centre"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_centre_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_centre"/>
+        </record>
+        <menuitem parent="menu_secteur" sequence="1" id="menu_se_centre" icon="tryton-list" action="window_se_centre"/>
+        <!-- Arbres Secteur élagage CENTRE port en rideau -->
+        <record model="ir.action.act_window" id="window_se_centre_rideau">
+            <field name="name">Port en Rideau</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'CENTRE'), ('conduite', '=', 'archi')]</field>
+            <field name="context">{'conduite': 'archi'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_centre_rideau_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_centre_rideau"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_centre_rideau_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_centre_rideau"/>
+        </record>
+        <menuitem parent="menu_se_centre" sequence="1" id="menu_se_centre_rideau" icon="tryton-list" action="window_se_centre_rideau"/>
+        <!-- Arbres Secteur élagage CENTRE port libre -->
+        <record model="ir.action.act_window" id="window_se_centre_libre">
+            <field name="name">Port Libre</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'CENTRE'), ('conduite', '=', 'libre')]</field>
+            <field name="context">{'conduite': 'libre'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_centre_libre_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_centre_libre"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_centre_libre_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_centre_libre"/>
+        </record>
+        <menuitem parent="menu_se_centre" sequence="1" id="menu_se_centre_libre" icon="tryton-list" action="window_se_centre_libre"/>
+
+        <!-- Arbres Secteur élagage EST-->
+        <record model="ir.action.act_window" id="window_se_est">
+            <field name="name">EST</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'EST')]</field>
+            <field name="context">{'elagage': 'EST'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_est_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_est"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_est_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_est"/>
+        </record>
+        <menuitem parent="menu_secteur" sequence="2" id="menu_se_est" icon="tryton-list" action="window_se_est"/>
+        <!-- Arbres Secteur élagage EST port en rideau -->
+        <record model="ir.action.act_window" id="window_se_est_rideau">
+            <field name="name">Port en Rideau</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'EST'), ('conduite', '=', 'archi')]</field>
+            <field name="context">{'conduite': 'archi'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_est_rideau_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_est_rideau"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_est_rideau_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_est_rideau"/>
+        </record>
+        <menuitem parent="menu_se_est" sequence="1" id="menu_se_est_rideau" icon="tryton-list" action="window_se_est_rideau"/>
+        <!-- Arbres Secteur élagage EST port libre -->
+        <record model="ir.action.act_window" id="window_se_est_libre">
+            <field name="name">Port Libre</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'EST'), ('conduite', '=', 'libre')]</field>
+            <field name="context">{'conduite': 'libre'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_est_libre_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_est_libre"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_est_libre_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_est_libre"/>
+        </record>
+        <menuitem parent="menu_se_est" sequence="1" id="menu_se_est_libre" icon="tryton-list" action="window_se_est_libre"/>
+
+        <!-- Arbres Secteur élagage OUEST-->
+        <record model="ir.action.act_window" id="window_se_ouest">
+            <field name="name">OUEST</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'OUEST')]</field>
+            <field name="context">{'elagage': 'OUEST'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_ouest_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_ouest"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_ouest_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_ouest"/>
+        </record>
+        <menuitem parent="menu_secteur" sequence="3" id="menu_se_ouest" icon="tryton-list" action="window_se_ouest"/>
+        <!-- Arbres Secteur élagage OUEST port en rideau -->
+        <record model="ir.action.act_window" id="window_se_ouest_rideau">
+            <field name="name">Port en Rideau</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'OUEST'), ('conduite', '=', 'archi')]</field>
+            <field name="context">{'conduite': 'archi'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_ouest_rideau_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_ouest_rideau"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_ouest_rideau_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_ouest_rideau"/>
+        </record>
+        <menuitem parent="menu_se_ouest" sequence="1" id="menu_se_ouest_rideau" icon="tryton-list" action="window_se_ouest_rideau"/>
+        <!-- Arbres Secteur élagage OUEST port libre -->
+        <record model="ir.action.act_window" id="window_se_ouest_libre">
+            <field name="name">Port Libre</field>
+            <field name="res_model">cg.arbre</field>
+            <field name="domain">[('emplacement.station.ug.elagage.code', '=', 'OUEST'), ('conduite', '=', 'libre')]</field>
+            <field name="context">{'conduite': 'libre'}</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_ouest_libre_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_secteur_view_tree"/>
+            <field name="act_window" ref="window_se_ouest_libre"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_se_ouest_libre_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_secteur_view_form"/>
+            <field name="act_window" ref="window_se_ouest_libre"/>
+        </record>
+        <menuitem parent="menu_se_ouest" sequence="1" id="menu_se_ouest_libre" icon="tryton-list" action="window_se_ouest_libre"/>
+
+        <record model="ir.ui.view" id="cg_travaux_view_tree">
+            <field name="model">cg.travaux</field>
+            <field name="type">tree</field>
+            <field name="name">travaux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_se_travaux_view_tree">
+            <field name="model">cg.travaux</field>
+            <field name="type">tree</field>
+            <field name="name">se_travaux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_travaux_view_form">
+            <field name="model">cg.travaux</field>
+            <field name="type">form</field>
+            <field name="name">travaux_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_travaux_form">
+            <field name="name">Travaux</field>
+            <field name="res_model">cg.travaux</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_travaux_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_travaux_view_tree"/>
+            <field name="act_window" ref="act_cg_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_travaux_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_travaux_view_form"/>
+            <field name="act_window" ref="act_cg_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_cg_travaux_form_domain_apreconsier">
+            <field name="name">À préconiser</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[("state", "=", "apreconiser")]</field>
+            <field name="act_window" ref="act_cg_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_cg_travaux_form_domain_preconise">
+            <field name="name">Préconisés</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[("state", "=", "preconise")]</field>
+            <field name="act_window" ref="act_cg_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_cg_travaux_form_domain_realise">
+            <field name="name">Réalisés</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[("state", "=", "realise")]</field>
+            <field name="act_window" ref="act_cg_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_cg_travaux_form_domain_annuler">
+            <field name="name">Annulés</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain">[("state", "=", "annuler")]</field>
+            <field name="act_window" ref="act_cg_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_cg_travaux_form_domain_all">
+            <field name="name">Tous</field>
+            <field name="sequence" eval="9999"/>
+            <field name="domain"></field>
+            <field name="act_window" ref="act_cg_travaux_form"/>
+        </record>
+        <record model="ir.model.button" id="travaux_apreconsier_button">
+            <field name="name">apreconiser</field>
+            <field name="model" search="[('model', '=', 'cg.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_preconise_button">
+            <field name="name">preconise</field>
+            <field name="model" search="[('model', '=', 'cg.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_realise_button">
+            <field name="name">realise</field>
+            <field name="model" search="[('model', '=', 'cg.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_annuler_button">
+            <field name="name">annuler</field>
+            <field name="model" search="[('model', '=', 'cg.travaux')]"/>
+        </record>
+        
+        <menuitem parent="menu_cg_travaux" id="menu_cg_travaux_form" icon="tryton-list" action="act_cg_travaux_form"/>
+
+    </data>
+</tryton>

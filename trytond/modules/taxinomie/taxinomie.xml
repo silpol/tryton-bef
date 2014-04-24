@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+    <record model="ir.ui.icon" id="taxinomie_icon">
+        <field name="name">tryton-taxinomie</field>
+        <field name="path">icons/tryton-taxinomie.svg</field>
+    </record>
+
+    <record model="ir.ui.icon" id="taxinomie_codes">
+        <field name="name">tryton-codes</field>
+        <field name="path">icons/tryton-codes.svg</field>
+    </record>
+
+    <menuitem name="Taxinomie" parent="ir.menu_administration" id="menu_taxinomie" icon="tryton-taxinomie"/>
+    <menuitem parent="menu_taxinomie" sequence="1" id="menu_taxinomie_codes" name="Codes" icon="tryton-codes"/>
+    
+    <record model="ir.ui.view" id="taxinomie_rang_view_tree">
+		<field name="model">taxinomie.rang</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+            <![CDATA[
+            <tree string="rang">
+                <field name="code" />
+                <field name="description" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="taxinomie_rang_view_form">
+        <field name="model">taxinomie.rang</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="rang" col="2">
+                <label name="code" />
+                <field name="code" />
+                <label name="description" />
+                <field name="description" />
+            </form>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_taxinomie_rang_form">
+        <field name="name">rang</field>
+        <field name="res_model">taxinomie.rang</field></record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_rang_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="taxinomie_rang_view_tree"/>
+        <field name="act_window" ref="act_taxinomie_rang_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_rang_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="taxinomie_rang_view_form"/>
+        <field name="act_window" ref="act_taxinomie_rang_form"/>
+    </record>
+
+	<menuitem parent="menu_taxinomie_codes" sequence="1" id="menu_taxinomie_rang_form" icon="tryton-list" action="act_taxinomie_rang_form"/>
+    
+    <record model="ir.ui.view" id="taxinomie_habitat_view_tree">
+		<field name="model">taxinomie.habitat</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+            <![CDATA[
+            <tree string="habitat">
+                <field name="code" />
+                <field name="description" />
+                <field name="remarques" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="taxinomie_habitat_view_form">
+        <field name="model">taxinomie.habitat</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="habitat" col="2">
+                <label name="code" />
+                <field name="code" />
+                <label name="description" />
+                <field name="description" />
+                <label name="remarques" />
+                <field name="remarques" />
+            </form>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_taxinomie_habitat_form">
+        <field name="name">habitat</field>
+        <field name="res_model">taxinomie.habitat</field></record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_habitat_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="taxinomie_habitat_view_tree"/>
+        <field name="act_window" ref="act_taxinomie_habitat_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_habitat_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="taxinomie_habitat_view_form"/>
+        <field name="act_window" ref="act_taxinomie_habitat_form"/>
+    </record>
+
+	<menuitem parent="menu_taxinomie_codes" sequence="1" id="menu_taxinomie_habitat_form" icon="tryton-list" action="act_taxinomie_habitat_form"/>
+    
+    <record model="ir.ui.view" id="taxinomie_statut_view_tree">
+		<field name="model">taxinomie.statut</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+            <![CDATA[
+            <tree string="statut">
+                <field name="code" />
+                <field name="description" />
+                <field name="definition" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="taxinomie_statut_view_form">
+        <field name="model">taxinomie.statut</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="statut" col="2">
+                <label name="code" />
+                <field name="code" />
+                <label name="description" />
+                <field name="description" />
+                <label name="definition" />
+                <field name="definition" />
+            </form>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_taxinomie_statut_form">
+        <field name="name">statut</field>
+        <field name="res_model">taxinomie.statut</field></record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_statut_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="taxinomie_statut_view_tree"/>
+        <field name="act_window" ref="act_taxinomie_statut_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_statut_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="taxinomie_statut_view_form"/>
+        <field name="act_window" ref="act_taxinomie_statut_form"/>
+    </record>
+
+	<menuitem parent="menu_taxinomie_codes" sequence="1" id="menu_taxinomie_statut_form" icon="tryton-list" action="act_taxinomie_statut_form"/>
+    	
+    
+    <record model="ir.ui.view" id="taxinomie_view_tree">
+		<field name="model">taxinomie.taxinomie</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+            <![CDATA[
+            <tree string="taxinomie">
+                <field name="regne" />
+                <field name="phylum" />
+                <field name="classe" />
+                <field name="ordre" />
+                <field name="famille" />
+                <field name="cd_nom" />
+                <field name="cd_taxsup" />
+                <field name="cd_ref" />
+                <field name="rang" />
+                <field name="lb_nom" />
+                <field name="lb_auteur" />
+                <field name="nom_complet" />
+                <field name="nom_valide" />
+                <field name="nom_vern" />
+                <field name="nom_vern_eng" />
+                <field name="habitat" />
+                <field name="statut" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="taxinomie_view_form">
+        <field name="model">taxinomie.taxinomie</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="taxinomie" col="2">
+                <notebook colspan="2">
+                    <page string="Général" id="general">
+                        <label name="regne" />
+                        <field name="regne" />
+                        <label name="phylum" />
+                        <field name="phylum" />
+                        <label name="classe" />
+                        <field name="classe" />
+                        <label name="ordre" />
+                        <field name="ordre" />
+                        <label name="famille" />
+                        <field name="famille" />
+                        <label name="cd_nom" />
+                        <field name="cd_nom" widget="url"/>
+                        <label name="cd_taxsup" />
+                        <field name="cd_taxsup" widget="url"/>
+                        <label name="cd_ref" />
+                        <field name="cd_ref" widget="url"/>
+                        <label name="rang" />
+                        <field name="rang" widget="selection" />
+                        <label name="lb_nom" />
+                        <field name="lb_nom" />
+                        <label name="lb_auteur" />
+                        <field name="lb_auteur" />
+                        <label name="nom_complet" />
+                        <field name="nom_complet" />
+                        <label name="nom_valide" />
+                        <field name="nom_valide" />
+                        <label name="nom_vern" />
+                        <field name="nom_vern" />
+                        <label name="nom_vern_eng" />
+                        <field name="nom_vern_eng" />
+                        <label name="habitat" />
+                        <field name="habitat" widget="selection" />                        
+                    </page>
+                    <page string="Statuts" id="status">                                    
+                        <field name="statut"/>
+                    </page>
+                </notebook>                 
+            </form>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_taxinomie_form">
+        <field name="name">Taxons</field>
+        <field name="res_model">taxinomie.taxinomie</field></record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="taxinomie_view_tree"/>
+        <field name="act_window" ref="act_taxinomie_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="taxinomie_view_form"/>
+        <field name="act_window" ref="act_taxinomie_form"/>
+    </record>
+
+	<menuitem parent="menu_taxinomie" id="menu_taxinomie_form" icon="tryton-list" action="act_taxinomie_form"/>
+    
+    <record model="ir.ui.view" id="taxinomie_statut_pays_taxon_view_tree">
+		<field name="model">taxinomie.statut_pays_taxon</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+            <![CDATA[
+            <tree string="statut_pays_taxon">
+                <field name="pays" />
+		        <field name="division" />
+                <field name="statut" />
+                <field name="taxon" />
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="taxinomie_statut_pays_taxon_view_form">
+        <field name="model">taxinomie.statut_pays_taxon</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="statut_pays_taxon" col="2">
+                <label name="pays" />
+                <field name="pays" />
+		        <label name="division" />
+                <field name="division" />
+                <label name="statut" />
+                <field name="statut" />
+                <label name="taxon" />
+                <field name="taxon" />
+            </form>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_taxinomie_statut_pays_taxon_form">
+        <field name="name">statut_pays_taxon</field>
+        <field name="res_model">taxinomie.statut_pays_taxon</field></record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_statut_pays_taxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="taxinomie_statut_pays_taxon_view_tree"/>
+        <field name="act_window" ref="act_taxinomie_statut_pays_taxon_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_taxinomie_statut_pays_taxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="taxinomie_statut_pays_taxon_view_form"/>
+        <field name="act_window" ref="act_taxinomie_statut_pays_taxon_form"/>
+    </record>
+
+	<menuitem parent="menu_taxinomie_codes" sequence="1" id="menu_taxinomie_statut_pays_taxon_form" icon="tryton-list" action="act_taxinomie_statut_pays_taxon_form"/>
+    
+    </data>
+</tryton>

@@ -1,0 +1,116 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:martelage.martelage,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:martelage.martelage,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:martelage.martelage,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:martelage.martelage,mar_annee:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "field:martelage.martelage,mar_diam:"
+msgid "Diameter class"
+msgstr "Classe de diamètre"
+
+msgctxt "field:martelage.martelage,mar_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:martelage.martelage,mar_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:martelage.martelage,mar_nb:"
+msgid "Number"
+msgstr "Nombre"
+
+msgctxt "field:martelage.martelage,mar_type:"
+msgid "Inventory type"
+msgstr "Type d'inventaire"
+
+msgctxt "field:martelage.martelage,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:martelage.martelage,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:martelage.martelage,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:martelage.martelage,mar_annee:"
+msgid "Inventory year or cutting"
+msgstr "Année de coupe ou d'inventaire"
+
+msgctxt "help:martelage.martelage,mar_diam:"
+msgid "Diameter class"
+msgstr "Classe de diamètre"
+
+msgctxt "help:martelage.martelage,mar_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:martelage.martelage,mar_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "help:martelage.martelage,mar_nb:"
+msgid "Number of stems"
+msgstr "Nombre de tiges"
+
+msgctxt "help:martelage.martelage,mar_type:"
+msgid "Inventory type"
+msgstr "Type d'inventaire"
+
+msgctxt "model:ir.action,name:act_martelage_form"
+msgid "Hammering"
+msgstr "Martelage"
+
+msgctxt "model:ir.ui.menu,name:menu_martelage_form"
+msgid "Hammering"
+msgstr "Martelage"
+
+msgctxt "model:martelage.martelage,name:"
+msgid "Hammering"
+msgstr "Martelage"
+
+msgctxt "selection:martelage.martelage,mar_type:"
+msgid "BI"
+msgstr "BI"
+
+msgctxt "selection:martelage.martelage,mar_type:"
+msgid "BI+BO"
+msgstr "BI+BO"
+
+msgctxt "selection:martelage.martelage,mar_type:"
+msgid "BO"
+msgstr "BO"
+
+msgctxt "selection:martelage.martelage,mar_type:"
+msgid "Chablis"
+msgstr "Chablis"
+
+msgctxt "selection:martelage.martelage,mar_type:"
+msgid "INV"
+msgstr "INV"

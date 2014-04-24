@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+		<record model="ir.ui.view" id="recettes_view_tree">			
+			<field name="model">recettes.recettes</field>
+			<field name="type">tree</field>
+			<field name="name">recette_tree</field>
+		</record>
+
+		<record model="ir.ui.view" id="recettes_view_form">			
+			<field name="model">recettes.recettes</field>
+			<field name="type">form</field>
+			<field name="name">recette_form</field>
+		</record>
+						
+		<record model="ir.action.act_window" id="act_recettes_form">
+			<field name="name">Recipe</field>
+			<field name="res_model">recettes.recettes</field>						
+		</record>
+		
+		<record model="ir.action.act_window.view" id="act_recettes_form_view1">
+		    <field name="sequence" eval="10"/>
+		    <field name="view" ref="recettes_view_tree"/>
+		    <field name="act_window" ref="act_recettes_form"/>		
+		</record>
+
+		<record model="ir.action.act_window.view" id="act_recettes_form_view2">
+		    <field name="sequence" eval="20"/>
+		    <field name="view" ref="recettes_view_form"/>
+		    <field name="act_window" ref="act_recettes_form"/>		
+		</record>
+				
+		<menuitem parent="ir.menu_administration" sequence="180" id="menu_recettes_form" icon="tryton-list" action="act_recettes_form"/>        
+		
+	</data>
+</tryton>

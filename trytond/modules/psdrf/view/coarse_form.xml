@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<form string="Coarse" col="2">
+    <label name="species" />
+    <field name="species" />
+    <label name="plot" />
+    <field name="plot" />
+    <label name="num" />
+    <field name="num" />
+    <notebook colspan="6">
+        <page string="Tree death evolution" id="measure">
+            <field name="measure" />
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<form string="Death tree evolution" col="2">
+    <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="cycle"/>
+            <field name="cycle"/>
+            <label name="base_diam"/>
+            <field name="base_diam"/>
+            <label name="top_diam"/>
+            <field name="top_diam"/>
+            <label name="mid_diam"/>
+            <field name="mid_diam"/>
+            <label name="length"/>
+            <field name="length"/>
+            <label name="contact"/>
+            <field name="contact"/>
+            <label name="windfall"/>
+            <field name="windfall"/>
+            <label name="bark_stage"/>
+            <field name="bark_stage" widget="selection"/>
+            <label name="rot_stage"/>
+            <field name="rot_stage" widget="selection"/>
+        </page>
+        <page string="Observations" id="observations">
+            <field name="observation"/>
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+   
+        <record model="ir.ui.icon" id="mae_mae">
+            <field name="name">tryton-mae</field>
+            <field name="path">icons/tryton-mae.svg</field>
+        </record>    
+        <record model="ir.ui.icon" id="mae_codes">
+            <field name="name">tryton-codes</field>
+            <field name="path">icons/tryton-codes.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="mae_diagno">
+            <field name="name">tryton-diagno</field>
+            <field name="path">icons/tryton-diagno.svg</field>
+        </record>         
+
+        <menuitem name="Mae" id="menu_mae" icon="tryton-mae"/>
+        <menuitem parent="menu_mae" sequence="0" name="Configuration" id="menu_mae_configuration" icon="tryton-preferences"/>
+
+        <record model="ir.ui.view" id="mae_taxinomie_view_form">
+            <field name="model">taxinomie.taxinomie</field>
+            <field name="inherit" ref="taxinomie.taxinomie_view_form" />       
+            <field name="name">mae_taxinomie_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="mae_taxinomie_view_tree">
+            <field name="model">taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_taxinomie_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_mae_taxinomie_form">
+            <field name="name">Taxinomie</field>
+            <field name="res_model">taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_taxinomie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_taxinomie_view_tree"/>
+            <field name="act_window" ref="act_mae_taxinomie_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_taxinomie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_taxinomie_view_form"/>
+            <field name="act_window" ref="act_mae_taxinomie_form"/>
+        </record>
+
+        <!-- Flore patrimoniale -->
+        <record model="ir.ui.view" id="mae_diagnoflopat_taxo_rel_view_tree">
+            <field name="model">mae.diagnoflopat-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagno_taxo_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="mae_diagnoflopat_taxo_rel_view_form">
+            <field name="model">mae.diagnoflopat-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagno_taxo_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_mae_diagnoflopat_taxo_rel_form">
+            <field name="name">Flore patrimoniale</field>
+            <field name="res_model">mae.diagnoflopat-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoflopat_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoflopat_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoflopat_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoflopat_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoflopat_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoflopat_taxo_rel_form"/>
+        </record>
+
+        <!-- Autres espèces -->
+        <record model="ir.ui.view" id="mae_diagnoaut_taxo_rel_view_tree">
+            <field name="model">mae.diagnoaut-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagno_taxo_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="mae_diagnoaut_taxo_rel_view_form">
+            <field name="model">mae.diagnoaut-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagno_taxo_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_mae_diagnoaut_taxo_rel_form">
+            <field name="name">Autres espèces</field>
+            <field name="res_model">mae.diagnoaut-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoaut_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoaut_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoaut_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoaut_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoaut_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoaut_taxo_rel_form"/>
+        </record>
+
+        <!-- Avifaune -->
+        <record model="ir.ui.view" id="mae_diagnoavi_taxo_rel_view_tree">
+            <field name="model">mae.diagnoavi-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnoavi_taxo_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="mae_diagnoavi_taxo_rel_view_form">
+            <field name="model">mae.diagnoavi-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnoavi_taxo_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_mae_diagnoavi_taxo_rel_form">
+            <field name="name">Avifaune</field>
+            <field name="res_model">mae.diagnoavi-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoavi_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoavi_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoavi_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoavi_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoavi_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoavi_taxo_rel_form"/>
+        </record>
+
+        <!-- Mammifères -->
+        <record model="ir.ui.view" id="mae_diagnomam_taxo_rel_view_tree">
+            <field name="model">mae.diagnomam-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnomam_taxo_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="mae_diagnomam_taxo_rel_view_form">
+            <field name="model">mae.diagnomam-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnomam_taxo_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_mae_diagnomam_taxo_rel_form">
+            <field name="name">Mammifères</field>
+            <field name="res_model">mae.diagnomam-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnomam_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnomam_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnomam_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnomam_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnomam_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnomam_taxo_rel_form"/>
+        </record>
+
+        <!-- Batraciens reptiles -->
+        <record model="ir.ui.view" id="mae_diagnobatrep_taxo_rel_view_tree">
+            <field name="model">mae.diagnobatrep-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnobatrep_taxo_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="mae_diagnobatrep_taxo_rel_view_form">
+            <field name="model">mae.diagnobatrep-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnobatrep_taxo_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_mae_diagnobatrep_taxo_rel_form">
+            <field name="name">Mammifères</field>
+            <field name="res_model">mae.diagnobatrep-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnobatrep_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnobatrep_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnobatrep_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnobatrep_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnobatrep_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnobatrep_taxo_rel_form"/>
+        </record>
+        
+        <record model="ir.ui.view" id="mae_mae_view_tree">
+            <field name="model">mae.mae</field>
+            <field name="type">tree</field>
+            <field name="name">mae_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="mae_mae_view_form">
+            <field name="model">mae.mae</field>
+            <field name="type">form</field>
+            <field name="name">mae_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_mae_mae_form">
+            <field name="name">Mae</field>
+            <field name="res_model">mae.mae</field></record>
+
+        <record model="ir.action.act_window.view" id="act_mae_mae_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_mae_view_tree"/>
+            <field name="act_window" ref="act_mae_mae_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_mae_mae_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_mae_view_form"/>
+            <field name="act_window" ref="act_mae_mae_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_mae_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">mae.mae</field>
+            <field name="report_name">mae.mae.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_mae_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">mae.mae,-1</field>
+            <field name="action" ref="report_mae_edit"/>
+        </record>
+
+        <record model="ir.action.report" id="report_mae">
+            <field name="name">Mae</field>
+            <field name="model">mae.mae</field>
+            <field name="report_name">mae.mae</field>
+            <field name="report">mae/mae.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_mae_mae">
+            <field name="keyword">form_print</field>
+            <field name="model">mae.mae,-1</field>
+            <field name="action" ref="report_mae"/>
+        </record> 
+
+        <menuitem parent="menu_mae" id="menu_mae_mae_form" icon="tryton-mae" action="act_mae_mae_form"/>
+
+        <record model="ir.ui.view" id="mae_diagno_view_tree">
+            <field name="model">mae.diagno</field>
+            <field name="type">tree</field>
+            <field name="name">diagno_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagno_view_form">
+            <field name="model">mae.diagno</field>
+            <field name="type">form</field>
+            <field name="name">diagno_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagno_form">
+            <field name="name">Diagnostic</field>
+            <field name="res_model">mae.diagno</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagno_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagno_view_tree"/>
+            <field name="act_window" ref="act_mae_diagno_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagno_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_diagno_view_form"/>
+            <field name="act_window" ref="act_mae_diagno_form"/>
+        </record>
+        
+        <menuitem parent="menu_mae" id="menu_mae_diagno_form" icon="tryton-diagno" action="act_mae_diagno_form"/>   
+	
+        <record model="ir.ui.view" id="mae_code_view_tree">
+            <field name="model">mae.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_code_view_form">
+            <field name="model">mae.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_code_form">
+            <field name="name">Code</field>
+            <field name="res_model">mae.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_code_view_tree"/>
+            <field name="act_window" ref="act_mae_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_code_view_form"/>
+            <field name="act_window" ref="act_mae_code_form"/>
+        </record>
+        
+        <menuitem parent="menu_mae_configuration" id="menu_mae_code_form" icon="tryton-list" action="act_mae_code_form"/>
+
+        <record model="ir.ui.view" id="mae_geo_lieudit_view_tree">
+            <field name="model">mae.geo_lieudit</field>
+            <field name="type">tree</field>
+            <field name="name">geo_lieudit_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_geo_lieudit_view_form">
+            <field name="model">mae.geo_lieudit</field>
+            <field name="type">form</field>
+            <field name="name">geo_lieudit_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_geo_lieudit_form">
+            <field name="name">Lieudit</field>
+            <field name="res_model">mae.geo_lieudit</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_geo_lieudit_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_geo_lieudit_view_tree"/>
+            <field name="act_window" ref="act_mae_geo_lieudit_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_geo_lieudit_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_geo_lieudit_view_form"/>
+            <field name="act_window" ref="act_mae_geo_lieudit_form"/>
+        </record>
+        
+        <menuitem parent="menu_mae_configuration" id="menu_mae_geo_lieudit_form" icon="tryton-list" action="act_mae_geo_lieudit_form"/>
+
+        <record model="ir.ui.view" id="mae_geo_parcelle_view_tree">
+            <field name="model">mae.geo_parcelle</field>
+            <field name="type">tree</field>
+            <field name="name">geo_parcelle_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_geo_parcelle_view_form">
+            <field name="model">mae.geo_parcelle</field>
+            <field name="type">form</field>
+            <field name="name">geo_parcelle_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_geo_parcelle_form">
+            <field name="name">Parcelle</field>
+            <field name="res_model">mae.geo_parcelle</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_geo_parcelle_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_geo_parcelle_view_tree"/>
+            <field name="act_window" ref="act_mae_geo_parcelle_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_geo_parcelle_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_geo_parcelle_view_form"/>
+            <field name="act_window" ref="act_mae_geo_parcelle_form"/>
+        </record>
+        
+        <menuitem parent="menu_mae_configuration" id="menu_mae_geo_parcelle_form" icon="tryton-list" action="act_mae_geo_parcelle_form"/> 
+
+        <record model="ir.ui.view" id="mae_geo_section_view_tree">
+            <field name="model">mae.geo_section</field>
+            <field name="type">tree</field>
+            <field name="name">geo_section_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_geo_section_view_form">
+            <field name="model">mae.geo_section</field>
+            <field name="type">form</field>
+            <field name="name">geo_section_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_geo_section_form">
+            <field name="name">Section</field>
+            <field name="res_model">mae.geo_section</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_geo_section_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_geo_section_view_tree"/>
+            <field name="act_window" ref="act_mae_geo_section_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_geo_section_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_geo_section_view_form"/>
+            <field name="act_window" ref="act_mae_geo_section_form"/>
+        </record>
+        
+        <menuitem parent="menu_mae_configuration" id="menu_mae_geo_section_form" icon="tryton-list" action="act_mae_geo_section_form"/>        
+   
+    </data>
+</tryton>

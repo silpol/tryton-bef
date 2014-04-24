@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="Volatility">
+    <field name="vol_year" />
+    <field name="vol_essence" />
+	<field name="vol_diam" />
+    <field name="vol_cat" />
+	<field name="vol_prix" />
+</tree>

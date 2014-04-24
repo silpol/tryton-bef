@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+        <record model="ir.ui.view" id="strate_view_tree">
+            <field name="model">cycle.strate</field>
+            <field name="type">tree</field>
+            <field name="name">strate_tree</field>
+        </record>
+        <record model="ir.ui.view" id="strate_view_form">
+            <field name="model">cycle.strate</field>
+            <field name="type">form</field>
+            <field name="name">strate_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_strate_form">
+            <field name="name">Strate</field>
+            <field name="res_model">cycle.strate</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_strate_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="strate_view_tree"/>
+            <field name="act_window" ref="act_strate_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_strate_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="strate_view_form"/>
+            <field name="act_window" ref="act_strate_form"/>
+        </record>
+        
+        <menuitem parent="ir.menu_administration" sequence="190" id="menu_strate_form" icon="tryton-list" action="act_strate_form"/>
+
+		<record model="ir.ui.view" id="cycle_view_tree">			
+			<field name="model">cycle.cycle</field>
+			<field name="type">tree</field>
+			<field name="name">cycle_tree</field>
+		</record>
+
+		<record model="ir.ui.view" id="cycle_view_form">			
+			<field name="model">cycle.cycle</field>
+			<field name="type">form</field>
+			<field name="name">cycle_form</field>
+		</record>
+		
+		<record model="ir.action.act_window" id="act_cycle_form">
+			<field name="name">Cycle</field>
+			<field name="res_model">cycle.cycle</field>						
+		</record>
+		
+		<record model="ir.action.act_window.view" id="act_cycle_form_view1">
+		    <field name="sequence" eval="10"/>
+		    <field name="view" ref="cycle_view_tree"/>
+		    <field name="act_window" ref="act_cycle_form"/>		
+		</record>
+
+		<record model="ir.action.act_window.view" id="act_cycle_form_view2">
+		    <field name="sequence" eval="20"/>
+		    <field name="view" ref="cycle_view_form"/>
+		    <field name="act_window" ref="act_cycle_form"/>		
+		</record>
+
+		<menuitem parent="ir.menu_administration" sequence="50" id="menu_cycle_form" icon="tryton-list" action="act_cycle_form"/>
+		
+	</data>
+</tryton>

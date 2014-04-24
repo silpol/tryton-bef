@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Pascal Obstétar
+-->
+<tryton>
+    <data>
+        <!-- ************* Forest Stand ************* -->
+
+        <record model="ir.ui.view" id="forest_stand_view_tree">
+            <field name="model">forest.stand</field>
+            <field name="type">tree</field>
+            <field name="field_childs">children</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="code"/>
+                        <field name="name"/>                        
+                        <field name="r"/>
+                        <field name="g"/>
+                        <field name="b"/>
+                        <field name="description" expand="1"/>
+                        <field name="parent" tree_invisible="1"/>
+                        <field name="children" tree_invisible="1"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="forest_stand_view_form">
+            <field name="model">forest.stand</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Variety" col="2">
+                        <label name="parent"/>
+                        <field name="parent"/>
+                        <label name="code"/>
+                        <field name="code"/>
+                        <label name="name"/>
+                        <field name="name"/>                        
+                        <label name="r"/>
+                        <field name="r"/>
+                        <label name="g"/>
+                        <field name="g"/>
+                        <label name="b"/>
+                        <field name="b"/>
+                        <label name="description"/>
+                        <field name="description"/>
+                        <label name="active"/>
+                        <field name="active"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <!-- Stand tree -->
+        <record model="ir.action.act_window" id="act_forest_stand_form_view">
+            <field name="name">Stand</field>
+            <field name="res_model">forest.stand</field>
+            <field name="domain">[('parent', '=', None)]</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_forest_stand_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="forest_stand_view_tree"/>
+            <field name="act_window" ref="act_forest_stand_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_forest_stand_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="forest_stand_view_form"/>
+            <field name="act_window" ref="act_forest_stand_form_view"/>
+        </record>
+
+        <menuitem parent="forest.menu_forest_configuration" sequence="1" id="menu_forest_stand" icon="tryton-list" action="act_forest_stand_form_view"/>
+
+        <!-- Stand list -->
+        <record model="ir.ui.view" id="forest_stand_view_list">
+            <field name="model">forest.stand</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="parent"/>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="active"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_forest_stand_list_view">
+            <field name="name">Stand</field>
+            <field name="res_model">forest.stand</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_forest_stand_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="forest_stand_view_list"/>
+            <field name="act_window" ref="act_forest_stand_list_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_forest_stand_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="forest_stand_view_form"/>
+            <field name="act_window" ref="act_forest_stand_list_view"/>
+        </record>
+
+        <menuitem parent="menu_forest_stand" sequence="0" id="menu_forest_stand_list" icon="tryton-list" action="act_forest_stand_list_view"/>
+    </data>
+</tryton>

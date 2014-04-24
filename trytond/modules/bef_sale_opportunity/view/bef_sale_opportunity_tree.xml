@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Comment" editable="bottom">
+    <field name="date"/>
+    <field name="code"/>
+    <field name="codcom"/>
+    <field name="party"/>
+    <field name="standard"/>    
+    <field name="lastname"/>
+    <field name="name"/>
+    <field name="directline"/>
+    <field name="fonction"/>
+    <field name="portable"/>
+    <field name="comment"/>
+</tree>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<tree string="Lot">
+    <field name="codlot" />
+    <field name="pdl" />
+    <field name="codparc" />
+    <field name="codpdl" />
+    <field name="dnulot" />
+    <field name="cconlo" />
+    <field name="dcntloc" />
+    <field name="dnumql" />
+    <field name="ddenql" />
+    <field name="dfilot" />
+    <field name="datact" />
+    <field name="dnupro" />
+    <field name="dreflf" />
+    <field name="ccocif" />
+    <field name="cenr" />
+</tree>

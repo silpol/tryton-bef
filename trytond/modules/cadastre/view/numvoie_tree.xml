@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Numéro voirie">
+    <field name="parcelle" />    
+    <field name="tex" />
+    <field name="ecritatt" />
+</tree>

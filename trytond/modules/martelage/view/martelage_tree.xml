@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Hammering">
+    <field name="mar_dispositif" />
+    <field name="mar_essence" />
+	<field name="mar_annee" />
+	<field name="mar_type" />
+	<field name="mar_diam" />
+	<field name="mar_nb" />
+</tree>

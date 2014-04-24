@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Ancienne UG">
+    <label name="ug"/>
+    <field name="ug"/>
+    <label name="acug"/>
+    <field name="acug"/>
+    <label name="annee"/>
+    <field name="annee"/>                   
+</form>

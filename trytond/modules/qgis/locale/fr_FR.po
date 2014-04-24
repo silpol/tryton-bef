@@ -1,0 +1,47 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:qgis.conf,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:qgis.conf,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:qgis.conf,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:qgis.conf,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:qgis.conf,version:"
+msgid "Version"
+msgstr "Version"
+
+msgctxt "field:qgis.conf,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:qgis.conf,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "model:ir.action,name:act_qgis_conf_form"
+msgid "QGis project configuration"
+msgstr "Configuration des projets QGis"
+
+msgctxt "model:ir.ui.menu,name:menu_qgis_conf"
+msgid "QGis"
+msgstr "QGis"
+
+msgctxt "model:qgis.conf,name:"
+msgid "QGis"
+msgstr "QGis"
+
+msgctxt "selection:qgis.conf,version:"
+msgid "QGis 1.9.0"
+msgstr "QGis 1.9.0"

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Regeneration price">
+    <label name="pre_essence"/>
+	<field name="pre_essence"/>
+	<label name="pre_region"/>
+	<field name="pre_region"/>
+	<label name="pre_facilite"/>
+	<field name="pre_facilite"/>
+	<label name="raw_classe1"/>
+	<field name="raw_classe1"/>
+	<label name="raw_classe2"/>
+	<field name="raw_classe2"/>
+	<label name="raw_classe3"/>
+	<field name="raw_classe3"/>
+</form>

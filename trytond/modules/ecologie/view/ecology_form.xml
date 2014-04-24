@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Ecology">
+    <label name="eco_intitule"/>
+    <field name="eco_intitule"/>
+    <label name="name"/>
+    <field name="name"/>
+</form>

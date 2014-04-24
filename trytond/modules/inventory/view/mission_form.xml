@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<form string="Mission">
+    <notebook>
+        <page string="General" id="general">
+            <label name="name"/>
+            <field name="name"/>
+            <field name="inventory" colspan="6"/>
+            <label name="active"/>
+            <field name="active"/>
+         </page>
+        <page string="Map" id="map" col="2">                                                
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
+            <button string="Edit" name="mission_edit" icon="tryton-executable" />
+            <button string="Generate" name="mission_image_map_gen" icon="tryton-executable" />
+            <field name="situation_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="parcelle_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="mission_situation_map_gen" icon="tryton-executable" />
+            <button string="Generate" name="mission_parcelle_map_gen" icon="tryton-executable" />
+        </page>
+   </notebook>                  
+</form>

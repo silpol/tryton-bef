@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<tree string="Dispositifs">
+	<field name="dis_num"/>
+	<field name="name"/>
+	<field name="dis_type"/>
+	<field name="dis_surf"/>
+	<field name="dis_surface_foret"/>
+	<field name="dis_observation"/>
+	<field name="dis_date_instal"/>
+	<field name="dis_ass"/>
+	<field name="dis_ess1"/>
+	<field name="dis_ess2"/>
+	<field name="dis_rege_ess1"/>
+	<field name="dis_rege_ess2"/>
+    <field name="dis_country"/>
+    <field name="dis_cycle"/>
+</tree>
+

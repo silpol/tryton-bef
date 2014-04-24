@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<tree string="arbre">
+    <field name="equipement" />
+    <field name="portee" />
+    <field name="travaux" />
+    <field name="proprio" />
+    <field name="code" />
+    <field name="date" />
+    <field name="compteur" />
+    <field name="an" />
+    <field name="diametre" />
+    <field name="plantation" />
+    <field name="situation" />
+    <field name="fosse" />
+    <field name="essence" />
+    <field name="motif" />      
+    <field name="evol_arbre" />                    
+</tree>

@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Laurent Defert
+-->
+<tryton>
+    <data>
+        <!-- ************* Wood Descriptions ************* -->
+        <record model="ir.ui.view" id="trunks_view_tree">
+            <field name="model">trunks.trunks</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="variety"/>
+                        <field name="wood_quality"/>
+                        <field name="tree_quality"/>
+                        <field name="total_trunks_count"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="trunks_view_tree_with_id">
+            <field name="model">trunks.trunks</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="marking_id"/>
+                        <field name="variety"/>
+                        <field name="wood_quality"/>
+                        <field name="tree_quality"/>
+                        <field name="total_trunks_count"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="trunks_view_form">
+            <field name="model">trunks.trunks</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Trunks" col="2">
+                        <label name="variety" />
+                        <field name="variety" />
+                        <label name="wood_quality" />
+                        <field name="wood_quality" widget="selection"/>
+                        <label name="tree_quality" />
+                        <field name="tree_quality" widget="selection"/>
+                        <label name="diameter_classification"/>
+                        <field name="diameter_classification" widget="selection"/>
+                        <label name="trunks_count"/>
+                        <field name="trunks_count"/>
+                        <label name="method"/>
+                        <field name="method"/>
+                        <label name="algan_fast_scale"/>
+                        <field name="algan_fast_scale" widget="selection"/>
+                        <label name="adrian_scale"/>
+                        <field name="adrian_scale" widget="selection"/>
+                        <label name="total_trunks_count"/>
+                        <field name="total_trunks_count"/>
+                        <label name="total_cubing"/>
+                        <field name="total_cubing"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_trunks_form_view">
+            <field name="name">Trunks</field>
+            <field name="res_model">trunks.trunks</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_trunks_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="trunks_view_tree"/>
+            <field name="act_window" ref="act_trunks_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_trunks_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="trunks_view_form"/>
+            <field name="act_window" ref="act_trunks_form_view"/>
+        </record>
+
+        <!-- ************* Trunk diameters ************* -->
+        <record model="ir.ui.view" id="trunk_count_view_tree">
+            <field name="model">trunks.count</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree editable="bottom">
+                        <field name="diam_class"/>
+                        <field name="height"/>
+                        <field name="height_uom" widget="selection"/>
+                        <!-- These value is required to evaluate the digits PYSON statement in the client -->
+                        <field name="height_uom_digits" tree_invisible="1"/>
+                        <field name="count"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="trunk_count_view_form">
+            <field name="model">trunks.count</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Trunks count by diameter" col="3">
+                        <label name="diam_class"/>
+                        <field name="diam_class" widget="selection" colspan="2"/>
+                        <label name="height"/>
+                        <field name="height"/>
+                        <field name="height_uom" widget="selection"/>
+                        <label name="count"/>
+                        <field name="count"/>
+                        <!-- These value is required to evaluate the digits PYSON statement in the client -->
+                        <field name="height_uom_digits" invisible="1"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_diameter_class_form_view">
+            <field name="name">Trunks count</field>
+            <field name="res_model">trunks.diameter_class</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_diameter_class_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="trunk_count_view_form"/>
+            <field name="act_window" ref="act_diameter_class_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_diameter_class_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="trunk_count_view_tree"/>
+            <field name="act_window" ref="act_diameter_class_form_view"/>
+        </record>
+    </data>
+</tryton>

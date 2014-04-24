@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Tree species">
+    <field name="code" />
+    <field name="lab_court" />
+    <field name="taxons" />
+</tree>

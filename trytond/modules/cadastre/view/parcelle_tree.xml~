@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<tree string="Parcelle">
+    <field name="section" />				    
+    <field name="subdsect" />
+    <field name="idu" />
+    <field name="supf" />
+    <field name="indp" />    
+    <field name="coar" />
+    <field name="tex" />
+    <field name="subdfisc" />
+    <field name="charge" />
+    <field name="numvoie" />
+    <field name="batiment" />
+    <field name="borne" />
+    <field name="boulon" />
+    <field name="croix" />
+    <field name="symblim" />
+</tree>

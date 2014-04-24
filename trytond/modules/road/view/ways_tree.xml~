@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Road">
+    <field name="name" />
+    <field name="qua_regt1" />
+    <field name="qua_regt2" />
+</tree>

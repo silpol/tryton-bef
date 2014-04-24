@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Section">
+    <field name="idu" />				    
+    <field name="tex" />
+    <field name="subdsect" />
+    <field name="ecritatt" />
+</tree>

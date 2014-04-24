@@ -1,0 +1,21 @@
+[tryton]
+version=2.8
+depends:
+    ir
+    res
+    party
+    country
+    commune
+    google_maps    
+    town_fr
+    town_fr_geo
+    map
+    geotools
+    qgis
+    wfs
+    address_fr
+    protection
+xml:
+    document_urbanisme.xml
+    misc_obj.xml 
+    pres_obj.xml

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="population_view_tree">            
+            <field name="model">commune.population</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Population">
+                    <field name="annee" />
+                    <field name="total" />
+                    <field name="pop_0014" />
+                    <field name="pop_1529" />
+                    <field name="pop_3044" />
+                    <field name="pop_4559" />
+                    <field name="pop_6074" />
+                    <field name="pop_75p" />
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="population_view_form">            
+            <field name="model">commune.population</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <form string="Population">
+                    <label name="annee"/>
+                    <field name="annee"/>
+                    <label name="total"/>
+                    <field name="total"/>
+                    <label name="pop_0014"/>
+                    <field name="pop_0014"/>
+                    <label name="pop_1529"/>
+                    <field name="pop_1529"/>
+                    <label name="pop_3044"/>
+                    <field name="pop_3044"/>
+                    <label name="pop_4559"/>
+                    <field name="pop_4559"/>
+                    <label name="pop_6074"/>
+                    <field name="pop_6074"/>
+                    <label name="pop_75p"/>
+                    <field name="pop_75p"/>
+                </form>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_population_form">
+            <field name="name">Population</field>
+            <field name="res_model">commune.population</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_population_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="population_view_tree"/>
+            <field name="act_window" ref="act_population_form"/>        
+        </record>
+        <record model="ir.action.act_window.view" id="act_population_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="population_view_form"/>
+            <field name="act_window" ref="act_population_form"/>        
+        </record>
+        <menuitem parent="menu_commune_admin" id="menu_population_form" icon="tryton-list" action="act_population_form"/>
+    </data>
+</tryton>

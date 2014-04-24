@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree string="ug">
+    <field name="equipement" />
+    <field name="code" />
+    <field name="active" />
+    <field name="rue" />
+    <field name="debut" />
+    <field name="fin" />
+    <field name="elagage" />
+    <field name="operation" />
+    <field name="contrainte" />
+    <field name="commune" />
+    <field name="referenceug" />
+    <field name="sequenceroute" />
+    <field name="securite" />                   
+</tree>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<form string="Parcelle" col="2">
+    <label name="section" />
+    <field name="section" />
+    <label name="subdsect" />
+    <field name="subdsect" />
+    <label name="idu" />
+    <field name="idu" />
+    <label name="supf" />
+    <field name="supf" />
+    <label name="indp" />
+    <field name="indp" widget="selection"/>
+    <label name="coar" />
+    <field name="coar" />
+    <label name="tex" />
+    <field name="tex" />
+    <notebook colspan="2">
+        <page string="MAP" col="1" id="map" >
+            <field name="image" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="parcelle_edit" icon="tryton-executable" />
+        </page>
+        <page string="SUBDFISC" col="1" id="subdfisc" >
+            <field name="subdfisc" />            
+        </page>
+        <page string="CHARGES" col="1" id="charge" >
+            <field name="charge" />            
+        </page>
+        <page string="NUMVOIE" col="1" id="numvoie" >
+            <field name="numvoie" />            
+        </page>
+        <page string="BATIMENT" col="1" id="batiment" >
+            <field name="batiment" />            
+        </page>
+        <page string="BORNE" col="1" id="borne" >
+            <field name="borne" />            
+        </page>
+        <page string="BOULON" col="1" id="boulon" >
+            <field name="boulon" />            
+        </page>
+        <page string="CROIX" col="1" id="croix" >
+            <field name="croix" />            
+        </page>
+         <page string="SYMBLIM" col="1" id="symblim" >
+            <field name="symblim" />            
+        </page>
+        <page string="ECRITURE" col="1" id="ecritatt" >
+            <field name="ecritatt" />            
+        </page>
+    </notebook>
+</form>

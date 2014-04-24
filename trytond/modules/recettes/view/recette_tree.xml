@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Recipe">
+    <field name="rec_dispositif" />
+	<field name="rec_annee" />
+	<field name="rec_plancomptable" />
+	<field name="rec_ess_cat" />
+	<field name="rec_quant" />
+	<field name="rec_unit" />					
+	<field name="rec_pu" />
+	<field name="rec_total" />
+	<field name="rec_mode_vente" />
+	<field name="rec_observation" />					
+</tree>

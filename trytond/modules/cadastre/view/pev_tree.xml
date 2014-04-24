@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<tree string="Partie d'évaluation">
+    <field name="codlot" />
+    <field name="pev" />
+    <field name="invar" />
+    <field name="ccoaff" />
+    <field name="ccostb" />
+    <field name="dcapec" />
+    <field name="dcetlc" />
+    <field name="dcsplc" />
+    <field name="dsupot" />
+    <field name="dvlper" />
+    <field name="dvlpera" />
+    <field name="gnexpl" />
+    <field name="ccthp" />
+    <field name="retimp" />
+    <field name="dnuref" />
+    <field name="dcsglc" />
+    <field name="dvltpe" />
+    <field name="dcralc" />
+    <field name="cenr" />
+</tree>

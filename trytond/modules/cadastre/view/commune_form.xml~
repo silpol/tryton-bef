@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<form string="Plot" col="2">
+    <label name="idu" />
+    <field name="idu" />
+    <label name="tex2" />
+    <field name="tex2" />
+    <notebook colspan="2">        
+        <page string="SECTIONS" col="1" id="section" >
+            <field name="section" />            
+        </page>
+        <page string="PTCANV" col="1" id="ptcanv" >
+            <field name="ptcanv" />            
+        </page>
+        <page string="TPOINT" col="1" id="tpoint" >
+            <field name="tpoint" />            
+        </page>
+        <page string="TLINE" col="1" id="tline" >
+            <field name="tline" />            
+        </page>
+        <page string="TSURF" col="1" id="tsurf" >
+            <field name="tsurf" />            
+        </page>
+    </notebook>
+</form>

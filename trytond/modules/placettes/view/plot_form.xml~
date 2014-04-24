@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form string="Plot">
+    <notebook>
+        <page string="General" id="general">
+            <label name="pla_dispositif"/>
+	        <field name="pla_dispositif"/>
+            <label name="pla_strate"/>
+	        <field name="pla_strate"/>
+	        <label name="pla_num"/>
+	        <field name="pla_num"/>
+            <label name="pla_weight"/>
+	        <field name="pla_weight"/>
+            <label name="pla_slope"/>
+	        <field name="pla_slope"/>
+            <label name="pla_slopeval"/>
+	        <field name="pla_slopeval"/>
+            <notebook>
+                 <page string="Comment" id="comment">                                                                
+	                <field name="pla_comment"/>
+                </page>
+                <page string="Map" id="map" col="2">				                                                            
+                    <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+                    <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
+                    <button string="Edit" name="placettes_edit" icon="tryton-executable" />
+                    <button string="Generate" name="generate" icon="tryton-executable" />
+                </page>
+            </notebook>
+        </page>
+    </notebook>
+</form>

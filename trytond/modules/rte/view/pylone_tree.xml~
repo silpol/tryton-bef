@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="pylone">
+    <field name="equipement"/>
+    <field name="portee" />
+    <field name="code" />
+    <field name="active" />
+    <field name="proprietaire" />
+    <field name="domaine" />
+    <field name="gestionnaire" />                   
+    <field name="commune" />
+    <field name="travaux" />                   
+</tree>

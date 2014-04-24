@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="evol_travaux" col="2">
+    <label name="date"/>
+    <field name="date"/>
+    <label name="nature"/>
+    <field name="nature"/>                            
+    <label name="cause"/>
+    <field name="cause" widget="selection"/>
+    <label name="diametre"/>
+    <field name="diametre"/>
+    <label name="surface"/>
+    <field name="surface"/>
+    <label name="indispo"/>
+    <field name="indispo" widget="selection"/>
+    <label name="observation"/>
+    <field name="observation" colspan="4"/>                        
+</form>

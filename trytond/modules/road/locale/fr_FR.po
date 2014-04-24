@@ -1,0 +1,188 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:road.ways,class_id:"
+msgid "Class"
+msgstr "Classe"
+
+msgctxt "field:road.ways,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:road.ways,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:road.ways,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:road.ways,length:"
+msgid "Length"
+msgstr "Longueur"
+
+msgctxt "field:road.ways,maxspeed_backward:"
+msgid "Maxspeed backward"
+msgstr "Vitesse maximale arrière"
+
+msgctxt "field:road.ways,maxspeed_forward:"
+msgid "Maxspeed forward"
+msgstr "Vitesse maximale avant"
+
+msgctxt "field:road.ways,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:road.ways,osm_id:"
+msgid "OSM ID"
+msgstr "OSM ID"
+
+msgctxt "field:road.ways,priority:"
+msgid "Priority"
+msgstr "Priorité"
+
+msgctxt "field:road.ways,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:road.ways,reverse_cost:"
+msgid "Reverse cost"
+msgstr "Coût retour"
+
+msgctxt "field:road.ways,rule:"
+msgid "Rule"
+msgstr "Règle"
+
+msgctxt "field:road.ways,source:"
+msgid "source"
+msgstr "source"
+
+msgctxt "field:road.ways,target:"
+msgid "target"
+msgstr "cible"
+
+msgctxt "field:road.ways,the_geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:road.ways,to_cost:"
+msgid "to_cost"
+msgstr "Coût direct"
+
+msgctxt "field:road.ways,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:road.ways,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:road.ways,x1:"
+msgid "x1"
+msgstr "x1"
+
+msgctxt "field:road.ways,x2:"
+msgid "x2"
+msgstr "x2"
+
+msgctxt "field:road.ways,y1:"
+msgid "y1"
+msgstr "y1"
+
+msgctxt "field:road.ways,y2:"
+msgid "y2"
+msgstr "y2"
+
+msgctxt "help:road.ways,class_id:"
+msgid "Class ID"
+msgstr "Classe ID"
+
+msgctxt "help:road.ways,length:"
+msgid "Length"
+msgstr "Longueur"
+
+msgctxt "help:road.ways,maxspeed_backward:"
+msgid "Maxspeed backward"
+msgstr "Vitesse maximale arrière"
+
+msgctxt "help:road.ways,maxspeed_forward:"
+msgid "Maxspeed forward"
+msgstr "Vitesse maximale avant"
+
+msgctxt "help:road.ways,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:road.ways,osm_id:"
+msgid "OSM ID"
+msgstr "OSM ID"
+
+msgctxt "help:road.ways,priority:"
+msgid "Priority"
+msgstr "Priorité"
+
+msgctxt "help:road.ways,reverse_cost:"
+msgid "Reverse cost"
+msgstr "Coût retour"
+
+msgctxt "help:road.ways,rule:"
+msgid "Rule"
+msgstr "Règle"
+
+msgctxt "help:road.ways,source:"
+msgid "source"
+msgstr "source"
+
+msgctxt "help:road.ways,target:"
+msgid "target"
+msgstr "cible"
+
+msgctxt "help:road.ways,the_geom:"
+msgid "Géométrie ligne (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie ligne (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:road.ways,to_cost:"
+msgid "to_cost"
+msgstr "Coût direct"
+
+msgctxt "help:road.ways,x1:"
+msgid "x1"
+msgstr "x1"
+
+msgctxt "help:road.ways,x2:"
+msgid "x2"
+msgstr "x2"
+
+msgctxt "help:road.ways,y1:"
+msgid "y1"
+msgstr "y1"
+
+msgctxt "help:road.ways,y2:"
+msgid "y2"
+msgstr "y2"
+
+msgctxt "model:ir.action,name:act_road_form"
+msgid "Road"
+msgstr "Route"
+
+msgctxt "model:ir.ui.menu,name:menu_road_form"
+msgid "Road"
+msgstr "Route"
+
+msgctxt "model:road.ways,name:"
+msgid "Ways"
+msgstr "Chemin"
+
+msgctxt "view:road.ways:"
+msgid "Road"
+msgstr "Route"

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Pascal Obstetar
+Copyright (c) 2012-2013 Pierre-Louis Bonicoli
+-->
+<tryton>
+    <data>
+    <record model="ir.ui.icon" id="ser_icon">
+        <field name="name">tryton-ser</field>
+        <field name="path">icons/applications-internet.svg</field>
+    </record>
+
+    <menuitem name="Sylvo-éco-régions" parent="ir.menu_administration" id="menu_ser" icon="tryton-ser"/>
+
+    <record model="ir.ui.view" id="ser_sylvoecoregion_view_tree">
+		<field name="model">ser.sylvoecoregion</field>
+		<field name="type">tree</field>
+		<field name="name">sylvoecoregion_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ser_sylvoecoregion_view_form">
+        <field name="model">ser.sylvoecoregion</field>
+        <field name="type">form</field>
+        <field name="name">sylvoecoregion_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ser_sylvoecoregion_form">
+        <field name="name">Sylvo-Eco-Regions</field>
+        <field name="res_model">ser.sylvoecoregion</field></record>
+
+    <record model="ir.action.act_window.view" id="act_ser_sylvoecoregion_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ser_sylvoecoregion_view_tree"/>
+        <field name="act_window" ref="act_ser_sylvoecoregion_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ser_sylvoecoregion_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ser_sylvoecoregion_view_form"/>
+        <field name="act_window" ref="act_ser_sylvoecoregion_form"/>
+    </record>
+
+    <record model="ir.action.report" id="report_sylvoecoregion_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">ser.sylvoecoregion</field>
+        <field name="report_name">ser.sylvoecoregion.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_sylvoecoregion_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">ser.sylvoecoregion,-1</field>
+        <field name="action" ref="report_sylvoecoregion_edit"/>
+    </record>
+
+	<menuitem parent="menu_ser" sequence="1" id="menu_ser_sylvoecoregion_form" icon="tryton-list" action="act_ser_sylvoecoregion_form"/>
+
+    <record model="ir.ui.view" id="ser_sylvoecoregion_new_alluvium_view_tree">
+		<field name="model">ser.sylvoecoregion_new_alluvium</field>
+		<field name="type">tree</field>
+		<field name="name">sylvoecoregion_new_alluvium_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="ser_sylvoecoregion_new_alluvium_view_form">
+        <field name="model">ser.sylvoecoregion_new_alluvium</field>
+        <field name="type">form</field>
+        <field name="name">sylvoecoregion_new_alluvium_form</field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_ser_sylvoecoregion_new_alluvium_form">
+        <field name="name">Sylvo-Éco-Régions new alluvium</field>
+        <field name="res_model">ser.sylvoecoregion_new_alluvium</field></record>
+
+    <record model="ir.action.act_window.view" id="act_ser_sylvoecoregion_new_alluvium_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="ser_sylvoecoregion_new_alluvium_view_tree"/>
+        <field name="act_window" ref="act_ser_sylvoecoregion_new_alluvium_form"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_ser_sylvoecoregion_new_alluvium_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="ser_sylvoecoregion_new_alluvium_view_form"/>
+        <field name="act_window" ref="act_ser_sylvoecoregion_new_alluvium_form"/>
+    </record>
+
+    <record model="ir.action.report" id="report_sylvoecoregion_new_alluvium_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">ser.sylvoecoregion_new_alluvium</field>
+        <field name="report_name">ser.sylvoecoregion.new.all.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_sylvoecoregion_new_alluvium_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">ser.sylvoecoregion_new_alluvium,-1</field>
+        <field name="action" ref="report_sylvoecoregion_new_alluvium_edit"/>
+    </record>
+
+	<menuitem parent="menu_ser" sequence="1" id="menu_ser_sylvoecoregion_new_alluvium_form" icon="tryton-list" action="act_ser_sylvoecoregion_new_alluvium_form"/>
+
+    </data>
+</tryton>

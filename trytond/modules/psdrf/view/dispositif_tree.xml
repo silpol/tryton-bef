@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="dispositif">
+    <field name="name" expand="1" />
+    <field name="codernf" expand="1" />
+    <field name="cycles" expand="1" />
+    <field name="altitudemin" expand="1" />
+    <field name="altitudemoy" expand="1" />
+    <field name="altitudemax" expand="1" />
+    <field name="observation" expand="1" />
+    <field name="date" expand="1" />
+    <field name="status" />
+    <field name="country" />
+    <field name="party" />
+</tree>

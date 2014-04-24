@@ -1,0 +1,92 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:prix_unitaire.prix_unitaire,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:prix_unitaire.prix_unitaire,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:prix_unitaire.prix_unitaire,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:prix_unitaire.prix_unitaire,pru_diam:"
+msgid "Diameter"
+msgstr "Diamètre"
+
+msgctxt "field:prix_unitaire.prix_unitaire,pru_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:prix_unitaire.prix_unitaire,pru_prix:"
+msgid "Price"
+msgstr "Prix"
+
+msgctxt "field:prix_unitaire.prix_unitaire,pru_qualite:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "field:prix_unitaire.prix_unitaire,pru_year:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "field:prix_unitaire.prix_unitaire,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:prix_unitaire.prix_unitaire,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:prix_unitaire.prix_unitaire,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:prix_unitaire.prix_unitaire,pru_diam:"
+msgid "Diameter"
+msgstr "Diamètre"
+
+msgctxt "help:prix_unitaire.prix_unitaire,pru_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "help:prix_unitaire.prix_unitaire,pru_prix:"
+msgid "Price (m3)"
+msgstr "Prix (m3)"
+
+msgctxt "help:prix_unitaire.prix_unitaire,pru_qualite:"
+msgid "Quality"
+msgstr "Qualité"
+
+msgctxt "help:prix_unitaire.prix_unitaire,pru_year:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "model:ir.action,name:act_prix_unitaire_form"
+msgid "Unit price"
+msgstr "Prix unitaires"
+
+msgctxt "model:ir.ui.menu,name:menu_prix_unitaire_form"
+msgid "Unit price"
+msgstr "Prix unitaires"
+
+msgctxt "model:prix_unitaire.prix_unitaire,name:"
+msgid "Unit price"
+msgstr "Prix unitaire"
+
+msgctxt "view:prix_unitaire.prix_unitaire:"
+msgid "Unit price"
+msgstr "Prix unitaires"

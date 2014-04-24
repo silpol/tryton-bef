@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<form string="Invariant" col="6">
+    <label name="codlot" />
+    <field name="codlot" />
+    <label name="invar" />
+    <field name="invar" />
+    <label name="codparc" />
+    <field name="codparc" />
+    <label name="codcomm" />
+    <field name="codcomm"/>
+    <label name="dnubat" />
+    <field name="dnubat" />
+    <label name="ndesc" />
+    <field name="ndesc" />
+    <label name="dniv" />
+    <field name="dniv" />
+    <label name="dpor" />
+    <field name="dpor" />
+    <label name="ccoriv" />
+    <field name="ccoriv" />
+    <label name="ccovoi" />
+    <field name="ccovoi" />
+    <label name="dnvoiri" />
+    <field name="dnvoiri" />
+    <label name="dindic" />
+    <field name="dindic" />
+    <label name="ccocif" />
+    <field name="ccocif" />
+    <label name="dvoilib" />
+    <field name="dvoilib" />
+    <label name="voie" />
+    <field name="voie" />
+    <label name="cenr" />
+    <field name="cenr" />    
+</form>

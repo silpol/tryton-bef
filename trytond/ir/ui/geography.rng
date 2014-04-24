@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0">
+  <define name="geography">
+    <element name="geography">
+      <ref name="attlist.geography"/>
+      <zeroOrMore>
+        <ref name="field"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.geography" combine="interleave">
+    <optional>
+      <attribute name="string" a:defaultValue="Geography"/>
+    </optional>
+  </define>
+  <define name="field">
+    <element name="field">
+      <ref name="attlist.field"/>
+    </element>
+  </define>
+  <define name="attlist.field" combine="interleave">
+    <attribute name="name"/>
+  </define>
+  <define name="attlist.field" combine="interleave">
+    <attribute name="geometry"/>
+  </define>
+  <define name="data">
+    <element name="data">
+      <ref name="attlist.data"/>
+      <zeroOrMore>
+        <ref name="xpath"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.data" combine="interleave">
+    <empty/>
+  </define>
+  <define name="xpath">
+    <element name="xpath">
+      <ref name="attlist.xpath"/>
+      <zeroOrMore>
+        <ref name="field"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.xpath" combine="interleave">
+    <attribute name="expr"/>
+  </define>
+  <define name="attlist.xpath" combine="interleave">
+    <optional>
+      <attribute name="position" a:defaultValue="inside">
+        <choice>
+          <value>replace</value>
+          <value>replace_attributes</value>
+          <value>after</value>
+          <value>before</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <start>
+    <choice>
+      <ref name="data"/>
+      <ref name="geography"/>
+    </choice>
+  </start>
+</grammar>

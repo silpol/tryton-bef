@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Default regeneration price">
+    <label name="classe"/>
+	<field name="classe"/>
+	<label name="default"/>
+	<field name="default"/>
+</form>

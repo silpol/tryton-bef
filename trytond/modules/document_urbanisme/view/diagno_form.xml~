@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<form string="Document Urbanisme">
+    <notebook>
+        <page string="General" id="general" col="4">
+            <label name="idDocumentUrba" />            
+            <field name="idDocumentUrba" />
+            <label name="typeDocument" />            
+            <field name="typeDocument" />
+            <label name="etat" />            
+            <field name="etat" />
+            <label name="version" />            
+            <field name="version" />
+            <label name="dateApprobation" />            
+            <field name="dateApprobation" />                                     
+            <label name="dateFinValidite" />            
+            <field name="dateFinValidite" />
+            <label name="estIntercommunal" />            
+            <field name="estIntercommunal" />
+            <label name="siren" />            
+            <field name="siren" />
+            <label name="nomReglement" />            
+            <field name="nomReglement" />
+            <label name="urlReglement" />            
+            <field name="urlReglement" widget="url" />
+            <label name="nomPlan" />            
+            <field name="nomPlan" widget="url" />
+            <label name="serviceInternet" />            
+            <field name="serviceInternet" widget="url" />          
+            <label name="referentielSaisie"/>            
+            <field name="referentielSaisie"/>
+            <label name="dateReferentielSaisie"/>            
+            <field name="dateReferentielSaisie"/>
+            <label name="active" />            
+            <field name="active" />
+        </page>                            
+    </notebook>                   
+</form>

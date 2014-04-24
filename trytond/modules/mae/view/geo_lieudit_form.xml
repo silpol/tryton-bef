@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="geo_lieudit" col="2">
+    <label name="tex"/>
+    <field name="tex"/>                                                                        
+</form>

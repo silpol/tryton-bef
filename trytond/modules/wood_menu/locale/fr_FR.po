@@ -1,0 +1,11 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.ui.menu,name:menu_wood_product"
+msgid "Items sheets"
+msgstr "Fiches articles"
+
+msgctxt "model:ir.ui.menu,name:menu_wood_product_configuration"
+msgid "Configuration"
+msgstr "Configuration"

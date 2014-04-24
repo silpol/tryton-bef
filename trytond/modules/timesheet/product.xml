@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="product_view_list_work_line">
+            <field name="model">product.product</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">product_list_work_line</field>
+        </record>
+    </data>
+</tryton>

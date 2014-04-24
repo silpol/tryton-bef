@@ -1,0 +1,218 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:site.work:"
+msgid "There should be only one timesheet work by task/site."
+msgstr ""
+"Il ne peut y avoir qu'une seule feuille de présence par Tâche et par "
+"Chantier."
+
+msgctxt "error:site.work:"
+msgid ""
+"Work \"%(child)s\" can not be opened because its parent work \"%(parent)s\" "
+"is already done.\""
+msgstr ""
+"Le chantier \"%(child)s\" ne peut être ouvert car son parent \"%(parent)s\" "
+"est terminé.\""
+
+msgctxt "error:site.work:"
+msgid ""
+"Work \"%(parent)s\" can not be done because its child work \"%(child)s\" is "
+"still opened.\""
+msgstr ""
+"Le chantier \"%(parent)s\" ne peut être fermé car sont chantier fils "
+"\"%(child)s\" est toujours ouvert.\""
+
+msgctxt "field:site.work,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:site.work,children:"
+msgid "Children"
+msgstr "Activités"
+
+msgctxt "field:site.work,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.work,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:site.work,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.work,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.work,effort:"
+msgid "Effort"
+msgstr "Temps"
+
+msgctxt "field:site.work,hours:"
+msgid "Timesheet Hours"
+msgstr "Heures"
+
+msgctxt "field:site.work,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.work,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:site.work,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:site.work,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.work,sequence:"
+msgid "Sequence"
+msgstr "Séquence"
+
+msgctxt "field:site.work,state:"
+msgid "State"
+msgstr "État"
+
+msgctxt "field:site.work,timesheet_available:"
+msgid "Available on timesheets"
+msgstr "Disponible sur les feuilles de présence"
+
+msgctxt "field:site.work,total_effort:"
+msgid "Total Effort"
+msgstr "Temps total"
+
+msgctxt "field:site.work,type:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:site.work,work:"
+msgid "Activity"
+msgstr "Activité"
+
+msgctxt "field:site.work,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.work,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:timesheet.work,timesheet_lines:"
+msgid "Timesheet Lines"
+msgstr "Lignes de feuille de présence"
+
+msgctxt "help:site.work,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "help:site.work,effort:"
+msgid "Estimated Effort for this work"
+msgstr "Temps estimé pour cette tâche"
+
+msgctxt "help:site.work,hours:"
+msgid "Total time spent on this work"
+msgstr "Temps total passé"
+
+msgctxt "help:site.work,party:"
+msgid "Party who follow the site"
+msgstr "Personne qui assure le suivi de chantier"
+
+msgctxt "help:site.work,total_effort:"
+msgid "Estimated total effort for this work and the sub-works"
+msgstr "Temps total estimé"
+
+msgctxt "help:site.work,type:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "help:site.work,work:"
+msgid "Activity"
+msgstr "Activité"
+
+msgctxt "model:ir.action,name:act_open_child_work"
+msgid "Tasks"
+msgstr "Tâches"
+
+msgctxt "model:ir.action,name:act_site_form"
+msgid "Sites"
+msgstr "Chantiers"
+
+msgctxt "model:ir.action,name:act_site_tree"
+msgid "Sites"
+msgstr "Chantiers"
+
+msgctxt "model:ir.action,name:act_task_form"
+msgid "Tasks"
+msgstr "Tâches"
+
+msgctxt "model:ir.ui.menu,name:menu_site"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "model:ir.ui.menu,name:menu_site_form"
+msgid "Sites"
+msgstr "Chantiers"
+
+msgctxt "model:ir.ui.menu,name:menu_site_tree"
+msgid "Sites"
+msgstr "Chantiers"
+
+msgctxt "model:ir.ui.menu,name:menu_task_form"
+msgid "Tasks"
+msgstr "Tâches"
+
+msgctxt "model:res.group,name:group_site_admin"
+msgid "Site Administration"
+msgstr "Chantier administration"
+
+msgctxt "model:site.work,name:"
+msgid "Work Effort"
+msgstr "Effort de travail"
+
+msgctxt "selection:site.work,state:"
+msgid "Done"
+msgstr "Fait"
+
+msgctxt "selection:site.work,state:"
+msgid "Opened"
+msgstr "Ouvert"
+
+msgctxt "selection:site.work,type:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "selection:site.work,type:"
+msgid "Task"
+msgstr "Tâche"
+
+msgctxt "view:site.work:"
+msgid "Activities"
+msgstr "Activités"
+
+msgctxt "view:site.work:"
+msgid "Children"
+msgstr "Activités"
+
+msgctxt "view:site.work:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site.work:"
+msgid "Tasks"
+msgstr "Tâches"

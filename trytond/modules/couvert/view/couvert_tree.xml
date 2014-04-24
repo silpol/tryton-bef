@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="Covered">
+    <field name="cou_dispositif" />
+    <field name="cou_essence" />
+	<field name="cou_coeff_a" />
+	<field name="cou_coeff_b" />
+	<field name="cou_estimation" />
+</tree>

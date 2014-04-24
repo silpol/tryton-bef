@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Laurent Defert
+-->
+<tryton>
+    <data>
+        <menuitem name="Marking sheets" sequence="0" id="menu_marking_sheet"/>
+
+        <!-- ************* Marking sheet ************* -->
+
+        <record model="ir.ui.view" id="marking_sheet_view_tree">
+            <field name="model">marking_sheet.marking_sheet</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="sheet_id"/>
+                        <field name="forest"/>
+                        <field name="stand"/>
+                        <field name="cut_kind"/>
+                        <field name="total_trunks_count"/>
+                        <field name="total_volume"/>
+                        <field name="total_volume_uom"/>
+                        <!-- These value is required to evaluate the digits PYSON statement in the client -->
+                        <field name="total_volume_uom_digits" tree_invisible="1"/>
+                        <!-- The client needs this value to be able to load "related" items sheet
+                             from the "Open related records" toolbar button -->
+                        <field name="items_sheet" tree_invisible="1"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="marking_sheet_view_form">
+            <field name="model">marking_sheet.marking_sheet</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Markgin sheet" col="2">
+                        <label name="sheet_id"/>
+                        <field name="sheet_id"/>
+                        <label name="forest"/>
+                        <field name="forest"/>
+                        <label name="stand"/>
+                        <field name="stand"/>
+                        <label name="pefc_certificate"/>
+                        <field name="pefc_certificate" widget="selection"/>
+                        <label name="certificate_expired" states="{'invisible': True}"/>
+                        <field name="certificate_expired" invisible="1"/>
+                        <label id="certification"
+                               string="Warning! This PEFC certificate isn't valid."
+                               colspan="2"
+                               xalign="0.5"
+                               states="{'invisible': Not(Bool(Eval('certificate_expired')))}"
+                               />
+
+                        <button colspan="2" string="Create an items sheet based on this marking sheet" name="marking_to_items_btn" icon="tryton-executable" />
+
+                        <notebook colspan="2">
+                            <page string="General" col="3" id="general">
+                                <label name="cut_kind"/>
+                                <field name="cut_kind" widget="selection" colspan="2"/>
+                                <label name="marking"/>
+                                <field name="marking" widget="selection" colspan="2"/>
+                                <label name="limit"/>
+                                <field name="limit" widget="selection" colspan="2"/>
+                                <label name="limit_rw"/>
+                                <field name="limit_rw" colspan="2"/>
+                                <label name="expert"/>
+                                <field name="expert" widget="selection" colspan="2"/>
+                                <label name="surface"/>
+                                <field name="surface"/>
+                                <field name="surface_uom" widget="selection"/>
+                                <label name="reserve"/>
+                                <field name="reserve" widget="selection" colspan="2"/>
+                                <label name="reserve_rw"/>
+                                <field name="reserve_rw" colspan="2"/>
+                                <!-- Those value are required to evaluate the digits PYSON statement in the client -->
+                                <field name="surface_uom_digits" invisible="1"/>
+                            </page>
+                            <page string="Trunks" col="3" id="wood_desc">
+                                <field name="trunks" mode="tree" colspan="3"/>
+                                <label name="total_trunks_count"/>
+                                <field name="total_trunks_count" colspan="2"/>
+                                <label name="total_volume"/>
+                                <field name="total_volume"/>
+                                <field name="total_volume_uom" widget="selection"/>
+                                <label name="mean_volume"/>
+                                <field name="mean_volume"/>
+                                <field name="mean_volume_uom" widget="selection"/>
+                                <!-- Those value are required to evaluate the digits PYSON statement in the client -->
+                                <field name="total_volume_uom_digits" invisible="1"/>
+                                <field name="mean_volume_uom_digits" invisible="1"/>
+                            </page>
+                       </notebook>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_marking_sheet_form_view">
+            <field name="name">Marking sheets</field>
+            <field name="res_model">marking_sheet.marking_sheet</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_marking_sheet_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="marking_sheet_view_tree"/>
+            <field name="act_window" ref="act_marking_sheet_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_marking_sheet_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="marking_sheet_view_form"/>
+            <field name="act_window" ref="act_marking_sheet_form_view"/>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_marking_to_items">
+            <field name="name">Convert to an items sheet</field>
+            <field name="wiz_name">wood_product.marking_to_items</field>
+        </record>
+        <record model="ir.action.keyword" id="act_marking_to_items">
+            <field name="keyword">form_action</field>
+            <field name="model">marking_sheet.marking_sheet,-1</field>
+            <field name="action" ref="wiz_marking_to_items"/>
+        </record>
+
+        <!-- Relations -->
+        <record model="ir.action.act_window" id="act_items_sheet_form">
+            <field name="name">Items sheets</field>
+            <field name="res_model">items_sheet.items_sheet</field>
+            <field name="domain">[("id", "=", Eval('items_sheet'))]</field>
+        </record>
+        <record model="ir.action.keyword" id="act_items_sheet_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">marking_sheet.marking_sheet,-1</field>
+            <field name="action" ref="act_items_sheet_form"/>
+        </record>
+
+        <menuitem parent="menu_marking_sheet" sequence="1" id="submenu_marking_sheet" icon="tryton-list" action="act_marking_sheet_form_view"/>
+    </data>
+</tryton>
+

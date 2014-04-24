@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<form string="Document Urbanisme">
+    <notebook>
+        <page string="General" id="general" col="4">
+            <label name="idDocumentUrba" />            
+            <field name="idDocumentUrba" />
+            <label name="typeDocument" />            
+            <field name="typeDocument" widget="selection"/>
+            <label name="etat" />            
+            <field name="etat" widget="selection"/>
+            <label name="version" />            
+            <field name="version" />
+            <label name="dateApprobation" />            
+            <field name="dateApprobation" />                                     
+            <label name="dateFinValidite" />            
+            <field name="dateFinValidite" />
+            <label name="estIntercommunal" />            
+            <field name="estIntercommunal" />
+            <label name="siren" />            
+            <field name="siren" />
+            <label name="commune" />                  
+            <field name="commune" colspan="3"/>
+            <label name="nomReglement" />            
+            <field name="nomReglement" />
+            <label name="urlReglement" />            
+            <field name="urlReglement" widget="url" />
+            <label name="nomPlan" />            
+            <field name="nomPlan" />
+            <label name="urlPlan" />            
+            <field name="urlPlan" widget="url" />
+            <label name="serviceInternet" />            
+            <field name="serviceInternet" widget="url" />          
+            <label name="referentielSaisie"/>            
+            <field name="referentielSaisie"/>
+            <label name="dateReferentielSaisie"/>            
+            <field name="dateReferentielSaisie"/>
+            <label name="active" />            
+            <field name="active" />            
+        </page>
+        <page string="Informations" id="informations" col="4">                   
+            <field name="information" />
+        </page>
+        <page string="Secteur" id="secteur" col="4" states="{'invisible': Not(Equal(Eval('typeDocument',0),3))}">                   
+            <field name="secteurCC" />
+        </page>
+        <page string="Zone Urbaine" id="zone" col="4" states="{'invisible': Equal(Eval('typeDocument',0),3)}">                   
+            <field name="ZoneUrba" />
+        </page>
+    </notebook>                   
+</form>

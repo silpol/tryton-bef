@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tree string="Road">
+    <field name="class_id" />
+    <field name="length" />
+    <field name="name" />
+    <field name="x1" />
+    <field name="y1" />
+    <field name="x2" />
+    <field name="y2" />
+    <field name="reverse_cost" />
+    <field name="rule" />
+    <field name="to_cost" />
+    <field name="maxspeed_forward" />
+    <field name="maxspeed_backward" />
+    <field name="osm_id" />
+    <field name="priority" />
+    <field name="source" />
+    <field name="target" />
+</tree>
+  

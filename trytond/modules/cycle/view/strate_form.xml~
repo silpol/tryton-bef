@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<form string="Strate">
+    <label name="cycle"/>
+    <field name="cycle"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="name"/>
+    <field name="name"/>
+	<label name="coefficient"/>
+	<field name="coefficient"/>
+    <label name="lib_long"/>
+    <field name="lib_long"/>
+    <label name="diamlim1"/>
+    <field name="diamlim1"/>
+    <label name="rayon1"/>
+    <field name="rayon1"/>
+    <label name="diamlim2"/>
+    <field name="diamlim2"/>
+    <label name="rayon2"/>
+    <field name="rayon2"/>
+    <label name="diamlim3"/>
+    <field name="diamlim3"/>
+    <label name="rayon3"/>
+    <field name="rayon3"/>
+    <label name="diamlim"/>
+    <field name="diamlim"/>
+    <label name="nbplacettes"/>
+    <field name="nbplacettes"/>
+    <label name="nbssplacettes"/>
+    <field name="nbssplacettes"/>
+    <label name="rayonssplacettes"/>
+    <field name="rayonssplacettes"/>
+    <label name="taillis"/>
+    <field name="taillis"/>
+    <label name="bmp"/>
+    <field name="bmp"/>
+    <label name="lineaire"/>
+    <field name="lineaire"/>
+    <label name="limpcqm"/>
+    <field name="limpcqm"/>
+    <label name="tariftypebmp"/>
+    <field name="tariftypebmp"/>
+    <label name="tarifnumbmp"/>    
+    <field name="tarifnumbmp"/>
+    <notebook colspan="6">
+	    <page string="Comment" id="comment">					        
+	        <field name="comment"/>
+	    </page>									    
+    </notebook>
+</form>

@@ -1,0 +1,144 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:taillis.taillis,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:taillis.taillis,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:taillis.taillis,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:taillis.taillis,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:taillis.taillis,tai_azimut:"
+msgid "Azimuth"
+msgstr "Azimut"
+
+msgctxt "field:taillis.taillis,tai_cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:taillis.taillis,tai_diam_moy:"
+msgid "Average diameter"
+msgstr "Diamètre moyen"
+
+msgctxt "field:taillis.taillis,tai_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:taillis.taillis,tai_distance:"
+msgid "Distance"
+msgstr "Distance"
+
+msgctxt "field:taillis.taillis,tai_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:taillis.taillis,tai_haut_moy:"
+msgid "Average height"
+msgstr "Hauteur moyenne"
+
+msgctxt "field:taillis.taillis,tai_nombre:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:taillis.taillis,tai_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:taillis.taillis,tai_placette:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:taillis.taillis,tai_quart:"
+msgid "Quarter"
+msgstr "Quartier"
+
+msgctxt "field:taillis.taillis,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:taillis.taillis,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:taillis.taillis,tai_azimut:"
+msgid "Azimuth"
+msgstr "Azimut"
+
+msgctxt "help:taillis.taillis,tai_cycle:"
+msgid "Cycle name"
+msgstr "Nom du cycle"
+
+msgctxt "help:taillis.taillis,tai_diam_moy:"
+msgid "Average diameter"
+msgstr "Diamètre moyen"
+
+msgctxt "help:taillis.taillis,tai_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:taillis.taillis,tai_distance:"
+msgid "Distance (dm)"
+msgstr "Distance (dm)"
+
+msgctxt "help:taillis.taillis,tai_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "help:taillis.taillis,tai_haut_moy:"
+msgid "Average height"
+msgstr "Hauteur moyenne"
+
+msgctxt "help:taillis.taillis,tai_nombre:"
+msgid "Number of strands"
+msgstr "Nombre de brins"
+
+msgctxt "help:taillis.taillis,tai_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:taillis.taillis,tai_placette:"
+msgid "Plot name"
+msgstr "Nom de la placette"
+
+msgctxt "help:taillis.taillis,tai_quart:"
+msgid "Quarter plot"
+msgstr "Quart de la placette"
+
+msgctxt "model:ir.action,name:act_taillis_form"
+msgid "Coppice"
+msgstr "Taillis"
+
+msgctxt "model:ir.ui.menu,name:menu_taillis_form"
+msgid "Coppice"
+msgstr "Taillis"
+
+msgctxt "model:taillis.taillis,name:"
+msgid "Coppice"
+msgstr "Taillis"
+
+msgctxt "view:taillis.taillis:"
+msgid "Coppice"
+msgstr "Taillis"
+
+msgctxt "view:taillis.taillis:"
+msgid "Observations"
+msgstr "Observations"

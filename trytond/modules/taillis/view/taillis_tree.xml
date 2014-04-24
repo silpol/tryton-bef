@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Coppice">
+    <field name="tai_dispositif" />
+    <field name="tai_essence" />
+	<field name="tai_cycle" />
+	<field name="tai_placette" />
+    <field name="tai_quart" />
+	<field name="tai_azimut" />
+	<field name="tai_distance" />
+	<field name="tai_nombre" />
+	<field name="tai_diam_moy" />
+	<field name="tai_haut_moy" />
+	<field name="tai_observation" />
+</tree>

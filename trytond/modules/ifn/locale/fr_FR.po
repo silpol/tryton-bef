@@ -1,0 +1,3225 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:ifn.acci:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.arbre:"
+msgid "La somme de Q1, Q2, Q3 et du Taux de rebut doit être égale à 10."
+msgstr "La somme de Q1, Q2, Q3 et du Taux de rebut doit être égale à 10."
+
+msgctxt "error:ifn.arbre:"
+msgid ""
+"Le champ Dorge est à renseigner pour tous les sapins vivants levés, non "
+"simplifiés (à l’exception d’Abies grandis)."
+msgstr ""
+"Le champ Dorge est à renseigner pour tous les sapins vivants levés, non "
+"simplifiés (à l’exception d’Abies grandis)."
+
+msgctxt "error:ifn.arbre:"
+msgid ""
+"Longueur de fût ne peut pas être renseigné pour un arbre de dimension petit "
+"bois (circonférence à 1,30m inférieure à 22.5cm)."
+msgstr ""
+"Longueur de fût ne peut pas être renseigné pour un arbre de dimension petit "
+"bois (circonférence à 1,30m inférieure à 22.5cm)."
+
+msgctxt "error:ifn.arbre:"
+msgid "L’accroissement radial sur 5 ans n’est pas renseigné pour les noyers."
+msgstr "L’accroissement radial sur 5 ans n’est pas renseigné pour les noyers."
+
+msgctxt "error:ifn.arbre:"
+msgid ""
+"Si au moins un des quatres champs parmis Q1, Q2, Q3 et Taux de rebut est "
+"renseigné, les quatres doivent l’être "
+msgstr ""
+"Si au moins un des quatres champs parmis Q1, Q2, Q3 et Taux de rebut est "
+"renseigné, les quatres doivent l’être "
+
+msgctxt "error:ifn.arbre:"
+msgid "Un arbre de dimension petit bois est de qualité 3."
+msgstr "Un arbre de dimension petit bois est de qualité 3."
+
+msgctxt "error:ifn.asperite:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.cac:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.clon:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.csa:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.datemort:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.dc:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.decoupe:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.dist:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.entp:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.espar:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.espar_taxon:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.forme:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.gest:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.incid:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.iti:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.lib:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.mortb:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.ori:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.pentexp:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.peupnr:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.plisi:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.portance:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.sfcoeur:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.sfdorge:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.sfgeliv:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.sfgui:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.sfo:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.sfpied:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.simplif:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.tige:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.tm2:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.tplant:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.uta:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "error:ifn.veget:"
+msgid "The code must be unique."
+msgstr "Le code doit être unique."
+
+msgctxt "field:ifn.acci,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.acci,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.acci,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.acci,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.acci,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.acci,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.acci,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.acci,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.acci,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.arbre,a:"
+msgid "Id tree"
+msgstr "Identifiant arbre"
+
+msgctxt "field:ifn.arbre,acci:"
+msgid "Accident"
+msgstr "Accident"
+
+msgctxt "field:ifn.arbre,age:"
+msgid "Age"
+msgstr "Âge"
+
+msgctxt "field:ifn.arbre,annee:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "field:ifn.arbre,c13:"
+msgid "1.30 m circumference (cm)"
+msgstr "Circonférence à 1,30m (cm)"
+
+msgctxt "field:ifn.arbre,clon:"
+msgid "Clone"
+msgstr "Clone"
+
+msgctxt "field:ifn.arbre,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.arbre,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.arbre,datemort:"
+msgid "Date of Death"
+msgstr "Date de la mort"
+
+msgctxt "field:ifn.arbre,decoupe:"
+msgid "Cut Type"
+msgstr "Type de coupe"
+
+msgctxt "field:ifn.arbre,espar:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:ifn.arbre,forme:"
+msgid "Form"
+msgstr "Formulaire"
+
+msgctxt "field:ifn.arbre,hdec:"
+msgid "Cutting height"
+msgstr "Hauteur de coupe"
+
+msgctxt "field:ifn.arbre,htot:"
+msgid "Total height"
+msgstr "Hauteur totale"
+
+msgctxt "field:ifn.arbre,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.arbre,idp:"
+msgid "Point inventory"
+msgstr "Point d'inventaire"
+
+msgctxt "field:ifn.arbre,ir5:"
+msgid "Increase"
+msgstr "Accroissement"
+
+msgctxt "field:ifn.arbre,is_datemort:"
+msgid "is_datemort"
+msgstr "is_datemort"
+
+msgctxt "field:ifn.arbre,is_ir5:"
+msgid "is_ir5"
+msgstr "is_ir5"
+
+msgctxt "field:ifn.arbre,is_mortb:"
+msgid "is_mortb"
+msgstr "is_mortb"
+
+msgctxt "field:ifn.arbre,lfsd:"
+msgid "Barrel length"
+msgstr "Longueur du fût"
+
+msgctxt "field:ifn.arbre,lib:"
+msgid "Rate covered"
+msgstr "Taux de couvert"
+
+msgctxt "field:ifn.arbre,mortb:"
+msgid "Mortality"
+msgstr "Mortalité"
+
+msgctxt "field:ifn.arbre,ori:"
+msgid "Origin"
+msgstr "Origine"
+
+msgctxt "field:ifn.arbre,q1:"
+msgid "Q1"
+msgstr "Q1"
+
+msgctxt "field:ifn.arbre,q2:"
+msgid "Q2"
+msgstr "Q2"
+
+msgctxt "field:ifn.arbre,q3:"
+msgid "Q3"
+msgstr "Q3"
+
+msgctxt "field:ifn.arbre,r:"
+msgid "Scrap rate"
+msgstr "Taux de rebut"
+
+msgctxt "field:ifn.arbre,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.arbre,sfcoeur:"
+msgid "Heart"
+msgstr "Cœur"
+
+msgctxt "field:ifn.arbre,sfdorge:"
+msgid "Dorge"
+msgstr "Dorge"
+
+msgctxt "field:ifn.arbre,sfgeliv:"
+msgid "Winter injury"
+msgstr "Gélivure"
+
+msgctxt "field:ifn.arbre,sfgui:"
+msgid "Mistletoe"
+msgstr "Gui"
+
+msgctxt "field:ifn.arbre,sfpied:"
+msgid "Foot"
+msgstr "Pied"
+
+msgctxt "field:ifn.arbre,simplif:"
+msgid "Simplified tree Indicator"
+msgstr "Indicateur d'arbre simplifié"
+
+msgctxt "field:ifn.arbre,small_wood:"
+msgid "small_wood"
+msgstr "Petits bois"
+
+msgctxt "field:ifn.arbre,tige:"
+msgid "Stem"
+msgstr "Tige"
+
+msgctxt "field:ifn.arbre,v:"
+msgid "Volume"
+msgstr "Volume"
+
+msgctxt "field:ifn.arbre,veget:"
+msgid "State of vegetation"
+msgstr "Stade de la végétation"
+
+msgctxt "field:ifn.arbre,w:"
+msgid "Coefficient"
+msgstr "Coefficient"
+
+msgctxt "field:ifn.arbre,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.arbre,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.asperite,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.asperite,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.asperite,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.asperite,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.asperite,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.asperite,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.asperite,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.asperite,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.asperite,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.cac,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.cac,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.cac,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.cac,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.cac,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.cac,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.cac,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.cac,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.cac,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.clon,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.clon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.clon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.clon,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.clon,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.clon,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.clon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.clon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.clon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.csa,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.csa,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.csa,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.csa,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.csa,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.csa,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.csa,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.csa,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.csa,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.datemort,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.datemort,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.datemort,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.datemort,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.datemort,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.datemort,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.datemort,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.datemort,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.datemort,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.dc,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.dc,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.dc,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.dc,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.dc,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.dc,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.dc,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.dc,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.dc,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.decoupe,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.decoupe,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.decoupe,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.decoupe,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.decoupe,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.decoupe,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.decoupe,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.decoupe,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.decoupe,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.dist,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.dist,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.dist,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.dist,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.dist,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.dist,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.dist,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.dist,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.dist,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.entp,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.entp,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.entp,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.entp,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.entp,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.entp,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.entp,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.entp,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.entp,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.espar,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.espar,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.espar,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.espar,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.espar,lab_court:"
+msgid "Short label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.espar,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.espar,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.espar,taxons:"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "field:ifn.espar,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.espar,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.espar_taxon,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.espar_taxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.espar_taxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.espar_taxon,essence:"
+msgid "essence"
+msgstr "essence"
+
+msgctxt "field:ifn.espar_taxon,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.espar_taxon,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.espar_taxon,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.espar_taxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.espar_taxon,taxon:"
+msgid "taxon"
+msgstr "taxon"
+
+msgctxt "field:ifn.espar_taxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.espar_taxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.forme,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.forme,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.forme,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.forme,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.forme,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.forme,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.forme,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.forme,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.forme,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.gest,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.gest,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.gest,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.gest,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.gest,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.gest,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.gest,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.gest,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.gest,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.incid,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.incid,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.incid,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.incid,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.incid,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.incid,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.incid,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.incid,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.incid,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.iti,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.iti,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.iti,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.iti,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.iti,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.iti,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.iti,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.iti,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.iti,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.lib,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.lib,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.lib,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.lib,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.lib,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.lib,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.lib,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.lib,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.lib,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.mortb,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.mortb,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.mortb,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.mortb,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.mortb,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.mortb,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.mortb,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.mortb,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.mortb,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.noeud,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.noeud,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.noeud,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:ifn.noeud,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.noeud,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.noeud,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.noeud,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.ori,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.ori,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.ori,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.ori,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.ori,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.ori,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.ori,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.ori,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.ori,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.pentexp,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.pentexp,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.pentexp,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.pentexp,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.pentexp,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.pentexp,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.pentexp,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.pentexp,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.pentexp,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.peupnr,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.peupnr,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.peupnr,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.peupnr,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.peupnr,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.peupnr,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.peupnr,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.peupnr,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.peupnr,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.placette,asperite:"
+msgid "Asperity"
+msgstr "Aspérité"
+
+msgctxt "field:ifn.placette,cac:"
+msgid "Age class"
+msgstr "Classe d'âge"
+
+msgctxt "field:ifn.placette,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.placette,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.placette,csa:"
+msgid "Cover"
+msgstr "Couvert"
+
+msgctxt "field:ifn.placette,dc:"
+msgid "Type of cut"
+msgstr "Type de coupe"
+
+msgctxt "field:ifn.placette,dcespar1:"
+msgid "Species 1"
+msgstr "Essence 1"
+
+msgctxt "field:ifn.placette,dcespar2:"
+msgid "Species 2"
+msgstr "Essence 2"
+
+msgctxt "field:ifn.placette,dcespar:"
+msgid "dcespar"
+msgstr "dcespar"
+
+msgctxt "field:ifn.placette,dep:"
+msgid "Department"
+msgstr "Département"
+
+msgctxt "field:ifn.placette,dist:"
+msgid "Skidding distance"
+msgstr "Distance de débardage"
+
+msgctxt "field:ifn.placette,elisi:"
+msgid "Exposure"
+msgstr "Exposition"
+
+msgctxt "field:ifn.placette,entp:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "field:ifn.placette,ess_age_1:"
+msgid "Age species"
+msgstr "Âge de l'essence"
+
+msgctxt "field:ifn.placette,esspre:"
+msgid "Main species"
+msgstr "Essence principale"
+
+msgctxt "field:ifn.placette,gest:"
+msgid "Forest management"
+msgstr "Gestion forestière"
+
+msgctxt "field:ifn.placette,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.placette,idp:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.placette,incid:"
+msgid "Impact"
+msgstr "Incidence"
+
+msgctxt "field:ifn.placette,is_iti:"
+msgid "is_iti"
+msgstr "is_iti"
+
+msgctxt "field:ifn.placette,is_sfo:"
+msgid "is_sfo"
+msgstr "is_sfo"
+
+msgctxt "field:ifn.placette,is_tpespar:"
+msgid "is_tpespar"
+msgstr "is_tpespar"
+
+msgctxt "field:ifn.placette,iti:"
+msgid "Directions skid"
+msgstr "Itinéraire de débardage"
+
+msgctxt "field:ifn.placette,noeud:"
+msgid "Node"
+msgstr "Nœud"
+
+msgctxt "field:ifn.placette,pente_inf_60:"
+msgid "pente_inf_60"
+msgstr "pente_inf_60"
+
+msgctxt "field:ifn.placette,pentexp:"
+msgid "Slope"
+msgstr "Pente"
+
+msgctxt "field:ifn.placette,peupnr:"
+msgid "Stand"
+msgstr "Tige"
+
+msgctxt "field:ifn.placette,plisi:"
+msgid "Edge"
+msgstr "Lisière"
+
+msgctxt "field:ifn.placette,portance:"
+msgid "Bearing"
+msgstr "Portance"
+
+msgctxt "field:ifn.placette,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.placette,sfo:"
+msgid "Forest structure"
+msgstr "Structure forestière"
+
+msgctxt "field:ifn.placette,tm2:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "field:ifn.placette,tpespar1:"
+msgid "Tree species 1"
+msgstr "Espèce arborée 1"
+
+msgctxt "field:ifn.placette,tpespar2:"
+msgid "Tree species 2"
+msgstr "Espèce arborée 2"
+
+msgctxt "field:ifn.placette,tplant:"
+msgid "Type of plantation"
+msgstr "Plantation"
+
+msgctxt "field:ifn.placette,uta1:"
+msgid "Using 1"
+msgstr "Utilisation 1"
+
+msgctxt "field:ifn.placette,uta2:"
+msgid "Using 2"
+msgstr "Utilisation 2"
+
+msgctxt "field:ifn.placette,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.placette,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.placette.forest,asperite:"
+msgid "Asperity"
+msgstr "Aspérité"
+
+msgctxt "field:ifn.placette.forest,cac:"
+msgid "Age class"
+msgstr "Classe d'âge"
+
+msgctxt "field:ifn.placette.forest,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.placette.forest,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.placette.forest,csa:"
+msgid "Cover"
+msgstr "Couvert"
+
+msgctxt "field:ifn.placette.forest,dc:"
+msgid "Type of cut"
+msgstr "Type de coupe"
+
+msgctxt "field:ifn.placette.forest,dcespar1:"
+msgid "Species 1"
+msgstr "Essence 1"
+
+msgctxt "field:ifn.placette.forest,dcespar2:"
+msgid "Species 2"
+msgstr "Essence 2"
+
+msgctxt "field:ifn.placette.forest,dcespar:"
+msgid "dcespar"
+msgstr "dcespar"
+
+msgctxt "field:ifn.placette.forest,dep:"
+msgid "Department"
+msgstr "Département"
+
+msgctxt "field:ifn.placette.forest,dist:"
+msgid "Skidding distance"
+msgstr "Distance de débardage"
+
+msgctxt "field:ifn.placette.forest,elisi:"
+msgid "Exposure"
+msgstr "Exposition"
+
+msgctxt "field:ifn.placette.forest,entp:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "field:ifn.placette.forest,ess_age_1:"
+msgid "Age species"
+msgstr "Âge de l'essence"
+
+msgctxt "field:ifn.placette.forest,esspre:"
+msgid "Main species"
+msgstr "Essence principale"
+
+msgctxt "field:ifn.placette.forest,gest:"
+msgid "Forest management"
+msgstr "Gestion forestière"
+
+msgctxt "field:ifn.placette.forest,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.placette.forest,idp:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.placette.forest,incid:"
+msgid "Impact"
+msgstr "Incidence"
+
+msgctxt "field:ifn.placette.forest,is_iti:"
+msgid "is_iti"
+msgstr "is_iti"
+
+msgctxt "field:ifn.placette.forest,is_sfo:"
+msgid "is_sfo"
+msgstr "is_sfo"
+
+msgctxt "field:ifn.placette.forest,is_tpespar:"
+msgid "is_tpespar"
+msgstr "is_tpespar"
+
+msgctxt "field:ifn.placette.forest,iti:"
+msgid "Directions skid"
+msgstr "Itinéraire de débardage"
+
+msgctxt "field:ifn.placette.forest,noeud:"
+msgid "Node"
+msgstr "Nœud"
+
+msgctxt "field:ifn.placette.forest,pente_inf_60:"
+msgid "pente_inf_60"
+msgstr "pente_inf_60"
+
+msgctxt "field:ifn.placette.forest,pentexp:"
+msgid "Slope"
+msgstr "Pente"
+
+msgctxt "field:ifn.placette.forest,peupnr:"
+msgid "Stand"
+msgstr "Tige"
+
+msgctxt "field:ifn.placette.forest,plisi:"
+msgid "Edge"
+msgstr "Lisière"
+
+msgctxt "field:ifn.placette.forest,portance:"
+msgid "Bearing"
+msgstr "Portance"
+
+msgctxt "field:ifn.placette.forest,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.placette.forest,sfo:"
+msgid "Forest structure"
+msgstr "Structure forestière"
+
+msgctxt "field:ifn.placette.forest,tm2:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "field:ifn.placette.forest,tpespar1:"
+msgid "Tree species 1"
+msgstr "Essence d'arbre 1"
+
+msgctxt "field:ifn.placette.forest,tpespar2:"
+msgid "Tree species 2"
+msgstr "Essence d'arbre 2"
+
+msgctxt "field:ifn.placette.forest,tplant:"
+msgid "Type of plantation"
+msgstr "Type de planatation"
+
+msgctxt "field:ifn.placette.forest,uta1:"
+msgid "Using 1"
+msgstr "Utilisation 1"
+
+msgctxt "field:ifn.placette.forest,uta2:"
+msgid "Using 2"
+msgstr "Utilisation 2"
+
+msgctxt "field:ifn.placette.forest,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.placette.forest,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.placette.poplar_plantation,asperite:"
+msgid "Asperity"
+msgstr "Aspérité"
+
+msgctxt "field:ifn.placette.poplar_plantation,cac:"
+msgid "Age class"
+msgstr "Classe d'âge"
+
+msgctxt "field:ifn.placette.poplar_plantation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.placette.poplar_plantation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.placette.poplar_plantation,csa:"
+msgid "Cover"
+msgstr "Couvert"
+
+msgctxt "field:ifn.placette.poplar_plantation,dc:"
+msgid "Type of cut"
+msgstr "Type de coupe"
+
+msgctxt "field:ifn.placette.poplar_plantation,dcespar1:"
+msgid "Species 1"
+msgstr "Essence 1"
+
+msgctxt "field:ifn.placette.poplar_plantation,dcespar2:"
+msgid "Species 2"
+msgstr "Essence 2"
+
+msgctxt "field:ifn.placette.poplar_plantation,dcespar:"
+msgid "dcespar"
+msgstr "dcespar"
+
+msgctxt "field:ifn.placette.poplar_plantation,dep:"
+msgid "Department"
+msgstr "Département"
+
+msgctxt "field:ifn.placette.poplar_plantation,dist:"
+msgid "Skidding distance"
+msgstr "Distance de débardage"
+
+msgctxt "field:ifn.placette.poplar_plantation,elisi:"
+msgid "Exposure"
+msgstr "Exposition"
+
+msgctxt "field:ifn.placette.poplar_plantation,entp:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "field:ifn.placette.poplar_plantation,ess_age_1:"
+msgid "Age species"
+msgstr "Âge de l'essence"
+
+msgctxt "field:ifn.placette.poplar_plantation,esspre:"
+msgid "Main species"
+msgstr "Essence principale"
+
+msgctxt "field:ifn.placette.poplar_plantation,gest:"
+msgid "Forest management"
+msgstr "Gestion forestière"
+
+msgctxt "field:ifn.placette.poplar_plantation,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.placette.poplar_plantation,idp:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.placette.poplar_plantation,incid:"
+msgid "Impact"
+msgstr "Incidence"
+
+msgctxt "field:ifn.placette.poplar_plantation,is_iti:"
+msgid "is_iti"
+msgstr "is_iti"
+
+msgctxt "field:ifn.placette.poplar_plantation,is_sfo:"
+msgid "is_sfo"
+msgstr "is_sfo"
+
+msgctxt "field:ifn.placette.poplar_plantation,is_tpespar:"
+msgid "is_tpespar"
+msgstr "is_tpespar"
+
+msgctxt "field:ifn.placette.poplar_plantation,iti:"
+msgid "Directions skid"
+msgstr "Itinéraire de débardage"
+
+msgctxt "field:ifn.placette.poplar_plantation,noeud:"
+msgid "Node"
+msgstr "Nœud"
+
+msgctxt "field:ifn.placette.poplar_plantation,pente_inf_60:"
+msgid "pente_inf_60"
+msgstr "pente_inf_60"
+
+msgctxt "field:ifn.placette.poplar_plantation,pentexp:"
+msgid "Slope"
+msgstr "Pente"
+
+msgctxt "field:ifn.placette.poplar_plantation,peupnr:"
+msgid "Stand"
+msgstr "Tige"
+
+msgctxt "field:ifn.placette.poplar_plantation,plisi:"
+msgid "Edge"
+msgstr "Lisière"
+
+msgctxt "field:ifn.placette.poplar_plantation,portance:"
+msgid "Bearing"
+msgstr "Portance"
+
+msgctxt "field:ifn.placette.poplar_plantation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.placette.poplar_plantation,sfo:"
+msgid "Forest structure"
+msgstr "Structure forestière"
+
+msgctxt "field:ifn.placette.poplar_plantation,tm2:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "field:ifn.placette.poplar_plantation,tpespar1:"
+msgid "Tree species 1"
+msgstr "Essence arbre 1"
+
+msgctxt "field:ifn.placette.poplar_plantation,tpespar2:"
+msgid "Tree species 2"
+msgstr "Essence arbre 2"
+
+msgctxt "field:ifn.placette.poplar_plantation,tplant:"
+msgid "Type of plantation"
+msgstr "Type de plantation"
+
+msgctxt "field:ifn.placette.poplar_plantation,uta1:"
+msgid "Using 1"
+msgstr "Utilisation 1"
+
+msgctxt "field:ifn.placette.poplar_plantation,uta2:"
+msgid "Using 2"
+msgstr "Utilisation 2"
+
+msgctxt "field:ifn.placette.poplar_plantation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.placette.poplar_plantation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.plisi,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.plisi,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.plisi,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.plisi,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.plisi,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.plisi,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.plisi,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.plisi,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.plisi,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.portance,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.portance,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.portance,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.portance,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.portance,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.portance,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.portance,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.portance,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.portance,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.sfcoeur,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.sfcoeur,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.sfcoeur,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.sfcoeur,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.sfcoeur,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.sfcoeur,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.sfcoeur,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.sfcoeur,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.sfcoeur,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.sfdorge,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.sfdorge,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.sfdorge,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.sfdorge,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.sfdorge,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.sfdorge,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.sfdorge,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.sfdorge,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.sfdorge,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.sfgeliv,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.sfgeliv,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.sfgeliv,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.sfgeliv,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.sfgeliv,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.sfgeliv,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.sfgeliv,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.sfgeliv,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.sfgeliv,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.sfgui,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.sfgui,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.sfgui,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.sfgui,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.sfgui,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.sfgui,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.sfgui,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.sfgui,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.sfgui,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.sfo,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.sfo,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.sfo,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.sfo,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.sfo,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.sfo,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.sfo,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.sfo,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.sfo,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.sfpied,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.sfpied,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.sfpied,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.sfpied,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.sfpied,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.sfpied,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.sfpied,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.sfpied,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.sfpied,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.simplif,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.simplif,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.simplif,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.simplif,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.simplif,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.simplif,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.simplif,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.simplif,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.simplif,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.tige,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.tige,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.tige,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.tige,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.tige,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.tige,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.tige,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.tige,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.tige,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.tm2,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.tm2,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.tm2,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.tm2,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.tm2,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.tm2,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.tm2,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.tm2,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.tm2,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.tplant,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.tplant,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.tplant,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.tplant,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.tplant,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.tplant,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.tplant,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.tplant,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.tplant,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.uta,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.uta,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.uta,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.uta,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.uta,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.uta,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.uta,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.uta,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.uta,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ifn.veget,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:ifn.veget,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ifn.veget,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ifn.veget,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ifn.veget,lab_court:"
+msgid "Short Label"
+msgstr "Libellé court"
+
+msgctxt "field:ifn.veget,lab_long:"
+msgid "Long Label"
+msgstr "Libellé long"
+
+msgctxt "field:ifn.veget,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ifn.veget,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ifn.veget,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:ifn.arbre,a:"
+msgid "Id inventory tree"
+msgstr "Identifiant de l'arbre"
+
+msgctxt "help:ifn.arbre,acci:"
+msgid "Tree accident"
+msgstr "Accident de l’arbre"
+
+msgctxt "help:ifn.arbre,age:"
+msgid "Age at 1,30 m"
+msgstr "Âge à 1,30m"
+
+msgctxt "help:ifn.arbre,annee:"
+msgid "Inventory year"
+msgstr "Année d'inventaire"
+
+msgctxt "help:ifn.arbre,c13:"
+msgid ""
+"Trees for firewood (<22.5cm) size are considered as quality trees 3 (Q3: 10)"
+" and have no barrel length"
+msgstr ""
+"Les arbres de dimension petit bois (< 22.5cm) sont assimilés à des arbres de"
+" qualité 3 (Q3: 10) et n’ont pas de longueur de fût"
+
+msgctxt "help:ifn.arbre,clon:"
+msgid "Tree clone"
+msgstr "Clone de l'espèce"
+
+msgctxt "help:ifn.arbre,datemort:"
+msgid "Estimated date of death of the tree"
+msgstr "Estimation de la date de mort de l'arbre"
+
+msgctxt "help:ifn.arbre,decoupe:"
+msgid "Cut Type"
+msgstr "Type de coupe"
+
+msgctxt "help:ifn.arbre,espar:"
+msgid "Tree species"
+msgstr "Espèce d'arbre"
+
+msgctxt "help:ifn.arbre,forme:"
+msgid "Crown form"
+msgstr "Forme du houppier"
+
+msgctxt "help:ifn.arbre,hdec:"
+msgid "Cutting height (m)"
+msgstr "Hauteur de la découpe (m)"
+
+msgctxt "help:ifn.arbre,htot:"
+msgid "Total height (m)"
+msgstr "Hauteur totale (m)"
+
+msgctxt "help:ifn.arbre,idp:"
+msgid "Id inventory point"
+msgstr "Identifiant"
+
+msgctxt "help:ifn.arbre,ir5:"
+msgid "Radial growth over 5 years (mm) (measured on all trees except walnuts)"
+msgstr ""
+"Accroissement radial sur 5 ans (mm) (mesuré sur tous les arbres à "
+"l’exception des noyers)"
+
+msgctxt "help:ifn.arbre,lfsd:"
+msgid "Length was flawless (m) (does not apply to small dimension wood trees)"
+msgstr ""
+"Longueur de fût sans défaut (m) (ne concerne pas les arbres de dimension "
+"petit bois)"
+
+msgctxt "help:ifn.arbre,lib:"
+msgid "Class free rate covered tree"
+msgstr "Taux de couvert libre de l’arbre"
+
+msgctxt "help:ifn.arbre,mortb:"
+msgid "Mortality of branches in the crown"
+msgstr "Mortalité des branches dans le houppier"
+
+msgctxt "help:ifn.arbre,ori:"
+msgid "Tree origin"
+msgstr "Origine de l'arbre"
+
+msgctxt "help:ifn.arbre,q1:"
+msgid "Quality rate 1"
+msgstr "Taux de qualité 1"
+
+msgctxt "help:ifn.arbre,q2:"
+msgid "Quality rate 2"
+msgstr "Taux de qualité 2"
+
+msgctxt "help:ifn.arbre,q3:"
+msgid "Quality rate 3"
+msgstr "Taux de qualité 3"
+
+msgctxt "help:ifn.arbre,r:"
+msgid "Scrap rate"
+msgstr "Taux de rebut"
+
+msgctxt "help:ifn.arbre,sfcoeur:"
+msgid "Heart rot"
+msgstr "Pourriture à cœur"
+
+msgctxt "help:ifn.arbre,sfdorge:"
+msgid "Dorge and brooms on trees"
+msgstr "Dorge et balais de sorcière sur sapins"
+
+msgctxt "help:ifn.arbre,sfgeliv:"
+msgid "Presence of winter injury"
+msgstr "Présence de gélivure"
+
+msgctxt "help:ifn.arbre,sfgui:"
+msgid "Presence of mistletoe"
+msgstr "Présence de gui"
+
+msgctxt "help:ifn.arbre,sfpied:"
+msgid "Injury or foot rot"
+msgstr "Blessure ou pourriture de pied"
+
+msgctxt "help:ifn.arbre,tige:"
+msgid "Stem form"
+msgstr "Forme de la tige"
+
+msgctxt "help:ifn.arbre,v:"
+msgid "Volume of the shaft (calculated data)"
+msgstr "Volume de l’arbre (donnée calculée)"
+
+msgctxt "help:ifn.arbre,veget:"
+msgid "State of vegetation"
+msgstr "Stade de la végétation"
+
+msgctxt "help:ifn.arbre,w:"
+msgid "Weighting of the shaft (calculated data)"
+msgstr "Coefficient de pondération de l’arbre (donnée calculée)"
+
+msgctxt "help:ifn.espar,taxons:"
+msgid "Taxons appartenant au regroupement d’essences"
+msgstr "Taxons appartenant au regroupement d’essences"
+
+msgctxt "help:ifn.noeud,geom:"
+msgid "Node geographic coordinates"
+msgstr "Coordonnées géographiques du nœud"
+
+msgctxt "help:ifn.placette,asperite:"
+msgid "To inquire for slopes skidding below 60%"
+msgstr "À renseigner pour des pentes de débardage inférieures à 60 %"
+
+msgctxt "help:ifn.placette,cac:"
+msgid "Calculated data"
+msgstr "Donnée calculée"
+
+msgctxt "help:ifn.placette,csa:"
+msgid "Soil cover"
+msgstr "Couverture au sol"
+
+msgctxt "help:ifn.placette,dc:"
+msgid ""
+"Fields 'species 1' and 'Species 2' can not be completed in the presence of "
+"strong cut."
+msgstr ""
+"Les champs 'Espèce 1' et 'Espèce 2' ne peuvent être renseignés qu'en "
+"présence de coupe forte."
+
+msgctxt "help:ifn.placette,dcespar1:"
+msgid "Majority species (in the presence of high section)"
+msgstr "Espèce majoritaire (en présence de coupe forte)"
+
+msgctxt "help:ifn.placette,dcespar2:"
+msgid "Secondary tree species (in the presence of high section)"
+msgstr "Espèce majoritaire secondaire (en présence de coupe forte)"
+
+msgctxt "help:ifn.placette,elisi:"
+msgid "Exposure of the edge"
+msgstr "Exposition de la lisière"
+
+msgctxt "help:ifn.placette,entp:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "help:ifn.placette,ess_age_1:"
+msgid ""
+"Species of the sub-dominant population on which the measure is based age"
+msgstr ""
+"Essence du sous-peuplement dominant sur laquelle repose la mesure l’âge"
+
+msgctxt "help:ifn.placette,esspre:"
+msgid "Calculated data"
+msgstr "Donnée calculée"
+
+msgctxt "help:ifn.placette,idp:"
+msgid "Login"
+msgstr "Nom d'utilisateur"
+
+msgctxt "help:ifn.placette,iti:"
+msgid "\"Not applicable\" if the length of skidding is less than 200 meters"
+msgstr "\"sans objet\" si la longueur de débardage est inférieure à 200 mètres"
+
+msgctxt "help:ifn.placette,noeud:"
+msgid ""
+"At each node of the grid square annual inventory is attached January-"
+"February issues (forest) or 1 to 4 points (poplar)."
+msgstr ""
+"A chaque nœud de la grille carré annuelle d’inventaire est rattachée de 1 à "
+"2 points (forêt) ou de 1 à 4 points (peupleraie)"
+
+msgctxt "help:ifn.placette,pentexp:"
+msgid "Indicator of maximum slope skidding"
+msgstr "Indicateur de pente maximale de débardage"
+
+msgctxt "help:ifn.placette,peupnr:"
+msgid "Not countable stand"
+msgstr "Peuplement non recensable"
+
+msgctxt "help:ifn.placette,plisi:"
+msgid "Presence of edge"
+msgstr "Présence de lisière"
+
+msgctxt "help:ifn.placette,portance:"
+msgid "To inquire for slopes skidding below 60%"
+msgstr "À renseigner pour des pentes de débardage inférieures à 60 %"
+
+msgctxt "help:ifn.placette,sfo:"
+msgid "In the presence of ground cover \"closed forest\" or \"grove\""
+msgstr "En présence de couverture de sol \"forêt fermée\" ou \"bosquet\""
+
+msgctxt "help:ifn.placette,tm2:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "help:ifn.placette,tpespar1:"
+msgid "Tree species planted 1 (filled in the presence of a plantation)"
+msgstr "Espèce arborée plantée 1 (renseignée en présence d’une plantation)"
+
+msgctxt "help:ifn.placette,tpespar2:"
+msgid "Tree species planted 2 (filled in the presence of a plantation)"
+msgstr "Espèce arborée plantée 2 (renseignée en présence d’une plantation)"
+
+msgctxt "help:ifn.placette,tplant:"
+msgid ""
+"Type of planting. Fields 'tree species 1' and 'tree species 2' can not be "
+"completed in the presence of a plantation."
+msgstr ""
+"Type de plantation. Les champs 'Espèce arborée 1' et 'Espèce arborée 2' ne "
+"peuvent être renseignés qu'en présence d'une plantation."
+
+msgctxt "help:ifn.placette,uta1:"
+msgid "Using ground 1"
+msgstr "Utilisation du sol 1"
+
+msgctxt "help:ifn.placette,uta2:"
+msgid "Using ground 2"
+msgstr "Utilisation du sol 2"
+
+msgctxt "help:ifn.placette.forest,asperite:"
+msgid "To inquire for slopes skidding below 60%"
+msgstr "À renseigner pour des pentes de débardage inférieures à 60 %"
+
+msgctxt "help:ifn.placette.forest,cac:"
+msgid "Calculated data"
+msgstr "Donnée calculée"
+
+msgctxt "help:ifn.placette.forest,csa:"
+msgid "Ground cover"
+msgstr "Couverture du sol"
+
+msgctxt "help:ifn.placette.forest,dc:"
+msgid ""
+"Fields 'species 1' and 'Species 2' can not be completed in the presence of "
+"strong cut."
+msgstr ""
+"Les champs 'Espèce 1' et 'Espèce 2' ne peuvent être renseignés qu'en "
+"présence de coupe forte."
+
+msgctxt "help:ifn.placette.forest,dcespar1:"
+msgid "Majority species (in the presence of high section)"
+msgstr "Espèce majoritaire (en présence de coupe forte)"
+
+msgctxt "help:ifn.placette.forest,dcespar2:"
+msgid "Secondary tree species (in the presence of high section)"
+msgstr "Espèce majoritaire secondaire (en présence de coupe forte)"
+
+msgctxt "help:ifn.placette.forest,elisi:"
+msgid "Exposure of the edge"
+msgstr "Exposition de la lisière"
+
+msgctxt "help:ifn.placette.forest,entp:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "help:ifn.placette.forest,ess_age_1:"
+msgid ""
+"Species of the sub-dominant population on which the measure is based age"
+msgstr ""
+"Essence du sous-peuplement dominant sur laquelle repose la mesure l’âge"
+
+msgctxt "help:ifn.placette.forest,esspre:"
+msgid "Calculated data"
+msgstr "Donnée calculée"
+
+msgctxt "help:ifn.placette.forest,idp:"
+msgid "Login"
+msgstr "Nom d'utilisateur"
+
+msgctxt "help:ifn.placette.forest,iti:"
+msgid "\"Not applicable\" if the length of skidding is less than 200 meters"
+msgstr "\"sans objet\" si la longueur de débardage est inférieure à 200 mètres"
+
+msgctxt "help:ifn.placette.forest,noeud:"
+msgid ""
+"At each node of the grid square annual inventory is attached January-"
+"February issues (forest) or 1 to 4 points (poplar)."
+msgstr ""
+"A chaque nœud de la grille carré annuelle d’inventaire est rattachée de 1 à "
+"2 points (forêt) ou de 1 à 4 points (peupleraie)"
+
+msgctxt "help:ifn.placette.forest,pentexp:"
+msgid "Indicator of maximum slope skidding"
+msgstr "Indicateur de pente maximale de débardage"
+
+msgctxt "help:ifn.placette.forest,peupnr:"
+msgid "Not countable stand"
+msgstr "Peuplement non recensable"
+
+msgctxt "help:ifn.placette.forest,plisi:"
+msgid "Presence of edge"
+msgstr "Présence de lisière"
+
+msgctxt "help:ifn.placette.forest,portance:"
+msgid "To inquire for slopes skidding below 60%"
+msgstr "À renseigner pour des pentes de débardage inférieures à 60 %"
+
+msgctxt "help:ifn.placette.forest,sfo:"
+msgid "In the presence of ground cover \"closed forest\" or \"grove\""
+msgstr "En présence de couverture de sol \"forêt fermée\" ou \"bosquet\""
+
+msgctxt "help:ifn.placette.forest,tm2:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "help:ifn.placette.forest,tpespar1:"
+msgid "Tree species planted 1 (filled in the presence of a plantation)"
+msgstr "Espèce arborée plantée 1 (renseignée en présence d’une plantation)"
+
+msgctxt "help:ifn.placette.forest,tpespar2:"
+msgid "Tree species planted 2 (filled in the presence of a plantation)"
+msgstr "Espèce arborée plantée 2 (renseignée en présence d’une plantation)"
+
+msgctxt "help:ifn.placette.forest,tplant:"
+msgid ""
+"Type of planting. Fields 'tree species 1' and 'tree species 2' can not be "
+"completed in the presence of a plantation."
+msgstr ""
+"Type de plantation. Les champs 'Espèce arborée 1' et 'Espèce arborée 2' ne "
+"peuvent être renseignés qu'en présence d'une plantation."
+
+msgctxt "help:ifn.placette.forest,uta1:"
+msgid "Using ground 1"
+msgstr "Utilisation du sol 1"
+
+msgctxt "help:ifn.placette.forest,uta2:"
+msgid "Using ground 2"
+msgstr "Utilisation du sol 2"
+
+msgctxt "help:ifn.placette.poplar_plantation,asperite:"
+msgid "To inquire for slopes skidding below 60%"
+msgstr "À renseigner pour des pentes de débardage inférieures à 60 %"
+
+msgctxt "help:ifn.placette.poplar_plantation,cac:"
+msgid "Calculated data"
+msgstr "Donnée calculée"
+
+msgctxt "help:ifn.placette.poplar_plantation,csa:"
+msgid "Ground cover"
+msgstr "Couverture du sol"
+
+msgctxt "help:ifn.placette.poplar_plantation,dc:"
+msgid ""
+"Fields 'species 1' and 'Species 2' can not be completed in the presence of "
+"strong cut."
+msgstr ""
+"Les champs 'Espèce 1' et 'Espèce 2' ne peuvent être renseignés qu'en "
+"présence de coupe forte."
+
+msgctxt "help:ifn.placette.poplar_plantation,dcespar1:"
+msgid "Majority species (in the presence of high section)"
+msgstr "Espèce majoritaire (en présence de coupe forte)"
+
+msgctxt "help:ifn.placette.poplar_plantation,dcespar2:"
+msgid "Secondary tree species (in the presence of high section)"
+msgstr "Espèce majoritaire secondaire (en présence de coupe forte)"
+
+msgctxt "help:ifn.placette.poplar_plantation,elisi:"
+msgid "Exposure of the edge"
+msgstr "Exposition de la lisière"
+
+msgctxt "help:ifn.placette.poplar_plantation,entp:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "help:ifn.placette.poplar_plantation,ess_age_1:"
+msgid ""
+"Species of the sub-dominant population on which the measure is based age"
+msgstr ""
+"Essence du sous-peuplement dominant sur laquelle repose la mesure l’âge"
+
+msgctxt "help:ifn.placette.poplar_plantation,esspre:"
+msgid "Calculated data"
+msgstr "Donnée calculée"
+
+msgctxt "help:ifn.placette.poplar_plantation,idp:"
+msgid "Login"
+msgstr "Nom d'utilisateur"
+
+msgctxt "help:ifn.placette.poplar_plantation,iti:"
+msgid "\"Not applicable\" if the length of skidding is less than 200 meters"
+msgstr "\"sans objet\" si la longueur de débardage est inférieure à 200 mètres"
+
+msgctxt "help:ifn.placette.poplar_plantation,noeud:"
+msgid ""
+"At each node of the grid square annual inventory is attached January-"
+"February issues (forest) or 1 to 4 points (poplar)."
+msgstr ""
+"A chaque nœud de la grille carré annuelle d’inventaire est rattachée de 1 à "
+"2 points (forêt) ou de 1 à 4 points (peupleraie)"
+
+msgctxt "help:ifn.placette.poplar_plantation,pentexp:"
+msgid "Indicator of maximum slope skidding"
+msgstr "Indicateur de pente maximale de débardage"
+
+msgctxt "help:ifn.placette.poplar_plantation,peupnr:"
+msgid "Not countable stand"
+msgstr "Peuplement non recensable"
+
+msgctxt "help:ifn.placette.poplar_plantation,plisi:"
+msgid "Presence of edge"
+msgstr "Présence de lisière"
+
+msgctxt "help:ifn.placette.poplar_plantation,portance:"
+msgid "To inquire for slopes skidding below 60%"
+msgstr "À renseigner pour des pentes de débardage inférieures à 60 %"
+
+msgctxt "help:ifn.placette.poplar_plantation,sfo:"
+msgid "In the presence of ground cover \"closed forest\" or \"grove\""
+msgstr "En présence de couverture de sol \"forêt fermée\" ou \"bosquet\""
+
+msgctxt "help:ifn.placette.poplar_plantation,tm2:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "help:ifn.placette.poplar_plantation,tpespar1:"
+msgid "Tree species planted 1 (filled in the presence of a plantation)"
+msgstr "Espèce arborée plantée 1 (renseignée en présence d’une plantation)"
+
+msgctxt "help:ifn.placette.poplar_plantation,tpespar2:"
+msgid "Tree species planted 2 (filled in the presence of a plantation)"
+msgstr "Espèce arborée plantée 2 (renseignée en présence d’une plantation)"
+
+msgctxt "help:ifn.placette.poplar_plantation,tplant:"
+msgid ""
+"Type of planting. Fields 'tree species 1' and 'tree species 2' can not be "
+"completed in the presence of a plantation."
+msgstr ""
+"Type de plantation. Les champs 'Espèce arborée 1' et 'Espèce arborée 2' ne "
+"peuvent être renseignés qu'en présence d'une plantation."
+
+msgctxt "help:ifn.placette.poplar_plantation,uta1:"
+msgid "Using ground 1"
+msgstr "Utilisation du sol 1"
+
+msgctxt "help:ifn.placette.poplar_plantation,uta2:"
+msgid "Using ground 2"
+msgstr "Utilisation du sol 2"
+
+msgctxt "model:ifn.acci,name:"
+msgid "Accident tree"
+msgstr "Accident de l'arbre"
+
+msgctxt "model:ifn.arbre,name:"
+msgid "Arbre"
+msgstr "Arbre"
+
+msgctxt "model:ifn.asperite,name:"
+msgid "Asperity"
+msgstr "Aspérité"
+
+msgctxt "model:ifn.cac,name:"
+msgid "Age group"
+msgstr "Classe d'âge"
+
+msgctxt "model:ifn.clon,name:"
+msgid "Clone of the tree"
+msgstr "Clone de l'espèce"
+
+msgctxt "model:ifn.csa,name:"
+msgid "Ground cover"
+msgstr "Couverture du sol"
+
+msgctxt "model:ifn.datemort,name:"
+msgid "Estimated date of death of the tree"
+msgstr "Estimation de la date de mort de l'arbre"
+
+msgctxt "model:ifn.dc,name:"
+msgid "Type of cut"
+msgstr "Type de coupe"
+
+msgctxt "model:ifn.decoupe,name:"
+msgid "Cut Type"
+msgstr "Type de coupe"
+
+msgctxt "model:ifn.dist,name:"
+msgid "Skidding distance"
+msgstr "Distance de débardage"
+
+msgctxt "model:ifn.entp,name:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "model:ifn.espar,name:"
+msgid "Tree species"
+msgstr "Espèce d'arbre"
+
+msgctxt "model:ifn.espar_taxon,name:"
+msgid "Taxon species"
+msgstr "Taxon"
+
+msgctxt "model:ifn.forme,name:"
+msgid "Crown form"
+msgstr "Forme du houppier"
+
+msgctxt "model:ifn.gest,name:"
+msgid "Forest management"
+msgstr "Gestion forestière"
+
+msgctxt "model:ifn.incid,name:"
+msgid "Impact"
+msgstr "Incidence"
+
+msgctxt "model:ifn.iti,name:"
+msgid "Directions skid"
+msgstr "Itinéraire de débardage"
+
+msgctxt "model:ifn.lib,name:"
+msgid "Class free rate covered tree"
+msgstr "Taux de couvert libre de l’arbre"
+
+msgctxt "model:ifn.mortb,name:"
+msgid "Mortality of branches in the crown"
+msgstr "Mortalité des branches dans le houppier"
+
+msgctxt "model:ifn.noeud,name:"
+msgid "Node Coordinates"
+msgstr "Coordonnées du nœud"
+
+msgctxt "model:ifn.ori,name:"
+msgid "Behind the tree"
+msgstr "Origine de l'arbre"
+
+msgctxt "model:ifn.pentexp,name:"
+msgid "Indicator of maximum slope skidding"
+msgstr "Indicateur de pente maximale de débardage"
+
+msgctxt "model:ifn.peupnr,name:"
+msgid "Not countable stand"
+msgstr "Peuplement non recensable"
+
+msgctxt "model:ifn.placette,name:"
+msgid "Placette"
+msgstr "Placette"
+
+msgctxt "model:ifn.placette.forest,name:"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "model:ifn.placette.poplar_plantation,name:"
+msgid "Poplar plantation"
+msgstr "Plantation de peuplier"
+
+msgctxt "model:ifn.plisi,name:"
+msgid "Presence of edge"
+msgstr "Présence de lisière"
+
+msgctxt "model:ifn.portance,name:"
+msgid "Bearing"
+msgstr "Portance"
+
+msgctxt "model:ifn.sfcoeur,name:"
+msgid "Heart rot"
+msgstr "Pourriture à cœur"
+
+msgctxt "model:ifn.sfdorge,name:"
+msgid "Dorge and brooms on trees"
+msgstr "Dorge et balais de sorcière sur sapins"
+
+msgctxt "model:ifn.sfgeliv,name:"
+msgid "Presence of winter injury"
+msgstr "Présence de gélivure"
+
+msgctxt "model:ifn.sfgui,name:"
+msgid "Presence of mistletoe"
+msgstr "Présence de gui"
+
+msgctxt "model:ifn.sfo,name:"
+msgid "Forest structure"
+msgstr "Structure forestière"
+
+msgctxt "model:ifn.sfpied,name:"
+msgid "Injury or foot rot"
+msgstr "Blessure ou pourriture de pied"
+
+msgctxt "model:ifn.simplif,name:"
+msgid "Indicator simplified tree"
+msgstr "Indicateur simplifié de l'arbre"
+
+msgctxt "model:ifn.tige,name:"
+msgid "Stem form"
+msgstr "Forme de la tige"
+
+msgctxt "model:ifn.tm2,name:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "model:ifn.tplant,name:"
+msgid "Type of plantation"
+msgstr "Type de plantation"
+
+msgctxt "model:ifn.uta,name:"
+msgid "Using ground 1"
+msgstr "Utilisation du sol 1"
+
+msgctxt "model:ifn.veget,name:"
+msgid "State of vegetation"
+msgstr "Stade de la végétation"
+
+msgctxt "model:ir.action,name:act_ifn_acci_form"
+msgid "Accident tree"
+msgstr "Accident de l'arbre"
+
+msgctxt "model:ir.action,name:act_ifn_arbre_form"
+msgid "Mesured tree"
+msgstr "Mesure de l'arbre"
+
+msgctxt "model:ir.action,name:act_ifn_asperite_form"
+msgid "Asperity"
+msgstr "Aspérité"
+
+msgctxt "model:ir.action,name:act_ifn_cac_form"
+msgid "Age group"
+msgstr "Classe d'âge"
+
+msgctxt "model:ir.action,name:act_ifn_clon_form"
+msgid "Clone"
+msgstr "Clone"
+
+msgctxt "model:ir.action,name:act_ifn_csa_form"
+msgid "Ground cover"
+msgstr "Couverture du sol"
+
+msgctxt "model:ir.action,name:act_ifn_datemort_form"
+msgid "Estimated date of death of the tree"
+msgstr "Estimation de la date de mort de l'arbre"
+
+msgctxt "model:ir.action,name:act_ifn_dc_form"
+msgid "Type of cut"
+msgstr "Type de coupe"
+
+msgctxt "model:ir.action,name:act_ifn_decoupe_form"
+msgid "Cut Type"
+msgstr "Type de coupe"
+
+msgctxt "model:ir.action,name:act_ifn_dist_form"
+msgid "Skidding distance"
+msgstr "Distance de débardage"
+
+msgctxt "model:ir.action,name:act_ifn_entp_form"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "model:ir.action,name:act_ifn_espar_form"
+msgid "Tree species"
+msgstr "Espèce d'arbre"
+
+msgctxt "model:ir.action,name:act_ifn_forme_form"
+msgid "Crown form"
+msgstr "Forme du houppier"
+
+msgctxt "model:ir.action,name:act_ifn_gest_form"
+msgid "Forest management"
+msgstr "Gestion forestière"
+
+msgctxt "model:ir.action,name:act_ifn_incidence_form"
+msgid "Impact"
+msgstr "Incidence"
+
+msgctxt "model:ir.action,name:act_ifn_iti_form"
+msgid "Directions skid"
+msgstr "Itinéraire de débardage"
+
+msgctxt "model:ir.action,name:act_ifn_lib_form"
+msgid "Class free rate covered tree"
+msgstr "Taux de couvert libre de l’arbre"
+
+msgctxt "model:ir.action,name:act_ifn_mortb_form"
+msgid "Mortality of branches in the crown"
+msgstr "Mortalité des branches dans le houppier"
+
+msgctxt "model:ir.action,name:act_ifn_ori_form"
+msgid "Behind the tree"
+msgstr "Origine de l'arbre"
+
+msgctxt "model:ir.action,name:act_ifn_pentexp_form"
+msgid "Indicator of maximum slope skidding"
+msgstr "Indicateur de pente maximale de débardage"
+
+msgctxt "model:ir.action,name:act_ifn_peupnr_form"
+msgid "Not countable stand"
+msgstr "Peuplement non recensable"
+
+msgctxt "model:ir.action,name:act_ifn_placette"
+msgid "Inventory point"
+msgstr "Point d'inventaire"
+
+msgctxt "model:ir.action,name:act_ifn_placette_foret"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "model:ir.action,name:act_ifn_placette_poplar_plantation"
+msgid "Poplar"
+msgstr "Peuplier"
+
+msgctxt "model:ir.action,name:act_ifn_plisi_form"
+msgid "Presence of edge"
+msgstr "Présence de lisière"
+
+msgctxt "model:ir.action,name:act_ifn_portance_form"
+msgid "Bearing"
+msgstr "Portance"
+
+msgctxt "model:ir.action,name:act_ifn_sfcoeur_form"
+msgid "Heart rot"
+msgstr "Pourriture à cœur"
+
+msgctxt "model:ir.action,name:act_ifn_sfdorge_form"
+msgid "Dorge and brooms on trees"
+msgstr "Dorge et balais de sorcière sur sapins"
+
+msgctxt "model:ir.action,name:act_ifn_sfgeliv_form"
+msgid "Presence of winter injury"
+msgstr "Présence de gélivure"
+
+msgctxt "model:ir.action,name:act_ifn_sfgui_form"
+msgid "Presence of mistletoe"
+msgstr "Présence de gui"
+
+msgctxt "model:ir.action,name:act_ifn_sfo_form"
+msgid "Forest structure"
+msgstr "Structure forestière"
+
+msgctxt "model:ir.action,name:act_ifn_sfpied_form"
+msgid "Injury or foot rot"
+msgstr "Blessure ou pourriture de pied"
+
+msgctxt "model:ir.action,name:act_ifn_simplif_form"
+msgid "Indicator simplified tree"
+msgstr "Indicateur simplifié de l'arbre"
+
+msgctxt "model:ir.action,name:act_ifn_tige_form"
+msgid "Stem form"
+msgstr "Forme de la tige"
+
+msgctxt "model:ir.action,name:act_ifn_tm2_form"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "model:ir.action,name:act_ifn_tplant_form"
+msgid "Type of plantation"
+msgstr "Type de plantation"
+
+msgctxt "model:ir.action,name:act_ifn_uta_form"
+msgid "Using ground 1"
+msgstr "Utilisation du sol 1"
+
+msgctxt "model:ir.action,name:act_ifn_veget_form"
+msgid "State of vegetation"
+msgstr "Stade de la végétation"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn"
+msgid "IFN"
+msgstr "IFN"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_acci_form"
+msgid "Accident tree"
+msgstr "Accident de l'arbre"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_arbre_form"
+msgid "Mesured tree"
+msgstr "Mesure de l'arbre"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_asperite_form"
+msgid "Asperity"
+msgstr "Aspérité"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_cac_form"
+msgid "Age group"
+msgstr "Classe d'âge"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_clon_form"
+msgid "Clone"
+msgstr "Clone"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_codes"
+msgid "Codes"
+msgstr "Codes"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_csa_form"
+msgid "Ground cover"
+msgstr "Couverture du sol"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_datemort_form"
+msgid "Estimated date of death of the tree"
+msgstr "Estimation de la date de mort de l'arbre"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_dc_form"
+msgid "Type of cut"
+msgstr "Type de coupe"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_decoupe_form"
+msgid "Cut Type"
+msgstr "Type de coupe"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_dist_form"
+msgid "Skidding distance"
+msgstr "Distance de débardage"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_entp_form"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_espar_form"
+msgid "Tree species"
+msgstr "Espèce d'arbre"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_forme_form"
+msgid "Crown form"
+msgstr "Forme du houppier"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_gest_form"
+msgid "Forest management"
+msgstr "Gestion forestière"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_incidence_form"
+msgid "Impact"
+msgstr "Incidence"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_iti_form"
+msgid "Directions skid"
+msgstr "Itinéraire de débardage"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_lib_form"
+msgid "Class free rate covered tree"
+msgstr "Taux de couvert libre de l’arbre"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_mortb_form"
+msgid "Mortality of branches in the crown"
+msgstr "Mortalité des branches dans le houppier"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_ori_form"
+msgid "Behind the tree"
+msgstr "Origine de l'arbre"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_pentexp_form"
+msgid "Indicator of maximum slope skidding"
+msgstr "Indicateur de pente maximale de débardage"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_peupnr_form"
+msgid "Not countable stand"
+msgstr "Peuplement non recensable"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_placette_foret_form"
+msgid "Forest"
+msgstr "Forêt"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_placette_form"
+msgid "Inventory point"
+msgstr "Point d'inventaire"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_placette_poplar_plantation_form"
+msgid "Poplar"
+msgstr "Peuplier"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_plisi_form"
+msgid "Presence of edge"
+msgstr "Présence de lisière"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_portance_form"
+msgid "Bearing"
+msgstr "Portance"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_sfcoeur_form"
+msgid "Heart rot"
+msgstr "Pourriture à cœur"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_sfdorge_form"
+msgid "Dorge and brooms on trees"
+msgstr "Dorge et balais de sorcière sur sapins"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_sfgeliv_form"
+msgid "Presence of winter injury"
+msgstr "Présence de gélivure"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_sfgui_form"
+msgid "Presence of mistletoe"
+msgstr "Présence de gui"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_sfo_form"
+msgid "Forest structure"
+msgstr "Structure forestière"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_sfpied_form"
+msgid "Injury or foot rot"
+msgstr "Blessure ou pourriture de pied"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_simplif_form"
+msgid "Indicator simplified tree"
+msgstr "Indicateur simplifié de l'arbre"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_tige_form"
+msgid "Stem form"
+msgstr "Forme de la tige"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_tm2_form"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_tplant_form"
+msgid "Type of plantation"
+msgstr "Type de plantation"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_uta_form"
+msgid "Using ground 1"
+msgstr "Utilisation du sol 1"
+
+msgctxt "model:ir.ui.menu,name:menu_ifn_veget_form"
+msgid "State of vegetation"
+msgstr "Stade de la végétation"
+
+msgctxt "view:ifn.acci:"
+msgid "Accident tree"
+msgstr "Accident de l'arbre"
+
+msgctxt "view:ifn.arbre:"
+msgid "Tree"
+msgstr "Arbre"
+
+msgctxt "view:ifn.asperite:"
+msgid "Asperity"
+msgstr "Aspérité"
+
+msgctxt "view:ifn.cac:"
+msgid "Age group"
+msgstr "Classe d'âge"
+
+msgctxt "view:ifn.clon:"
+msgid "Clone"
+msgstr "Clone"
+
+msgctxt "view:ifn.csa:"
+msgid "Ground cover"
+msgstr "Couverture du sol"
+
+msgctxt "view:ifn.datemort:"
+msgid "Estimated date of death of the tree"
+msgstr "Estimation de la date de mort de l'arbre"
+
+msgctxt "view:ifn.dc:"
+msgid "Type of cut"
+msgstr "Type de coupe"
+
+msgctxt "view:ifn.decoupe:"
+msgid "Cut Type"
+msgstr "Type de coupe"
+
+msgctxt "view:ifn.dist:"
+msgid "Skidding distance"
+msgstr "Distance de débardage"
+
+msgctxt "view:ifn.entp:"
+msgid "Maintenance poplar"
+msgstr "Entretien peupleraie"
+
+msgctxt "view:ifn.espar:"
+msgid "Tree species"
+msgstr "Espèce d'arbre"
+
+msgctxt "view:ifn.forme:"
+msgid "Crown form"
+msgstr "Forme du houppier"
+
+msgctxt "view:ifn.gest:"
+msgid "Forest management"
+msgstr "Gestion forestière"
+
+msgctxt "view:ifn.incid:"
+msgid "Impact"
+msgstr "Incidence"
+
+msgctxt "view:ifn.iti:"
+msgid "Directions skid"
+msgstr "Itinéraire de débardage"
+
+msgctxt "view:ifn.lib:"
+msgid "Class free rate covered tree"
+msgstr "Taux de couvert libre de l’arbre"
+
+msgctxt "view:ifn.mortb:"
+msgid "Mortality of branches in the crown"
+msgstr "Mortalité des branches dans le houppier"
+
+msgctxt "view:ifn.ori:"
+msgid "Behind the tree"
+msgstr "Origine de l'arbre"
+
+msgctxt "view:ifn.pentexp:"
+msgid "Indicator of maximum slope skidding"
+msgstr "Indicateur de pente maximale de débardage"
+
+msgctxt "view:ifn.peupnr:"
+msgid "Not countable stand"
+msgstr "Peuplement non recensable"
+
+msgctxt "view:ifn.placette.forest:"
+msgid "Général"
+msgstr "Général"
+
+msgctxt "view:ifn.placette.forest:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:ifn.placette.forest:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "view:ifn.placette.poplar_plantation:"
+msgid "Général"
+msgstr "Général"
+
+msgctxt "view:ifn.placette.poplar_plantation:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:ifn.placette.poplar_plantation:"
+msgid "Plot popular"
+msgstr "Point peuplier"
+
+msgctxt "view:ifn.placette:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "view:ifn.plisi:"
+msgid "Presence of edge"
+msgstr "Présence de lisière"
+
+msgctxt "view:ifn.portance:"
+msgid "Bearing"
+msgstr "Portance"
+
+msgctxt "view:ifn.sfcoeur:"
+msgid "Heart rot"
+msgstr "Pourriture à cœur"
+
+msgctxt "view:ifn.sfdorge:"
+msgid "Dorge and brooms on trees"
+msgstr "Dorge et balais de sorcière sur sapins"
+
+msgctxt "view:ifn.sfgeliv:"
+msgid "Presence of winter injury"
+msgstr "Présence de gélivure"
+
+msgctxt "view:ifn.sfgui:"
+msgid "Presence of mistletoe"
+msgstr "Présence de gui"
+
+msgctxt "view:ifn.sfo:"
+msgid "Forest structure"
+msgstr "Structure forestière"
+
+msgctxt "view:ifn.sfpied:"
+msgid "Injury or foot rot"
+msgstr "Blessure ou pourriture de pied"
+
+msgctxt "view:ifn.simplif:"
+msgid "Indicator simplified tree"
+msgstr "Indicateur simplifié d'arbre"
+
+msgctxt "view:ifn.tige:"
+msgid "Stem form"
+msgstr "Forme de la tige"
+
+msgctxt "view:ifn.tm2:"
+msgid "Size solid"
+msgstr "Taille de massif"
+
+msgctxt "view:ifn.tplant:"
+msgid "Type of plantation"
+msgstr "Type de plantation"
+
+msgctxt "view:ifn.uta:"
+msgid "Using ground 1"
+msgstr "Utilisation du sol 1"
+
+msgctxt "view:ifn.veget:"
+msgid "State of vegetation"
+msgstr "Stade de la végétation"

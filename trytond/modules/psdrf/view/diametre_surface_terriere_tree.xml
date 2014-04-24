@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<tree string="Basal area by diameter class">
+    <field name="classe" />
+    <field name="g" />
+</tree>

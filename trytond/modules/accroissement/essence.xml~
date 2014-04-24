@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="essence_view_tree">
+            <field name="model">essence.essence</field>
+            <field name="type">tree</field>
+            <field name="name">essence_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="essence_view_form">
+            <field name="model">essence.essence</field>
+            <field name="type">form</field>
+            <field name="name">essence_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_essence_form">
+            <field name="name">Species</field>
+            <field name="res_model">essence.essence</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_essence_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="essence_view_tree"/>
+            <field name="act_window" ref="act_essence_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_essence_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="essence_view_form"/>
+            <field name="act_window" ref="act_essence_form"/>
+        </record>
+
+        <menuitem parent="ir.menu_administration" sequence="90" id="menu_essence_form" icon="tryton-list" action="act_essence_form"/>
+
+    </data>
+</tryton>

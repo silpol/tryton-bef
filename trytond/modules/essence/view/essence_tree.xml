@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Species">
+    <field name="name" />
+    <field name="ess_regt" />
+    <field name="ess_type" />
+    <field name="ess_latin" />
+    <field name="red" />
+    <field name="green" />
+    <field name="blue" />
+    <field name="infradensite" />
+    <field name="coefhoupp1" />
+    <field name="coefstere" />
+    <field name="coefhoupp2" />
+</tree>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="Station">
+    <field name="ug" />
+    <field name="code" />
+    <field name="active" />
+    <field name="proprietaire" />
+    <field name="domaine" />
+    <field name="gestionnaire" />                    
+    <field name="distance" />                  
+    <field name="commune" /> 
+    <field name="emplacement" />                                                        
+</tree>

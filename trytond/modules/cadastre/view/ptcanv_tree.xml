@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Point de canevas">
+    <field name="idu" />				    
+    <field name="ori" />
+    <field name="can" />
+    <field name="ppln" />
+    <field name="palt" />
+    <field name="map" />
+    <field name="sym" />
+</tree>

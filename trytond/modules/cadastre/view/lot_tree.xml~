@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree string="Lot">
+    <field name="codlot" />
+    <field name="suf" />
+    <field name="codparc" />
+    <field name="ccosub" />
+    <field name="rnexn" />
+    <field name="vecexn" />
+    <field name="ccolloc" />
+    <field name="pexn" />
+    <field name="gnexts" />
+    <field name="jandeb" />
+    <field name="jfinex" />
+    <field name="rcexnba" />
+    <field name="cenr" />
+</tree>

@@ -1,0 +1,136 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:depenses.depenses,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:depenses.depenses,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:depenses.depenses,dep_annee:"
+msgid "Year"
+msgstr "Année"
+
+msgctxt "field:depenses.depenses,dep_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:depenses.depenses,dep_mois:"
+msgid "Month"
+msgstr "Mois"
+
+msgctxt "field:depenses.depenses,dep_nature:"
+msgid "Nature"
+msgstr "Nature"
+
+msgctxt "field:depenses.depenses,dep_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:depenses.depenses,dep_plancomptable:"
+msgid "Account"
+msgstr "Plan comptable"
+
+msgctxt "field:depenses.depenses,dep_pu:"
+msgid "Unit price"
+msgstr "Prix unitaire"
+
+msgctxt "field:depenses.depenses,dep_quant:"
+msgid "Quantity"
+msgstr "Quantité"
+
+msgctxt "field:depenses.depenses,dep_total:"
+msgid "Total"
+msgstr "Total"
+
+msgctxt "field:depenses.depenses,dep_unit:"
+msgid "Unit"
+msgstr "Unité"
+
+msgctxt "field:depenses.depenses,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:depenses.depenses,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:depenses.depenses,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:depenses.depenses,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:depenses.depenses,dep_annee:"
+msgid "Year of outgoings"
+msgstr "Année de la dépense"
+
+msgctxt "help:depenses.depenses,dep_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:depenses.depenses,dep_mois:"
+msgid "Month of outgoings"
+msgstr "Mois de la dépense"
+
+msgctxt "help:depenses.depenses,dep_nature:"
+msgid "Nature of outgoings"
+msgstr "Nature de la dépense"
+
+msgctxt "help:depenses.depenses,dep_observation:"
+msgid "Observation of outgoings"
+msgstr "Observation concernant la dépense"
+
+msgctxt "help:depenses.depenses,dep_plancomptable:"
+msgid "Description of expenditure according to the accounting"
+msgstr "Description de la dépense selon plan comptable"
+
+msgctxt "help:depenses.depenses,dep_pu:"
+msgid "Unit price of outgoings"
+msgstr "Prix unitaire de la dépense"
+
+msgctxt "help:depenses.depenses,dep_quant:"
+msgid "Quantity of outgoings"
+msgstr "Quantité de la dépense"
+
+msgctxt "help:depenses.depenses,dep_total:"
+msgid "Total price"
+msgstr "Prix total"
+
+msgctxt "help:depenses.depenses,dep_unit:"
+msgid "Units of the amount spent"
+msgstr "Unité de la dépense"
+
+msgctxt "model:depenses.depenses,name:"
+msgid "Outgoings"
+msgstr "Dépenses"
+
+msgctxt "model:ir.action,name:act_depenses_form"
+msgid "Dépenses"
+msgstr "Dépenses"
+
+msgctxt "model:ir.ui.menu,name:menu_depenses_form"
+msgid "Dépenses"
+msgstr "Dépenses"
+
+msgctxt "view:depenses.depenses:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "view:depenses.depenses:"
+msgid "Outgoings"
+msgstr "Dépenses"

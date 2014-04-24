@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form string="convention">
+    <notebook>
+        <page string="General" id="general" col="4">
+            <label name="mae"/>            
+            <field name="mae"/>
+            <label name="active"/>            
+            <field name="active"/>
+            <label name="ilot"/>            
+            <field name="ilot"/>
+            <label name="date"/>            
+            <field name="date"/>
+            <label name="owner"/>            
+            <field name="owner"/>                                     
+            <label name="typemae"/>            
+            <field name="typemae"/>
+            <label name="nivexpert"/>            
+            <field name="nivexpert"/>
+            <label name="nivfinal"/>            
+            <field name="nivfinal"/>
+            <field name="parcelle" colspan="4"/>                      
+            <label name="observation"/>            
+            <field name="observation" colspan="4"/>
+        </page>
+                
+        <page string="Photo" id="photo">
+            <field name="photo" widget="image" img_width="800" img_height="600"/>                                                                
+        </page> 
+    </notebook>                   
+</form>

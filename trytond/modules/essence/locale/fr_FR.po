@@ -1,0 +1,192 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:essence.essence,blue:"
+msgid "Blue"
+msgstr "Bleu"
+
+msgctxt "field:essence.essence,coefhoupp1:"
+msgid "Coeff. Crown1"
+msgstr "Coeff. Houpp1"
+
+msgctxt "field:essence.essence,coefhoupp2:"
+msgid "Coeff. Crown2"
+msgstr "Coeff. Houpp2"
+
+msgctxt "field:essence.essence,coefstere:"
+msgid "Coeff. Stere"
+msgstr "Coeff. Stère"
+
+msgctxt "field:essence.essence,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:essence.essence,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:essence.essence,ess_latin:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:essence.essence,ess_regt:"
+msgid "Pool"
+msgstr "Regroupement"
+
+msgctxt "field:essence.essence,ess_type:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:essence.essence,green:"
+msgid "Green"
+msgstr "Vert"
+
+msgctxt "field:essence.essence,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:essence.essence,infradensite:"
+msgid "Infra density"
+msgstr "Infra densité"
+
+msgctxt "field:essence.essence,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:essence.essence,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:essence.essence,red:"
+msgid "Red"
+msgstr "Rouge"
+
+msgctxt "field:essence.essence,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:essence.essence,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,taxon:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:essence.essence-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:essence.essence,blue:"
+msgid "RGB - Integer for blue"
+msgstr "RVB - Entier pour le bleu"
+
+msgctxt "help:essence.essence,coefhoupp1:"
+msgid "Coefficient of conversion of crown1"
+msgstr "Coefficient de conversion pour le houppier1"
+
+msgctxt "help:essence.essence,coefhoupp2:"
+msgid "Coefficient of conversion of crown2"
+msgstr "Coefficient de conversion pour le houppier2"
+
+msgctxt "help:essence.essence,coefstere:"
+msgid "Conversion factor for the stere"
+msgstr "Facteur de conversion des stères"
+
+msgctxt "help:essence.essence,ess_latin:"
+msgid "Reference taxon"
+msgstr "Taxon de référence"
+
+msgctxt "help:essence.essence,ess_regt:"
+msgid "Name used in the pool"
+msgstr "Nom utilisé pour le regroupement"
+
+msgctxt "help:essence.essence,ess_type:"
+msgid "Species type"
+msgstr "Type d'essence"
+
+msgctxt "help:essence.essence,green:"
+msgid "RGB - Integer for green"
+msgstr "RVB - Entier pour le vert"
+
+msgctxt "help:essence.essence,infradensite:"
+msgid "Infra density"
+msgstr "Infra densité"
+
+msgctxt "help:essence.essence,name:"
+msgid "Species name"
+msgstr "Nom de l'essence"
+
+msgctxt "help:essence.essence,red:"
+msgid "RGB - Integer for red"
+msgstr "RVB - Entier pour le rouge"
+
+msgctxt "model:essence.essence,name:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "model:essence.essence-taxinomie.taxinomie,name:"
+msgid "Species - Taxon"
+msgstr "Essence - Taxon"
+
+msgctxt "model:ir.action,name:act_essence_form"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "model:ir.ui.menu,name:menu_essence_form"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "selection:essence.essence,ess_type:"
+msgid "Feuillus"
+msgstr "Feuillus"
+
+msgctxt "selection:essence.essence,ess_type:"
+msgid "Résineux"
+msgstr "Feuillus"
+
+msgctxt "view:essence.essence:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:essence.essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "view:essence.essence:"
+msgid "Taxon"
+msgstr "Taxon"

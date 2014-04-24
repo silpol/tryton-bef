@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<form string="Tree evolution" col="2">
+    <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="cycle"/>
+            <field name="cycle"/>
+            <label name="tree"/>
+            <field name="tree"/>
+            <label name="qualite"/>
+            <field name="qualite"/>
+            <label name="arb_diam1"/>
+            <field name="arb_diam1"/>
+            <label name="arb_diam2"/>
+            <field name="arb_diam2"/>
+            <label name="arb_haut_tot"/>
+            <field name="arb_haut_tot"/>
+            <label name="arb_haut_large"/>
+            <field name="arb_haut_large"/>
+            <label name="arb_rayon1"/>
+            <field name="arb_rayon1"/>
+            <label name="arb_diam_houp1"/>
+            <field name="arb_diam_houp1"/>
+            <label name="arb_rayon2"/>
+            <field name="arb_rayon2"/>
+            <label name="arb_diam_houp2"/>
+            <field name="arb_diam_houp2"/>
+            <label name="arb_type"/>
+            <field name="arb_type"/>
+            <label name="arb_stade"/>
+            <field name="arb_stade"/>
+            <label name="arb_coupe"/>
+            <field name="arb_coupe"/>
+            <notebook colspan="6">
+                <page string="Observations" id="observations">
+                    <field name="arb_observation"/>
+                </page>
+                <page string="Code écologique" id="ecologie">
+                    <field name="ecologie" />
+                </page>
+            </notebook>
+        </page>
+    </notebook>
+</form>

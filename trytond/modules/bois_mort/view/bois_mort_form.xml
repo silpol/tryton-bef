@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<form string="Deadwood">
+    <label name="bom_dispositif"/>
+	<field name="bom_dispositif"/>
+    <label name="bom_essence"/>
+	<field name="bom_essence"/>
+	<label name="bom_cycle"/>
+	<field name="bom_cycle"/>
+	<label name="bom_placette"/>
+	<field name="bom_placette"/>
+	<label name="bom_diam_initial"/>
+	<field name="bom_diam_initial"/>
+	<label name="bom_diam_final"/>
+	<field name="bom_diam_final"/>
+	<label name="bom_diam_median"/>
+	<field name="bom_diam_median"/>
+	<label name="bom_longueur"/>
+	<field name="bom_longueur"/>
+	<label name="bom_contact"/>
+	<field name="bom_contact"/>
+	<label name="bom_chablis"/>
+	<field name="bom_chablis"/>
+	<label name="bom_stade"/>
+	<field name="bom_stade"/>
+    <newline/>
+	<label name="bom_comment"/>
+	<field name="bom_comment" colspan="3"/>			
+</form>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Products">
+    <field name="template"/>
+    <field name="code"/>
+    <field name="list_price_uom"/>
+    <field name="cost_price_uom"/>
+    <field name="default_uom"/>
+    <field name="active"/>
+</tree>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Regeneration price">
+    <field name="pre_essence" />
+	<field name="pre_region" />
+	<field name="pre_facilite" />
+	<field name="pre_classe1" />
+	<field name="pre_classe2" />
+	<field name="pre_classe3" />
+</tree>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<graph string="Note déficience sanitaire" type="vbar">
+    <x>
+        <field name="equipement" />
+    </x>
+    <y>
+        <field name="occ" key="1" domain="Less(Eval('note',0), 5.01)" color="#ccff00" string="Note [0; 5]"/>
+        <field name="occ" key="2" domain="And(Greater(Eval('note',0), 5.01), Less(Eval('note',0), 10.01))" color="#ddaa00" string="Note [5; 10]"/>
+        <field name="occ" key="3" domain="And(Greater(Eval('note',0), 10.01), Less(Eval('note',0), 15.01))" color="#ee5500" string="Note [10; 15]"/>
+        <field name="occ" key="4" domain="Greater(Eval('note',0), 15.01)" color="#ff0000" string="Note [15; 20]"/>                            
+    </y>
+</graph>

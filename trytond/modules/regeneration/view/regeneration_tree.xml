@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<tree string="Regeneration">
+    <field name="reg_dispositif" />
+    <field name="reg_essence" />
+	<field name="reg_cycle" />
+	<field name="reg_placette" />
+	<field name="reg_sous_placette" />
+	<field name="reg_classe1" />
+	<field name="reg_classe2" />
+	<field name="reg_classe3" />
+	<field name="reg_recouvrement" />
+	<field name="reg_souille" />
+	<field name="reg_abroutissement" />
+	<field name="reg_comment" />    
+</tree>

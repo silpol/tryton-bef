@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="Partie principale professionnelle" col="6">
+    <label name="codlot" />
+    <field name="codlot" />
+    <label name="pev" />
+    <field name="pev"/>
+    <label name="invar" />
+    <field name="invar" />
+    <label name="dnupev" />
+    <field name="dnupev" />
+    <label name="dnudes" />
+    <field name="dnudes" />
+    <label name="vsurzt" />
+    <field name="vsurzt" />
+    <label name="cenr" />
+    <field name="cenr" />
+</form>

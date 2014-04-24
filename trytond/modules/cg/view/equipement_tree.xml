@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Équipement">
+    <field name="code" />
+    <field name="name" />
+    <field name="coder" />
+    <field name="ug" />
+</tree>

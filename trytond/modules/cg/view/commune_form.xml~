@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<data>                
+    <xpath
+        expr="/form/notebook/page[@id=&quot;population&quot;]"
+            position="before" >
+            <page string="Mandat" id="mandat" col="6">
+                <label name="party"/>
+                <field name="party"/>
+                <label name="lb_court"/>
+                <field name="lb_court"/>
+                <label name="datedeb"/>
+                <field name="datedeb"/>
+                <label name="datefin"/>
+                <field name="datefin"/>
+            </page>             
+     </xpath>                   
+</data>

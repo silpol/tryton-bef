@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tree string="Station">
+    <field name="sta_dispositif" />
+	<field name="sta_num_ifn" />
+	<field name="sta_nom_regifn" />
+	<field name="sta_nom_desc" />
+	<field name="sta_date_desc" />
+	<field name="sta_catalogue" />
+	<field name="sta_date_catalogue" />
+	<field name="sta_type_station" />
+	<field name="sta_cartegeol" />
+	<field name="sta_ech" />
+	<field name="sta_strate_geol" />
+	<field name="sta_roche" />
+	<field name="sta_cartepedo" />
+	<field name="sta_pedo" />
+	<field name="sta_groupepedo" />
+	<field name="sta_region" />
+	<field name="sta_obs" />
+</tree>

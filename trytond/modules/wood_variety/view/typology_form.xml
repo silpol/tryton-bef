@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="typology" col="2">
+    <label name="parent"/>
+    <field name="parent"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="active"/>
+    <field name="active"/>
+    <label name="diameter_classification"/>
+    <field name="diameter_classification"/>
+    <label name="description"/>
+    <field name="description"/>
+</form>

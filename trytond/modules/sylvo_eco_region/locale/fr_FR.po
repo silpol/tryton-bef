@@ -1,0 +1,143 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:ser.sylvoecoregion,code:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:ser.sylvoecoregion,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ser.sylvoecoregion,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ser.sylvoecoregion,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:ser.sylvoecoregion,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:ser.sylvoecoregion,name:"
+msgid "Name"
+msgstr "Nom de la sylvoécorégion"
+
+msgctxt "field:ser.sylvoecoregion,rec_name:"
+msgid "Name"
+msgstr ""
+
+msgctxt "field:ser.sylvoecoregion,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ser.sylvoecoregion,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,code:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,name:"
+msgid "Name"
+msgstr "Nom de la sylvoécorégion alluvions récentes"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,rec_name:"
+msgid "Name"
+msgstr ""
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ser.sylvoecoregion_new_alluvium,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:ser.sylvoecoregion,code:"
+msgid "SER code"
+msgstr "Identifiant de la sylvoécorégion"
+
+msgctxt "help:ser.sylvoecoregion,name:"
+msgid "Name"
+msgstr "Nom de la sylvoécorégion"
+
+msgctxt "help:ser.sylvoecoregion_new_alluvium,code:"
+msgid "SER code"
+msgstr "Identifiant de la sylvoécorégion alluvions récentes (Code SER)"
+
+msgctxt "help:ser.sylvoecoregion_new_alluvium,name:"
+msgid "Name"
+msgstr "Nom de la sylvoécorégion alluvions récentes"
+
+msgctxt "model:ir.action,name:act_ser_sylvoecoregion_form"
+msgid "Sylvo-Éco-Régions"
+msgstr "Sylvo-Éco-Régions"
+
+msgctxt "model:ir.action,name:act_ser_sylvoecoregion_new_alluvium_form"
+msgid "Sylvo-Éco-Régions new alluvium"
+msgstr "Sylvo-Éco-Régions alluvions récentes"
+
+msgctxt "model:ir.ui.menu,name:menu_ser"
+msgid "Sylvo-éco-régions"
+msgstr "Sylvo-Éco-Régions"
+
+msgctxt "model:ir.ui.menu,name:menu_ser_sylvoecoregion_form"
+msgid "Sylvo-Éco-Régions"
+msgstr "Sylvo-Éco-Régions"
+
+msgctxt "model:ir.ui.menu,name:menu_ser_sylvoecoregion_new_alluvium_form"
+msgid "Sylvo-Éco-Régions new alluvium"
+msgstr "Sylvo-Éco-Régions alluvions récentes"
+
+msgctxt "model:ser.sylvoecoregion,name:"
+msgid "Sylvo-Éco-Région"
+msgstr "Sylvo-Éco-Région"
+
+msgctxt "model:ser.sylvoecoregion_new_alluvium,name:"
+msgid "Sylvo-Éco-Région new alluvium"
+msgstr "Sylvo-Éco-Région alluvions récentes"
+
+msgctxt "view:ser.sylvoecoregion:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:ser.sylvoecoregion:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:ser.sylvoecoregion:"
+msgid "sylvoecoregion"
+msgstr ""
+
+msgctxt "view:ser.sylvoecoregion_new_alluvium:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:ser.sylvoecoregion_new_alluvium:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:ser.sylvoecoregion_new_alluvium:"
+msgid "sylvoecoregion_new_alluvium"
+msgstr ""

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Type of plantation">
+    <field name="code" />
+    <field name="lab_court" />
+    <field name="lab_long" />
+</tree>

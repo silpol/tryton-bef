@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form col="2" string="Variety">
+    <label name="forest"/>
+    <field name="forest"/>
+    <label name="stand"/>
+    <field name="stand" widget="selection"/>
+    <label name="domspecies1"/>
+    <field name="domspecies1"/>
+    <label name="domspecies2"/>
+    <field name="domspecies2"/> 
+    <field name="image" colspan="2" widget="image" img_width="640" img_height="480"/>
+    <button string="Edit" name="variety_edit" colspan="2" icon="tryton-executable" />
+</form>

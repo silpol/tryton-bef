@@ -1,0 +1,645 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:urba.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:urba.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:urba.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:urba.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:urba.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:urba.code,name:"
+msgid "Short name of code"
+msgstr "Libellé court du code"
+
+msgctxt "field:urba.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:urba.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:urba.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:urba.documenturba,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:urba.documenturba,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:urba.documenturba,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:urba.documenturba,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:urba.documenturba,dateApprobation:"
+msgid "Approbation"
+msgstr "Approbation"
+
+msgctxt "field:urba.documenturba,dateFinValidite:"
+msgid "Fin validité"
+msgstr "Fin validité"
+
+msgctxt "field:urba.documenturba,dateReferentielSaisie:"
+msgid "Date référentiel"
+msgstr "Date référentiel"
+
+msgctxt "field:urba.documenturba,estIntercommunal:"
+msgid "Intercommunal"
+msgstr "Intercommunal"
+
+msgctxt "field:urba.documenturba,etat:"
+msgid "État"
+msgstr "État"
+
+msgctxt "field:urba.documenturba,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:urba.documenturba,idDocumentUrba:"
+msgid "idDocumentUrba"
+msgstr "idDocumentUrba"
+
+msgctxt "field:urba.documenturba,information:"
+msgid "Information"
+msgstr "Information"
+
+msgctxt "field:urba.documenturba,nomPlan:"
+msgid "Plan"
+msgstr "Plan"
+
+msgctxt "field:urba.documenturba,nomReglement:"
+msgid "Règlement"
+msgstr "Règlement"
+
+msgctxt "field:urba.documenturba,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:urba.documenturba,referentielSaisie:"
+msgid "Référentiel"
+msgstr "Référentiel"
+
+msgctxt "field:urba.documenturba,secteurCC:"
+msgid "SecteurCC"
+msgstr "SecteurCC"
+
+msgctxt "field:urba.documenturba,serviceInternet:"
+msgid "Internet"
+msgstr "Internet"
+
+msgctxt "field:urba.documenturba,siren:"
+msgid "SIREN"
+msgstr "SIREN"
+
+msgctxt "field:urba.documenturba,typeDocument:"
+msgid "typeDocument"
+msgstr "typeDocument"
+
+msgctxt "field:urba.documenturba,urlPlan:"
+msgid "Plan url"
+msgstr "Plan URL"
+
+msgctxt "field:urba.documenturba,urlReglement:"
+msgid "Règlement url"
+msgstr "Règlement URL"
+
+msgctxt "field:urba.documenturba,version:"
+msgid "Version"
+msgstr "Version"
+
+msgctxt "field:urba.documenturba,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:urba.documenturba,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:urba.epci,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:urba.epci,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:urba.epci,epci:"
+msgid "EPCI"
+msgstr "EPCI"
+
+msgctxt "field:urba.epci,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:urba.epci,libepci:"
+msgid "Label of code EPCI"
+msgstr "Libellé du code EPCI"
+
+msgctxt "field:urba.epci,nature:"
+msgid "Nature"
+msgstr "Nature"
+
+msgctxt "field:urba.epci,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:urba.epci,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:urba.epci,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:urba.information,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:urba.information,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:urba.information,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:urba.information,etiquette:"
+msgid "Étiquette"
+msgstr "Étiquette"
+
+msgctxt "field:urba.information,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:urba.information,idDocumentUrba:"
+msgid "idDocumentUrba"
+msgstr "idDocumentUrba"
+
+msgctxt "field:urba.information,libelle:"
+msgid "Libellé"
+msgstr "Libellé"
+
+msgctxt "field:urba.information,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:urba.information,referenceTexte:"
+msgid "referenceTexte"
+msgstr "referenceTexte"
+
+msgctxt "field:urba.information,typeI:"
+msgid "typeI"
+msgstr "typeI"
+
+msgctxt "field:urba.information,typeP:"
+msgid "typeP"
+msgstr "typeP"
+
+msgctxt "field:urba.information,urlTexte:"
+msgid "urlTexte"
+msgstr "urlTexte"
+
+msgctxt "field:urba.information,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:urba.information,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:urba.secteurcc,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:urba.secteurcc,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:urba.secteurcc,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:urba.secteurcc,dateValidation:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:urba.secteurcc,fermeReconstruction:"
+msgid "Reconstruction"
+msgstr "Reconstruction"
+
+msgctxt "field:urba.secteurcc,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:urba.secteurcc,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:urba.secteurcc,idDocumentUrba:"
+msgid "idDocumentUrba"
+msgstr "idDocumentUrba"
+
+msgctxt "field:urba.secteurcc,libelle:"
+msgid "Libelle"
+msgstr "Libellé"
+
+msgctxt "field:urba.secteurcc,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:urba.secteurcc,texteReglement:"
+msgid "Règlement"
+msgstr "Règlement"
+
+msgctxt "field:urba.secteurcc,typeSecteur:"
+msgid "Type secteur"
+msgstr "Type secteur"
+
+msgctxt "field:urba.secteurcc,urlReglement:"
+msgid "Règlement url"
+msgstr "Règlement URL"
+
+msgctxt "field:urba.secteurcc,vocationDominante:"
+msgid "Vocation"
+msgstr "Vocation"
+
+msgctxt "field:urba.secteurcc,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:urba.secteurcc,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:urba.documenturba,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "help:urba.documenturba,dateApprobation:"
+msgid "Date d approbation"
+msgstr ""
+"Date d'approbation de la dernière procédure administrative ayant fait "
+"évoluer le document d’urbanisme. Cette date correspond à la date approbation "
+"du document intervenue suite à une procédure de révision, d'élaboration, de "
+"modification, de mise à jour ou de mise en compatibilité (et même si elle ne "
+"concerne que la partie écrite du règlement)."
+
+msgctxt "help:urba.documenturba,dateFinValidite:"
+msgid "Date de fin de validité"
+msgstr ""
+"Date de fin de validité du document. Si le document est remplacé, cette date "
+"correspond à la date d'approbation du document qui le remplace. Si le "
+"document est annulé, cette date correspond à la date d'annulation du "
+"document."
+
+msgctxt "help:urba.documenturba,dateReferentielSaisie:"
+msgid "Date du référentiel saisie"
+msgstr "Date d'actualité ou de mise à jour du référentiel cadastral utilisé"
+
+msgctxt "help:urba.documenturba,estIntercommunal:"
+msgid "Est intercommunal"
+msgstr ""
+"Indique si le document d'urbanisme a été élaboré par un EPCI ou un "
+"groupement de communes et s'applique sur plusieurs communes"
+
+msgctxt "help:urba.documenturba,etat:"
+msgid "État"
+msgstr ""
+"État juridique du document d'urbanisme compte-tenu de l'avancement de sa "
+"procédure d'élaboration"
+
+msgctxt "help:urba.documenturba,idDocumentUrba:"
+msgid "idDocumentUrba"
+msgstr "Identifiant du document d'urbanisme"
+
+msgctxt "help:urba.documenturba,nomPlan:"
+msgid "Plan"
+msgstr ""
+"Nom ou référence du fichier du plan origine scanné. Il s'agit du plan sur "
+"lequel figure le tampon juridique."
+
+msgctxt "help:urba.documenturba,nomReglement:"
+msgid "Reglement"
+msgstr ""
+"Nom ou référence du ficher contenant le règlement papier complet sous forme "
+"numérique du document d'urbanisme"
+
+msgctxt "help:urba.documenturba,referentielSaisie:"
+msgid "Rérférenteil saisie"
+msgstr ""
+"Référentiel géographique utilisé lors de la numérisation des documents "
+"graphiques"
+
+msgctxt "help:urba.documenturba,serviceInternet:"
+msgid "Internet"
+msgstr ""
+"Page web du service de consultation du PLU offert par la collectivité locale"
+
+msgctxt "help:urba.documenturba,siren:"
+msgid "SIREN"
+msgstr ""
+"Numéro SIREN de l'intercommunalité maître d'ouvrage du document d'urbanisme"
+
+msgctxt "help:urba.documenturba,typeDocument:"
+msgid "typeDocument"
+msgstr "Type du document d'urbanisme concerné"
+
+msgctxt "help:urba.documenturba,urlPlan:"
+msgid "Plan url"
+msgstr "Lien d’accès au fichier du plan scanné"
+
+msgctxt "help:urba.documenturba,urlReglement:"
+msgid "Reglement url"
+msgstr "Lien d'accès au fichier du règlement intégral sous forme numérique"
+
+msgctxt "help:urba.documenturba,version:"
+msgid "Version"
+msgstr "Version"
+
+msgctxt "help:urba.epci,epci:"
+msgid "Code SIREN de l'EPCI"
+msgstr "Code SIREN de l'EPCI"
+
+msgctxt "help:urba.epci,nature:"
+msgid "Nature EPCI (CC, CA, CU, SAN)"
+msgstr "Nature EPCI (CC, CA, CU, SAN)"
+
+msgctxt "help:urba.information,etiquette:"
+msgid "Étiquette contenant le libellé court de l'information"
+msgstr ""
+
+msgctxt "help:urba.information,libelle:"
+msgid "Libellé de l'information"
+msgstr ""
+
+msgctxt "help:urba.information,referenceTexte:"
+msgid "Nom du fichier contenant le texte décrivant l'information"
+msgstr ""
+
+msgctxt "help:urba.information,typeI:"
+msgid "Type d'information"
+msgstr ""
+
+msgctxt "help:urba.information,typeP:"
+msgid "Type d'information complémentaire"
+msgstr ""
+
+msgctxt "help:urba.information,urlTexte:"
+msgid "Lien d’accès au fichier contenant le texte décrivant l'information"
+msgstr ""
+
+msgctxt "help:urba.secteurcc,dateValidation:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:urba.secteurcc,fermeReconstruction:"
+msgid "Reconstruction"
+msgstr ""
+
+msgctxt "help:urba.secteurcc,geom:"
+msgid "Geometry point (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:urba.secteurcc,libelle:"
+msgid "libelle"
+msgstr ""
+
+msgctxt "help:urba.secteurcc,texteReglement:"
+msgid "Reglement"
+msgstr ""
+
+msgctxt "help:urba.secteurcc,typeSecteur:"
+msgid "Type secteur"
+msgstr ""
+
+msgctxt "help:urba.secteurcc,urlReglement:"
+msgid "Reglement url"
+msgstr ""
+
+msgctxt "help:urba.secteurcc,vocationDominante:"
+msgid "Vocation"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_urba_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.action,name:act_urba_document_form"
+msgid "Document Urbanisme"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_urba_epci_form"
+msgid "EPCI"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_urba_information_form"
+msgid "Information"
+msgstr "Information"
+
+msgctxt "model:ir.action,name:act_urba_secteurcc_form"
+msgid "Secteur Carte Communale"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_urba_secteurcc"
+msgid "Secteur Carte Communale"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_urba_secteurcc_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_urba"
+msgid "Urbanisme"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_urba_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_urba_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_urba_document_form"
+msgid "Document Urbanisme"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_urba_epci_form"
+msgid "EPCI"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_urba_information_form"
+msgid "Information"
+msgstr "Information"
+
+msgctxt "model:ir.ui.menu,name:menu_urba_secteurcc_form"
+msgid "Secteur Carte Communale"
+msgstr ""
+
+msgctxt "model:urba.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:urba.documenturba,name:"
+msgid "Document Urbanisme"
+msgstr ""
+
+msgctxt "model:urba.epci,name:"
+msgid "EPCI"
+msgstr ""
+
+msgctxt "model:urba.information,name:"
+msgid "Information"
+msgstr "Information"
+
+msgctxt "model:urba.secteurcc,name:"
+msgid "SecteurCC"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Coordonnées du locataire"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Fiche"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Lieu-dit"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "MAE"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Mise à jour"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Niveau Expert"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Niveau Final"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "N° Parcelle"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Période du pâturage"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Section"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Surface"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "Type MAE"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "en date du"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "m²"
+msgstr ""
+
+msgctxt "odt:urba.secteurcc:"
+msgid "vendredi 24 janvier 2014"
+msgstr ""
+
+msgctxt "view:urba.code:"
+msgid "code"
+msgstr ""
+
+msgctxt "view:urba.documenturba:"
+msgid "Document Urbanisme"
+msgstr ""
+
+msgctxt "view:urba.documenturba:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:urba.epci:"
+msgid "EPCI"
+msgstr ""
+
+msgctxt "view:urba.information:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:urba.information:"
+msgid "Information"
+msgstr "Information"
+
+msgctxt "view:urba.secteurcc:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:urba.secteurcc:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:urba.secteurcc:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:urba.secteurcc:"
+msgid "SecteurCC"
+msgstr ""

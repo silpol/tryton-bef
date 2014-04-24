@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<form string="arbre" col="2">
+    <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="equipement"/>
+            <field name="equipement"/>
+            <label name="portee"/>
+            <field name="portee"/>
+            <label name="travaux"/>
+            <field name="travaux"/>
+            <label name="code"/>
+            <field name="code"/>
+            <label name="date"/>
+            <field name="date"/>
+            <label name="compteur"/>
+            <field name="compteur"/>                            
+            <label name="an"/>
+            <field name="an"/>
+            <label name="diametre"/>
+            <field name="diametre"/>
+            <label name="plantation"/>
+            <field name="plantation" widget="selection"/>
+            <label name="situation"/>
+            <field name="situation"/>
+            <label name="motif"/>
+            <field name="motif" widget="selection"/>
+            <label name="fosse"/>
+            <field name="fosse" widget="selection"/>
+            <field name="essence" colspan="4" view_ids="taxinomie.taxinomie_view_tree"/>                                                                
+        </page>
+        <page string="Evolution" id="evol_arbre">
+            <field name="evol_arbre" /> 
+        </page>
+        <page string="Map" id="map" col="2">
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>                                 
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="arbre_edit" icon="tryton-executable" />                           
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+        <page string="Photo" id="photo" col="2">
+            <label name="code"/>
+            <field name="code"/>
+            <field name="photo" colspan="2" widget="image" img_width="640" img_height="480"/>
+        </page>
+    </notebook>
+</form>

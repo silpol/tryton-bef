@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Linear">
+    <field name="lin_dispositif" />
+	<field name="lin_essence" />
+	<field name="lin_cycle" />
+	<field name="lin_placette" />
+	<field name="lin_transect" />
+	<field name="lin_diam" />
+	<field name="lin_angle" />
+	<field name="lin_contact" />
+	<field name="lin_chablis" />
+	<field name="lin_stade" />
+	<field name="lin_observation" />
+</tree>

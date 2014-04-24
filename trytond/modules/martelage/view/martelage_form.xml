@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Hammering">
+    <label name="mar_dispositif"/>
+	<field name="mar_dispositif"/>
+    <label name="mar_essence"/>
+	<field name="mar_essence"/>
+	<label name="mar_annee"/>
+	<field name="mar_annee"/>
+	<label name="mar_type"/>
+	<field name="mar_type"/>
+	<label name="mar_diam"/>
+	<field name="mar_diam"/>
+	<label name="mar_nb"/>
+	<field name="mar_nb"/>
+</form>

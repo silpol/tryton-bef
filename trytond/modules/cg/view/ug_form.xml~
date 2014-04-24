@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<form string="Unité de Gestion" col="2">
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="code"/>
+            <field name="code"/>
+            <label name="equipement"/>
+            <field name="equipement"/>
+            <label name="statut"/>
+            <field name="statut" widget="selection"/>
+            <label name="refug"/>
+            <field name="refug"/>
+            <label name="rue"/>
+            <field name="rue"/>
+            <label name="debut"/>
+            <field name="debut"/>
+            <label name="fin"/>
+            <field name="fin"/>
+            <label name="elagage"/>
+            <field name="elagage" widget="selection"/>                            
+            <label name="contrainte"/>
+            <field name="contrainte"/>
+            <label name="sequenceroute"/>
+            <field name="sequenceroute"/>
+            <label name="securite"/>
+            <field name="securite" widget="selection"/>
+            <label name="remsecurite"/>
+            <field name="remsecurite"/>
+            <label name="domanialtype" />
+            <field name="domanialtype" />
+            <label name="domanialdate" />
+            <field name="domanialdate" />
+            <label name="active"/>
+            <field name="active"/>
+            <field name="operation" colspan="4" view_ids="cg.cg_operation_view_tree"/>                          
+            <field name="commune" colspan="4" view_ids="commune.commune_view_tree"/>                         
+        </page>
+        <page string="Stations" id="stations">                            
+            <field name="station"/>
+        </page>
+        <page string="Historique" id="historique" col="2">                            
+            <field name="acequipement" colspan="2"/>
+            <group string="Anciennes UG" id="group_acug" col="2">
+                <label name="acug95"/>
+                <field name="acug95"/>
+                <label name="acug06"/>
+                <field name="acug06"/>
+                <label name="acug09"/>
+                <field name="acug09"/>
+            </group>
+        </page>
+        <page string="Map" id="map" col="2">                            
+            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="ug_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

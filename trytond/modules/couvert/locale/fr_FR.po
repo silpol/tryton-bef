@@ -1,0 +1,92 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:couvert.couvert,cou_coeff_a:"
+msgid "Coefft a"
+msgstr "Coefft a"
+
+msgctxt "field:couvert.couvert,cou_coeff_b:"
+msgid "Coefft b"
+msgstr "Coefft b"
+
+msgctxt "field:couvert.couvert,cou_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:couvert.couvert,cou_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:couvert.couvert,cou_estimation:"
+msgid "Estimation"
+msgstr "Estimation"
+
+msgctxt "field:couvert.couvert,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:couvert.couvert,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:couvert.couvert,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:couvert.couvert,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:couvert.couvert,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:couvert.couvert,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:couvert.couvert,cou_coeff_a:"
+msgid "a coefficient model of crown diameter"
+msgstr "Coefficient a du modèle de croissance en diamètre"
+
+msgctxt "help:couvert.couvert,cou_coeff_b:"
+msgid "b coefficient model of crown diameter"
+msgstr "Coefficient b du modèle de croissance en diamètre"
+
+msgctxt "help:couvert.couvert,cou_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:couvert.couvert,cou_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "help:couvert.couvert,cou_estimation:"
+msgid "The coefficients are extrapolated from another species if checked"
+msgstr "Les coefficients sont extrapolés à partir des autres espèces si coché"
+
+msgctxt "model:couvert.couvert,name:"
+msgid "Covered"
+msgstr "Couvert"
+
+msgctxt "model:ir.action,name:act_couvert_form"
+msgid "Covered"
+msgstr "Couvert"
+
+msgctxt "model:ir.ui.menu,name:menu_couvert_form"
+msgid "Covered"
+msgstr "Couvert"
+
+msgctxt "view:couvert.couvert:"
+msgid "Covered"
+msgstr "Couvert"

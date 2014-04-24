@@ -1,0 +1,10 @@
+[tryton]
+version=1.0
+depends:
+    company_work_time
+    ir
+    party
+    timesheet
+xml:
+    site.xml
+    work.xml

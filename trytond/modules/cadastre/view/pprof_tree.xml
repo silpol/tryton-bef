@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Partie principale professionnelle">
+    <field name="codlot" />
+    <field name="pev" />
+    <field name="invar" />
+    <field name="dnupev" />
+    <field name="dnudes" />
+    <field name="vsurzt" />
+    <field name="cenr" />
+</tree>

@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Laurent Defert
+-->
+<tryton>
+    <data>
+        <menuitem name="Cubing tarif" parent="wood_menu.menu_wood_product_configuration" sequence="0" id="menu_cubing" icon="tryton-list"/>
+
+        <!-- ************* Adrian cubing ************* -->
+        <record model="ir.ui.view" id="adrian_view_tree">
+            <field name="model">cubing.adrian</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="scale"/>
+                        <field name="variety"/>
+                        <field name="classes"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="adrian_view_form">
+            <field name="model">cubing.adrian</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Adrian scale" col="2">
+                        <label name="scale"/>
+                        <field name="scale"/>
+                        <label name="variety"/>
+                        <field name="variety"/>
+                        <label name="classes"/>
+                        <field name="classes"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <!-- Height class form -->
+        <record model="ir.ui.view" id="adrian_class_view_tree">
+            <field name="model">cubing.adrian_class</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree editable="bottom">
+                        <field name="height_min"/>
+                        <field name="height_max"/>
+                        <field name="a"/>
+                        <field name="b"/>
+                        <field name="k"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="adrian_class_view_form">
+            <field name="model">cubing.adrian_class</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Adrian scale class" col="2">
+                        <label name="height_min"/>
+                        <field name="height_min"/>
+                        <label name="height_max"/>
+                        <field name="height_max"/>
+                        <label name="a"/>
+                        <field name="a"/>
+                        <label name="b"/>
+                        <field name="b"/>
+                        <label name="k"/>
+                        <field name="k"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+
+        <record model="ir.action.act_window" id="act_adrian_form_view">
+            <field name="name">Adrian</field>
+            <field name="res_model">cubing.adrian</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_adrian_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="adrian_view_tree"/>
+            <field name="act_window" ref="act_adrian_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_adrian_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="adrian_view_form"/>
+            <field name="act_window" ref="act_adrian_form_view"/>
+        </record>
+
+        <menuitem parent="menu_cubing" sequence="0" id="menu_cubing_adrian" icon="tryton-list" action="act_adrian_form_view"/>
+
+        <!-- ************* Algan fast cubing ************* -->
+        <record model="cubing.algan_fast" id="algan_fast_1">
+            <field name="scale">1</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_2">
+            <field name="scale">2</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_3">
+                <field name="scale">3</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_4">
+            <field name="scale">4</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_5">
+            <field name="scale">5</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_6">
+            <field name="scale">6</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_7">
+            <field name="scale">7</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_8">
+            <field name="scale">8</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_9">
+            <field name="scale">9</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_10">
+                <field name="scale">10</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_11">
+            <field name="scale">11</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_12">
+            <field name="scale">12</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_13">
+            <field name="scale">13</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_14">
+            <field name="scale">14</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_15">
+            <field name="scale">15</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_16">
+            <field name="scale">16</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_17">
+            <field name="scale">17</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_18">
+            <field name="scale">18</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_19">
+            <field name="scale">19</field>
+        </record>
+        <record model="cubing.algan_fast" id="algan_fast_20">
+            <field name="scale">20</field>
+        </record>
+    </data>
+</tryton>

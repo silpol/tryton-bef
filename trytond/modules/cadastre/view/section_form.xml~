@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form string="Section" col="2">
+    <label name="commune" />
+    <field name="commune" />
+    <label name="idu" />
+    <field name="idu" />
+    <label name="tex" />
+    <field name="tex" />   
+    <notebook colspan="2">
+        <page string="MAP" col="1" id="map" >
+            <field name="image" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="section_edit" icon="tryton-executable" />
+        </page>
+        <page string="SUBDSECT" col="1" id="subdsect" >
+            <field name="subdsect" />
+        </page>
+    </notebook>
+</form>

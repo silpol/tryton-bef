@@ -1,0 +1,172 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:lineaire.lineaire,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:lineaire.lineaire,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:lineaire.lineaire,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:lineaire.lineaire,lin_angle:"
+msgid "Angle"
+msgstr "Angle"
+
+msgctxt "field:lineaire.lineaire,lin_chablis:"
+msgid "Chablis"
+msgstr "Chablis"
+
+msgctxt "field:lineaire.lineaire,lin_contact:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:lineaire.lineaire,lin_cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:lineaire.lineaire,lin_diam:"
+msgid "Diameter"
+msgstr "Diamètre"
+
+msgctxt "field:lineaire.lineaire,lin_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:lineaire.lineaire,lin_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "field:lineaire.lineaire,lin_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:lineaire.lineaire,lin_placette:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "field:lineaire.lineaire,lin_stade:"
+msgid "Stage"
+msgstr "Stade"
+
+msgctxt "field:lineaire.lineaire,lin_transect:"
+msgid "Num transect"
+msgstr "Num transect"
+
+msgctxt "field:lineaire.lineaire,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:lineaire.lineaire,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:lineaire.lineaire,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:lineaire.lineaire,lin_angle:"
+msgid "Angle between the soil and the wood piece"
+msgstr "Angle entre le sol et la pièce de bois"
+
+msgctxt "help:lineaire.lineaire,lin_chablis:"
+msgid "Chablis"
+msgstr "Chablis"
+
+msgctxt "help:lineaire.lineaire,lin_contact:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "help:lineaire.lineaire,lin_cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "help:lineaire.lineaire,lin_diam:"
+msgid "Diameter"
+msgstr "Diamètre"
+
+msgctxt "help:lineaire.lineaire,lin_dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "help:lineaire.lineaire,lin_essence:"
+msgid "Species"
+msgstr "Essence"
+
+msgctxt "help:lineaire.lineaire,lin_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:lineaire.lineaire,lin_placette:"
+msgid "Plot"
+msgstr "Placette"
+
+msgctxt "help:lineaire.lineaire,lin_stade:"
+msgid "Stage of decomposition"
+msgstr "Stade de décomposition"
+
+msgctxt "help:lineaire.lineaire,lin_transect:"
+msgid "Transect number"
+msgstr "Numéro du transect"
+
+msgctxt "model:ir.action,name:act_lineaire_form"
+msgid "Lineaire"
+msgstr "Linéaire"
+
+msgctxt "model:ir.ui.menu,name:menu_lineaire_form"
+msgid "Lineaire"
+msgstr "Linéaire"
+
+msgctxt "model:lineaire.lineaire,name:"
+msgid "Linear"
+msgstr "Linéaire"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "11"
+msgstr "11"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "12"
+msgstr "12"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "13"
+msgstr "13"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "21"
+msgstr "21"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "22"
+msgstr "22"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "23"
+msgstr "23"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "31"
+msgstr "31"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "32"
+msgstr "32"
+
+msgctxt "selection:lineaire.lineaire,lin_transect:"
+msgid "33"
+msgstr "33"

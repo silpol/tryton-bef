@@ -1,0 +1,493 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "error:dispositif.dispositif-party.party:"
+msgid "You can not change the class of a dispositif !"
+msgstr "Vous ne pouvez pas changer la classe du dispositif !"
+
+msgctxt "field:dispositif.dispositif,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:dispositif.dispositif,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:dispositif.dispositif,dis_ass:"
+msgid "Related dispositif"
+msgstr "Dispositifs liés"
+
+msgctxt "field:dispositif.dispositif,dis_country:"
+msgid "Township"
+msgstr "Commune"
+
+msgctxt "field:dispositif.dispositif,dis_cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "field:dispositif.dispositif,dis_date_instal:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:dispositif.dispositif,dis_ess1:"
+msgid "Species1"
+msgstr "Essence1"
+
+msgctxt "field:dispositif.dispositif,dis_ess2:"
+msgid "Species2"
+msgstr "Essence2"
+
+msgctxt "field:dispositif.dispositif,dis_hdom1:"
+msgid "Hdom 1"
+msgstr "Hdom 1"
+
+msgctxt "field:dispositif.dispositif,dis_hdom2:"
+msgid "Hdom 2"
+msgstr "Hdom 2"
+
+msgctxt "field:dispositif.dispositif,dis_num:"
+msgid "Dispositif number"
+msgstr "Numéro du dispositif"
+
+msgctxt "field:dispositif.dispositif,dis_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:dispositif.dispositif,dis_party:"
+msgid "Partners"
+msgstr "Partenaires"
+
+msgctxt "field:dispositif.dispositif,dis_prix_rege:"
+msgid "Regeneration prices"
+msgstr "Prix de la régénération"
+
+msgctxt "field:dispositif.dispositif,dis_prix_unit:"
+msgid "Unit prices"
+msgstr "Prix unitaires"
+
+msgctxt "field:dispositif.dispositif,dis_rege_ess1:"
+msgid "Rege species 1"
+msgstr "Essence rege 1"
+
+msgctxt "field:dispositif.dispositif,dis_rege_ess2:"
+msgid "Rege species 2"
+msgstr "Essence rege 2"
+
+msgctxt "field:dispositif.dispositif,dis_rege_ess3:"
+msgid "Rege species 3"
+msgstr "Essence rege 3"
+
+msgctxt "field:dispositif.dispositif,dis_rege_ess4:"
+msgid "Rege species 4"
+msgstr "Essence rege 4"
+
+msgctxt "field:dispositif.dispositif,dis_rege_ess5:"
+msgid "Rege species 5"
+msgstr "Essence rege 5"
+
+msgctxt "field:dispositif.dispositif,dis_surf:"
+msgid "Plot Area"
+msgstr "Surface du dispositif"
+
+msgctxt "field:dispositif.dispositif,dis_surface_foret:"
+msgid "Forest area"
+msgstr "Surface de la forêt"
+
+msgctxt "field:dispositif.dispositif,dis_type:"
+msgid "Property type"
+msgstr "Type de propriété"
+
+msgctxt "field:dispositif.dispositif,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:dispositif.dispositif,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:dispositif.dispositif,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:dispositif.dispositif,image_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:dispositif.dispositif,image_map:"
+msgid "Image map"
+msgstr "Carte"
+
+msgctxt "field:dispositif.dispositif,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:dispositif.dispositif,parcelle_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:dispositif.dispositif,parcelle_map:"
+msgid "Parcelle map"
+msgstr "Carte de la parcelle"
+
+msgctxt "field:dispositif.dispositif,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:dispositif.dispositif,situation_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:dispositif.dispositif,situation_map:"
+msgid "Situation map"
+msgstr "Carte de situation"
+
+msgctxt "field:dispositif.dispositif,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:dispositif.dispositif,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,dispositifasso:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:dispositif.dispositif-dispositif.dispositif,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:dispositif.dispositif-party.party,category:"
+msgid "Category"
+msgstr "Catégorie"
+
+msgctxt "field:dispositif.dispositif-party.party,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:dispositif.dispositif-party.party,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:dispositif.dispositif-party.party,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:dispositif.dispositif-party.party,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:dispositif.dispositif-party.party,party:"
+msgid "Partners"
+msgstr "Partenaires"
+
+msgctxt "field:dispositif.dispositif-party.party,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:dispositif.dispositif-party.party,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:dispositif.dispositif-party.party,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,prix_rege:"
+msgid "Regeneration prices"
+msgstr "Prix de la régénération"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:dispositif.dispositif-prix_rege.prix_rege,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:dispositif.dispositif-prix_unitaire.prix_unitaire,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:dispositif.dispositif-prix_unitaire.prix_unitaire,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:dispositif.dispositif-prix_unitaire.prix_unitaire,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:dispositif.dispositif-prix_unitaire.prix_unitaire,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:dispositif.dispositif-prix_unitaire.prix_unitaire,prix_unitaire:"
+msgid "Unit prices"
+msgstr "Prix unitaires"
+
+msgctxt "field:dispositif.dispositif-prix_unitaire.prix_unitaire,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:dispositif.dispositif-prix_unitaire.prix_unitaire,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:dispositif.dispositif-prix_unitaire.prix_unitaire,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:party.party,dispositifs:"
+msgid "Dispositifs"
+msgstr "Dispositifs"
+
+msgctxt "help:dispositif.dispositif,dis_ass:"
+msgid "Related dispositif"
+msgstr "Dispositifs liés"
+
+msgctxt "help:dispositif.dispositif,dis_country:"
+msgid "Township of dispositif"
+msgstr "Commune de situation"
+
+msgctxt "help:dispositif.dispositif,dis_cycle:"
+msgid "Cycle"
+msgstr "Cycle"
+
+msgctxt "help:dispositif.dispositif,dis_date_instal:"
+msgid "Installation date"
+msgstr "Date d'installation"
+
+msgctxt "help:dispositif.dispositif,dis_ess1:"
+msgid "First species for Hdom"
+msgstr "Première essence pour la hauteur dominante"
+
+msgctxt "help:dispositif.dispositif,dis_ess2:"
+msgid "Second species for Hdom"
+msgstr "Seconde essence pour la hauteur dominante"
+
+msgctxt "help:dispositif.dispositif,dis_hdom1:"
+msgid "Height associated with species1"
+msgstr "Hauteur associée à l'essence1"
+
+msgctxt "help:dispositif.dispositif,dis_hdom2:"
+msgid "Height associated with species2"
+msgstr "Hauteur associée à l'essence2"
+
+msgctxt "help:dispositif.dispositif,dis_num:"
+msgid "Dispositif number"
+msgstr "Numéro de dispositif"
+
+msgctxt "help:dispositif.dispositif,dis_observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:dispositif.dispositif,dis_party:"
+msgid "Owners - Managers - Operators dispositif"
+msgstr "Propriétaire - Gestionnaire - Opérateurs du dispositif"
+
+msgctxt "help:dispositif.dispositif,dis_prix_rege:"
+msgid "Regeneration prices"
+msgstr "Prix de la régénération"
+
+msgctxt "help:dispositif.dispositif,dis_prix_unit:"
+msgid "Unit prices"
+msgstr "Prix unitaires"
+
+msgctxt "help:dispositif.dispositif,dis_rege_ess1:"
+msgid "First species for regeneration"
+msgstr "Première essence de régénération"
+
+msgctxt "help:dispositif.dispositif,dis_rege_ess2:"
+msgid "Second species for regeneration"
+msgstr "Seconde essence de régénération"
+
+msgctxt "help:dispositif.dispositif,dis_rege_ess3:"
+msgid "Third species for regeneration"
+msgstr "Troisième essence de régénération"
+
+msgctxt "help:dispositif.dispositif,dis_rege_ess4:"
+msgid "Fourth species for regeneration"
+msgstr "Quatrième essence de régénération"
+
+msgctxt "help:dispositif.dispositif,dis_rege_ess5:"
+msgid "Fifth species for regeneration"
+msgstr "Cinquième essence de régénération"
+
+msgctxt "help:dispositif.dispositif,dis_surf:"
+msgid "Plot area"
+msgstr "Surface du dispositif (ha)"
+
+msgctxt "help:dispositif.dispositif,dis_surface_foret:"
+msgid "Forest area"
+msgstr "Surface de la forêt (ha)"
+
+msgctxt "help:dispositif.dispositif,dis_type:"
+msgid "Property type"
+msgstr "Type de propriétaire"
+
+msgctxt "model:dispositif.dispositif,name:"
+msgid "Dispositifs"
+msgstr "Dispositifs"
+
+msgctxt "model:dispositif.dispositif-dispositif.dispositif,name:"
+msgid "DispositifsDispositifs"
+msgstr "Dispositifs liés"
+
+msgctxt "model:dispositif.dispositif-party.party,name:"
+msgid "DispositifsParty"
+msgstr "DispositifsParty"
+
+msgctxt "model:dispositif.dispositif-prix_rege.prix_rege,name:"
+msgid "DispositifsPrixRege"
+msgstr "DispositifsPrixRege"
+
+msgctxt "model:dispositif.dispositif-prix_unitaire.prix_unitaire,name:"
+msgid "DispositifsPrixUnit"
+msgstr "DispositifsPrixUnitaires"
+
+msgctxt "model:ir.action,name:act_dispositif_form"
+msgid "Dispositifs"
+msgstr "Dispositifs"
+
+msgctxt "model:ir.action,name:act_dispositif_party_rel_form"
+msgid "Partners"
+msgstr "Partenaires"
+
+msgctxt "model:ir.action,name:report_dispositif_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_dispositif_form"
+msgid "Dispositifs"
+msgstr "Dispositifs"
+
+msgctxt "selection:dispositif.dispositif,dis_type:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "selection:dispositif.dispositif,dis_type:"
+msgid "Etat"
+msgstr "État"
+
+msgctxt "selection:dispositif.dispositif,dis_type:"
+msgid "Groupement forestier"
+msgstr "Groupement forestier"
+
+msgctxt "selection:dispositif.dispositif,dis_type:"
+msgid "Indivision"
+msgstr "Indivision"
+
+msgctxt "selection:dispositif.dispositif,dis_type:"
+msgid "Institutionnel"
+msgstr "Institutionnel"
+
+msgctxt "selection:dispositif.dispositif,dis_type:"
+msgid "Propriétaire"
+msgstr "Propriétaire"
+
+msgctxt "selection:dispositif.dispositif,dis_type:"
+msgid "SCI"
+msgstr "SCI"
+
+msgctxt "view:dispositif.dispositif-party.party:"
+msgid "Partners"
+msgstr "Partenaires"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Cycles"
+msgstr "Cycles"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Dispositifs"
+msgstr "Dispositifs"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Partners"
+msgstr "Partenaires"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Regeneration prices"
+msgstr "Prix de la régénération"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Related dispositif"
+msgstr "Dispositifs liés"
+
+msgctxt "view:dispositif.dispositif:"
+msgid "Unit prices"
+msgstr "Prix unitaires"
+
+msgctxt "view:party.party:"
+msgid "Dispositifs"
+msgstr "Dispositifs"

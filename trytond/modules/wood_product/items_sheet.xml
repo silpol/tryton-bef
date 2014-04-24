@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Laurent Defert
+-->
+<tryton>
+    <data>
+        <!-- ************* Items sheet ************* -->
+        <record model="ir.ui.view" id="items_sheet_view_tree">
+            <field name="model">items_sheet.items_sheet</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="sheet_id"/>
+                        <field name="title"/>
+                        <field name="main_variety"/>
+                        <field name="total_trunks_count"/>
+                        <field name="total_volume"/>
+                        <field name="total_volume_uom"/>
+                        <!-- These value is required to evaluate the digits PYSON statement in the client -->
+                        <field name="total_volume_uom_digits" tree_invisible="1"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="items_sheet_view_form">
+            <field name="model">items_sheet.items_sheet</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Items sheet" col="2">
+                        <notebook colspan="2">
+                            <page string="General" col="2" id="general">
+                                <label name="sheet_id"/>
+                                <field name="sheet_id"/>
+                                <label name="title"/>
+                                <field name="title"/>
+                                <label name="main_variety"/>
+                                <field name="main_variety"/>
+                                <label name="visit"/>
+                                <field name="visit" widget="selection"/>
+                                <label name="visit_party"/>
+                                <field name="visit_party"/>
+                            </page>
+                            <page string="Bundles" col="3" id="wood_desc">
+                                <!-- The widdget of the following field is set to many2many to prevent tryton from displaying the create
+                                    and delete entries buttons (see #436) -->
+                                <field name="trunks" mode="tree" colspan="3" view_ids="wood_product.trunks_view_tree_with_id" widget="many2many" />
+                                <label name="total_trunks_count"/>
+                                <field name="total_trunks_count" colspan="2"/>
+                                <label name="total_volume"/>
+                                <field name="total_volume"/>
+                                <field name="total_volume_uom" widget="selection"/>
+                                <label name="mean_volume"/>
+                                <field name="mean_volume"/>
+                                <field name="mean_volume_uom" widget="selection"/>
+                                <!-- Those value are required to evaluate the digits PYSON statement in the client -->
+                                <field name="total_volume_uom_digits" invisible="1"/>
+                                <field name="mean_volume_uom_digits" invisible="1"/>
+                            </page>
+                            <page string="Particular terms" col="2" id="particular_terms">
+                                <label name="residuals"/>
+                                <field name="residuals"/>
+                                <label name="residuals_rw"/>
+                                <field name="residuals_rw"/>
+                                <label name="paths"/>
+                                <field name="paths"/>
+                                <label name="paths_rw"/>
+                                <field name="paths_rw"/>
+                                <label name="period"/>
+                                <field name="period"/>
+                                <label name="period_rw"/>
+                                <field name="period_rw"/>
+                                <label name="houppier"/>
+                                <field name="houppier"/>
+                                <label name="houppier_rw"/>
+                                <field name="houppier_rw"/>
+                                <label name="rechic"/>
+                                <field name="rechic"/>
+                                <label name="rechic_rw"/>
+                                <field name="rechic_rw"/>
+                                <label name="debardage"/>
+                                <field name="debardage" widget="selection"/>
+                                <label name="debardage_rw"/>
+                                <field name="debardage_rw"/>
+                                <label name="mise_a_port"/>
+                                <field name="mise_a_port"/>
+                                <label name="mise_a_port_rw"/>
+                                <field name="mise_a_port_rw"/>
+                                <label name="debardage_etf"/>
+                                <field name="debardage_etf"/>
+                                <label name="debardage_etf_rw"/>
+                                <field name="debardage_etf_rw"/>
+                            </page>
+                       </notebook>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_items_sheet_form_view">
+            <field name="name">Items sheets</field>
+            <field name="res_model">items_sheet.items_sheet</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_items_sheet_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="items_sheet_view_tree"/>
+            <field name="act_window" ref="act_items_sheet_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_items_sheet_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="items_sheet_view_form"/>
+            <field name="act_window" ref="act_items_sheet_form_view"/>
+        </record>
+
+        <menuitem parent="wood_menu.menu_wood_product" sequence="1" id="menu_items_sheet" icon="tryton-list" action="act_items_sheet_form_view"/>
+
+        <record model="ir.action.report" id="report_items_sheet">
+            <field name="name">Items sheets</field>
+            <field name="model">items_sheet.items_sheet</field>
+            <field name="report_name">items_sheet.report</field>
+            <field name="report">wood_product/items_sheet.odt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_items_sheet_kbd">
+            <field name="keyword">form_print</field>
+            <field name="model">items_sheet.items_sheet,-1</field>
+            <field name="action" ref="report_items_sheet"/>
+        </record>
+
+        <!-- ************* Wood text ************* -->
+
+        <record model="ir.ui.view" id="wood_text_view_tree">
+            <field name="model">items_sheet.wood_text</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <tree>
+                        <field name="name"/>
+                        <field name="description" expand="1"/>
+                        <field name="category"/>
+                        <field name="active"/>
+                    </tree>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wood_text_view_form">
+            <field name="model">items_sheet.items_sheet</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                    <form string="Items sheet" col="2">
+                        <label name="name"/>
+                        <field name="name"/>
+                        <label name="active"/>
+                        <field name="active"/>
+                        <label name="description"/>
+                        <field name="description"/>
+                        <label name="category"/>
+                        <field name="category"/>
+                    </form>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_wood_text_form_view">
+            <field name="name">Codifications of items sheets</field>
+            <field name="res_model">items_sheet.wood_text</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_wood_text_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="wood_text_view_tree"/>
+            <field name="act_window" ref="act_wood_text_form_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_wood_text_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="wood_text_view_form"/>
+            <field name="act_window" ref="act_wood_text_form_view"/>
+        </record>
+
+        <menuitem parent="wood_menu.menu_wood_product_configuration" sequence="0" id="menu_wood_text" icon="tryton-list" action="act_wood_text_form_view"/>
+
+    </data>
+</tryton>
+

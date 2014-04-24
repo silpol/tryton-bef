@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<form string="Évolution des arbres" col="2">
+    <notebook colspan="6">
+        <page string="General" id="general">                            
+            <label name="date"/>
+            <field name="date"/>
+            <label name="mecanique"/>
+            <field name="mecanique" widget="selection"/>                            
+            <label name="vigueur"/>
+            <field name="vigueur" widget="selection"/>
+            <label name="conduite"/>
+            <field name="conduite"/>
+            <label name="paysager"/>
+            <field name="paysager" widget="selection"/>
+            <label name="ht"/>
+            <field name="ht" widget="selection"/>
+            <label name="hfut"/>                                                                               
+            <field name="hfut"/>
+            <label name="diamhoup"/>
+            <field name="diamhoup"/>
+            <label name="larghoupvoie"/>
+            <field name="larghoupvoie"/>
+            <label name="larghoupriv"/>
+            <field name="larghoupriv"/>
+            <label name="diamtronc"/>
+            <field name="diamtronc"/>                                                        
+            <label name="grille"/>
+            <field name="grille"/>
+            <label name="lignelec"/>
+            <field name="lignelec"/>
+            <label name="sonde"/>
+            <field name="sonde"/>
+            <label name="empmat"/>
+            <field name="empmat"/>
+            <label name="surfacepiedarbre"/>
+            <field name="surfacepiedarbre"/>
+            <label name="arrosage"/>
+            <field name="arrosage"/>
+            <label name="environnement"/>
+            <field name="environnement" widget="selection"/>
+            <label name="bilan"/>
+            <field name="bilan" widget="selection"/>
+        </page>
+        <page string="Photo" id="photo">                                                                      
+            <field name="photo" colspan="6" widget="image" img_width="640" img_height="480"/>                                    
+        </page>
+    </notebook>
+</form>
