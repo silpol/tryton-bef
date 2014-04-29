@@ -36,4 +36,3 @@ def register():
         ObjAreaQGis,
         PartyAreaQGis,
         module='place', type_='report')
-='report')
