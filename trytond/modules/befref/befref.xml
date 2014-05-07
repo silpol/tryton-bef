@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.icon" id="befref_icon">
+            <field name="name">tryton-befref</field>
+            <field name="path">icons/work_in_progress.svg</field>
+        </record>
+        <record model="ir.ui.view" id="area_view_tree">
+            <field name="model">befref.area</field>
+            <field name="type">tree</field>
+            <field name="name">area_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="area_view_form">
+            <field name="model">befref.area</field>
+            <field name="type">form</field>
+            <field name="name">area_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="window_befref">
+            <field name="name">BefRef Window</field>
+            <field name="res_model">befref.area</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_befref_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="area_view_tree"/>
+            <field name="act_window" ref="window_befref"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="view_befref_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="area_view_form"/>
+            <field name="act_window" ref="window_befref"/>
+        </record>
+
+        <menuitem name="BefRef" parent="ir.menu_administration" id="menu_befref" icon="tryton-befref" action="window_befref"/>
+    </data>
+</tryton>
