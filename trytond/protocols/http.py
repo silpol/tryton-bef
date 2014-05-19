@@ -126,9 +126,12 @@ class SimpleHTTPDispatcher(SimpleXMLRPCServer.SimpleXMLRPCDispatcher):
         if isinstance(response, tuple):
             response, content_type = response
 
-        if not isinstance(response, str):
-            #response = json.dumps(response, cls=JSONEncoder)
+        if isinstance(response, unicode):
             response = response.encode('utf-8')
+
+        if not isinstance(response, str):
+            response = json.dumps(response, cls=JSONEncoder)
+            #response = response.encode('utf-8')
 
         return response
 
