@@ -291,7 +291,13 @@ class WfsRequest(object):
                                         )''' % {'col': col, 'table': table},
                                (bbox[0], bbox[1], bbox[2], bbox[3], srsname, bbox[0], bbox[1], bbox[2], bbox[3], srsname))
             else:
-                cursor.execute('SELECT Box2D(ST_Extent(Box2D(%s))) FROM %s;' % (col, table))
+                try: 
+                    cursor.execute('SELECT ST_Estimated_Extent(\'%s\', \'%s\');' % (table, col))
+                except:
+                    Transaction().new_cursor()
+                    cursor = Transaction().cursor
+                    cursor.execute('SELECT Box2D(ST_Extent(Box2D(%s))) FROM %s;' % (col, table))
+
 
             feature_bbox = cursor.fetchall()
             if len(feature_bbox) != 0 and len(feature_bbox[0]) != 0 and feature_bbox[0][0] is not None:
@@ -695,7 +701,7 @@ class Wfs(ModelView):
         except Exception:
             logger.exception('Wfs request failure')
             ret = req.format_exc()
-        logger.debug('WFS response: %s', ret)
+        #logger.debug('WFS response: %s', ret)
         logger.debug('WFS request handled in %0.1fs', (time.time() - begin))
         return ret
 
@@ -709,6 +715,6 @@ class Wfs(ModelView):
         except Exception:
             logger.exception('Wfs POST request failure')
             ret = req.format_exc()
-        logger.debug('WFS POST response: %s', ret)
+        #logger.debug('WFS POST response: %s', ret)
         logger.debug('WFS POST request handled in %0.1fs', (time.time() - begin))
         return ret
