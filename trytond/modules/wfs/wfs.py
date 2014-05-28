@@ -273,30 +273,29 @@ class WfsRequest(object):
             table = model.replace('.', '_')
             col = field.name
             if bbox != [] and srsname != 0:
-                cursor.execute('''SELECT Box2D(ST_Extent(Box2D(%(col)s))) FROM %(table)s WHERE
-                                        ST_Contains(
-                                            ST_SetSRID(
-                                                ST_MakeBox2D(
-                                                    ST_MakePoint(%%s, %%s),
-                                                    ST_MakePoint(%%s, %%s)
-                                                ), %%s
-                                            ), ST_GeomFromEWKT(%s)
-                                        ) OR ST_Overlaps(
-                                            ST_SetSRID(
-                                                ST_MakeBox2D(
-                                                    ST_MakePoint(%%s, %%s),
-                                                    ST_MakePoint(%%s, %%s)
-                                                ), %%s
-                                            ), ST_GeomFromEWKT(%s)
-                                        )''' % {'col': col, 'table': table},
-                               (bbox[0], bbox[1], bbox[2], bbox[3], srsname, bbox[0], bbox[1], bbox[2], bbox[3], srsname))
+                sql = 'SELECT ST_Extent(Box2D(%(col)s)) FROM %(table)s WHERE\
+                    ST_Intersects(\
+                        ST_SetSRID(\
+                            ST_MakeBox2D(\
+                                ST_MakePoint(%(xmin)s, %(ymin)s),\
+                                ST_MakePoint(%(xmax)s, %(ymax)s)\
+                            ), %(srsname)s\
+                        ), %(col)s )' % {
+                        'col': col,
+                        'table': table,
+                        'xmin' : bbox[0],
+                        'ymin' : bbox[1],
+                        'xmax' : bbox[2],
+                        'ymax' : bbox[3],
+                        'srsname' : srsname}
+                cursor.execute(sql)
             else:
                 try: 
                     cursor.execute('SELECT ST_Estimated_Extent(\'%s\', \'%s\');' % (table, col))
                 except:
                     Transaction().new_cursor()
                     cursor = Transaction().cursor
-                    cursor.execute('SELECT Box2D(ST_Extent(Box2D(%s))) FROM %s;' % (col, table))
+                    cursor.execute('SELECT ST_Extent(Box2D(%s)) FROM %s;' % (col, table))
 
 
             feature_bbox = cursor.fetchall()
@@ -405,23 +404,24 @@ class WfsRequest(object):
                 if not self.access_check(model, field.name, raise_exception=False):
                     continue
 
-                cursor.execute('''SELECT id FROM %s WHERE
-                                            ST_Contains(
-                                                ST_SetSRID(
-                                                    ST_MakeBox2D(
-                                                        ST_MakePoint(%%s, %%s),
-                                                        ST_MakePoint(%%s, %%s)
-                                                    ), %%s
-                                                ), ST_GeomFromEWKT(%s)
-                                            ) OR ST_Overlaps(
-                                                ST_SetSRID(
-                                                    ST_MakeBox2D(
-                                                        ST_MakePoint(%%s, %%s),
-                                                        ST_MakePoint(%%s, %%s)
-                                                    ), %%s
-                                                ), ST_GeomFromEWKT(%s)
-                                            ) LIMIT %%s''' % (model.replace('.', '_'), field.name, field.name),
-                               (bbox[0], bbox[1], bbox[2], bbox[3], srsname, bbox[0], bbox[1], bbox[2], bbox[3], srsname, maxfeatures))
+                sql = 'SELECT id FROM %(table)s WHERE\
+                    ST_Intersects(\
+                        ST_SetSRID(\
+                            ST_MakeBox2D(\
+                                ST_MakePoint(%(xmin)s, %(ymin)s),\
+                                ST_MakePoint(%(xmax)s, %(ymax)s)\
+                            ), %(srsname)s\
+                        ), %(col)s\
+                    ) LIMIT %(maxfeatures)s' % {
+                            'table' : model.replace('.', '_'), 
+                            'col' : field.name,
+                            'xmin' : bbox[0],
+                            'ymin' : bbox[1],
+                            'xmax' : bbox[2],
+                            'ymax' : bbox[3],
+                            'srsname' : srsname,
+                            'maxfeatures' : maxfeatures }
+                cursor.execute(sql)
                 domain = [[('id', '=', col[0])] for col in cursor.fetchall()]
                 if len(domain) == 0:
                     continue
@@ -430,6 +430,9 @@ class WfsRequest(object):
                 break
         else:
             records = Model.search(filter_domain, limit=maxfeatures)
+
+        if not records: records = []
+        print len(records), ' features returned'
 
         fbbox = None
         elems = []
