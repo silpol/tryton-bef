@@ -32,22 +32,31 @@ from osgeo import osr
 from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
 from trytond.pyson import Bool, Eval, Not
 from trytond.pool import PoolMeta, Pool
+from trytond.report import Report
 
 from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
 
+from trytond.modules.rtryton.r_tools import dataframe, py2r
 
+from collections import namedtuple
 from urllib import urlopen
 from cStringIO import StringIO
 import shutil
 import tempfile
 import string
 import stat
+import codecs
 
 import time
+import grip
 
-__all__ = ['Area']
+from rpy2 import robjects
+
+__all__ = ['Area', 'AreaQGis', 'AvgArea']
+
+FieldInfo = namedtuple('FieldInfo', ['name', 'ttype'])
 
 class Area(ModelSQL, ModelView):
     u'Protected area'
@@ -76,7 +85,7 @@ class Area(ModelSQL, ModelView):
 
         tmpdir = tempfile.mkdtemp()
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
-        dot_qgst = os.path.abspath('/home/vmo/test.qgst')
+        dot_qgst = os.path.join(os.path.dirname(__file__), 'area.qgst')
         dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
         with open(dot_qgst, 'r') as file_in, open(dot_qgs, 'w') as file_out:
             tmp = string.Template(file_in.read())
@@ -85,42 +94,77 @@ class Area(ModelSQL, ModelView):
         print '##################### get_image from project:', dot_qgs
 
         cursor = Transaction().cursor
-        cursor.execute('SELECT ST_Extent(geom) FROM befref_area WHERE id = '+str(self.id)+';' )
-        [ext] = cursor.fetchone()
+        cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
+        [srid, ext] = cursor.fetchone()
         if ext:
             ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
+            ext = [float(i) for i in ext.split(',')]
+            ext = bbox_aspect([ext[0]-5000, ext[2]+5000, ext[1]-5000, ext[3]+5000], 640, 480)    
+            ext =  ','.join(str(i) for i in [ext[0], ext[2], ext[1], ext[3]])
 
-
-        #url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER=area&CRS=EPSG:2154&map0:EXTENT=973358,6458226,1036145,6510689&DPI=75'
-        url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER=area&CRS=EPSG:2154&map0:EXTENT='+ext+'&DPI=75'
+        url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER=area&CRS=EPSG:'+str(srid)+'&map0:EXTENT='+ext+'&DPI=75'
         start = time.time()
         buf = buffer(urlopen(url).read())
         end = time.time()
         print end - start, 'sec to GetPrint ', url
         
         # TODO uncoment to cleanup, the directory and its contend are kept for debug
-        shutil.rmtree(tmpdir)
+        #shutil.rmtree(tmpdir)
 
         return buf
 
-        areas, envelope, _area = get_as_epsg4326([self.geom])
-        
-        if areas == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
+    @classmethod
+    def __setup__(cls):
+        super(Area, cls).__setup__()
+        cls._buttons.update({           
+            'area_edit': {},
+        })
 
+    @classmethod
+    @ModelView.button_action('befref.report_area_edit')
+    def area_edit(cls, ids):
+        pass
 
+class AreaQGis(QGis):
+    __name__ = 'befref.area.qgis'
+    TITLES = {'befref.area': u'Area'}
 
-        m = MapRender(640, 480, envelope, True)
-               
-        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
+class AvgArea(Report):
+    __name__ = 'befref.avgarea'
+
+    @classmethod
+    def execute(cls, ids, data):
+        model = Pool().get(data['model'])
+        records = model.search([('id', 'in', ids)])
+        fields_info = [FieldInfo(name, ttype._type)
+                           for name,ttype in model._fields.iteritems()
+                           if  ttype._type in py2r]
+        df = dataframe(records, fields_info)
+
+        tmpdir = tempfile.mkdtemp()
+        os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
+        dot_rdata = os.path.join(tmpdir, data['model']+'.Rdata')
+        dot_rmd = os.path.join(tmpdir, cls.__name__+'.Rmd')
+        dot_md = os.path.join(tmpdir, cls.__name__+'.md')
+        dot_html = os.path.join(tmpdir, cls.__name__+'.html')
+        ActionReport = Pool().get('ir.action.report')
+        action_reports = ActionReport.search([
+                ('report_name', '=', cls.__name__)
+                ])
+        with open(dot_rmd, 'w') as template:
+            template.write("```{r Initialisation, echo=F, cache=T}\n")
+            template.write("load('"+dot_rdata+"')\n")
+            template.write("opts_knit$set(base.dir = '"+tmpdir+"')\n")
+            template.write("```\n\n")
+            template.write(action_reports[0].report_content)
+
+        #os.chdir(tmpdir)
+        robjects.r.assign(data['model'], df)
+        robjects.r("save("+data['model']+", file='"+dot_rdata+"')")
+        robjects.r("library('knitr')")
+        robjects.r("knit2html('"+dot_rmd+"', '"+dot_html+"')")
+
+        with open(dot_html, 'r') as html:
+            return ('html', html.read(), 
+                    action_reports[0].direct_print, action_reports[0].name )
+

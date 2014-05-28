@@ -1,6 +1,30 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="ir.action.report" id="report_avgarea">
+            <field name="name">Average area report</field>
+            <field name="model">befref.area</field>
+            <field name="report_name">befref.avgarea</field>
+            <field name="report">befref/befref.Rmd</field>
+        </record>
+        <record model="ir.action.keyword" id="report_avgarea_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">befref.area,-1</field>
+            <field name="action" ref="report_avgarea"/>
+        </record>
+
+        <record model="ir.action.report" id="report_area_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">befref.area</field>
+            <field name="report_name">befref.area.qgis</field>
+            <field name="report">qgis/befref.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_area_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">befref.area,-1</field>
+            <field name="action" ref="report_area_edit"/>
+        </record>
+
         <record model="ir.ui.icon" id="befref_icon">
             <field name="name">tryton-befref</field>
             <field name="path">icons/work_in_progress.svg</field>

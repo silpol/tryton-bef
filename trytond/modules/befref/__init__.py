@@ -30,3 +30,14 @@ def register():
         type_='model'
     )
 
+    Pool.register(
+        AreaQGis,               
+        module='befref',
+        type_='report'
+    )
+
+    Pool.register(
+        AvgArea,               
+        module='befref',
+        type_='report'
+    )
