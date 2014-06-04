@@ -108,7 +108,7 @@
     <projectlayers layercount="1">
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>Protected_area20140506181148066</id>
-            <datasource>http://192.168.1.18:8001/bioecoforest/model/wfs/wfs/wfs?SERVICE=WFS&amp;VERSION=1.0.0&amp;REQUEST=GetFeature&amp;TYPENAME=tryton:protection.area&amp;SRSNAME=EPSG:2154&amp;FILTER=&lt;ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <datasource>http://192.168.1.27:8001/bioecoforest/model/wfs/wfs/wfs?SERVICE=WFS&amp;VERSION=1.0.0&amp;REQUEST=GetFeature&amp;TYPENAME=tryton:protection.area&amp;SRSNAME=EPSG:2154&amp;FILTER=&lt;ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
  &lt;ogc:PropertyIsEqualTo>
   &lt;ogc:PropertyName>id&lt;/ogc:PropertyName>
   &lt;ogc:Literal>$featureid&lt;/ogc:Literal>

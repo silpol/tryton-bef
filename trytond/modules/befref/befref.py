@@ -79,6 +79,20 @@ class Area(ModelSQL, ModelView):
 
     image = fields.Function(fields.Binary('Image'), 'get_image')
 
+    espace = fields.Many2One(
+            'protection.type',
+            ondelete='RESTRICT',
+            string=u'Type of protected area',
+            required=True,
+            select=True
+        )
+
+    def default_espace(cls):
+        espace = Transaction().context.get('espace')
+        model = Pool().get('protection.type')
+        ids = model.search([('name', '=', espace)], limit=1)
+        return ids[0]
+
     def get_image(self, ids):
         if self.geom is None:
             return buffer('')
@@ -141,6 +155,27 @@ class AvgArea(Report):
                            if  ttype._type in py2r]
         df = dataframe(records, fields_info)
 
+        # get data for many2many and many2one
+        joined = {}
+        for name, ttype in model._fields.iteritems():
+            if ttype._type in ['many2one', 'many2many']:
+                keys = list(set([ val[name] 
+                    for val in model.read(ids, [name]) ]))
+                print type(ttype.model_name)
+                mdl = Pool().get(ttype.model_name)
+                rcrds = mdl.search([('id', 'in', keys)])
+                flds_info = [FieldInfo(nam, ttyp._type)
+                                   for nam, ttyp in mdl._fields.iteritems()
+                                   if  ttyp._type in py2r]
+                joined[ttype.model_name] = dataframe(rcrds, flds_info)
+
+                #model = Pool().get(name)
+                #records = model.search([('id', 'in', ids)])
+
+                #joined[name] = 
+
+        
+
         tmpdir = tempfile.mkdtemp()
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
         dot_rdata = os.path.join(tmpdir, data['model']+'.Rdata')
@@ -160,11 +195,22 @@ class AvgArea(Report):
 
         #os.chdir(tmpdir)
         robjects.r.assign(data['model'], df)
-        robjects.r("save("+data['model']+", file='"+dot_rdata+"')")
+        save_list = [data['model']]
+        for model_name, dfr in joined.iteritems():
+            robjects.r.assign(model_name, dfr)
+            save_list.append(model_name)
+        robjects.r("save(list=c("+','.join(["'"+elm+"'" for elm in save_list])+
+                "), file='"+dot_rdata+"')")
         robjects.r("library('knitr')")
         robjects.r("knit2html('"+dot_rmd+"', '"+dot_html+"')")
 
+
+        html_buf = None
         with open(dot_html, 'r') as html:
-            return ('html', html.read(), 
-                    action_reports[0].direct_print, action_reports[0].name )
+            html_buf = html.read()
+
+        shutil.rmtree(tmpdir)
+        return ('html', html_buf,
+                action_reports[0].direct_print, 
+                action_reports[0].name )
 

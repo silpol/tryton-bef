@@ -1,7 +1,12 @@
+# Test for .Rmd
+
 ```{r}
 befref.area[4:5]
 ```
 
+```{r}
+protection.type
+```
 
 ```{r, echo=F}
 plot(befref.area['id'])
