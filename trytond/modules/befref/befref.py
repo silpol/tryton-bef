@@ -87,6 +87,14 @@ class Area(ModelSQL, ModelView):
             select=True
         )
 
+    dummy_ref_to_self = fields.Many2One(
+            'befref.area',
+            ondelete='RESTRICT',
+            string=u'Dummy ref to self',
+            required=True,
+            select=True
+        )
+
     def default_espace(cls):
         espace = Transaction().context.get('espace')
         model = Pool().get('protection.type')
@@ -153,10 +161,9 @@ class AvgArea(Report):
         fields_info = [FieldInfo(name, ttype._type)
                            for name,ttype in model._fields.iteritems()
                            if  ttype._type in py2r]
-        df = dataframe(records, fields_info)
+        df = { data['model'] : dataframe(records, fields_info)}
 
         # get data for many2many and many2one
-        joined = {}
         for name, ttype in model._fields.iteritems():
             if ttype._type in ['many2one', 'many2many']:
                 keys = list(set([ val[name] 
@@ -167,17 +174,15 @@ class AvgArea(Report):
                 flds_info = [FieldInfo(nam, ttyp._type)
                                    for nam, ttyp in mdl._fields.iteritems()
                                    if  ttyp._type in py2r]
-                joined[ttype.model_name] = dataframe(rcrds, flds_info)
-
-                #model = Pool().get(name)
-                #records = model.search([('id', 'in', ids)])
-
-                #joined[name] = 
-
-        
+                # deal with reference to self
+                if model.__name__ == mdl.__name__:
+                    df[ttype.model_name] = dataframe(list(set(records+rcrds)), flds_info)
+                else:
+                    df[ttype.model_name] = dataframe(rcrds, flds_info)
 
         tmpdir = tempfile.mkdtemp()
-        os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
+        os.chmod(tmpdir, 
+                stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
         dot_rdata = os.path.join(tmpdir, data['model']+'.Rdata')
         dot_rmd = os.path.join(tmpdir, cls.__name__+'.Rmd')
         dot_md = os.path.join(tmpdir, cls.__name__+'.md')
@@ -194,9 +199,8 @@ class AvgArea(Report):
             template.write(action_reports[0].report_content)
 
         #os.chdir(tmpdir)
-        robjects.r.assign(data['model'], df)
-        save_list = [data['model']]
-        for model_name, dfr in joined.iteritems():
+        save_list = []
+        for model_name, dfr in df.iteritems():
             robjects.r.assign(model_name, dfr)
             save_list.append(model_name)
         robjects.r("save(list=c("+','.join(["'"+elm+"'" for elm in save_list])+

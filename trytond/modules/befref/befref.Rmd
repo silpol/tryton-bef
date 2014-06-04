@@ -2,6 +2,7 @@
 
 ```{r}
 befref.area[4:5]
+befref.area[c('id','dummy_ref_to_self')]
 ```
 
 ```{r}
