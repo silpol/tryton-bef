@@ -21,6 +21,7 @@ Copyright (c) 2012-2013 Pierre-Louis Bonicoli
 Reference implementation for stuff with geometry and map
 """
 
+from trytond.config import CONFIG
 from trytond.transaction import Transaction
 
 from collections import OrderedDict
@@ -48,6 +49,7 @@ import tempfile
 import string
 import stat
 import re
+import ConfigParser
 
 import time
 import grip
@@ -130,7 +132,13 @@ class Area(ModelSQL, ModelView):
         if not attachement:
             raise RuntimeError("not image.qgst attachement for "+self.__name__)
 
-        # replace feature id in .qgs file
+        # get credentials for qgsi server
+        config = ConfigParser.ConfigParser()
+        config.read(CONFIG['qgis_server_conf'])
+        username = config.get('options','username')
+        password = config.get('options','password')
+
+        # replace feature id in .qgs file and put credentials in
         tmpdir = tempfile.mkdtemp()
 
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
@@ -140,6 +148,8 @@ class Area(ModelSQL, ModelView):
         WfsConf = Pool().get('wfs.conf')
         wfs_url = WfsConf.get_url()
 
+
+
         for elem in dom.getElementsByTagName('datasource'):
             # check that this is the appropriate layer
             if -1 != elem.childNodes[0].data.find('TYPENAME=tryton:'+self.__name__):
@@ -147,7 +157,7 @@ class Area(ModelSQL, ModelView):
                         '<ogc:Literal>.*</ogc:Literal>', 
                         '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
                         elem.childNodes[0].data)
-                elem.childNodes[0].data += '&username=admin&password=tata'
+                elem.childNodes[0].data += '&username='+username+'&password='+password
 
         with open(dot_qgs, 'w') as file_out:
             dom.writexml(file_out, indent='  ')
@@ -156,20 +166,16 @@ class Area(ModelSQL, ModelView):
         width, height = 640, 800
         for compo in dom.getElementsByTagName('Composition'):
             for cmap in compo.getElementsByTagName('ComposerMap'):
-                print type(cmap.attributes['id'].value), cmap.attributes['id'].value
                 if cmap.attributes['id'].value == u'0':
                     ext = compo.getElementsByTagName('Extent')[0]
                     width = float(ext.attributes['xmax'].value) \
                             - float(ext.attributes['xmin'].value)
                     height = float(ext.attributes['ymax'].value) \
                             - float(ext.attributes['ymin'].value)
-                    print width, height
         layers=[layer.attributes['name'].value       
                 for layer in dom.getElementsByTagName('layer-tree-layer')]
 
         # compute bbox 
-        print '##################### get_image from project:', dot_qgs
-
         cursor = Transaction().cursor
         cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) '
             'FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
@@ -198,7 +204,7 @@ class Area(ModelSQL, ModelView):
         
         # TODO uncoment to cleanup, 
         # the directory and its contend are kept for debug
-        #shutil.rmtree(tmpdir)
+        shutil.rmtree(tmpdir)
 
         return buf
 
