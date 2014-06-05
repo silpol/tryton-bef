@@ -117,9 +117,11 @@ class Area(ModelSQL, ModelView):
             return buffer('')
 
         start = time.time()
-        # retrieve attached .qgst file
+
+        # retrieve attached .qgs file
         [model] = Pool().get('ir.model').search([('model', '=', self.__name__)])
-        attachements = Pool().get('ir.attachment').search([('resource', '=', "ir.model,%s"%model.id)])
+        attachements = Pool().get('ir.attachment').search(
+                [('resource', '=', "ir.model,%s"%model.id)])
         attachement = None
         for att in attachements: 
             if att.name == qgis_filename:
@@ -128,7 +130,7 @@ class Area(ModelSQL, ModelView):
         if not attachement:
             raise RuntimeError("not image.qgst attachement for "+self.__name__)
 
-        # create temp .qgs from .qgst (template instanciation)
+        # replace feature id in .qgs file
         tmpdir = tempfile.mkdtemp()
 
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
@@ -145,6 +147,7 @@ class Area(ModelSQL, ModelView):
                         '<ogc:Literal>.*</ogc:Literal>', 
                         '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
                         elem.childNodes[0].data)
+                elem.childNodes[0].data += '&username=admin&password=tata'
 
         with open(dot_qgs, 'w') as file_out:
             dom.writexml(file_out, indent='  ')
@@ -168,7 +171,8 @@ class Area(ModelSQL, ModelView):
         print '##################### get_image from project:', dot_qgs
 
         cursor = Transaction().cursor
-        cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
+        cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) '
+            'FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
         [srid, ext] = cursor.fetchone()
         if ext:
             margin = 500
@@ -178,9 +182,17 @@ class Area(ModelSQL, ModelView):
             ext =  ','.join(str(i) for i in [ext[0], ext[2], ext[1], ext[3]])
 
         # render image
-        url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+\
-                dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER='+','.join(layers[::-1])+'&CRS=EPSG:'+\
-                str(srid)+'&map0:EXTENT='+ext+'&DPI=75'
+        url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?'+'&'.join([
+              'SERVICE=WMS',
+              'VERSION=1.3.0',
+              'MAP='+dot_qgs,
+              'REQUEST=GetPrint',
+              'FORMAT=png',
+              'TEMPLATE=carte',
+              'LAYER='+','.join(layers[::-1]),
+              'CRS=EPSG:'+str(srid),
+              'map0:EXTENT='+ext,
+              'DPI=75'])
         buf = buffer(urlopen(url).read())
         print '##################### ', time.time() - start, 'sec to GetPrint ', url
         
