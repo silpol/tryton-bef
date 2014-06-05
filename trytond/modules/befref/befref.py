@@ -78,6 +78,7 @@ class Area(ModelSQL, ModelView):
         )
 
     image = fields.Function(fields.Binary('Image'), 'get_image')
+    map_ = fields.Function(fields.Binary('Image'), 'get_image')
 
     espace = fields.Many2One(
             'protection.type',
@@ -102,16 +103,29 @@ class Area(ModelSQL, ModelView):
         return ids[0]
 
     def get_image(self, ids):
+        """Return a feature image produced by qgis wms server from a template qgis file
+        containing a 'map' composion"""
         if self.geom is None:
             return buffer('')
 
+        start = time.time()
+        # retrieve attached .qgst file
+        [model] = Pool().get('ir.model').search([('model', '=', self.__name__)])
+        attachements = Pool().get('ir.attachment').search([('resource', '=', "ir.model,%s"%model.id)])
+        attachement = None
+        for att in attachements: 
+            if att.name == "image.qgst":
+                attachement = att
+                break
+        if not attachement:
+            raise RuntimeError("not image.qgst attachement for "+self.__name__)
+
+        # create temp .qgs from .qgst (template instanciation)
         tmpdir = tempfile.mkdtemp()
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
-        dot_qgst = os.path.join(os.path.dirname(__file__), 'area.qgst')
         dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
-        with open(dot_qgst, 'r') as file_in, open(dot_qgs, 'w') as file_out:
-            tmp = string.Template(file_in.read())
-            file_out.write(tmp.substitute({'featureid': self.id}))
+        with open(dot_qgs, 'w') as file_out:
+            file_out.write(string.Template(attachement.data).substitute({'featureid': self.id}))
 
         print '##################### get_image from project:', dot_qgs
 
@@ -124,11 +138,11 @@ class Area(ModelSQL, ModelView):
             ext = bbox_aspect([ext[0]-5000, ext[2]+5000, ext[1]-5000, ext[3]+5000], 640, 480)    
             ext =  ','.join(str(i) for i in [ext[0], ext[2], ext[1], ext[3]])
 
-        url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER=area&CRS=EPSG:'+str(srid)+'&map0:EXTENT='+ext+'&DPI=75'
-        start = time.time()
+        url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+\
+                dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER=area&CRS=EPSG:'+\
+                str(srid)+'&map0:EXTENT='+ext+'&DPI=75'
         buf = buffer(urlopen(url).read())
-        end = time.time()
-        print end - start, 'sec to GetPrint ', url
+        print '##################### ', time.time() - start, 'sec to GetPrint ', url
         
         # TODO uncoment to cleanup, the directory and its contend are kept for debug
         #shutil.rmtree(tmpdir)
@@ -168,7 +182,6 @@ class AvgArea(Report):
             if ttype._type in ['many2one', 'many2many']:
                 keys = list(set([ val[name] 
                     for val in model.read(ids, [name]) ]))
-                print type(ttype.model_name)
                 mdl = Pool().get(ttype.model_name)
                 rcrds = mdl.search([('id', 'in', keys)])
                 flds_info = [FieldInfo(nam, ttyp._type)
@@ -191,6 +204,9 @@ class AvgArea(Report):
         action_reports = ActionReport.search([
                 ('report_name', '=', cls.__name__)
                 ])
+        print "##################################################"
+        print action_reports[0].report_content_custom
+        print "##################################################"
         with open(dot_rmd, 'w') as template:
             template.write("```{r Initialisation, echo=F, cache=T}\n")
             template.write("load('"+dot_rdata+"')\n")
