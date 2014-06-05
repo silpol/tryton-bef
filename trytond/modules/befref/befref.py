@@ -47,10 +47,12 @@ import shutil
 import tempfile
 import string
 import stat
-import codecs
+import re
 
 import time
 import grip
+
+from xml.dom import minidom
 
 from rpy2 import robjects
 
@@ -114,7 +116,7 @@ class Area(ModelSQL, ModelView):
         attachements = Pool().get('ir.attachment').search([('resource', '=', "ir.model,%s"%model.id)])
         attachement = None
         for att in attachements: 
-            if att.name == "image.qgst":
+            if att.name == "image.qgs":
                 attachement = att
                 break
         if not attachement:
@@ -122,29 +124,61 @@ class Area(ModelSQL, ModelView):
 
         # create temp .qgs from .qgst (template instanciation)
         tmpdir = tempfile.mkdtemp()
+
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
         dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
-        with open(dot_qgs, 'w') as file_out:
-            file_out.write(string.Template(attachement.data).substitute({'featureid': self.id}))
+        dom = minidom.parseString( attachement.data )
 
+        WfsConf = Pool().get('wfs.conf')
+        wfs_url = WfsConf.get_url()
+
+        for elem in dom.getElementsByTagName('datasource'):
+            # check that this is the appropriate layer
+            if -1 != elem.childNodes[0].data.find('TYPENAME=tryton:'+self.__name__):
+                elem.childNodes[0].data = re.sub(
+                        '<ogc:Literal>.*</ogc:Literal>', 
+                        '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
+                        elem.childNodes[0].data)
+
+        with open(dot_qgs, 'w') as file_out:
+            dom.writexml(file_out, indent='  ')
+
+        # find the composer map aspect ratio
+        width, height = 640, 800
+        for compo in dom.getElementsByTagName('Composition'):
+            for cmap in compo.getElementsByTagName('ComposerMap'):
+                print type(cmap.attributes['id'].value), cmap.attributes['id'].value
+                if cmap.attributes['id'].value == u'0':
+                    ext = compo.getElementsByTagName('Extent')[0]
+                    width = float(ext.attributes['xmax'].value) \
+                            - float(ext.attributes['xmin'].value)
+                    height = float(ext.attributes['ymax'].value) \
+                            - float(ext.attributes['ymin'].value)
+                    print width, height
+
+
+        # compute bbox 
         print '##################### get_image from project:', dot_qgs
 
         cursor = Transaction().cursor
         cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
         [srid, ext] = cursor.fetchone()
         if ext:
+            margin = 500
             ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
             ext = [float(i) for i in ext.split(',')]
-            ext = bbox_aspect([ext[0]-5000, ext[2]+5000, ext[1]-5000, ext[3]+5000], 640, 480)    
+            ext = bbox_aspect([ext[0]-margin, ext[2]+margin, ext[1]-margin, ext[3]+margin], width, height)    
             ext =  ','.join(str(i) for i in [ext[0], ext[2], ext[1], ext[3]])
 
+        # render image
         url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+\
                 dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER=area&CRS=EPSG:'+\
                 str(srid)+'&map0:EXTENT='+ext+'&DPI=75'
         buf = buffer(urlopen(url).read())
         print '##################### ', time.time() - start, 'sec to GetPrint ', url
         
-        # TODO uncoment to cleanup, the directory and its contend are kept for debug
+        # TODO uncoment to cleanup, 
+        # the directory and its contend are kept for debug
         #shutil.rmtree(tmpdir)
 
         return buf
