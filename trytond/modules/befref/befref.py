@@ -80,7 +80,7 @@ class Area(ModelSQL, ModelView):
         )
 
     image = fields.Function(fields.Binary('Image'), 'get_image')
-    map_ = fields.Function(fields.Binary('Image'), 'get_image')
+    map_ = fields.Function(fields.Binary('Image'), 'get_map')
 
     espace = fields.Many2One(
             'protection.type',
@@ -105,6 +105,12 @@ class Area(ModelSQL, ModelView):
         return ids[0]
 
     def get_image(self, ids):
+        return self.__get_image( ids, 'image.qgs' )
+
+    def get_map(self, ids):
+        return self.__get_image( ids, 'map.qgs' )
+
+    def __get_image(self, ids, qgis_filename):
         """Return a feature image produced by qgis wms server from a template qgis file
         containing a 'map' composion"""
         if self.geom is None:
@@ -116,7 +122,7 @@ class Area(ModelSQL, ModelView):
         attachements = Pool().get('ir.attachment').search([('resource', '=', "ir.model,%s"%model.id)])
         attachement = None
         for att in attachements: 
-            if att.name == "image.qgs":
+            if att.name == qgis_filename:
                 attachement = att
                 break
         if not attachement:
