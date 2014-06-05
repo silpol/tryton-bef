@@ -155,7 +155,8 @@ class Area(ModelSQL, ModelView):
                     height = float(ext.attributes['ymax'].value) \
                             - float(ext.attributes['ymin'].value)
                     print width, height
-
+        layers=[layer.attributes['name'].value       
+                for layer in dom.getElementsByTagName('layer-tree-layer')]
 
         # compute bbox 
         print '##################### get_image from project:', dot_qgs
@@ -172,7 +173,7 @@ class Area(ModelSQL, ModelView):
 
         # render image
         url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&MAP='+\
-                dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER=area&CRS=EPSG:'+\
+                dot_qgs+'&REQUEST=GetPrint&FORMAT=png&TEMPLATE=carte&LAYER='+','.join(layers[::-1])+'&CRS=EPSG:'+\
                 str(srid)+'&map0:EXTENT='+ext+'&DPI=75'
         buf = buffer(urlopen(url).read())
         print '##################### ', time.time() - start, 'sec to GetPrint ', url
