@@ -1,6 +1,17 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="ir.action.wizard" id="generate">
+            <field name="name">Generate maps...</field>
+            <field name="model">befref.area,-1</field>
+            <field name="wiz_name">befref.generate</field>
+        </record>
+        <record model="ir.action.keyword" id="generate_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">befref.area,-1</field>
+            <field name="action" ref="generate"/>
+        </record>
+
         <record model="ir.action.report" id="report_avgarea">
             <field name="name">Average area report</field>
             <field name="model">befref.area</field>

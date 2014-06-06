@@ -41,3 +41,9 @@ def register():
         module='befref',
         type_='report'
     )
+
+    Pool.register(
+        Generate,               
+        module='befref',
+        type_='wizard'
+    )

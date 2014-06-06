@@ -23,17 +23,17 @@ Reference implementation for stuff with geometry and map
 
 from trytond.config import CONFIG
 from trytond.transaction import Transaction
-
 from collections import OrderedDict
 from datetime import date
 import os
 
 from osgeo import osr
 
+from trytond.pool import PoolMeta, Pool
 from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
 from trytond.pyson import Bool, Eval, Not
-from trytond.pool import PoolMeta, Pool
 from trytond.report import Report
+from trytond.wizard import Wizard
 
 from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect
 from trytond.modules.map.map_render import MapRender
@@ -58,7 +58,7 @@ from xml.dom import minidom
 
 from rpy2 import robjects
 
-__all__ = ['Area', 'AreaQGis', 'AvgArea']
+__all__ = ['Area', 'AreaQGis', 'AvgArea', 'Generate']
 
 FieldInfo = namedtuple('FieldInfo', ['name', 'ttype'])
 
@@ -82,7 +82,7 @@ class Area(ModelSQL, ModelView):
         )
 
     image = fields.Function(fields.Binary('Image'), 'get_image')
-    map_ = fields.Function(fields.Binary('Image'), 'get_map')
+    image_map = fields.Binary('Image map', filename='image_filename')
 
     espace = fields.Many2One(
             'protection.type',
@@ -96,9 +96,17 @@ class Area(ModelSQL, ModelView):
             'befref.area',
             ondelete='RESTRICT',
             string=u'Dummy ref to self',
-            required=True,
+            required=False,
             select=True
         )
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.name is None:
+                continue
+            cls.write([record], {'image_map': cls.get_image(record, 'image')})  
 
     def default_espace(cls):
         espace = Transaction().context.get('espace')
@@ -107,12 +115,12 @@ class Area(ModelSQL, ModelView):
         return ids[0]
 
     def get_image(self, ids):
-        return self.__get_image( ids, 'image.qgs' )
+        return self.__get_image( 'image.qgs' )
 
     def get_map(self, ids):
-        return self.__get_image( ids, 'map.qgs' )
+        return self.__get_image( 'map.qgs' )
 
-    def __get_image(self, ids, qgis_filename):
+    def __get_image(self, qgis_filename):
         """Return a feature image produced by qgis wms server from a template qgis file
         containing a 'map' composion"""
         if self.geom is None:
@@ -130,7 +138,7 @@ class Area(ModelSQL, ModelView):
                 attachement = att
                 break
         if not attachement:
-            raise RuntimeError("not image.qgst attachement for "+self.__name__)
+            raise RuntimeError("not image.qgs attachement for "+self.__name__)
 
         # get credentials for qgsi server
         config = ConfigParser.ConfigParser()
@@ -213,6 +221,7 @@ class Area(ModelSQL, ModelView):
         super(Area, cls).__setup__()
         cls._buttons.update({           
             'area_edit': {},
+            'generate': {},
         })
 
     @classmethod
@@ -223,6 +232,19 @@ class Area(ModelSQL, ModelView):
 class AreaQGis(QGis):
     __name__ = 'befref.area.qgis'
     TITLES = {'befref.area': u'Area'}
+
+class Generate(Wizard):
+    __name__ = 'befref.generate'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('befref.area')
+        records = model.search([])
+        for record in records:
+            record.generate([record])
+        return []
+
+
 
 class AvgArea(Report):
     __name__ = 'befref.avgarea'
@@ -263,9 +285,6 @@ class AvgArea(Report):
         action_reports = ActionReport.search([
                 ('report_name', '=', cls.__name__)
                 ])
-        print "##################################################"
-        print action_reports[0].report_content_custom
-        print "##################################################"
         with open(dot_rmd, 'w') as template:
             template.write("```{r Initialisation, echo=F, cache=T}\n")
             template.write("load('"+dot_rdata+"')\n")
