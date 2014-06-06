@@ -49,6 +49,7 @@ import tempfile
 import string
 import stat
 import re
+import codecs
 import ConfigParser
 
 import time
@@ -106,7 +107,7 @@ class Area(ModelSQL, ModelView):
         for record in records:
             if record.name is None:
                 continue
-            cls.write([record], {'image_map': cls.get_image(record, 'image')})  
+            cls.write([record], {'image_map': cls.get_map(record, 'map')})  
 
     def default_espace(cls):
         espace = Transaction().context.get('espace')
@@ -167,7 +168,7 @@ class Area(ModelSQL, ModelView):
                         elem.childNodes[0].data)
                 elem.childNodes[0].data += '&username='+username+'&password='+password
 
-        with open(dot_qgs, 'w') as file_out:
+        with codecs.open(dot_qgs, 'w', 'utf-8') as file_out:
             dom.writexml(file_out, indent='  ')
 
         # find the composer map aspect ratio
