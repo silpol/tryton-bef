@@ -21,43 +21,34 @@ Copyright (c) 2012-2013 Pierre-Louis Bonicoli
 Reference implementation for stuff with geometry and map
 """
 
-from trytond.config import CONFIG
 from trytond.transaction import Transaction
-from collections import OrderedDict
-from datetime import date
-import os
-
-from osgeo import osr
-
 from trytond.pool import PoolMeta, Pool
-from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
-from trytond.pyson import Bool, Eval, Not
+from trytond.model import ModelView, ModelSQL, fields
 from trytond.report import Report
 from trytond.wizard import Wizard
 
-from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect
-from trytond.modules.map.map_render import MapRender
+from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
 
-from trytond.modules.rtryton.r_tools import dataframe, py2r
-
-from collections import namedtuple
-from urllib import urlopen
-from cStringIO import StringIO
 import shutil
 import tempfile
-import string
 import stat
 import re
 import codecs
 import ConfigParser
-
 import time
-import grip
+import os
 
+# for .qgs parsing and server com
+from urllib import urlopen
+from trytond.config import CONFIG
 from xml.dom import minidom
 
+# for .Rmd reports
+from trytond.modules.rtryton.r_tools import dataframe, py2r
 from rpy2 import robjects
+from collections import namedtuple
+
 
 __all__ = ['Area', 'AreaQGis', 'AvgArea', 'Generate']
 
