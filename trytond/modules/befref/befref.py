@@ -141,7 +141,7 @@ class Area(ModelSQL, ModelView):
         # replace feature id in .qgs file and put credentials in
         tmpdir = tempfile.mkdtemp()
 
-        os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
+        os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
         dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
         dom = minidom.parseString( attachement.data )
 
