@@ -12,17 +12,29 @@
             <field name="action" ref="generate"/>
         </record>
 
-        <record model="ir.action.report" id="report_avgarea">
-            <field name="name">Average area report</field>
+        <record model="ir.action.report" id="report_avgarea_html">
+            <field name="name">Average area report (html)</field>
             <field name="model">befref.area</field>
             <field name="report_name">befref.avgarea</field>
             <field name="report">befref/befref.Rmd</field>
         </record>
-        <record model="ir.action.keyword" id="report_avgarea_kwd">
+        <record model="ir.action.keyword" id="report_avgarea_kwd_html">
             <field name="keyword">form_action</field>
             <field name="model">befref.area,-1</field>
-            <field name="action" ref="report_avgarea"/>
+            <field name="action" ref="report_avgarea_html"/>
         </record>
+
+        <!--record model="ir.action.report" id="report_avgarea_pdf">
+            <field name="name">Average area report (pdf) </field>
+            <field name="model">befref.area</field>
+            <field name="report_name">befref.avgarea</field>
+            <field name="report">befref/befref.Rnw</field>
+        </record>
+        <record model="ir.action.keyword" id="report_avgarea_kwd_pdf">
+            <field name="keyword">form_action</field>
+            <field name="model">befref.area,-1</field>
+            <field name="action" ref="report_avgarea_pdf"/>
+        </record-->
 
         <record model="ir.action.report" id="report_area_edit">
             <field name="name">Open in QGis...</field>

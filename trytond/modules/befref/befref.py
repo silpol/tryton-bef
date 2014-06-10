@@ -38,6 +38,7 @@ import codecs
 import ConfigParser
 import time
 import os
+import base64
 
 # for .qgs parsing and server com
 from urllib import urlopen
@@ -204,7 +205,7 @@ class Area(ModelSQL, ModelView):
         
         # TODO uncoment to cleanup, 
         # the directory and its contend are kept for debug
-        shutil.rmtree(tmpdir)
+        #shutil.rmtree(tmpdir)
 
         return buf
 
@@ -268,39 +269,66 @@ class AvgArea(Report):
 
         tmpdir = tempfile.mkdtemp()
         os.chmod(tmpdir, 
-                stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXOTH|stat.S_IROTH)
+                stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
         dot_rdata = os.path.join(tmpdir, data['model']+'.Rdata')
-        dot_rmd = os.path.join(tmpdir, cls.__name__+'.Rmd')
-        dot_md = os.path.join(tmpdir, cls.__name__+'.md')
-        dot_html = os.path.join(tmpdir, cls.__name__+'.html')
-        ActionReport = Pool().get('ir.action.report')
-        action_reports = ActionReport.search([
-                ('report_name', '=', cls.__name__)
-                ])
-        with open(dot_rmd, 'w') as template:
-            template.write("```{r Initialisation, echo=F, cache=T}\n")
-            template.write("load('"+dot_rdata+"')\n")
-            template.write("opts_knit$set(base.dir = '"+tmpdir+"')\n")
-            template.write("```\n\n")
-            template.write(action_reports[0].report_content)
 
-        #os.chdir(tmpdir)
         save_list = []
         for model_name, dfr in df.iteritems():
             robjects.r.assign(model_name, dfr)
             save_list.append(model_name)
         robjects.r("save(list=c("+','.join(["'"+elm+"'" for elm in save_list])+
                 "), file='"+dot_rdata+"')")
-        robjects.r("library('knitr')")
-        robjects.r("knit2html('"+dot_rmd+"', '"+dot_html+"')")
 
+        ActionReport = Pool().get('ir.action.report')
+        action_reports = ActionReport.search([
+                ('report_name', '=', cls.__name__)
+                ])
+        input_file = None
+        output_file = None
+        print "################ ",tmpdir,"########################"
+        ext = os.path.splitext(action_reports[0].report)[1]
+        if ext == '.Rnw':
+            input_file = os.path.join(tmpdir, cls.__name__+'.Rnw')
+            output_file = os.path.join(tmpdir, cls.__name__+'.pdf')
+            with open(input_file, 'w') as template:
+                template.write("<<Initialisation, echo=F, cache=T>>=\n")
+                template.write("load('"+dot_rdata+"')\n")
+                template.write("opts_knit$set(base.dir = '"+tmpdir+"')\n")
+                template.write("@\n\n")
+                if action_reports[0].report_content_custom:
+                    template.write(action_reports[0].report_content_custom)
+                else:
+                    template.write(action_reports[0].report_content)
 
-        html_buf = None
-        with open(dot_html, 'r') as html:
-            html_buf = html.read()
+            robjects.r("setwd('"+tmpdir+"')")
+            robjects.r("library('knitr')")
+            robjects.r("knit2pdf('"+input_file+"')")
+        elif ext == '.Rmd':
+            input_file = os.path.join(tmpdir, cls.__name__+'.Rmd')
+            output_file = os.path.join(tmpdir, cls.__name__+'.html')
+            with open(input_file, 'w') as template:
+                template.write("```{r Initialisation, echo=F, cache=T}\n")
+                template.write("load('"+dot_rdata+"')\n")
+                template.write("opts_knit$set(base.dir = '"+tmpdir+"')\n")
+                template.write("```\n\n")
+                if action_reports[0].report_content_custom:
+                    template.write(action_reports[0].report_content_custom)
+                else:
+                    template.write(action_reports[0].report_content)
+
+            robjects.r("library('knitr')")
+            robjects.r("knit2html('"+input_file+"', '"+output_file+"')")
+
+        else:
+            raise RuntimeError('Unsuported report extention: '+ext) 
+
+        buf = None
+        with open(output_file, 'rb') as out:
+            buf = buffer(out.read())
 
         shutil.rmtree(tmpdir)
-        return ('html', html_buf,
+        return (os.path.splitext(output_file)[1], 
+                buf,
                 action_reports[0].direct_print, 
                 action_reports[0].name )
 
