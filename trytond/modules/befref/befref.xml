@@ -3,7 +3,7 @@
     <data>
         <record model="ir.action.wizard" id="generate">
             <field name="name">Generate maps...</field>
-            <field name="model">befref.area,-1</field>
+            <field name="model">befref.area</field>
             <field name="wiz_name">befref.generate</field>
         </record>
         <record model="ir.action.keyword" id="generate_all_kwd">
