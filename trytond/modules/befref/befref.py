@@ -38,7 +38,7 @@ import codecs
 import ConfigParser
 import time
 import os
-import base64
+import urlparse, urllib
 
 # for .qgs parsing and server com
 from urllib import urlopen
@@ -141,6 +141,8 @@ class Area(ModelSQL, ModelView):
 
         # replace feature id in .qgs file and put credentials in
         tmpdir = tempfile.mkdtemp()
+        # tmpdir = '/tmp/toto'
+        # if not os.path.exists(tmpdir): os.mkdir(tmpdir)
 
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
         dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
@@ -153,12 +155,20 @@ class Area(ModelSQL, ModelView):
 
         for elem in dom.getElementsByTagName('datasource'):
             # check that this is the appropriate layer
-            if -1 != elem.childNodes[0].data.find('TYPENAME=tryton:'+self.__name__):
-                elem.childNodes[0].data = re.sub(
-                        '<ogc:Literal>.*</ogc:Literal>', 
-                        '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
-                        elem.childNodes[0].data)
-                elem.childNodes[0].data += '&username='+username+'&password='+password
+            url_parts = urlparse.urlparse(elem.childNodes[0].data)
+            param = urlparse.parse_qs(url_parts[4])
+            if param['TYPENAME'][0].find('tryton:') != -1:
+                if 'FILTER' in param :
+                    filt = urllib.unquote(param['FILTER'][0])
+                    filt = re.sub(
+                            '<ogc:Literal>.*</ogc:Literal>', 
+                            '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
+                            filt)
+                    param.update({'FILTER' : [urllib.quote(filt)]})
+                param.update({'username' : [username], 'password' : [password]})
+                elem.childNodes[0].data = urlparse.urlunparse(list(url_parts[0:4]) + 
+                        ['&'.join([key+'='+','.join(val) for key, val in param.iteritems()])] + 
+                        list(url_parts[5:]))
 
         with codecs.open(dot_qgs, 'w', 'utf-8') as file_out:
             dom.writexml(file_out, indent='  ')
@@ -196,7 +206,7 @@ class Area(ModelSQL, ModelView):
               'REQUEST=GetPrint',
               'FORMAT=png',
               'TEMPLATE=carte',
-              'LAYER='+','.join(layers[::-1]),
+              'LAYER='+','.join([urllib.quote(l) for l in layers[::-1]]),
               'CRS=EPSG:'+str(srid),
               'map0:EXTENT='+ext,
               'DPI=75'])
@@ -205,7 +215,7 @@ class Area(ModelSQL, ModelView):
         
         # TODO uncoment to cleanup, 
         # the directory and its contend are kept for debug
-        #shutil.rmtree(tmpdir)
+        shutil.rmtree(tmpdir)
 
         return buf
 
