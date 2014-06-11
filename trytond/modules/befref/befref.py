@@ -206,7 +206,7 @@ class Area(ModelSQL, ModelView):
               'REQUEST=GetPrint',
               'FORMAT=png',
               'TEMPLATE=carte',
-              'LAYER='+','.join([urllib.quote(l) for l in layers[::-1]]),
+              'LAYER='+','.join([urllib.quote(l.encode('utf-8')) for l in layers[::-1]]),
               'CRS=EPSG:'+str(srid),
               'map0:EXTENT='+ext,
               'DPI=75'])
