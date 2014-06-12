@@ -22,9 +22,13 @@ Copyright (c) 2013 Laurent Defert
 from trytond.pool import Pool
 
 from .qgis import QGis, QGisConf
+from .mapable import Mapable
 
 
 def register():
+    Pool.register(
+        Mapable,
+        module='qgis', type_='model')
     Pool.register(
         QGisConf,
         module='qgis', type_='model')

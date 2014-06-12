@@ -29,8 +29,8 @@ from trytond.wizard import Wizard
 
 from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
-import shutil
 import tempfile
 import stat
 import re
@@ -55,13 +55,13 @@ __all__ = ['Area', 'AreaQGis', 'AvgArea', 'Generate']
 
 FieldInfo = namedtuple('FieldInfo', ['name', 'ttype'])
 
-class Area(ModelSQL, ModelView):
+class Area(Mapable, ModelView, ModelSQL):
     u'Protected area'
     __name__ = 'befref.area'
 
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.1)
-
+    
     name = fields.Char(
             string=u'Site name',
             help=u'Site name',
@@ -101,123 +101,16 @@ class Area(ModelSQL, ModelView):
                 continue
             cls.write([record], {'image_map': cls.get_map(record, 'map')})  
 
+    @classmethod
     def default_espace(cls):
-        espace = Transaction().context.get('espace')
-        model = Pool().get('protection.type')
-        ids = model.search([('name', '=', espace)], limit=1)
-        return ids[0]
+        return 1 
 
     def get_image(self, ids):
-        return self.__get_image( 'image.qgs' )
+        return self._get_image( 'image.qgs' )
 
     def get_map(self, ids):
-        return self.__get_image( 'map.qgs' )
+        return self._get_image( 'map.qgs' )
 
-    def __get_image(self, qgis_filename):
-        """Return a feature image produced by qgis wms server from a template qgis file
-        containing a 'map' composion"""
-        if self.geom is None:
-            return buffer('')
-
-        start = time.time()
-
-        # retrieve attached .qgs file
-        [model] = Pool().get('ir.model').search([('model', '=', self.__name__)])
-        attachements = Pool().get('ir.attachment').search(
-                [('resource', '=', "ir.model,%s"%model.id)])
-        attachement = None
-        for att in attachements: 
-            if att.name == qgis_filename:
-                attachement = att
-                break
-        if not attachement:
-            raise RuntimeError("not image.qgs attachement for "+self.__name__)
-
-        # get credentials for qgsi server
-        config = ConfigParser.ConfigParser()
-        config.read(CONFIG['qgis_server_conf'])
-        username = config.get('options','username')
-        password = config.get('options','password')
-
-        # replace feature id in .qgs file and put credentials in
-        tmpdir = tempfile.mkdtemp()
-        # tmpdir = '/tmp/toto'
-        # if not os.path.exists(tmpdir): os.mkdir(tmpdir)
-
-        os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
-        dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
-        dom = minidom.parseString( attachement.data )
-
-        WfsConf = Pool().get('wfs.conf')
-        wfs_url = WfsConf.get_url()
-
-
-
-        for elem in dom.getElementsByTagName('datasource'):
-            # check that this is the appropriate layer
-            url_parts = urlparse.urlparse(elem.childNodes[0].data)
-            param = urlparse.parse_qs(url_parts[4])
-            if param['TYPENAME'][0].find('tryton:') != -1:
-                if 'FILTER' in param :
-                    filt = urllib.unquote(param['FILTER'][0])
-                    filt = re.sub(
-                            '<ogc:Literal>.*</ogc:Literal>', 
-                            '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
-                            filt)
-                    param.update({'FILTER' : [urllib.quote(filt)]})
-                param.update({'username' : [username], 'password' : [password]})
-                elem.childNodes[0].data = urlparse.urlunparse(list(url_parts[0:4]) + 
-                        ['&'.join([key+'='+','.join(val) for key, val in param.iteritems()])] + 
-                        list(url_parts[5:]))
-
-        with codecs.open(dot_qgs, 'w', 'utf-8') as file_out:
-            dom.writexml(file_out, indent='  ')
-
-        # find the composer map aspect ratio
-        width, height = 640, 800
-        for compo in dom.getElementsByTagName('Composition'):
-            for cmap in compo.getElementsByTagName('ComposerMap'):
-                if cmap.attributes['id'].value == u'0':
-                    ext = compo.getElementsByTagName('Extent')[0]
-                    width = float(ext.attributes['xmax'].value) \
-                            - float(ext.attributes['xmin'].value)
-                    height = float(ext.attributes['ymax'].value) \
-                            - float(ext.attributes['ymin'].value)
-        layers=[layer.attributes['name'].value       
-                for layer in dom.getElementsByTagName('layer-tree-layer')]
-
-        # compute bbox 
-        cursor = Transaction().cursor
-        cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) '
-            'FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
-        [srid, ext] = cursor.fetchone()
-        if ext:
-            margin = 500
-            ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
-            ext = [float(i) for i in ext.split(',')]
-            ext = bbox_aspect([ext[0]-margin, ext[2]+margin, ext[1]-margin, ext[3]+margin], width, height)    
-            ext =  ','.join(str(i) for i in [ext[0], ext[2], ext[1], ext[3]])
-
-        # render image
-        url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?'+'&'.join([
-              'SERVICE=WMS',
-              'VERSION=1.3.0',
-              'MAP='+dot_qgs,
-              'REQUEST=GetPrint',
-              'FORMAT=png',
-              'TEMPLATE=carte',
-              'LAYER='+','.join([urllib.quote(l.encode('utf-8')) for l in layers[::-1]]),
-              'CRS=EPSG:'+str(srid),
-              'map0:EXTENT='+ext,
-              'DPI=75'])
-        buf = buffer(urlopen(url).read())
-        print '##################### ', time.time() - start, 'sec to GetPrint ', url
-        
-        # TODO uncoment to cleanup, 
-        # the directory and its contend are kept for debug
-        shutil.rmtree(tmpdir)
-
-        return buf
 
     @classmethod
     def __setup__(cls):
