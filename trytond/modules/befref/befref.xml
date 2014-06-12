@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <!-- generate all maps -->
         <record model="ir.action.wizard" id="generate">
             <field name="name">Generate maps...</field>
             <field name="model">befref.area</field>
@@ -12,10 +13,11 @@
             <field name="action" ref="generate"/>
         </record>
 
+        <!-- html report -->
         <record model="ir.action.report" id="report_avgarea_html">
             <field name="name">Average area report (html)</field>
             <field name="model">befref.area</field>
-            <field name="report_name">befref.avgarea</field>
+            <field name="report_name">rtryton.htmlreport</field>
             <field name="report">befref/befref.Rmd</field>
         </record>
         <record model="ir.action.keyword" id="report_avgarea_kwd_html">
@@ -24,18 +26,20 @@
             <field name="action" ref="report_avgarea_html"/>
         </record>
 
-        <!--record model="ir.action.report" id="report_avgarea_pdf">
+        <!-- pdf report -->
+        <record model="ir.action.report" id="report_avgarea_pdf">
             <field name="name">Average area report (pdf) </field>
             <field name="model">befref.area</field>
-            <field name="report_name">befref.avgarea</field>
+            <field name="report_name">rtryton.pdfreport</field>
             <field name="report">befref/befref.Rnw</field>
         </record>
         <record model="ir.action.keyword" id="report_avgarea_kwd_pdf">
             <field name="keyword">form_action</field>
             <field name="model">befref.area,-1</field>
             <field name="action" ref="report_avgarea_pdf"/>
-        </record-->
+        </record>
 
+        <!-- feature edition with qgis -->
         <record model="ir.action.report" id="report_area_edit">
             <field name="name">Open in QGis...</field>
             <field name="model">befref.area</field>
@@ -47,6 +51,8 @@
             <field name="model">befref.area,-1</field>
             <field name="action" ref="report_area_edit"/>
         </record>
+
+        <!--  -->
 
         <record model="ir.ui.icon" id="befref_icon">
             <field name="name">tryton-befref</field>

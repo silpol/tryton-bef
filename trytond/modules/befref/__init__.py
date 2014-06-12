@@ -37,12 +37,6 @@ def register():
     )
 
     Pool.register(
-        AvgArea,               
-        module='befref',
-        type_='report'
-    )
-
-    Pool.register(
         Generate,               
         module='befref',
         type_='wizard'

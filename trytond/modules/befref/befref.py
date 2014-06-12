@@ -21,39 +21,16 @@ Copyright (c) 2012-2013 Pierre-Louis Bonicoli
 Reference implementation for stuff with geometry and map
 """
 
-from trytond.transaction import Transaction
-from trytond.pool import PoolMeta, Pool
+from trytond.pool import  Pool
 from trytond.model import ModelView, ModelSQL, fields
-from trytond.report import Report
 from trytond.wizard import Wizard
 
 from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
 
-import tempfile
-import stat
-import re
-import codecs
-import ConfigParser
-import time
-import os
-import urlparse, urllib
+__all__ = ['Area', 'AreaQGis', 'Generate']
 
-# for .qgs parsing and server com
-from urllib import urlopen
-from trytond.config import CONFIG
-from xml.dom import minidom
-
-# for .Rmd reports
-from trytond.modules.rtryton.r_tools import dataframe, py2r
-from rpy2 import robjects
-from collections import namedtuple
-
-
-__all__ = ['Area', 'AreaQGis', 'AvgArea', 'Generate']
-
-FieldInfo = namedtuple('FieldInfo', ['name', 'ttype'])
 
 class Area(Mapable, ModelView, ModelSQL):
     u'Protected area'
@@ -106,10 +83,10 @@ class Area(Mapable, ModelView, ModelSQL):
         return 1 
 
     def get_image(self, ids):
-        return self._get_image( 'image.qgs' )
+        return self._get_image( 'image.qgs', 'carte' )
 
     def get_map(self, ids):
-        return self._get_image( 'map.qgs' )
+        return self._get_image( 'map.qgs', 'carte' )
 
 
     @classmethod
@@ -139,99 +116,3 @@ class Generate(Wizard):
         for record in records:
             record.generate([record])
         return []
-
-
-
-class AvgArea(Report):
-    __name__ = 'befref.avgarea'
-
-    @classmethod
-    def execute(cls, ids, data):
-        model = Pool().get(data['model'])
-        records = model.search([('id', 'in', ids)])
-        fields_info = [FieldInfo(name, ttype._type)
-                           for name,ttype in model._fields.iteritems()
-                           if  ttype._type in py2r]
-        df = { data['model'] : dataframe(records, fields_info)}
-
-        # get data for many2many and many2one
-        for name, ttype in model._fields.iteritems():
-            if ttype._type in ['many2one', 'many2many']:
-                keys = list(set([ val[name] 
-                    for val in model.read(ids, [name]) ]))
-                mdl = Pool().get(ttype.model_name)
-                rcrds = mdl.search([('id', 'in', keys)])
-                flds_info = [FieldInfo(nam, ttyp._type)
-                                   for nam, ttyp in mdl._fields.iteritems()
-                                   if  ttyp._type in py2r]
-                # deal with reference to self
-                if model.__name__ == mdl.__name__:
-                    df[ttype.model_name] = dataframe(list(set(records+rcrds)), flds_info)
-                else:
-                    df[ttype.model_name] = dataframe(rcrds, flds_info)
-
-        tmpdir = tempfile.mkdtemp()
-        os.chmod(tmpdir, 
-                stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
-        dot_rdata = os.path.join(tmpdir, data['model']+'.Rdata')
-
-        save_list = []
-        for model_name, dfr in df.iteritems():
-            robjects.r.assign(model_name, dfr)
-            save_list.append(model_name)
-        robjects.r("save(list=c("+','.join(["'"+elm+"'" for elm in save_list])+
-                "), file='"+dot_rdata+"')")
-
-        ActionReport = Pool().get('ir.action.report')
-        action_reports = ActionReport.search([
-                ('report_name', '=', cls.__name__)
-                ])
-        input_file = None
-        output_file = None
-        print "################ ",tmpdir,"########################"
-        ext = os.path.splitext(action_reports[0].report)[1]
-        if ext == '.Rnw':
-            input_file = os.path.join(tmpdir, cls.__name__+'.Rnw')
-            output_file = os.path.join(tmpdir, cls.__name__+'.pdf')
-            with open(input_file, 'w') as template:
-                template.write("<<Initialisation, echo=F, cache=T>>=\n")
-                template.write("load('"+dot_rdata+"')\n")
-                template.write("opts_knit$set(base.dir = '"+tmpdir+"')\n")
-                template.write("@\n\n")
-                if action_reports[0].report_content_custom:
-                    template.write(action_reports[0].report_content_custom)
-                else:
-                    template.write(action_reports[0].report_content)
-
-            robjects.r("setwd('"+tmpdir+"')")
-            robjects.r("library('knitr')")
-            robjects.r("knit2pdf('"+input_file+"')")
-        elif ext == '.Rmd':
-            input_file = os.path.join(tmpdir, cls.__name__+'.Rmd')
-            output_file = os.path.join(tmpdir, cls.__name__+'.html')
-            with open(input_file, 'w') as template:
-                template.write("```{r Initialisation, echo=F, cache=T}\n")
-                template.write("load('"+dot_rdata+"')\n")
-                template.write("opts_knit$set(base.dir = '"+tmpdir+"')\n")
-                template.write("```\n\n")
-                if action_reports[0].report_content_custom:
-                    template.write(action_reports[0].report_content_custom)
-                else:
-                    template.write(action_reports[0].report_content)
-
-            robjects.r("library('knitr')")
-            robjects.r("knit2html('"+input_file+"', '"+output_file+"')")
-
-        else:
-            raise RuntimeError('Unsuported report extention: '+ext) 
-
-        buf = None
-        with open(output_file, 'rb') as out:
-            buf = buffer(out.read())
-
-        shutil.rmtree(tmpdir)
-        return (os.path.splitext(output_file)[1], 
-                buf,
-                action_reports[0].direct_print, 
-                action_reports[0].name )
-

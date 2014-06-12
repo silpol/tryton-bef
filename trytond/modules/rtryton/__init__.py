@@ -23,8 +23,23 @@ from trytond.pool import Pool
 
 from .data import Data, DataSourceModel, DataSourceScript, Script
 from .view import DataView
-
+from .knitr import HtmlReport, PdfReport
 
 def register():
-    Pool.register(Data, DataSourceModel, Script, DataSourceScript, DataView,
-                  module='rtryton', type_='model')
+    Pool.register(
+        Data, 
+        DataSourceModel, 
+        Script, 
+        DataSourceScript, 
+        DataView,
+        module='rtryton',
+        type_='model'
+    )
+
+    Pool.register(
+        HtmlReport,
+        PdfReport,
+        module='rtryton',
+        type_='report'
+    )
+

@@ -60,9 +60,9 @@ def bbox_aspect(bbox, width, height, margin = 500):
 class Mapable(Model):
     __name__ = 'qgis.mapable'
 
-    def _get_image(self, qgis_filename):
+    def _get_image(self, qgis_filename, composition_name):
         """Return a feature image produced by qgis wms server from a template qgis file
-        containing a 'map' composion"""
+        containing a composion"""
         if self.geom is None:
             return buffer('')
 
@@ -89,9 +89,9 @@ class Mapable(Model):
         password = config.get('options','password')
 
         # replace feature id in .qgs file and put credentials in
-        #tmpdir = tempfile.mkdtemp()
-        tmpdir = '/tmp/toto'
-        if not os.path.exists(tmpdir): os.mkdir(tmpdir)
+        tmpdir = tempfile.mkdtemp()
+        # tmpdir = '/tmp/toto'
+        # if not os.path.exists(tmpdir): os.mkdir(tmpdir)
 
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
         dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
@@ -150,7 +150,7 @@ class Mapable(Model):
               'MAP='+dot_qgs,
               'REQUEST=GetPrint',
               'FORMAT=png',
-              'TEMPLATE=carte',
+              'TEMPLATE='+urllib.quote(composition_name.encode('utf-8')),
               'LAYER='+','.join([urllib.quote(l.encode('utf-8')) for l in layers[::-1]]),
               'CRS=EPSG:'+str(srid),
               'map0:EXTENT='+ext,
@@ -160,7 +160,7 @@ class Mapable(Model):
         
         # TODO uncoment to cleanup, 
         # the directory and its contend are kept for debug
-        #shutil.rmtree(tmpdir)
+        shutil.rmtree(tmpdir)
 
         return buf
 
