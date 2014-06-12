@@ -60,6 +60,8 @@ def bbox_aspect(bbox, width, height, margin = 500):
 class Mapable(Model):
     __name__ = 'qgis.mapable'
 
+    DEBUG = False
+
     def _get_image(self, qgis_filename, composition_name):
         """Return a feature image produced by qgis wms server from a template qgis file
         containing a composion"""
@@ -70,7 +72,6 @@ class Mapable(Model):
 
         # retrieve attached .qgs file
         [model] = Pool().get('ir.model').search([('model', '=', self.__name__)])
-        print model
 
         attachements = Pool().get('ir.attachment').search(
                 [('resource', '=', "ir.model,%s"%model.id)])
@@ -89,9 +90,11 @@ class Mapable(Model):
         password = config.get('options','password')
 
         # replace feature id in .qgs file and put credentials in
-        tmpdir = tempfile.mkdtemp()
-        # tmpdir = '/tmp/toto'
-        # if not os.path.exists(tmpdir): os.mkdir(tmpdir)
+        if not self.DEBUG:
+            tmpdir = tempfile.mkdtemp()
+        else:
+            tmpdir = '/tmp/toto'
+            if not os.path.exists(tmpdir): os.mkdir(tmpdir)
 
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
         dot_qgs = os.path.join(os.path.abspath(tmpdir), 'proj.qgs')
@@ -116,6 +119,18 @@ class Mapable(Model):
                 elem.childNodes[0].data = urlparse.urlunparse(list(url_parts[0:4]) + 
                         ['&'.join([key+'='+','.join(val) for key, val in param.iteritems()])] + 
                         list(url_parts[5:]))
+
+        # replaces images with linked ones and put them in the temp directory
+        for elem in dom.getElementsByTagName('ComposerPicture'):
+            basename = os.path.basename(elem.attributes['file'].value)
+            for att in attachements: 
+                if att.name == basename:
+                    image_file = os.path.join(os.path.abspath(tmpdir), basename)
+                    with open(image_file, 'wb') as image:
+                        image.write( att.data )
+                        elem.attributes['file'].value = image_file
+                    break
+
 
         with codecs.open(dot_qgs, 'w', 'utf-8') as file_out:
             dom.writexml(file_out, indent='  ')
@@ -160,7 +175,8 @@ class Mapable(Model):
         
         # TODO uncoment to cleanup, 
         # the directory and its contend are kept for debug
-        shutil.rmtree(tmpdir)
+        if not self.DEBUG:
+            shutil.rmtree(tmpdir)
 
         return buf
 
