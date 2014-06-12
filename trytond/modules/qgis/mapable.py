@@ -107,7 +107,7 @@ class Mapable(Model):
             # check that this is the appropriate layer
             url_parts = urlparse.urlparse(elem.childNodes[0].data)
             param = urlparse.parse_qs(url_parts[4])
-            if param['TYPENAME'][0].find('tryton:') != -1:
+            if 'TYPENAME' in param and param['TYPENAME'][0].find('tryton:') != -1:
                 if 'FILTER' in param :
                     filt = urllib.unquote(param['FILTER'][0])
                     filt = re.sub(
