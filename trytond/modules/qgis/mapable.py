@@ -60,7 +60,7 @@ def bbox_aspect(bbox, width, height, margin = 500):
 class Mapable(Model):
     __name__ = 'qgis.mapable'
 
-    DEBUG = False
+    DEBUG = True
 
     def _get_image(self, qgis_filename, composition_name):
         """Return a feature image produced by qgis wms server from a template qgis file
@@ -104,12 +104,25 @@ class Mapable(Model):
         wfs_url = WfsConf.get_url()
 
         for elem in dom.getElementsByTagName('datasource'):
+
+            basename = os.path.basename(elem.childNodes[0].data)
+            for att in attachements: 
+                if att.name == basename:
+                    filename = os.path.join(os.path.abspath(tmpdir), basename)
+                    with open(filename, 'wb') as image:
+                        image.write( att.data )
+                        elem.childNodes[0].data = filename
+                    break
+
             # check that this is the appropriate layer
             url_parts = urlparse.urlparse(elem.childNodes[0].data)
             param = urlparse.parse_qs(url_parts[4])
             if 'TYPENAME' in param and param['TYPENAME'][0].find('tryton:') != -1:
                 if 'FILTER' in param :
                     filt = urllib.unquote(param['FILTER'][0])
+                    print '####### FILTER ###############'
+                    print filt
+                    print '##############################'
                     filt = re.sub(
                             '<ogc:Literal>.*</ogc:Literal>', 
                             '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
@@ -151,7 +164,7 @@ class Mapable(Model):
         # compute bbox 
         cursor = Transaction().cursor
         cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) '
-            'FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
+            'FROM '+self.__name__.replace('.', '_')+' WHERE id = '+str(self.id)+' GROUP BY id;' )
         [srid, ext] = cursor.fetchone()
         if ext:
             ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
