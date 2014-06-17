@@ -148,8 +148,10 @@ class Mapable(Model):
         with codecs.open(dot_qgs, 'w', 'utf-8') as file_out:
             dom.writexml(file_out, indent='  ')
 
-        # find the composer map aspect ratio
+        # find the composer map aspect ratio and margins
+        # from atlas
         width, height = 640, 800
+        margin = .1 # 10% margin by default
         for compo in dom.getElementsByTagName('Composition'):
             for cmap in compo.getElementsByTagName('ComposerMap'):
                 if cmap.attributes['id'].value == u'0':
@@ -158,6 +160,9 @@ class Mapable(Model):
                             - float(ext.attributes['xmin'].value)
                     height = float(ext.attributes['ymax'].value) \
                             - float(ext.attributes['ymin'].value)
+                    atlas_map = compo.getElementsByTagName('AtlasMap')[0]
+                    margin = float(atlas_map.attributes['margin'].value)
+                    
         layers=[layer.attributes['name'].value       
                 for layer in dom.getElementsByTagName('layer-tree-layer')]
 
@@ -168,8 +173,10 @@ class Mapable(Model):
         [srid, ext] = cursor.fetchone()
         if ext:
             ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
+            ext = [float(i) for i in ext.split(',')]
+            margin *= max(ext[2]-ext[0], ext[3]-ext[1])
             ext =  ','.join([str(i) for i in bbox_aspect(
-                [float(i) for i in ext.split(',')], width, height)])
+                ext, width, height, margin)])
 
         # render image
         url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?'+'&'.join([

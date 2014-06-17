@@ -3,6 +3,9 @@
     <title></title>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="">
         <customproperties/>
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="Commune_Française20140612222824822" name="Commune Française">
+            <customproperties/>
+        </layer-tree-layer>
         <layer-tree-layer expanded="0" checked="Qt::Checked" id="tryton_befref_area" name="Area">
             <customproperties/>
         </layer-tree-layer>
@@ -14,10 +17,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>649735.88295179232954979</xmin>
-            <ymin>6824322.49468458816409111</ymin>
-            <xmax>652689.31179301044903696</xmax>
-            <ymax>6825657.99978458695113659</ymax>
+            <xmin>673800.77575999998953193</xmin>
+            <ymin>6857194.01170000154525042</ymin>
+            <xmax>674909.97643999999854714</xmax>
+            <ymax>6858230.31550000142306089</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -37,9 +40,15 @@
         <custom-order enabled="0">
             <item>tryton_befref_area</item>
             <item>tryton_protection_type</item>
+            <item>Commune_Française20140612222824822</item>
         </custom-order>
     </layer-tree-canvas>
     <legend updateDrawingOrder="true">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Commune Française" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="Commune_Française20140612222824822" visible="1"/>
+            </filegroup>
+        </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Area" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="tryton_befref_area" visible="1"/>
@@ -68,7 +77,7 @@
                     <prop k="width_border" v="0.26"/>
                 </layer>
             </symbol>
-            <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="82.9248" sourceExpression="" file="../../../../../map/resources/compass.png" pictureHeight="98.4732" mapId="-1" anchorPoint="0">
+            <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="89.3434" sourceExpression="" file="/../../../map/resources/compass.png" pictureHeight="89.8915" mapId="-1" anchorPoint="0">
                 <ComposerItem pagey="96.3696" page="1" id="" lastValidViewScaleFactor="1.97158" positionMode="0" positionLock="false" x="188.174" y="96.3696" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="89.3434" outlineWidth="0.3" uuid="{a004b4da-b873-4f79-8367-627e9ed652c7}" height="98.4732" itemRotation="0" frame="false" pagex="188.174">
                     <FrameColor alpha="255" red="0" blue="0" green="0"/>
                     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -129,7 +138,112 @@
             </ComposerMap>
         </Composition>
     </Composer>
-    <projectlayers layercount="2">
+    <projectlayers layercount="3">
+        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+            <id>Commune_Française20140612222824822</id>
+            <datasource>http://127.0.0.1:8001/bioecoforest/model/wfs/wfs/wfs?SERVICE=WFS&amp;VERSION=1.0.0&amp;REQUEST=GetFeature&amp;TYPENAME=tryton:commune.commune&amp;SRSNAME=EPSG:2154&amp;FILTER=&lt;ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+ &lt;ogc:Intersects>
+  &lt;ogc:PropertyName>geometry&lt;/ogc:PropertyName>
+ &lt;/ogc:Intersects>
+&lt;/ogc:Filter>
+&amp;username=admin&amp;password=tata</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>Commune Française</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+                    <srsid>145</srsid>
+                    <srid>2154</srid>
+                    <authid>EPSG:2154</authid>
+                    <description>RGF93 / Lambert-93</description>
+                    <projectionacronym>lcc</projectionacronym>
+                    <ellipsoidacronym>GRS80</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <provider encoding="System">WFS</provider>
+            <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
+                <symbols>
+                    <symbol alpha="1" type="fill" name="0">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="border_width_map_unit_scale" v="0,0"/>
+                            <prop k="border_width_unit" v="MM"/>
+                            <prop k="color" v="20,152,204,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="solid"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation/>
+                <sizescale scalemethod="area"/>
+            </renderer-v2>
+            <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
+            <displayfield>name</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Étiquette"/>
+                <family fieldname="" name="Ubuntu"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <edittypes>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="canton">
+                    <widgetv2config IsMultiline="0" UseHtml="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="dep">
+                    <widgetv2config IsMultiline="0" UseHtml="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="id">
+                    <widgetv2config IsMultiline="0" UseHtml="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="insee">
+                    <widgetv2config IsMultiline="0" UseHtml="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="name">
+                    <widgetv2config IsMultiline="0" UseHtml="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="postal">
+                    <widgetv2config IsMultiline="0" UseHtml="0"/>
+                </edittype>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <featformsuppress>0</featformsuppress>
+            <annotationform></annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>tryton_befref_area</id>
             <datasource>http://127.0.0.1:8001/bioecoforest//model/wfs/wfs/wfs?SERVICE=WFS&amp;VERSION=1.0.0&amp;REQUEST=GetFeature&amp;TYPENAME=tryton:befref.area&amp;SRSNAME=EPSG:2154&amp;FILTER=%3Cogc%3AFilter%3E%3Cogc%3AOr%3E%3Cogc%3APropertyIsEqualTo%3E%3Cogc%3APropertyName%3Eid%3C%2Fogc%3APropertyName%3E%3Cogc%3ALiteral%3E12%3C%2Fogc%3ALiteral%3E%3C%2Fogc%3APropertyIsEqualTo%3E%3C%2Fogc%3AOr%3E%3C%2Fogc%3AFilter%3E</datasource>
