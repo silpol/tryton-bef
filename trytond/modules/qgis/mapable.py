@@ -38,16 +38,28 @@ import tempfile
 import stat
 import codecs
 
-def bbox_aspect(bbox, width, height, margin = 500):
-    """maintain ratio of bbox = [xmin, ymin, xmax, ymax]"""
+def bbox_aspect(bbox, width, height, percent_margin = .1):
+    """maintain ratio of bbox = [xmin, ymin, xmax, ymax]
+    margin is a percentage of bbox
+    in case a dimension of bbox is zero, 
+    the width or height is taken instead"""
     assert( len(bbox) == 4 )
-    dx = bbox[2] - bbox[0] + 2*margin
-    dy = bbox[3] - bbox[1] + 2*margin 
-    assert( dx > 0 and dy > 0 )
+    dx = bbox[2] - bbox[0]
+    dy = bbox[3] - bbox[1]
+    margin = max(dx, dy) * percent_margin
+    cx, cy = (bbox[0] + bbox[2])/2.0, (bbox[1] + bbox[3])/2.0
+
+    # for special case for horizontal and vertical lines and for points
+    if dx > 0 and dy <= 0 : dy = dx * 0.01
+    if dx <=0 and dy > 0 : dx = dy * 0.01
+    if dx <=0 and dy <= 0 : 
+        dx = width
+        dy = height
+
+    dx += 2*margin
+    dy += 2*margin
+
     aspect =  float(width) / height # float to avoid integer division
-
-    cx, cy = bbox[0] - margin + dx/2.0, bbox[1] - margin + dy/2.0
-
     # float to avoid integer division
     if float(dx) / dy > aspect:
         dy = dx / aspect
@@ -173,10 +185,8 @@ class Mapable(Model):
         [srid, ext] = cursor.fetchone()
         if ext:
             ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
-            ext = [float(i) for i in ext.split(',')]
-            margin *= max(ext[2]-ext[0], ext[3]-ext[1])
             ext =  ','.join([str(i) for i in bbox_aspect(
-                ext, width, height, margin)])
+                [float(i) for i in ext.split(',')], width, height, margin)])
 
         # render image
         url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?'+'&'.join([
