@@ -70,6 +70,7 @@ def bbox_aspect(bbox, width, height, percent_margin = .1):
              cx + dx/2.0, cy + dy/2.0]
 
 class Mapable(Model):
+    'Mapable'
     __name__ = 'qgis.mapable'
 
     DEBUG = True
