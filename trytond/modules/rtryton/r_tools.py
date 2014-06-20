@@ -37,8 +37,22 @@ py2r = {
     'integer': robjects.IntVector,
     'many2one': robjects.IntVector,
     'many2many': robjects.IntVector,
+    'point' : sp.SpatialPoints,
+    'multipoint' : sp.SpatialPoints,
+    'linestring' : sp.SpatialLines,
+    'multilinestring' : sp.SpatialLines,
+    'polygon' : sp.SpatialPolygons,
     'multipolygon' : sp.SpatialPolygons,
 }
+
+geom_types = [
+     'point', 
+     'multipoint', 
+     'linestring',
+     'multilinestring',
+     'polygon',
+     'multipolygon'
+     ]
 
 none2r = {
     'text': robjects.NA_Character,
@@ -60,19 +74,34 @@ def dataframe(records, fields_info):
        Columns of the DataFrame are field_name.
     """
     data = dict((name, []) for name, ttype in fields_info 
-            if ttype != 'multipolygon')
+            if ttype not in geom_types)
 
     geom = []
     srid = None
+    geom_type = None
     # populate & convert
     for index, record in enumerate(records):
         for name, ttype in fields_info:
             value = getattr(record, name)
-            if ttype == 'multipolygon':
-                if value is None:
-                    geom.append(None)
-                    continue
-                if not srid: srid = str(value.srid)
+            if ttype == 'point' or ttype == 'multipoint':
+                if not srid: 
+                    srid = str(value.srid)
+                    geom_type = ttype
+                geom.append( rg.readWKT( value.wkt, p4s="+init=epsg:"+srid ))
+                continue # do not put value in data
+            elif ttype == 'linestring' or ttype == 'multilinestring':
+                if not srid: 
+                    srid = str(value.srid)
+                    geom_type = ttype
+                geom.append( sp.Lines( rg.readWKT( value.wkt, 
+                    p4s="+init=epsg:"+srid 
+                    ).do_slot('lines')[0].do_slot('Line'), 
+                    ID=str(getattr(record, 'id'))) ) 
+                continue # do not put value in data
+            elif ttype == 'polygon' or ttype == 'multipolygon':
+                if not srid: 
+                    srid = str(value.srid)
+                    geom_type = ttype
                 geom.append( sp.Polygons( rg.readWKT( value.wkt, 
                     p4s="+init=epsg:"+srid 
                     ).do_slot('polygons')[0].do_slot('Polygons'), 
@@ -96,12 +125,22 @@ def dataframe(records, fields_info):
     # Avoid costly conversion done by DataFrame constructor
     for name, ttype in fields_info:
         # TODO try KeyError and raise NotImplementedError
-        if ttype != 'multipolygon':
+        if ttype not in geom_types:
             data[name] = py2r[ttype](data[name])
 
-    if geom: 
+    if geom_type == 'polygon' or geom_type == 'multipolygon': 
         return sp.SpatialPolygonsDataFrame(
                 sp.SpatialPolygons(geom, proj4string = sp.CRS("+init=epsg:"+srid)),
+                robjects.DataFrame(data), 
+                match_ID = False)
+    elif geom_type == 'linestring' or geom_type == 'multilinestring':
+        return sp.SpatialLinesDataFrame(
+                sp.SpatialLines(geom, proj4string = sp.CRS("+init=epsg:"+srid)),
+                robjects.DataFrame(data), 
+                match_ID = False)
+    elif geom_type == 'point' or geom_type == 'multipoint':
+        return sp.SpatialPointsDataFrame(
+                sp.SpatialPoints(geom, proj4string = sp.CRS("+init=epsg:"+srid)),
                 robjects.DataFrame(data), 
                 match_ID = False)
     else:
