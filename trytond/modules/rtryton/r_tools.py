@@ -20,6 +20,10 @@ Copyright (c) 2013 Pierre-Louis Bonicoli
 from trytond.model import Model
 
 from rpy2 import robjects
+from rpy2.robjects.packages import importr
+sp = importr('sp') 
+rg = importr('rgeos') 
+
 
 
 py2r = {
@@ -33,6 +37,7 @@ py2r = {
     'integer': robjects.IntVector,
     'many2one': robjects.IntVector,
     'many2many': robjects.IntVector,
+    'multipolygon' : sp.SpatialPolygons,
 }
 
 none2r = {
@@ -54,13 +59,26 @@ def dataframe(records, fields_info):
        fields_info: dict of { field_name: type }
        Columns of the DataFrame are field_name.
     """
-    data = dict((name, []) for name, ttype in fields_info)
+    data = dict((name, []) for name, ttype in fields_info 
+            if ttype != 'multipolygon')
 
+    geom = []
+    srid = None
     # populate & convert
     for index, record in enumerate(records):
         for name, ttype in fields_info:
             value = getattr(record, name)
-            if value is None:
+            if ttype == 'multipolygon':
+                if value is None:
+                    geom.append(None)
+                    continue
+                if not srid: srid = str(value.srid)
+                geom.append( sp.Polygons( rg.readWKT( value.wkt, 
+                    p4s="+init=epsg:"+srid 
+                    ).do_slot('polygons')[0].do_slot('Polygons'), 
+                    ID=str(getattr(record, 'id'))) ) 
+                continue # do not put value in data
+            elif value is None:
                 value = none2r.get(ttype, robjects.NA_Logical)
             elif ttype == 'datetime':
                 # ISODate could be used but this method
@@ -78,6 +96,13 @@ def dataframe(records, fields_info):
     # Avoid costly conversion done by DataFrame constructor
     for name, ttype in fields_info:
         # TODO try KeyError and raise NotImplementedError
-        data[name] = py2r[ttype](data[name])
+        if ttype != 'multipolygon':
+            data[name] = py2r[ttype](data[name])
 
-    return robjects.DataFrame(data)
+    if geom: 
+        return sp.SpatialPolygonsDataFrame(
+                sp.SpatialPolygons(geom, proj4string = sp.CRS("+init=epsg:"+srid)),
+                robjects.DataFrame(data), 
+                match_ID = False)
+    else:
+        return robjects.DataFrame(data)
