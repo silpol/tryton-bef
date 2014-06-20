@@ -72,6 +72,7 @@ def dataframe(records, fields_info):
     """Create a R DataFrame using records.
        fields_info: dict of { field_name: type }
        Columns of the DataFrame are field_name.
+       Values with a null geometry field will be skipped.
     """
     data = dict((name, []) for name, ttype in fields_info 
             if ttype not in geom_types)
@@ -81,14 +82,20 @@ def dataframe(records, fields_info):
     geom_type = None
     # populate & convert
     for index, record in enumerate(records):
+        add_record = True
+        values = []
         for name, ttype in fields_info:
             value = getattr(record, name)
-            if ttype == 'point' or ttype == 'multipoint':
+            if value is None:
+                if ttype in geom_types:
+                    add_record = False
+                else:
+                    values.append(none2r.get(ttype, robjects.NA_Logical))
+            elif ttype == 'point' or ttype == 'multipoint':
                 if not srid: 
                     srid = str(value.srid)
                     geom_type = ttype
                 geom.append( rg.readWKT( value.wkt, p4s="+init=epsg:"+srid ))
-                continue # do not put value in data
             elif ttype == 'linestring' or ttype == 'multilinestring':
                 if not srid: 
                     srid = str(value.srid)
@@ -97,7 +104,6 @@ def dataframe(records, fields_info):
                     p4s="+init=epsg:"+srid 
                     ).do_slot('lines')[0].do_slot('Line'), 
                     ID=str(getattr(record, 'id'))) ) 
-                continue # do not put value in data
             elif ttype == 'polygon' or ttype == 'multipolygon':
                 if not srid: 
                     srid = str(value.srid)
@@ -106,21 +112,24 @@ def dataframe(records, fields_info):
                     p4s="+init=epsg:"+srid 
                     ).do_slot('polygons')[0].do_slot('Polygons'), 
                     ID=str(getattr(record, 'id'))) ) 
-                continue # do not put value in data
-            elif value is None:
-                value = none2r.get(ttype, robjects.NA_Logical)
             elif ttype == 'datetime':
                 # ISODate could be used but this method
                 # have weird side effects when called a lot of
                 # time
-                value = str(value)
+                values.append(str(value))
             elif ttype == 'many2many':
                 # TODO many2many not implemented
-                value = robjects.NA_Logical
+                values.append(robjects.NA_Logical)
             elif isinstance(value, Model):
-                value = value.id
+                values.append(value.id)
+            else:
+                values.append(value)
             # TODO log exceptions
-            data[name].append(value)
+        if add_record:
+            for name, ttype in fields_info:
+                if ttype not in geom_types:
+                    print name, values[0]
+                    data[name].append(values.pop(0))
 
     # Avoid costly conversion done by DataFrame constructor
     for name, ttype in fields_info:
