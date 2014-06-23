@@ -104,7 +104,7 @@ def dataframe(records, fields_info):
                     geom_type = ttype
                 geom.append( sp.Lines( rg.readWKT( value.wkt, 
                     p4s="+init=epsg:"+srid 
-                    ).do_slot('lines')[0].do_slot('Line'), 
+                    ).do_slot('lines')[0].do_slot('Lines'), 
                     ID=str(getattr(record, 'id'))) ) 
             elif ttype == 'polygon' or ttype == 'multipolygon':
                 if not srid: 

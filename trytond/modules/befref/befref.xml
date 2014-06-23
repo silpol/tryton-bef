@@ -133,7 +133,7 @@
         </record-->
 
         <!-- MULTIPOINTS -->
-        <record model="ir.action.report" id="report_point_html">
+        <!--record model="ir.action.report" id="report_point_html">
             <field name="name">myreport (html)</field>
             <field name="model">befref.mpoint</field>
             <field name="report_name">rtryton.htmlreport</field>
@@ -163,8 +163,73 @@
             <field name="sequence" eval="10"/>
             <field name="view" ref="hello_view_tree"/>
             <field name="act_window" ref="act_hello_world_form"/>
-        </record>
+        </record-->
 
+        <!-- LINESTRING -->
+        <!--record model="ir.action.report" id="report_point_html">
+            <field name="name">myreport (html)</field>
+            <field name="model">befref.line</field>
+            <field name="report_name">rtryton.htmlreport</field>
+            <field name="report">befref/line.Rmd</field>
+        </record>
+        <record model="ir.action.keyword" id="report_point_kwd_html">
+            <field name="keyword">form_action</field>
+            <field name="model">befref.line,-1</field>
+            <field name="action" ref="report_point_html"/>
+        </record>
+         <record model="ir.ui.view" id="hello_view_tree">
+            <field name="model">befref.line</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Hello World">
+                    <field name="id"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_hello_world_form">
+            <field name="name">Hello World</field>
+            <field name="res_model">befref.line</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hello_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="hello_view_tree"/>
+            <field name="act_window" ref="act_hello_world_form"/>
+        </record-->
+
+        <!-- MULTILINESTRING -->
+        <record model="ir.action.report" id="report_point_html">
+            <field name="name">myreport (html)</field>
+            <field name="model">befref.mline</field>
+            <field name="report_name">rtryton.htmlreport</field>
+            <field name="report">befref/mline.Rmd</field>
+        </record>
+        <record model="ir.action.keyword" id="report_point_kwd_html">
+            <field name="keyword">form_action</field>
+            <field name="model">befref.mline,-1</field>
+            <field name="action" ref="report_point_html"/>
+        </record>
+         <record model="ir.ui.view" id="hello_view_tree">
+            <field name="model">befref.mline</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <tree string="Hello World">
+                    <field name="id"/>
+                </tree>
+                ]]>
+            </field>
+        </record>
+        <record model="ir.action.act_window" id="act_hello_world_form">
+            <field name="name">Hello World</field>
+            <field name="res_model">befref.mline</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hello_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="hello_view_tree"/>
+            <field name="act_window" ref="act_hello_world_form"/>
+        </record>
         <menuitem name="BefRefPoint" parent="ir.menu_administration" id="menu_befref_point" icon="tryton-befref" action="act_hello_world_form"/>
     </data>
 </tryton>
