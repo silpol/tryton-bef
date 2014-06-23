@@ -91,11 +91,13 @@ def dataframe(records, fields_info):
                     add_record = False
                 else:
                     values.append(none2r.get(ttype, robjects.NA_Logical))
-            elif ttype == 'point' or ttype == 'multipoint':
+            elif ttype == 'point':
                 if not srid: 
                     srid = str(value.srid)
                     geom_type = ttype
-                geom.append( rg.readWKT( value.wkt, p4s="+init=epsg:"+srid ))
+                geom.append( rg.readWKT( value.wkt, 
+                    p4s="+init=epsg:"+srid 
+                    , id=str(getattr(record, 'id'))))
             elif ttype == 'linestring' or ttype == 'multilinestring':
                 if not srid: 
                     srid = str(value.srid)
@@ -128,7 +130,6 @@ def dataframe(records, fields_info):
         if add_record:
             for name, ttype in fields_info:
                 if ttype not in geom_types:
-                    print name, values[0]
                     data[name].append(values.pop(0))
 
     # Avoid costly conversion done by DataFrame constructor
@@ -147,9 +148,11 @@ def dataframe(records, fields_info):
                 sp.SpatialLines(geom, proj4string = sp.CRS("+init=epsg:"+srid)),
                 robjects.DataFrame(data), 
                 match_ID = False)
-    elif geom_type == 'point' or geom_type == 'multipoint':
+    elif geom_type == 'point':
+        r_do_call = robjects.r['do.call']
+        r_bind = robjects.r['rbind']
         return sp.SpatialPointsDataFrame(
-                sp.SpatialPoints(geom, proj4string = sp.CRS("+init=epsg:"+srid)),
+                r_do_call(r_bind, geom), 
                 robjects.DataFrame(data), 
                 match_ID = False)
     else:

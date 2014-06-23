@@ -26,6 +26,11 @@ from befref import *
 def register():
     Pool.register(
         Area,
+        Point,
+        MPoint,
+        Line,
+        MLine,
+        Poly,
         module='befref',
         type_='model'
     )
