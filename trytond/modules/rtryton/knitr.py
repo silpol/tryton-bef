@@ -36,36 +36,69 @@ import os
 
 FieldInfo = namedtuple('FieldInfo', ['name', 'ttype'])
 
+
+def add_to_map(ids, model_name, list_map):
+    print '############', model_name, ids
+    """
+    Breadth first search of dependent records,
+    this function is called recursively
+    ids is a set of ids
+    """
+    assert(isinstance(ids, set))
+    if not ids or model_name[0:4] == 'res.': return False
+
+    added = False
+
+    if model_name not in list_map:
+        list_map[model_name] = set(ids)
+        added = True
+    else:
+        old_len = len(list_map[model_name])
+        list_map[model_name].union(ids)
+        added = len(list_map[model_name]) > old_len
+
+    if not added: return False
+
+    model = Pool().get(model_name)
+    for name, ttype in model._fields.iteritems():
+        if ttype._type == 'many2one':
+            added |= add_to_map(
+                    set([ val[name] for val in model.read(list(ids), [name]) if val[name] ]), 
+                    ttype.model_name, list_map)
+        elif ttype._type == 'many2many':
+            rel = [ val[name] for val in model.read(list(ids), [name]) if val[name]]
+            if len(rel) and isinstance(rel[0], tuple): rel = set(list(sum(rel,())))
+            added |= add_to_map(
+                    set(rel), 
+                    ttype.relation_name, list_map)
+    if not added: 
+        return False
+    add = False
+    for k, i in list_map.iteritems(): 
+        if k != model_name: 
+            add |= add_to_map(i, k, list_map)
+    return True
+
+
 def save_rdata(ids, model_name, filename):
     """save data from model and one level of joined data (many2many and many2one)"""
-    model = Pool().get(model_name)
-    records = model.search([('id', 'in', ids)])
-    fields_info = [FieldInfo(name, ttype._type)
-                       for name,ttype in model._fields.iteritems()
-                       if  ttype._type in py2r]
-    df = { model_name : dataframe(records, fields_info)}
+    
+    list_map = {}
+    add_to_map( set(ids), model_name, list_map ) 
 
-    # get data for many2many and many2one
-    for name, ttype in model._fields.iteritems():
-        if ttype._type in ['many2one', 'many2many']:
-            keys = list(set([ val[name] 
-                for val in model.read(ids, [name]) ]))
-            mdl = Pool().get(ttype.model_name)
-            rcrds = mdl.search([('id', 'in', keys)])
-            flds_info = [FieldInfo(nam, ttyp._type)
-                               for nam, ttyp in mdl._fields.iteritems()
-                               if  ttyp._type in py2r]
-            # deal with reference to self
-            if model.__name__ == mdl.__name__:
-                df[ttype.model_name] = dataframe(list(set(records+rcrds)), flds_info)
-            else:
-                df[ttype.model_name] = dataframe(rcrds, flds_info)
+    df = {}
+    for mod_name, id_list in list_map.iteritems():
+        model = Pool().get(mod_name)
+        records = model.search([('id', 'in', list(id_list))])
+        fields_info = [FieldInfo(name, ttype._type)
+                           for name,ttype in model._fields.iteritems()
+                           if  ttype._type in py2r]
+        df[mod_name] = dataframe(records, fields_info)
+        print "saving in Rdata: ", mod_name, list(id_list)
 
-    save_list = []
-    for model_name, dfr in df.iteritems():
-        robjects.r.assign(model_name, dfr)
-        save_list.append(model_name)
-    robjects.r("save(list=c("+','.join(["'"+elm+"'" for elm in save_list])+
+    for mod_name, dfr in df.iteritems(): 
+        robjects.r.assign(mod_name, dfr)
+    robjects.r("save(list=c("+','.join(["'"+mod_name+"'" for mod_name, dfr in df.iteritems() ])+
             "), file='"+filename+"')")
 
 class PdfReport(Report):
