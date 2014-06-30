@@ -65,6 +65,10 @@ def add_to_map(ids, model_name, list_map):
             added |= add_to_map(
                     set([ val[name] for val in model.read(list(ids), [name]) if val[name] ]), 
                     ttype.model_name, list_map)
+        elif ttype._type == 'one2one':
+            added |= add_to_map(
+                    set([ val[name] for val in model.read(list(ids), [name]) if val[name] ]), 
+                    ttype.model_name, list_map)
         elif ttype._type == 'many2many':
             rel = [ val[name] for val in model.read(list(ids), [name]) if val[name]]
             if len(rel) and isinstance(rel[0], tuple): rel = set(list(sum(rel,())))
@@ -81,7 +85,7 @@ def add_to_map(ids, model_name, list_map):
 
 
 def save_rdata(ids, model_name, filename):
-    """save data from model and one level of joined data (many2many and many2one)"""
+    """save data from model and one level of joined data (one2one, many2many and many2one)"""
     
     list_map = {}
     add_to_map( set(ids), model_name, list_map ) 

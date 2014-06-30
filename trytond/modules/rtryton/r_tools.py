@@ -36,6 +36,7 @@ py2r = {
     'date': robjects.StrVector,
     'integer': robjects.IntVector,
     'many2one': robjects.IntVector,
+    'one2one': robjects.IntVector,
     'many2many': robjects.IntVector,
     'point' : sp.SpatialPoints,
     'multipoint' : sp.SpatialPoints,
@@ -63,6 +64,7 @@ none2r = {
     'datetime': robjects.NA_Character,
     'date': robjects.NA_Character,
     'integer': robjects.NA_Integer,
+    'one2one': robjects.NA_Integer,
     'many2one': robjects.NA_Integer,
     'many2many': robjects.NA_Integer,
 }
