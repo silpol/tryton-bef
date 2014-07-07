@@ -29,7 +29,7 @@ from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
 
-__all__ = ['Area', 'AreaQGis', 'Generate']
+__all__ = ['Area', 'AreaQGis', 'Generate', 'Point', 'MPoint', 'Line', 'MLine', 'Poly']
 
 
 class Area(Mapable, ModelView, ModelSQL):
@@ -117,3 +117,99 @@ class Generate(Wizard):
         for record in records:
             record.generate([record])
         return []
+
+class Point(Mapable, ModelView, ModelSQL):
+    u'Protected point'
+    __name__ = 'befref.point'
+
+    geom = fields.Point(
+            string=u'Geometry',
+            srid=2154,
+            select=True
+        )
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+
+    def get_image(self, ids):
+        return self._get_image( 'image.qgs', 'carte' )
+
+    @classmethod
+    def __setup__(cls):
+        super(Point, cls).__setup__()
+
+class MPoint(Mapable, ModelView, ModelSQL):
+    u'Protected mpoint'
+    __name__ = 'befref.mpoint'
+
+    geom = fields.MultiPoint(
+            string=u'Geometry',
+            srid=2154,
+            select=True
+        )
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+
+    def get_image(self, ids):
+        return self._get_image( 'image.qgs', 'carte' )
+
+    @classmethod
+    def __setup__(cls):
+        super(MPoint, cls).__setup__()
+
+class Line(Mapable, ModelView, ModelSQL):
+    u'Protected line'
+    __name__ = 'befref.line'
+
+    geom = fields.LineString(
+            string=u'Geometry',
+            srid=2154,
+            select=True
+        )
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+
+    def get_image(self, ids):
+        return self._get_image( 'image.qgs', 'carte' )
+
+    @classmethod
+    def __setup__(cls):
+        super(Line, cls).__setup__()
+
+class MLine(Mapable, ModelView, ModelSQL):
+    u'Protected mline'
+    __name__ = 'befref.mline'
+
+    geom = fields.MultiLineString(
+            string=u'Geometry',
+            srid=2154,
+            select=True
+        )
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+
+    def get_image(self, ids):
+        return self._get_image( 'image.qgs', 'carte' )
+
+    @classmethod
+    def __setup__(cls):
+        super(MLine, cls).__setup__()
+
+class Poly(Mapable, ModelView, ModelSQL):
+    u'Protected poly'
+    __name__ = 'befref.poly'
+
+    geom = fields.Polygon(
+            string=u'Point',
+            srid=2154,
+            select=True
+        )
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+
+    def get_image(self, ids):
+        return self._get_image( 'image.qgs', 'carte' )
+
+    @classmethod
+    def __setup__(cls):
+        super(Poly, cls).__setup__()
+
