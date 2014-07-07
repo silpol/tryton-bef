@@ -7,7 +7,9 @@
             <label name="name" />
             <field name="name" />
             <label name="date" />
-            <field name="date" />            
+            <field name="date" />
+            <label name="version" />
+            <field name="version" />
             <label name="type" />
             <field name="type" />
             <label name="mixte" />

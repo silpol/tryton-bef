@@ -31,10 +31,10 @@ Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
                             <field name="place"/>                            
                         </page>                        
                         <page string="Map" id="map" col="2">                                                                        
-                            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>                                 
-                            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+                            <field name="party_image" colspan="1" widget="image" img_width="640" img_height="480"/>                                 
+                            <field name="party_image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
                             <button string="Edit" name="lol_edit" icon="tryton-executable" />                           
-                            <button string="Generate" name="generate_party" icon="tryton-executable" />
+                            <button string="Generate" name="generate" icon="tryton-executable" />
                         </page>                                                                                 
                     </xpath>
                 </data>
@@ -82,8 +82,8 @@ Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
                                 <field name="html" />                                                        
                                 <notebook>
                                     <page string="Comment and Map" id="comment" col="2">
-                                        <field name="image_all" colspan="1" widget="image" img_width="640" img_height="480"/>
-                                        <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+                                        <field name="place_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+                                        <field name="place_image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
                                         <button string="Edit" name="lol_edit" icon="tryton-executable" />                           
                                         <button string="Generate" name="generate" icon="tryton-executable" />
                                     </page>                                

@@ -73,7 +73,7 @@ class Materiel(ModelSQL, ModelView):
         )
 
 class Work(ModelSQL, ModelView):
-    'Work Effort'
+    u'Work Effort'
     __name__ = 'site.work'
     _rec_name = 'work'
 
@@ -83,6 +83,8 @@ class Work(ModelSQL, ModelView):
             help=u'Activity',
             required=True,
             ondelete='CASCADE',
+            # 2 représente l'id de l'activité chantier
+            domain=[('parent', 'child_of', 2, 'parent')],
         )
     active = fields.Function(
             fields.Boolean(
@@ -107,14 +109,14 @@ class Work(ModelSQL, ModelView):
             'work',
             'outil',
             string=u'Matériels - Outils',
-            help=u'Matériels - Outils nécessaires à l\'activité',
+            help=u'Materiels - Outils necessaires à l activite',
             states={
                     'invisible': Equal(Eval('type'),'site')
                     },
         )
     matiere = fields.One2Many(
             'timesheet.workline',
-            'work',
+            'tache',
             string=u'Matières',
             help=u'Matières',
             states={
@@ -159,7 +161,16 @@ class Work(ModelSQL, ModelView):
         if self.party is None:
             return None
         else:
-            return self.party.employee.car.id
+            cursor = Transaction().cursor
+            cursor.execute(
+                'SELECT car '
+                'FROM company_employee '
+                'WHERE party=%s', (self.party.id,))
+            try:
+                res = int(cursor.fetchone()[0])
+            except:
+                res=None            
+            return res
 
     timesheet_available = fields.Function(
             fields.Boolean(
@@ -175,7 +186,7 @@ class Work(ModelSQL, ModelView):
                     'invisible': ~Eval('timesheet_available'),
                     },
                 depends=['timesheet_available'],
-                help="Total time spent on this work"
+                help=u'Total time spent on this work'
             ),
             'get_hours'
         )
@@ -542,6 +553,11 @@ class WorkLine:
             'party.address',            
             string=u'Lieu d\'export',
             help=u'Adresse d\'export des matières',
+        )
+    tache = fields.Many2One(
+            'site.work',            
+            string=u'Tache',
+            help=u'Tache',
         )
 
 class Employee:

@@ -1,15 +1,17 @@
 #
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Pascal Obstetar <pascal.obstetar@gmail.com>\n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
+"Language: FR_fr\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 msgctxt "error:site.work:"
 msgid "There should be only one timesheet work by task/site."
@@ -33,9 +35,133 @@ msgstr ""
 "Le chantier \"%(parent)s\" ne peut être fermé car sont chantier fils "
 "\"%(child)s\" est toujours ouvert.\""
 
+msgctxt "field:company.employee,car:"
+msgid "Car"
+msgstr "Véhicule"
+
+msgctxt "field:site.materiel,code:"
+msgid "Code matériel"
+msgstr "Code matériel"
+
+msgctxt "field:site.materiel,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.materiel,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.materiel,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.materiel,lib_long:"
+msgid "Libellé long du matériel"
+msgstr "Libellé long du matériel"
+
+msgctxt "field:site.materiel,name:"
+msgid "Libellé court du matériel"
+msgstr "Libellé court du matériel"
+
+msgctxt "field:site.materiel,outil:"
+msgid "Outils"
+msgstr "Outils"
+
+msgctxt "field:site.materiel,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.materiel,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.materiel,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.outil,code:"
+msgid "Code outil"
+msgstr "Code outil"
+
+msgctxt "field:site.outil,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.outil,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.outil,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.outil,lib_long:"
+msgid "Libellé long de l'outil"
+msgstr "Libellé long de l'outil"
+
+msgctxt "field:site.outil,materiel:"
+msgid "Matériel"
+msgstr "Matériel"
+
+msgctxt "field:site.outil,name:"
+msgid "Libellé court de l'outil"
+msgstr "Libellé court de l'outil"
+
+msgctxt "field:site.outil,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.outil,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.outil,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.vehicule,code:"
+msgid "Code véhicule"
+msgstr "Code véhicule"
+
+msgctxt "field:site.vehicule,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.vehicule,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.vehicule,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.vehicule,lib_long:"
+msgid "Libellé long du véhicule"
+msgstr "Libellé long du véhicule"
+
+msgctxt "field:site.vehicule,name:"
+msgid "Libellé court du véhicule"
+msgstr "Libellé court du véhicule"
+
+msgctxt "field:site.vehicule,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.vehicule,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.vehicule,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
 msgctxt "field:site.work,active:"
 msgid "Active"
 msgstr "Active"
+
+msgctxt "field:site.work,car:"
+msgid "Car"
+msgstr "Véhicule"
 
 msgctxt "field:site.work,children:"
 msgid "Children"
@@ -69,6 +195,14 @@ msgctxt "field:site.work,id:"
 msgid "ID"
 msgstr "Identifiant"
 
+msgctxt "field:site.work,matiere:"
+msgid "Matières"
+msgstr "Matières"
+
+msgctxt "field:site.work,matoutil:"
+msgid "Matériels - Outils"
+msgstr "Matériels - Outils"
+
 msgctxt "field:site.work,parent:"
 msgid "Parent"
 msgstr "Parent"
@@ -89,6 +223,10 @@ msgctxt "field:site.work,state:"
 msgid "State"
 msgstr "État"
 
+msgctxt "field:site.work,tache:"
+msgid "Tâche"
+msgstr "Tâche"
+
 msgctxt "field:site.work,timesheet_available:"
 msgid "Available on timesheets"
 msgstr "Disponible sur les feuilles de présence"
@@ -103,7 +241,7 @@ msgstr "Type"
 
 msgctxt "field:site.work,work:"
 msgid "Activity"
-msgstr "Activité"
+msgstr "Chantier ou Tâche"
 
 msgctxt "field:site.work,write_date:"
 msgid "Write Date"
@@ -113,9 +251,69 @@ msgctxt "field:site.work,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
+msgctxt "field:site.work-site.outil,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.work-site.outil,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.work-site.outil,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.work-site.outil,outil:"
+msgid "Outil"
+msgstr "Outil"
+
+msgctxt "field:site.work-site.outil,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.work-site.outil,work:"
+msgid "Work"
+msgstr "Activité"
+
+msgctxt "field:site.work-site.outil,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.work-site.outil,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:taxinomie.taxinomie,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:taxinomie.taxinomie,commun:"
+msgid "Nom commun"
+msgstr "Nom commun"
+
 msgctxt "field:timesheet.work,timesheet_lines:"
 msgid "Timesheet Lines"
 msgstr "Lignes de feuille de présence"
+
+msgctxt "field:timesheet.workline,exportation:"
+msgid "Lieu d'export"
+msgstr "Lieu d'export"
+
+msgctxt "help:company.employee,car:"
+msgid "Preference car"
+msgstr "Préférence véhicule"
+
+msgctxt "help:site.materiel,outil:"
+msgid "Outils disponibles pour ce matériel"
+msgstr "Outils disponibles pour ce matériel"
+
+msgctxt "help:site.outil,materiel:"
+msgid "Matériel"
+msgstr "Matériel"
+
+msgctxt "help:site.work,car:"
+msgid "Car"
+msgstr "Véhicule"
 
 msgctxt "help:site.work,comment:"
 msgid "Comment"
@@ -128,6 +326,14 @@ msgstr "Temps estimé pour cette tâche"
 msgctxt "help:site.work,hours:"
 msgid "Total time spent on this work"
 msgstr "Temps total passé"
+
+msgctxt "help:site.work,matiere:"
+msgid "Matières"
+msgstr "Matières"
+
+msgctxt "help:site.work,matoutil:"
+msgid "Matériels - Outils nécessaires à l'activité"
+msgstr "Matériels - Outils nécessaires à l'activité"
 
 msgctxt "help:site.work,party:"
 msgid "Party who follow the site"
@@ -143,23 +349,71 @@ msgstr "Type"
 
 msgctxt "help:site.work,work:"
 msgid "Activity"
-msgstr "Activité"
+msgstr "Chantier ou Tâche"
+
+msgctxt "help:taxinomie.taxinomie,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "help:taxinomie.taxinomie,commun:"
+msgid "Nom commun"
+msgstr "Nom commun"
+
+msgctxt "help:timesheet.workline,exportation:"
+msgid "Adresse d'export des matières"
+msgstr "Adresse d'export des matières"
+
+msgctxt "model:ir.action,name:act_materiel_form"
+msgid "Matériel"
+msgstr "Matériel"
 
 msgctxt "model:ir.action,name:act_open_child_work"
 msgid "Tasks"
 msgstr "Tâches"
 
+msgctxt "model:ir.action,name:act_outil_form"
+msgid "Outil"
+msgstr "Outil"
+
+msgctxt "model:ir.action,name:act_site_employee_form"
+msgid "Employee"
+msgstr "Employé"
+
 msgctxt "model:ir.action,name:act_site_form"
 msgid "Sites"
 msgstr "Chantiers"
 
+msgctxt "model:ir.action,name:act_site_taxinomie_form"
+msgid "Taxinomie"
+msgstr "Taxinomie"
+
 msgctxt "model:ir.action,name:act_site_tree"
-msgid "Sites"
-msgstr "Chantiers"
+msgid "Sites/Task"
+msgstr "Chantiers/Tâches"
+
+msgctxt "model:ir.action,name:act_site_workline_form"
+msgid "Workline"
+msgstr "Tâche"
 
 msgctxt "model:ir.action,name:act_task_form"
 msgid "Tasks"
 msgstr "Tâches"
+
+msgctxt "model:ir.action,name:act_vehicule_form"
+msgid "Véhicule"
+msgstr "Véhicule"
+
+msgctxt "model:ir.ui.menu,name:menu_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_materiel_form"
+msgid "Matériel"
+msgstr "Matériel"
+
+msgctxt "model:ir.ui.menu,name:menu_outil_form"
+msgid "Outil"
+msgstr "Outil"
 
 msgctxt "model:ir.ui.menu,name:menu_site"
 msgid "Site"
@@ -170,20 +424,40 @@ msgid "Sites"
 msgstr "Chantiers"
 
 msgctxt "model:ir.ui.menu,name:menu_site_tree"
-msgid "Sites"
-msgstr "Chantiers"
+msgid "Sites/Task"
+msgstr "Chantiers/Tâches"
 
 msgctxt "model:ir.ui.menu,name:menu_task_form"
 msgid "Tasks"
 msgstr "Tâches"
 
+msgctxt "model:ir.ui.menu,name:menu_vehicule_form"
+msgid "Véhicule"
+msgstr "Véhicule"
+
 msgctxt "model:res.group,name:group_site_admin"
 msgid "Site Administration"
 msgstr "Chantier administration"
 
+msgctxt "model:site.materiel,name:"
+msgid "Matériel"
+msgstr "Matériel"
+
+msgctxt "model:site.outil,name:"
+msgid "Outil"
+msgstr "Outil"
+
+msgctxt "model:site.vehicule,name:"
+msgid "Vehicule"
+msgstr "Véhicule"
+
 msgctxt "model:site.work,name:"
 msgid "Work Effort"
 msgstr "Effort de travail"
+
+msgctxt "model:site.work-site.outil,name:"
+msgid "Work - Outil"
+msgstr "Chantier - Outil"
 
 msgctxt "selection:site.work,state:"
 msgid "Done"
@@ -201,9 +475,25 @@ msgctxt "selection:site.work,type:"
 msgid "Task"
 msgstr "Tâche"
 
+msgctxt "view:site.materiel:"
+msgid "Matériel"
+msgstr "Matériel"
+
+msgctxt "view:site.outil:"
+msgid "Matériel - Outil"
+msgstr "Matériel - Outil"
+
+msgctxt "view:site.outil:"
+msgid "Outil"
+msgstr "Outil"
+
+msgctxt "view:site.vehicule:"
+msgid "Véhicule"
+msgstr "Véhicule"
+
 msgctxt "view:site.work:"
 msgid "Activities"
-msgstr "Activités"
+msgstr "Chantiers ou Tâches"
 
 msgctxt "view:site.work:"
 msgid "Children"
@@ -214,5 +504,29 @@ msgid "General"
 msgstr "Général"
 
 msgctxt "view:site.work:"
+msgid "Matières"
+msgstr "Matières"
+
+msgctxt "view:site.work:"
+msgid "Matériels - Outils"
+msgstr "Matériels - Outils"
+
+msgctxt "view:site.work:"
 msgid "Tasks"
 msgstr "Tâches"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Général"
+msgstr "Général"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Muséum National d'Histoire Naturelle"
+msgstr "Muséum National d'Histoire Naturelle"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Taxinomie"
+msgstr "Taxinomie"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Travaux Spéciaux Raisonnés"
+msgstr "Travaux Spéciaux Raisonnés"

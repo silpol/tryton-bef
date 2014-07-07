@@ -2,10 +2,10 @@
 <form string="Station" col="2">
     <notebook colspan="6">
         <page string="Général" id="general">
-            <label name="ug"/>
-            <field name="ug"/> 
             <label name="code"/>
-            <field name="code"/>                            
+            <field name="code"/>
+            <label name="ug"/>
+            <field name="ug"/>                             
             <label name="proprietaire"/>
             <field name="proprietaire" widget="selection"/>
             <label name="domaine"/>

@@ -33,6 +33,7 @@ def register():
 
     Pool.register(
         AreaQGis,               
+        ReserveBiologiqueQGis,
         module='protection',
         type_='report'
     )

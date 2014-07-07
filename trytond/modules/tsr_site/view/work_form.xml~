@@ -16,6 +16,8 @@ this repository contains the full copyright notices and license terms. -->
     <field name="company"/>
     <label name="party"/>
     <field name="party"/>
+    <label name="car"/>
+    <field name="car"/>
     <notebook colspan="6">
         <page string="General" id="general" col="6">
             <label name="timesheet_available"/>
@@ -29,7 +31,7 @@ this repository contains the full copyright notices and license terms. -->
             <label name="total_effort"/>
             <field name="total_effort" widget="float_time" float_time="company_work_time"/>
             <newline/>
-            <separator name="comment" colspan="6"/>
+            
             <field name="comment" colspan="6"/>
             <group col="4" colspan="6" id="state_buttons">
                 <group col="2" colspan="2" id="state">
@@ -50,10 +52,10 @@ this repository contains the full copyright notices and license terms. -->
                     <label name="work"/>
                     <field name="work"/>
                 </page>
-                <page string="Matériels - Outils" id="matoutil">
+                <page string="MaterielsOutils" id="matoutil">
                     <field name="matoutil"/>                      
                 </page>
-                <page string="Matières" id="matieres" states="{'invisible': Not(Equal(Eval('tache'), 'exportation'))}">
+                <page string="Matieres" id="matieres" states="{'invisible': Not(Equal(Eval('tache'), 'exportation'))}">
                     <field name="matiere"/>
                 </page>
             </notebook>

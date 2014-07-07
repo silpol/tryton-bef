@@ -35,8 +35,8 @@
                 <label name="code"/>
                 <field name="code"/>
             </group>                         
-            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="arbre_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="arbre_map" colspan="1" widget="image" img_width="640" img_height="480"/>
             <button string="Edit" name="arbre_edit" icon="tryton-executable" />
             <button string="Generate" name="generate" icon="tryton-executable" />
         </page>

@@ -4,8 +4,12 @@
     <field name="equipement"/>
     <label name="ug"/> 
     <field name="ug"/>
+    <label name="refug"/> 
+    <field name="refug"/>
     <label name="conduite"/> 
     <field name="conduite"/>
     <label name="essence"/> 
     <field name="essence"/>
+    <label name="quantite"/> 
+    <field name="quantite"/>
 </form>

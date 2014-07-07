@@ -26,7 +26,8 @@ def register():
     Pool.register(
         Type,
         Area,
-        ReserveBiologique,        
+        ReserveBiologique,
+        Zico,
         module='protection',
         type_='model'
     )

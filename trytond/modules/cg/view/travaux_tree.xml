@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <tree string="Travaux">
     <field name="typetravaux"/>
+    <field name="refug"/>
+    <field name="emplacement"/>
     <field name="arbre"/>
+    <field name="essence"/>
     <field name="state">
         <prefix icon='icon'/>
     </field>

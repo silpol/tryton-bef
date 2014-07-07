@@ -8,9 +8,10 @@ def register():
     Pool.register(
         Vehicule,
         Materiel,
-        Outil,
         Work,
+        Outil,
         WorkOutil,
         taxinomie,
         WorkLine,
+        Employee,
         module='tsr_site', type_='model')

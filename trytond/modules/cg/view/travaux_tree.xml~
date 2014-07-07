@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <tree string="Travaux">
-    <field name="equipement"/>
-    <field name="ug"/>
-    <field name="station"/>
     <field name="typetravaux"/>
+    <field name="refug"/>
     <field name="arbre"/>
+    <field name="essence"/>
     <field name="state">
         <prefix icon='icon'/>
     </field>

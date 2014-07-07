@@ -7,5 +7,5 @@
     <field name="fin"/>
     <field name="conduite"/>
     <field name="essence"/>
-    <field name="qunatite"/>
+    <field name="quantite"/>
 </tree>

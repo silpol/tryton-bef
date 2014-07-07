@@ -13,7 +13,7 @@
             <label name="an"/>
             <field name="an"/>
             <label name="diametre"/>
-            <field name="diametre"/>
+            <field name="diametre" widget="selection"/>
             <label name="plantation"/>
             <field name="plantation" widget="selection"/>
             <label name="situation"/>

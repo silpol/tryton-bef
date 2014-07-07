@@ -52,6 +52,10 @@ class Type(ModelSQL, ModelView):
             required=True
         )
 
+    code = fields.Char(
+            string=u'Space code',
+            required=True
+        )
 
 class Area(ModelSQL, ModelView):
     u'Protected area'
@@ -78,6 +82,19 @@ class Area(ModelSQL, ModelView):
             srid=2154,
             select=True
         )
+    boundingBoxX1 = fields.Float(
+            string=u'Bounding box x1'
+        )
+    boundingBoxY1 = fields.Float(
+            string=u'Bounding box y1'
+        )
+    boundingBoxX2 = fields.Float(
+            string=u'Bounding box x2'
+        )
+    boundingBoxY2 = fields.Float(
+            string=u'Bounding box y2'
+        )
+    
 
     typo = fields.Char(
             string=u'Area type',
@@ -179,7 +196,7 @@ class AreaQGis(QGis):
     TITLES = {'protection.area': u'Area'}
 
 
-TYPES = [('D', u'Directed'), ('I', u'Integral'), ('M', u'Mixte')]
+TYPES = [('D', u'Directed'), ('I', u'Integral')]
 
 class ReserveBiologique(ModelSQL, ModelView):
     u'Biological reserve'
@@ -201,10 +218,27 @@ class ReserveBiologique(ModelSQL, ModelView):
             string=u'Date'
         )
 
+    mixte = fields.Boolean(
+            string=u'Mixte',
+            help=u'Mixte',
+        )
+
     geom = fields.MultiPolygon(
             string=u'Geometry',
             srid=2154,
             select=True
+        )
+    boundingBoxX1 = fields.Float(
+            string=u'Bounding box x1'
+        )
+    boundingBoxY1 = fields.Float(
+            string=u'Bounding box y1'
+        )
+    boundingBoxX2 = fields.Float(
+            string=u'Bounding box x2'
+        )
+    boundingBoxY2 = fields.Float(
+            string=u'Bounding box y2'
         )
 
     type = fields.Selection(
@@ -212,6 +246,14 @@ class ReserveBiologique(ModelSQL, ModelView):
             string=u'Type',
             required=True,
             sort=False
+        )
+
+    espace = fields.Many2One(
+            'protection.type',
+            ondelete='RESTRICT',
+            string=u'Type of protected area',
+            required=True,
+            select=True
         )
 
     @staticmethod
@@ -295,3 +337,134 @@ class ReserveBiologique(ModelSQL, ModelView):
 class ReserveBiologiqueQGis(QGis):
     __name__ = 'protection.reserve.biologique.qgis'
     TITLES = {'protection.reserve_biologique': u'Reserve biologique'}
+
+
+class Zico(ModelSQL, ModelView):
+    u'ZICO area'
+    __name__ = 'protection.zico'
+
+    id_diren = fields.Char(
+            string=u'ID diren',
+            help=u'National identifiant',
+            required=True
+        )
+    id_iba = fields.Char(
+            string=u'ID iba',
+            help=u'National identifiant',
+            required=True
+        )
+    id_spn = fields.Char(
+            string=u'ID spn',
+            help=u'National identifiant',
+            required=True
+        )
+    
+    name = fields.Char(
+            string=u'Site name',
+            help=u'Site name',
+            required=True
+        )
+
+    espace = fields.Many2One(
+            'protection.type',
+            ondelete='RESTRICT',
+            string=u'Type of protected area',
+            required=True,
+            select=True
+        )
+
+    geom = fields.MultiPolygon(
+            string=u'Geometry',
+            srid=2154,
+            select=True
+        )
+    boundingBoxX1 = fields.Float(
+            string=u'Bounding box x1'
+        )
+    boundingBoxY1 = fields.Float(
+            string=u'Bounding box y1'
+        )
+    boundingBoxX2 = fields.Float(
+            string=u'Bounding box x2'
+        )
+    boundingBoxY2 = fields.Float(
+            string=u'Bounding box y2'
+        )
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+    image_map = fields.Binary('Image map', filename='image_filename')
+    image_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_im_filename')                        
+    
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.1)
+
+    def _get_im_filename(self, ids):
+        """Image map filename"""
+        return '%s - Image map.jpg' % self.name
+    
+    def get_image(self, ids):
+        if self.geom is None:
+            return buffer('')
+
+        areas, envelope, _area = get_as_epsg4326([self.geom])
+        
+        if areas == []:
+            return buffer('')
+            
+        _envelope = bbox_aspect(envelope, 640, 480)    
+            
+        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
+        envelope = [
+            _envelope[0] - 0.001,
+            _envelope[1] + 0.001,
+            _envelope[2] - 0.001,
+            _envelope[3] + 0.001,
+        ]                    
+
+        m = MapRender(640, 480, envelope, True)
+               
+        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
+        return buffer(m.render())
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.name is None:
+                continue
+                                   
+            areas, _envelope, _area = get_as_epsg4326([record.geom])
+            
+            # Léger dézoom pour afficher correctement les points qui touchent la bbox
+            envelope = [
+                _envelope[0] - 0.001,
+                _envelope[1] + 0.001,
+                _envelope[2] - 0.001,
+                _envelope[3] + 0.001,
+            ]            
+            
+            m = MapRender(640, 480, envelope, True)
+            m.add_bg()
+                      
+            m.plot_geom(areas[0], None, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
+           
+            data = m.render()
+            cls.write([record], {'image_map': buffer(data)})  
+
+    @classmethod
+    def __setup__(cls):
+        super(Zico, cls).__setup__()
+        cls._buttons.update({           
+            'zico_edit': {},
+            'generate': {},
+        })
+               
+    @classmethod
+    @ModelView.button_action('protection.report_zico_edit')
+    def zico_edit(cls, ids):
+        pass
+
+
+class ZicoQGis(QGis):
+    __name__ = 'protection.zico.qgis'
+    TITLES = {'protection.zico': u'ZICO'}

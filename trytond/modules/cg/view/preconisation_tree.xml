@@ -2,6 +2,7 @@
 <tree string="Préconisation des arbres">
     <field name="equipement"/>                      
     <field name="ug"/>
+    <field name="refug"/>
     <field name="rue"/>
     <field name="debut"/>
     <field name="fin"/>

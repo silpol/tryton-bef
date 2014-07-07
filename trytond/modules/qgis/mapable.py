@@ -38,16 +38,28 @@ import tempfile
 import stat
 import codecs
 
-def bbox_aspect(bbox, width, height, margin = 500):
-    """maintain ratio of bbox = [xmin, ymin, xmax, ymax]"""
+def bbox_aspect(bbox, width, height, percent_margin = .1):
+    """maintain ratio of bbox = [xmin, ymin, xmax, ymax]
+    margin is a percentage of bbox
+    in case a dimension of bbox is zero, 
+    the width or height is taken instead"""
     assert( len(bbox) == 4 )
-    dx = bbox[2] - bbox[0] + 2*margin
-    dy = bbox[3] - bbox[1] + 2*margin 
-    assert( dx > 0 and dy > 0 )
+    dx = bbox[2] - bbox[0]
+    dy = bbox[3] - bbox[1]
+    margin = max(dx, dy) * percent_margin
+    cx, cy = (bbox[0] + bbox[2])/2.0, (bbox[1] + bbox[3])/2.0
+
+    # for special case for horizontal and vertical lines and for points
+    if dx > 0 and dy <= 0 : dy = dx * 0.01
+    if dx <=0 and dy > 0 : dx = dy * 0.01
+    if dx <=0 and dy <= 0 : 
+        dx = width
+        dy = height
+
+    dx += 2*margin
+    dy += 2*margin
+
     aspect =  float(width) / height # float to avoid integer division
-
-    cx, cy = bbox[0] - margin + dx/2.0, bbox[1] - margin + dy/2.0
-
     # float to avoid integer division
     if float(dx) / dy > aspect:
         dy = dx / aspect
@@ -58,9 +70,10 @@ def bbox_aspect(bbox, width, height, margin = 500):
              cx + dx/2.0, cy + dy/2.0]
 
 class Mapable(Model):
+    'Mapable'
     __name__ = 'qgis.mapable'
 
-    DEBUG = False
+    DEBUG = True
 
     def _get_image(self, qgis_filename, composition_name):
         """Return a feature image produced by qgis wms server from a template qgis file
@@ -104,12 +117,25 @@ class Mapable(Model):
         wfs_url = WfsConf.get_url()
 
         for elem in dom.getElementsByTagName('datasource'):
+
+            basename = os.path.basename(elem.childNodes[0].data)
+            for att in attachements: 
+                if att.name == basename:
+                    filename = os.path.join(os.path.abspath(tmpdir), basename)
+                    with open(filename, 'wb') as image:
+                        image.write( att.data )
+                        elem.childNodes[0].data = filename
+                    break
+
             # check that this is the appropriate layer
             url_parts = urlparse.urlparse(elem.childNodes[0].data)
             param = urlparse.parse_qs(url_parts[4])
             if 'TYPENAME' in param and param['TYPENAME'][0].find('tryton:') != -1:
                 if 'FILTER' in param :
                     filt = urllib.unquote(param['FILTER'][0])
+                    print '####### FILTER ###############'
+                    print filt
+                    print '##############################'
                     filt = re.sub(
                             '<ogc:Literal>.*</ogc:Literal>', 
                             '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
@@ -135,8 +161,10 @@ class Mapable(Model):
         with codecs.open(dot_qgs, 'w', 'utf-8') as file_out:
             dom.writexml(file_out, indent='  ')
 
-        # find the composer map aspect ratio
+        # find the composer map aspect ratio and margins
+        # from atlas
         width, height = 640, 800
+        margin = .1 # 10% margin by default
         for compo in dom.getElementsByTagName('Composition'):
             for cmap in compo.getElementsByTagName('ComposerMap'):
                 if cmap.attributes['id'].value == u'0':
@@ -145,18 +173,21 @@ class Mapable(Model):
                             - float(ext.attributes['xmin'].value)
                     height = float(ext.attributes['ymax'].value) \
                             - float(ext.attributes['ymin'].value)
+                    atlas_map = compo.getElementsByTagName('AtlasMap')[0]
+                    margin = float(atlas_map.attributes['margin'].value)
+                    
         layers=[layer.attributes['name'].value       
                 for layer in dom.getElementsByTagName('layer-tree-layer')]
 
         # compute bbox 
         cursor = Transaction().cursor
         cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) '
-            'FROM befref_area WHERE id = '+str(self.id)+' GROUP BY id;' )
+            'FROM '+self.__name__.replace('.', '_')+' WHERE id = '+str(self.id)+' GROUP BY id;' )
         [srid, ext] = cursor.fetchone()
         if ext:
             ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
             ext =  ','.join([str(i) for i in bbox_aspect(
-                [float(i) for i in ext.split(',')], width, height)])
+                [float(i) for i in ext.split(',')], width, height, margin)])
 
         # render image
         url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?'+'&'.join([

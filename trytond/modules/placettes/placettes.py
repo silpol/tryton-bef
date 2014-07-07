@@ -33,6 +33,7 @@ from trytond.pool import PoolMeta, Pool
 from trytond.modules.geotools.tools import get_as_epsg4326, envelope_union
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 STATES = {
     'readonly': ~Eval('active', True),
@@ -132,7 +133,7 @@ class Category(ModelSQL, ModelView):
         #TODO Handle list
         return [('name',) + tuple(clause[1:])]
 
-class Placettes(ModelSQL, ModelView):
+class Placettes(Mapable, ModelSQL, ModelView):
     'Plot'
     __name__ = 'placettes.placettes'
 
@@ -184,6 +185,14 @@ class Placettes(ModelSQL, ModelView):
             string=u'Group',
             help=u'Group',
         )
+    geom = fields.MultiPoint(
+            string=u'Geometry',
+            help=u'Geometry point (EPSG=2154, RGF93/Lambert 93)',
+            srid=2154,
+            required=False,
+            readonly=False,
+            select=True
+        )
 
     @staticmethod
     def default_pla_slopeval():
@@ -200,74 +209,29 @@ class Placettes(ModelSQL, ModelView):
         except ValueError:
             return [('pla_dispositif.name',) + tuple(clause[1:])]
 
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image map', filename='image_filename')
-    image_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['pla_num']), '_get_im_filename')
-
-    geom = fields.MultiPoint(
-            string=u'Geometry',
-            help=u'Geometry point (EPSG=2154, RGF93/Lambert 93)',
-            srid=2154,
-            required=False,
-            readonly=False,
-            select=True
+    plot_image = fields.Function(
+                fields.Binary(
+                    string=u'Image'
+                ),
+            'get_image'
         )
+    plot_map = fields.Binary(
+            string=u'Image map'
+        )
+
+    def get_image(self, ids):
+        return self._get_image( 'plot_image.qgs', 'carte' )
+
+    def get_map(self, ids):
+        return self._get_image( 'plot_map.qgs', 'carte' ) 
 
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.1)
-
-
-    def _get_im_filename(self, ids):
-        """Image map filename"""
-        return '%s - Image map.jpg' % self.pla_num
-
 
     @staticmethod
     def default_date():
         Date = Pool().get('ir.date')
         return Date.today()
-
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        if self.pla_dispositif.geom is None:
-            return buffer('')
-
-        areas, _envelope, _aire = get_as_epsg4326([self.pla_dispositif.geom])
-
-        EmpObj = Pool().get(self.__name__)
-        objs = EmpObj.search([('pla_dispositif', '=', self.pla_dispositif.id)])
-        pts, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
-
-
-        points, _envelope, _area = get_as_epsg4326([self.geom])
-
-        # Léger dézoom pour afficher correctement les points qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.01,
-            _envelope[1] + 0.01,
-            _envelope[2] - 0.01,
-            _envelope[3] + 0.01,
-        ]
-
-        if points == []:
-            return buffer('')
-
-        m = MapRender(640, 480, envelope)
-
-        # Ajoute la zone du dispositif
-        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        for entry in pts:
-            if len(pts) == 0:
-                continue            
-            if entry == get_as_epsg4326([self.geom])[0][0]:                
-                m.plot_geom(entry, str(entry.pla_num), None, color=(0, 0, 1, 1), bgcolor=self.BGCOLOR)
-            else:                
-                m.plot_geom(entry, None, None, color=(0, 0, 1, 0.5), bgcolor=self.BGCOLOR)
-
-        m.plot_geom(points[0], str(self.pla_num), None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
 
     @classmethod
     def __setup__(cls):
@@ -287,46 +251,8 @@ class Placettes(ModelSQL, ModelView):
     def generate(cls, records):
         for record in records:
             if record.pla_num is None:
-                continue
-
-            if record.pla_dispositif.geom is None:
-                continue
-            
-
-            # Récupère l'étendu du dispositif
-            areas, envelope, _aire = get_as_epsg4326([record.pla_dispositif.geom])            
-
-            # Récupère les placettes de mesure du dispositif
-            EmpObj = Pool().get(record.__name__)
-            objs = EmpObj.search([('pla_dispositif', '=', record.pla_dispositif.id)])
-            pts, envelope, area = get_as_epsg4326([obj.geom for obj in objs])
-            
-            # Placette en cours
-            points, _envelope, _area = get_as_epsg4326([record.geom])                     
-
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-
-            # Ajoute la zone du dispositif
-            m.plot_geom(areas[0], None, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)
-            for entry in pts:
-                if len(pts) == 0:
-                    continue            
-                if entry == get_as_epsg4326([record.geom])[0][0]:                
-                    m.plot_geom(entry, str(entry.pla_num), None, color=(0, 0, 1, 1), bgcolor=record.BGCOLOR)
-                else:                
-                    m.plot_geom(entry, None, None, color=(0, 0, 1, 0.5), bgcolor=record.BGCOLOR)
-            m.plot_geom(points[0], str(record.pla_num), None, color=(1, 1, 1, 1), bgcolor=record.BGCOLOR)
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})
+                continue            
+            cls.write([record], {'plot_map': cls.get_map(record, 'map')})
 
 
 class PlacettesQGis(QGis):

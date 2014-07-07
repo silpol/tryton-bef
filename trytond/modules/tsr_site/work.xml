@@ -18,6 +18,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">site_employee_tree</field>
         </record>
 
+        <!-- Employee -->
         <record model="ir.action.act_window" id="act_site_employee_form">
             <field name="name">Employee</field>
             <field name="res_model">company.employee</field>
@@ -33,6 +34,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_employee_form"/>
         </record>
 
+        <!-- Taxon -->
         <record model="ir.ui.view" id="site_taxinomie_view_form">
             <field name="model">taxinomie.taxinomie</field>
             <field name="inherit" ref="taxinomie.taxinomie_view_form" />       
@@ -60,6 +62,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_taxinomie_form"/>
         </record>
 
+        <!-- Timesheet -->
         <record model="ir.ui.view" id="site_workline_view_form">
             <field name="model">timesheet.workline</field>
             <field name="inherit" ref="timesheet.work_line_view_form" />
@@ -88,6 +91,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_workline_form"/>
         </record>
 
+        <!-- Vehicule -->
         <record model="ir.ui.view" id="vehicule_view_tree">
             <field name="model">site.vehicule</field>
             <field name="type">tree</field>
@@ -112,8 +116,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="vehicule_view_form"/>
             <field name="act_window" ref="act_vehicule_form"/>
         </record>        
-        <menuitem parent="menu_configuration" id="menu_vehicule_form" icon="tryton-list" action="act_vehicule_form"/>
+        <menuitem parent="menu_configuration" id="menu_vehicule_form" icon="tryton-truck" action="act_vehicule_form"/>
 
+        <!-- Materiel -->
         <record model="ir.ui.view" id="materiel_view_tree">
             <field name="model">site.materiel</field>
             <field name="type">tree</field>
@@ -138,14 +143,14 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="materiel_view_form"/>
             <field name="act_window" ref="act_materiel_form"/>
         </record>        
-        <menuitem parent="menu_configuration" id="menu_materiel_form" icon="tryton-list" action="act_materiel_form"/>
+        <menuitem parent="menu_configuration" id="menu_materiel_form" icon="tryton-matos" action="act_materiel_form"/>
 
+        <!-- Outil -->
         <record model="ir.ui.view" id="materiel_outil_view_tree2">
             <field name="model">site.outil</field>
             <field name="type">tree</field>
             <field name="name">materiel_outil_tree2</field>
         </record>
-
         <record model="ir.ui.view" id="outil_view_tree">
             <field name="model">site.outil</field>
             <field name="type">tree</field>
@@ -170,8 +175,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="outil_view_form"/>
             <field name="act_window" ref="act_outil_form"/>
         </record>        
-        <menuitem parent="menu_materiel_form" id="menu_outil_form" icon="tryton-list" action="act_outil_form"/>
+        <menuitem parent="menu_materiel_form" id="menu_outil_form" icon="tryton-outil" action="act_outil_form"/>        
 
+        <!-- Chantier -->
         <record model="ir.ui.view" id="work_view_tree">
             <field name="model">site.work</field>
             <field name="type">tree</field>
@@ -194,12 +200,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="model">site.work</field>
             <field name="type">form</field>
             <field name="name">work_form</field>
-        </record>        
+        </record>             
 
+        <!-- Chantier/Tache -->
         <record model="ir.action.act_window" id="act_site_tree">
-            <field name="name">Sites</field>
+            <field name="name">Sites/Task</field>
             <field name="res_model">site.work</field>
-            <field name="domain">[('parent', '=', False)]</field>
+            <field name="domain">[('parent', '=', True)]</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_site_tree_view1">
@@ -207,15 +214,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="work_view_tree"/>
             <field name="act_window" ref="act_site_tree"/>
         </record>
-        <record model="ir.action.act_window.view"
-            id="act_site_tree_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="work_view_form"/>
-            <field name="act_window" ref="act_site_tree"/>
-        </record>
-        <menuitem parent="menu_site" action="act_site_tree"
-            id="menu_site_tree"/>
+        <menuitem parent="menu_site" action="act_site_tree" icon="tryton-site" id="menu_site_tree"/>
 
+        <!-- Chantiers -->
         <record model="ir.action.act_window" id="act_site_form">
             <field name="name">Sites</field>
             <field name="res_model">site.work</field>
@@ -234,9 +235,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="work_view_form"/>
             <field name="act_window" ref="act_site_form"/>
         </record>
-        <menuitem parent="menu_site_tree" action="act_site_form"
-            id="menu_site_form"/>
+        <menuitem parent="menu_site_tree" action="act_site_form" icon="tryton-site" id="menu_site_form"/>
 
+        <!-- Taches -->
         <record model="ir.action.act_window" id="act_task_form">
             <field name="name">Tasks</field>
             <field name="res_model">site.work</field>
@@ -255,8 +256,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="work_view_form"/>
             <field name="act_window" ref="act_task_form"/>
         </record>
-        <menuitem parent="menu_site_tree" action="act_task_form"
-            id="menu_task_form"/>
+        <menuitem parent="menu_site_tree" action="act_task_form" icon="tryton-work" id="menu_task_form"/>
 
         <record model="ir.action.act_window" id="act_open_child_work">
             <field name="name">Tasks</field>
@@ -283,6 +283,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_open_child_work"/>
         </record>
 
+        <!-- Groupes -->
         <record model="ir.model.access" id="access_work">
             <field name="model" search="[('model', '=', 'site.work')]"/>
             <field name="perm_read" eval="True"/>

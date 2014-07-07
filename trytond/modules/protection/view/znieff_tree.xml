@@ -4,4 +4,5 @@
     <field name="name" />
     <field name="generation" />
     <field name="date" />
+    <field name="version" />
 </tree>

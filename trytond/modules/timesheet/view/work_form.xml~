@@ -23,6 +23,4 @@ this repository contains the full copyright notices and license terms. -->
         <label name="tache"/>
         <field name="tache"/>        
     </group>
-    <field name="matoutil" view_ids="timesheet.materiel_outil_view_tree2" colspan="4"/>
-    <field name="matiere" colspan="4"/>
 </form>

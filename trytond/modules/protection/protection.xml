@@ -36,7 +36,7 @@
     <record model="ir.action.act_window" id="window_arrete_protection_biotope">
         <field name="name">Arrêtés de protection de biotope</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Arrêté de protection de biotope')]</field>
+        <field name="domain">[('espace.code', '=', 'APB')]</field>
         <field name="context">{'espace': 'Arrêté de protection de biotope'}</field>
     </record>
 
@@ -58,7 +58,7 @@
     <record model="ir.action.act_window" id="window_conservatoire_espaces_naturels">
         <field name="name">Conservatoires d’espaces naturels</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Conservatoire d’espaces naturels')]</field>
+        <field name="domain">[('espace.code', '=', 'CEN')]</field>
         <field name="context">{'espace': 'Conservatoire d’espaces naturels'}</field>
     </record>
 
@@ -80,7 +80,7 @@
     <record model="ir.action.act_window" id="window_parc_national">
         <field name="name">Parcs nationaux</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Parc national')]</field>
+        <field name="domain">[('espace.code', 'like', 'PN %')]</field>
         <field name="context">{'espace': 'Parc national'}</field>
     </record>
 
@@ -102,7 +102,7 @@
     <record model="ir.action.act_window" id="window_parc_naturel_marin">
         <field name="name">Parcs naturels marins</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Parc naturel marin')]</field>
+        <field name="domain">[('espace.code', '=', 'PNM')]</field>
         <field name="context">{'espace': 'Parc naturel marin'}</field>
     </record>
 
@@ -124,7 +124,7 @@
     <record model="ir.action.act_window" id="window_parc_naturel_regional">
         <field name="name">Parcs naturels régionaux</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Parc naturel régional')]</field>
+        <field name="domain">[('espace.code', '=', 'PNR')]</field>
         <field name="context">{'espace': 'Parc naturel régional'}</field>
     </record>
 
@@ -146,7 +146,7 @@
     <record model="ir.action.act_window" id="window_reserve_naturelle_regionale">
         <field name="name">Réserves naturelles régionales</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Réserve naturelle régionale')]</field>
+        <field name="domain">[('espace.code', '=', 'RNR')]</field>
         <field name="context">{'espace': 'Réserve naturelle régionale'}</field>
     </record>
 
@@ -168,7 +168,7 @@
     <record model="ir.action.act_window" id="window_reserve_naturelle_nationale">
         <field name="name">Réserves naturelles nationales</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Réserve naturelle nationale')]</field>
+        <field name="domain">[('espace.code', '=', 'RNN')]</field>
         <field name="context">{'espace': 'Réserve naturelle nationale'}</field>
     </record>
 
@@ -190,7 +190,7 @@
     <record model="ir.action.act_window" id="window_reserve_naturelle_corse">
         <field name="name">Réserves naturelles Corse</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Réserve naturelle Corse')]</field>
+        <field name="domain">[('espace.code', '=', 'RNC')]</field>
         <field name="context">{'espace': 'Réserve naturelle Corse'}</field>
     </record>
 
@@ -212,7 +212,7 @@
     <record model="ir.action.act_window" id="window_reserve_naturelle_chasse_faune_sauvage">
         <field name="name">Réserves naturelles de chasse et faune sauvage</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Réserve naturelle de chasse et faune sauvage')]</field>
+        <field name="domain">[('espace.code', '=', 'RNCFS')]</field>
         <field name="context">{'espace': 'Réserve naturelle de chasse et faune sauvage'}</field>
     </record>
 
@@ -234,7 +234,7 @@
     <record model="ir.action.act_window" id="window_site_importance_communautaire">
         <field name="name">Site d'importance communautaire</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Site d’importance communautaire')]</field>
+        <field name="domain">[('espace.code', '=', 'SIC')]</field>
         <field name="context">{'espace': 'Site d’importance communautaire'}</field>
     </record>
 
@@ -253,22 +253,32 @@
     <menuitem parent="menu_protection" sequence="1" id="menu_site_importance_communautaire" icon="tryton-list" action="window_site_importance_communautaire"/>       
 
     <!-- Zone d’importance communautaire pour les oiseaux -->
+    <record model="ir.ui.view" id="zico_view_tree">
+        <field name="model">protection.zico</field>
+        <field name="type">tree</field>
+        <field name="name">zico_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="zico_view_form">
+        <field name="model">protection.zico</field>
+        <field name="type">form</field>
+        <field name="name">zico_form</field>
+    </record>
+
     <record model="ir.action.act_window" id="window_site_importance_communautaire_oiseaux">
         <field name="name">Zones d’importance communautaire pour les oiseaux</field>
-        <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Zone d’importance communautaire pour les oiseaux')]</field>
-        <field name="context">{'espace': 'Zone d’importance communautaire pour les oiseaux'}</field>
+        <field name="res_model">protection.zico</field>
     </record>
 
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_oiseaux_tree">
         <field name="sequence" eval="10"/>
-        <field name="view" ref="area_view_tree"/>
+        <field name="view" ref="zico_view_tree"/>
         <field name="act_window" ref="window_site_importance_communautaire_oiseaux"/>
     </record>
 
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_oiseaux_form">
         <field name="sequence" eval="20"/>
-        <field name="view" ref="area_view_form"/>
+        <field name="view" ref="zico_view_form"/>
         <field name="act_window" ref="window_site_importance_communautaire_oiseaux"/>
     </record>
 
@@ -278,7 +288,7 @@
     <record model="ir.action.act_window" id="window_zone_de_protection_speciale">
         <field name="name">Zones de protection spéciale</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Zone de protection spéciale')]</field>
+        <field name="domain">[('espace.code', '=', 'ZPS')]</field>
         <field name="context">{'espace': 'Zone de protection spéciale'}</field>
     </record>
 
@@ -300,7 +310,7 @@
     <record model="ir.action.act_window" id="window_reserve_de_biosphere">
         <field name="name">Réserves de biosphère</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Réserve de biosphère')]</field>
+        <field name="domain">[('espace.code', 'like', 'Bios %')]</field>
         <field name="context">{'espace': 'Réserve de biosphère'}</field>
     </record>
 
@@ -322,7 +332,7 @@
     <record model="ir.action.act_window" id="window_conservatoire_du_littoral">
         <field name="name">Conservatoires du littoral</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Conservatoire du littoral')]</field>
+        <field name="domain">[('espace.code', '=', 'CDL')]</field>
         <field name="context">{'espace': 'Conservatoire du littoral'}</field>
     </record>
 
@@ -344,7 +354,7 @@
     <record model="ir.action.act_window" id="window_site_ramsar">
         <field name="name">Sites Ramsar</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Site Ramsar')]</field>
+        <field name="domain">[('espace.code', '=', 'RAMSAR')]</field>
         <field name="context">{'espace': 'Site Ramsar'}</field>
     </record>
 
@@ -379,7 +389,7 @@
     <record model="ir.action.act_window" id="window_site_znieffi">
         <field name="name">Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I')]</field>
+        <field name="domain">[('espace.code', '=', 'ZNIEFF 1')]</field>
         <field name="context">{'espace': 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I'}</field>
     </record>
 
@@ -401,7 +411,7 @@
     <record model="ir.action.act_window" id="window_site_znieffii">
         <field name="name">Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II</field>
         <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II')]</field>
+        <field name="domain">[('espace.code', '=', 'ZNIEFF 2')]</field>
         <field name="context">{'espace': 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II'}</field>
     </record>
 

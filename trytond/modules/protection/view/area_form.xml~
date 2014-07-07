@@ -6,6 +6,8 @@
             <field name="id_mnhn" />
             <label name="name" />
             <field name="name" />
+            <label name="typo" />
+            <field name="typo" />
             <label name="date" />
             <field name="date" />
         </page>                        

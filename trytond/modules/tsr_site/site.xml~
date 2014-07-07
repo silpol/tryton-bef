@@ -3,22 +3,30 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-        <record model="res.group" id="group_chantier_admin">
-            <field name="name">Chantier Administration</field>
+        <record model="res.group" id="group_site_admin">
+            <field name="name">Site Administration</field>
         </record>
-        <record model="res.user-res.group" id="user_admin_group_chantier_admin">
+        <record model="res.user-res.group" id="user_admin_group_site_admin">
             <field name="user" ref="res.user_admin"/>
-            <field name="group" ref="group_chantier_admin"/>
+            <field name="group" ref="group_site_admin"/>
         </record>
-        <record model="res.user-res.group" id="user_trigger_group_chantier_admin">
+        <record model="res.user-res.group" id="user_trigger_group_site_admin">
             <field name="user" ref="res.user_trigger"/>
-            <field name="group" ref="group_chantier_admin"/>
+            <field name="group" ref="group_site_admin"/>
         </record>
 
-        <record model="ir.ui.icon" id="chantier_icon">
-            <field name="name">tryton-chantier</field>
-            <field name="path">icons/tryton-chantier.svg</field>
+        <record model="ir.ui.icon" id="site_icon">
+            <field name="name">tryton-site</field>
+            <field name="path">icons/tryton-site.svg</field>
         </record>
-        <menuitem name="Chantier" sequence="7" id="menu_chantier" icon="tryton-chantier"/>        
+        <record model="ir.ui.icon" id="vehicule_icon">
+            <field name="name">tryton-truck</field>
+            <field name="path">icons/tryton-truck.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="work_icon">
+            <field name="name">tryton-work</field>
+            <field name="path">icons/tryton-work.svg</field>
+        </record>
+        <menuitem name="Site" sequence="7" id="menu_site" icon="tryton-site"/>        
     </data>
 </tryton>

@@ -52,7 +52,7 @@ class Area(Mapable, ModelView, ModelSQL):
         )
 
     image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image map', filename='image_filename')
+    image_map = fields.Binary('Image map')
 
     espace = fields.Many2One(
             'protection.type',
@@ -71,14 +71,6 @@ class Area(Mapable, ModelView, ModelSQL):
         )
 
     @classmethod
-    @ModelView.button
-    def generate(cls, records):
-        for record in records:
-            if record.name is None:
-                continue
-            cls.write([record], {'image_map': cls.get_map(record, 'map')})  
-
-    @classmethod
     def default_espace(cls):
         return 1 
 
@@ -87,6 +79,15 @@ class Area(Mapable, ModelView, ModelSQL):
 
     def get_map(self, ids):
         return self._get_image( 'map.qgs', 'carte' )
+
+
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.name is None:
+                continue
+            cls.write([record], {'image_map': cls.get_map(record, 'map')})  
 
 
     @classmethod

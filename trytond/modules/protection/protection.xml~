@@ -6,7 +6,7 @@
         <field name="path">icons/software-update-urgent.svg</field>
     </record>
 
-    <menuitem name="Protections" id="menu_protection" icon="tryton-protection"/>
+    <menuitem name="Protections" parent="ir.menu_administration" id="menu_protection" icon="tryton-protection"/>
 
     <record model="ir.ui.view" id="area_view_tree">
         <field name="model">protection.area</field>
@@ -253,22 +253,32 @@
     <menuitem parent="menu_protection" sequence="1" id="menu_site_importance_communautaire" icon="tryton-list" action="window_site_importance_communautaire"/>       
 
     <!-- Zone d’importance communautaire pour les oiseaux -->
+    <record model="ir.ui.view" id="zico_view_tree">
+        <field name="model">protection.zico</field>
+        <field name="type">tree</field>
+        <field name="name">zico_tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="zico_view_form">
+        <field name="model">protection.zico</field>
+        <field name="type">form</field>
+        <field name="name">zico_form</field>
+    </record>
+
     <record model="ir.action.act_window" id="window_site_importance_communautaire_oiseaux">
         <field name="name">Zones d’importance communautaire pour les oiseaux</field>
-        <field name="res_model">protection.area</field>
-        <field name="domain">[('espace.name', '=', 'Zone d’importance communautaire pour les oiseaux')]</field>
-        <field name="context">{'espace': 'Zone d’importance communautaire pour les oiseaux'}</field>
+        <field name="res_model">protection.zico</field>
     </record>
 
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_oiseaux_tree">
         <field name="sequence" eval="10"/>
-        <field name="view" ref="area_view_tree"/>
+        <field name="view" ref="zico_view_tree"/>
         <field name="act_window" ref="window_site_importance_communautaire_oiseaux"/>
     </record>
 
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_oiseaux_form">
         <field name="sequence" eval="20"/>
-        <field name="view" ref="area_view_form"/>
+        <field name="view" ref="zico_view_form"/>
         <field name="act_window" ref="window_site_importance_communautaire_oiseaux"/>
     </record>
 

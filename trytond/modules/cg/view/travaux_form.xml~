@@ -2,8 +2,12 @@
 <form string="Travaux" col="2">
     <label name="arbre"/>
     <field name="arbre"/>
+    <label name="essence"/>
+    <field name="essence"/>
     <label name="typetravaux"/>
     <field name="typetravaux"/>
+    <label name="refug"/>
+    <field name="refug"/>
     <label name="description"/>
     <field name="description"/>
     <label name="start_date"/>
@@ -27,6 +31,8 @@
             <field name="annule_reason"/>
         </page>
     </notebook>
-    <label name="active"/>
-    <field name="active"/>
+    <group col="2" colspan="2" id="active" states="{'invisible': Eval('state') != 'realise'}">
+        <label name="active"/>
+        <field name="active"/>
+    </group>
 </form>

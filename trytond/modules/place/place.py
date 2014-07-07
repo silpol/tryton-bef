@@ -32,6 +32,7 @@ from trytond.pool import PoolMeta, Pool
 from trytond.modules.geotools.tools import get_as_epsg4326, envelope_union
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 STATES = {
     'readonly': ~Eval('active', True),
@@ -39,7 +40,7 @@ STATES = {
 
 DEPENDS = ['active']
 
-class Place(ModelView, ModelSQL):
+class Place(Mapable, ModelView, ModelSQL):
     "Place"
     __name__ = 'place.place'
     _rec_name = 'name'
@@ -101,43 +102,19 @@ class Place(ModelView, ModelSQL):
             'place', 
             'Party',
             )            
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_all = fields.Function(fields.Binary('Image'), 'get_image_all')
-    image_map = fields.Binary('Image', filename='image_map_filename')
-    image_map_filename = fields.Char('Filename', readonly=True)                
-    
-    
+    place_image = fields.Function(fields.Binary('Image'), 'get_image')
+    place_image_all = fields.Function(fields.Binary('Image all'), 'get_image_all')
+    place_image_map = fields.Binary('Image map')
+
     def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        areas, _envelope, _area = get_as_epsg4326([self.geom])
-        town, envelope, area = get_as_epsg4326([self.address.my_city.contour])
-        if areas == []:
-            return buffer('')
-
-        m = MapRender(640, 480, envelope)
-        m.plot_geom(town[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 0, 0))
-        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
+        return self._get_image('place_image.qgs', 'carte')
 
     def get_image_all(self, ids):
-        if self.address is None:
-            return buffer('')
+        return self._get_image('place_image_all.qgs', 'carte')
 
-        town, envelope, area = get_as_epsg4326([self.address.my_city.contour])
-                       
-        m = MapRender(640, 480, envelope)
-        m.plot_geom(town[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 0, 0))
-        for record in self.search([]):
-            areas, _envelope, _area = get_as_epsg4326([record.geom])
-            if len(areas) == 0:
-                continue
-            if record == self:
-                m.plot_geom(areas[0], None, None, color=(0, 1, 0, 1), bgcolor=(0, 1, 0, 1))
-            else:
-                m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
+    def get_map(self, ids):
+        return self._get_image('place_map.qgs', 'carte')
+
 
     @classmethod
     def __setup__(cls):
@@ -172,29 +149,9 @@ class Place(ModelView, ModelSQL):
     @ModelView.button
     def generate(cls, records):
         for record in records:
-            if record.address is None:
+            if record.name is None:
                 continue
-
-            areas, _envelope, _area = get_as_epsg4326([record.geom])                                  
-
-            # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-           
-            m.plot_geom(areas[0], record.name, None, color=(0, 1, 0, 1), bgcolor=(0, 1, 0, 0.3))                
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})
-
-    @staticmethod
-    def default_image_map_filename():
-        return 'Carte all.jpg'
+            cls.write([record], {'place_image_map': cls.get_map(record, 'map')}) 
             
 class PlaceParty(ModelSQL, ModelView):
     'PlaceParty'
@@ -205,51 +162,10 @@ class PlaceParty(ModelSQL, ModelView):
             ondelete='CASCADE', required=True, select=1)
     party = fields.Many2One('party.party', 'Partenaire', ondelete='CASCADE',
             required=True, select=1)
-    category = fields.Many2One('party.category', u'Catégorie',
-            ondelete='CASCADE', select=1)
-    full_code = fields.Function(fields.Text('Full Code'), 'get_full_code')
 
     @classmethod
     def __setup__(cls):
         super(PlaceParty, cls).__setup__()
-        cls._error_messages.update({'write_code':
-            u'You can''t modified category of site !'})
-
-    @staticmethod
-    def default_active():
-        return True
-
-    def get_full_code(self, name):
-        return '\n'.join(x for x in (self.place, self.party,
-                self.category) if x)
-
-    def get_rec_name(self, name):
-        return ', '.join(x for x in (self.place, self.party,
-                self.category) if x)
-
-    @classmethod
-    def search_rec_name(cls, name, clause):
-        place_parties = cls.search(['OR', ('party',) + clause[1:]], order=[])
-        if place_parties:
-            return [('id', 'in',
-                [place_party.id for place_party in place_parties])]
-        return [('place',) + clause[1:]]
-
-    @classmethod
-    def write(cls, place_parties, vals):
-        if 'place' in vals:
-            for place_party in place_parties:
-                if place_party.place.id != vals['place']:
-                    cls.raise_user_error('write_place')
-        super(PlaceParty, cls).write(place_parties, vals)
-
-    @classmethod
-    def write(cls, place_parties, vals):
-        if 'place' in vals:
-            for place_party in place_parties:
-                if place_party.place.id != vals['place']:
-                    cls.raise_user_error('write_place')
-        super(PlaceParty, cls).write(place_parties, vals)
         
 class ObjAreaQGis(QGis):
     __name__ = 'place.place.qgis'

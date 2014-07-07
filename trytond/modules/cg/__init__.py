@@ -38,10 +38,18 @@ def register():
         evol_arbre,
         UgEquipement,
         note,
+        synthese1,
+        synthese2,
+        synthese3,
+        synthese4,
         preconisation,
         rapport_produit,
         CheckArbreResult,
         OpenCheckArbreStart,
+        Opensynthese1Start,
+        Opensynthese2Start,
+        Opensynthese3Start,
+        Opensynthese4Start,
         module='cg', type_='model')
         
     Pool.register(
@@ -53,4 +61,8 @@ def register():
 
     Pool.register(
         OpenCheckArbre,
+        Opensynthese1,
+        Opensynthese2,
+        Opensynthese3,
+        Opensynthese4,
         module='cg', type_='wizard')

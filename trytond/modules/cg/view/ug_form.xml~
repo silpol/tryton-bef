@@ -27,7 +27,7 @@
             <label name="remsecurite"/>
             <field name="remsecurite"/>
             <label name="domanialtype" />
-            <field name="domanialtype" />
+            <field name="domanialtype" widget="selection"/>
             <label name="domanialdate" />
             <field name="domanialdate" />
             <label name="active"/>

@@ -1,7 +1,14 @@
 <?xml version="1.0"?>
 
 <tryton>
-	<data>        
+	<data>
+
+        <record model="ir.ui.icon" id="tryton_afi">
+            <field name="name">tryton-afi</field>
+            <field name="path">icons/tryton-afi.svg</field>
+        </record>
+
+        <menuitem name="AFI" id="menu_afi" icon="tryton-afi"/>
 
 		<record model="ir.ui.view" id="dispositif_view_tree">			
 			<field name="model">dispositif.dispositif</field>
@@ -54,7 +61,20 @@
             <field name="keyword">form_action</field>
             <field name="model">dispositif.dispositif,-1</field>
             <field name="action" ref="report_dispositif_edit"/>
-        </record> 
+        </record>
+
+        <!-- pdf report -->
+        <record model="ir.action.report" id="report_dispositif_pdf">
+            <field name="name">Rapport du dispositif (pdf)</field>
+            <field name="model">dispositif.dispositif</field>
+            <field name="report_name">rtryton.pdfreport</field>
+            <field name="report">dispositif/dispositif.Rnw</field>
+        </record>
+        <record model="ir.action.keyword" id="report_dispositif_kwd_pdf">
+            <field name="keyword">form_print</field>
+            <field name="model">dispositif.dispositif,-1</field>
+            <field name="action" ref="report_dispositif_pdf"/>
+        </record>
 		
 		<record model="ir.action.act_window" id="act_dispositif_party_rel_form">
             <field name="name">Partners</field>
@@ -71,7 +91,7 @@
           <field name="act_window" ref="act_dispositif_party_rel_form"/>
         </record> 
 		
-		<menuitem parent="ir.menu_administration" sequence="70" id="menu_dispositif_form" icon="tryton-list" action="act_dispositif_form"/>
+		<menuitem parent="menu_afi" sequence="70" id="menu_dispositif_form" icon="tryton-list" action="act_dispositif_form"/>
         
 	</data>
 </tryton>

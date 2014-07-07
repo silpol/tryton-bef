@@ -2,8 +2,14 @@
 <form string="Travaux" col="2">
     <label name="arbre"/>
     <field name="arbre"/>
+    <label name="essence"/>
+    <field name="essence"/>
     <label name="typetravaux"/>
     <field name="typetravaux"/>
+    <label name="refug"/>
+    <field name="refug"/>
+    <label name="emplacement"/>
+    <field name="emplacement"/>
     <label name="description"/>
     <field name="description"/>
     <label name="start_date"/>

@@ -15,8 +15,11 @@
             <label name="pla_slopeval"/>
 	        <field name="pla_slopeval"/>
             <notebook>
-                 <page string="Comment" id="comment">                                                                
+                <page string="Comment" id="comment">                                                                
 	                <field name="pla_comment"/>
+                </page>                
+                <page string="Group" id="group">                                                                
+	                <field name="pla_regroupement"/>
                 </page>
                 <page string="Map" id="map" col="2">				                                                            
                     <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>

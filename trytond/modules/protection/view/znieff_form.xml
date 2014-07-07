@@ -8,6 +8,8 @@
             <field name="name" />
             <label name="date" />
             <field name="date" />
+            <label name="version" />
+            <field name="version" />
             <label name="generation" />
             <field name="generation" />
         </page>                        

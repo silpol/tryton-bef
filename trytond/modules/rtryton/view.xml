@@ -6,7 +6,7 @@
             <field name="res_model">rtryton.view</field>
             <!--<field name="context">{'model': 11}</field>-->
         </record>
-        <menuitem id="menu_rtryton_view" icon="tryton-list" name="Données"/>
+        <menuitem parent="menu_r" id="menu_rtryton_view" icon="tryton-list" name="Données"/>
 
         <!--
         <record model="ir.action.act_window" id="act_select_view">

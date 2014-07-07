@@ -19,6 +19,7 @@ from trytond.transaction import Transaction
 from trytond.modules.geotools.tools import get_as_epsg4326, envelope_union, bbox_aspect
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 from trytond.wizard import Wizard, StateView, StateAction, Button, StateTransition
 from trytond.backend import FIELDS, TableHandler
@@ -277,7 +278,7 @@ class domanialite(ModelSQL, ModelView):
             readonly = False,
         ) 
             
-class ug(ModelSQL, ModelView):
+class ug(Mapable, ModelSQL, ModelView):
     u'Unité de gestion'
     __name__ = 'cg.ug'
     _rec_name = 'code'    
@@ -360,6 +361,11 @@ class ug(ModelSQL, ModelView):
             string=u'Active',
             help=u'Active',
         )
+
+    @staticmethod
+    def default_active():
+        return True
+
     rue = fields.Char(
             string = u'Nom de la rue',
             help = u'Nom de la rue',
@@ -450,56 +456,24 @@ class ug(ModelSQL, ModelView):
             help = u'Géométrie multipolygonale',            
             readonly = False,           
         )            
-    image = fields.Function(
+    ug_image = fields.Function(
             fields.Binary(
                     'Image'
                 ),
             'get_image'
         )
-    image_map = fields.Binary(
+    ug_map = fields.Binary(
             string=u'Image',
-            filename='image_map_filename'
         )
-    image_map_filename = fields.Function(
-            fields.Char(
-                    string=u'Filename',
-                    readonly=True,
-                    depends=['code']
-                ),
-            '_get_ug_filename'
-        )                      
+
+    def get_image(self, ids):
+        return self._get_image( 'ug_image.qgs', 'carte' )
+
+    def get_map(self, ids):
+        return self._get_image( 'ug_map.qgs', 'carte' ) 
     
     COLOR = (1, 0.1, 0.1, 1)
-    BGCOLOR = (1, 0.1, 0.1, 0.4)
-    
-    @staticmethod
-    def default_active():
-        return True
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        areas, envelope, _area = get_as_epsg4326([self.geom])
-        
-        if areas == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-                       
-        m.plot_geom(areas[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())     
-    
+    BGCOLOR = (1, 0.1, 0.1, 0.4)          
 
     @classmethod
     def __setup__(cls):
@@ -508,10 +482,6 @@ class ug(ModelSQL, ModelView):
             'ug_edit': {},
             'generate': {},
         })
-
-    def _get_ug_filename(self, ids):
-        'UG map filename'
-        return '%s - UG map.jpg' % self.code
                
     @classmethod
     @ModelView.button_action('cg.report_ug_edit')
@@ -524,28 +494,7 @@ class ug(ModelSQL, ModelView):
         for record in records:
             if record.code is None:
                 continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                      
-            m.plot_geom(areas[0], record.code, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})        
-
-    @staticmethod
-    def default_image_map_filename():
-        return 'Carte all.jpg'
+            cls.write([record], {'ug_map': cls.get_map(record, 'map')})
         
 class ObjUgQGis(QGis):
     __name__ = 'cg.ug.qgis'
@@ -628,7 +577,7 @@ class gestionnaire(ModelSQL, ModelView):
             readonly = False,
         )
 
-class station(ModelSQL, ModelView):
+class station(Mapable, ModelSQL, ModelView):
     u'Stations'
     __name__ = 'cg.station'
     _rec_name = 'code'  
@@ -653,6 +602,11 @@ class station(ModelSQL, ModelView):
             string=u'Active',
             help=u'Rend la station disponible dans les listes déroulantes',
         )
+
+    @staticmethod
+    def default_active():
+        return True
+
     proprietaire = fields.Many2One(
             'cg.proprietaire',
             ondelete='CASCADE',
@@ -710,47 +664,24 @@ class station(ModelSQL, ModelView):
             readonly=False,            
         )            
             
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image', filename='image_map_filename')
-    image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['code']), '_get_station_filename')                      
+    station_image = fields.Function(
+                fields.Binary(
+                        string=u'Image'
+             ),
+            'get_image'
+        )
+    station_map = fields.Binary(
+            string=u'Image'
+        )  
+
+    def get_image(self, ids):
+        return self._get_image( 'station_image.qgs', 'carte' )
+
+    def get_map(self, ids):
+        return self._get_image( 'station_map.qgs', 'carte' ) 
     
     COLOR = (0, 1, 0, 1)
-    BGCOLOR = (0, 0, 0, 0.4)
-    
-    @staticmethod
-    def default_active():
-        return True
-
-    def _get_station_filename(self, ids):
-        'Station map filename'
-        return '%s - Station map.jpg' % self.code
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        aires, envelope, _aire = get_as_epsg4326([self.ug.geom])
-        lines, _envelope, _line = get_as_epsg4326([self.geom])
-        
-        if lines == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Leger dezoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-        
-        m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
-        m.plot_geom(lines[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())     
-    
+    BGCOLOR = (0, 0, 0, 0.4)    
 
     @classmethod
     def __setup__(cls):
@@ -763,38 +694,16 @@ class station(ModelSQL, ModelView):
     @classmethod
     @ModelView.button_action('cg.report_station_edit')
     def station_edit(cls, ids):
-        pass
-        
+        pass               
+
     @classmethod
     @ModelView.button
     def generate(cls, records):
         for record in records:
             if record.code is None:
                 continue
-            
-            aires, envelope, _aire = get_as_epsg4326([record.ug.geom])                       
-            lines, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Leger dezoom pour afficher correctement les zones qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-            
-            m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))          
-            m.plot_geom(lines[0], record.code, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})        
+            cls.write([record], {'station_map': cls.get_map(record, 'map')})
 
-    @staticmethod
-    def default_image_map_filename():
-        return 'Carte all.jpg'
         
 class ObjStationQGis(QGis):
     __name__ = 'cg.station.qgis'
@@ -943,7 +852,7 @@ class evol_emplacement(ModelSQL, ModelView):
     def default_active():
         return True
         
-class emplacement(ModelSQL, ModelView):
+class emplacement(Mapable, ModelSQL, ModelView):
     u'Emplacement'
     __name__ = 'cg.emplacement'
     _rec_name = 'code'
@@ -968,6 +877,12 @@ class emplacement(ModelSQL, ModelView):
             string=u'Active',
             help=u'Active'
         )
+
+    
+    @staticmethod
+    def default_active():
+        return True 
+
     adresse = fields.One2One(
             'cg.emplacement-cg.address',
             'emplacement',
@@ -1022,72 +937,24 @@ class emplacement(ModelSQL, ModelView):
             required=False,
             readonly=False,
         )
-    image = fields.Function(
+    emplacement_image = fields.Function(
             fields.Binary(
                     string=u'Image'
                 ),
             'get_image'
         )
-    image_map = fields.Binary(
-            string=u'Image',
-            filename='image_map_filename'
+    emplacement_map = fields.Binary(
+            string=u'Image'
         )
-    image_map_filename = fields.Function(
-            fields.Char(
-                string=u'Filename',
-                readonly=True,
-                depends=['code']
-            ),
-            '_get_emplacement_filename'
-        )
+
+    def get_image(self, ids):
+        return self._get_image( 'emplacement_image.qgs', 'carte' )
+
+    def get_map(self, ids):
+        return self._get_image( 'emplacement_map.qgs', 'carte' ) 
     
     COLOR = (1, 0.1, 0.1, 0.8)
-    BGCOLOR = (1, 0.1, 0.1, 0.8)
-    
-    @staticmethod
-    def default_active():
-        return True
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-                
-        aires, envelope, _aire = get_as_epsg4326([self.station.ug.geom])
-        lines, _envelope, _line = get_as_epsg4326([self.station.geom])
-        pts, _envelope, _line = get_as_epsg4326([self.geom])
-
-        EmpObj = Pool().get(self.__name__)
-        objs = EmpObj.search([('station', '=', self.station.id)])
-        points, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
-        
-        if points == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Leger dezoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-        
-        m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
-        m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))
-        for record in points:
-            if len(points) == 0:
-                continue            
-            if record == get_as_epsg4326([self.geom])[0][0]:                
-                m.plot_geom(record, str(self.code), None, color=self.COLOR, bgcolor=self.BGCOLOR)
-            else:                
-                m.plot_geom(record, None, None, color=(0, 0, 1, 0.5), bgcolor=self.BGCOLOR)
-        m.plot_geom(pts[0], str(self.code), None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
-            
-    
+    BGCOLOR = (1, 0.1, 0.1, 0.8)             
 
     @classmethod
     def __setup__(cls):
@@ -1096,10 +963,6 @@ class emplacement(ModelSQL, ModelView):
             'emplacement_edit': {},
             'generate': {},
         })
-
-    def _get_emplacement_filename(self, ids):
-        'Emplacement map filename'
-        return '%s - Emplacement map.jpg' % self.code
                
     @classmethod
     @ModelView.button_action('cg.report_emplacement_edit')
@@ -1111,44 +974,8 @@ class emplacement(ModelSQL, ModelView):
     def generate(cls, records):
         for record in records:
             if record.code is None:
-                continue
-            
-            aires, envelope, _aire = get_as_epsg4326([record.station.ug.geom])
-            lines, _envelope, _line = get_as_epsg4326([record.station.geom])                                   
-
-            EmpObj = Pool().get(record.__name__)
-            objs = EmpObj.search([('station', '=', record.station.id)])
-            pts, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
-
-            points, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Leger dezoom pour afficher correctement les zones qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-
-            m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
-            m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))                      
-            for entry in pts:
-                if len(pts) == 0:
-                    continue            
-                if entry == get_as_epsg4326([record.geom])[0][0]:                
-                    m.plot_geom(entry, str(entry.code), None, color=record.COLOR, bgcolor=record.BGCOLOR)
-                else:                
-                    m.plot_geom(entry, None, None, color=(0, 0, 1, 0.5), bgcolor=record.BGCOLOR)
-            m.plot_geom(points[0], str(record.code), None, color=record.COLOR, bgcolor=record.BGCOLOR)
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})        
-
-    @staticmethod
-    def default_image_map_filename():
-        return 'Carte all.jpg'
+                continue                        
+            cls.write([record], {'emplacement_map': cls.get_map(record, 'map')})
         
 class ObjEmplacementQGis(QGis):
     __name__ = 'cg.emplacement.qgis'
@@ -1409,7 +1236,11 @@ class taxinomie:
             help=u'Nom commun',
             states=STATES,
             depends=DEPENDS,
-        )              
+        )
+
+    def get_rec_name(self, code):
+        return '%s - %s' % (self.commun, self.lb_nom)
+
     tenuemeca = fields.Char(            
             string=u'Tenue Mécanique',
             help=u'Tenue mécanique',
@@ -1462,7 +1293,7 @@ class commune:
             help=u'Date de fin de mandat',
         )
         
-class arbre(ModelSQL, ModelView):
+class arbre(Mapable, ModelSQL, ModelView):
     u'Arbres'
     __name__ = 'cg.arbre'
     _rec_name = 'code'             
@@ -1488,7 +1319,12 @@ class arbre(ModelSQL, ModelView):
             required = True,
             states=STATES,
             depends=DEPENDS,            
-        )        
+        )
+
+    @staticmethod
+    def default_compteur():
+        return 1
+
     an = fields.Integer(
             string = u'Année',            
             help=u'Année de plantation',
@@ -1574,7 +1410,12 @@ class arbre(ModelSQL, ModelView):
     active = fields.Boolean(
             string=u'Active',
             help=u'Rend l\'arbre disponible dans les listes déroulantes',
-        ) 
+        )
+
+    @staticmethod
+    def default_active():
+        return True 
+ 
     geom = fields.MultiPoint(
             string=u'Geometry',
             help=u'Géométrie point',
@@ -1582,61 +1423,25 @@ class arbre(ModelSQL, ModelView):
             required=False,
         )    
 
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image', filename='image_map_filename')
-    image_map_filename = image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['code']), '_get_arbre_filename')                      
+    arbre_image = fields.Function(
+                fields.Binary(
+                        string=u'Image'
+                ),
+            'get_image'
+        )
+    arbre_map = fields.Binary(
+            string=u'Image'
+        )
+
+    def get_image(self, ids):
+        return self._get_image( 'arbre_image.qgs', 'carte' )
+
+    def get_map(self, ids):
+        return self._get_image( 'arbre_map.qgs', 'carte' ) 
     
     COLOR = (1, 0.1, 0.1, 1)
-    BGCOLOR = (1, 0.1, 0.1, 0.4)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)          
     
-    @staticmethod
-    def default_active():
-        return True 
-        
-    @staticmethod
-    def default_compteur():
-        return 1
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-                
-        aires, envelope, _aire = get_as_epsg4326([self.ug.geom])
-        lines, _envelope, _line = get_as_epsg4326([self.station.geom])
-        pts, _envelope, _line = get_as_epsg4326([self.geom])
-
-        EmpObj = Pool().get(self.__name__)
-        objs = EmpObj.search([('equipement', '=', self.equipement.id), ('ug', '=', self.ug.id), ('station', '=', self.station.id)])
-        points, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
-        
-        if points == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Leger dezoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-        
-        m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
-        m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))
-        for record in points:
-            if len(points) == 0:
-                continue            
-            if record == get_as_epsg4326([self.geom])[0][0]:                
-                m.plot_geom(record, self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-            else:                
-                m.plot_geom(record, None, None, color=(0, 0, 1, 0.5), bgcolor=self.BGCOLOR)
-        m.plot_geom(pts[0], self.code, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())   
-    
-
     @classmethod
     def __setup__(cls):
         super(arbre, cls).__setup__()
@@ -1644,10 +1449,6 @@ class arbre(ModelSQL, ModelView):
             'arbre_edit': {},
             'generate': {},
         })
-
-    def _get_arbre_filename(self, ids):
-        'Arbre map filename'
-        return '%s - Arbre map.jpg' % self.code
                
     @classmethod
     @ModelView.button_action('cg.report_arbre_edit')
@@ -1659,44 +1460,8 @@ class arbre(ModelSQL, ModelView):
     def generate(cls, records):
         for record in records:
             if record.code is None:
-                continue
-            
-            aires, envelope, _aire = get_as_epsg4326([record.ug.geom])
-            lines, _envelope, _line = get_as_epsg4326([record.station.geom])                                   
-
-            EmpObj = Pool().get(record.__name__)
-            objs = EmpObj.search([('equipement', '=', record.equipement.id), ('ug', '=', record.ug.id), ('station', '=', record.station.id)])
-            pts, _envelope, area = get_as_epsg4326([obj.geom for obj in objs])
-
-            points, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Leger dezoom pour afficher correctement les zones qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-
-            m.plot_geom(aires[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.1))
-            m.plot_geom(lines[0], None, None, color=(0, 5, 1, 1), bgcolor=(0, 5, 1, 0.1))                      
-            for entry in pts:
-                if len(pts) == 0:
-                    continue            
-                if entry == get_as_epsg4326([record.geom])[0][0]:                
-                    m.plot_geom(entry, entry.code, None, color=record.COLOR, bgcolor=record.BGCOLOR)
-                else:                
-                    m.plot_geom(entry, None, None, color=(0, 0, 1, 0.5), bgcolor=record.BGCOLOR)
-            m.plot_geom(points[0], record.code, None, color=record.COLOR, bgcolor=record.BGCOLOR)
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})      
-
-    @staticmethod
-    def default_image_map_filename():
-        return 'Carte all.jpg'
+                continue                        
+            cls.write([record], {'arbre_map': cls.get_map(record, 'map')})
         
 class ObjArbreQGis(QGis):
     __name__ = 'cg.arbre.qgis'
@@ -1816,7 +1581,7 @@ class Travaux(Workflow, ModelSQL, ModelView):
                     fields.Many2One(
                         'cg.equipement',
                         string=u'Équipement',
-                        readonly=True
+                        help=u'Équipement'
                     ),
                 'get_equipement',
                 searcher='search_equipement'
@@ -1833,24 +1598,35 @@ class Travaux(Workflow, ModelSQL, ModelView):
                 fields.Many2One(
                     'cg.ug',
                     string=u'Unité de gestion',
-                    readonly=True
+                    help=u'Unité de gestion'
                 ),
             'get_ug',
             searcher='search_ug'
         )
 
     def get_ug(self, name):
-        return self.arbre.ug.id
+        return self.arbre.ug.id    
 
     @classmethod
     def search_ug(cls, name, clause):
         return [('arbre.ug.name',) + tuple(clause[1:])]
 
+    refug = fields.Function(
+                    fields.Char(
+                        string = u'Référence UG',
+                        help=u'Référence UG'
+                    ),
+            'get_refug'
+        )
+
+    def get_refug(self, name):
+        return '%s %s' % (self.arbre.emplacement.station.ug.equipement.coder, self.arbre.emplacement.station.ug.code)
+
     station = fields.Function(
                 fields.Many2One(
                     'cg.station',
                     string=u'Station',
-                    readonly=True
+                    help=u'Station'
                 ),
             'get_station',
             searcher='search_station'
@@ -1863,12 +1639,46 @@ class Travaux(Workflow, ModelSQL, ModelView):
     def search_station(cls, name, clause):
         return [('arbre.station.name',) + tuple(clause[1:])]
 
+    emplacement = fields.Function(
+                fields.Many2One(
+                    'cg.emplacement',
+                    string=u'Emplacement ID',
+                    help=u'Emplacement ID',
+                ),
+            'get_emplacement',
+            searcher='search_emplacement'
+        )
+
+    def get_emplacement(self, name):
+        return self.arbre.emplacement.id
+
+    @classmethod
+    def search_emplacement(cls, name, clause):
+        return [('arbre.emplacement.name',) + tuple(clause[1:])]
+
     arbre = fields.Many2One(
             'cg.arbre',
             string=u'Arbre ID',
             help=u'Arbre ID',
             required=True,
+        ) 
+    essence = fields.Function(
+                    fields.Many2One(
+                        'taxinomie.taxinomie',
+                        string = u'Essence',
+                        help=u'Essence'
+                    ),
+            'get_essence',
+            searcher='search_essence'
         )
+
+    def get_essence(self, name):
+        return self.arbre.essence.id
+
+    @classmethod
+    def search_station(cls, name, clause):
+        return [('arbre.essence.name',) + tuple(clause[1:])]
+
     state = fields.Selection(
                 STATES_TRAV,
                 string=u'State',
@@ -2081,22 +1891,34 @@ class OpenCheckArbre(Wizard):
         return action, {}    
 
     def transition_check(self):        
-        Arbres = Pool().get('cg.arbre')        
+        Arbres = Pool().get('cg.arbre')
+        Preco = Pool().get('cg.preconisation')
         arbres_succeed = []
-        arbres_failed = []
-        arbres = Arbres.browse(Transaction().context.get('active_ids'))
-        for arbre in arbres:            
-            try:
-                if arbre.travaux:
-                    self.create_travaux(arbre)                    
-                    arbres_failed.append(arbre.id)                    
-                else:
-                    self.create_travaux(arbre)                    
-                    arbres_succeed.append(arbre.id)
-            except Exception, e:
-                raise            
-        self.result.arbres_succeed = arbres_succeed
-        self.result.arbres_failed = arbres_failed
+        arbres_failed = []        
+        Lignes = Preco.browse(Transaction().context.get('active_ids'))
+        for ligne in Lignes:            
+            cursor = Transaction().cursor
+            cursor.execute(
+                'SELECT a.id '
+                'FROM cg_arbre a, cg_emplacement e, taxinomie_taxinomie t, cg_station s, cg_ug u, cg_equipement q, cg_evol_arbre ea '
+                'WHERE e.id=a.emplacement AND a.essence=t.id AND s.id=e.station AND u.id=s.ug AND q.id=u.equipement AND a.id=ea.arbre '
+                'AND q.id=%s AND u.id=%s and t.commun=\'%s\' and a.conduite=\'%s\' '
+                'GROUP BY q.id, u.id, t.commun, a.conduite, a.id' % (
+                    ligne.equipement.id, ligne.ug.id, ligne.essence, ligne.conduite))
+            for arbreid in cursor.fetchall():                            
+                arbres = Arbres.browse(arbreid)            
+                for arbre in arbres:            
+                    try:
+                        if arbre.travaux:
+                            self.create_travaux(arbre)                    
+                            arbres_failed.append(arbre.id)                    
+                        else:
+                            self.create_travaux(arbre)                    
+                            arbres_succeed.append(arbre.id)
+                    except Exception, e:
+                        raise            
+                self.result.arbres_succeed = arbres_succeed
+                self.result.arbres_failed = arbres_failed
         return 'result'
 
     def _get_travaux(self, arbre):
@@ -2137,6 +1959,21 @@ class preconisation(ModelSQL, ModelView):
             'cg.ug',
             string=u'Unité de gestion'
         )
+    refug = fields.Function(
+                    fields.Char(
+                        string = u'Référence UG',
+                        help=u'Référence UG'
+                    ),
+            '_get_refug'
+        )
+
+    def _get_refug(self, ids):
+        u'Référence UG'        
+        if self.ug.code is None:
+            return None
+        else:
+            return '%s %s' % (self.equipement.coder, self.ug.code)
+
     rue = fields.Char(
             string = u'Nom de la rue',
             help = u'Nom de la rue',
@@ -2188,3 +2025,354 @@ class preconisation(ModelSQL, ModelView):
                 'WHERE foo.ug=v.id '
                 'GROUP BY foo.code, foo.equipement, ug, rue, debut, fin, conduite, essence, quantite '
                 'ORDER BY equipement, ug, essence', [])
+
+class synthese1(ModelSQL, ModelView):
+    u'Synthese du patrimoine departemental recense par commune'
+    __name__ = 'cg.synthese1'
+    
+    commune = fields.Many2One(
+            'commune.commune',
+            string=u'Commune'
+        )
+    canton = fields.Char(
+            string='Canton',
+        )
+    conduite = fields.Selection(
+            _CONDUITES,
+            string=u'Conduite'
+        )
+    quantite = fields.Integer(
+            string=u'Quantité d\'arbre'
+        )
+    
+    @staticmethod
+    def table_query():
+        and_commune = ' '                
+        args = [True]
+        if Transaction().context.get('commune'):            
+            and_commune = 'AND c.id = %s '
+            args.append(Transaction().context['commune'])
+        return ('SELECT DISTINCT ROW_NUMBER() OVER (ORDER BY b.id) AS id, '
+                'MAX(b.create_uid) AS create_uid, '
+                'MAX(b.create_date) AS create_date, '
+                'MAX(b.write_uid) AS write_uid, '
+                'MAX(b.write_date) AS write_date,'
+                'commune, '
+                'foo.canton as canton, '
+                'conduite, '
+                'quantite '
+                'FROM (SELECT c.id as commune, c.name||\' - \'||c.canton as canton, '
+                'e.code, a.conduite as conduite, a.code, '
+                'COUNT(*) OVER (PARTITION BY c.name, c.canton, a.conduite) AS quantite '
+                'from cg_station s, commune_commune c, cg_emplacement e, cg_arbre a '
+                'where %s '
+                + and_commune +
+                ' and s.commune=c.id and s.id=e.station and a.emplacement=e.id '
+                'group by c.id, e.code, a.conduite, a.code) as foo, commune_commune b '
+                'where b.id=foo.commune '
+                'GROUP BY commune, conduite, quantite, b.id, foo.canton '
+                'ORDER BY canton, conduite', args)
+
+class Opensynthese1Start(ModelView):
+    'Open synthese1'
+    __name__ = 'cg.synthese1.open.start'
+
+    commune = fields.Many2One(
+               'commune.commune',
+                string=u'Commune'
+            )
+
+class Opensynthese1(Wizard):
+    'Open synthese1'
+    __name__ = 'cg.synthese1.open'
+
+    start = StateView('cg.synthese1.open.start',
+        'cg.synthese1_open_start_view_form', [
+            Button('Cancel', 'end', 'tryton-cancel'),
+            Button('Open', 'open_', 'tryton-ok', default=True),
+            ])
+    open_ = StateAction('cg.act_synthese1_form')
+
+    def do_open_(self, action):
+        action['pyson_context'] = PYSONEncoder().encode({                
+                'commune': self.start.commune.id if self.start.commune else None,                
+                })
+        return action, {}
+
+    def transition_open_(self):
+        return 'end'
+
+class synthese2(ModelSQL, ModelView):
+    u'Synthese du patrimoine departemental par commune par gestionnaire'
+    __name__ = 'cg.synthese2'
+    
+    commune = fields.Many2One(
+            'commune.commune',
+            string=u'Commune'
+        )
+    canton = fields.Char(
+            string='Canton',
+        )
+    gestionnaire = fields.Many2One(
+            'cg.gestionnaire',            
+            string = u'Gestionnaire'
+        ) 
+    conduite = fields.Selection(
+            _CONDUITES,
+            string=u'Conduite'
+        )
+    quantite = fields.Integer(
+            string=u'Quantité d\'arbre'
+        )
+    
+    @staticmethod
+    def table_query():
+        clause = ' '
+        args = [True]        
+        if Transaction().context.get('commune'):
+            clause += 'AND c.id = %s '
+            args.append(Transaction().context['commune'])
+        if Transaction().context.get('gestionnaire'):
+            clause += 'AND s.gestionnaire = %s '
+            args.append(Transaction().context['gestionnaire'])        
+        return ('SELECT DISTINCT ROW_NUMBER() OVER (ORDER BY b.id) AS id, '
+                'MAX(b.create_uid) AS create_uid, '
+                'MAX(b.create_date) AS create_date, '
+                'MAX(b.write_uid) AS write_uid, '
+                'MAX(b.write_date) AS write_date,'
+                'commune, '
+                'foo.canton as canton, '
+                'conduite, '
+                'gestionnaire, '
+                'quantite '
+                'FROM (SELECT c.id as commune, c.name||\' - \'||c.canton as canton, '
+                'e.code, a.conduite as conduite, a.code, s.gestionnaire AS gestionnaire, '
+                'COUNT(*) OVER (PARTITION BY c.name, c.canton, a.conduite, s.gestionnaire) AS quantite '
+                'from cg_station s, commune_commune c, cg_emplacement e, cg_arbre a '
+                'where %s '
+                + clause +
+                ' and s.commune=c.id and s.id=e.station and a.emplacement=e.id '
+                'group by c.id, e.code, a.conduite, a.code, s.gestionnaire) as foo, commune_commune b '
+                'where b.id=foo.commune '
+                'GROUP BY commune, conduite, quantite, b.id, foo.canton, gestionnaire '
+                'ORDER BY canton, conduite', args)
+
+class Opensynthese2Start(ModelView):
+    'Open synthese2'
+    __name__ = 'cg.synthese2.open.start'
+
+    commune = fields.Many2One(
+           'commune.commune',
+            string=u'Commune'
+        )
+    gestionnaire = fields.Many2One(
+            'cg.gestionnaire',            
+            string = u'Gestionnaire'
+        )
+
+class Opensynthese2(Wizard):
+    'Open synthese2'
+    __name__ = 'cg.synthese2.open'
+
+    start = StateView('cg.synthese2.open.start',
+        'cg.synthese2_open_start_view_form', [
+            Button('Cancel', 'end', 'tryton-cancel'),
+            Button('Open', 'open_', 'tryton-ok', default=True),
+            ])
+    open_ = StateAction('cg.act_synthese2_form')
+
+    def do_open_(self, action):
+        action['pyson_context'] = PYSONEncoder().encode({                
+                'commune': self.start.commune.id if self.start.commune else None,
+                'gestionnaire': self.start.gestionnaire.id if self.start.gestionnaire else None,                
+                })
+        return action, {}
+
+    def transition_open_(self):
+        return 'end'
+
+class synthese3(ModelSQL, ModelView):
+    u'Synthese du patrimoine departemental gere par gestionnaire par essence'
+    __name__ = 'cg.synthese3'
+    
+    essence = fields.Char(                                  
+            string=u'Essence',
+            help=u'Nom de l\'essence',            
+        )
+    gestionnaire = fields.Many2One(
+            'cg.gestionnaire',            
+            string = u'Gestionnaire',
+            help=u'Service gestionnaire'
+        ) 
+    conduite = fields.Selection(
+            _CONDUITES,
+            string=u'Conduite',
+            help=u'Conduite'
+        )
+    quantite = fields.Integer(
+            string=u'Quantité d\'arbre',
+            help=u'Quantité d\'arbre'
+        )
+
+    @classmethod
+    def __setup__(cls):
+        super(synthese3, cls).__setup__()
+        cls._order.insert(0, ('essence', 'ASC'))
+    
+    @staticmethod
+    def table_query():
+        clause = ' '
+        args = [True]
+        if Transaction().context.get('gestionnaire'):
+            clause += 'AND s.gestionnaire = %s '
+            args.append(Transaction().context['gestionnaire'])        
+        return ('SELECT DISTINCT row_number() OVER (order by essence) as id, '
+                'MAX(x.create_uid) AS create_uid, '
+                'MAX(x.create_date) AS create_date, '
+                'MAX(x.write_uid) AS write_uid, '
+                'MAX(x.write_date) AS write_date,'
+                'essence, '
+                'gestionnaire, '
+                'conduite, '
+                'quantite '
+                'from (select distinct '
+                't.commun as essence, '
+                's.gestionnaire as gestionnaire, '
+                'a.conduite as conduite, '
+                'COUNT(*) OVER (partition by t.commun, a.conduite, s.gestionnaire) AS quantite '
+                'from cg_arbre a, taxinomie_taxinomie t, cg_station s, cg_emplacement e '
+                'where %s '
+                + clause +
+                ' and a.essence=t.id and a.emplacement=e.id and e.station=s.id) as foo, taxinomie_taxinomie x '
+                'where foo.essence=x.commun '
+                'group by essence, gestionnaire, conduite, quantite', args)
+
+class Opensynthese3Start(ModelView):
+    'Open synthese3'
+    __name__ = 'cg.synthese3.open.start'
+
+    gestionnaire = fields.Many2One(
+            'cg.gestionnaire',            
+            string = u'Gestionnaire'
+        )
+
+class Opensynthese3(Wizard):
+    'Open synthese3'
+    __name__ = 'cg.synthese3.open'
+
+    start = StateView('cg.synthese3.open.start',
+        'cg.synthese3_open_start_view_form', [
+            Button('Cancel', 'end', 'tryton-cancel'),
+            Button('Open', 'open_', 'tryton-ok', default=True),
+            ])
+    open_ = StateAction('cg.act_synthese3_form')
+
+    def do_open_(self, action):
+        action['pyson_context'] = PYSONEncoder().encode({                
+                'gestionnaire': self.start.gestionnaire.id if self.start.gestionnaire else None,                
+                })
+        return action, {}
+
+    def transition_open_(self):
+        return 'end'
+
+class synthese4(ModelSQL, ModelView):
+    u'Liste des unites de gestion plantee par essence'
+    __name__ = 'cg.synthese4'
+    
+    essence = fields.Many2One(
+            'taxinomie.taxinomie',                       
+            string=u'Essence',
+            help=u'Nom de l\'essence',
+            domain=[
+                    ('classe', '=', 'Equisetopsida'),
+                    ('commun', '!=', None),
+                   ],           
+        )
+    ug = fields.Many2One(
+            'cg.ug',            
+            string = u'Unité de gestion',
+            help=u'Unité de gestion'
+        )
+    codeug = fields.Char(
+            string=u'Code UG',
+            help=u'Code unité de gestion'
+        )
+    equipement = fields.Many2One(
+            'cg.equipement',
+            string=u'Equipement',
+            help=u'Equipement'
+        )
+    quantite = fields.Integer(
+            string=u'Quantité d\'arbre',
+            help=u'Quantité d\'arbre'
+        )
+
+    @classmethod
+    def __setup__(cls):
+        super(synthese4, cls).__setup__()
+        cls._order.insert(0, ('essence', 'ASC'))
+    
+    @staticmethod
+    def table_query():
+        clause = ' '
+        args = [True]
+        if Transaction().context.get('essence'):
+            clause += 'AND t.id = %s '
+            args.append(Transaction().context['essence'])        
+        return ('SELECT DISTINCT row_number() OVER (order by x.id) as id, '
+                'MAX(x.create_uid) AS create_uid, '
+                'MAX(x.create_date) AS create_date, '
+                'MAX(x.write_uid) AS write_uid, '
+                'MAX(x.write_date) AS write_date,'
+                'essence, '
+                'ug, '
+                'codeug, '
+                'equipement, '
+                'quantite '
+                'from (select distinct '
+                't.id as essence, '
+                'u.id as ug, '
+                'q.coder||\' \'||u.code as codeug, '
+                'q.id as equipement, '
+                'COUNT(*) OVER (partition by t.commun, u.code, u.equipement) AS quantite '
+                'from cg_arbre a, taxinomie_taxinomie t, cg_station s, cg_emplacement e, cg_ug u, cg_equipement q '
+                'where %s '
+                + clause +
+                ' and a.essence=t.id and a.emplacement=e.id and e.station=s.id and s.ug=u.id and u.equipement=q.id) as foo, taxinomie_taxinomie x '
+                'where foo.essence=x.id '
+                'group by essence, ug, codeug, equipement, quantite, x.id', args)
+
+class Opensynthese4Start(ModelView):
+    'Open synthese4'
+    __name__ = 'cg.synthese4.open.start'
+
+    essence = fields.Many2One(
+            'taxinomie.taxinomie',                       
+            string=u'Essence',
+            help=u'Nom de l\'essence',
+            domain=[
+                    ('classe', '=', 'Equisetopsida'),
+                    ('commun', '!=', None)
+                   ]
+        )
+
+class Opensynthese4(Wizard):
+    'Open synthese4'
+    __name__ = 'cg.synthese4.open'
+
+    start = StateView('cg.synthese4.open.start',
+        'cg.synthese4_open_start_view_form', [
+            Button('Cancel', 'end', 'tryton-cancel'),
+            Button('Open', 'open_', 'tryton-ok', default=True),
+            ])
+    open_ = StateAction('cg.act_synthese4_form')
+
+    def do_open_(self, action):
+        action['pyson_context'] = PYSONEncoder().encode({                
+                'essence': self.start.essence.id if self.start.essence else None,                
+                })
+        return action, {}
+
+    def transition_open_(self):
+        return 'end'

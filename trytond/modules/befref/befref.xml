@@ -21,20 +21,20 @@
             <field name="report">befref/befref.Rmd</field>
         </record>
         <record model="ir.action.keyword" id="report_avgarea_kwd_html">
-            <field name="keyword">form_action</field>
+            <field name="keyword">form_print</field>
             <field name="model">befref.area,-1</field>
             <field name="action" ref="report_avgarea_html"/>
         </record>
 
         <!-- pdf report -->
         <record model="ir.action.report" id="report_avgarea_pdf">
-            <field name="name">Average area report (pdf) </field>
+            <field name="name">Average area report (pdf)</field>
             <field name="model">befref.area</field>
             <field name="report_name">rtryton.pdfreport</field>
             <field name="report">befref/befref.Rnw</field>
         </record>
         <record model="ir.action.keyword" id="report_avgarea_kwd_pdf">
-            <field name="keyword">form_action</field>
+            <field name="keyword">form_print</field>
             <field name="model">befref.area,-1</field>
             <field name="action" ref="report_avgarea_pdf"/>
         </record>

@@ -52,14 +52,14 @@
 			<field name="dis_observation"/>
         </page>
         <page string="Map" id="map" col="2">                                                
-            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
+            <field name="dispositif_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="dispositif_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
             <button string="Edit" name="dispositif_edit" icon="tryton-executable" />
             <button string="Generate" name="dispositif_image_map_gen" icon="tryton-executable" />
-            <field name="situation_map" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <field name="parcelle_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="dispositif_situation" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="dispositif_placette" colspan="1" widget="image" img_width="640" img_height="480"/>
             <button string="Generate" name="dispositif_situation_map_gen" icon="tryton-executable" />
-            <button string="Generate" name="dispositif_parcelle_map_gen" icon="tryton-executable" />
+            <button string="Generate" name="dispositif_placette_map_gen" icon="tryton-executable" />
         </page>                                                                 
     </notebook>
 </form>

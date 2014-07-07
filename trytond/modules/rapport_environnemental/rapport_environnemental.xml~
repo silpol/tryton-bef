@@ -90,16 +90,40 @@
             <field name="action" ref="report_bef"/>
         </record>
         
-        <record model="ir.action.report" id="report_buffer">
-            <field name="name">Buffer</field>
+        <record model="ir.action.report" id="report_odt">
+            <field name="name">Rapport (odt)</field>
             <field name="model">protection.surface_statut_buffer</field>
-            <field name="report_name">protection.rapport_buffer</field>
+            <field name="report_name">protection.rapport_odt</field>
             <field name="report">rapport_environnemental/buffer.odt</field>            
         </record>
-        <record model="ir.action.keyword" id="report_buffer_site">
+        <record model="ir.action.keyword" id="report_odt_site">
             <field name="keyword">form_print</field>
             <field name="model">protection.surface_statut_buffer,-1</field>
-            <field name="action" ref="report_buffer"/>
+            <field name="action" ref="report_odt"/>
+        </record>
+
+        <record model="ir.action.report" id="report_rmdhtml">
+            <field name="name">Rapport (html)</field>
+            <field name="model">protection.surface_statut_buffer</field>
+            <field name="report_name">rtryton.htmlreport</field>
+            <field name="report">rapport_environnemental/bef.Rmd</field>
+        </record>
+        <record model="ir.action.keyword" id="report_rmdhtml_kwd">
+            <field name="keyword">form_print</field>
+            <field name="model">protection.surface_statut_buffer,-1</field>
+            <field name="action" ref="report_rmdhtml"/>
+        </record>
+
+        <record model="ir.action.report" id="report_rnwpdf">
+            <field name="name">Rapport (pdf)</field>
+            <field name="model">protection.surface_statut_buffer</field>
+            <field name="report_name">rtryton.rnwpdf</field>
+            <field name="report">rapport_environnemental/bef2.Rnw</field>
+        </record>
+        <record model="ir.action.keyword" id="report_rnwpdf_kwd">
+            <field name="keyword">form_print</field>
+            <field name="model">protection.surface_statut_buffer,-1</field>
+            <field name="action" ref="report_rnwpdf"/>
         </record>
             
         <menuitem parent="menu_rapport" action="act_surface_tiers_surface_open" icon="tryton-graph" id="menu_protection_surface_tiers_surface"/>   
@@ -154,13 +178,13 @@
 
         <record model="ir.action.report" id="report_uicn">
             <field name="name">Liste UICN</field>
-            <field name="model">protection.taxon_uicn_presence</field>
-            <field name="report_name">protection.rapport_uicn</field>
+            <field name="model">uicn.taxon_uicn_presence</field>
+            <field name="report_name">uicn.rapport_uicn</field>
             <field name="report">rapport_environnemental/uicn.odt</field>            
         </record>
         <record model="ir.action.keyword" id="report_uicn_site">
             <field name="keyword">form_print</field>
-            <field name="model">protection.taxon_uicn_presence,-1</field>
+            <field name="model">uicn.taxon_uicn_presence,-1</field>
             <field name="action" ref="report_uicn"/>
         </record>
         

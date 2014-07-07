@@ -93,12 +93,12 @@ class QGisConf(ModelSingleton, ModelSQL, ModelView):
     __name__ = 'qgis.conf'
 
     version = fields.Selection([
-        ('1.9.0-Master', 'QGis 1.9.0'),
+        ('2.3.0-Dev', 'QGis 2.3.0'),
     ], 'Version', required=True)
 
     @staticmethod
     def default_version():
-        return '1.9.0-Master'
+        return '2.3.0-Dev'
 
 
 class QGis(Report):

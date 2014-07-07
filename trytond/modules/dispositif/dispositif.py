@@ -33,11 +33,12 @@ from trytond.pool import PoolMeta, Pool
 from trytond.modules.geotools.tools import get_as_epsg4326, envelope_union
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 from trytond.transaction import Transaction
 from trytond.backend import TableHandler
 
-class Dispositifs(ModelSQL, ModelView):
+class Dispositifs(Mapable, ModelSQL, ModelView):
     'Dispositifs'
     __name__ = 'dispositif.dispositif'
 
@@ -50,10 +51,12 @@ class Dispositifs(ModelSQL, ModelView):
         return '%s - %s' % (self.id, self.name)
 
     dis_num = fields.Function(fields.Integer(
-            string=u'Dispositif number',
-            help=u'Dispositif number',
-            readonly=True,
-        ), '_get_dispo_num')
+                        string=u'Dispositif number',
+                        help=u'Dispositif number',
+                        readonly=True,
+                    ),
+                '_get_dispo_num'
+        )
 
     num = fields.Integer(
             string=u'Dispositif Number',
@@ -188,57 +191,45 @@ class Dispositifs(ModelSQL, ModelView):
             vals = vals.copy()
         super(Dispositifs, cls).write(dispositifs, vals)
 
-    geom = fields.MultiPolygon(string=u"""Geometry""", srid=2154)
+    geom = fields.MultiPolygon(
+            string=u'Geometry',
+            srid=2154
+        )
     
-    image = fields.Function(fields.Binary('Image'), 'get_image')
+    dispositif_image = fields.Function(
+                fields.Binary(
+                    string=u'Image'
+                ),
+            'get_image'
+        )
 
-    image_map = fields.Binary('Image map', filename='image_filename')
-    image_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_im_filename')
+    dispositif_map = fields.Binary(
+                string=u'Image map',
+        )    
 
-    situation_map = fields.Binary('Situation map', filename='situation_filename')
-    situation_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_sm_filename')
+    dispositif_situation = fields.Binary(
+                string=u'Situation map',
+        )    
 
-    parcelle_map = fields.Binary('Parcelle map', filename='parcelle_filename')
-    parcelle_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_pa_filename')                      
+    dispositif_placette = fields.Binary(
+                string=u'Parcelle map'
+        )
+    
+
+    def get_image(self, ids):
+        return self._get_image( 'dispositif_image.qgs', 'carte' )
+
+    def get_map(self, ids):
+        return self._get_image( 'dispositif_map.qgs', 'carte' )
+
+    def get_dispositif_situation(self, ids):
+        return self._get_image( 'dispositif_situation.qgs', 'carte' )
+
+    def get_dispositif_placette(self, ids):
+        return self._get_image( 'dispositif_placette.qgs', 'carte' ) 
     
     COLOR = (1, 0.1, 0.1, 1)
-    BGCOLOR = (1, 0.1, 0.1, 0.1)
-
-
-    def _get_im_filename(self, ids):
-        """Image map filename"""
-        return '%s - Image map.jpg' % self.name
-
-    def _get_sm_filename(self, ids):
-        """Situation map filename"""
-        return '%s - Situation map.jpg' % self.name
-
-    def _get_pa_filename(self, ids):
-        """Parcelle map filename"""
-        return '%s - Parcelle map.jpg' % self.name
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        areas, _envelope, _area = get_as_epsg4326([self.geom])
-        
-        if areas == []:
-            return buffer('')                       
-            
-        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.0001,
-            _envelope[1] + 0.0001,
-            _envelope[2] - 0.0001,
-            _envelope[3] + 0.0001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-        
-        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())     
-    
+    BGCOLOR = (1, 0.1, 0.1, 0.1)    
 
     @classmethod
     def __setup__(cls):
@@ -246,7 +237,7 @@ class Dispositifs(ModelSQL, ModelView):
         cls._buttons.update({           
             'dispositif_situation_map_gen': {},
             'dispositif_image_map_gen': {},
-            'dispositif_parcelle_map_gen': {},
+            'dispositif_placette_map_gen': {},
             'generate': {},
         })
                
@@ -261,95 +252,23 @@ class Dispositifs(ModelSQL, ModelView):
         for record in records:
             if record.name is None:
                 continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.0001,
-                _envelope[1] + 0.0001,
-                _envelope[2] - 0.0001,
-                _envelope[3] + 0.0001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                      
-            m.plot_geom(areas[0], None, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})
+            cls.write([record], {'dispositif_map': cls.get_map(record, 'map')})
 
     @classmethod
     @ModelView.button
     def dispositif_situation_map_gen(cls, records):
         for record in records:
             if record.name is None:
-                continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])            
-
-            # Map title
-            title = u'Dispositif : %s\n' % record.name            
-            title += date.today().strftime('%02d/%02m/%Y')
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.01,
-                _envelope[1] + 0.01,
-                _envelope[2] - 0.01,
-                _envelope[3] + 0.01,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                                  
-            m.plot_geom(areas[0], record.name, u'Dispositif', color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data_nl = m.render()
-            m.plot_legend()
-            m.plot_compass()
-            m.plot_scaling()
-            m.plot_title(title)
-            data = m.render()
-            cls.write([record], {'situation_map': buffer(data)})
+                continue                                               
+            cls.write([record], {'dispositif_situation': cls.get_dispositif_situation(record, 'map')})
 
     @classmethod
     @ModelView.button
-    def dispositif_parcelle_map_gen(cls, records):
+    def dispositif_placette_map_gen(cls, records):
         for record in records:
             if record.name is None:
-                continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])            
-
-            # Map title
-            title = u'Dispositif : %s\n' % record.name            
-            title += date.today().strftime('%02d/%02m/%Y')
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.1,
-                _envelope[1] + 0.1,
-                _envelope[2] - 0.1,
-                _envelope[3] + 0.1,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                                 
-            m.plot_geom(areas[0], record.name, u'Dispositif', color=cls.COLOR, bgcolor=cls.BGCOLOR)
-            # Ajoute les placettes
-            #for point, rec in zip(points, record.inventory):
-             #   m.plot_geom(point, rec.name, u'Inventaire', color=(0, 1, 1, 1), bgcolor=(0, 1, 1, 1))          
-           
-            data_nl = m.render()
-            m.plot_legend()
-            m.plot_compass()
-            m.plot_scaling()
-            m.plot_title(title)
-            data = m.render()
-            cls.write([record], {'parcelle_map': buffer(data)})
+                continue                                               
+            cls.write([record], {'dispositif_placette': cls.get_dispositif_placette(record, 'map')})
 
 class DispositifsQGis(QGis):
     'DispositifsQGis'

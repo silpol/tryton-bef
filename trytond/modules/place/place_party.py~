@@ -31,15 +31,14 @@ from trytond.pool import PoolMeta, Pool
 from trytond.modules.geotools.tools import get_as_epsg4326, envelope_union
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 from trytond.transaction import Transaction
-
-__all__ = ['Party', 'PartyAreaQGis']
 
 __metaclass__ = PoolMeta
 
 
-class Party:
+class Party(Mapable):
     __name__ = 'party.party'
     _rec_name = 'name'
 
@@ -56,40 +55,14 @@ class Party:
             select = True,
         )
 
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image', filename='image_map_filename')
-    image_map_filename = fields.Char('Filename', readonly=True)
-
+    party_image = fields.Function(fields.Binary('Image'), 'get_image')
+    party_map = fields.Binary('Image')
 
     def get_image(self, ids):
-        envelope = None
-        town = None
+        return self._get_image('party_image.qgs', 'carte')
 
-        if len(self.addresses) != 0:
-            town, _envelope, _area = get_as_epsg4326([self.addresses[0].my_city.contour])
-            envelope = envelope_union(_envelope, envelope)
-
-        if self.geom is not None:
-            geom, _envelope, _area = get_as_epsg4326([self.geom])
-            envelope = envelope_union(_envelope, envelope)
-
-        places, _envelope, _area = get_as_epsg4326([place.geom for place in self.place])
-        if _envelope is not None:
-            envelope = envelope_union(_envelope, envelope)
-
-        if envelope is None:
-            return buffer('')
-
-        m = MapRender(640, 480, envelope)
-        if town is not None:
-            m.plot_geom(town[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 0, 0))
-        if self.geom is not None:
-            m.plot_geom(geom[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-
-        for place in places:
-            m.plot_geom(place, None, None, color=(0, 1, 0, 1), bgcolor=(0, 1, 0, 0.5))
-
-        return buffer(m.render())
+    def get_map(self, ids):
+        return self._get_image('party_map.qgs', 'carte')
 
     @classmethod
     def __setup__(cls):
@@ -125,52 +98,11 @@ class Party:
     @ModelView.button
     def generate(cls, records):
         for record in records:
-            envelope = None
-            town = None
-
-            if len(record.addresses) != 0:
-                town, _envelope, _area = get_as_epsg4326([record.addresses[0].my_city.contour])
-                envelope = envelope_union(_envelope, envelope)
-
-
-            if record.geom is not None:
-                geom, _envelope, _area = get_as_epsg4326([record.geom])
-                envelope = envelope_union(_envelope, envelope)
-
-            places, _envelope, _area = get_as_epsg4326([place.geom for place in record.place])
-            if _envelope is not None:
-                envelope = envelope_union(_envelope, envelope)
-
-            if envelope is None:
-                print "envelope is None"
+            if record.name is None:
                 continue
+            cls.write([record], {'party_image_map': cls.get_map(record, 'map')}) 
 
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-
-            if town is not None:
-                m.plot_geom(town[0], None, None, color=(0, 0, 1, 1), bgcolor=(0, 0, 1, 0.5))
-
-            if record.geom is not None:
-                m.plot_geom(geom[0], None, None, color=record.COLOR, bgcolor=record.BGCOLOR)
-
-            for place in places:
-                m.plot_geom(place, None, None, color=(0, 1, 0, 1), bgcolor=(0, 1, 0, 0.5))
-
-            data = m.render()
-            print "map saved"
-            cls.write([record], {'image_map': buffer(data)})
-
-    @staticmethod
-    def default_image_map_filename():
-        return 'Carte all.jpg'
 
 class PartyAreaQGis(QGis):
     __name__ = 'party.party.qgis'
-    #FIELDS = OrderedDict([
-    #    ('place', None),
-    #])
-    TITLES = {
-        'party.party': u'Party',
-        'place.place': u'Places',
-    }
+    TITLES = {'party.party': u'Party'}

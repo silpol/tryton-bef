@@ -2,5 +2,6 @@
 <tree string="Area">
     <field name="id_mnhn" />
     <field name="name" />
+    <field name="typo" />
     <field name="date" />
 </tree>

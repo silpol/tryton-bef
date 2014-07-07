@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<tree string="Note déficience sanitaire" colors="If(Less(Eval('note',0), 5), '#ccff00', If(Less(Eval('note',0), 10), '#ddaa00', If(Less(Eval('note',0), 15), '#ee5500', '#ff0000')))">
+<tree string="Synthèse du patrimoine départemental recensé par commune">
     <field name="equipement"/>                      
     <field name="ug"/>
     <field name="station"/>
