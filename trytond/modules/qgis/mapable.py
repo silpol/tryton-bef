@@ -200,6 +200,7 @@ class Mapable(Model):
               'LAYER='+','.join([urllib.quote(l.encode('utf-8')) for l in layers[::-1]]),
               'CRS=EPSG:'+str(srid),
               'map0:EXTENT='+ext,
+              'map1:EXTENT='+ext,
               'DPI=75'])
         buf = buffer(urllib.urlopen(url).read())
         print '##################### ', time.time() - start, 'sec to GetPrint ', url

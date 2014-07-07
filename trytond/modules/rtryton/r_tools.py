@@ -31,6 +31,7 @@ py2r = {
     'char': robjects.StrVector,
     'selection': robjects.StrVector,
     'float': robjects.FloatVector,
+    'numeric': robjects.FloatVector,
     'boolean': robjects.BoolVector,
     'datetime': robjects.StrVector,
     'date': robjects.StrVector,
