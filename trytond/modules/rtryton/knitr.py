@@ -70,10 +70,9 @@ def add_to_map(ids, model_name, list_map):
                     set([ val[name] for val in model.read(list(ids), [name]) if val[name] ]), 
                     ttype.model_name, list_map)
         elif ttype._type == 'many2many':
-            rel = [ val[name] for val in model.read(list(ids), [name]) if val[name]]
-            if len(rel) and isinstance(rel[0], tuple): rel = set(list(sum(rel,())))
+            mdl = Pool().get(ttype.relation_name)
             added |= add_to_map(
-                    set(rel), 
+                    set([ val['id'] for val in mdl.search([(ttype.origin, 'in', list(ids))]) ]), 
                     ttype.relation_name, list_map)
     if not added: 
         return False
