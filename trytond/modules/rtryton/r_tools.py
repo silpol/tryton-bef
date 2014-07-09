@@ -61,6 +61,7 @@ none2r = {
     'char': robjects.NA_Character,
     'selection': robjects.NA_Character,
     'float': robjects.NA_Real,
+    'numeric': robjects.NA_Real,
     'boolean': robjects.NA_Logical,
     'datetime': robjects.NA_Character,
     'date': robjects.NA_Character,
