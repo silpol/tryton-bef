@@ -69,6 +69,11 @@ def add_to_map(ids, model_name, list_map):
             added |= add_to_map(
                     set([ val[name] for val in model.read(list(ids), [name]) if val[name] ]), 
                     ttype.model_name, list_map)
+        elif ttype._type == 'one2many':
+            mdl = Pool().get(ttype.model_name)
+            added |= add_to_map(
+                    set([ val['id'] for val in mdl.search([(ttype.field, 'in', list(ids))]) ]), 
+                    ttype.model_name, list_map)
         elif ttype._type == 'many2many':
             mdl = Pool().get(ttype.relation_name)
             added |= add_to_map(
@@ -84,7 +89,7 @@ def add_to_map(ids, model_name, list_map):
 
 
 def save_rdata(ids, model_name, filename):
-    """save data from model and one level of joined data (one2one, many2many and many2one)"""
+    """save data from model and one level of joined data (one2one, one2many, many2many and many2one)"""
     
     list_map = {}
     add_to_map( set(ids), model_name, list_map ) 

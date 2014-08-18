@@ -39,6 +39,7 @@ py2r = {
     'many2one': robjects.IntVector,
     'one2one': robjects.IntVector,
     'many2many': robjects.IntVector,
+    'one2many': robjects.IntVector,
     'point' : sp.SpatialPoints,
     'multipoint' : sp.SpatialPoints,
     'linestring' : sp.SpatialLines,
@@ -69,6 +70,7 @@ none2r = {
     'one2one': robjects.NA_Integer,
     'many2one': robjects.NA_Integer,
     'many2many': robjects.NA_Integer,
+    'one2many': robjects.NA_Integer,
 }
 
 
@@ -123,9 +125,6 @@ def dataframe(records, fields_info):
                 # have weird side effects when called a lot of
                 # time
                 values.append(str(value))
-            elif ttype == 'many2many':
-                # TODO many2many not implemented
-                values.append(robjects.NA_Logical)
             elif isinstance(value, Model):
                 values.append(value.id)
             else:
