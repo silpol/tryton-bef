@@ -95,7 +95,8 @@ class DataView(ModelView):
     @classmethod
     def search(cls, *args, **kwargs):
         data = cls.read_data()
-        return list(xrange(1, data.nrow))
+        if data : return list(xrange(1, data.nrow))
+        return []
 
     @classmethod
     def read(cls, ids, fields_names=None):

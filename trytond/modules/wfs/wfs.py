@@ -271,6 +271,7 @@ class WfsRequest(object):
             models.append(model)
             cursor = Transaction().cursor
             table = model.replace('.', '_')
+            if Model.table_query() : table = '('+Model.table_query()[0]%tuple(Model.table_query()[1])+') AS mytable'
             col = field.name
             if bbox != [] and srsname != 0:
                 sql = 'SELECT ST_Extent(Box2D(%(col)s)) FROM %(table)s WHERE\
