@@ -181,8 +181,10 @@ class Mapable(Model):
 
         # compute bbox 
         cursor = Transaction().cursor
+        table = self.__name__.replace('.', '_')
+        if self.table_query(): table = '('+self.table_query()[0]%tuple(self.table_query()[1])+') AS mytable'
         cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) '
-            'FROM '+self.__name__.replace('.', '_')+' WHERE id = '+str(self.id)+' GROUP BY id;' )
+            'FROM '+table+' WHERE id = '+str(self.id)+' GROUP BY id;' )
         [srid, ext] = cursor.fetchone()
         if ext:
             ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
