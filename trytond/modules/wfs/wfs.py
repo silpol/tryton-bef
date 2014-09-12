@@ -294,8 +294,7 @@ class WfsRequest(object):
                 try: 
                     cursor.execute('SELECT ST_Estimated_Extent(\'%s\', \'%s\');' % (table, col))
                 except:
-                    Transaction().new_cursor()
-                    cursor = Transaction().cursor
+                    cursor.connection.rollback()
                     cursor.execute('SELECT ST_Extent(Box2D(%s)) FROM %s;' % (col, table))
 
 
