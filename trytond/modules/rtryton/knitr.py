@@ -38,7 +38,6 @@ FieldInfo = namedtuple('FieldInfo', ['name', 'ttype'])
 
 
 def add_to_map(ids, model_name, list_map):
-    print '############', model_name, ids
     """
     Breadth first search of dependent records,
     this function is called recursively
@@ -54,31 +53,22 @@ def add_to_map(ids, model_name, list_map):
         added = True
     else:
         old_len = len(list_map[model_name])
-        list_map[model_name].union(ids)
+        list_map[model_name] = list_map[model_name].union(ids)
         added = len(list_map[model_name]) > old_len
 
     if not added: return False
 
     model = Pool().get(model_name)
     for name, ttype in model._fields.iteritems():
-        if ttype._type == 'many2one':
+        if ttype._type == 'many2one' or ttype._type == 'one2one':
             added |= add_to_map(
                     set([ val[name] for val in model.read(list(ids), [name]) if val[name] ]), 
                     ttype.model_name, list_map)
-        elif ttype._type == 'one2one':
-            added |= add_to_map(
-                    set([ val[name] for val in model.read(list(ids), [name]) if val[name] ]), 
-                    ttype.model_name, list_map)
-        elif ttype._type == 'one2many':
-            mdl = Pool().get(ttype.model_name)
-            added |= add_to_map(
-                    set([ val['id'] for val in mdl.search([(ttype.field, 'in', list(ids))]) ]), 
-                    ttype.model_name, list_map)
-        elif ttype._type == 'many2many':
-            mdl = Pool().get(ttype.relation_name)
-            added |= add_to_map(
-                    set([ val['id'] for val in mdl.search([(ttype.origin, 'in', list(ids))]) ]), 
-                    ttype.relation_name, list_map)
+        elif ttype._type == 'many2many' or ttype._type == 'one2many':
+            ido = set()
+            for rec in model.read(list(ids), [name]):
+                ido = ido.union( set(rec[name]) )
+            added |= add_to_map( ido, ttype.get_target().__name__, list_map )
     if not added: 
         return False
     add = False

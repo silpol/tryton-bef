@@ -38,8 +38,8 @@ py2r = {
     'integer': robjects.IntVector,
     'many2one': robjects.IntVector,
     'one2one': robjects.IntVector,
-    'many2many': robjects.IntVector,
-    'one2many': robjects.IntVector,
+    'many2many': robjects.StrVector,
+    'one2many': robjects.StrVector,
     'point' : sp.SpatialPoints,
     'multipoint' : sp.SpatialPoints,
     'linestring' : sp.SpatialLines,
@@ -69,8 +69,8 @@ none2r = {
     'integer': robjects.NA_Integer,
     'one2one': robjects.NA_Integer,
     'many2one': robjects.NA_Integer,
-    'many2many': robjects.NA_Integer,
-    'one2many': robjects.NA_Integer,
+    'many2many': robjects.NA_Character,
+    'one2many': robjects.NA_Character,
 }
 
 
@@ -127,6 +127,8 @@ def dataframe(records, fields_info):
                 values.append(str(value))
             elif isinstance(value, Model):
                 values.append(value.id)
+            elif ttype == 'many2many' or ttype == 'one2many': 
+                values.append( ','.join([str(v) for v in value]) );
             else:
                 values.append(value)
             # TODO log exceptions
