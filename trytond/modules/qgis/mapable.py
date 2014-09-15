@@ -206,6 +206,11 @@ class Mapable(Model):
               'DPI=75'])
         buf = buffer(urllib.urlopen(url).read())
         print '##################### ', time.time() - start, 'sec to GetPrint ', url
+
+        if (str(buf).find('ServiceException') != -1):
+            self.raise_user_error("%s qgis-mapserver error:\n%s", (self.__name__, str(buf)))
+
+
         
         # TODO uncoment to cleanup, 
         # the directory and its contend are kept for debug
