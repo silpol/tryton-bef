@@ -94,7 +94,7 @@ class Mapable(Model):
                 attachement = att
                 break
         if not attachement:
-            raise RuntimeError("no image.qgs attachement for "+self.__name__+", please open the Model tab in a tryton client and attach a QGis project")
+            self.raise_user_error("%s has no attachement %s", (self.__name__, qgis_filename))
 
         # get credentials for qgsi server
         config = ConfigParser.ConfigParser()
