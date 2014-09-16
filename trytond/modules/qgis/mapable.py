@@ -106,7 +106,7 @@ class Mapable(Model):
         if not self.DEBUG:
             tmpdir = tempfile.mkdtemp()
         else:
-            tmpdir = '/tmp/toto'
+            tmpdir = '/tmp/'+qgis_filename
             if not os.path.exists(tmpdir): os.mkdir(tmpdir)
 
         os.chmod(tmpdir, stat.S_IRUSR|stat.S_IWUSR|stat.S_IXUSR|stat.S_IXGRP|stat.S_IRGRP)
@@ -133,9 +133,6 @@ class Mapable(Model):
             if 'TYPENAME' in param and param['TYPENAME'][0].find('tryton:') != -1:
                 if 'FILTER' in param :
                     filt = urllib.unquote(param['FILTER'][0])
-                    print '####### FILTER ###############'
-                    print filt
-                    print '##############################'
                     filt = re.sub(
                             '<ogc:Literal>.*</ogc:Literal>', 
                             '<ogc:Literal>'+str(self.id)+'</ogc:Literal>', 
@@ -163,33 +160,33 @@ class Mapable(Model):
 
         # find the composer map aspect ratio and margins
         # from atlas
-        width, height = 640, 800
-        margin = .1 # 10% margin by default
-        for compo in dom.getElementsByTagName('Composition'):
-            for cmap in compo.getElementsByTagName('ComposerMap'):
-                if cmap.attributes['id'].value == u'0':
-                    ext = compo.getElementsByTagName('Extent')[0]
-                    width = float(ext.attributes['xmax'].value) \
-                            - float(ext.attributes['xmin'].value)
-                    height = float(ext.attributes['ymax'].value) \
-                            - float(ext.attributes['ymin'].value)
-                    atlas_map = compo.getElementsByTagName('AtlasMap')[0]
-                    margin = float(atlas_map.attributes['margin'].value)
+        map_extends = {};
+        compo = dom.getElementsByTagName('Composition')[0];
+	for cmap in compo.getElementsByTagName('ComposerMap'):
+	    ext = cmap.getElementsByTagName('Extent')[0]
+	    width = float(ext.attributes['xmax'].value) \
+		    - float(ext.attributes['xmin'].value)
+	    height = float(ext.attributes['ymax'].value) \
+		    - float(ext.attributes['ymin'].value)
+	    atlas_map = cmap.getElementsByTagName('AtlasMap')[0]
+	    map_extends['map'+cmap.attributes['id'].value] = {'w':width, 'h':height, 'margin':.1, 'ext':ext}
+            if atlas_map and atlas_map.attributes['margin']:
+                map_extends['map'+cmap.attributes['id'].value] = {'w':width, 'h':height, 'margin':float(atlas_map.attributes['margin'].value), 'ext':ext}
                     
         layers=[layer.attributes['name'].value       
                 for layer in dom.getElementsByTagName('layer-tree-layer')]
 
         # compute bbox 
         cursor = Transaction().cursor
-        table = self.__name__.replace('.', '_')
-        if self.table_query(): table = '('+self.table_query()[0]%tuple(self.table_query()[1])+') AS mytable'
         cursor.execute('SELECT ST_SRID(geom), ST_Extent(geom) '
-            'FROM '+table+' WHERE id = '+str(self.id)+' GROUP BY id;' )
+            'FROM '+self.__name__.replace('.', '_')+' WHERE id = '+str(self.id)+' GROUP BY id;' )
+
         [srid, ext] = cursor.fetchone()
         if ext:
-            ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
-            ext =  ','.join([str(i) for i in bbox_aspect(
-                [float(i) for i in ext.split(',')], width, height, margin)])
+            for name, mex in map_extends.iteritems():
+		ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
+		mex['ext'] =  ','.join([str(i) for i in bbox_aspect(
+		    [float(i) for i in ext.split(',')], mex['w'], mex['h'], mex['margin'])])
 
         # render image
         url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?'+'&'.join([
@@ -201,16 +198,12 @@ class Mapable(Model):
               'TEMPLATE='+urllib.quote(composition_name.encode('utf-8')),
               'LAYER='+','.join([urllib.quote(l.encode('utf-8')) for l in layers[::-1]]),
               'CRS=EPSG:'+str(srid),
-              'map0:EXTENT='+ext,
-              'map1:EXTENT='+ext,
-              'DPI=75'])
+              'DPI=75']+[name+':EXTENT='+me['ext'] for name, me in map_extends.iteritems()])
         buf = buffer(urllib.urlopen(url).read())
         print '##################### ', time.time() - start, 'sec to GetPrint ', url
 
         if (str(buf).find('ServiceException') != -1):
             self.raise_user_error("%s qgis-mapserver error:\n%s", (self.__name__, str(buf)))
-
-
         
         # TODO uncoment to cleanup, 
         # the directory and its contend are kept for debug
