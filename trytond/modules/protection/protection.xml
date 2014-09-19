@@ -5,21 +5,17 @@
         <field name="name">tryton-protection</field>
         <field name="path">icons/software-update-urgent.svg</field>
     </record>
-
     <menuitem name="Protections" parent="ir.menu_administration" id="menu_protection" icon="tryton-protection"/>
-
     <record model="ir.ui.view" id="area_view_tree">
         <field name="model">protection.area</field>
         <field name="type">tree</field>
         <field name="name">area_tree</field>
     </record>
-
     <record model="ir.ui.view" id="area_view_form">
         <field name="model">protection.area</field>
         <field name="type">form</field>
         <field name="name">area_form</field>
     </record>
-
     <record model="ir.action.report" id="report_area_edit">
         <field name="name">Open in QGis...</field>
         <field name="model">protection.area</field>
@@ -39,19 +35,16 @@
         <field name="domain">[('espace.code', '=', 'APB')]</field>
         <field name="context">{'espace': 'Arrêté de protection de biotope'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_arrete_protection_biotope_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_arrete_protection_biotope"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_arrete_protection_biotope_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_arrete_protection_biotope"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_arrete_protection_biotope" icon="tryton-list" action="window_arrete_protection_biotope"/> 
       
     <!-- Conservatoire d’espaces naturels -->
@@ -61,19 +54,16 @@
         <field name="domain">[('espace.code', '=', 'CEN')]</field>
         <field name="context">{'espace': 'Conservatoire d’espaces naturels'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_conservatoire_espaces_naturels_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_conservatoire_espaces_naturels"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_conservatoire_espaces_naturels_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_conservatoire_espaces_naturels"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_conservatoire_espaces_naturels" icon="tryton-list" action="window_conservatoire_espaces_naturels"/>       
 
     <!-- Parc national -->
@@ -83,19 +73,16 @@
         <field name="domain">[('espace.code', 'like', 'PN %')]</field>
         <field name="context">{'espace': 'Parc national'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_parc_national_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_parc_national"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_parc_national_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_parc_national"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_parc_national" icon="tryton-list" action="window_parc_national"/>       
 
     <!-- Parc naturel marin -->
@@ -105,19 +92,16 @@
         <field name="domain">[('espace.code', '=', 'PNM')]</field>
         <field name="context">{'espace': 'Parc naturel marin'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_parc_naturel_marin_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_parc_naturel_marin"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_parc_naturel_marin_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_parc_naturel_marin"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_parc_naturel_marin" icon="tryton-list" action="window_parc_naturel_marin"/>       
 
     <!-- Parc naturel régional -->
@@ -127,19 +111,16 @@
         <field name="domain">[('espace.code', '=', 'PNR')]</field>
         <field name="context">{'espace': 'Parc naturel régional'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_parc_naturel_regional_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_parc_naturel_regional"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_parc_naturel_regional_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_parc_naturel_regional"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_parc_naturel_regional" icon="tryton-list" action="window_parc_naturel_regional"/>       
 
     <!-- Réserve naturelle régionale -->
@@ -149,19 +130,16 @@
         <field name="domain">[('espace.code', '=', 'RNR')]</field>
         <field name="context">{'espace': 'Réserve naturelle régionale'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_regionale_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_reserve_naturelle_regionale"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_regionale_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_reserve_naturelle_regionale"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_reserve_naturelle_regionale" icon="tryton-list" action="window_reserve_naturelle_regionale"/> 
       
     <!-- Réserve naturelle nationale -->
@@ -171,19 +149,16 @@
         <field name="domain">[('espace.code', '=', 'RNN')]</field>
         <field name="context">{'espace': 'Réserve naturelle nationale'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_nationale_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_reserve_naturelle_nationale"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_nationale_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_reserve_naturelle_nationale"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_reserve_naturelle_nationale" icon="tryton-list" action="window_reserve_naturelle_nationale"/>  
      
     <!-- Réserve naturelle Corse -->
@@ -193,19 +168,16 @@
         <field name="domain">[('espace.code', '=', 'RNC')]</field>
         <field name="context">{'espace': 'Réserve naturelle Corse'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_corse_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_reserve_naturelle_corse"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_corse_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_reserve_naturelle_corse"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_reserve_naturelle_corse" icon="tryton-list" action="window_reserve_naturelle_corse"/>       
 
     <!-- Réserve naturelle de chasse et faune sauvage -->
@@ -215,19 +187,16 @@
         <field name="domain">[('espace.code', '=', 'RNCFS')]</field>
         <field name="context">{'espace': 'Réserve naturelle de chasse et faune sauvage'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_chasse_faune_sauvage_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_reserve_naturelle_chasse_faune_sauvage"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_naturelle_chasse_faune_sauvage_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_reserve_naturelle_chasse_faune_sauvage"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_reserve_naturelle_chasse_faune_sauvage" icon="tryton-list" action="window_reserve_naturelle_chasse_faune_sauvage"/>      
 
     <!-- Site d’importance communautaire -->
@@ -237,19 +206,16 @@
         <field name="domain">[('espace.code', '=', 'SIC')]</field>
         <field name="context">{'espace': 'Site d’importance communautaire'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_site_importance_communautaire"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_site_importance_communautaire"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_site_importance_communautaire" icon="tryton-list" action="window_site_importance_communautaire"/>       
 
     <!-- Zone d’importance communautaire pour les oiseaux -->
@@ -258,31 +224,37 @@
         <field name="type">tree</field>
         <field name="name">zico_tree</field>
     </record>
-
     <record model="ir.ui.view" id="zico_view_form">
         <field name="model">protection.zico</field>
         <field name="type">form</field>
         <field name="name">zico_form</field>
     </record>
-
     <record model="ir.action.act_window" id="window_site_importance_communautaire_oiseaux">
         <field name="name">Zones d’importance communautaire pour les oiseaux</field>
         <field name="res_model">protection.zico</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_oiseaux_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="zico_view_tree"/>
         <field name="act_window" ref="window_site_importance_communautaire_oiseaux"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_importance_communautaire_oiseaux_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="zico_view_form"/>
         <field name="act_window" ref="window_site_importance_communautaire_oiseaux"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_site_importance_communautaire_oiseaux" icon="tryton-list" action="window_site_importance_communautaire_oiseaux"/>
+    <record model="ir.action.report" id="report_zico_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">protection.zico</field>
+        <field name="report_name">protection.zico.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_zico_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">protection.zico,-1</field>
+        <field name="action" ref="report_zico_edit"/>
+    </record>
 
     <!-- Zone de protection spéciale -->
     <record model="ir.action.act_window" id="window_zone_de_protection_speciale">
@@ -291,19 +263,16 @@
         <field name="domain">[('espace.code', '=', 'ZPS')]</field>
         <field name="context">{'espace': 'Zone de protection spéciale'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_zone_de_protection_speciale_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_zone_de_protection_speciale"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_zone_de_protection_speciale_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_zone_de_protection_speciale"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_zone_de_protection_speciale" icon="tryton-list" action="window_zone_de_protection_speciale"/>       
 
     <!-- Réserve de biosphère -->
@@ -313,19 +282,16 @@
         <field name="domain">[('espace.code', 'like', 'Bios %')]</field>
         <field name="context">{'espace': 'Réserve de biosphère'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_de_biosphere_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_reserve_de_biosphere"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_de_biosphere_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_reserve_de_biosphere"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_reserve_de_biosphere" icon="tryton-list" action="window_reserve_de_biosphere"/>       
 
     <!-- Conservatoire du littoral -->
@@ -335,19 +301,16 @@
         <field name="domain">[('espace.code', '=', 'CDL')]</field>
         <field name="context">{'espace': 'Conservatoire du littoral'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_conservatoire_du_littoral_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_conservatoire_du_littoral"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_conservatoire_du_littoral_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_conservatoire_du_littoral"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_conservatoire_du_littoral" icon="tryton-list" action="window_conservatoire_du_littoral"/>
      
     <!-- Site Ramsar -->
@@ -357,19 +320,16 @@
         <field name="domain">[('espace.code', '=', 'RAMSAR')]</field>
         <field name="context">{'espace': 'Site Ramsar'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_ramsar_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_site_ramsar"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_ramsar_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_site_ramsar"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_site_ramsar" icon="tryton-list" action="window_site_ramsar"/>
 
     <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique -->
@@ -378,13 +338,11 @@
         <field name="type">tree</field>
         <field name="name">znieff_tree</field>
     </record>
-
     <record model="ir.ui.view" id="znieff_view_form">
         <field name="model">protection.znieff</field>
         <field name="type">form</field>
         <field name="name">znieff_form</field>
     </record>
-
     <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I -->
     <record model="ir.action.act_window" id="window_site_znieffi">
         <field name="name">Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I</field>
@@ -392,19 +350,16 @@
         <field name="domain">[('espace.code', '=', 'ZNIEFF 1')]</field>
         <field name="context">{'espace': 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_znieffi_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_site_znieffi"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_znieffi_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_site_znieffi"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_site_znieffi" icon="tryton-list" action="window_site_znieffi"/>      
 
     <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II -->
@@ -414,19 +369,16 @@
         <field name="domain">[('espace.code', '=', 'ZNIEFF 2')]</field>
         <field name="context">{'espace': 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II'}</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_znieffii_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="area_view_tree"/>
         <field name="act_window" ref="window_site_znieffii"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_site_znieffii_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_site_znieffii"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_site_znieffii" icon="tryton-list" action="window_site_znieffii"/>  
 
     <!-- Réserve biologique -->
@@ -435,31 +387,36 @@
         <field name="type">tree</field>
         <field name="name">reserve_biologique_tree</field>
     </record>
-
     <record model="ir.ui.view" id="reserve_biologique_view_form">
         <field name="model">protection.reserve_biologique</field>
         <field name="type">form</field>
         <field name="name">reserve_biologique_form</field>
     </record>
-
     <record model="ir.action.act_window" id="window_reserve_biologique">
         <field name="name">Réserves biologiques</field>
         <field name="res_model">protection.reserve_biologique</field>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_biologique_tree">
         <field name="sequence" eval="10"/>
         <field name="view" ref="reserve_biologique_view_tree"/>
         <field name="act_window" ref="window_reserve_biologique"/>
     </record>
-
     <record model="ir.action.act_window.view" id="view_reserve_biologique_form">
         <field name="sequence" eval="20"/>
         <field name="view" ref="reserve_biologique_view_form"/>
         <field name="act_window" ref="window_reserve_biologique"/>
     </record>
-
     <menuitem parent="menu_protection" sequence="1" id="menu_reserve_biologique" icon="tryton-list" action="window_reserve_biologique"/>             
-
+    <record model="ir.action.report" id="report_rb_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">protection.reserve_biologique</field>
+        <field name="report_name">protection.reserve.biologique.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_rb_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">protection.reserve_biologique,-1</field>
+        <field name="action" ref="report_rb_edit"/>
+    </record>
     </data>
 </tryton>

@@ -6,4 +6,5 @@
     <field name="mixte" />    
     <field name="date" />
     <field name="version" />
+    <field name="url" />
 </tree>

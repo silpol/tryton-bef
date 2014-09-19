@@ -35,6 +35,7 @@ from trytond.pool import PoolMeta, Pool
 from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 
 class Type(ModelSQL, ModelView):
@@ -57,7 +58,7 @@ class Type(ModelSQL, ModelView):
             required=True
         )
 
-class Area(ModelSQL, ModelView):
+class Area(Mapable, ModelSQL, ModelView):
     u'Protected area'
     __name__ = 'protection.area'
 
@@ -75,6 +76,9 @@ class Area(ModelSQL, ModelView):
 
     date = fields.Date(
             string=u'Date'
+        )
+    version = fields.Date(
+            string=u'Date de version',
         )
 
     geom = fields.MultiPolygon(
@@ -109,6 +113,26 @@ class Area(ModelSQL, ModelView):
             select=True
         )
 
+    url = fields.Function(
+            fields.Char(
+                string=u"URL",
+                readonly=True,
+                depends=['typo', 'id_mnhn'],
+            ),
+            '_get_url',
+        )
+
+    def _get_url(self, ids):
+        base = "http://inpn.mnhn.fr/"
+        domain = ""
+        if self.typo == u"Espace protégé":
+            domain = "espace/protege/"
+        elif self.typo == "Natura 2000":
+            domain = "site/natura2000/"
+        elif self.typo == "ZNIEFF":
+            domain = "zone/znieff/"
+        return "%s%s%s"%(base, domain, self.id_mnhn)
+
     @classmethod
     def default_espace(cls):
         espace = Transaction().context.get('espace')
@@ -116,40 +140,26 @@ class Area(ModelSQL, ModelView):
         ids = model.search([('name', '=', espace)], limit=1)
         return ids[0]
 
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image map', filename='image_filename')
-    image_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_im_filename')                        
+    area_image = fields.Function(
+                    fields.Binary(
+                            string=u'Image',
+                            help=u'Image'
+                        ),
+            'get_image'
+        )
+    area_map = fields.Binary(
+            string=u'Map',
+            help=u'Map'
+        )
+
+    def get_image(self, ids):
+        return self._get_image('area_image.qgs', 'carte')
+
+    def get_map(self, ids):
+        return self._get_image('area_map.qgs', 'carte')                        
     
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.1)
-
-    def _get_im_filename(self, ids):
-        """Image map filename"""
-        return '%s - Image map.jpg' % self.name
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        areas, envelope, _area = get_as_epsg4326([self.geom])
-        
-        if areas == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-               
-        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
 
     @classmethod
     @ModelView.button
@@ -157,26 +167,8 @@ class Area(ModelSQL, ModelView):
         for record in records:
             if record.name is None:
                 continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                      
-            m.plot_geom(areas[0], None, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})    
+            cls.write([record], {'area_map': cls.get_map(record, 'map')})    
     
-
     @classmethod
     def __setup__(cls):
         super(Area, cls).__setup__()
@@ -198,7 +190,7 @@ class AreaQGis(QGis):
 
 TYPES = [('D', u'Directed'), ('I', u'Integral')]
 
-class ReserveBiologique(ModelSQL, ModelView):
+class ReserveBiologique(Mapable, ModelSQL, ModelView):
     u'Biological reserve'
     __name__ = 'protection.reserve_biologique'
 
@@ -216,6 +208,9 @@ class ReserveBiologique(ModelSQL, ModelView):
 
     date = fields.Date(
             string=u'Date'
+        )
+    version = fields.Date(
+            string=u'Date de version',
         )
 
     mixte = fields.Boolean(
@@ -256,44 +251,43 @@ class ReserveBiologique(ModelSQL, ModelView):
             select=True
         )
 
+    url = fields.Function(
+            fields.Char(
+                string=u"URL",
+                readonly=True,
+                depends=['typo', 'id_mnhn'],
+            ),
+            '_get_url',
+        )
+
+    def _get_url(self, ids):
+        base = "http://inpn.mnhn.fr/espace/protege/"
+        return "%s%s"%(base, self.id_mnhn)
+
     @staticmethod
     def default_type():
         return 'D'
 
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image map', filename='image_filename')
-    image_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_im_filename')                        
+    rb_image = fields.Function(
+                    fields.Binary(
+                            string=u'Image',
+                            help=u'Image'
+                        ),
+            'get_image'
+        )
+    rb_map = fields.Binary(
+            string=u'Map',
+            help=u'Map'
+        )
+
+    def get_image(self, ids):
+        return self._get_image('rb_image.qgs', 'carte')
+
+    def get_map(self, ids):
+        return self._get_image('rb_map.qgs', 'carte')                        
     
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.1)
-
-    def _get_im_filename(self, ids):
-        """Image map filename"""
-        return '%s - Image map.jpg' % self.name
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        areas, envelope, _area = get_as_epsg4326([self.geom])
-        
-        if areas == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-               
-        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
 
     @classmethod
     @ModelView.button
@@ -301,24 +295,7 @@ class ReserveBiologique(ModelSQL, ModelView):
         for record in records:
             if record.name is None:
                 continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                      
-            m.plot_geom(areas[0], None, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})  
+            cls.write([record], {'rb_map': cls.get_map(record, 'map')})  
 
     @classmethod
     def __setup__(cls):
@@ -339,7 +316,7 @@ class ReserveBiologiqueQGis(QGis):
     TITLES = {'protection.reserve_biologique': u'Reserve biologique'}
 
 
-class Zico(ModelSQL, ModelView):
+class Zico(Mapable, ModelSQL, ModelView):
     u'ZICO area'
     __name__ = 'protection.zico'
 
@@ -357,6 +334,10 @@ class Zico(ModelSQL, ModelView):
             string=u'ID spn',
             help=u'National identifiant',
             required=True
+        )
+
+    version = fields.Date(
+            string=u'Date de version',
         )
     
     name = fields.Char(
@@ -391,40 +372,26 @@ class Zico(ModelSQL, ModelView):
             string=u'Bounding box y2'
         )
 
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image map', filename='image_filename')
-    image_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_im_filename')                        
+    zico_image = fields.Function(
+                    fields.Binary(
+                            string=u'Image',
+                            help=u'Image'
+                        ),
+            'get_image'
+        )
+    zico_map = fields.Binary(
+            string=u'Map',
+            help=u'Map'
+        )
+
+    def get_image(self, ids):
+        return self._get_image('zico_image.qgs', 'carte')
+
+    def get_map(self, ids):
+        return self._get_image('zico_map.qgs', 'carte')                          
     
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.1)
-
-    def _get_im_filename(self, ids):
-        """Image map filename"""
-        return '%s - Image map.jpg' % self.name
-    
-    def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
-
-        areas, envelope, _area = get_as_epsg4326([self.geom])
-        
-        if areas == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-               
-        m.plot_geom(areas[0], None, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())
 
     @classmethod
     @ModelView.button
@@ -432,24 +399,7 @@ class Zico(ModelSQL, ModelView):
         for record in records:
             if record.name is None:
                 continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                      
-            m.plot_geom(areas[0], None, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})  
+            cls.write([record],  {'zico_map': cls.get_map(record, 'map')})  
 
     @classmethod
     def __setup__(cls):

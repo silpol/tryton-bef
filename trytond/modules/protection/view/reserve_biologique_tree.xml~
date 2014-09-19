@@ -5,4 +5,5 @@
     <field name="type" />
     <field name="mixte" />    
     <field name="date" />
+    <field name="version" />
 </tree>

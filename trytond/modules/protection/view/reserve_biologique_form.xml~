@@ -7,11 +7,15 @@
             <label name="name" />
             <field name="name" />
             <label name="date" />
-            <field name="date" />            
+            <field name="date" />
+            <label name="version" />
+            <field name="version" />
             <label name="type" />
             <field name="type" />
             <label name="mixte" />
             <field name="mixte" />
+            <label name="url" />
+            <field name="url" widget="url" />
         </page>                        
         <page string="Map" id="map" col="2">
             <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>

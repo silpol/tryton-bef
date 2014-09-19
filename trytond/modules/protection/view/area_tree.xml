@@ -5,4 +5,5 @@
     <field name="typo" />
     <field name="date" />
     <field name="version" />
+    <field name="url" />
 </tree>

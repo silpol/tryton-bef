@@ -14,10 +14,12 @@
             <field name="type" />
             <label name="mixte" />
             <field name="mixte" />
+            <label name="url" />
+            <field name="url" widget="url" />
         </page>                        
         <page string="Map" id="map" col="2">
-            <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
+            <field name="rb_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="rb_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         
             <button string="Edit" name="reserve_biologique_edit" icon="tryton-executable" />
             <button string="Generate" name="generate" icon="tryton-executable" />                           
         </page>
