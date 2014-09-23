@@ -63,25 +63,13 @@ library(reshape2)
 
 \chapter{Généralités}
 
-\section{Liste des sites sélectionnés}
+\section{Liste}
 
-<<Bilan2, echo=FALSE, size='footnotesize', include=TRUE, fig.pos='h', fig.height=8, fig.cap="Liste des statuts de protection.", error=F, comment=F, warning=F, message=F>>=
-Data <- data.frame(befref.area[c('name', 'espace')])
-colnames(Data)<-c("Nom", "Type")
+<<Bilan2, echo=FALSE, size='footnotesize', include=TRUE, fig.pos='h', fig.height=8, fig.cap="Liste.", error=F, comment=F, warning=F, message=F>>=
+Data <- data.frame(befref.test[c('name', 'o2m', 'm2o', 'm2m')])
+colnames(Data)<-c("Nom", "One2Many", "Many2One", "Many2Many")
 Data
 @
 
-<<Bilan1, echo=FALSE, size='footnotesize', include=TRUE, fig.pos='h', fig.height=3, fig.cap="Statuts de protection.", error=F, comment=F, warning=F, message=F>>=
-Data <- data.frame(befref.area[c('name', 'espace')])
-colnames(Data)<-c("Site", "Type")
-ggplot(Data, aes(x=Site))+
-  geom_bar(fill="darkblue")+
-  labs(title="Status de protection")+
-  theme(axis.line=element_blank(),
-        axis.text.y=element_blank(),
-        axis.title.y=element_blank(),
-        axis.title.x = element_text(face="bold", colour="#990000", size=20),
-        axis.text.x  = element_text(angle=90, vjust=0.5, size=10))
-@
 
 \end{document}

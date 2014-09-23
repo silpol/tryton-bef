@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form string="Test" col="1">
+    <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="name"/>
+            <field name="name" colspan="3"/>
+            <label name="o2m"/>
+            <field name="o2m" colspan="3"/>
+            <label name="m2o"/>
+            <field name="m2o" colspan="3"/>
+            <label name="m2m"/>
+            <field name="m2m" colspan="3"/>
+        </page>
+        <page string="Map" id="map">
+            <newline/>
+            <field name="test_image"  widget="image" img_width="640" img_height="480"/>
+            <field name="test_map" widget="image" img_width="640" img_height="480"/>
+            <newline/>
+            <button string="Edit" name="test_edit" icon="tryton-executable" />
+            <button string="Generate"  name="generate" icon="tryton-executable" />
+        </page>                        
+    </notebook>
+</form>

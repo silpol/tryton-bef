@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="Test">
+    <field name="id" />
+    <field name="name" />
+    <field name="o2m" />
+    <field name="m2o" />
+    <field name="m2m" />
+</tree>

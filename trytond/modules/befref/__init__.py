@@ -22,21 +22,25 @@ Copyright (c) 2012-2013 Pierre-Louis Bonicoli
 from trytond.pool import Pool
 
 from befref import *
+from party import Party
 
 def register():
     Pool.register(
-        Area,
+        Test,
+        Party,
+        TestPartyM2M,
         Point,
         MPoint,
         Line,
         MLine,
         Poly,
+        MPoly,
         module='befref',
         type_='model'
     )
 
     Pool.register(
-        AreaQGis,               
+        TestQGis,               
         module='befref',
         type_='report'
     )

@@ -29,19 +29,19 @@ from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
 
-__all__ = ['Area', 'AreaQGis', 'Generate', 'Point', 'MPoint', 'Line', 'MLine', 'Poly']
+__all__ = ['Test', 'TestQGis', 'TestPartyM2M', 'Generate', 'Point', 'MPoint', 'Line', 'MLine', 'Poly', 'MPoly']
 
 
-class Area(Mapable, ModelView, ModelSQL):
-    u'Protected area'
-    __name__ = 'befref.area'
+class Test(Mapable, ModelView, ModelSQL):
+    u'Test'
+    __name__ = 'befref.test'
 
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.1)
     
     name = fields.Char(
-            string=u'Site name',
-            help=u'Site name',
+            string=u'Test name',
+            help=u'Test name',
             required=True
         )
 
@@ -51,34 +51,35 @@ class Area(Mapable, ModelView, ModelSQL):
             select=True
         )
 
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image map')
-
-    espace = fields.Many2One(
-            'protection.type',
-            ondelete='RESTRICT',
-            string=u'Type of protected area',
-            required=True,
-            select=True
+    o2m = fields.One2Many(
+            'party.party',
+            'test',
+            string=u'one2many',
+            help=u'one2many',
         )
 
-    dummy_ref_to_self = fields.Many2One(
-            'befref.area',
-            ondelete='RESTRICT',
-            string=u'Dummy ref to self',
-            required=False,
-            select=True
+    m2o = fields.Many2One(
+            'party.party',
+            string=u'many2one',
+            help=u'many2one',
         )
 
-    @classmethod
-    def default_espace(cls):
-        return 1 
+    m2m = fields.Many2Many(
+            'befref.test-party.partym2m',
+            'test',
+            'party',
+            string=u'many2many',
+            help=u'many2many',
+        )
+
+    test_image = fields.Function(fields.Binary('Image'), 'get_image')
+    test_map = fields.Binary('Image map')
 
     def get_image(self, ids):
-        return self._get_image( 'image.qgs', 'carte' )
+        return self._get_image( 'test_image.qgs', 'carte' )
 
     def get_map(self, ids):
-        return self._get_image( 'map.qgs', 'carte' )
+        return self._get_image( 'test_map.qgs', 'carte' )
 
 
     @classmethod
@@ -87,25 +88,46 @@ class Area(Mapable, ModelView, ModelSQL):
         for record in records:
             if record.name is None:
                 continue
-            cls.write([record], {'image_map': cls.get_map(record, 'map')})  
+            cls.write([record], {'test_map': cls.get_map(record, 'map')})  
 
 
     @classmethod
     def __setup__(cls):
-        super(Area, cls).__setup__()
+        super(Test, cls).__setup__()
         cls._buttons.update({           
-            'area_edit': {},
+            'test_edit': {},
             'generate': {},
         })
 
     @classmethod
-    @ModelView.button_action('befref.report_area_edit')
-    def area_edit(cls, ids):
+    @ModelView.button_action('befref.report_test_edit')
+    def test_edit(cls, ids):
         pass
 
-class AreaQGis(QGis):
-    __name__ = 'befref.area.qgis'
-    TITLES = {'befref.area': u'Area'}
+class TestQGis(QGis):
+    __name__ = 'befref.test.qgis'
+    TITLES = {'befref.test': u'Test'}
+
+class TestPartyM2M(ModelSQL, ModelView):
+    u'TestPartyM2M'
+    __name__ = 'befref.test-party.partym2m'
+    _table = 'befref_party_m2m_rel'
+
+    test = fields.Many2One(
+            'befref.test',
+            string=u'Test',
+            ondelete='CASCADE',
+            required=True,
+            select=1
+        )
+
+    party = fields.Many2One(
+            'party.party',
+            string=u'Party',
+            ondelete='CASCADE',
+            required=True,
+            select=1
+        )
 
 class Generate(Wizard):
     __name__ = 'befref.generate'
@@ -119,11 +141,11 @@ class Generate(Wizard):
         return []
 
 class Point(Mapable, ModelView, ModelSQL):
-    u'Protected point'
+    u'Test point'
     __name__ = 'befref.point'
 
     geom = fields.Point(
-            string=u'Geometry',
+            string=u'Point',
             srid=2154,
             select=True
         )
@@ -138,11 +160,11 @@ class Point(Mapable, ModelView, ModelSQL):
         super(Point, cls).__setup__()
 
 class MPoint(Mapable, ModelView, ModelSQL):
-    u'Protected mpoint'
+    u'Test mpoint'
     __name__ = 'befref.mpoint'
 
     geom = fields.MultiPoint(
-            string=u'Geometry',
+            string=u'MultiPoint',
             srid=2154,
             select=True
         )
@@ -157,11 +179,11 @@ class MPoint(Mapable, ModelView, ModelSQL):
         super(MPoint, cls).__setup__()
 
 class Line(Mapable, ModelView, ModelSQL):
-    u'Protected line'
+    u'Test line'
     __name__ = 'befref.line'
 
     geom = fields.LineString(
-            string=u'Geometry',
+            string=u'Line',
             srid=2154,
             select=True
         )
@@ -176,11 +198,11 @@ class Line(Mapable, ModelView, ModelSQL):
         super(Line, cls).__setup__()
 
 class MLine(Mapable, ModelView, ModelSQL):
-    u'Protected mline'
+    u'Test mline'
     __name__ = 'befref.mline'
 
     geom = fields.MultiLineString(
-            string=u'Geometry',
+            string=u'MultiLine',
             srid=2154,
             select=True
         )
@@ -195,11 +217,11 @@ class MLine(Mapable, ModelView, ModelSQL):
         super(MLine, cls).__setup__()
 
 class Poly(Mapable, ModelView, ModelSQL):
-    u'Protected poly'
+    u'Test poly'
     __name__ = 'befref.poly'
 
     geom = fields.Polygon(
-            string=u'Point',
+            string=u'Polygon',
             srid=2154,
             select=True
         )
@@ -212,4 +234,23 @@ class Poly(Mapable, ModelView, ModelSQL):
     @classmethod
     def __setup__(cls):
         super(Poly, cls).__setup__()
+
+class MPoly(Mapable, ModelView, ModelSQL):
+    u'Test mpoly'
+    __name__ = 'befref.mpoly'
+
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon',
+            srid=2154,
+            select=True
+        )
+
+    image = fields.Function(fields.Binary('Image'), 'get_image')
+
+    def get_image(self, ids):
+        return self._get_image( 'image.qgs', 'carte' )
+
+    @classmethod
+    def __setup__(cls):
+        super(MPoly, cls).__setup__()
 
