@@ -94,11 +94,13 @@ class QGisConf(ModelSingleton, ModelSQL, ModelView):
 
     version = fields.Selection([
         ('2.3.0-Dev', 'QGis 2.3.0'),
+        ('2.4.0', 'QGis 2.4.0'),
+        ('2.5.0-Dev', 'QGis 2.5.0'),
     ], 'Version', required=True)
 
     @staticmethod
     def default_version():
-        return '2.3.0-Dev'
+        return '2.4.0'
 
 
 class QGis(Report):
