@@ -1,4 +1,4 @@
-#coding: utf-8
+# -*- coding: utf8 -*-
 """
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,13 +23,16 @@ Reference implementation for stuff with geometry and map
 
 from trytond.pool import  Pool
 from trytond.model import ModelView, ModelSQL, fields
-from trytond.wizard import Wizard
+from trytond.wizard import Wizard, StateView, StateAction, Button, StateTransition
+from trytond.transaction import Transaction
+from trytond.pyson import Bool, Eval, Not, Equal, In, If, Get, PYSONEncoder
 
 from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
 
-__all__ = ['Test', 'TestQGis', 'TestPartyM2M', 'Generate', 'Point', 'MPoint', 'Line', 'MLine', 'Poly', 'MPoly']
+__all__ = ['Test', 'TestQGis', 'TestPartyM2M', 'Generate', 'Point', 'MPoint', 'Line', 'MLine', 'Poly', 'MPoly', 'synthese1', 'Synthese1QGis',
+            'Opensynthese1Start', 'Opensynthese1']
 
 
 class Test(Mapable, ModelView, ModelSQL):
@@ -254,3 +257,117 @@ class MPoly(Mapable, ModelView, ModelSQL):
     def __setup__(cls):
         super(MPoly, cls).__setup__()
 
+class synthese1(Mapable, ModelSQL, ModelView):
+    u'Synthese test'
+    __name__ = 'befref.synthese1'
+    
+    test = fields.Many2One(
+            'befref.test',
+            string=u'Site'
+        )
+    surftest = fields.Float(
+            string=u'Surface Site (ha)',
+            digits=(16, 2)
+        )
+    surfarea = fields.Float(
+            string=u'Surface Buffer(ha)',
+            digits=(16, 2)
+        )
+    geom = fields.MultiPolygon(
+            string=u'BufferMultiPolygon',
+            srid=2154,
+            select=True
+        )
+    synthese1_image = fields.Function(
+            fields.Binary(
+                      string=u'Image'
+                ),
+            'get_image'
+        )
+    
+    @staticmethod
+    def table_query():
+        and_test = ' '                
+        args = [True]
+        if Transaction().context.get('test'):            
+            and_test = 'AND b.id = %s '
+            args.append(Transaction().context['test'])
+        return ('SELECT DISTINCT ROW_NUMBER() OVER (ORDER BY b.id) AS id, '
+                'MAX(b.create_uid) AS create_uid, '
+                'MAX(b.create_date) AS create_date, '
+                'MAX(b.write_uid) AS write_uid, '
+                'MAX(b.write_date) AS write_date,'
+                'b.id AS test, '
+                'round(cast(st_area(b.geom)/10000 AS numeric), 2) AS surftest, '
+ 		        'round(cast(st_area(ST_Buffer(b.geom, 1000))/10000 AS numeric), 2) AS surfarea, '
+                'ST_Buffer(b.geom, 1000) AS geom, '
+                '1 AS synthese1_map '
+                'FROM befref_test b '
+                'WHERE %s '
+                + and_test +
+                'GROUP BY b.id', args)
+
+    def get_image(self, ids):
+        return self._get_image('synthese1_image.qgs', 'carte')
+
+    def get_map(self, ids):
+        return self._get_image('synthese1_map.qgs', 'carte')
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4) 
+    
+
+    @classmethod
+    def __setup__(cls):
+        super(synthese1, cls).__setup__()
+        cls._buttons.update({           
+            'synthese1_geo_edit': {},
+            'generate': {},
+        })
+               
+    @classmethod
+    @ModelView.button_action('befref.report_synthese1_geo_edit')
+    def synthese1_geo_edit(cls, ids):
+        pass
+        
+    @classmethod
+    @ModelView.button
+    def generate(cls, records):
+        for record in records:
+            if record.gid is None:
+                continue                                              
+            cls.write([record], {'synthese1_map': cls.get_map(record, 'map')})        
+
+        
+class Synthese1QGis(QGis):
+    __name__ = 'befref.synthese1_geo.qgis'
+    TITLES = {'befref.synthese1_geo': u'Area'}
+
+class Opensynthese1Start(ModelView):
+    'Open synthese1'
+    __name__ = 'befref.synthese1.open.start'
+
+    test = fields.Many2One(
+               'befref.test',
+                string=u'Site'
+            )
+
+class Opensynthese1(Wizard):
+    'Open synthese1'
+    __name__ = 'befref.synthese1.open'
+
+    start = StateView('befref.synthese1.open.start',
+        'befref.synthese1_open_start_view_form', [
+            Button('Cancel', 'end', 'tryton-cancel'),
+            Button('Open', 'open_', 'tryton-ok', default=True),
+            ])
+    open_ = StateAction('befref.act_synthese1_form')
+
+    def do_open_(self, action):
+        action['pyson_context'] = PYSONEncoder().encode({                
+                'test': self.start.test.id if self.start.test else None,                
+                })
+        return action, {}
+
+    def transition_open_(self):
+        return 'end'

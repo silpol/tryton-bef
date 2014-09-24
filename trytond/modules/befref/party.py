@@ -1,5 +1,4 @@
-#coding: utf-8
-
+# -*- coding: utf8 -*-
 
 from trytond.model import ModelView, ModelSQL, fields
 

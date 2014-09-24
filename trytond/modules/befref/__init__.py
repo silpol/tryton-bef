@@ -35,18 +35,22 @@ def register():
         MLine,
         Poly,
         MPoly,
+        synthese1,
+        Opensynthese1Start,
         module='befref',
         type_='model'
     )
 
     Pool.register(
-        TestQGis,               
+        TestQGis,
+        Synthese1QGis,
         module='befref',
         type_='report'
     )
 
     Pool.register(
-        Generate,               
+        Generate,
+        Opensynthese1,
         module='befref',
         type_='wizard'
     )

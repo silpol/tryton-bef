@@ -74,5 +74,78 @@
 
         <menuitem name="BefRef" parent="ir.menu_administration" id="menu_befref" icon="tryton-befref" action="window_befref"/>
 
+        <!-- Synhtèse 1 -->
+        <record model="ir.ui.view" id="synthese1_view_tree">
+            <field name="model">befref.synthese1</field>
+            <field name="type">tree</field>
+            <field name="name">synthese1_tree</field>
+        </record>
+        <record model="ir.ui.view" id="synthese1_view_graph">
+            <field name="model">befref.synthese1</field>
+            <field name="type">graph</field>
+            <field name="name">synthese1_graph</field>
+        </record>
+        <record model="ir.ui.view" id="synthese11_view_form">
+            <field name="model">befref.synthese1</field>
+            <field name="type">form</field>
+            <field name="name">synthese11_form</field>
+        </record> 
+
+        <record model="ir.action.act_window" id="act_synthese1_form">
+            <field name="name">Synthèse test</field>
+            <field name="res_model">befref.synthese1</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_synthese1_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="synthese1_view_tree"/>
+            <field name="act_window" ref="act_synthese1_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_synthese1_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="synthese1_view_graph"/>
+            <field name="act_window" ref="act_synthese1_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_synthese1_form_view3">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="synthese11_view_form"/>
+            <field name="act_window" ref="act_synthese1_form"/>
+        </record>
+        <record model="ir.ui.view" id="synthese1_open_start_view_form">
+            <field name="model">befref.synthese1.open.start</field>
+            <field name="type">form</field>
+            <field name="name">synthese1_form</field>
+        </record>
+        <record model="ir.action.wizard" id="act_synthese1_open">
+            <field name="name">Synthèse test</field>
+            <field name="wiz_name">befref.synthese1.open</field>
+        </record>
+        <record model="ir.action.report" id="synthese1">
+            <field name="name">Synthèse 1</field>
+            <field name="model">befref.synthese1</field>
+            <field name="report_name">befref.synthese1</field>
+            <field name="report">befref/synthese1.ods</field>            
+        </record>
+        <record model="ir.action.keyword" id="synthese_synthese1">
+            <field name="keyword">form_print</field>
+            <field name="model">befref.synthese1,-1</field>
+            <field name="action" ref="synthese1"/>
+        </record>
+        <record model="ir.action.report" id="report_synthese1_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">befref.synthese1</field>
+            <field name="report_name">befref.synthese1_geo.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_synthese1_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">befref.synthese1,-1</field>
+            <field name="action" ref="report_synthese1_geo_edit"/>
+        </record>
+        
+        <menuitem parent="ir.menu_administration" action="act_synthese1_open" icon="tryton-graph" id="menu_synthese1"/>
+
     </data>
 </tryton>
