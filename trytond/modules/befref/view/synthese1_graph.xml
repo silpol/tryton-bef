@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<graph string="Synthèse test" type="vbar">
+    <x>
+        <field name="test" />
+    </x>
+    <y>
+        <field name="surftest" key="1" color="#ccff00" string="Site"/>
+        <field name="surfarea" key="2" color="#ddaa00" string="Buffer"/>
+    </y>
+</graph>

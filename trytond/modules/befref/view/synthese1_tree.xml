@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Synthèse test">
+    <field name="test"/>
+    <field name="surftest"/>                     
+    <field name="surfarea"/>
+</tree>
