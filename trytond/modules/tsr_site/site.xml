@@ -35,6 +35,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">tryton-matos</field>
             <field name="path">icons/tryton-matos.svg</field>
         </record>
-        <menuitem name="Site" sequence="7" id="menu_site" icon="tryton-site"/>        
+        <menuitem name="Site" sequence="2" id="menu_site" icon="tryton-site"/>        
     </data>
 </tryton>

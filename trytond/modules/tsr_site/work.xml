@@ -34,19 +34,43 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_employee_form"/>
         </record>
 
+        <!-- Site -->
+        <record model="ir.ui.view" id="site_site_site_view_form">
+            <field name="model">site_site.site</field>
+            <field name="inherit" ref="site_site.site_site_view_form" />       
+            <field name="name">site_site_form</field>
+        </record>
+        <record model="ir.ui.view" id="site_site_site_view_tree">
+            <field name="model">site_site.site</field>
+            <field name="type">tree</field>
+            <field name="name">site_site_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_site_site_site_form">
+            <field name="name">Site</field>
+            <field name="res_model">site_site.site</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_site_site_site_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="site_site_site_view_tree"/>
+            <field name="act_window" ref="act_site_site_site_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_site_site_site_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="site_site_site_view_form"/>
+            <field name="act_window" ref="act_site_site_site_form"/>
+        </record>
+
         <!-- Taxon -->
         <record model="ir.ui.view" id="site_taxinomie_view_form">
             <field name="model">taxinomie.taxinomie</field>
             <field name="inherit" ref="taxinomie.taxinomie_view_form" />       
             <field name="name">taxinomie_form</field>
         </record>
-
         <record model="ir.ui.view" id="site_taxinomie_view_tree">
             <field name="model">taxinomie.taxinomie</field>
             <field name="type">tree</field>
             <field name="name">site_taxinomie_tree</field>
         </record>
-
         <record model="ir.action.act_window" id="act_site_taxinomie_form">
             <field name="name">Taxinomie</field>
             <field name="res_model">taxinomie.taxinomie</field>
@@ -234,6 +258,17 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="20"/>
             <field name="view" ref="work_view_form"/>
             <field name="act_window" ref="act_site_form"/>
+        </record>
+        <record model="ir.action.report" id="site_work">
+            <field name="name">Fiche de chantier</field>
+            <field name="model">site.work</field>
+            <field name="report_name">site.work</field>
+            <field name="report">tsr_site/fiche.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="site_work_kwd">
+            <field name="keyword">form_print</field>
+            <field name="model">site.work,-1</field>
+            <field name="action" ref="site_work"/>
         </record>
         <menuitem parent="menu_site_tree" action="act_site_form" icon="tryton-site" id="menu_site_form"/>
 

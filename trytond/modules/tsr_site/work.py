@@ -86,6 +86,13 @@ class Work(ModelSQL, ModelView):
             # 2 représente l'id de l'activité chantier
             domain=[('parent', 'child_of', 2, 'parent')],
         )
+    site = fields.Many2One(
+            'site_site.site',
+            string=u'Site',
+            help=u'Site',
+            required=True,
+            ondelete='CASCADE'
+        )
     active = fields.Function(
             fields.Boolean(
                 string=u'Active'
@@ -527,6 +534,17 @@ class WorkOutil(ModelSQL):
     outil = fields.Many2One(
             'site.outil',
             string=u'Outil',
+            ondelete='CASCADE',
+            required=True,
+        )
+
+class Site:
+    __metaclass__ = PoolMeta
+    __name__ = 'site_site.site'
+
+    chantier = fields.Many2One(
+            'site.work',
+            string=u'Chantier',
             ondelete='CASCADE',
             required=True,
         )

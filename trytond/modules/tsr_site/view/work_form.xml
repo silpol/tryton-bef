@@ -59,5 +59,9 @@ this repository contains the full copyright notices and license terms. -->
                 </page>
             </notebook>
         </page>
+        <page string="Site" id="site">
+            <label name="site" />
+            <field name="site" />
+        </page>
     </notebook>
 </form>
