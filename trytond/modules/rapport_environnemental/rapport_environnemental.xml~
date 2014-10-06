@@ -102,7 +102,7 @@
             <field name="action" ref="report_odt"/>
         </record>
 
-        <record model="ir.action.report" id="report_rmdhtml">
+        <!--record model="ir.action.report" id="report_rmdhtml">
             <field name="name">Rapport (html)</field>
             <field name="model">protection.surface_statut_buffer</field>
             <field name="report_name">rtryton.htmlreport</field>
@@ -117,14 +117,14 @@
         <record model="ir.action.report" id="report_rnwpdf">
             <field name="name">Rapport (pdf)</field>
             <field name="model">protection.surface_statut_buffer</field>
-            <field name="report_name">rtryton.rnwpdf</field>
+            <field name="report_name">rtryton.pdfreport</field>
             <field name="report">rapport_environnemental/bef2.Rnw</field>
         </record>
         <record model="ir.action.keyword" id="report_rnwpdf_kwd">
             <field name="keyword">form_print</field>
             <field name="model">protection.surface_statut_buffer,-1</field>
             <field name="action" ref="report_rnwpdf"/>
-        </record>
+        </record-->
             
         <menuitem parent="menu_rapport" action="act_surface_tiers_surface_open" icon="tryton-graph" id="menu_protection_surface_tiers_surface"/>   
 

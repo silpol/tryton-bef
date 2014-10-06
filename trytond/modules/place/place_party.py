@@ -47,10 +47,10 @@ class Party(Mapable):
 
     place = fields.Many2Many('place.place-party.party',
             'party', 'place', 'Places')
-    geom = fields.MultiPolygon(
-            string = u"""Geometry""",
+    geom = fields.MultiPoint(
+            string = u'Geometry',
             srid = 2154,
-            help = u"""geometry""",
+            help = u'geometry',
             readonly = False,
             select = True,
         )

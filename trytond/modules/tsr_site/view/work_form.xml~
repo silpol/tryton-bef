@@ -30,8 +30,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="hours" widget="float_time" float_time="company_work_time"/>
             <label name="total_effort"/>
             <field name="total_effort" widget="float_time" float_time="company_work_time"/>
-            <newline/>
-            
+            <newline/>            
             <field name="comment" colspan="6"/>
             <group col="4" colspan="6" id="state_buttons">
                 <group col="2" colspan="2" id="state">
@@ -59,6 +58,9 @@ this repository contains the full copyright notices and license terms. -->
                     <field name="matiere"/>
                 </page>
             </notebook>
+        </page>
+        <page string="Site" id="site">
+            <field name="site" />
         </page>
     </notebook>
 </form>

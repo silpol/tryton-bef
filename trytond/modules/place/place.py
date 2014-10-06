@@ -51,24 +51,24 @@ class Place(Mapable, ModelView, ModelSQL):
     active = fields.Boolean('Active')
        
     code = fields.Char(
-            string = u"""Site ID""",
-            help = u"""Site Identifiant""",
+            string = u'Site ID',
+            help = u'Site Identifiant',
             required = False,
             states=STATES,
             depends=DEPENDS,
         )
 
     name = fields.Char(
-            string = u"""Site name""",
-            help = u"""Short label of site""",
+            string = u'Site name',
+            help = u'Short label of site',
             required = False,
             states=STATES,
             depends=DEPENDS,
         )
         
     lib_long = fields.Char(
-            string = u"""Site label""",
-            help = u"""Long label of site""",
+            string = u'Site label',
+            help = u'Long label of site',
             required = False,
             states=STATES,
             depends=DEPENDS,
@@ -82,17 +82,17 @@ class Place(Mapable, ModelView, ModelSQL):
         )
         
     html = fields.Char(
-            string = u"""HTML""",
-            help = u"""File name of HTML site""",
+            string = u'HTML',
+            help = u'File name of HTML site',
             required = False,
             states=STATES,
             depends=DEPENDS,
         )
         
     geom = fields.MultiPolygon(
-            string = u"""Geometry""",
+            string = u'Geometry',
             srid = 2154,
-            help = u"""Geometry multipolygonal""",            
+            help = u'Geometry multipolygonal',            
             states=STATES,
             depends=DEPENDS,
         )

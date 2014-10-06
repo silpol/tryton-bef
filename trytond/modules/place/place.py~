@@ -166,8 +166,6 @@ class PlaceParty(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(PlaceParty, cls).__setup__()
-        cls._error_messages.update({'write_code':
-            u'You can''t modified category of site !'})
         
 class ObjAreaQGis(QGis):
     __name__ = 'place.place.qgis'

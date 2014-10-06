@@ -100,7 +100,7 @@ class Party(Mapable):
         for record in records:
             if record.name is None:
                 continue
-            cls.write([record], {'party_image_map': cls.get_map(record, 'map')}) 
+            cls.write([record], {'party_map': cls.get_map(record, 'map')}) 
 
 
 class PartyAreaQGis(QGis):

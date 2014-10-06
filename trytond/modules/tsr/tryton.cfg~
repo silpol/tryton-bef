@@ -5,8 +5,13 @@ depends:
     res
     party
     country    
-    foret    
-    protection
+    foret
     tsr_site
-    tsr_site_plan
-    address_fr  
+    address_fr
+    map
+    geotools
+    qgis
+    commune
+    corine_land_cover
+    protection
+    cadastre

@@ -86,6 +86,13 @@ class Work(ModelSQL, ModelView):
             # 2 représente l'id de l'activité chantier
             domain=[('parent', 'child_of', 2, 'parent')],
         )
+    site = fields.Many2One(
+            'site_site.site',
+            string=u'Site',
+            help=u'Site',
+            required=True,
+            ondelete='CASCADE'
+        )
     active = fields.Function(
             fields.Boolean(
                 string=u'Active'
@@ -116,7 +123,7 @@ class Work(ModelSQL, ModelView):
         )
     matiere = fields.One2Many(
             'timesheet.workline',
-            'work',
+            'tache',
             string=u'Matières',
             help=u'Matières',
             states={

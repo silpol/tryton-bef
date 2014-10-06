@@ -27,6 +27,14 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">tryton-work</field>
             <field name="path">icons/tryton-work.svg</field>
         </record>
+        <record model="ir.ui.icon" id="outil_icon">
+            <field name="name">tryton-outil</field>
+            <field name="path">icons/tryton-outil.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="matos_icon">
+            <field name="name">tryton-matos</field>
+            <field name="path">icons/tryton-matos.svg</field>
+        </record>
         <menuitem name="Site" sequence="7" id="menu_site" icon="tryton-site"/>        
     </data>
 </tryton>

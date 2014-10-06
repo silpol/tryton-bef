@@ -5,6 +5,7 @@ depends:
     ir
     party
     timesheet
+    taxinomie
 xml:
     site.xml
     work.xml

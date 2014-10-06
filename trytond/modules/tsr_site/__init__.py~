@@ -8,8 +8,8 @@ def register():
     Pool.register(
         Vehicule,
         Materiel,
-        Work,
         Outil,
+        Work,
         WorkOutil,
         taxinomie,
         WorkLine,

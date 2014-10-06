@@ -11,6 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 "Language: fr_FR\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 msgctxt "field:protection.configuration,code:"
 msgid "Code"
@@ -717,11 +718,11 @@ msgstr "Protection - Surface/Tiers/Protection"
 
 msgctxt "view:protection.surface_statut_buffer:"
 msgid "Surface entre Buffer Tiers"
-msgstr ""
+msgstr "Surface entre Buffer Tiers"
 
 msgctxt "view:protection.surface_statut_buffer:"
 msgid "Surface entre Buffer et Tiers"
-msgstr ""
+msgstr "Surface entre Buffer et Tiers"
 
 msgctxt "view:protection.taxon_uicn_presence.open.start:"
 msgid "UICN - Présence de taxons sur sites"
