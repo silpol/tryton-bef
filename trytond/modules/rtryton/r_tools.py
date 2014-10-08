@@ -97,6 +97,8 @@ def dataframe(records, fields_info):
                     add_record = False
                 else:
                     values.append(none2r.get(ttype, robjects.NA_Logical))
+            elif ttype == 'multipoint':
+                pass # not supported by package sp
             elif ttype == 'point':
                 if not srid: 
                     srid = str(value.srid)
