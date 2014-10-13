@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<graph string="Surface entre Buffer et Zone" type="vbar">
+    <x>
+        <field name="typo" />
+    </x>
+    <y>
+        <field name="surface"/>
+    </y>
+</graph>
+

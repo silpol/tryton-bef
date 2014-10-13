@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Surface CLC Trace">
+    <field name="site"/>
+    <field name="commune"/>
+    <field name="canton"/>
+    <field name="clc" />
+    <field name="code" />
+    <field name="actions" />
+    <field name="surface" />
+</tree>

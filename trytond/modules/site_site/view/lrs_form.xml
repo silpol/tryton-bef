@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="LRS" col="6">
+    <label name="track" />
+    <field name="track" /> 
+    <label name="name" />
+    <field name="name" />           
+    <label name="pk" />
+    <field name="pk" />
+    <group string="Map" id="group_map" col="2" colspan="6">        
+        <field name="image_map" widget="image" img_width="800" img_height="600"/>       
+        <button string="Generate" colspan="2" name="generate" icon="tryton-executable" />
+    </group>
+</form>

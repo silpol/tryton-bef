@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="Rapport Site - CLC">
+    <label name="site"/>
+    <field name="site" widget="selection"/>
+</form>

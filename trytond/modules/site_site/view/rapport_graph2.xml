@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<graph string="Surface CLC par commune" type="pie">
+    <x>
+        <field name="canton" />
+    </x>
+    <y>
+        <field name="surface" />      
+    </y>
+</graph>
+

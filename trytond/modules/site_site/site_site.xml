@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<!--
+     This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Pascal Obstetar
+-->
+<tryton>
+    <data>
+
+    <record model="ir.ui.icon" id="tryton_0">
+        <field name="name">tryton-0</field>
+        <field name="path">icons/tryton-0.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_25">
+        <field name="name">tryton-25</field>
+        <field name="path">icons/tryton-25.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_50">
+        <field name="name">tryton-50</field>
+        <field name="path">icons/tryton-50.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_75">
+        <field name="name">tryton-75</field>
+        <field name="path">icons/tryton-75.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_100">
+        <field name="name">tryton-100</field>
+        <field name="path">icons/tryton-100.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="site_icon">
+        <field name="name">tryton-site</field>
+        <field name="path">icons/tryton-site.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="track_icon">
+        <field name="name">tryton-track</field>
+        <field name="path">icons/tryton-track.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="zone_icon">
+        <field name="name">tryton-zone</field>
+        <field name="path">icons/tryton-zone.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="pt_icon">
+        <field name="name">tryton-pt</field>
+        <field name="path">icons/tryton-pt.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="lrs_icon">
+        <field name="name">tryton-lrs</field>
+        <field name="path">icons/tryton-lrs.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="poi_icon">
+        <field name="name">tryton-poi</field>
+        <field name="path">icons/tryton-poi.svg</field>
+    </record>
+
+    <menuitem name="Site" sequence="0" id="menu_site" icon="tryton-site"/>
+    <menuitem parent="menu_site" sequence="1" name="Configuration" icon="tryton-preferences" id="menu_configuration"/>
+    <menuitem parent="menu_site" name="Rapports" id="menu_rapport"/>
+
+    <!-- Configuration -->
+   <record model="ir.ui.view" id="configuration_view_tree">
+        <field name="model">site_site.configuration</field>
+        <field name="type">tree</field>
+        <field name="name">conf_tree</field>
+    </record>
+    <record model="ir.ui.view" id="configuration_view_form">
+        <field name="model">site_site.configuration</field>
+        <field name="type">form</field>
+        <field name="name">conf_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_configuration_form">
+        <field name="name">Configuration</field>
+        <field name="res_model">site_site.configuration</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_configuration_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="configuration_view_tree"/>
+        <field name="act_window" ref="act_configuration_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_configuration_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="configuration_view_form"/>
+        <field name="act_window" ref="act_configuration_form"/>
+    </record>
+        
+    <menuitem parent="menu_configuration" id="menu_configuration_form" icon="tryton-list" action="act_configuration_form"/>
+
+    <!-- Code -->
+    <record model="ir.ui.view" id="site_code_view_tree">
+        <field name="model">site_site.code</field>
+        <field name="type">tree</field>
+        <field name="name">code_tree</field>
+    </record>
+    <record model="ir.ui.view" id="site_code_view_form">
+        <field name="model">site_site.code</field>
+        <field name="type">form</field>
+        <field name="name">code_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_code_form">
+        <field name="name">Code</field>
+        <field name="res_model">site_site.code</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_code_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="site_code_view_tree"/>
+        <field name="act_window" ref="act_code_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_code_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="site_code_view_form"/>
+        <field name="act_window" ref="act_code_form"/>
+    </record>
+    
+    <menuitem parent="menu_configuration" id="menu_code_form" icon="tryton-list" action="act_code_form"/>
+
+    <!-- Site -->
+    <record model="ir.ui.view" id="site_site_view_tree">
+        <field name="model">site_site.site</field>
+        <field name="type">tree</field>
+        <field name="name">site_tree</field>
+    </record>
+    <record model="ir.ui.view" id="site_site_view_form">
+        <field name="model">site_site.site</field>
+        <field name="type">form</field>
+        <field name="name">site_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_site_form">
+        <field name="name">Sites</field>
+        <field name="res_model">site_site.site</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_site_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="site_site_view_tree"/>
+        <field name="act_window" ref="act_site_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_site_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="site_site_view_form"/>
+        <field name="act_window" ref="act_site_form"/>
+    </record>
+    <record model="ir.action.report" id="report_lrs">
+        <field name="name">Site</field>
+        <field name="model">site_site.site</field>
+        <field name="report_name">site_site.site</field>
+        <field name="report">site_site/site_site.odt</field>            
+    </record>
+    <record model="ir.action.keyword" id="report_site_site_kwd">
+        <field name="keyword">form_print</field>
+        <field name="model">site_site.site,-1</field>
+        <field name="action" ref="report_lrs"/>
+    </record>
+    <record model="ir.action.report" id="report_site_edit">
+        <field name="name">Open site in QGis...</field>
+        <field name="model">site_site.site</field>
+        <field name="report_name">site_site.site.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_site_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">site_site.site,-1</field>
+        <field name="action" ref="report_site_edit"/>
+    </record>
+    <menuitem parent="menu_site" sequence="1" id="menu_site_form" icon="tryton-site" action="act_site_form"/> 
+
+    <!-- Track -->
+    <record model="ir.ui.view" id="site_track_view_tree">
+        <field name="model">site_site.track</field>
+        <field name="type">tree</field>
+        <field name="name">track_tree</field>
+    </record>
+    <record model="ir.ui.view" id="site_track_view_form">
+        <field name="model">site_site.track</field>
+        <field name="type">form</field>
+        <field name="name">track_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_track_form">
+        <field name="name">Tracks</field>
+        <field name="res_model">site_site.track</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="site_track_view_tree"/>
+        <field name="act_window" ref="act_track_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="site_track_view_form"/>
+        <field name="act_window" ref="act_track_form"/>
+    </record>
+    <record model="ir.action.report" id="report_track_edit">
+        <field name="name">Open Track in QGis...</field>
+        <field name="model">site_site.track</field>
+        <field name="report_name">site_site.track.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_track_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">site_site.track,-1</field>
+        <field name="action" ref="report_track_edit"/>
+    </record>
+    <menuitem parent="menu_site" sequence="1" id="menu_track_form" icon="tryton-track" action="act_track_form"/>
+
+    <!-- Point -->
+    <record model="ir.ui.view" id="site_point_view_tree">
+        <field name="model">site_site.point</field>
+        <field name="type">tree</field>
+        <field name="name">pt_tree</field>
+    </record>
+    <record model="ir.ui.view" id="site_point_view_form">
+        <field name="model">site_site.point</field>
+        <field name="type">form</field>
+        <field name="name">pt_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_point_form">
+        <field name="name">Points</field>
+        <field name="res_model">site_site.point</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="site_point_view_tree"/>
+        <field name="act_window" ref="act_point_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="site_point_view_form"/>
+        <field name="act_window" ref="act_point_form"/>
+    </record>
+    <record model="ir.action.report" id="report_point_edit">
+        <field name="name">Open Point in QGis...</field>
+        <field name="model">site_site.point</field>
+        <field name="report_name">site_site.point.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_point_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">site_site.point,-1</field>
+        <field name="action" ref="report_point_edit"/>
+    </record>
+    <menuitem parent="menu_site" sequence="1" id="menu_point_form" icon="tryton-pt" action="act_point_form"/>
+
+    <!-- Zone -->
+    <record model="ir.ui.view" id="site_zone_view_tree">
+        <field name="model">site_site.zone</field>
+        <field name="type">tree</field>
+        <field name="name">zone_tree</field>
+    </record>
+    <record model="ir.ui.view" id="site_zone_view_form">
+        <field name="model">site_site.zone</field>
+        <field name="type">form</field>
+        <field name="name">zone_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_zone_form">
+        <field name="name">Zones</field>
+        <field name="res_model">site_site.zone</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="site_zone_view_tree"/>
+        <field name="act_window" ref="act_zone_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="site_zone_view_form"/>
+        <field name="act_window" ref="act_zone_form"/>
+    </record>
+    <record model="ir.action.report" id="report_zone_edit">
+        <field name="name">Open Zone in QGis...</field>
+        <field name="model">site_site.zone</field>
+        <field name="report_name">site_site.zone.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_zone_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">site_site.zone,-1</field>
+        <field name="action" ref="report_zone_edit"/>
+    </record>
+    <menuitem parent="menu_site" sequence="2" id="menu_zone_form" icon="tryton-zone" action="act_zone_form"/>   
+
+    <!-- LRS -->
+    <record model="ir.ui.view" id="site_lrs_view_tree">
+        <field name="model">site_site.lrs</field>
+        <field name="type">tree</field>
+        <field name="name">lrs_tree</field>
+    </record>
+    <record model="ir.ui.view" id="site_lrs_view_form">
+        <field name="model">site_site.lrs</field>
+        <field name="type">form</field>
+        <field name="name">lrs_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_lrs_form">
+        <field name="name">LRS</field>
+        <field name="res_model">site_site.lrs</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_lrs_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="site_lrs_view_tree"/>
+        <field name="act_window" ref="act_lrs_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_lrs_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="site_lrs_view_form"/>
+        <field name="act_window" ref="act_lrs_form"/>
+    </record>
+    <record model="ir.action.report" id="report_lrs_edit">
+        <field name="name">Open lrs in QGis...</field>
+        <field name="model">site_site.lrs</field>
+        <field name="report_name">site_site.site_site.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_lrs_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">site_site.lrs,-1</field>
+        <field name="action" ref="report_lrs_edit"/>
+    </record>
+    <menuitem parent="menu_configuration" sequence="1" id="menu_lrs_form" icon="tryton-lrs" action="act_lrs_form"/>
+
+    <!-- POI -->
+    <record model="ir.ui.view" id="site_poi_view_tree">
+        <field name="model">site_site.poi</field>
+        <field name="type">tree</field>
+        <field name="name">poi_tree</field>
+    </record>
+    <record model="ir.ui.view" id="site_poi_view_form">
+        <field name="model">site_site.poi</field>
+        <field name="type">form</field>
+        <field name="name">poi_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_poi_form">
+        <field name="name">POI</field>
+        <field name="res_model">site_site.poi</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_poi_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="site_poi_view_tree"/>
+        <field name="act_window" ref="act_poi_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_poi_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="site_poi_view_form"/>
+        <field name="act_window" ref="act_poi_form"/>
+    </record>
+    <record model="ir.action.report" id="report_poi_edit">
+        <field name="name">Open POI in QGis...</field>
+        <field name="model">site_site.poi</field>
+        <field name="report_name">site_site.poi.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_poi_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">site_site.poi,-1</field>
+        <field name="action" ref="report_poi_edit"/>
+    </record>
+    <menuitem parent="menu_site" sequence="3" id="menu_poi_form" icon="tryton-poi" action="act_poi_form"/>
+
+
+    <!-- CLC Site Surface -->
+    <record model="ir.ui.view" id="surface_site_surface_view_tree">
+        <field name="model">site_site.surface_site_clc</field>
+        <field name="type">tree</field>
+        <field name="name">rapport_tree</field>
+    </record>
+    <record model="ir.ui.view" id="surface_site_surface_view_graph">
+        <field name="model">site_site.surface_site_clc</field>
+        <field name="type">graph</field>
+        <field name="name">rapport_graph</field>
+    </record>
+    <record model="ir.ui.view" id="surface_site_surface_view_graph2">
+        <field name="model">site_site.surface_site_clc</field>
+        <field name="type">graph</field>
+        <field name="name">rapport_graph2</field>
+    </record>
+    <record model="ir.action.act_window" id="act_surface_site_surface_form">
+        <field name="name">Chantier - Corine Land Cover</field>
+        <field name="res_model">site_site.surface_site_clc</field>
+    </record>
+    <record model="ir.action.act_window.view"
+        id="act_surface_site_surface_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="surface_site_surface_view_tree"/>
+        <field name="act_window" ref="act_surface_site_surface_form"/>
+    </record>
+    <record model="ir.action.act_window.view"
+        id="act_surface_site_surface_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="surface_site_surface_view_graph"/>
+        <field name="act_window" ref="act_surface_site_surface_form"/>
+    </record>
+    <record model="ir.action.act_window.view"
+        id="act_surface_site_surface_form_view3">
+        <field name="sequence" eval="30"/>
+        <field name="view" ref="surface_site_surface_view_graph2"/>
+        <field name="act_window" ref="act_surface_site_surface_form"/>
+    </record>
+    <record model="ir.ui.view" id="surface_site_surface_open_start_view_form">
+        <field name="model">site_site.surface_clc_site.open.start</field>
+        <field name="type">form</field>
+        <field name="name">rapport_form</field>
+    </record>
+    <record model="ir.action.wizard" id="act_surface_site_surface_open">
+        <field name="name">Chantier - Corine Land Cover</field>
+        <field name="wiz_name">site_site.surface_clc_site.open</field>
+    </record>    
+    <record model="ir.action.report" id="report_site_clc">
+        <field name="name">Rapport Site - CLC</field>
+        <field name="model">site_site.surface_site_clc</field>
+        <field name="report_name">site_site.rapport_site_clc</field>
+        <field name="report">site_site/site_clc.odt</field>            
+    </record>
+    <record model="ir.action.keyword" id="report_site_clc_kwd">
+        <field name="keyword">form_print</field>
+        <field name="model">site_site.surface_site_clc,-1</field>
+        <field name="action" ref="report_site_clc"/>
+    </record>
+    <menuitem parent="menu_rapport" action="act_surface_site_surface_open" icon="tryton-graph" id="menu_surface_site_clc"/>
+
+    <!-- Buffer Zone Surface distance-->
+    <record model="ir.ui.view" id="surface_zone_surface_view_tree">
+        <field name="model">site_site.surface_statut_buffer</field>
+        <field name="type">tree</field>
+        <field name="name">buffer_tree</field>
+    </record>
+    <record model="ir.ui.view" id="surface_zone_surface_view_graph">
+        <field name="model">site_site.surface_statut_buffer</field>
+        <field name="type">graph</field>
+        <field name="name">buffer_graph</field>
+    </record>
+    <record model="ir.action.act_window" id="act_surface_zone_surface_form">
+        <field name="name">Zones - Statuts de protection</field>
+        <field name="res_model">site_site.surface_statut_buffer</field>
+    </record>
+    <record model="ir.action.act_window.view"
+        id="act_surface_zone_surface_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="surface_zone_surface_view_tree"/>
+        <field name="act_window" ref="act_surface_zone_surface_form"/>
+    </record>
+    <record model="ir.action.act_window.view"
+        id="act_surface_zone_surface_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="surface_zone_surface_view_graph"/>
+        <field name="act_window" ref="act_surface_zone_surface_form"/>
+    </record>
+    <record model="ir.ui.view" id="surface_zone_surface_open_start_view_form">
+        <field name="model">site_site.surface_statut_buffer.open.start</field>
+        <field name="type">form</field>
+        <field name="name">buffer_form</field>
+    </record>
+    <record model="ir.action.wizard" id="act_surface_zone_surface_open">
+        <field name="name">Zones - Statuts de protection</field>
+        <field name="wiz_name">site_site.surface_statut_buffer.open</field>
+    </record>    
+    <record model="ir.action.report" id="report_buffer">
+        <field name="name">Rapport - Zones et Statuts de protection</field>
+        <field name="model">site_site.surface_statut_buffer</field>
+        <field name="report_name">site_site.rapport_buffer</field>
+        <field name="report">site_site/buffer.odt</field>            
+    </record>
+    <record model="ir.action.keyword" id="report_buffer_zone_kwd">
+        <field name="keyword">form_print</field>
+        <field name="model">site_site.surface_statut_buffer,-1</field>
+        <field name="action" ref="report_buffer"/>
+    </record>
+    <menuitem parent="menu_rapport" action="act_surface_zone_surface_open" icon="tryton-graph" id="menu_protection_surface_zone_surface"/>
+
+    </data>
+</tryton>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<graph string="Surface CLC par canton" type="vbar">
+    <x>
+        <field name="canton" />
+    </x>
+    <y>
+        <field name="surface" key="1" string="Surface totale (ha)"/>
+        <field name="surface" key="2" domain="Less(Eval('code',0), 200)" color="#CC0033" string="Territoires artificialisés"/>
+        <field name="surface" key="3" domain="And(Greater(Eval('code',0), 200), Less(Eval('code',0), 300))" color="#FFFF66" string="Territoires agricoles"/>
+        <field name="surface" key="4" domain="And(Greater(Eval('code',0), 300), Less(Eval('code',0), 400))" color="#009933" string="Forêts et milieux semi-naturels"/>
+        <field name="surface" key="5" domain="And(Greater(Eval('code',0), 400), Less(Eval('code',0), 500))" color="#000099" string="Zones humides"/>
+        <field name="surface" key="6" domain="Greater(Eval('code',0), 500)" color="#00FFFF" string="Surface en eau"/>
+    </y>
+</graph>
+

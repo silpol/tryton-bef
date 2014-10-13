@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Surface entre Buffer et Zone">
+    <field name="zone" widget="selection"/>
+    <field name="typo" />
+    <field name="statut" />
+    <field name="nom" />
+    <field name="surface" />
+    <field name="distance" />
+</tree>

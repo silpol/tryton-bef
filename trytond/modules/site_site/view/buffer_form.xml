@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="Protection - Surface/Zone/Protection">
+    <label name="zone"/>
+    <field name="zone" widget="selection"/>
+</form>
