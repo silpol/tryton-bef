@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Diagno - Nature d'occupation des sols" editable="bottom">
+    <field name="diagno"/>
+    <field name="natureOcc" widget="selection"/>                 
+    <field name="observationOcc"/>
+</tree>
+
