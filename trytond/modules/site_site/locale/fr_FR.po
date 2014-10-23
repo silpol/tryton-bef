@@ -13,905 +13,1017 @@ msgstr ""
 "Language: fr_FR\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-msgctxt "error:sylvia_site.site:"
+msgctxt "error:site_site.site:"
 msgid "Avancement must be between 0 and 100."
-msgstr "Avancement doit être compris entre 0 et 100."
+msgstr "Le pourcentage d'avancement doit être entre 0 et 100."
 
-msgctxt "error:sylvia_site.trace:"
-msgid "You cannot set duplicated trace ID!"
-msgstr "Vous ne pouvez pas dupliquer l'identifiant de ce chantier !"
+msgctxt "error:site_site.site:"
+msgid "You cannot set duplicated site ID!"
+msgstr "Vous en pouvez pas dupliquer l'identifiant du site !"
 
-msgctxt "field:sylvia_site.code,code:"
+msgctxt "field:site_site.code,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:sylvia_site.code,create_date:"
+msgctxt "field:site_site.code,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:sylvia_site.code,create_uid:"
+msgctxt "field:site_site.code,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:sylvia_site.code,id:"
+msgctxt "field:site_site.code,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:sylvia_site.code,lib_long:"
+msgctxt "field:site_site.code,lib_long:"
 msgid "Label of code"
 msgstr "Libellé du code"
 
-msgctxt "field:sylvia_site.code,name:"
+msgctxt "field:site_site.code,name:"
 msgid "Name of code"
 msgstr "Nom du code"
 
-msgctxt "field:sylvia_site.code,rec_name:"
+msgctxt "field:site_site.code,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.code,write_date:"
+msgctxt "field:site_site.code,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:sylvia_site.code,write_uid:"
+msgctxt "field:site_site.code,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:sylvia_site.configuration,code:"
+msgctxt "field:site_site.configuration,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:sylvia_site.configuration,create_date:"
+msgctxt "field:site_site.configuration,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:sylvia_site.configuration,create_uid:"
+msgctxt "field:site_site.configuration,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:sylvia_site.configuration,id:"
+msgctxt "field:site_site.configuration,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:sylvia_site.configuration,lib_long:"
+msgctxt "field:site_site.configuration,lib_long:"
 msgid "Label of code"
 msgstr "Libellé du code"
 
-msgctxt "field:sylvia_site.configuration,name:"
+msgctxt "field:site_site.configuration,name:"
 msgid "Name of code"
 msgstr "Nom du code"
 
-msgctxt "field:sylvia_site.configuration,rec_name:"
+msgctxt "field:site_site.configuration,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.configuration,value:"
+msgctxt "field:site_site.configuration,value:"
 msgid "Value of code"
 msgstr "Valeur du code"
 
-msgctxt "field:sylvia_site.configuration,write_date:"
+msgctxt "field:site_site.configuration,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:sylvia_site.configuration,write_uid:"
+msgctxt "field:site_site.configuration,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:sylvia_site.lrs,create_date:"
+msgctxt "field:site_site.lrs,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:sylvia_site.lrs,create_uid:"
+msgctxt "field:site_site.lrs,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:sylvia_site.lrs,geom:"
+msgctxt "field:site_site.lrs,geom:"
 msgid "Geometry"
-msgstr "Géométrie"
+msgstr "Geometry"
 
-msgctxt "field:sylvia_site.lrs,id:"
+msgctxt "field:site_site.lrs,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:sylvia_site.lrs,image:"
+msgctxt "field:site_site.lrs,lrs_image:"
 msgid "Image"
 msgstr "Image"
 
-msgctxt "field:sylvia_site.lrs,image_map:"
+msgctxt "field:site_site.lrs,lrs_map:"
 msgid "Image"
 msgstr "Image"
 
-msgctxt "field:sylvia_site.lrs,image_map_filename:"
-msgid "Filename"
-msgstr "Nom du fichier"
-
-msgctxt "field:sylvia_site.lrs,name:"
+msgctxt "field:site_site.lrs,name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.lrs,pk:"
+msgctxt "field:site_site.lrs,pk:"
 msgid "PK"
-msgstr "PK"
+msgstr ""
 
-msgctxt "field:sylvia_site.lrs,rec_name:"
+msgctxt "field:site_site.lrs,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.lrs,track:"
+msgctxt "field:site_site.lrs,track:"
 msgid "Track"
-msgstr "Tronçon"
+msgstr ""
 
-msgctxt "field:sylvia_site.lrs,write_date:"
+msgctxt "field:site_site.lrs,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:sylvia_site.lrs,write_uid:"
+msgctxt "field:site_site.lrs,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:sylvia_site.misc_obj_line,comment:"
+msgctxt "field:site_site.misc_obj_line,comment:"
 msgid "Comment"
 msgstr "Commentaire"
 
-msgctxt "field:sylvia_site.misc_obj_line,create_date:"
+msgctxt "field:site_site.misc_obj_line,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:sylvia_site.misc_obj_line,create_uid:"
+msgctxt "field:site_site.misc_obj_line,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:sylvia_site.misc_obj_line,geom:"
+msgctxt "field:site_site.misc_obj_line,geom:"
 msgid "Geometry"
-msgstr "Géométrie"
+msgstr "Geometry"
 
-msgctxt "field:sylvia_site.misc_obj_line,id:"
+msgctxt "field:site_site.misc_obj_line,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:sylvia_site.misc_obj_line,image:"
+msgctxt "field:site_site.misc_obj_line,image:"
 msgid "Image"
 msgstr "Image"
 
-msgctxt "field:sylvia_site.misc_obj_line,name:"
+msgctxt "field:site_site.misc_obj_line,name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.misc_obj_line,rec_name:"
+msgctxt "field:site_site.misc_obj_line,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.misc_obj_line,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "field:sylvia_site.misc_obj_line,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:sylvia_site.misc_obj_line,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:sylvia_site.misc_obj_point,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:sylvia_site.misc_obj_point,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:sylvia_site.misc_obj_point,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:sylvia_site.misc_obj_point,geom:"
-msgid "Geometry"
-msgstr "Géométrie"
-
-msgctxt "field:sylvia_site.misc_obj_point,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.misc_obj_point,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.misc_obj_point,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.misc_obj_point,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.misc_obj_point,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "field:sylvia_site.misc_obj_point,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:sylvia_site.misc_obj_point,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:sylvia_site.misc_obj_poly,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:sylvia_site.misc_obj_poly,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:sylvia_site.misc_obj_poly,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:sylvia_site.misc_obj_poly,geom:"
-msgid "Geometry"
-msgstr "Géométrie"
-
-msgctxt "field:sylvia_site.misc_obj_poly,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.misc_obj_poly,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.misc_obj_poly,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.misc_obj_poly,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.misc_obj_poly,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "field:sylvia_site.misc_obj_poly,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:sylvia_site.misc_obj_poly,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:sylvia_site.poi,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:sylvia_site.poi,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:sylvia_site.poi,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:sylvia_site.poi,end:"
-msgid "PK end"
-msgstr "PK fin"
-
-msgctxt "field:sylvia_site.poi,geom:"
-msgid "Geometry"
-msgstr "Géométrie"
-
-msgctxt "field:sylvia_site.poi,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.poi,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.poi,image_map:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.poi,image_map_filename:"
-msgid "Filename"
-msgstr "Nom du fichier"
-
-msgctxt "field:sylvia_site.poi,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.poi,photo:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "field:sylvia_site.poi,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.poi,start:"
-msgid "PK start"
-msgstr "PK début"
-
-msgctxt "field:sylvia_site.poi,track:"
-msgid "Track"
-msgstr "Tronçon"
-
-msgctxt "field:sylvia_site.poi,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:sylvia_site.poi,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:sylvia_site.site,avancement:"
-msgid "Av.(%)"
-msgstr "Av.(%)"
-
-msgctxt "field:sylvia_site.site,code:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "field:sylvia_site.site,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:sylvia_site.site,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:sylvia_site.site,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:sylvia_site.site,datedeb:"
-msgid "Début"
-msgstr "Début"
-
-msgctxt "field:sylvia_site.site,datefin:"
-msgid "Fin"
-msgstr "Fin"
-
-msgctxt "field:sylvia_site.site,geom:"
-msgid "Geometry"
-msgstr "Géométrie"
-
-msgctxt "field:sylvia_site.site,icon:"
-msgid "icon"
-msgstr "icon"
-
-msgctxt "field:sylvia_site.site,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.site,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.site,image_map:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.site,image_map_filename:"
-msgid "Filename"
-msgstr "Nom du fichier"
-
-msgctxt "field:sylvia_site.site,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.site,photo:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "field:sylvia_site.site,rase:"
-msgid "Rase"
-msgstr "Rase"
-
-msgctxt "field:sylvia_site.site,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.site,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "field:sylvia_site.site,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:sylvia_site.site,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:sylvia_site.surface_clc_trace.open.start,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.surface_clc_trace.open.start,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,nom:"
-msgid "Nom"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,site:"
-msgid "Coupe"
-msgstr "Coupe"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,statut:"
-msgid "Statut"
-msgstr "Statut"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,surface:"
-msgid "Surface (ha)"
-msgstr "Surface (ha)"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,typo:"
-msgid "Type"
-msgstr "Type"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:sylvia_site.surface_statut_buffer,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:sylvia_site.surface_statut_buffer.open.start,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.surface_statut_buffer.open.start,site:"
+msgctxt "field:site_site.misc_obj_line,site:"
 msgid "Site"
-msgstr "Coupe"
+msgstr "Site"
 
-msgctxt "field:sylvia_site.surface_trace_clc,actions:"
-msgid "Actions"
-msgstr "Actions"
-
-msgctxt "field:sylvia_site.surface_trace_clc,canton:"
-msgid "Canton"
-msgstr "Canton"
-
-msgctxt "field:sylvia_site.surface_trace_clc,clc:"
-msgid "CLC"
-msgstr "CLC"
-
-msgctxt "field:sylvia_site.surface_trace_clc,code:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "field:sylvia_site.surface_trace_clc,commune:"
-msgid "Commune"
-msgstr "Commune"
-
-msgctxt "field:sylvia_site.surface_trace_clc,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:sylvia_site.surface_trace_clc,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:sylvia_site.surface_trace_clc,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:sylvia_site.surface_trace_clc,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.surface_trace_clc,surface:"
-msgid "Surface (ha)"
-msgstr "Surface (ha)"
-
-msgctxt "field:sylvia_site.surface_trace_clc,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "field:sylvia_site.surface_trace_clc,write_date:"
+msgctxt "field:site_site.misc_obj_line,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:sylvia_site.surface_trace_clc,write_uid:"
+msgctxt "field:site_site.misc_obj_line,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:sylvia_site.trace,code:"
-msgid "Code"
-msgstr "Code"
+msgctxt "field:site_site.misc_obj_point,comment:"
+msgid "Comment"
+msgstr "Commentaire"
 
-msgctxt "field:sylvia_site.trace,create_date:"
+msgctxt "field:site_site.misc_obj_point,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:sylvia_site.trace,create_uid:"
+msgctxt "field:site_site.misc_obj_point,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:sylvia_site.trace,geom:"
+msgctxt "field:site_site.misc_obj_point,geom:"
 msgid "Geometry"
-msgstr "Géométrie"
+msgstr "Geometry"
 
-msgctxt "field:sylvia_site.trace,id:"
+msgctxt "field:site_site.misc_obj_point,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:sylvia_site.trace,image_filename:"
-msgid "Filename"
-msgstr "Nom du fichier"
+msgctxt "field:site_site.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
 
-msgctxt "field:sylvia_site.trace,image_map:"
+msgctxt "field:site_site.misc_obj_point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.misc_obj_point,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_site.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_site.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_site.misc_obj_poly,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site_site.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_site.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_site.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:site_site.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_site.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.misc_obj_poly,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.misc_obj_poly,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_site.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_site.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_site.poi,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site_site.poi,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_site.poi,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_site.poi,end:"
+msgid "PK end"
+msgstr ""
+
+msgctxt "field:site_site.poi,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:site_site.poi,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_site.poi,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.poi,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:site_site.poi,poi_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.poi,poi_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.poi,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.poi,start:"
+msgid "PK start"
+msgstr ""
+
+msgctxt "field:site_site.poi,track:"
+msgid "Track"
+msgstr ""
+
+msgctxt "field:site_site.poi,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_site.poi,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_site.point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:site_site.point,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site_site.point,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site_site.point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_site.point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_site.point,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:site_site.point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_site.point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.point,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:site_site.point,point_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.point,point_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.point,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_site.point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_site.point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_site.site,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:site_site.site,avancement:"
+msgid "Av.(%)"
+msgstr ""
+
+msgctxt "field:site_site.site,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site_site.site,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_site.site,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_site.site,datedeb:"
+msgid "Début"
+msgstr ""
+
+msgctxt "field:site_site.site,datefin:"
+msgid "Fin"
+msgstr ""
+
+msgctxt "field:site_site.site,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:site_site.site,icon:"
+msgid "icon"
+msgstr ""
+
+msgctxt "field:site_site.site,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_site.site,misc_obj_line:"
+msgid "Miscellaneous line objects"
+msgstr ""
+
+msgctxt "field:site_site.site,misc_obj_point:"
+msgid "Miscellaneous point objects"
+msgstr ""
+
+msgctxt "field:site_site.site,misc_obj_poly:"
+msgid "Miscellaneous polygon objects"
+msgstr ""
+
+msgctxt "field:site_site.site,moa:"
+msgid "MOA"
+msgstr ""
+
+msgctxt "field:site_site.site,moe:"
+msgid "MOE"
+msgstr ""
+
+msgctxt "field:site_site.site,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.site,parcelle:"
+msgid "Parcelle"
+msgstr ""
+
+msgctxt "field:site_site.site,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:site_site.site,points:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "field:site_site.site,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.site,site_image:"
 msgid "Image map"
 msgstr "Carte"
 
-msgctxt "field:sylvia_site.trace,misc_obj_line:"
-msgid "Miscellaneous line objects"
-msgstr "Objet linéaire divers"
-
-msgctxt "field:sylvia_site.trace,misc_obj_point:"
-msgid "Miscellaneous point objects"
-msgstr "Objet ponctuel divers"
-
-msgctxt "field:sylvia_site.trace,misc_obj_poly:"
-msgid "Miscellaneous polygon objects"
-msgstr "Objet polygone divers"
-
-msgctxt "field:sylvia_site.trace,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.trace,parcelle:"
-msgid "Parcelle"
-msgstr "Parcelle"
-
-msgctxt "field:sylvia_site.trace,photo:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "field:sylvia_site.trace,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:sylvia_site.trace,sites:"
-msgid "Sites"
-msgstr "Sites"
-
-msgctxt "field:sylvia_site.trace,situation_filename:"
-msgid "Filename"
-msgstr "Nom du fichier"
-
-msgctxt "field:sylvia_site.trace,situation_map:"
+msgctxt "field:site_site.site,site_situation:"
 msgid "Situation map"
 msgstr "Carte de situation"
 
-msgctxt "field:sylvia_site.trace,tracks:"
-msgid "Tracks"
-msgstr "Tronçons"
+msgctxt "field:site_site.site,suivi:"
+msgid "Suivi par"
+msgstr ""
 
-msgctxt "field:sylvia_site.trace,typo:"
+msgctxt "field:site_site.site,tracks:"
+msgid "Tracks"
+msgstr ""
+
+msgctxt "field:site_site.site,typo:"
 msgid "Type"
 msgstr "Type"
 
-msgctxt "field:sylvia_site.trace,write_date:"
+msgctxt "field:site_site.site,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:sylvia_site.trace,write_uid:"
+msgctxt "field:site_site.site,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,create_date:"
+msgctxt "field:site_site.site,zones:"
+msgid "Zones"
+msgstr ""
+
+msgctxt "field:site_site.site-cadastre.parcelle,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,create_uid:"
+msgctxt "field:site_site.site-cadastre.parcelle,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,id:"
+msgctxt "field:site_site.site-cadastre.parcelle,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,parcelle:"
+msgctxt "field:site_site.site-cadastre.parcelle,parcelle:"
 msgid "Parcelle"
-msgstr "Parcelle"
+msgstr ""
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,rec_name:"
+msgctxt "field:site_site.site-cadastre.parcelle,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,trace:"
-msgid "Trace"
-msgstr "Chantier"
+msgctxt "field:site_site.site-cadastre.parcelle,site:"
+msgid "Site"
+msgstr "Site"
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,write_date:"
+msgctxt "field:site_site.site-cadastre.parcelle,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:sylvia_site.trace-cadastre.parcelle,write_uid:"
+msgctxt "field:site_site.site-cadastre.parcelle,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:sylvia_site.track,code:"
+msgctxt "field:site_site.surface_clc_site.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_site.surface_clc_site.open.start,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_site.surface_site_clc,actions:"
+msgid "Actions"
+msgstr "Actions"
+
+msgctxt "field:site_site.surface_site_clc,canton:"
+msgid "Canton"
+msgstr "Canton"
+
+msgctxt "field:site_site.surface_site_clc,clc:"
+msgid "CLC"
+msgstr ""
+
+msgctxt "field:site_site.surface_site_clc,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:sylvia_site.track,comment:"
-msgid "Comment"
-msgstr "Commentaire"
+msgctxt "field:site_site.surface_site_clc,commune:"
+msgid "Commune"
+msgstr "Commune"
 
-msgctxt "field:sylvia_site.track,create_date:"
+msgctxt "field:site_site.surface_site_clc,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:sylvia_site.track,create_uid:"
+msgctxt "field:site_site.surface_site_clc,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:sylvia_site.track,geom:"
-msgid "Geometry"
-msgstr "Géométrie"
-
-msgctxt "field:sylvia_site.track,id:"
+msgctxt "field:site_site.surface_site_clc,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:sylvia_site.track,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.track,image_map:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:sylvia_site.track,image_map_filename:"
-msgid "Filename"
-msgstr "Nom du fichier"
-
-msgctxt "field:sylvia_site.track,name:"
+msgctxt "field:site_site.surface_site_clc,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:sylvia_site.track,photo:"
-msgid "Photo"
-msgstr "Photo"
+msgctxt "field:site_site.surface_site_clc,site:"
+msgid "Site"
+msgstr "Site"
 
-msgctxt "field:sylvia_site.track,rec_name:"
-msgid "Name"
-msgstr "Nom"
+msgctxt "field:site_site.surface_site_clc,surface:"
+msgid "Surface (ha)"
+msgstr ""
 
-msgctxt "field:sylvia_site.track,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "field:sylvia_site.track,write_date:"
+msgctxt "field:site_site.surface_site_clc,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:sylvia_site.track,write_uid:"
+msgctxt "field:site_site.surface_site_clc,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "help:sylvia_site.lrs,geom:"
-msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgctxt "field:site_site.surface_statut_buffer,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
 
-msgctxt "help:sylvia_site.lrs,name:"
-msgid "Name of lrs"
-msgstr "Nom du LRS"
+msgctxt "field:site_site.surface_statut_buffer,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
 
-msgctxt "help:sylvia_site.lrs,pk:"
-msgid "Code of tracks"
-msgstr "Code du tronçon"
+msgctxt "field:site_site.surface_statut_buffer,distance:"
+msgid "Distance (km)"
+msgstr ""
 
-msgctxt "help:sylvia_site.lrs,track:"
-msgid "Track"
-msgstr "Tronçon"
+msgctxt "field:site_site.surface_statut_buffer,id:"
+msgid "ID"
+msgstr "Identifiant"
 
-msgctxt "help:sylvia_site.poi,comment:"
-msgid "Comment of POI"
-msgstr "Commentaire du POI"
+msgctxt "field:site_site.surface_statut_buffer,nom:"
+msgid "Nom"
+msgstr "Nom"
 
-msgctxt "help:sylvia_site.poi,end:"
-msgid "PK end of POI"
-msgstr "PK de fin du POI"
+msgctxt "field:site_site.surface_statut_buffer,rec_name:"
+msgid "Name"
+msgstr "Nom"
 
-msgctxt "help:sylvia_site.poi,geom:"
-msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgctxt "field:site_site.surface_statut_buffer,statut:"
+msgid "Statut"
+msgstr ""
 
-msgctxt "help:sylvia_site.poi,name:"
-msgid "Name of POI"
-msgstr "Nom du POI"
+msgctxt "field:site_site.surface_statut_buffer,surface:"
+msgid "Surface (ha)"
+msgstr ""
 
-msgctxt "help:sylvia_site.poi,photo:"
-msgid "Photo of track"
-msgstr "Photo du tronçon"
+msgctxt "field:site_site.surface_statut_buffer,typo:"
+msgid "Type"
+msgstr "Type"
 
-msgctxt "help:sylvia_site.poi,start:"
-msgid "PK start of POI"
-msgstr "PK début de POI"
+msgctxt "field:site_site.surface_statut_buffer,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
 
-msgctxt "help:sylvia_site.poi,track:"
-msgid "Track"
-msgstr "Tronçon"
+msgctxt "field:site_site.surface_statut_buffer,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
 
-msgctxt "help:sylvia_site.site,avancement:"
-msgid "Pourcentage de réalisation entre 0 et 100"
-msgstr "Pourcentage de réalisation entre 0 et 100"
+msgctxt "field:site_site.surface_statut_buffer,zone:"
+msgid "Zone"
+msgstr ""
 
-msgctxt "help:sylvia_site.site,code:"
-msgid "Code of site"
-msgstr "Code de la coupe"
+msgctxt "field:site_site.surface_statut_buffer.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
 
-msgctxt "help:sylvia_site.site,comment:"
+msgctxt "field:site_site.surface_statut_buffer.open.start,zone:"
+msgid "Zone"
+msgstr ""
+
+msgctxt "field:site_site.track,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:site_site.track,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site_site.track,comment:"
 msgid "Comment"
 msgstr "Commentaire"
 
-msgctxt "help:sylvia_site.site,datedeb:"
-msgid "Date de début de chantier"
-msgstr "Date de début de chantier"
+msgctxt "field:site_site.track,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
 
-msgctxt "help:sylvia_site.site,datefin:"
-msgid "Date de fin de chantier"
-msgstr "Date de fin de chantier"
+msgctxt "field:site_site.track,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
 
-msgctxt "help:sylvia_site.site,geom:"
-msgid "Geometry MultiPolygon (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiPolygon (EPSG=2154, RGF93/Lambert 93)"
+msgctxt "field:site_site.track,geom:"
+msgid "Geometry"
+msgstr "Geometry"
 
-msgctxt "help:sylvia_site.site,name:"
-msgid "Name of site"
-msgstr "Nom de la coupe"
+msgctxt "field:site_site.track,id:"
+msgid "ID"
+msgstr "Identifiant"
 
-msgctxt "help:sylvia_site.site,photo:"
-msgid "Photo of track"
-msgstr "Phot du tronçon"
+msgctxt "field:site_site.track,name:"
+msgid "Name"
+msgstr "Nom"
 
-msgctxt "help:sylvia_site.site,rase:"
-msgid "Cocher si coupe rase"
-msgstr "Cocher si coupe rase"
-
-msgctxt "help:sylvia_site.site,trace:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "help:sylvia_site.trace,code:"
-msgid "Code of trace"
-msgstr "Code du chantier"
-
-msgctxt "help:sylvia_site.trace,geom:"
-msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
-
-msgctxt "help:sylvia_site.trace,name:"
-msgid "Name of trace"
-msgstr "Nom du chantier"
-
-msgctxt "help:sylvia_site.trace,parcelle:"
-msgid "Parcelle(s) concernée(s)"
-msgstr "Parcelle(s) concernée(s)"
-
-msgctxt "help:sylvia_site.trace,photo:"
+msgctxt "field:site_site.track,photo:"
 msgid "Photo"
-msgstr "Photo"
+msgstr ""
 
-msgctxt "help:sylvia_site.trace,typo:"
-msgid "Type de chantier"
-msgstr "Type de chantier"
+msgctxt "field:site_site.track,rec_name:"
+msgid "Name"
+msgstr "Nom"
 
-msgctxt "help:sylvia_site.track,code:"
-msgid "Code of tracks"
-msgstr "Code du tronçon"
+msgctxt "field:site_site.track,site:"
+msgid "Site"
+msgstr "Site"
 
-msgctxt "help:sylvia_site.track,comment:"
+msgctxt "field:site_site.track,track_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.track,track_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.track,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_site.track,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_site.zone,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:site_site.zone,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site_site.zone,comment:"
 msgid "Comment"
 msgstr "Commentaire"
 
-msgctxt "help:sylvia_site.track,geom:"
+msgctxt "field:site_site.zone,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site_site.zone,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site_site.zone,geom:"
+msgid "Geometry"
+msgstr "Geometry"
+
+msgctxt "field:site_site.zone,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site_site.zone,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.zone,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:site_site.zone,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site_site.zone,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "field:site_site.zone,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site_site.zone,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site_site.zone,zone_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site_site.zone,zone_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "help:site_site.lrs,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:site_site.lrs,name:"
+msgid "Name of lrs"
+msgstr ""
+
+msgctxt "help:site_site.lrs,pk:"
+msgid "Pk of track"
+msgstr ""
+
+msgctxt "help:site_site.lrs,track:"
+msgid "Track"
+msgstr ""
+
+msgctxt "help:site_site.poi,comment:"
+msgid "Comment of POI"
+msgstr ""
+
+msgctxt "help:site_site.poi,end:"
+msgid "PK end of POI"
+msgstr ""
+
+msgctxt "help:site_site.poi,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:site_site.poi,name:"
+msgid "Name of POI"
+msgstr ""
+
+msgctxt "help:site_site.poi,photo:"
+msgid "Photo of point"
+msgstr ""
+
+msgctxt "help:site_site.poi,start:"
+msgid "PK start of POI"
+msgstr ""
+
+msgctxt "help:site_site.poi,track:"
+msgid "Track"
+msgstr ""
+
+msgctxt "help:site_site.point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:site_site.point,code:"
+msgid "Code of point"
+msgstr ""
+
+msgctxt "help:site_site.point,comment:"
+msgid "Comment of point"
+msgstr ""
+
+msgctxt "help:site_site.point,geom:"
 msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiLine (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
 
-msgctxt "help:sylvia_site.track,name:"
-msgid "Name of tracks"
-msgstr "Nom du tronçon"
+msgctxt "help:site_site.point,name:"
+msgid "Name of point"
+msgstr ""
 
-msgctxt "help:sylvia_site.track,photo:"
+msgctxt "help:site_site.point,photo:"
+msgid "Photo of point"
+msgstr ""
+
+msgctxt "help:site_site.point,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "help:site_site.site,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:site_site.site,avancement:"
+msgid "Pourcentage de réalisation entre 0 et 100"
+msgstr ""
+
+msgctxt "help:site_site.site,code:"
+msgid "Code of site"
+msgstr ""
+
+msgctxt "help:site_site.site,datedeb:"
+msgid "Date de début de chantier"
+msgstr ""
+
+msgctxt "help:site_site.site,datefin:"
+msgid "Date de fin de chantier"
+msgstr ""
+
+msgctxt "help:site_site.site,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:site_site.site,moa:"
+msgid "Maîtrise d'ouvrage"
+msgstr ""
+
+msgctxt "help:site_site.site,moe:"
+msgid "Maîtrise d'oeuvre"
+msgstr ""
+
+msgctxt "help:site_site.site,name:"
+msgid "Name of site"
+msgstr ""
+
+msgctxt "help:site_site.site,parcelle:"
+msgid "Parcelle(s) concernée(s)"
+msgstr ""
+
+msgctxt "help:site_site.site,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:site_site.site,suivi:"
+msgid "Affaire suivi par"
+msgstr ""
+
+msgctxt "help:site_site.site,typo:"
+msgid "Type de site"
+msgstr ""
+
+msgctxt "help:site_site.track,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:site_site.track,code:"
+msgid "Code of track"
+msgstr ""
+
+msgctxt "help:site_site.track,comment:"
+msgid "Comment of track"
+msgstr ""
+
+msgctxt "help:site_site.track,geom:"
+msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:site_site.track,name:"
+msgid "Name of track"
+msgstr ""
+
+msgctxt "help:site_site.track,photo:"
 msgid "Photo of track"
-msgstr "Photo du tronçon"
+msgstr ""
 
-msgctxt "help:sylvia_site.track,trace:"
-msgid "Trace"
-msgstr "Chantier"
+msgctxt "help:site_site.track,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "help:site_site.zone,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:site_site.zone,code:"
+msgid "Code of zone"
+msgstr ""
+
+msgctxt "help:site_site.zone,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "help:site_site.zone,geom:"
+msgid "Geometry MultiPolygon (EPSG=2154, RGF93/Lambert 93)"
+msgstr ""
+
+msgctxt "help:site_site.zone,name:"
+msgid "Name of zone"
+msgstr ""
+
+msgctxt "help:site_site.zone,photo:"
+msgid "Photo of zone"
+msgstr ""
+
+msgctxt "help:site_site.zone,site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "model:ir.action,name:act_code_form"
+msgid "Code"
+msgstr "Code"
 
 msgctxt "model:ir.action,name:act_configuration_form"
 msgid "Configuration"
 msgstr "Configuration"
 
-msgctxt "model:ir.action,name:act_lrs_code_form"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "model:ir.action,name:act_lrs_lrs_form"
+msgctxt "model:ir.action,name:act_lrs_form"
 msgid "LRS"
-msgstr "LRS"
+msgstr ""
 
-msgctxt "model:ir.action,name:act_lrs_misc_obj_line_form"
-msgid "Lines"
-msgstr "Lignes"
+msgctxt "model:ir.action,name:act_poi_form"
+msgid "POI"
+msgstr ""
 
-msgctxt "model:ir.action,name:act_lrs_misc_obj_point_form"
+msgctxt "model:ir.action,name:act_point_form"
 msgid "Points"
 msgstr "Points"
 
-msgctxt "model:ir.action,name:act_lrs_misc_obj_poly_form"
-msgid "Polygons"
-msgstr "Polygones"
-
-msgctxt "model:ir.action,name:act_lrs_poi_form"
-msgid "POI"
-msgstr "POI"
-
-msgctxt "model:ir.action,name:act_lrs_site_form"
+msgctxt "model:ir.action,name:act_site_form"
 msgid "Sites"
 msgstr "Sites"
 
-msgctxt "model:ir.action,name:act_lrs_trace_form"
-msgid "Traces"
-msgstr "Chantiers"
+msgctxt "model:ir.action,name:act_site_misc_obj_line_form"
+msgid "Lines"
+msgstr ""
 
-msgctxt "model:ir.action,name:act_lrs_track_form"
-msgid "Tracks"
-msgstr "Tronçon"
+msgctxt "model:ir.action,name:act_site_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:act_site_misc_obj_poly_form"
+msgid "Polygons"
+msgstr ""
 
 msgctxt "model:ir.action,name:act_surface_site_surface_form"
-msgid "Chantier - Statuts de protection"
+msgid "Chantier - Corine Land Cover"
 msgstr "Coupe - Protection - Buffer (ha/Chantier/Statuts)"
 
 msgctxt "model:ir.action,name:act_surface_site_surface_open"
-msgid "Chantier - Statuts de protection"
+msgid "Chantier - Corine Land Cover"
 msgstr "Chantier - Statuts de protection"
 
-msgctxt "model:ir.action,name:act_surface_trace_surface_form"
-msgid "Trace - CLC Surface (ha/Trace/CLC)"
-msgstr "Chantier - Corine Land Cover (CLC)"
+msgctxt "model:ir.action,name:act_surface_zone_surface_form"
+msgid "Zones - Statuts de protection"
+msgstr ""
 
-msgctxt "model:ir.action,name:act_surface_trace_surface_open"
-msgid "Trace - CLC Surface (ha/Trace/CLC)"
-msgstr "Chantier - Corine Land Cover (CLC)"
+msgctxt "model:ir.action,name:act_surface_zone_surface_open"
+msgid "Zones - Statuts de protection"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_track_form"
+msgid "Tracks"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_zone_form"
+msgid "Zones"
+msgstr ""
 
 msgctxt "model:ir.action,name:report_buffer"
-msgid "Rapport - Chantiers et Statuts de protection"
+msgid "Rapport - Zones et Statuts de protection"
 msgstr "Rapport - Sites et Statuts de protection"
 
 msgctxt "model:ir.action,name:report_lrs"
-msgid "Trace"
+msgid "Site"
 msgstr "Chantier"
-
-msgctxt "model:ir.action,name:report_lrs_clc"
-msgid "Rapport Trace - CLC"
-msgstr "Rapport Chantier - CLC"
 
 msgctxt "model:ir.action,name:report_lrs_edit"
 msgid "Open lrs in QGis..."
@@ -933,506 +1045,586 @@ msgctxt "model:ir.action,name:report_poi_edit"
 msgid "Open POI in QGis..."
 msgstr "Ouvrir POI dans QGis..."
 
-msgctxt "model:ir.action,name:report_site_edit"
-msgid "Open Site in QGis..."
-msgstr "Ouvrir la coupe dans QGis..."
+msgctxt "model:ir.action,name:report_point_edit"
+msgid "Open Point in QGis..."
+msgstr ""
 
-msgctxt "model:ir.action,name:report_trace_edit"
-msgid "Open Trace in QGis..."
-msgstr "Ouvrir le chantier dans QGis"
+msgctxt "model:ir.action,name:report_site_clc"
+msgid "Rapport Site - CLC"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_site_edit"
+msgid "Open site in QGis..."
+msgstr "Ouvrir la coupe dans QGis..."
 
 msgctxt "model:ir.action,name:report_track_edit"
 msgid "Open Track in QGis..."
 msgstr "Ouvrir le tronçon dans QGis"
 
+msgctxt "model:ir.action,name:report_zone_edit"
+msgid "Open Zone in QGis..."
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
 msgctxt "model:ir.ui.menu,name:menu_configuration_form"
 msgid "Configuration"
 msgstr "Configuration"
 
-msgctxt "model:ir.ui.menu,name:menu_lrs_code_form"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_configuration"
-msgid "Configuration"
-msgstr "Configuration"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_lrs_form"
+msgctxt "model:ir.ui.menu,name:menu_lrs_form"
 msgid "LRS"
-msgstr "Système de Référence Linéaire (LRS)"
+msgstr ""
 
-msgctxt "model:ir.ui.menu,name:menu_lrs_misc_obj"
-msgid "Misc objects"
-msgstr "Objets divers"
+msgctxt "model:ir.ui.menu,name:menu_poi_form"
+msgid "POI"
+msgstr ""
 
-msgctxt "model:ir.ui.menu,name:menu_lrs_misc_obj_line_form"
-msgid "Lines"
-msgstr "Lignes"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_misc_obj_point_form"
+msgctxt "model:ir.ui.menu,name:menu_point_form"
 msgid "Points"
 msgstr "Points"
 
-msgctxt "model:ir.ui.menu,name:menu_lrs_misc_obj_poly_form"
-msgid "Polygons"
-msgstr "Polygones"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_poi_form"
-msgid "POI"
-msgstr "Point d'Intérêts (POI)"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_site_form"
-msgid "Sites"
-msgstr "Sites"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_surface_trace_clc"
-msgid "Trace - CLC Surface (ha/Trace/CLC)"
-msgstr "Chantier - Corine Land Cover (CLC)"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_trace"
-msgid "Site"
-msgstr "Chantiers"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_trace_form"
-msgid "Traces"
-msgstr "Chantiers"
-
-msgctxt "model:ir.ui.menu,name:menu_lrs_track_form"
-msgid "Tracks"
-msgstr "Tronçons"
-
-msgctxt "model:ir.ui.menu,name:menu_protection_surface_site_surface"
-msgid "Chantier - Statuts de protection"
-msgstr "Sites - Statuts de protection"
+msgctxt "model:ir.ui.menu,name:menu_protection_surface_zone_surface"
+msgid "Zones - Statuts de protection"
+msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_rapport"
 msgid "Rapports"
 msgstr "Rapports"
 
-msgctxt "model:sylvia_site.code,name:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "model:sylvia_site.configuration,name:"
-msgid "Configuration"
-msgstr "Configuration"
-
-msgctxt "model:sylvia_site.lrs,name:"
-msgid "Lrs"
-msgstr "LRS"
-
-msgctxt "model:sylvia_site.misc_obj_line,name:"
-msgid "Miscellaneous line object"
-msgstr "Objet ligne divers"
-
-msgctxt "model:sylvia_site.misc_obj_point,name:"
-msgid "Miscellaneous point object"
-msgstr "Objet point divers"
-
-msgctxt "model:sylvia_site.misc_obj_poly,name:"
-msgid "Miscellaneous polygon object"
-msgstr "Objet polygones divers"
-
-msgctxt "model:sylvia_site.poi,name:"
-msgid "Poi"
-msgstr "POI"
-
-msgctxt "model:sylvia_site.site,name:"
+msgctxt "model:ir.ui.menu,name:menu_site"
 msgid "Site"
-msgstr "Chantiers"
+msgstr "Site"
 
-msgctxt "model:sylvia_site.surface_clc_trace.open.start,name:"
-msgid "Open surface_clc_trace"
-msgstr "Ouvrir surface_clc_chantier"
+msgctxt "model:ir.ui.menu,name:menu_site_form"
+msgid "Sites"
+msgstr "Sites"
 
-msgctxt "model:sylvia_site.surface_statut_buffer,name:"
-msgid "Buffer (ha/Coupes/Statuts)"
-msgstr "Buffer (ha/Sites/Statuts)"
-
-msgctxt "model:sylvia_site.surface_statut_buffer.open.start,name:"
-msgid "Open surface_statut_buffer"
-msgstr "Ouvrir surface_statut_buffer"
-
-msgctxt "model:sylvia_site.surface_trace_clc,name:"
-msgid "Surface (ha/Trace/CLC)"
-msgstr "Surface (ha/Chantier/CLC)"
-
-msgctxt "model:sylvia_site.trace,name:"
-msgid "Trace"
-msgstr "Chantier"
-
-msgctxt "model:sylvia_site.trace-cadastre.parcelle,name:"
-msgid "Trace - Parcelle"
-msgstr "Chantier - Parcelle"
-
-msgctxt "model:sylvia_site.track,name:"
-msgid "Track"
-msgstr "Tronçon"
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid ":"
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj"
+msgid "Misc objects"
 msgstr ""
 
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Commentaires :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Localisation du Site :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Localisation du Statut de protection :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Nom"
-msgstr "Nom"
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Site :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Statut"
-msgstr "Statut"
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Surface"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Tiers :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Type"
-msgstr "Type"
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "Type de statut"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_buffer:"
-msgid "ha"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Action sur"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Actions à mener :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Carte de situation"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Carte de situation générale"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Carte de situation précise"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Commune de"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Fiche"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Mise à jour"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "Photo du tracé"
-msgstr ""
-
-msgctxt "odt:sylvia_site.rapport_trace_clc:"
-msgid "vendredi 25 avril 2014"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "(s)"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid ":"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "Commune"
-msgstr "Commune"
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "Fiche"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "Mise à jour"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "Observations :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "T"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "Tracé"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "racks :"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "traversée(s)"
-msgstr ""
-
-msgctxt "odt:sylvia_site.trace:"
-msgid "vendredi 25 avril 2014"
-msgstr ""
-
-msgctxt "selection:sylvia_site.trace,typo:"
-msgid "Coupe"
-msgstr "Coupe"
-
-msgctxt "selection:sylvia_site.trace,typo:"
-msgid "Route"
-msgstr "Route"
-
-msgctxt "view:sylvia_site.code:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "view:sylvia_site.configuration:"
-msgid "Configuration"
-msgstr "Configuration"
-
-msgctxt "view:sylvia_site.lrs:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:sylvia_site.lrs:"
-msgid "LRS"
-msgstr "Système de Référence Linéaire (LRS)"
-
-msgctxt "view:sylvia_site.lrs:"
-msgid "Map"
-msgstr "Carte"
-
-msgctxt "view:sylvia_site.misc_obj_line:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:sylvia_site.misc_obj_line:"
-msgid "Miscellaneous line object"
-msgstr "Objet ligne divers"
-
-msgctxt "view:sylvia_site.misc_obj_point:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:sylvia_site.misc_obj_point:"
-msgid "Miscellaneous point object"
-msgstr "Objet point divers"
-
-msgctxt "view:sylvia_site.misc_obj_poly:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:sylvia_site.misc_obj_poly:"
-msgid "Miscellaneous polygon object"
-msgstr "Objet polygones divers"
-
-msgctxt "view:sylvia_site.poi:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:sylvia_site.poi:"
-msgid "General"
-msgstr "Général"
-
-msgctxt "view:sylvia_site.poi:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:sylvia_site.poi:"
-msgid "Map"
-msgstr "Carte"
-
-msgctxt "view:sylvia_site.poi:"
-msgid "POI"
-msgstr "Point d'Intérêts (POI)"
-
-msgctxt "view:sylvia_site.poi:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "view:sylvia_site.site:"
-msgid "%"
-msgstr "%"
-
-msgctxt "view:sylvia_site.site:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:sylvia_site.site:"
-msgid "General"
-msgstr "Général"
-
-msgctxt "view:sylvia_site.site:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:sylvia_site.site:"
-msgid "Map"
-msgstr "Carte"
-
-msgctxt "view:sylvia_site.site:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "view:sylvia_site.site:"
-msgid "Site"
-msgstr "Coupe"
-
-msgctxt "view:sylvia_site.surface_clc_trace.open.start:"
-msgid "Rapport Trace - CLC"
-msgstr "Rapport Chantier - CLC"
-
-msgctxt "view:sylvia_site.surface_statut_buffer.open.start:"
-msgid "Protection - Surface/Coupe/Protection"
-msgstr ""
-
-msgctxt "view:sylvia_site.surface_statut_buffer:"
-msgid "Surface entre Buffer et Coupe"
-msgstr ""
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Forêts et milieux semi-naturels"
-msgstr "Forêts et milieux semi-naturels"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Surface CLC Trace"
-msgstr "Surface CLC Chantier"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Surface CLC par canton"
-msgstr "Surface CLC par canton"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Surface CLC par commune"
-msgstr "Surface CLC par commune"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Surface en eau"
-msgstr "Surface en eau"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Surface totale (ha)"
-msgstr "Surface totale (ha)"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Territoires agricoles"
-msgstr "Territoires agricoles"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Territoires artificialisés"
-msgstr "Territoires artificialisés"
-
-msgctxt "view:sylvia_site.surface_trace_clc:"
-msgid "Zones humides"
-msgstr "Zones humides"
-
-msgctxt "view:sylvia_site.trace:"
-msgid "Edit geometries"
-msgstr "Éditer les géométries"
-
-msgctxt "view:sylvia_site.trace:"
-msgid "General"
-msgstr "Général"
-
-msgctxt "view:sylvia_site.trace:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:sylvia_site.trace:"
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_line_form"
 msgid "Lines"
-msgstr "Lignes"
+msgstr ""
 
-msgctxt "view:sylvia_site.trace:"
-msgid "Map"
-msgstr "Carte"
-
-msgctxt "view:sylvia_site.trace:"
-msgid "Misc. obj."
-msgstr "Obj. div."
-
-msgctxt "view:sylvia_site.trace:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "view:sylvia_site.trace:"
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_point_form"
 msgid "Points"
 msgstr "Points"
 
-msgctxt "view:sylvia_site.trace:"
-msgid "Polygones"
-msgstr "Polygones"
+msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_poly_form"
+msgid "Polygons"
+msgstr ""
 
-msgctxt "view:sylvia_site.trace:"
-msgid "Situation Map"
-msgstr "Carte de situation"
+msgctxt "model:ir.ui.menu,name:menu_surface_site_clc"
+msgid "Chantier - Corine Land Cover"
+msgstr "Coupe - Protection - Buffer (ha/Chantier/Statuts)"
 
-msgctxt "view:sylvia_site.trace:"
-msgid "Trace"
+msgctxt "model:ir.ui.menu,name:menu_track_form"
+msgid "Tracks"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_zone_form"
+msgid "Zones"
+msgstr ""
+
+msgctxt "model:site_site.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:site_site.configuration,name:"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:site_site.lrs,name:"
+msgid "Lrs"
+msgstr ""
+
+msgctxt "model:site_site.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr ""
+
+msgctxt "model:site_site.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr ""
+
+msgctxt "model:site_site.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr ""
+
+msgctxt "model:site_site.poi,name:"
+msgid "Poi"
+msgstr ""
+
+msgctxt "model:site_site.point,name:"
+msgid "Point"
+msgstr "Point"
+
+msgctxt "model:site_site.site,name:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "model:site_site.site-cadastre.parcelle,name:"
+msgid "Site - Parcelle"
+msgstr ""
+
+msgctxt "model:site_site.surface_clc_site.open.start,name:"
+msgid "Open surface_clc_site"
+msgstr ""
+
+msgctxt "model:site_site.surface_site_clc,name:"
+msgid "Surface (ha/Site/CLC)"
+msgstr ""
+
+msgctxt "model:site_site.surface_statut_buffer,name:"
+msgid "Buffer (ha/Zone/Statut)"
+msgstr ""
+
+msgctxt "model:site_site.surface_statut_buffer.open.start,name:"
+msgid "Open surface_statut_buffer"
+msgstr ""
+
+msgctxt "model:site_site.track,name:"
+msgid "Track"
+msgstr ""
+
+msgctxt "model:site_site.zone,name:"
+msgid "Zone"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Chantier"
 msgstr "Chantier"
 
-msgctxt "view:sylvia_site.track:"
-msgid "Edit"
-msgstr "Édition"
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Commentaires :"
+msgstr ""
 
-msgctxt "view:sylvia_site.track:"
-msgid "General"
-msgstr "Général"
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "D"
+msgstr ""
 
-msgctxt "view:sylvia_site.track:"
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Distance"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Localisation d"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Localisation du Statut de protection :"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Statut"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Surface"
+msgstr "Surface"
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Type de statut"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "Zone"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "ha"
+msgstr "ha"
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "i"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "km"
+msgstr "km"
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "s"
+msgstr "s"
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "tance :"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_buffer:"
+msgid "u site"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "A"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Action sur"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Carte de situation du site Corine Land Cover"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Carte de situation générale"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Carte de situation précise"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Commentaires :"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Commune de"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Fiche"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "Mise à jour"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "ctions à mener :"
+msgstr ""
+
+msgctxt "odt:site_site.rapport_site_clc:"
+msgid "mardi 16 septembre 2014"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid "Chantier"
+msgstr "Chantier"
+
+msgctxt "odt:site_site.site:"
+msgid "Fiche"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid "Mise à jour"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid "Parcelle(s)"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid "Zones"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid "cadastrale(s)"
+msgstr ""
+
+msgctxt "odt:site_site.site:"
+msgid "mardi 16 septembre 2014"
+msgstr ""
+
+msgctxt "selection:site_site.site,typo:"
+msgid "Point"
+msgstr "Point"
+
+msgctxt "selection:site_site.site,typo:"
+msgid "Track"
+msgstr ""
+
+msgctxt "selection:site_site.site,typo:"
+msgid "Zone"
+msgstr ""
+
+msgctxt "view:site_site.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:site_site.configuration:"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "view:site_site.lrs:"
 msgid "Generate"
 msgstr "Générer"
 
-msgctxt "view:sylvia_site.track:"
+msgctxt "view:site_site.lrs:"
+msgid "LRS"
+msgstr ""
+
+msgctxt "view:site_site.lrs:"
 msgid "Map"
 msgstr "Carte"
 
-msgctxt "view:sylvia_site.track:"
+msgctxt "view:site_site.misc_obj_line:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:site_site.misc_obj_line:"
+msgid "Miscellaneous line object"
+msgstr ""
+
+msgctxt "view:site_site.misc_obj_point:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:site_site.misc_obj_point:"
+msgid "Miscellaneous point object"
+msgstr ""
+
+msgctxt "view:site_site.misc_obj_poly:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:site_site.misc_obj_poly:"
+msgid "Miscellaneous polygon object"
+msgstr ""
+
+msgctxt "view:site_site.poi:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:site_site.poi:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site_site.poi:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site_site.poi:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:site_site.poi:"
+msgid "POI"
+msgstr ""
+
+msgctxt "view:site_site.poi:"
 msgid "Photo"
-msgstr "Photo"
+msgstr ""
 
-msgctxt "view:sylvia_site.track:"
+msgctxt "view:site_site.point:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:site_site.point:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site_site.point:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site_site.point:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:site_site.point:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:site_site.point:"
+msgid "Point"
+msgstr "Point"
+
+msgctxt "view:site_site.site:"
+msgid "%"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Edit geometries"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site_site.site:"
+msgid "Generate image"
+msgstr "Générer l'image"
+
+msgctxt "view:site_site.site:"
+msgid "Generate situation"
+msgstr "Générer la carte de situation"
+
+msgctxt "view:site_site.site:"
+msgid "Image Map"
+msgstr "Carte"
+
+msgctxt "view:site_site.site:"
+msgid "Lines"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Misc. obj."
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Plot"
+msgstr "Parcelle"
+
+msgctxt "view:site_site.site:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:site_site.site:"
+msgid "Polygones"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Site"
+msgstr "Site"
+
+msgctxt "view:site_site.site:"
+msgid "Situation Map"
+msgstr "Carte de situation"
+
+msgctxt "view:site_site.surface_clc_site.open.start:"
+msgid "Rapport Site - CLC"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Forêts et milieux semi-naturels"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Surface CLC Trace"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Surface CLC par canton"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Surface CLC par commune"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Surface en eau"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Surface totale (ha)"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Territoires agricoles"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Territoires artificialisés"
+msgstr ""
+
+msgctxt "view:site_site.surface_site_clc:"
+msgid "Zones humides"
+msgstr ""
+
+msgctxt "view:site_site.surface_statut_buffer.open.start:"
+msgid "Protection - Surface/Zone/Protection"
+msgstr ""
+
+msgctxt "view:site_site.surface_statut_buffer:"
+msgid "Surface entre Buffer et Zone"
+msgstr ""
+
+msgctxt "view:site_site.track:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:site_site.track:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site_site.track:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site_site.track:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:site_site.track:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:site_site.track:"
 msgid "Track"
-msgstr "Tronçon"
+msgstr ""
 
-msgctxt "wizard_button:sylvia_site.surface_clc_trace.open,start,end:"
+msgctxt "view:site_site.zone:"
+msgid "Edit"
+msgstr "Édition"
+
+msgctxt "view:site_site.zone:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site_site.zone:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site_site.zone:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:site_site.zone:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:site_site.zone:"
+msgid "Zone"
+msgstr ""
+
+msgctxt "wizard_button:site_site.surface_clc_site.open,start,end:"
 msgid "Cancel"
 msgstr "Annuler"
 
-msgctxt "wizard_button:sylvia_site.surface_clc_trace.open,start,open_:"
+msgctxt "wizard_button:site_site.surface_clc_site.open,start,open_:"
 msgid "Open"
 msgstr "Ouvrir"
 
-msgctxt "wizard_button:sylvia_site.surface_statut_buffer.open,start,end:"
+msgctxt "wizard_button:site_site.surface_statut_buffer.open,start,end:"
 msgid "Cancel"
 msgstr "Annuler"
 
-msgctxt "wizard_button:sylvia_site.surface_statut_buffer.open,start,open_:"
+msgctxt "wizard_button:site_site.surface_statut_buffer.open,start,open_:"
 msgid "Open"
 msgstr "Ouvrir"

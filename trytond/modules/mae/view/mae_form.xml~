@@ -4,23 +4,42 @@
         <page string="General" id="general">
             <label name="name" />
             <field name="name" />
+            <label name="num" />
+            <field name="num" />
             <label name="party" />
             <field name="party" />
             <label name="commune" />
             <field name="commune" />
+            <label name="typo" />
+            <field name="typo" widget="selection"/>
             <label name="surface" />
             <field name="surface" />
+            <label name="nomterritoire" />
+            <field name="nomterritoire"/>
+            <label name="codeterritoire" />
+            <field name="codeterritoire"/>
+            <label name="mesterritoire" />
+            <field name="mesterritoire" widget="selection"/>
             <label name="active" />
             <field name="active" />
-            <field name="parcelle"  colspan="6"/>
-            <field name="status"  colspan="6"/>           
+            <notebook colspan="6">
+                <page string="Observation" id="observation">                    
+                    <field name="observation" colspan="4"/>
+                </page>
+                <page string="Plot" id="plot">
+                    <field name="parcelle"  colspan="6"/>
+                </page>
+                <page string="Status" id="status">
+                    <field name="status"  colspan="6"/>           
+                </page>
+            </notebook>
         </page>
         <page string="Diagno" id="diagno">
             <field name="diagno" colspan="6"/>
         </page> 
         <page string="Map" id="map">
-            <field name="situation_map" colspan="2" widget="image" img_width="640" img_height="480"/>
-            <field name="image_map" colspan="2" widget="image" img_width="640" img_height="480"/>
+            <field name="mae_situation" colspan="2" widget="image" img_width="640" img_height="480"/>
+            <field name="mae_image" colspan="2" widget="image" img_width="640" img_height="480"/>
             <button string="Generate" colspan="2" name="situation_map_gen" icon="tryton-executable" />                           
             <button string="Generate" colspan="2" name="image_map_gen" icon="tryton-executable" />                                                             
         </page>                     

@@ -11,6 +11,7 @@ def register():
         Outil,
         Work,
         WorkOutil,
+        WorkParty,
         Site,
         taxinomie,
         WorkLine,

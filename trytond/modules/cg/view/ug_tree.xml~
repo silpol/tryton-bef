@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <tree string="Unité de Gestion">
+    <field name="id" />
     <field name="equipement" />
     <field name="code" />
     <field name="statut" />
@@ -7,6 +8,7 @@
     <field name="rue" />
     <field name="debut" />
     <field name="fin" />
+    <field name="refcom" />
     <field name="elagage" />
     <field name="operation" />
     <field name="contrainte" />
@@ -21,5 +23,4 @@
     <field name="acug09" />
     <field name="domanialtype" />
     <field name="domanialdate" />
-    <field name="active" />
 </tree>

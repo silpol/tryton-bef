@@ -4,14 +4,19 @@
         <page string="Espèce" id="espece" col="4">
             <label name="taxinomie"/>
             <field name="taxinomie"/>
-            <newline/>
-            <label name="indice"/> 
+            <label name="liste"/>
+            <field name="liste"/>
+            <label name="prospection"/>
+            <field name="prospection" widget="selection"/>
+            <label name="effectif"/>
+            <field name="effectif" widget="selection"/>
+            <label name="indice"/>
             <field name="indice"/>
-            <label name="observation"/> 
-            <field name="observation"/>
+            <newline/>
+            <field name="presence" colspan="4"/>
         </page>
         <page string="Photo" id="photo">
             <field name="photo" widget="image" img_width="800" img_height="600"/>                                                                
-        </page> 
+        </page>
     </notebook> 
 </form>

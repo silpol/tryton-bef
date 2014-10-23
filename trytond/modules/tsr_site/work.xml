@@ -230,7 +230,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window" id="act_site_tree">
             <field name="name">Sites/Task</field>
             <field name="res_model">site.work</field>
-            <field name="domain">[('parent', '=', True)]</field>
+            <field name="domain">[('parent', '=', False)]</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_site_tree_view1">

@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <tree string="Diagno - Taxinomie">
     <field name="taxinomie"/>
-    <field name="abondance"/>
+    <field name="prospection"/>
+    <field name="obspot"/>
+    <field name="volpose"/>
+    <field name="effectif"/>
+    <field name="statut"/>
     <field name="ethologie"/>
-    <field name="etatActuel"/>
-    <field name="etatPotentiel"/>
-    <field name="observation"/>
 </tree>
 

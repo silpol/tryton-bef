@@ -8,21 +8,28 @@ from .mae import *
 
 def register():
     Pool.register(
+        code,
         mae,
         cadastre,
         maeProtection,
-        code,
         diagno,
+        diagnoNatureOcc,
         diagnoParcelle,
-        diagnoCloture,
-        diagnoEntretien,
-        diagnoUtilisation,
         diagnoFlorePat,
         diagnoAutre,
         diagnoAvifaune,
         diagnoMammi,
+        diagnomamPresence,
         diagnoBatracien,
+        diagnoAquatique,
+        diagnoAraignee,
+        diagnoLepido,
+        diagnoGuepe,
+        diagnoColeo,
+        diagnoSaute,
+        diagnoOdo,
         taxinomie,
+        taxinomieUser,
         module='mae', type_='model')
 
     Pool.register(

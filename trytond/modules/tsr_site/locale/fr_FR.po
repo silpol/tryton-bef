@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-"Language: FR_fr\n"
+"Language: fr_FR\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 msgctxt "error:site.work:"
@@ -136,8 +136,8 @@ msgid "ID"
 msgstr "Identifiant"
 
 msgctxt "field:site.vehicule,lib_long:"
-msgid "Libellé long du véhicule"
-msgstr "Libellé long du véhicule"
+msgid "Plaque d'immatriculation du véhicule"
+msgstr "Plaque d'immatriculation du véhicule"
 
 msgctxt "field:site.vehicule,name:"
 msgid "Libellé court du véhicule"
@@ -207,7 +207,7 @@ msgctxt "field:site.work,parent:"
 msgid "Parent"
 msgstr "Parent"
 
-msgctxt "field:site.work,party:"
+msgctxt "field:site.work,parties:"
 msgid "Party"
 msgstr "Tiers"
 
@@ -218,6 +218,10 @@ msgstr "Nom"
 msgctxt "field:site.work,sequence:"
 msgid "Sequence"
 msgstr "Séquence"
+
+msgctxt "field:site.work,site:"
+msgid "Site"
+msgstr "Site"
 
 msgctxt "field:site.work,state:"
 msgid "State"
@@ -241,13 +245,45 @@ msgstr "Type"
 
 msgctxt "field:site.work,work:"
 msgid "Activity"
-msgstr "Chantier ou Tâche"
+msgstr "Chantier ou Tâche (activités)"
 
 msgctxt "field:site.work,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
 msgctxt "field:site.work,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.work-party.party,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.work-party.party,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.work-party.party,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.work-party.party,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:site.work-party.party,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.work-party.party,work:"
+msgid "Work"
+msgstr "Activité"
+
+msgctxt "field:site.work-party.party,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.work-party.party,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
@@ -283,6 +319,10 @@ msgctxt "field:site.work-site.outil,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
+msgctxt "field:site_site.site,chantier:"
+msgid "Chantier"
+msgstr "Chantier"
+
 msgctxt "field:taxinomie.taxinomie,code:"
 msgid "Code"
 msgstr "Code"
@@ -298,6 +338,10 @@ msgstr "Lignes de feuille de présence"
 msgctxt "field:timesheet.workline,exportation:"
 msgid "Lieu d'export"
 msgstr "Lieu d'export"
+
+msgctxt "field:timesheet.workline,tache:"
+msgid "Tache"
+msgstr "Tâche"
 
 msgctxt "help:company.employee,car:"
 msgid "Preference car"
@@ -332,12 +376,16 @@ msgid "Matières"
 msgstr "Matières"
 
 msgctxt "help:site.work,matoutil:"
-msgid "Matériels - Outils nécessaires à l'activité"
+msgid "Materiels - Outils necessaires à l activite"
 msgstr "Matériels - Outils nécessaires à l'activité"
 
-msgctxt "help:site.work,party:"
+msgctxt "help:site.work,parties:"
 msgid "Party who follow the site"
-msgstr "Personne qui assure le suivi de chantier"
+msgstr "Tiers suivant le site"
+
+msgctxt "help:site.work,site:"
+msgid "Site"
+msgstr "Site"
 
 msgctxt "help:site.work,total_effort:"
 msgid "Estimated total effort for this work and the sub-works"
@@ -349,7 +397,7 @@ msgstr "Type"
 
 msgctxt "help:site.work,work:"
 msgid "Activity"
-msgstr "Chantier ou Tâche"
+msgstr "Chantier ou Tâche (activité)"
 
 msgctxt "help:taxinomie.taxinomie,code:"
 msgid "Code"
@@ -362,6 +410,10 @@ msgstr "Nom commun"
 msgctxt "help:timesheet.workline,exportation:"
 msgid "Adresse d'export des matières"
 msgstr "Adresse d'export des matières"
+
+msgctxt "help:timesheet.workline,tache:"
+msgid "Tache"
+msgstr "Tâche"
 
 msgctxt "model:ir.action,name:act_materiel_form"
 msgid "Matériel"
@@ -383,6 +435,10 @@ msgctxt "model:ir.action,name:act_site_form"
 msgid "Sites"
 msgstr "Chantiers"
 
+msgctxt "model:ir.action,name:act_site_site_site_form"
+msgid "Site"
+msgstr "Chantier"
+
 msgctxt "model:ir.action,name:act_site_taxinomie_form"
 msgid "Taxinomie"
 msgstr "Taxinomie"
@@ -402,6 +458,10 @@ msgstr "Tâches"
 msgctxt "model:ir.action,name:act_vehicule_form"
 msgid "Véhicule"
 msgstr "Véhicule"
+
+msgctxt "model:ir.action,name:site_work"
+msgid "Fiche de chantier"
+msgstr "Fiche de chantier"
 
 msgctxt "model:ir.ui.menu,name:menu_configuration"
 msgid "Configuration"
@@ -455,9 +515,109 @@ msgctxt "model:site.work,name:"
 msgid "Work Effort"
 msgstr "Effort de travail"
 
+msgctxt "model:site.work-party.party,name:"
+msgid "Work - Party"
+msgstr "Site - Tiers"
+
 msgctxt "model:site.work-site.outil,name:"
 msgid "Work - Outil"
 msgstr "Chantier - Outil"
+
+msgctxt "odt:site.work:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "A"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "COORDONNÉES"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Chantier"
+msgstr "Chantier"
+
+msgctxt "odt:site.work:"
+msgid "Client :"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Commentaire :"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "DEVIS"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "DRESSE"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "ENGINS/OUTILS/MATÉRIAUX À PRENDRE"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Fiche"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Heure(s)"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Intervenant TSR :"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Mise à jour"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "NATURE DES TRAVAUX"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Non"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "PLAN"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "PRÉCAUTIONS À PRENDRE"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Plan de"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "Plan de situation et de localisation"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "TEMPS PRÉVU"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "\\"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "localisation"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "lundi 14 juillet 2014"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "situation"
+msgstr ""
 
 msgctxt "selection:site.work,state:"
 msgid "Done"
@@ -504,16 +664,72 @@ msgid "General"
 msgstr "Général"
 
 msgctxt "view:site.work:"
-msgid "Matières"
-msgstr "Matières"
+msgid "MaterielsOutils"
+msgstr ""
 
 msgctxt "view:site.work:"
-msgid "Matériels - Outils"
-msgstr "Matériels - Outils"
+msgid "Matieres"
+msgstr ""
+
+msgctxt "view:site.work:"
+msgid "Parties"
+msgstr "Suivi"
+
+msgctxt "view:site.work:"
+msgid "Sites"
+msgstr "Sites"
 
 msgctxt "view:site.work:"
 msgid "Tasks"
 msgstr "Tâches"
+
+msgctxt "view:site_site.site:"
+msgid "%"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Edit geometries"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site_site.site:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site_site.site:"
+msgid "Image Map"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Lines"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Misc. obj."
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Plot"
+msgstr "Parcelle"
+
+msgctxt "view:site_site.site:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:site_site.site:"
+msgid "Polygones"
+msgstr ""
+
+msgctxt "view:site_site.site:"
+msgid "Situation Map"
+msgstr ""
 
 msgctxt "view:taxinomie.taxinomie:"
 msgid "Général"

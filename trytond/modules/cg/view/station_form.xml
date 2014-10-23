@@ -2,6 +2,24 @@
 <form string="Station" col="2">
     <notebook colspan="6">
         <page string="Général" id="general">
+            <group id="group_ug0" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>
+            <label name="id"/>
+            <field name="id"/>
             <label name="code"/>
             <field name="code"/>
             <label name="ug"/>
@@ -19,10 +37,61 @@
             <label name="active"/>
             <field name="active"/>                         
         </page>
-        <page string="Emplacements" id="emplacement">                            
+        <page string="Emplacements" id="emplacement">
+            <group id="group_ug1" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>
             <field name="emplacement"/>
         </page>
-        <page string="Map" id="map" col="2">                            
+        <page string="Arbres" id="arbre">
+            <group id="group_ug2" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>
+            <field name="arbre"/>
+        </page>
+        <page string="Map" id="map" col="2">
+            <group id="group_ug3" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>
             <field name="station_image" colspan="1" widget="image" img_width="640" img_height="480"/>
             <field name="station_map" colspan="1" widget="image" img_width="640" img_height="480"/>
             <button string="Edit" name="station_edit" icon="tryton-executable" />

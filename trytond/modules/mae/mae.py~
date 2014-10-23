@@ -4,19 +4,21 @@ GPLv3
 """
 
 from collections import OrderedDict
-from datetime import date
+from datetime import date, datetime
 import os
 
 from osgeo import osr
 
 from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
-from trytond.pyson import Bool, Eval, Not, Or, And
+from trytond.pyson import Bool, Eval, Not, Or, And, Equal, In, If, Id
 from trytond.pool import PoolMeta, Pool
 from trytond.report import Report
+from trytond.transaction import Transaction
 
 from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 STATES = {
     'readonly': ~Eval('active', True),
@@ -33,47 +35,43 @@ _ABONDANCE = [
     ('F', u'individus > 1000'),
 ]
 
-_CODE = [
-    ('patri', u'Espèces patrimoniales'),
-    ('autre', u'Autres espèces'),
-    ('avifau', u'Avifaune'),
-    ('mammi', u'Mammifères'),
-    ('batrep', u'Batraciens/Reptiles'),
-    ('entomo', u'Entomofaune'),
-]
-
 _ETHOLOGIE = [
     ('repro', u'Reproduction'),
+    ('migra', u'Migration'),
+    ('hiver', u'Hivernage'),
     ('alim', u'Alimentation'),
-    ('statio', u'Stationnement'),
-    ('passa', u'De passage'),
+]
+
+_MARVAL = [
+    ('marais', u'Prairie de marais'),
+    ('vallee', u'Prairie de Vallée alluviale'),
 ]
 
 class code(ModelSQL, ModelView):
-    u"""Code"""
+    u'Code'
     __name__ = 'mae.code'
     _rec_name = 'name'
 
     code = fields.Char(
-            string = u"""Code""",
+            string = u'Code',
             required = False,
             readonly = False,
         )
 
     name = fields.Char(
-            string = u"""Short name of code""",
+            string = u'Short name of code',
             required = False,
             readonly = False,
         )
 
     lib_long = fields.Char(
-            string = u"""Label of code""",
+            string = u'Label of code',
             required = False,
             readonly = False,
         )
 
 class diagno(ModelSQL, ModelView):
-    u"""diagno"""
+    u'diagno'
     __name__ = 'mae.diagno'
     _rec_name = 'ilot'
 
@@ -81,48 +79,95 @@ class diagno(ModelSQL, ModelView):
             'mae.mae',
             'Mae',
             required=True,
-            readonly=True,
         )
-
     ilot = fields.Char(            
-            string = 'Ilot',
+            string = u'Usual Ilot',
             help = u'PAC Ilot number at this expertise date',
             required=True,
+            on_change_with=['mae']
         )
+
+    def on_change_with_ilot(self):
+        if self.mae is not None:
+            return self.mae.num
 
     date = fields.Date(
             string = 'Date', 
-            help = 'Date of diagno',
-        )    
-
-    owner = fields.Many2One(
-            'party.party',
-            string='Owner',
-            required=True,
-            ondelete='RESTRICT',
-            domain=[('categories', 'child_of', 1, 'parent')]
+            help = u'Date of diagno',
+        )
+    dateecheance = fields.Date(
+            string = u'Echeance', 
+            help = u'Date of echeance',
+            on_change_with=['date']
         )
 
+    def on_change_with_dateecheance(self):
+        if self.date is not None:
+            return datetime(self.date.year+5,5,15)
+
+    territoire = fields.Char(
+            string=u'Territoire',
+            help=u'Nom du territoire'
+        )      
+    owner = fields.Many2One(
+            'party.party',
+            string=u'Owner',
+            help=u'Expert name',
+            required=True,
+            ondelete='RESTRICT',
+            domain=[('categories', '=', 'Expert')]
+        )
     parcelle = fields.Many2Many(
             'mae.diagno-cadastre.parcelle',
             'diagno',
             'parcelle',
-            string = 'Plot',            
+            string = u'Plot',            
+            help = u'Cadastral Plot',
         )
-
-    typemae = fields.Char(            
+    assolement = fields.Many2One(
+            'mae.code',
+            string=u'Assolement',
+            help=u'Assolement',
+            domain=[('code', '=', 'ASSOL')]
+        )
+    assolautre = fields.Char(
+            string=u'Précision',	
+            help=u'Précision(s) assolement',
+            states={'invisible': And(Not(Equal(Eval('assolement',0),14)), Not(Equal(Eval('assolement',0),15)))},
+        )
+    typemae = fields.Many2One(
+            'mae.code',
             string = u'Type MAE',
-            help = u'Niveau MAE demandé par l’exploitant',
+            help = u'Type MAE',
+            domain=[('code', '=', 'TYPEMAE')]
         )
-
-    nivexpert = fields.Char(            
-            string = u'Expert',
-            help = u'Niveau préconisé par l’expert',
+    nivexploitant = fields.Many2One(
+            'mae.code',                   
+            string = u'Mes. exploit.',
+            help = u'Mesure demandée par l’exploitant',
+            domain=[('code', '=', 'TER')]
         )
-
-    nivfinal = fields.Char(            
-            string = u'Final',
-            help = u'Niveau pris au final',
+    nivexpert = fields.Many2One(
+            'mae.code',             
+            string = u'Mes. expert',
+            help = u'Mesure préconisée par l’expert',
+            domain=[('code', '=', 'TER')]
+        )
+    nivfinal = fields.Many2One(
+            'mae.code',             
+            string = u'Mes. finale',
+            help = u'Mesure prise au final par l’exploitant',
+            domain=[('code', '=', 'TER')]
+        )
+    intecolo = fields.Many2One(
+            'mae.code',
+            string = u'Intérêt',
+            help = u'Intérêt écologique',
+            domain=[('code', '=', 'INTECOLO')]
+        )
+    anneengag = fields.Integer(
+            string=u'Année',
+            help=u'Année d’engagement'
         )
 
     #paturage
@@ -130,48 +175,40 @@ class diagno(ModelSQL, ModelView):
             string=u'Pâturage',
             help=u'Pâturage',
         )
-
     periodePat = fields.Char(
             string=u'Période(s)',	
             help=u'Période(s) de pâturage',
             states={'invisible': Not(Bool(Eval('paturage')))},
         )
-
     surfacePat = fields.Float(
             string='Surface',	
             help=u'Surface paturée (ha)',
             states={'invisible': Not(Bool(Eval('paturage')))},	
         )
-
     chargementMoyenPat = fields.Float(
             string='Moyen',	
             help=u'Chargement moyen (UGB/ha)',
             states={'invisible': Not(Bool(Eval('paturage')))},	
         )
-
     chargementInstantanePat = fields.Float(
             string=u'Instantané',	
             help=u'Chargement instantané (UGB/ha)',
             states={'invisible': Not(Bool(Eval('paturage')))},	
         )
-
-    naturePat = fields.Selection([
-            ('bovins', u'Bovins'),
-            ('ovins', u'Ovins'),
-            ('equins', u'Équins')],
-            string='Nature',
-            help=u'Nature',
-            states={'invisible': Not(Bool(Eval('paturage')))},	
+    naturePat = fields.Many2One(
+            'mae.code',
+            string='Troupeau',
+            help=u'Nature du troupeau',
+            states={'invisible': Not(Bool(Eval('paturage')))},
+            domain=[('code', '=', 'NATUREPAT')],
         )
-
-    pratiquesPat = fields.Selection([
-            ('deprimage', u'Déprimage'),
-            ('regain', u'Regain')],
+    pratiquePat = fields.Many2One(
+            'mae.code',
             string='Pratiques',
             help=u'Pratiques',
             states={'invisible': Not(Bool(Eval('paturage')))},
+            domain=[('code', '=', 'PRATIQUEPAT')],
         )
-
     observationPat = fields.Text(
             string=u'Observations',
             help=u'Observations pâturage',
@@ -183,55 +220,39 @@ class diagno(ModelSQL, ModelView):
             string=u'Fauche',
             help=u'Fauche',
         )    
-
     nombreFau = fields.Float(
             string='Nombre',	
             help=u'Nombre de fauche',
             states={'invisible': Not(Bool(Eval('fauche')))},	
         )
-
     dateFau = fields.Date(
             string=u'Date',	
             help=u'Date de fauche',
             states={'invisible': Not(Bool(Eval('fauche')))},
         )
-
     surfaceFau = fields.Float(
             string='Surface',	
             help=u'Surface de fauche',
             states={'invisible': Not(Bool(Eval('fauche')))},	
         )
-
-    typeFau = fields.Selection([
-            ('centrifuge', u'Centrifuge'),
-            ('centripete', u'Centripète'),
-            ('bande', u'Par bande'),
-            ('autre', u'Autre')],
+    typeFau = fields.Many2One(
+            'mae.code',
             string='Type',
             help=u'Type de fauche',
-            states={'invisible': Not(Bool(Eval('fauche')))},	
-        )
-
-    sympaFau = fields.Boolean(
-            string=u'Sympa',
-            help=u'Sympa avec bande de bordure',
             states={'invisible': Not(Bool(Eval('fauche')))},
+            domain=[('code', '=', 'TYPEFAU')],
         )
-
-
     observationFau = fields.Text(
             string=u'Observations',
             help=u'Observations fauche',
             states={'invisible': Not(Bool(Eval('fauche')))},
         ) 
-
     gestionPatFau = fields.Boolean(
             string=u'Mixte',
             help=u'Gestion mixte Fauche/Pâturage',
             states={'invisible': Or(Not(Bool(Eval('fauche'))), Not(Bool(Eval('paturage'))))},
             on_change_with=['paturage', 'fauche']
         )
-
     observationPatFau = fields.Text(
             string=u'Observations',
             help=u'Observations pâturage/fauche',
@@ -240,66 +261,55 @@ class diagno(ModelSQL, ModelView):
 
     def on_change_with_gestionPatFau(self):
         if Bool(Eval(self.paturage)) and Bool(Eval(self.fauche)):
-            return True  
+            return True
 
-    #occupation
-    occupation = fields.Boolean(
-            string=u'Occupation des sols',
-            help=u'Autres types d''occupation des sols',
+    #présence autres types d’éléments sur la parcelle
+    presence = fields.Boolean(
+            string=u'Présence autres types d’éléments sur la parcelle',
+            help=u'Autres types d’éléments sur la parcelle',
         )
 
-    natureOcc = fields.Selection([
-            ('friche', u'Friche'),
-            ('roncier', u'Roncier'),
-            ('chardon', u'Chardon'),
-            ('refus', u'Refus'),
-            ('boisement', u'Boisement'),
-            ('autres', u'Autres')],
-            string=u'Type',
-            help=u'Type de fauche',
-            states={'invisible': Not(Bool(Eval('occupation')))},
-            on_change_with=['occupation']	
-        )
-
-    def on_change_with_natureOcc(self):
-        if self.occupation is None:
-            return None
-       
-    autreOcc = fields.Text(
-            string=u'Autres',
-            help=u'Autres nature',
-            states={'invisible': Not(Bool(Eval('occupation'))) and Eval('natureOcc') != 'autres'},            
-        )
-
+    natureOcc = fields.One2Many(
+            'mae.diagno-mae.code',
+            'diagno',
+            string=u'Occupation',
+            help=u'Nature d\'occupation des sols',
+            states={'invisible': Not(Bool(Eval('presence')))},
+        )    
     pourcentageOcc = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle concernée',
-            states={'invisible': Not(Bool(Eval('occupation')))},	
+            states={'invisible': Not(Bool(Eval('presence')))},	
         )
-
-    typeEntretienOcc = fields.Selection([
-            ('mecanique', u'Mécanique'),
-            ('chimique', u'Chimique')],
+    typeEntretienOcc = fields.Many2One(
+            'mae.code',
             string='Type',
             help=u'Type d\'entretien',
-            states={'invisible': Not(Bool(Eval('occupation')))},	
+            states={'invisible': Not(Bool(Eval('presence')))},
+            domain=[('code', '=', 'TYPENTRETIENOCC')],
         )
     clotureOcc = fields.Boolean(
             string=u'Clôtures',
             help=u'Clôtures traditionnelles',
-            states={'invisible': Not(Bool(Eval('occupation')))},
+            states={'invisible': Not(Bool(Eval('presence')))},
         )
     observationOcc = fields.Text(
             string=u'Observations',
             help=u'Observations',
-            states={'invisible': Not(Bool(Eval('occupation')))},
+            states={'invisible': Not(Bool(Eval('presence')))},
         )
+
     #engrais
     engrais = fields.Boolean(
             string=u'Engrais',
             help=u'Engrais',
         )
-
+    quantiteEng = fields.Float(
+            string=u'Quantité',
+            help=u'Quantité d''engrais',
+            digits=(16, 2),
+            states={'invisible': Not(Bool(Eval('engrais')))},
+        )
     mineraleEng = fields.Boolean(            
             string=u'Minéral',
             help=u'Minérale N,P,K',
@@ -341,42 +351,55 @@ class diagno(ModelSQL, ModelView):
             help=u'Observations',
             states={'invisible': Not(Bool(Eval('engrais')))},
         )
-    #type habitats
-    #frenaie
-    frenaie = fields.Boolean(
-            string=u'Frênaie',
-            help=u'Frênaie',
+    #Caracteristique du milieu
+    #marais ou prairie
+    marval = fields.Selection(
+            _MARVAL,
+            string=u'Marais/Vallée',
+            help=u'Prairie de marais ou de Vallées alluviales',
+            select=1,
+        )
+    selectionMarais = fields.Many2One(
+            'mae.code',
+            string=u'Type d\'habitat',
+            help=u'Type d\'habitat des prairies de marais',
+            states={'invisible': Not(Equal(Eval('marval', ''), 'marais'))},
+            domain=[('code', '=', 'SELECTIONMARAIS')],
+            on_change_with=['marval']
         )
 
-    selectionFre = fields.Selection([
-            ('pourcentage', u'Pourcentage'),
-            ('peripherie', u'En périphérie immédiate de la parcelle'),
-            ],
-            string=u'% de la parcelle',
-            help=u'% de la parcelle',
-            states={'invisible': Not(Bool(Eval('frenaie')))},
-            on_change_with=['frenaie']	
-        )
-
-    def on_change_with_selectionFre(self):
-        if Bool(Eval(self.frenaie)):
+    def on_change_with_selectionMarais(self):
+        if Not(Equal(Eval('marval',0),1)):
             return None
 
-    pourcentageFre = fields.Integer(
+    selectionVallee = fields.Many2One(
+            'mae.code',
+            string=u'Type d\'habitat',
+            help=u'Type d\'habitat des prairies de vallées alluviales',
+            states={'invisible': Not(Equal(Eval('marval', ''), 'vallee'))},
+            domain=[('code', '=', 'SELECTIONVALLEE')],
+            on_change_with=['marval']
+        )
+
+    def on_change_with_selectionVallee(self):
+        if Not(Equal(Eval('marval',0),2)):
+            return None
+
+    pourcentageMarVal = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('frenaie'))) and Eval('selectionFre') != 'pourcentage'},
-            on_change_with=['frenaie', 'selectionFre']
+            states={'invisible': Not(Bool(Eval('marval')))},
+            on_change_with=['marval']
         )
 
-    def on_change_with_pourcentageFre(self):
-        if Bool(Eval(self.frenaie)) and Eval('selectionFre') != 'pourcentage':
+    def on_change_with_pourcentageMarVal(self):
+        if Bool(Eval(self.marval)):
             return None
 
-    observationFre = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('frenaie')))},
+    innondeMarVal = fields.Boolean(            
+            string=u'Innondée',
+            help=u'Prairie innondée le jour du diagnostic',
+            states={'invisible': Not(Bool(Eval('marval')))},	
         )
 
     #marais subhalophiles
@@ -385,14 +408,13 @@ class diagno(ModelSQL, ModelView):
             help=u'Marais subhalophiles thermophiles atlantiques',
         )
 
-    selectionHal = fields.Selection([
-            ('pourcentage', u'Pourcentage'),
-            ('peripherie', u'En périphérie immédiate de la parcelle'),
-            ],
+    selectionHal = fields.Many2One(
+            'mae.code',
             string=u'% de la parcelle',
             help=u'% de la parcelle',
             states={'invisible': Not(Bool(Eval('subhalo')))},
-            on_change_with=['subhalo']	
+            domain=[('code', '=', 'SELECTIONHAL')],
+            on_change_with=['subhalo']
         )
 
     def on_change_with_selectionHal(self):
@@ -402,12 +424,12 @@ class diagno(ModelSQL, ModelView):
     pourcentageHal = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('subhalo'))) and Eval('selectionHal') != 'pourcentage'},
+            states={'invisible': Not(Bool(Eval('subhalo'))) and Not(Equal(Eval('selectionHal',0),37))},
             on_change_with=['subhalo', 'selectionHal']
         )
 
     def on_change_with_pourcentageHal(self):
-        if Bool(Eval(self.subhalo)) and Eval('selectionHal') != 'pourcentage':
+        if Bool(Eval(self.subhalo)) and Not(Equal(Eval('selectionHal',0),37)):
             return None
 
     observationHal = fields.Text(
@@ -422,14 +444,13 @@ class diagno(ModelSQL, ModelView):
             help=u'Marais doux',
         )
 
-    selectionDou = fields.Selection([
-            ('pourcentage', u'Pourcentage'),
-            ('peripherie', u'En périphérie immédiate de la parcelle'),
-            ],
+    selectionDou = fields.Many2One(
+            'mae.code',
             string=u'% de la parcelle',
             help=u'% de la parcelle',
             states={'invisible': Not(Bool(Eval('doux')))},
-            on_change_with=['doux']	
+            domain=[('code', '=', 'SELECTIONDOU')],
+            on_change_with=['doux']
         )
 
     def on_change_with_selectionDou(self):
@@ -439,12 +460,12 @@ class diagno(ModelSQL, ModelView):
     pourcentageDou = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('doux'))) and Eval('selectionDou') != 'pourcentage'},
+            states={'invisible': Not(Bool(Eval('doux'))) and Not(Equal(Eval('selectionDou',0),39))},
             on_change_with=['doux', 'selectionDou']
         )
 
     def on_change_with_pourcentageDou(self):
-        if Bool(Eval(self.doux)) and Eval('selectionDou') != 'pourcentage':
+        if Bool(Eval(self.doux)) and Not(Equal(Eval('selectionDou',0),39)):
             return None
 
     observationDou = fields.Text(
@@ -453,20 +474,19 @@ class diagno(ModelSQL, ModelView):
             states={'invisible': Not(Bool(Eval('doux')))},
         )
 
-    #habitat de zones humides
+    #prairies de vallées alluviales
     zonhumi = fields.Boolean(
-            string=u'Zones humides',
-            help=u'Habitat de zones humides',
+            string=u'Prairies',
+            help=u'Prairies de vallées alluviales',
         )
 
-    selectionHum = fields.Selection([
-            ('pourcentage', u'Pourcentage'),
-            ('peripherie', u'En périphérie immédiate de la parcelle'),
-            ],
+    selectionHum = fields.Many2One(
+            'mae.code',
             string=u'% de la parcelle',
             help=u'% de la parcelle',
             states={'invisible': Not(Bool(Eval('zonhumi')))},
-            on_change_with=['zonhumi']	
+            domain=[('code', '=', 'SELECTIONHUM')],
+            on_change_with=['zonhumi']
         )
 
     def on_change_with_selectionHum(self):
@@ -476,12 +496,12 @@ class diagno(ModelSQL, ModelView):
     pourcentageHum = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('zonhumi'))) and Eval('selectionHum') != 'pourcentage'},
+            states={'invisible': Not(Bool(Eval('zonhumi'))) and Not(Equal(Eval('selectionHum',0),41))},
             on_change_with=['zonhumi', 'selectionHum']
         )
 
     def on_change_with_pourcentageHum(self):
-        if Bool(Eval(self.zonhumi)) and Eval('selectionHum') != 'pourcentage':
+        if Bool(Eval(self.zonhumi)) and Not(Equal(Eval('selectionHum',0),41)):
             return None
 
     observationHum = fields.Text(
@@ -496,14 +516,13 @@ class diagno(ModelSQL, ModelView):
             help=u'Terres agricoles',
         )
 
-    selectionAgr = fields.Selection([
-            ('pourcentage', u'Pourcentage'),
-            ('peripherie', u'En périphérie immédiate de la parcelle'),
-            ],
+    selectionAgr = fields.Many2One(
+            'mae.code',
             string=u'% de la parcelle',
             help=u'% de la parcelle',
             states={'invisible': Not(Bool(Eval('agri')))},
-            on_change_with=['agri']	
+            domain=[('code', '=', 'SELECTIONAGR')],
+            on_change_with=['agri']
         )
 
     def on_change_with_selectionAgr(self):
@@ -513,12 +532,12 @@ class diagno(ModelSQL, ModelView):
     pourcentageAgr = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('agri'))) and Eval('selectionAgr') != 'pourcentage'},
+            states={'invisible': Not(Bool(Eval('agri'))) and Not(Equal(Eval('selectionAgr',0),43))},
             on_change_with=['agri', 'selectionAgr']
         )
 
     def on_change_with_pourcentageAgr(self):
-        if Bool(Eval(self.agri)) and Eval('selectionAgr') != 'pourcentage':
+        if Bool(Eval(self.agri)) and Not(Equal(Eval('selectionAgr',0),43)):
             return None
 
     observationAgr = fields.Text(
@@ -533,14 +552,13 @@ class diagno(ModelSQL, ModelView):
             help=u'Peupleraie',
         )
 
-    selectionPeu = fields.Selection([
-            ('pourcentage', u'Pourcentage'),
-            ('peripherie', u'En périphérie immédiate de la parcelle'),
-            ],
+    selectionPeu = fields.Many2One(
+            'mae.code',
             string=u'% de la parcelle',
             help=u'% de la parcelle',
             states={'invisible': Not(Bool(Eval('peup')))},
-            on_change_with=['peup']	
+            domain=[('code', '=', 'SELECTIONPEU')],
+            on_change_with=['peup']
         )
 
     def on_change_with_selectionPeu(self):
@@ -550,12 +568,12 @@ class diagno(ModelSQL, ModelView):
     pourcentagePeu = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('peup'))) and Eval('selectionPeu') != 'pourcentage'},
+            states={'invisible': Not(Bool(Eval('peup'))) and Not(Equal(Eval('selectionPeu',0),45))},
             on_change_with=['peup', 'selectionPeu']
         )
 
     def on_change_with_pourcentagePeu(self):
-        if Bool(Eval(self.peup)) and Eval('selectionPeu') != 'pourcentage':
+        if Bool(Eval(self.peup)) and Not(Equal(Eval('selectionPeu',0),45)):
             return None
 
     observationPeu = fields.Text(
@@ -569,35 +587,10 @@ class diagno(ModelSQL, ModelView):
             string=u'Autres',
             help=u'Autres',
         )
-
     observationAut = fields.Text(
             string=u'Observations',
             help=u'Observations',
             states={'invisible': Not(Bool(Eval('autre')))},
-        )
-
-    cloture = fields.Many2Many(
-            'mae.diagno-mae.cloture',
-            'diagno',
-            'code',
-            string = 'Cloture',
-            domain=[('code', '=', 'CLO')],
-        )
-
-    utilisation = fields.Many2Many(
-            'mae.diagno-mae.utilisation',
-            'diagno',
-            'code',
-            string = 'Utilisation',
-            domain=[('code', '=', 'UTI')],
-        )
-
-    entretien = fields.Many2Many(
-            'mae.diagno-mae.entretien',
-            'diagno',
-            'code',
-            string = 'Entretien',
-            domain=[('code', '=', 'ENT')],
         )
 
     #baisse
@@ -616,16 +609,16 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.baisse)):
             return False
 
-    paran = fields.Boolean(
+    paran = fields.Integer(
             string=u'x/an',
-            help=u'En eau plusieurs fois par an',
+            help=u'En eau plusieurs fois par an (nombre de fois)',
             states={'invisible': Not(Bool(Eval('eneau')))},
             on_change_with=['eneau'],
         )
 
     def on_change_with_paran(self):
         if Bool(Eval(self.eneau)):
-            return False
+            return None
 
     duree = fields.Integer(
             string=u'Durée',	
@@ -638,14 +631,13 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.eneau)):
             return None
 
-    evacuation = fields.Selection([
-            ('lente', u'Lente'),
-            ('moyenne', u'Moyenne'),
-            ('rapide', u'Rapide')],
+    evacuation = fields.Many2One(
+            'mae.code',
             string=u'Évacuation',
             help=u'Évacuation',
             states={'invisible': Not(Bool(Eval('eneau')))},
-            on_change_with=['eneau'],
+            domain=[('code', '=', 'EVACUATION')],
+            on_change_with=['eneau']
         )
 
     def on_change_with_evacuation(self):
@@ -718,13 +710,13 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.maretrou)):
             return False
 
-    penteTrou = fields.Selection([
-            ('douces', u'Douces'),
-            ('abruptes', u'Abruptes')],
+    penteTrou = fields.Many2One(
+            'mae.code',
             string=u'Pentes',
             help=u'Pentes',
             states={'invisible': Not(Bool(Eval('maretrou')))},
-            on_change_with=['maretrou'],
+            domain=[('code', '=', 'PENTETROU')],
+            on_change_with=['maretrou']
         )
 
     def on_change_with_penteTrou(self):
@@ -775,13 +767,13 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.amgtcynegetique)):
             return None
 
-    etatCyn = fields.Selection([
-            ('fonctionnel', u'Fonctionnel'),
-            ('non-fonctionnel', u'Non-fonctionnel')],
+    etatCyn = fields.Many2One(
+            'mae.code',
             string=u'État',	
             help=u'État des tonnes à eau',
             states={'invisible': Not(Bool(Eval('amgtcynegetique')))},
-            on_change_with=['amgtcynegetique'],
+            domain=[('code', '=', 'ETATCYN')],
+            on_change_with=['amgtcynegetique']
         )
 
     def on_change_with_etatCyn(self):
@@ -821,14 +813,25 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.canfos)):
             return False
 
-    niveauCan = fields.Integer(
-            string=u'Niveau',	
-            help=u'Niveau d\'eau (fossés/sol)',
+    niveauminCan = fields.Integer(
+            string=u'Niveau min.',	
+            help=u'Niveau minimum d\'eau (fossés/sol)',
             states={'invisible': Not(Bool(Eval('canfos')))},
             on_change_with=['canfos'],
         )
 
-    def on_change_with_niveauCan(self):
+    def on_change_with_niveauminCan(self):
+        if Bool(Eval(self.canfos)):
+            return None
+
+    niveaumaxCan = fields.Integer(
+            string=u'Niveau max.',	
+            help=u'Niveau maximum d\'eau (fossés/sol)',
+            states={'invisible': Not(Bool(Eval('canfos')))},
+            on_change_with=['canfos'],
+        )
+
+    def on_change_with_niveaumaxCan(self):
         if Bool(Eval(self.canfos)):
             return None
 
@@ -887,8 +890,8 @@ class diagno(ModelSQL, ModelView):
             return None
 
     connexionCan = fields.Boolean(
-            string=u'Connexio',
-            help=u'Connexio au réseau',
+            string=u'Connexion au réseau',
+            help=u'Connexion au réseau',
             states={'invisible': Not(Bool(Eval('canfos')))},
             on_change_with=['canfos'],
         )
@@ -908,14 +911,13 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.connexionCan)):
             return False
 
-    barrageCon = fields.Selection([
-            ('amont', u'Amont'),
-            ('aval', u'Aval'),
-            ('non', u'Non')],
-            string=u'Barrage',
+    barrageCon = fields.Many2One(
+            'mae.code',
+            string=u'Avec Barrage',
             help=u'Avec barrage',
             states={'invisible': Not(Bool(Eval('connexionCan')))},
-            on_change_with=['connexionCan'],
+            domain=[('code', '=', 'BARRAGECON')],
+            on_change_with=['connexionCan']
         )
 
     def on_change_with_barrageCon(self):
@@ -926,17 +928,13 @@ class diagno(ModelSQL, ModelView):
             string=u'Arbres/Arbustes/Haies',
             help=u'Arbres/Arbustes/Haies',
         )
-    pourcentArb = fields.Selection([
-            ('0', u'0%'),
-            ('25', u'25%'),
-            ('50', u'50%'),
-            ('75', u'75%'),
-            ('100', u'100%')],
+    pourcentArb = fields.Many2One(
+            'mae.code',
             string=u'Pourcentage',
             help=u'Pourcentage de canaux concernés',
             states={'invisible': Not(Bool(Eval('arbhaie')))},
-            sort=False,
-            on_change_with=['arbhaie'],
+            domain=[('code', '=', 'POURCENTARB')],
+            on_change_with=['arbhaie']
         )
 
     def on_change_with_pourcentArb(self):
@@ -1009,17 +1007,6 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.arbusteArb)):
             return None
 
-    plantationArb = fields.Boolean(
-            string=u'Plantation récente',
-            help=u'Plantation récente',
-            states={'invisible': Not(Bool(Eval('arbhaie')))},
-            on_change_with=['arbhaie'],
-        )
-    
-    def on_change_with_plantationArb(self):
-        if Bool(Eval(self.arbhaie)):
-            return False
-
     haieArb = fields.Boolean(
             string=u'Haies',
             help=u'Haies',
@@ -1042,9 +1029,9 @@ class diagno(ModelSQL, ModelView):
         if Bool(Eval(self.haieArb)):
             return None
 
-    lineaireHaie = fields.Char(
-            string=u'Linéaire',
-            help=u'Linéaire de haies',
+    lineaireHaie = fields.Integer(
+            string=u'Linéaire (ml)',
+            help=u'Linéaire de haies en mètre linéaire',
             states={'invisible': Not(Bool(Eval('haieArb')))},
             on_change_with=['haieArb'],
         )
@@ -1098,8 +1085,8 @@ class diagno(ModelSQL, ModelView):
             return None
 
     fonctionnelRig = fields.Boolean(
-            string=u'Fonctionnelle',
-            help=u'Fonctionnelles avec connexion',
+            string=u'Fonctionnelles',
+            help=u'Fonctionnelles (avec connexion)',
             states={'invisible': Not(Bool(Eval('rigole')))},
             on_change_with=['rigole'],
         )
@@ -1225,120 +1212,274 @@ class diagno(ModelSQL, ModelView):
             help=u'Nom de l\'espèce',
         )
 
-    #entomofaune
-    odonate = fields.Boolean(
-            string=u'Odonates',
-            help=u'Odonates',
-        )
-    especeOdo = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces d\'odonate',
-            states={'invisible': Not(Bool(Eval('odonate')))},
-            on_change_with=['odonate'],
+    #Entomofaunes
+    #odonates
+    odoSpecies = fields.One2Many(
+            'mae.diagnoodonate-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce',
+            help=u'Nom de l\'espèce',
         )
 
-    def on_change_with_especeOdo(self):
-        if Bool(Eval(self.odonate)):
-            return None
-
-    criquet = fields.Boolean(
-            string=u'Sauterelles/Criquets',
-            help=u'Sauterelles/Criquets',
-        )
-    especeSau = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces de sauterelles et de criquets',
-            states={'invisible': Not(Bool(Eval('criquet')))},
-            on_change_with=['criquet'],
+    #sauterelles criquets
+    sauteSpecies = fields.One2Many(
+            'mae.diagnosauterelle-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce',
+            help=u'Nom de l\'espèce',
         )
 
-    def on_change_with_especeSau(self):
-        if Bool(Eval(self.criquet)):
-            return None
-
-    coleoptere = fields.Boolean(
-            string=u'Coléoptère',
-            help=u'Coléoptère (carabes)',
-        )
-    especeCol = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces de coléoptères',
-            states={'invisible': Not(Bool(Eval('coleoptere')))},
-            on_change_with=['coleoptere'],
+    #coleoptère
+    coleoSpecies = fields.One2Many(
+            'mae.diagnocoleo-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce',
+            help=u'Nom de l\'espèce',
         )
 
-    def on_change_with_especeCol(self):
-        if Bool(Eval(self.coleoptere)):
-            return None
-
-    guepe = fields.Boolean(
-            string=u'Guêpes, Mouches',
-            help=u'Guêpes, Mouches',
-        )
-    especeGue = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces de Guêpes, de Mouches',
-            states={'invisible': Not(Bool(Eval('guepe')))},
-            on_change_with=['guepe'],
+    #guepe mouche
+    guepeSpecies = fields.One2Many(
+            'mae.diagnoguepe-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce',
+            help=u'Nom de l\'espèce',
         )
 
-    def on_change_with_especeGue(self):
-        if Bool(Eval(self.guepe)):
-            return None
-
-    papillon = fields.Boolean(
-            string=u'Papillons',
-            help=u'Papillons',
-        )
-    especePap = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces de papillons',
-            states={'invisible': Not(Bool(Eval('papillon')))},
-            on_change_with=['papillon'],
+    #papillon
+    lepidoSpecies = fields.One2Many(
+            'mae.diagnolepido-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce',
+            help=u'Nom de l\'espèce',
         )
 
-    def on_change_with_especePap(self):
-        if Bool(Eval(self.papillon)):
-            return None
-
-    araignee = fields.Boolean(
-            string=u'Araignées',
-            help=u'Araignées',
-        )
-    especeAra = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces d\'araignées',
-            states={'invisible': Not(Bool(Eval('araignee')))},
-            on_change_with=['araignee'],
+    #araignée
+    araigneeSpecies = fields.One2Many(
+            'mae.diagnoaraignee-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce',
+            help=u'Nom de l\'espèce',
         )
 
-    def on_change_with_especeAra(self):
-        if Bool(Eval(self.araignee)):
-            return None
-
-    aquatiq = fields.Boolean(
-            string=u'Insectes aquatiques',
-            help=u'Insectes aquatiques',
+    #aquatique
+    aquatiqueSpecies = fields.One2Many(
+            'mae.diagnoaquatique-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce',
+            help=u'Nom de l\'espèce',
         )
-    especeAqu = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces d\'insectes aquatiques',
-            states={'invisible': Not(Bool(Eval('aquatiq')))},
-            on_change_with=['aquatiq'],
-        )
-
-    def on_change_with_especeAqu(self):
-        if Bool(Eval(self.aquatiq)):
-            return None
-
-    observationEnto = fields.Text(
+    
+    #observations faune
+    observation = fields.Text(
             string=u'Observations',
-            help=u'Observations entomofaune',
+            help=u'Observations diagnostic faunistique',
         )
 
+class diagnoOdo(ModelSQL, ModelView):
+    u'diagno - Odonate'
+    __name__ = 'mae.diagnoodonate-taxinomie.taxinomie'
+    _table = 'diagno_odoante_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 11), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoSaute(ModelSQL, ModelView):
+    u'diagno - Sauterelle - Criquets'
+    __name__ = 'mae.diagnosauterelle-taxinomie.taxinomie'
+    _table = 'diagno_saute_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 12), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoColeo(ModelSQL, ModelView):
+    u'diagno - Coléoptères'
+    __name__ = 'mae.diagnocoleo-taxinomie.taxinomie'
+    _table = 'diagno_coleo_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 13), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoGuepe(ModelSQL, ModelView):
+    u'diagno - Guêpes'
+    __name__ = 'mae.diagnoguepe-taxinomie.taxinomie'
+    _table = 'diagno_guepe_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 14), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoLepido(ModelSQL, ModelView):
+    u'diagno - Lépidoptères'
+    __name__ = 'mae.diagnolepido-taxinomie.taxinomie'
+    _table = 'diagno_lepido_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 15), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoAraignee(ModelSQL, ModelView):
+    u'diagno - Araignées'
+    __name__ = 'mae.diagnoaraignee-taxinomie.taxinomie'
+    _table = 'diagno_araignee_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 16), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoAquatique(ModelSQL, ModelView):
+    u'diagno - Insectes aquatiques'
+    __name__ = 'mae.diagnoaquatique-taxinomie.taxinomie'
+    _table = 'diagno_aquatique_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 17), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
 
 class diagnoFlorePat(ModelSQL, ModelView):
-    'diagno - Flore patrimoniale'
+    u'diagno - Flore patrimoniale'
     __name__ = 'mae.diagnoflopat-taxinomie.taxinomie'
     _table = 'diagno_florepat_rel'
 
@@ -1355,7 +1496,17 @@ class diagnoFlorePat(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 'patri')],
+            domain=[('code', '=', 6), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    prospection = fields.Many2One(
+            'mae.code',
+            string=u'Prospection',
+            help=u'Prospection',
+            domain=[('code', '=', 'PROSPECTION')],            
         )
     abondance = fields.Selection(
             _ABONDANCE,
@@ -1367,9 +1518,36 @@ class diagnoFlorePat(ModelSQL, ModelView):
             string=u'Observations',
             help=u'Observations',
         )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoNatureOcc(ModelSQL, ModelView):
+    u'diagno - nature occupation des sols'
+    __name__ = 'mae.diagno-mae.code'
+    _table = 'diagno_natureocc_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    natureOcc = fields.Many2One(
+            'mae.code',
+            string=u'Occupation',
+            help=u'Nature d\'occupation des sols',
+            domain=[('code', '=', 'NATUREOCC')],
+        )       
+    observationOcc = fields.Text(
+            string=u'Observations',
+            help=u'Observations',                        
+        )
 
 class diagnoAutre(ModelSQL, ModelView):
-    'diagno - Autres especes'
+    u'diagno - Autres especes'
     __name__ = 'mae.diagnoaut-taxinomie.taxinomie'
     _table = 'diagno_autre_rel'
 
@@ -1386,7 +1564,17 @@ class diagnoAutre(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 'autre')],
+            domain=[('code', '=', 7), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    prospection = fields.Many2One(
+            'mae.code',
+            string=u'Prospection',
+            help=u'Prospection',
+            domain=[('code', '=', 'PROSPECTION')],            
         )
     abondance = fields.Selection(
             _ABONDANCE,
@@ -1398,9 +1586,13 @@ class diagnoAutre(ModelSQL, ModelView):
             string=u'Observations',
             help=u'Observations',
         )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
 
 class diagnoAvifaune(ModelSQL, ModelView):
-    'diagno - Avifaune'
+    u'diagno - Avifaune'
     __name__ = 'mae.diagnoavi-taxinomie.taxinomie'
     _table = 'diagno_avifaune_rel'
 
@@ -1417,58 +1609,110 @@ class diagnoAvifaune(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 'avifau')],
+            domain=[('code', '=', 8), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
         )
-    abondance = fields.Selection(
-            _ABONDANCE,
-            string=u'Nombre',
-            help=u'Nombre d\'individus ou de couples',
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    prospection = fields.Many2One(
+            'mae.code',
+            string=u'Prospection',
+            help=u'Prospection',
+            domain=[('code', '=', 'PROSPECTION')],            
+        )
+    obspot = fields.Selection(
+            [('observee', u'Observée'),
+             ('potentielle', u'Potentielle')],
+            string=u'Espèce',
+            help=u'Espèce Observée/Espèce Potentielle',
             select=1,
+            sort=False,
         )
+    volpose = fields.Selection(
+            [('envol', u'En vol'),
+             ('pose', u'Posée')],
+            string=u'Vol/Pose',
+            help=u'Espèce en vol/Espèce posée',
+            on_change_with=['obspot'],
+            states={'invisible': ~Eval('obspot').in_(['observee'])},
+            select=1,
+            sort=False,
+        )
+
+    def on_change_with_volpose(self):
+        if self.obspot is None:
+            return None
+
+    effectif = fields.Many2One(
+            'mae.code',
+            string=u'Effectif',
+            help=u'Classe d\'abondance',
+            domain=[('code', '=', 'EFFECTIF')],
+            on_change_with=['obspot'],
+            states={'invisible': ~Eval('obspot').in_(['observee'])},
+        )
+
+    def on_change_with_effectif(self):
+        if self.obspot is None:
+            return None
+
+    statut = fields.Selection(
+            [('C', u'Certain'),
+             ('P', u'Probable'),
+             ('PO', u'Possible'),
+             ('N', u'Non nicheur')],
+            string=u'Statut',
+            help=u'Statu de reproduction',
+            on_change_with=['obspot'],
+            states={'invisible': ~Eval('obspot').in_(['observee'])},
+            select=1,
+            sort=False,
+        )
+
+    def on_change_with_statut(self):
+        if self.obspot is None:
+            return None
+
     ethologie = fields.Selection(
             _ETHOLOGIE,
             string=u'Éthologie',
             help=u'Éthologie : comportement de l\'espèce',
+            on_change_with=['obspot'],
+            states={'invisible': ~Eval('obspot').in_(['potentielle'])},
             select=1,
             sort=False,
         )
-    etatActuel = fields.Selection(
-            [('0', '0'),
-             ('+', '+'),
-             ('++', '++')],
-            string=u'État actuel',
-            help=u'État actuel',
-            on_change_with=['ethologie'],
-            states={'invisible': ~Eval('ethologie').in_(['repro', 'alim'])},
-            sort=False,
+
+    def on_change_with_ethologie(self):
+        if self.obspot is None:
+            return None    
+
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
         )
 
-    def on_change_with_etatActuel(self):
-        if self.ethologie is None:
-            return None
-
-    etatPotentiel = fields.Selection(
-            [('0', '0'),
-             ('+', '+'),
-             ('++', '++')],
-            string=u'État potentiel',
-            help=u'État potentiel',
-            on_change_with=['ethologie'],
-            states={'invisible': ~Eval('ethologie').in_(['repro', 'alim'])},
-            sort=False,
+class diagnomamPresence(ModelSQL, ModelView):
+    'diagnomam - code presence'
+    __name__ = 'mae.diagnomam-mae.code'
+    _table = 'mae_diagnomam_code_presence_rel'
+    diagnomam = fields.Many2One(
+            'mae.diagnomam-taxinomie.taxinomie',
+            string=u'diagnomam',
+            ondelete='CASCADE',
+            required=True
         )
-
-    def on_change_with_etatPotentiel(self):
-        if self.ethologie is None:
-            return None
-    
-    observation = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
+    code = fields.Many2One(
+            'mae.code',
+            string=u'code',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 'PRESENCE')]
         )
 
 class diagnoMammi(ModelSQL, ModelView):
-    'diagno - Mammifere'
+    u'diagno - Mammifere'
     __name__ = 'mae.diagnomam-taxinomie.taxinomie'
     _table = 'diagno_mammi_rel'
 
@@ -1485,21 +1729,51 @@ class diagnoMammi(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 'mammi')],
+            domain=[('code', '=', 9), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))]
         )
-    indice = fields.Text(
-            string=u'Indice',
-            help=u'Indice',
-            select=1,
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
         )
-    observation = fields.Text(
-            string=u'Observations',
-            help=u'Observations mammifère',
+    prospection = fields.Many2One(
+            'mae.code',
+            string=u'Prospection',
+            help=u'Prospection',
+            domain=[('code', '=', 'PROSPECTION')],            
+        )
+    indice = fields.Boolean(
+            string=u'Indice de présence',
+            help=u'Cocher si l\'espèce est susceptible d\'être présente'
+        )
+    presence = fields.One2Many(
+            'mae.diagnomam-mae.code',
+            'diagnomam',
+            string=u'Présence',
+            help=u'Présence',
+            states={'invisible': Not(Bool(Eval('indice')))},
+        )
+    effectif = fields.Many2One(
+            'mae.code',
+            string=u'Effectif',
+            domain=[('code', '=', 'EFFECTIF')]
         )
     photo = fields.Binary(
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id) 
 
 class diagnoBatracien(ModelSQL, ModelView):
     'diagno - Batracien - Reptile'
@@ -1519,35 +1793,42 @@ class diagnoBatracien(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 'batrep')],
+            domain=[('code', '=', 10), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    prospection = fields.Many2One(
+            'mae.code',
+            string=u'Prospection',
+            help=u'Prospection',
+            domain=[('code', '=', 'PROSPECTION')],            
         )
     ethologie = fields.Selection(
-            [('repro', u'Reproduction'),
-             ('habitat', u'Habitat')],
+            [('vue', u'Vue'),
+             ('entendue', u'Entendue'),
+             ('ponte', u'Ponte'),
+             ('autre', u'Autre')],
             string=u'Éthologie',
             help=u'Éthologie : comportement de l\'espèce',
             select=1,
             sort=False,
         )
-    etatActuel = fields.Selection(
-            [('0', '0'),
-             ('+', '+'),
-             ('++', '++')],
-            string=u'État actuel',
-            help=u'État actuel',
-            sort=False,
+    reproduction = fields.Many2One(
+            'mae.code',
+            string=u'Reproduction',
+            help=u'Reproduction',
+            domain=[('code', '=', 'REPRODUCTION')],            
         )
-    etatPotentiel = fields.Selection(
-            [('0', '0'),
-             ('+', '+'),
-             ('++', '++')],
-            string=u'État potentiel',
-            help=u'État potentiel',
-            sort=False,
-        )    
-    observation = fields.Text(
-            string=u'Observations',
-            help=u'Observations des batraciens et des reptiles',
+    effectif = fields.Many2One(
+            'mae.code',
+            string=u'Effectif',
+            domain=[('code', '=', 'EFFECTIF')]
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
         )
 
 class diagnoParcelle(ModelSQL):
@@ -1559,33 +1840,6 @@ class diagnoParcelle(ModelSQL):
     parcelle = fields.Many2One('cadastre.parcelle', 'parcelle',
         ondelete='CASCADE', required=True)
 
-class diagnoCloture(ModelSQL):
-    'diagno - Cloture'
-    __name__ = 'mae.diagno-mae.cloture'
-    _table = 'diagno_cloture_rel'
-    diagno = fields.Many2One('mae.diagno', 'diagno', ondelete='CASCADE',
-            required=True)
-    code = fields.Many2One('mae.code', 'code',
-        ondelete='CASCADE', required=True)
-
-class diagnoUtilisation(ModelSQL):
-    'diagno - Utilisation'
-    __name__ = 'mae.diagno-mae.utilisation'
-    _table = 'diagno_utilisation_rel'
-    diagno = fields.Many2One('mae.diagno', 'diagno', ondelete='CASCADE',
-            required=True)
-    code = fields.Many2One('mae.code', 'code',
-        ondelete='CASCADE', required=True)
-
-class diagnoEntretien(ModelSQL):
-    'diagno - Entretien'
-    __name__ = 'mae.diagno-mae.entretien'
-    _table = 'diagno_entretien_rel'
-    diagno = fields.Many2One('mae.diagno', 'diagno', ondelete='CASCADE',
-            required=True)
-    code = fields.Many2One('mae.code', 'code',
-        ondelete='CASCADE', required=True)
-
 class maeProtection(ModelSQL):
     'mae - protectionArea'
     __name__ = 'mae.diagno-protection.area'
@@ -1595,8 +1849,8 @@ class maeProtection(ModelSQL):
     status = fields.Many2One('protection.area', 'status',
         ondelete='CASCADE', required=True)
 
-class mae(ModelSQL, ModelView):
-    u"""mae"""
+class mae(Mapable, ModelSQL, ModelView):
+    u'mae'
     __name__ = 'mae.mae'
     _rec_name = 'name'
 
@@ -1605,26 +1859,41 @@ class mae(ModelSQL, ModelView):
             help = u'PAC Ilot number',
             required=True,
             states=STATES,
-            depends=DEPENDS
+            depends=['party', 'commune'],
+            on_change_with=['party', 'commune']
+            
+        )
+
+    def on_change_with_name(self):
+        if self.party is not None and self.commune is not None:
+            Seq = Pool().get('mae.mae')
+            seq = str("%05d" % Seq(1).id)
+            return "%s-%s-%s-%s" % (str(self.commune.insee), str("%05d" % int(self.party.code)), datetime.now().year, seq)        
+        else:
+            return None
+
+    num = fields.Char(
+            string=u'Usual Ilot',
+            help=u'Usual Ilot number'
         )
     party = fields.Many2One(
             'party.party',
             string=u'Exploitant',
-            help=u'Nom de l\'exploitant'
+            help=u'Nom de l\'exploitant',
+            domain=[('categories', '=', 'Exploitant')]
         )
-    typo = fields.Selection([
-            ('marais', u'Marais'),
-            ('valleealluviale', u'Vallée alluviale'),
-            ('plainecerealiere', u'Plaine céréalière')],
-            string=u'',
-            help=u''
+    typo = fields.Many2One(
+            'mae.code',
+            string=u'Type',
+            help=u'Type de milieu concerné',
+            domain=[('code', '=', 'TYPO')]
         )           
     commune = fields.Many2One(
-            'town_fr.town_fr',
+            'commune.commune',
             string='Commune',
             help='Commune',
             required=True,
-            ondelete='RESTRICT'
+            ondelete='RESTRICT',
         )
     parcelle = fields.One2Many(
             'cadastre.parcelle',
@@ -1634,7 +1903,7 @@ class mae(ModelSQL, ModelView):
         )
     surface = fields.Numeric(            
             string='Surface',
-            help='Surface',
+            help='Surface (ha)',
         )
     status = fields.Many2Many(
             'mae.diagno-protection.area',
@@ -1647,22 +1916,50 @@ class mae(ModelSQL, ModelView):
             'mae.diagno',
             'mae',
             string='Diagnostic',
+            help='Diagnostic',
         )
-
+    nomterritoire = fields.Char(
+            string=u'Nom Territoire',
+            help=u'Nom du Territoire'
+        )
+    codeterritoire = fields.Char(
+            string=u'Code Territoire',
+            help=u'Code du Territoire'
+        )
     active = fields.Boolean(
-            string=u'Active'
-        ) 
-
-    situation_map = fields.Binary('Situation map', filename='situation_filename')
-    situation_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_sm_filename')
-
-    image_map = fields.Binary('Image map', filename='image_filename')
-    image_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['name']), '_get_im_filename')      
+            string=u'Active',
+            help=u'Active'
+        )
+    observation = fields.Text(
+            string=u'Observations',
+            help=u'Observations',
+        )
 
     @staticmethod
     def default_active():
         return True
-        
+
+    geom = fields.MultiPolygon(
+            string = u'Geometry',
+            srid = 2154,
+            help = u'Géométrie multipolygonale',            
+            readonly = False,           
+        )
+    mae_situation = fields.Binary(
+            string=u'Situation map',
+            help=u'Situation map',
+        )
+    mae_image = fields.Binary(
+            string=u'Image map',
+            help=u'Image map',            
+        )
+
+    def get_image(self, ids):
+        return self._get_image('mae_image.qgs', 'carte')
+
+    def get_map(self, ids):
+        return self._get_image('mae_situation.qgs', 'carte') 
+       
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.1)
 
@@ -1675,134 +1972,74 @@ class mae(ModelSQL, ModelView):
             'mae_edit': {},
         })
     
-    def _get_sm_filename(self, ids):
-        """Situation map filename"""
-        return '%s - Situation map.jpg' % self.name
-
-    def _get_im_filename(self, ids):
-        """Image map filename"""
-        return '%s - Image map.jpg' % self.name
-
     @classmethod
     @ModelView.button_action('mae.report_mae_edit')
     def mae_edit(cls, ids):
-        """Open in QGis button"""
+        u'Open in QGis button'
         pass
-
-    @staticmethod
-    def default_active():
-        return True
 
     @classmethod
     @ModelView.button
     def situation_map_gen(cls, records):
-        """Render the situation map"""        
         for record in records:
-
-            town, envelope_town, area_town = get_as_epsg4326([record.commune.contour])
-
-            # Récupère l'étendu de la zone de mae            
-            section, envelope_section, area_section = get_as_epsg4326([obj.geom for obj in record.section])
-            lieudit, envelope_lieudit, area_lieudit = get_as_epsg4326([obj.geom for obj in record.lieudit])
-            parcelle, envelope_parcelle, area_parcelle = get_as_epsg4326([obj.geom for obj in record.parcelle])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = bbox_aspect(envelope_section, 640, 480)  
-
-            if envelope is None:
+            if record.name is None:
                 continue
-
-            # Map title
-            title = u'Plan de situation\n'
-            title += date.today().strftime('%02d/%02m/%Y')
-                               
-            m = MapRender(1024, 768, envelope, True)
-            # Ajoute le fond de carte
-            m.add_bg()                     
-
-            # Ajoute le contour de la commune
-            m.plot_geom(town[0], None, u'Commune', color=(0, 0, 1, 1), bgcolor=(0, 0, 0, 0))
-                
-            # Ajoute la section
-            m.plot_geom(section[0], None, u'Section', color=(0, 0, 1, 0.3), bgcolor=(0, 0, 1, 0.3))
-
-            # Ajoute le lieud dit
-            m.plot_geom(lieudit[0], None, u'Lieu-dit', color=(0, 1, 1, 0.3), bgcolor=(0, 1, 1, 0.3))
-
-            # Ajoute la pracelle
-            m.plot_geom(parcelle[0], record.name, u'Parcelle', color=cls.COLOR, bgcolor=cls.BGCOLOR) 
-            
-            data_nl = m.render()
-            m.plot_legend()
-            m.plot_compass()
-            m.plot_scaling()
-            m.plot_title(title)
-            data = m.render()
-            cls.write([record], {'situation_map': buffer(data)})
+            cls.write([record], {'mae_situation': cls.get_map(record, 'map')})
 
     @classmethod
     @ModelView.button
     def image_map_gen(cls, records):
-        """Render the image map"""        
         for record in records:
-            # Récupère l'étendu de la zone de mae            
-            parcelle, _envelope, _area = get_as_epsg4326([obj.geom for obj in record.parcelle])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]  
+            if record.name is None:
+                continue
+            cls.write([record], {'mae_image': cls.get_image(record, 'map')})
 
-            if envelope is None:
-                continue                                           
-            
-             # Map title
-            title = u'Plan local\n'
-            title += date.today().strftime('%02d/%02m/%Y')
-
-
-            m = MapRender(1024, 768, envelope, True)
-            # Ajoute le fond de carte
-            m.add_bg()            
-
-            # Ajoute la pracelle
-            m.plot_geom(parcelle[0], record.name, u'Parcelle', color=cls.COLOR, bgcolor=cls.BGCOLOR) 
-            
-            data_nl = m.render()
-            m.plot_legend()
-            m.plot_compass()
-            m.plot_scaling()
-            m.plot_title(title)
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})
 
 class maeQGis(QGis):
     __name__ = 'mae.mae.qgis'
-    FIELDS = OrderedDict([
-        ('parcelle', None),
-    ])
     TITLES = {
-        'mae.mae': u'mae',
-        'cadastre.parcelle': u'Parcelle',        
+        'mae.mae': u'mae',        
     }
 
 class taxinomie:
     __metaclass__ = PoolMeta
     __name__ = 'taxinomie.taxinomie'
-    _rec_name = 'commun'
+    _rec_name = 'nom_valide'
 
-    code = fields.Selection(
-            _CODE,
+    code = fields.Many2One(
+            'mae.code',
             string=u'Code',
             help=u'Code',
-            sort=False,
+            domain=[('code', '=', 'TAX')]
         )
-    commun = fields.Char(            
+    commun = fields.Char(
             string=u'Nom commun',
             help=u'Nom commun',
+        )
+    users_id = fields.Many2Many(
+            'taxinomie.taxinomie-res.user',
+            'taxinomie',
+            'user',
+            string = u'Espèce limitée aux utilisateurs connectés',            
+            help = u'Espèce faisant partie de la liste restreinte pour l\'utilisateur connecté',
+        )
+
+
+class taxinomieUser(ModelSQL):
+    'Taxinomie - User'
+    __name__ = 'taxinomie.taxinomie-res.user'
+    _table = 'taxinomie_user_rel'
+
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            'taxon',
+            ondelete='CASCADE',
+            required=True)
+    user = fields.Many2One(
+            'res.user',
+            'user',
+            ondelete='CASCADE',
+            required=True
         )
 
 class cadastre:

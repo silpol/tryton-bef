@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <tree string="Diagnostic - Taxinomie - Batraciens - Reptiles">
     <field name="taxinomie"/>
+    <field name="prospection"/>
     <field name="ethologie"/>
-    <field name="etatActuel"/>
-    <field name="etatPotentiel"/>
-    <field name="observation"/>
+    <field name="reproduction"/>
+    <field name="effectif"/>
 </tree>
 

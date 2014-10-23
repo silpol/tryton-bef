@@ -260,7 +260,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_form"/>
         </record>
         <record model="ir.action.report" id="site_work">
-            <field name="name">Unité de Gestion</field>
+            <field name="name">Fiche de chantier</field>
             <field name="model">site.work</field>
             <field name="report_name">site.work</field>
             <field name="report">tsr_site/fiche.odt</field>            

@@ -27,10 +27,8 @@ def register():
         diametre,
         emplacement,
         evol_emplacement,
-        EmplacementAddress,
         plantation,
-        bilan,
-        paysager,        
+        bilan,        
         taxinomie,
         commune,
         arbre,
@@ -41,6 +39,7 @@ def register():
         synthese1,
         synthese2,
         synthese3,
+        synthese4,
         preconisation,
         rapport_produit,
         CheckArbreResult,
@@ -48,6 +47,7 @@ def register():
         Opensynthese1Start,
         Opensynthese2Start,
         Opensynthese3Start,
+        Opensynthese4Start,
         module='cg', type_='model')
         
     Pool.register(
@@ -62,4 +62,5 @@ def register():
         Opensynthese1,
         Opensynthese2,
         Opensynthese3,
+        Opensynthese4,
         module='cg', type_='wizard')

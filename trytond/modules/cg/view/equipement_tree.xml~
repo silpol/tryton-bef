@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<tree string="equipement">
+<tree string="Équipement">
     <field name="code" />
     <field name="name" />
     <field name="coder" />

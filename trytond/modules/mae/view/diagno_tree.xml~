@@ -6,14 +6,16 @@
     <field name="owner" />
     <field name="parcelle" />
     <field name="typemae" />
+    <field name="territoire" />
     <field name="nivexpert" />
     <field name="nivfinal" />
+    <field name="intecolo" />
+    <field name="anneengag"/>
+    <field name="nomterritoire"/>
     <field name="observation" />
     <field name="paturage" />
     <field name="fauche" />
-    <field name="occupation" />
-    <field name="cloture" />
-    <field name="utilisation" />
-    <field name="entretien" />   
+    <field name="presence" />
+    <field name="engrais" />   
     <field name="active" /> 
 </tree>

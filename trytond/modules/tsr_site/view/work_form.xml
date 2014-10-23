@@ -14,13 +14,11 @@ this repository contains the full copyright notices and license terms. -->
     <field name="sequence"/>
     <label name="company"/>
     <field name="company"/>
-    <label name="party"/>
-    <field name="party"/>
     <label name="car"/>
     <field name="car"/>
     <notebook colspan="6">
         <page string="General" id="general" col="6">
-            <label name="timesheet_available"/>
+            <label name="timesheet_available" colspan="2"/>
             <field name="timesheet_available"/>
             <newline/>
             <label name="effort"/>
@@ -30,8 +28,11 @@ this repository contains the full copyright notices and license terms. -->
             <field name="hours" widget="float_time" float_time="company_work_time"/>
             <label name="total_effort"/>
             <field name="total_effort" widget="float_time" float_time="company_work_time"/>
-            <newline/>            
-            <field name="comment" colspan="6"/>
+            <newline/>
+            <label name="comment"/>          
+            <field name="comment" colspan="5"/>
+            <label name="precaution"/>          
+            <field name="precaution" colspan="5"/>
             <group col="4" colspan="6" id="state_buttons">
                 <group col="2" colspan="2" id="state">
                     <label name="state"/>
@@ -40,6 +41,10 @@ this repository contains the full copyright notices and license terms. -->
                 <group col="20" colspan="2" id="buttons">
                 </group>
             </group>
+        </page>
+        <page string="Parties" id="parties"
+              states="{'invisible': Not(Equal(Eval('type'), 'site'))}">              
+              <field name="parties" colspan="6"/>
         </page>
         <page string="Children" id="children"
               states="{'invisible': Not(Equal(Eval('type'), 'site'))}">
@@ -59,9 +64,8 @@ this repository contains the full copyright notices and license terms. -->
                 </page>
             </notebook>
         </page>
-        <page string="Site" id="site">
-            <label name="site" />
-            <field name="site" />
+        <page string="Sites" id="sites" states="{'invisible': Not(Equal(Eval('type'), 'task'))}">
+            <field name="site" colspan="6"/>
         </page>
     </notebook>
 </form>

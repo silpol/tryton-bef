@@ -10,7 +10,6 @@
     <field name="situation" />
     <field name="fosse" />
     <field name="essence" />
-    <field name="motif" />
     <field name="conduite" />
     <field name="evolution" />                    
 </tree>

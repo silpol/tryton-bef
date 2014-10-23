@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<tree string="Évolution des arbres">
+<tree string="Évolution des arbres" editable="bottom">
+    <field name="arbre" /> 
     <field name="date" />                    
     <field name="mecanique" />
     <field name="vigueur" />
@@ -18,5 +19,5 @@
     <field name="surfacepiedarbre" />
     <field name="arrosage" />
     <field name="environnement" />
-    <field name="bilan" />                                        
+    <field name="bilan" />                                      
 </tree>

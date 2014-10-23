@@ -1,16 +1,25 @@
 <?xml version="1.0"?>
 <form string="Diagnostic - Taxinomie - Batraciens - Reptiles">
-    <label name="taxinomie"/>
-    <field name="taxinomie"/>
-    <newline/>
-    <label name="ethologie"/> 
-    <field name="ethologie"/>
-    <newline/>
-    <label name="etatActuel"/> 
-    <field name="etatActuel"/>
-    <label name="etatPotentiel"/> 
-    <field name="etatPotentiel"/>
-    <newline/>
-    <label name="observation"/> 
-    <field name="observation" colspan="3"/>
+    <notebook>
+        <page string="Espèce" id="espece" col="4">
+            <label name="taxinomie"/>
+            <field name="taxinomie"/>
+            <label name="liste"/> 
+            <field name="liste"/>
+            <label name="prospection"/> 
+            <field name="prospection" widget="selection"/>
+            <label name="ethologie"/> 
+            <field name="ethologie"/>
+            <label name="reproduction"/> 
+            <field name="reproduction" widget="selection"/>
+            <label name="effectif"/> 
+            <field name="effectif" widget="selection"/>
+            <newline/>
+            <label name="observation"/> 
+            <field name="observation" colspan="3"/>
+        </page>
+        <page string="Photo" id="photo">
+            <field name="photo" widget="image" img_width="800" img_height="600"/>                                                                
+        </page> 
+    </notebook>
 </form>

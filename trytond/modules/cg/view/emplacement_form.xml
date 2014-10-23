@@ -2,6 +2,24 @@
 <form string="Emplacement" col="2">
     <notebook colspan="6">
         <page string="Général" id="general">
+            <group id="group_ug0" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>
+            <label name="id"/>
+            <field name="id"/>
             <label name="code"/>
             <field name="code"/> 
             <label name="station"/>
@@ -10,20 +28,64 @@
             <field name="coteoppose"/>
             <label name="active"/>
             <field name="active"/>
-            <label name="x"/>
-            <field name="x"/>                                                                                
-            <label name="y"/>
-            <field name="y"/>
-            <label name="adresse"/>
-            <field name="adresse" colspan="3"/>
+            <label name="numpostprec"/>
+            <field name="numpostprec"/>
         </page>
-        <page string="Évolutions" id="evol">                            
+        <page string="Évolutions" id="evol">
+            <group id="group_ug1" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>                          
             <field name="evolution"/>
         </page>
-        <page string="Arbres" id="arbres">                            
+        <page string="Arbres" id="arbres">
+            <group id="group_ug2" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>                         
             <field name="arbre"/>
         </page>
-        <page string="Map" id="map" col="2">                            
+        <page string="Map" id="map" col="2">
+            <group id="group_ug3" colspan="4" string="Unité de gestion">
+                <label name="idug"/>
+                <field name="idug"/>
+                <label name="equipementug"/>
+                <field name="equipementug"/>
+                <label name="refug"/>
+                <field name="refug"/>
+                <label name="rueug"/>
+                <field name="rueug"/>
+                <label name="debug"/>
+                <field name="debug"/>
+                <label name="finug"/>
+                <field name="finug"/>
+                <label name="communeug"/>
+                <field name="communeug" colspan="3"/>
+            </group>                          
             <field name="emplacement_image" colspan="1" widget="image" img_width="640" img_height="480"/>
             <field name="emplacement_map" colspan="1" widget="image" img_width="640" img_height="480"/>
             <button string="Edit" name="emplacement_edit" icon="tryton-executable" />

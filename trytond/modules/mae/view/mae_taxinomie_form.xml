@@ -34,15 +34,16 @@
                     <label name="habitat" />
                     <field name="habitat" widget="selection" />
                 </group>
-                <group string="Ligue de Protection des Oiseaux" id="group_lpo" colspan="4">
+                <group string="Ligue de Protection des Oiseaux" id="group_lpo" col="8" colspan="4">
                     <label name="lb_nom" />
                     <field name="lb_nom" />
                     <label name="nom_vern" />
                     <field name="nom_vern" />
-                    <label name="code"/>
-                    <field name="code"/>
                     <label name="commun"/>
                     <field name="commun"/>
+                    <label name="code"/>
+                    <field name="code" widget="selection"/>
+                    <field name="users_id" colspan="8"/>
                 </group>
             </page>
     </xpath>                   

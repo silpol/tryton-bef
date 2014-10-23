@@ -73,19 +73,69 @@
           <field name="act_window" ref="act_mae_diagnoflopat_taxo_rel_form"/>
         </record>
 
+        <!-- nature occupation des sols -->
+        <record model="ir.ui.view" id="mae_diagno_natureocc_rel_view_tree">
+            <field name="model">mae.diagno-mae.code</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagno_natureocc_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagno_natureocc_rel_view_form">
+            <field name="model">mae.diagno-mae.code</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagno_natureocc_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagno_natureocc_rel_form">
+            <field name="name">Nature Occupation Sol</field>
+            <field name="res_model">mae.diagno-mae.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagno_natureocc_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagno_natureocc_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagno_natureocc_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagno_natureocc_rel_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_diagno_natureocc_rel_view_form"/>
+            <field name="act_window" ref="act_mae_diagno_natureocc_rel_form"/>
+        </record>
+
+        <!-- mammifère indice présence -->
+        <record model="ir.ui.view" id="mae_diagnomam_presence_rel_view_tree">
+            <field name="model">mae.diagnomam-mae.code</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnomam_presence_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnomam_presence_rel_view_form">
+            <field name="model">mae.diagnomam-mae.code</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnomam_presence_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnomam_presence_rel_form">
+            <field name="name">Nature Occupation Sol</field>
+            <field name="res_model">mae.diagnomam-mae.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnomam_presence_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnomam_presence_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnomam_presence_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnomam_presence_rel_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mae_diagnomam_presence_rel_view_form"/>
+            <field name="act_window" ref="act_mae_diagnomam_presence_rel_form"/>
+        </record>
+
         <!-- Autres espèces -->
         <record model="ir.ui.view" id="mae_diagnoaut_taxo_rel_view_tree">
             <field name="model">mae.diagnoaut-taxinomie.taxinomie</field>
             <field name="type">tree</field>
             <field name="name">mae_diagno_taxo_tree</field>
         </record>
-
         <record model="ir.ui.view" id="mae_diagnoaut_taxo_rel_view_form">
             <field name="model">mae.diagnoaut-taxinomie.taxinomie</field>
             <field name="type">form</field>
             <field name="name">mae_diagno_taxo_form</field>
         </record>
-
         <record model="ir.action.act_window" id="act_mae_diagnoaut_taxo_rel_form">
             <field name="name">Autres espèces</field>
             <field name="res_model">mae.diagnoaut-taxinomie.taxinomie</field>
@@ -107,13 +157,11 @@
             <field name="type">tree</field>
             <field name="name">mae_diagnoavi_taxo_tree</field>
         </record>
-
         <record model="ir.ui.view" id="mae_diagnoavi_taxo_rel_view_form">
             <field name="model">mae.diagnoavi-taxinomie.taxinomie</field>
             <field name="type">form</field>
             <field name="name">mae_diagnoavi_taxo_form</field>
         </record>
-
         <record model="ir.action.act_window" id="act_mae_diagnoavi_taxo_rel_form">
             <field name="name">Avifaune</field>
             <field name="res_model">mae.diagnoavi-taxinomie.taxinomie</field>
@@ -129,19 +177,199 @@
           <field name="act_window" ref="act_mae_diagnoavi_taxo_rel_form"/>
         </record>
 
+        <!-- Odonates -->
+        <record model="ir.ui.view" id="mae_diagnoodonate_taxo_rel_view_tree">
+            <field name="model">mae.diagnoodonate-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnoodonate_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnoodonate_taxo_rel_view_form">
+            <field name="model">mae.diagnoodonate-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnoodonate_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnoodonate_taxo_rel_form">
+            <field name="name">Odonates</field>
+            <field name="res_model">mae.diagnoodonate-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoodonate_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoodonate_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoodonate_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoodonate_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoodonate_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoodonate_taxo_rel_form"/>
+        </record>
+
+        <!-- Sauterelles criquets -->
+        <record model="ir.ui.view" id="mae_diagnosauterelle_taxo_rel_view_tree">
+            <field name="model">mae.diagnosauterelle-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnosauterellecriquet_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnosauterelle_taxo_rel_view_form">
+            <field name="model">mae.diagnosauterelle-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnosauterellecriquet_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnosauterelle_taxo_rel_form">
+            <field name="name">Sauterelles - Criquets</field>
+            <field name="res_model">mae.diagnosauterelle-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnosauterelle_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnosauterelle_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnosauterelle_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnosauterelle_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnosauterelle_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnosauterelle_taxo_rel_form"/>
+        </record>
+
+        <!-- Coléoptères -->
+        <record model="ir.ui.view" id="mae_diagnocoleo_taxo_rel_view_tree">
+            <field name="model">mae.diagnocoleo-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnocoleo_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnocoleo_taxo_rel_view_form">
+            <field name="model">mae.diagnocoleo-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnocoleo_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnocoleo_taxo_rel_form">
+            <field name="name">Coléoptères</field>
+            <field name="res_model">mae.diagnocoleo-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnocoleo_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnocoleo_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnocoleo_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnocoleo_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnocoleo_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnocoleo_taxo_rel_form"/>
+        </record>
+
+        <!-- Guêpes Mouches -->
+        <record model="ir.ui.view" id="mae_diagnoguepe_taxo_rel_view_tree">
+            <field name="model">mae.diagnoguepe-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnoguepemouche_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnoguepe_taxo_rel_view_form">
+            <field name="model">mae.diagnoguepe-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnoguepemouche_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnoguepe_taxo_rel_form">
+            <field name="name">Guêpes - Mouches</field>
+            <field name="res_model">mae.diagnoguepe-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoguepe_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoguepe_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoguepe_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoguepe_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoguepe_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoguepe_taxo_rel_form"/>
+        </record>
+
+        <!-- Lépidoptères -->
+        <record model="ir.ui.view" id="mae_diagnolepido_taxo_rel_view_tree">
+            <field name="model">mae.diagnolepido-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnolepido_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnolepido_taxo_rel_view_form">
+            <field name="model">mae.diagnolepido-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnolepido_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnolepido_taxo_rel_form">
+            <field name="name">Lépidoptères</field>
+            <field name="res_model">mae.diagnolepido-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnolepido_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnolepido_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnolepido_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnolepido_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnolepido_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnolepido_taxo_rel_form"/>
+        </record>
+
+        <!-- Araignées -->
+        <record model="ir.ui.view" id="mae_diagnoaraignee_taxo_rel_view_tree">
+            <field name="model">mae.diagnoaraignee-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnoaraignee_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnoaraignee_taxo_rel_view_form">
+            <field name="model">mae.diagnoaraignee-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnoaraignee_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnoaraignee_taxo_rel_form">
+            <field name="name">Araignées</field>
+            <field name="res_model">mae.diagnoaraignee-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoaraignee_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoaraignee_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoaraignee_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoaraignee_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoaraignee_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoaraignee_taxo_rel_form"/>
+        </record>
+
+        <!-- Insectes aquatiques -->
+        <record model="ir.ui.view" id="mae_diagnoaquatique_taxo_rel_view_tree">
+            <field name="model">mae.diagnoaquatique-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnoinsecteaquatique_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnoaquatique_taxo_rel_view_form">
+            <field name="model">mae.diagnoaquatique-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnoinsecteaquatique_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnoaquatique_taxo_rel_form">
+            <field name="name">Insectes aquatiques</field>
+            <field name="res_model">mae.diagnoaquatique-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoaquatique_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoaquatique_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoaquatique_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoaquatique_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoaquatique_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoaquatique_taxo_rel_form"/>
+        </record>
+
         <!-- Mammifères -->
         <record model="ir.ui.view" id="mae_diagnomam_taxo_rel_view_tree">
             <field name="model">mae.diagnomam-taxinomie.taxinomie</field>
             <field name="type">tree</field>
             <field name="name">mae_diagnomam_taxo_tree</field>
         </record>
-
         <record model="ir.ui.view" id="mae_diagnomam_taxo_rel_view_form">
             <field name="model">mae.diagnomam-taxinomie.taxinomie</field>
             <field name="type">form</field>
             <field name="name">mae_diagnomam_taxo_form</field>
         </record>
-
         <record model="ir.action.act_window" id="act_mae_diagnomam_taxo_rel_form">
             <field name="name">Mammifères</field>
             <field name="res_model">mae.diagnomam-taxinomie.taxinomie</field>

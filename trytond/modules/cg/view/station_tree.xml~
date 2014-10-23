@@ -2,7 +2,6 @@
 <tree string="Station">
     <field name="ug" />
     <field name="code" />
-    <field name="active" />
     <field name="proprietaire" />
     <field name="domaine" />
     <field name="gestionnaire" />                    

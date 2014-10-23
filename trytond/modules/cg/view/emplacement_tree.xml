@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <tree string="Emplacement">
+    <field name="id" />
     <field name="station" />
     <field name="code" />
-    <field name="adresse" />
-    <field name="coteoppose" />
-    <field name="x" />
-    <field name="y" />               
+    <field name="numpostprec" />
+    <field name="coteoppose" />              
     <field name="evolution" />
     <field name="arbre" />                    
 </tree>

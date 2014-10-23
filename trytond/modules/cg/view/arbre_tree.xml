@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <tree string="Arbre">
     <field name="emplacement" />                 
-    <field name="code" />
-    <field name="date" />                    
+    <field name="code" />                   
     <field name="compteur" />
     <field name="an" />
     <field name="diametre" />
@@ -11,5 +10,6 @@
     <field name="fosse" />
     <field name="essence" />
     <field name="conduite" />
-    <field name="evolution" />                    
+    <field name="evolution" />
+    <field name="date" />                     
 </tree>

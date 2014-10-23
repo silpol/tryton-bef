@@ -92,6 +92,13 @@ _CONDUITES = [
     ('archi', u'Architecturé'),
 ]
 
+_PAYSAGER = [
+    ('1', u'1 - Remarquable'),
+    ('2', u'2 - Beau sujet'),
+    ('3', u'3 - Âgé ou malformé'),
+    ('4', u'4 - Sans intérêt'),
+]
+
 _HAUTEURS = [
     ('1', u'1 - hauteur totale < 10m'),
     ('2', u'2 - 10m <= hauteur totale < 20m'),
@@ -135,11 +142,13 @@ class equipement(ModelSQL, ModelView):
 
     code = fields.Char(
             string = u'Code équipement',
+            help = u'Code équipement',
             required = False,
             readonly = False,
         )
     name = fields.Char(
             string = u'Nom de la route',
+            help = u'Nom de la route',
             required = False,
             readonly = False,
         )
@@ -148,7 +157,8 @@ class equipement(ModelSQL, ModelView):
         return '%s - %s' % (self.code, self.name)
 
     coder = fields.Char(
-            string = u'Code de la route',
+            string = u'Code route',
+            help = u'Code route',
             required = False,
             readonly = False,
         )              
@@ -174,14 +184,7 @@ class operation(ModelSQL, ModelView):
     u'Opérations spécifiques'
     __name__ = 'cg.operation'
     _rec_name = 'name'
-
-    ug = fields.Many2One(
-            'cg.ug',
-            ondelete='CASCADE',
-            string=u'UG',
-            help=u'Unité de gestion',
-            required = True,
-        )    
+    
     code = fields.Char(
             string = u'Code de l\'opération',
             help = u'Code de l\'opération',
@@ -222,16 +225,19 @@ class securite(ModelSQL, ModelView):
     
     code = fields.Char(
             string = u'Code du niveau de sécurité',
+            help = u'Code du niveau de sécurité',
             required = True,
             readonly = False,
         )
     name = fields.Char(
             string = u'Libellé court du niveau de sécurité',
+            help = u'Libellé court du niveau de sécurité',
             required = False,
             readonly = False,
         )        
     lib_long = fields.Char(
             string = u'Libellé long du niveau de sécurité',
+            help = u'Libellé long du niveau de sécurité',
             required = False,
             readonly = False,
         )
@@ -243,16 +249,19 @@ class elagage(ModelSQL, ModelView):
     
     code = fields.Char(
             string = u'Code secteur élegage',
+            help = u'Code secteur élegage',
             required = True,
             readonly = False,
         )
     name = fields.Char(
             string = u'Libellé court secteur élegage',
+            help = u'Libellé court secteur élegage',
             required = False,
             readonly = False,
         )        
     lib_long = fields.Char(
             string = u'Libellé long secteur élegage',
+            help = u'Libellé long secteur élegage',
             required = False,
             readonly = False,
         )
@@ -264,16 +273,19 @@ class domanialite(ModelSQL, ModelView):
     
     code = fields.Char(
             string = u'Code domanialité',
+            help = u'Code domanialité',
             required = True,
             readonly = False,
         )
     name = fields.Char(
             string = u'Libellé court domanialité',
+            help = u'Libellé court domanialité',
             required = False,
             readonly = False,
         )        
     lib_long = fields.Char(
             string = u'Libellé long domanialité',
+            help = u'Libellé long domanialité',
             required = False,
             readonly = False,
         ) 
@@ -395,22 +407,17 @@ class ug(Mapable, ModelSQL, ModelView):
             states=STATES,
             depends=DEPENDS,
         )        
-    operation = fields.One2Many(
-            'cg.operation',
-            'ug',            
+    operation = fields.Many2Many(
+            'cg_ug-cg.operation',
+            'ug',
+            'operation',
             string=u'Opérations',
-            help=u'Opérations',
+            help=u'Opérations effectuées sur l\'unité de gestion',
             states=STATES,
             depends=DEPENDS
-        )               
-    contrainte = fields.Char(
-            string = u'Contraintes',
-            help = u'Contraintes',
-            required = False,
-            states=STATES,
-            depends=DEPENDS,
         )
-    commune = fields.Many2Many('cg.ug-commune.commune',
+    commune = fields.Many2Many(
+            'cg.ug-commune.commune',
             'ug',
             'commune',
             string='Communes',
@@ -419,6 +426,30 @@ class ug(Mapable, ModelSQL, ModelView):
             states=STATES,
             depends=DEPENDS,
         )
+    refcom = fields.Function(
+                    fields.Char(
+                        string = u'Communes',
+                        help=u'Communes'
+                    ),
+            '_get_commune'
+        )
+
+    def _get_commune(self, ids):
+        u'communes UG'
+        res = ''
+        for com in self.commune:
+            res = com.name + ", " + res
+        return res[:-2]
+
+    refug = fields.Function(
+                    fields.Char(
+                        string = u'Référence UG',
+                        help=u'Référence UG'
+                    ),
+            '_get_refug'
+        )
+
+
     sequenceroute = fields.Char(
             string = u'Séquence route',
             required = False,
@@ -429,7 +460,7 @@ class ug(Mapable, ModelSQL, ModelView):
             'cg.securite',
             ondelete='CASCADE',
             string=u'Sécurité',
-            help=u'Niveau de sécurité',
+            help=u'Niveau de contrainte de sécurité',
             required = False,
             states=STATES,
             depends=DEPENDS,
@@ -535,6 +566,23 @@ class UgCommune(ModelSQL):
             required=True
         )
 
+class UgOperation(ModelSQL):
+    u'Ug - Operations'
+    __name__ = 'cg.ug-cg.operation'
+    _table = 'ug_operation_rel'
+    ug = fields.Many2One(
+            'cg.ug',
+            'code',
+            ondelete='CASCADE',
+            required=True
+        )
+    operation = fields.Many2One(
+            'cg.operation',
+            'name',
+            ondelete='CASCADE',
+            required=True
+        )
+
 class proprietaire(ModelSQL, ModelView):
     u'Propriétaire'
     __name__ = 'cg.proprietaire'
@@ -542,16 +590,19 @@ class proprietaire(ModelSQL, ModelView):
     
     code = fields.Char(
             string = u'Code propriétaire',
+            help = u'Code propriétaire',
             required = True,
             readonly = False,
         )
     name = fields.Char(
             string = u'Libellé court du propriétaire',
+            help = u'Libellé court du propriétaire',
             required = False,
             readonly = False,
         )        
     lib_long = fields.Char(
             string = u'Libellé long du propriétaire',
+            help = u'Libellé long du propriétaire',
             required = False,
             readonly = False,
         )              
@@ -563,16 +614,19 @@ class gestionnaire(ModelSQL, ModelView):
     
     code = fields.Char(
             string = u'Code gestionnaire',
+            help = u'Code gestionnaire',
             required = True,
             readonly = False,
         )
     name = fields.Char(
             string = u'Libellé court du gestionnaire',
+            help = u'Libellé court du gestionnaire',
             required = False,
             readonly = False,
         )        
     lib_long = fields.Char(
             string = u'Libellé long du gestionnaire',
+            help = u'Libellé long du gestionnaire',
             required = False,
             readonly = False,
         )
@@ -585,12 +639,96 @@ class station(Mapable, ModelSQL, ModelView):
     ug = fields.Many2One(
             'cg.ug',
             ondelete='CASCADE',
-            string=u'UG',
-            help=u'Unité de gestion',
+            string=u'Code UG',
+            help=u'Code de l\'unité de gestion',
             required = True,
             states=STATES,
             depends=DEPENDS,
         )
+    idug = fields.Function(
+                    fields.Char(
+                        string = u'Identifiant UG',
+                        help=u'Identifiant UG'
+                    ),
+            '_get_idug'
+        )
+
+    def _get_idug(self, ids):
+        u'ID UG'        
+        return '%s' % (self.ug.id)
+
+    equipementug = fields.Function(
+                    fields.Char(
+                        string = u'Équipement',
+                        help=u'Équipement'
+                    ),
+            '_get_equipementug'
+        )
+
+    def _get_equipementug(self, ids):
+        u'equipement UG'        
+        return '%s' % (self.ug.equipement.rec_name)
+
+    refug = fields.Function(
+                    fields.Char(
+                        string = u'Référence UG',
+                        help=u'Référence UG'
+                    ),
+            '_get_refug'
+        )
+
+    def _get_refug(self, ids):
+        u'Référence UG'        
+        return '%s' % (self.ug.refug)
+
+    rueug = fields.Function(
+                    fields.Char(
+                        string = u'Nom de la rue',
+                        help=u'Nom de la rue'
+                    ),
+            '_get_rueug'
+        )
+
+    def _get_rueug(self, ids):
+        u'Rue UG'        
+        return '%s' % (self.ug.rue)
+
+    debug = fields.Function(
+                    fields.Char(
+                        string = u'Début de tronçon',
+                        help=u'Début de tronçon'
+                    ),
+            '_get_debug'
+        )
+
+    def _get_debug(self, ids):
+        u'Debut tronçon UG'        
+        return '%s' % (self.ug.debut)
+
+    finug = fields.Function(
+                    fields.Char(
+                        string = u'Fin de tronçon',
+                        help=u'Fin de tronçon'
+                    ),
+            '_get_finug'
+        )
+
+    def _get_finug(self, ids):
+        u'Fin de tronçon UG'        
+        return '%s' % (self.ug.fin)
+
+    communeug = fields.Function(
+                    fields.Char(                        
+                        string=u'Communes',
+                        help=u'Communes'
+                    ),
+                'get_commune'
+        )
+
+    def get_commune(self, name):
+        u'Communes UG'        
+        return '%s' % (self.ug.refcom)
+
     code = fields.Char(
             string = u'Code station',
             help=u'Code de la station',
@@ -611,6 +749,7 @@ class station(Mapable, ModelSQL, ModelView):
             'cg.proprietaire',
             ondelete='CASCADE',
             string = u'Proprétaire',
+            help = u'Proprétaire',
             required = False,
             states=STATES,
             depends=DEPENDS,
@@ -618,6 +757,7 @@ class station(Mapable, ModelSQL, ModelView):
     domaine = fields.Selection(
             _DOMAINES, 
             string=u'Domaine',
+            help=u'Domaine',
             required=True,
             states=STATES,
             sort=False,
@@ -627,13 +767,14 @@ class station(Mapable, ModelSQL, ModelView):
             'cg.gestionnaire',
             ondelete='CASCADE',
             string = u'Gestionnaire',
+            help = u'Gestionnaire',
             required = False,
             states=STATES,
             depends=DEPENDS,
         )                      
     distance = fields.Char(
-            string = u'Distance',
-            help=u'Distance du bâti',
+            string = u'Distance au bâti',
+            help=u'Distance au bâti',
             required = False,
             states=STATES,
             depends=DEPENDS,
@@ -651,6 +792,15 @@ class station(Mapable, ModelSQL, ModelView):
             'station',            
             string=u'Emplacements',
             help=u'Emplacements de la station',
+            required=False,
+            states=STATES,
+            depends=DEPENDS,
+        )
+    arbre = fields.One2Many(
+            'cg.evol_arbre',
+            'station',            
+            string=u'Arbres',
+            help=u'Évolution des diagnotics de l\'arbre',
             required=False,
             states=STATES,
             depends=DEPENDS,
@@ -827,7 +977,7 @@ class evol_emplacement(ModelSQL, ModelView):
             help=u'Cause de l\'évolution de l\'emplacement',
         )              
     anindispo = fields.Integer(
-            string=u'Année',
+            string=u'Année indisponibilité',
             help=u'Année où l\'emplacement est devenu indisponible pour une plantation',
             states={
                     'invisible': Equal(Eval('cause', None), None),
@@ -866,6 +1016,90 @@ class emplacement(Mapable, ModelSQL, ModelView):
             states=STATES,
             depends=DEPENDS,
         )
+    idug = fields.Function(
+                    fields.Char(
+                        string = u'Identifiant UG',
+                        help=u'Identifiant UG'
+                    ),
+            '_get_idug'
+        )
+
+    def _get_idug(self, ids):
+        u'ID UG'        
+        return '%s' % (self.station.idug)
+
+    equipementug = fields.Function(
+                    fields.Char(
+                        string = u'Équipement',
+                        help=u'Équipement'
+                    ),
+            '_get_equipementug'
+        )
+
+    def _get_equipementug(self, ids):
+        u'equipement UG'        
+        return '%s' % (self.station.equipementug)
+
+    refug = fields.Function(
+                    fields.Char(
+                        string = u'Référence UG',
+                        help=u'Référence UG'
+                    ),
+            '_get_refug'
+        )
+
+    def _get_refug(self, ids):
+        u'Référence UG'        
+        return '%s' % (self.station.refug)
+
+    rueug = fields.Function(
+                    fields.Char(
+                        string = u'Nom de la rue',
+                        help=u'Nom de la rue'
+                    ),
+            '_get_rueug'
+        )
+
+    def _get_rueug(self, ids):
+        u'Rue UG'        
+        return '%s' % (self.station.rueug)
+
+    debug = fields.Function(
+                    fields.Char(
+                        string = u'Début de tronçon',
+                        help=u'Début de tronçon'
+                    ),
+            '_get_debug'
+        )
+
+    def _get_debug(self, ids):
+        u'Debut tronçon UG'        
+        return '%s' % (self.station.debug)
+
+    finug = fields.Function(
+                    fields.Char(
+                        string = u'Fin de tronçon',
+                        help=u'Fin de tronçon'
+                    ),
+            '_get_finug'
+        )
+
+    def _get_finug(self, ids):
+        u'Fin de tronçon UG'        
+        return '%s' % (self.station.finug)
+
+    communeug = fields.Function(
+                    fields.Char(                        
+                        string=u'Communes',
+                        help=u'Communes'
+                    ),
+                'get_commune'
+        )
+
+    def get_commune(self, name):
+        u'Communes UG'        
+        return '%s' % (self.station.communeug)
+
     code = fields.Integer(
             string = u'Code emplacement',
             help=u'Code de l\'emplacement',
@@ -877,18 +1111,14 @@ class emplacement(Mapable, ModelSQL, ModelView):
             string=u'Active',
             help=u'Active'
         )
-
     
     @staticmethod
     def default_active():
         return True 
 
-    adresse = fields.One2One(
-            'cg.emplacement-cg.address',
-            'emplacement',
-            'adresse',
-            string=u'Addresse',
-            help=u'Adresse de l\'emplacement',
+    numpostprec = fields.Char(           
+            string=u'Numéro postal',
+            help=u'Numéro postal précis',
             states=STATES,
             depends=DEPENDS
         )        
@@ -898,22 +1128,6 @@ class emplacement(Mapable, ModelSQL, ModelView):
             states=STATES,
             depends=DEPENDS,
         )        
-    x = fields.Float(
-            string = u'X Grillet',
-            help=u'Coordonnées X (Grillet)',
-            digits=(12, 11),
-            required = False,
-            states=STATES,
-            depends=DEPENDS,
-        )        
-    y = fields.Float(
-            string = u'Y Grillet',
-            help=u'Coordonnées Y (Grillet)',
-            digits=(12, 11),
-            required = False,
-            states=STATES,
-            depends=DEPENDS,
-        )
     evolution = fields.One2Many(
             'cg.evol_emplacement',
             'emplacement',
@@ -979,24 +1193,7 @@ class emplacement(Mapable, ModelSQL, ModelView):
         
 class ObjEmplacementQGis(QGis):
     __name__ = 'cg.emplacement.qgis'
-    TITLES = {'cg.emplacement': u'point'}
-
-class EmplacementAddress(ModelSQL):
-    u'Emplacement - Address'
-    __name__ = 'cg.emplacement-cg.address'
-    _table = 'emplacement_address_rel'
-    emplacement = fields.Many2One(
-            'cg.emplacement',
-            'Emplacement',
-            ondelete='CASCADE',
-            required=True
-        )
-    adresse = fields.Many2One(
-            'cg.address',
-            'Address',
-            ondelete='CASCADE',
-            required=True
-        )                           
+    TITLES = {'cg.emplacement': u'point'}                         
         
 class diametre(ModelSQL, ModelView):
     u'Diamètre'
@@ -1060,27 +1257,6 @@ class bilan(ModelSQL, ModelView):
             required = False,
             readonly = False,
         )        
-
-class paysager(ModelSQL, ModelView):
-    u'Paysager'
-    __name__ = 'cg.paysager'
-    _rec_name = 'name'
-    
-    code = fields.Char(
-            string = u'Code paysager',
-            required = True,
-            readonly = False,
-        )
-    name = fields.Char(
-            string = u'Libellé court paysager',
-            required = False,
-            readonly = False,
-        )        
-    lib_long = fields.Char(
-            string = u'Libellé long paysager',
-            required = False,
-            readonly = False,
-        ) 
        
 class evol_arbre(ModelSQL, ModelView):
     u'Évolution d\'un arbre'
@@ -1092,6 +1268,21 @@ class evol_arbre(ModelSQL, ModelView):
             string=u'Arbre ID',
             help=u'Arbre ID',
         )
+    station = fields.Many2One(
+            'cg.station',
+            ondelete='CASCADE',
+            string=u'Station',
+            help=u'Station',
+            readonly = True,
+            required = True,
+            on_change_with=['arbre'],
+        )
+
+    def on_change_with_station(self):
+        u'Station'
+        print self.arbre.emplacement.station
+        return self.arbre.emplacement.station
+
     date = fields.Date(
             string = u'Date',            
             help=u'Date du constat',
@@ -1112,11 +1303,10 @@ class evol_arbre(ModelSQL, ModelView):
             string = u'Conduite',
             help=u'Conduite de l\'arbre',
         )
-    paysager = fields.Many2One(
-            'cg.paysager',
-            ondelete='CASCADE',
-            string=u'Paysager',
-            help=u'Impacts paysager',
+    paysager = fields.Selection(
+            _PAYSAGER,
+            string=u'Impact paysager',
+            help=u'Impact paysager',
         )
     ht = fields.Selection(
             _HAUTEURS, 
@@ -1145,35 +1335,29 @@ class evol_arbre(ModelSQL, ModelView):
             ondelete='CASCADE',             
             string = u'Diamètre tronc',
             help = u'Classe du diamètre du tronc de l\'arbre mesuré à 1,30m',
-        )                      
-        
+        )                              
     grille = fields.Boolean(
             string=u'Grille',
             help=u'Existence d\'une grille',
-        )
-    
+        )    
     lignelec = fields.Boolean(
             string=u'Ligne électrique',
             help=u'Présence d\'une ligne électrique',
-        )
-    
+        )    
     sonde = fields.Boolean(
             string = u'Tensio',
             help=u'Sonde tensiométrique',            
-        )
-        
+        )        
     empmat = fields.Boolean(
             string=u'Emplacement mat.',
             help=u'Emplacement matérialisé'
-        )
-    
+        )    
     surfacepiedarbre = fields.Float(             
             string = u'Surface pied',
             help = u'Surface du pied de l\'arbre',
             states={'readonly': Not(Bool(Eval('empmat')))},	
             on_change_with=['empmat'],
-        )
-    
+        )    
     arrosage = fields.Boolean(
             string=u'Arrosage automatique',
             help=u'Arrosage automatique'
@@ -1306,7 +1490,91 @@ class arbre(Mapable, ModelSQL, ModelView):
             required = True,
             states=STATES,
             depends=DEPENDS,
-        )        
+        )
+    idug = fields.Function(
+                    fields.Char(
+                        string = u'Identifiant UG',
+                        help=u'Identifiant UG'
+                    ),
+            '_get_idug'
+        )
+
+    def _get_idug(self, ids):
+        u'ID UG'        
+        return '%s' % (self.emplacement.idug)
+
+    equipementug = fields.Function(
+                    fields.Char(
+                        string = u'Équipement',
+                        help=u'Équipement'
+                    ),
+            '_get_equipementug'
+        )
+
+    def _get_equipementug(self, ids):
+        u'equipement UG'        
+        return '%s' % (self.emplacement.equipementug)
+
+    refug = fields.Function(
+                    fields.Char(
+                        string = u'Référence UG',
+                        help=u'Référence UG'
+                    ),
+            '_get_refug'
+        )
+
+    def _get_refug(self, ids):
+        u'Référence UG'        
+        return '%s' % (self.emplacement.refug)
+
+    rueug = fields.Function(
+                    fields.Char(
+                        string = u'Nom de la rue',
+                        help=u'Nom de la rue'
+                    ),
+            '_get_rueug'
+        )
+
+    def _get_rueug(self, ids):
+        u'Rue UG'        
+        return '%s' % (self.emplacement.rueug)
+
+    debug = fields.Function(
+                    fields.Char(
+                        string = u'Début de tronçon',
+                        help=u'Début de tronçon'
+                    ),
+            '_get_debug'
+        )
+
+    def _get_debug(self, ids):
+        u'Debut tronçon UG'        
+        return '%s' % (self.emplacement.debug)
+
+    finug = fields.Function(
+                    fields.Char(
+                        string = u'Fin de tronçon',
+                        help=u'Fin de tronçon'
+                    ),
+            '_get_finug'
+        )
+
+    def _get_finug(self, ids):
+        u'Fin de tronçon UG'        
+        return '%s' % (self.emplacement.finug)
+
+    communeug = fields.Function(
+                    fields.Char(                        
+                        string=u'Communes',
+                        help=u'Communes'
+                    ),
+                'get_commune'
+        )
+
+    def get_commune(self, name):
+        u'Communes UG'        
+        return '%s' % (self.emplacement.communeug)  
+     
     code = fields.Char(
             string = u'ID Arbre',
             help=u'Identifiant de l\'arbre',
@@ -1369,7 +1637,7 @@ class arbre(Mapable, ModelSQL, ModelView):
             depends=DEPENDS,
         )                       
     date = fields.Date(
-            string = u'Date',            
+            string = u'Date de suppression',            
             help=u'Date de suppression',
             required = False,
             states=STATES,
@@ -1581,7 +1849,7 @@ class Travaux(Workflow, ModelSQL, ModelView):
                     fields.Many2One(
                         'cg.equipement',
                         string=u'Équipement',
-                        readonly=True
+                        help=u'Équipement'
                     ),
                 'get_equipement',
                 searcher='search_equipement'

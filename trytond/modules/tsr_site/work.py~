@@ -22,7 +22,7 @@ class Vehicule(ModelSQL, ModelView):
             required = True,
         )        
     lib_long = fields.Char(
-            string = u'Libellé long du véhicule',
+            string = u'Plaque d\'immatriculation du véhicule',
         )
 
 class Outil(ModelSQL, ModelView):
@@ -83,15 +83,15 @@ class Work(ModelSQL, ModelView):
             help=u'Activity',
             required=True,
             ondelete='CASCADE',
-            # 2 représente l'id de l'activité chantier
-            domain=[('parent', 'child_of', 2, 'parent')],
         )
-    site = fields.Many2One(
+    site = fields.One2Many(
             'site_site.site',
+            'chantier',
             string=u'Site',
             help=u'Site',
-            required=True,
-            ondelete='CASCADE'
+            states={
+                    'invisible': Equal(Eval('type'),'site')
+                    },
         )
     active = fields.Function(
             fields.Boolean(
@@ -144,8 +144,10 @@ class Work(ModelSQL, ModelView):
             'get_company',
             searcher='search_comany'
         )
-    party = fields.Many2One(
-            'party.party',
+    parties = fields.Many2Many(
+            'site.work-party.party',
+            'work',
+            'party',
             string=u'Party',
             help=u'Party who follow the site',
             states={
@@ -536,6 +538,33 @@ class WorkOutil(ModelSQL):
             string=u'Outil',
             ondelete='CASCADE',
             required=True,
+        )
+
+class WorkParty(ModelSQL):
+    u'Work - Party'
+    __name__ = 'site.work-party.party'
+    _table = 'work_party_rel'
+    work = fields.Many2One(
+            'site.work',
+            string=u'Work',
+            ondelete='CASCADE',
+            required=True
+        )
+    party = fields.Many2One(
+            'party.party',
+            string=u'Party',
+            ondelete='CASCADE',
+            required=True,
+        )
+
+class Site:
+    __metaclass__ = PoolMeta
+    __name__ = 'site_site.site'
+
+    chantier = fields.Many2One(
+            'site.work',
+            string=u'Chantier',
+            ondelete='CASCADE',
         )
 
 class taxinomie:

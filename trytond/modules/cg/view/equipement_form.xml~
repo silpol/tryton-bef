@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<form string="equipement" col="2">
+<form string="Équipement" col="2">
     <notebook colspan="6">
         <page string="General" id="general">
             <label name="code"/>

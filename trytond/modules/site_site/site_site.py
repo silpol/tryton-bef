@@ -106,8 +106,12 @@ class Zone(Mapable, ModelSQL, ModelView):
             help=u'Name of zone',
         )    
     comment = fields.Text(
-            string='Comment',
-            help='Comment',
+            string=u'Comment',
+            help=u'Comment',
+        )
+    precaution = fields.Text(
+            string=u'Précautions',
+            help=u'Précautions à prendre',
         )
     photo = fields.Binary(
             string=u'Photo',
@@ -195,6 +199,10 @@ class Track(Mapable, ModelSQL, ModelView):
             string='Comment',
             help='Comment of track',
         )
+    precaution = fields.Text(
+            string=u'Précautions',
+            help=u'Précautions à prendre',
+        )
     photo = fields.Binary(
             string=u'Photo',
             help=u'Photo of track',
@@ -280,6 +288,10 @@ class Point(Mapable, ModelSQL, ModelView):
     comment = fields.Text(
             string='Comment',
             help='Comment of point',
+        )
+    precaution = fields.Text(
+            string=u'Précautions',
+            help=u'Précautions à prendre',
         )
     photo = fields.Binary(
             string=u'Photo',
@@ -482,20 +494,30 @@ class Site(Mapable, ModelSQL, ModelView):
     def default_active():
         return True
 
-    site_situation = fields.Binary(
-            string=u'Situation map',            
+    site_image = fields.Function(
+                fields.Binary(
+                    string=u'Image'
+                ),
+            'get_image'
         )
 
-    def get_situation(self, ids):
-        return self._get_image( 'site_situation.qgs', 'carte' )
-    
-    site_image = fields.Binary(
-            string=u'Image map',            
-        )
+    site_map = fields.Binary(
+                string=u'Image map',
+        )    
+
+    site_situation = fields.Binary(
+                string=u'Situation map',
+        )   
 
     def get_image(self, ids):
         return self._get_image( 'site_image.qgs', 'carte' )
-   
+
+    def get_map(self, ids):
+        return self._get_image( 'site_map.qgs', 'carte' )
+
+    def get_situation(self, ids):
+        return self._get_image( 'site_situation.qgs', 'carte' )
+  
     @classmethod
     def __setup__(cls):
         super(Site, cls).__setup__()
@@ -508,7 +530,7 @@ class Site(Mapable, ModelSQL, ModelView):
             ]
         cls._buttons.update({
             'site_situation_gen': {},
-            'site_image_gen': {},
+            'site_map_gen': {},
             'site_edit': {},
         })    
 
@@ -529,12 +551,12 @@ class Site(Mapable, ModelSQL, ModelView):
 
     @classmethod
     @ModelView.button
-    def site_image_gen(cls, records):
+    def site_map_gen(cls, records):
         'Render the image map'        
         for record in records:
             if record.name is None:
                 continue
-            cls.write([record], {'site_image': cls.get_image(record, 'map')})
+            cls.write([record], {'site_map': cls.get_map(record, 'map')})
 
 class SiteQGis(QGis):
     'SiteQGis'

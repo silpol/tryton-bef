@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <tree string="Unité de Gestion">
+    <field name="id" />
     <field name="equipement" />
     <field name="code" />
     <field name="statut" />
@@ -7,9 +8,9 @@
     <field name="rue" />
     <field name="debut" />
     <field name="fin" />
+    <field name="refcom" />
     <field name="elagage" />
     <field name="operation" />
-    <field name="contrainte" />
     <field name="commune" />
     <field name="sequenceroute" />
     <field name="securite" />

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <tree colors="If(Less(Eval('avancement',0), 26), 'red', If(Less(Eval('avancement',0), 51), 'orange', If(Less(Eval('avancement',0), 76), 'black', 'green')))">
+    <field name="name" />
     <field name="code" />
     <field name="chantier" />
     <field name="typo" />
