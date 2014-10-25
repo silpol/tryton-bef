@@ -15,18 +15,8 @@ class Work(ModelSQL, ModelView):
     name = fields.Char(
             string=u'Name',
             help=u'Name',
-            required=True,
-            on_change_with=['tache', 'type']
+            required=True,            
         )
-
-    def on_change_with_name(self):
-        if self.tache == 'none':
-            return None
-        elif self.type == 'activity':
-            return None
-        else:
-            return self.tache
-
     active = fields.Boolean(
             string=u'Active',
             help=u'Active'
@@ -56,45 +46,6 @@ class Work(ModelSQL, ModelView):
             string=u'Children',
             help=u'Children',
         )
-    type = fields.Selection(
-            [
-                ('activity', 'Activity'),
-                ('task', 'Task')
-            ],
-            string=u'Type',
-            help=u'Type',
-            required=True,
-            select=True
-         )
-    tache = fields.Selection(
-            [
-                ('assainissement', u'Assainissement'),
-                ('paillage', u'Paillage'),
-                ('protection', u'Protection'),
-                ('plantation', u'Plantation'),
-                ('creationtalus', u'Création de talus'),
-                ('apportpaillage', u'Apport paillage'),
-                ('apportterre', u'Apport de terre végétale'),
-                ('pose', u'Pose'),
-                ('depose', u'Dépose'),
-                ('exportation', u'Exportation'),
-                ('transfertmatiere', u'Transfert matière'),
-                ('transfertmateriel', u'Transfert matériel'),
-                ('none',u'None'),
-            ],
-            string=u'Tâche',
-            help=u'Tâche',
-            select=True,
-            sort=False,
-            states={
-                    'invisible': Equal(Eval('type'),'activity')
-                    },
-            on_change_with=['type']
-         )
-
-    def on_change_with_tache(self):
-        if self.type == 'activity':
-            return 'none'
 
     hours = fields.Function(
                 fields.Float(
@@ -158,14 +109,6 @@ class Work(ModelSQL, ModelView):
     @staticmethod
     def default_active():
         return True
-
-    @staticmethod
-    def default_type():
-        return 'activity'
-
-    @staticmethod
-    def default_tache():
-        return 'none'
 
     @staticmethod
     def default_left():

@@ -9,6 +9,52 @@ from trytond.backend import TableHandler
 from trytond.transaction import Transaction
 from trytond.pool import Pool, PoolMeta
 
+class Tache(ModelSQL, ModelView):
+    u'Tache'
+    __name__ = 'site.tache'
+
+    chantiertype = fields.Many2One(
+            'site.chantiertype',
+            string=u'Chantier type',
+            help=u'Type de chantier',
+            required = True,
+        )
+    code = fields.Char(
+            string = u'Code tâche',
+            required = True,
+        )
+    name = fields.Char(
+            string = u'Libellé court de la tâche',
+            required = True,
+        )        
+    lib_long = fields.Char(
+            string = u'Libellé long de la tâche',
+            required = False,
+        )
+
+class ChantierType(ModelSQL, ModelView):
+    u'Chantier type'
+    __name__ = 'site.chantiertype'
+
+    code = fields.Char(
+            string = u'Code chantier type',
+            required = True,
+        )
+    name = fields.Char(
+            string = u'Libellé court du chantier type',
+            required = True,
+        )        
+    lib_long = fields.Char(
+            string = u'Libellé long du chantier type',
+            required = False,
+        )
+    tache = fields.One2Many(
+            'site.tache',
+            'chantiertype',
+            string=u'Tâche',
+            help=u'Tâches disponibles pour ce type de chantier',
+        )
+
 class Vehicule(ModelSQL, ModelView):
     u'Vehicule'
     __name__ = 'site.vehicule'
@@ -72,7 +118,7 @@ class Materiel(ModelSQL, ModelView):
             help=u'Outils disponibles pour ce matériel',
         )
 
-class Work(ModelSQL, ModelView):
+class Travail(ModelSQL, ModelView):
     u'Work Effort'
     __name__ = 'site.work'
     _rec_name = 'work'
@@ -271,7 +317,7 @@ class Work(ModelSQL, ModelView):
         migrate_sequence = (not table_site_work.column_exist('sequence')
             and table_timesheet_work.column_exist('sequence'))
 
-        super(Work, cls).__register__(module_name)
+        super(Travail, cls).__register__(module_name)
 
         # Migration from 2.0: copy sequence from timesheet to site
         if migrate_sequence:
@@ -291,7 +337,7 @@ class Work(ModelSQL, ModelView):
 
     @classmethod
     def __setup__(cls):
-        super(Work, cls).__setup__()
+        super(Travail, cls).__setup__()
         cls._sql_constraints += [
             ('work_uniq', 'UNIQUE(work)', 'There should be only one '
                 'timesheet work by task/site.'),
@@ -307,7 +353,7 @@ class Work(ModelSQL, ModelView):
 
     @classmethod
     def validate(cls, works):
-        super(Work, cls).validate(works)
+        super(Travail, cls).validate(works)
         for work in works:
             work.check_state()
 
@@ -560,6 +606,82 @@ class WorkParty(ModelSQL):
             ondelete='CASCADE',
             required=True,
         )
+
+class Work:
+    __metaclass__ = PoolMeta
+    __name__ = 'timesheet.work'
+
+    name = fields.Char(
+            string=u'Name',
+            help=u'Name',
+            required=True,
+            on_change_with=['tache', 'type', 'chantier']
+        )
+
+    def on_change_with_name(self):
+        if self.chantier is None:
+            return None
+        elif self.tache is None:
+            return None
+        elif self.type == 'activity':
+            return None
+        else:
+            return self.tache.name
+
+    type = fields.Selection(
+            [
+                ('activity', 'Activity'),
+                ('task', 'Task')
+            ],
+            string=u'Type',
+            help=u'Type',
+            required=True,
+            select=True
+         )
+    chantier = fields.Many2One(
+            'site.chantiertype',
+            string=u'Chantier',
+            help=u'Chantier type',
+            select=True,
+            states={
+                    'invisible': Equal(Eval('type'),'activity')
+                    },
+            on_change_with=['type'],
+        )
+    
+    def on_change_with_chantier(self):
+        if self.type == 'activity':
+            return None
+
+    tache = fields.Many2One(
+            'site.tache',
+            string=u'Tâche',
+            help=u'Tâche',
+            select=True,
+            states={
+                    'invisible': Equal(Eval('type'),'activity')
+                    },
+            on_change_with=['chantier', 'type'],
+            domain=[('chantiertype', '=', Eval('chantier'))],
+         )
+
+    def on_change_with_tache(self):
+        if self.type == 'activity':
+            return None
+        elif self.chantier is None:
+            return None
+
+    @staticmethod
+    def default_type():
+        return 'activity'
+
+    @staticmethod
+    def default_tache():
+        return None
+
+    @staticmethod
+    def default_chantier():
+        return None
 
 class Site:
     __metaclass__ = PoolMeta

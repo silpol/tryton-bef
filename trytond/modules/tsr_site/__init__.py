@@ -6,14 +6,17 @@ from .work import *
 
 def register():
     Pool.register(
+        ChantierType,
+        Tache,
         Vehicule,
         Materiel,
         Outil,
-        Work,
+        Travail,
         WorkOutil,
         WorkParty,
         Site,
         taxinomie,
         WorkLine,
         Employee,
+        Work,
         module='tsr_site', type_='model')

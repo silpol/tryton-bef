@@ -381,6 +381,10 @@ msgctxt "field:site_site.point,point_map:"
 msgid "Image"
 msgstr "Image"
 
+msgctxt "field:site_site.point,precaution:"
+msgid "Précautions"
+msgstr ""
+
 msgctxt "field:site_site.point,rec_name:"
 msgid "Name"
 msgstr "Nom"
@@ -478,8 +482,12 @@ msgid "Name"
 msgstr "Nom"
 
 msgctxt "field:site_site.site,site_image:"
+msgid "Image"
+msgstr "Carte du site"
+
+msgctxt "field:site_site.site,site_map:"
 msgid "Image map"
-msgstr "Carte"
+msgstr ""
 
 msgctxt "field:site_site.site,site_situation:"
 msgid "Situation map"
@@ -693,6 +701,10 @@ msgctxt "field:site_site.track,photo:"
 msgid "Photo"
 msgstr ""
 
+msgctxt "field:site_site.track,precaution:"
+msgid "Précautions"
+msgstr ""
+
 msgctxt "field:site_site.track,rec_name:"
 msgid "Name"
 msgstr "Nom"
@@ -751,6 +763,10 @@ msgstr "Nom"
 
 msgctxt "field:site_site.zone,photo:"
 msgid "Photo"
+msgstr ""
+
+msgctxt "field:site_site.zone,precaution:"
+msgid "Précautions"
 msgstr ""
 
 msgctxt "field:site_site.zone,rec_name:"
@@ -845,6 +861,10 @@ msgctxt "help:site_site.point,photo:"
 msgid "Photo of point"
 msgstr ""
 
+msgctxt "help:site_site.point,precaution:"
+msgid "Précautions à prendre"
+msgstr ""
+
 msgctxt "help:site_site.point,site:"
 msgid "Site"
 msgstr "Site"
@@ -925,6 +945,10 @@ msgctxt "help:site_site.track,photo:"
 msgid "Photo of track"
 msgstr ""
 
+msgctxt "help:site_site.track,precaution:"
+msgid "Précautions à prendre"
+msgstr ""
+
 msgctxt "help:site_site.track,site:"
 msgid "Site"
 msgstr "Site"
@@ -951,6 +975,10 @@ msgstr ""
 
 msgctxt "help:site_site.zone,photo:"
 msgid "Photo of zone"
+msgstr ""
+
+msgctxt "help:site_site.zone,precaution:"
+msgid "Précautions à prendre"
 msgstr ""
 
 msgctxt "help:site_site.zone,site:"
@@ -1354,7 +1382,7 @@ msgid "cadastrale(s)"
 msgstr ""
 
 msgctxt "odt:site_site.site:"
-msgid "mardi 16 septembre 2014"
+msgid "jeudi 23 octobre 2014"
 msgstr ""
 
 msgctxt "selection:site_site.site,typo:"

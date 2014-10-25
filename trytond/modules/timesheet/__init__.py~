@@ -8,8 +8,8 @@ from .line import *
 
 def register():
     Pool.register(
+        Tache,
         Work,
-        WorkOutil,
         WorkLine,
         OpenWorkStart,
         Line,

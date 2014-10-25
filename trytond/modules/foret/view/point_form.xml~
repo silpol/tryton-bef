@@ -14,5 +14,6 @@
                     <button string="Generate" name="generate" icon="tryton-executable" />
                 </page>
             </notebook>
+        </page>
     </notebook>
 </form>

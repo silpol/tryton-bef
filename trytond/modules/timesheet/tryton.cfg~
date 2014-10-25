@@ -6,7 +6,9 @@ depends:
     ir
     res
     product
+    tsr_site
 xml:
     timesheet.xml
     work.xml
     line.xml
+    product.xml

@@ -441,8 +441,8 @@ class Site(Mapable, ModelSQL, ModelView):
         )
     suivi = fields.Many2One(
             'party.party',
-            string=u'Suivi par',
-            help=u'Affaire suivi par',
+            string=u'Intervenant',
+            help=u'Intervenant TSR',
         )
     points = fields.One2Many(
             'site_site.point',

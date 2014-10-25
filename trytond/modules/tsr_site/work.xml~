@@ -86,7 +86,33 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_taxinomie_form"/>
         </record>
 
-        <!-- Timesheet -->
+        <!-- Timesheet work -->
+        <record model="ir.ui.view" id="site_timesheetwork_view_form">
+            <field name="model">timesheet.work</field>
+            <field name="inherit" ref="timesheet.work_view_form" />       
+            <field name="name">timesheet_work_form</field>
+        </record>
+        <record model="ir.ui.view" id="site_timesheetwork_view_tree">
+            <field name="model">timesheet.work</field>
+            <field name="type">tree</field>
+            <field name="name">work_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_site_timesheetwork_form">
+            <field name="name">Works</field>
+            <field name="res_model">timesheet.work</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_site_timesheetwork_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="site_timesheetwork_view_tree"/>
+            <field name="act_window" ref="act_site_timesheetwork_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_site_timesheetwork_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="site_timesheetwork_view_form"/>
+            <field name="act_window" ref="act_site_timesheetwork_form"/>
+        </record>
+
+        <!-- Timesheet workline -->
         <record model="ir.ui.view" id="site_workline_view_form">
             <field name="model">timesheet.workline</field>
             <field name="inherit" ref="timesheet.work_line_view_form" />
@@ -114,6 +140,60 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="site_workline_view_form"/>
             <field name="act_window" ref="act_site_workline_form"/>
         </record>
+
+        <!-- Tache -->
+        <record model="ir.ui.view" id="tache_view_tree">
+            <field name="model">site.tache</field>
+            <field name="type">tree</field>
+            <field name="name">tache_tree</field>
+        </record>
+        <record model="ir.ui.view" id="tache_view_form">
+            <field name="model">site.tache</field>
+            <field name="type">form</field>
+            <field name="name">tache_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_tache_form">
+            <field name="name">Tâches disponibles</field>
+            <field name="res_model">site.tache</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tache_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tache_view_tree"/>
+            <field name="act_window" ref="act_tache_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tache_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tache_view_form"/>
+            <field name="act_window" ref="act_tache_form"/>
+        </record>        
+        <menuitem parent="menu_chantiertype_form" id="menu_tache_form" icon="tryton-work" action="act_tache_form"/>
+
+        <!-- Chantier type -->
+        <record model="ir.ui.view" id="chantiertype_view_tree">
+            <field name="model">site.chantiertype</field>
+            <field name="type">tree</field>
+            <field name="name">chantiertype_tree</field>
+        </record>
+        <record model="ir.ui.view" id="chantiertype_view_form">
+            <field name="model">site.chantiertype</field>
+            <field name="type">form</field>
+            <field name="name">chantiertype_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_chantiertype_form">
+            <field name="name">Chantier type</field>
+            <field name="res_model">site.chantiertype</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_chantiertype_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="chantiertype_view_tree"/>
+            <field name="act_window" ref="act_chantiertype_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_chantiertype_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="chantiertype_view_form"/>
+            <field name="act_window" ref="act_chantiertype_form"/>
+        </record>        
+        <menuitem parent="menu_configuration" id="menu_chantiertype_form" icon="tryton-site" action="act_chantiertype_form"/>
 
         <!-- Vehicule -->
         <record model="ir.ui.view" id="vehicule_view_tree">
@@ -230,7 +310,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window" id="act_site_tree">
             <field name="name">Sites/Task</field>
             <field name="res_model">site.work</field>
-            <field name="domain">[('parent', '=', True)]</field>
+            <field name="domain">[('parent', '=', False)]</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_site_tree_view1">

@@ -211,6 +211,10 @@ msgctxt "field:site.work,parties:"
 msgid "Party"
 msgstr "Tiers"
 
+msgctxt "field:site.work,precaution:"
+msgid "Précautions"
+msgstr "Précautions"
+
 msgctxt "field:site.work,rec_name:"
 msgid "Name"
 msgstr "Nom"
@@ -383,6 +387,10 @@ msgctxt "help:site.work,parties:"
 msgid "Party who follow the site"
 msgstr "Tiers suivant le site"
 
+msgctxt "help:site.work,precaution:"
+msgid "Précautions à prendre"
+msgstr "Précautions à prendre"
+
 msgctxt "help:site.work,site:"
 msgid "Site"
 msgstr "Site"
@@ -524,7 +532,15 @@ msgid "Work - Outil"
 msgstr "Chantier - Outil"
 
 msgctxt "odt:site.work:"
+msgid ","
+msgstr ""
+
+msgctxt "odt:site.work:"
 msgid ":"
+msgstr ""
+
+msgctxt "odt:site.work:"
+msgid "=>"
 msgstr ""
 
 msgctxt "odt:site.work:"
@@ -564,7 +580,7 @@ msgid "Fiche"
 msgstr ""
 
 msgctxt "odt:site.work:"
-msgid "Heure(s)"
+msgid "Heure(s)."
 msgstr ""
 
 msgctxt "odt:site.work:"
@@ -592,12 +608,12 @@ msgid "PRÉCAUTIONS À PRENDRE"
 msgstr ""
 
 msgctxt "odt:site.work:"
-msgid "Plan de"
+msgid "Plan de situation et de localisation"
 msgstr ""
 
 msgctxt "odt:site.work:"
-msgid "Plan de situation et de localisation"
-msgstr ""
+msgid "Site"
+msgstr "Site"
 
 msgctxt "odt:site.work:"
 msgid "TEMPS PRÉVU"
@@ -608,15 +624,7 @@ msgid "\\"
 msgstr ""
 
 msgctxt "odt:site.work:"
-msgid "localisation"
-msgstr ""
-
-msgctxt "odt:site.work:"
-msgid "lundi 14 juillet 2014"
-msgstr ""
-
-msgctxt "odt:site.work:"
-msgid "situation"
+msgid "jeudi 23 octobre 2014"
 msgstr ""
 
 msgctxt "selection:site.work,state:"
@@ -665,11 +673,11 @@ msgstr "Général"
 
 msgctxt "view:site.work:"
 msgid "MaterielsOutils"
-msgstr ""
+msgstr "MaterielsOutils"
 
 msgctxt "view:site.work:"
 msgid "Matieres"
-msgstr ""
+msgstr "Matières"
 
 msgctxt "view:site.work:"
 msgid "Parties"
@@ -689,7 +697,7 @@ msgstr ""
 
 msgctxt "view:site_site.site:"
 msgid "Edit geometries"
-msgstr ""
+msgstr "Éditer les géométries"
 
 msgctxt "view:site_site.site:"
 msgid "General"
@@ -701,19 +709,19 @@ msgstr "Générer"
 
 msgctxt "view:site_site.site:"
 msgid "Image Map"
-msgstr ""
+msgstr "Carte du site"
 
 msgctxt "view:site_site.site:"
 msgid "Lines"
-msgstr ""
+msgstr "Lignes"
 
 msgctxt "view:site_site.site:"
 msgid "Misc. obj."
-msgstr ""
+msgstr "Objets géométriques"
 
 msgctxt "view:site_site.site:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "view:site_site.site:"
 msgid "Plot"
@@ -725,11 +733,19 @@ msgstr "Points"
 
 msgctxt "view:site_site.site:"
 msgid "Polygones"
-msgstr ""
+msgstr "Polygones"
+
+msgctxt "view:site_site.site:"
+msgid "Site Map"
+msgstr "Carte du site"
 
 msgctxt "view:site_site.site:"
 msgid "Situation Map"
-msgstr ""
+msgstr "Carte de situation du site"
+
+msgctxt "view:site_site.site:"
+msgid "Type"
+msgstr "Type"
 
 msgctxt "view:taxinomie.taxinomie:"
 msgid "Général"
