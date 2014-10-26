@@ -9,13 +9,16 @@ from trytond.pyson import PYSONEncoder, Not, Bool, Eval, Equal, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
+__all__ = ['Work', 'WorkLine', 'OpenWorkStart', 'OpenWork', 'OpenWork2', 'OpenWorkGraph']
+
+
 class Work(ModelSQL, ModelView):
     'Work'
     __name__ = 'timesheet.work'
     name = fields.Char(
             string=u'Name',
             help=u'Name',
-            required=True,            
+            required=True
         )
     active = fields.Boolean(
             string=u'Active',
@@ -24,7 +27,6 @@ class Work(ModelSQL, ModelView):
     parent = fields.Many2One(
             'timesheet.work',
             string=u'Parent',
-            help=u'Parent',
             left="left",
             right="right",
             select=True,
@@ -43,59 +45,38 @@ class Work(ModelSQL, ModelView):
     children = fields.One2Many(
             'timesheet.work',
             'parent',
-            string=u'Children',
-            help=u'Children',
+            'Children'
         )
-
-    hours = fields.Function(
-                fields.Float(
-                    string=u'Timesheet Hours',
-                    digits=(16, 2),
-                    states={
-                    'invisible': ~Eval('timesheet_available'),
-                        },
-                    depends=['timesheet_available'],
-                    help="Total time spent on this work"
-            ),
-            'get_hours'
-        )
-    timesheet_available = fields.Boolean(
-            string=u'Available on timesheets',
-            states={
-                'readonly': Bool(Eval('timesheet_lines', [0])),
-                },
-            help="Allow to fill in timesheets with this work"
-        )
-    timesheet_start_date = fields.Date(
-            string=u'Timesheet Start',
+    hours = fields.Function(fields.Float('Timesheet Hours', digits=(16, 2),
             states={
                 'invisible': ~Eval('timesheet_available'),
                 },
-            depends=['timesheet_available']
-        )
-    timesheet_end_date = fields.Date(
-            string=u'Timesheet End',
-            states={
-                'invisible': ~Eval('timesheet_available'),
-                },
-            depends=['timesheet_available']
-        )
-    company = fields.Many2One(
-            'company.company',
-            string=u'Company',
-            required=True,
-            select=True
-        )
-    timesheet_lines = fields.One2Many(
-            'timesheet.line',
-            'work',
-            string=u'Timesheet Lines',
-            depends=['timesheet_available', 'active'],
-            states={
-                'invisible': Not(Bool(Eval('timesheet_available'))),
-                'readonly': Not(Bool(Eval('active'))),
-                }
-        )
+            depends=['timesheet_available'],
+            help="Total time spent on this work"), 'get_hours')
+    timesheet_available = fields.Boolean('Available on timesheets',
+        states={
+            'readonly': Bool(Eval('timesheet_lines', [0])),
+            },
+        help="Allow to fill in timesheets with this work")
+    timesheet_start_date = fields.Date('Timesheet Start',
+        states={
+            'invisible': ~Eval('timesheet_available'),
+            },
+        depends=['timesheet_available'])
+    timesheet_end_date = fields.Date('Timesheet End',
+        states={
+            'invisible': ~Eval('timesheet_available'),
+            },
+        depends=['timesheet_available'])
+    company = fields.Many2One('company.company', 'Company', required=True,
+        select=True)
+    timesheet_lines = fields.One2Many('timesheet.line', 'work',
+        'Timesheet Lines',
+        depends=['timesheet_available', 'active'],
+        states={
+            'invisible': Not(Bool(Eval('timesheet_available'))),
+            'readonly': Not(Bool(Eval('active'))),
+            })
 
     @classmethod
     def __setup__(cls):
@@ -328,6 +309,7 @@ class WorkLine(ModelSQL, ModelView):
 
     def on_change_unit(self):
         return self.on_change_quantity()
+
 
 class OpenWorkStart(ModelView):
     'Open Work'

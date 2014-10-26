@@ -39,6 +39,78 @@ msgctxt "field:company.employee,car:"
 msgid "Car"
 msgstr "Véhicule"
 
+msgctxt "field:site.chantiertype,code:"
+msgid "Code chantier type"
+msgstr "Code chantier type"
+
+msgctxt "field:site.chantiertype,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.chantiertype,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.chantiertype,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.chantiertype,lib_long:"
+msgid "Libellé long du chantier type"
+msgstr "Libellé long du chantier type"
+
+msgctxt "field:site.chantiertype,name:"
+msgid "Libellé court du chantier type"
+msgstr "Libellé court du chantier type"
+
+msgctxt "field:site.chantiertype,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.chantiertype,tache:"
+msgid "Tâche"
+msgstr "Tâche"
+
+msgctxt "field:site.chantiertype,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.chantiertype,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.chantiertype-site.tache,chantiertype:"
+msgid "Chantier type"
+msgstr "Chantier type"
+
+msgctxt "field:site.chantiertype-site.tache,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.chantiertype-site.tache,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.chantiertype-site.tache,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.chantiertype-site.tache,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.chantiertype-site.tache,tache:"
+msgid "Tâche"
+msgstr "Tâche"
+
+msgctxt "field:site.chantiertype-site.tache,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.chantiertype-site.tache,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
 msgctxt "field:site.materiel,code:"
 msgid "Code matériel"
 msgstr "Code matériel"
@@ -116,6 +188,46 @@ msgid "Write Date"
 msgstr "Date de mise à jour"
 
 msgctxt "field:site.outil,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.tache,chantiertype:"
+msgid "Chantier type"
+msgstr "Chantier type"
+
+msgctxt "field:site.tache,code:"
+msgid "Code tâche"
+msgstr "Code tâche"
+
+msgctxt "field:site.tache,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.tache,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.tache,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.tache,lib_long:"
+msgid "Libellé long de la tâche"
+msgstr "Libellé long de la tâche"
+
+msgctxt "field:site.tache,name:"
+msgid "Libellé court de la tâche"
+msgstr "Libellé court de la tâche"
+
+msgctxt "field:site.tache,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.tache,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.tache,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
@@ -335,9 +447,21 @@ msgctxt "field:taxinomie.taxinomie,commun:"
 msgid "Nom commun"
 msgstr "Nom commun"
 
+msgctxt "field:timesheet.work,chantier:"
+msgid "Chantier"
+msgstr "Chantier"
+
+msgctxt "field:timesheet.work,tache:"
+msgid "Tâche"
+msgstr "Tâche"
+
 msgctxt "field:timesheet.work,timesheet_lines:"
 msgid "Timesheet Lines"
 msgstr "Lignes de feuille de présence"
+
+msgctxt "field:timesheet.work,type:"
+msgid "Type"
+msgstr "Type"
 
 msgctxt "field:timesheet.workline,exportation:"
 msgid "Lieu d'export"
@@ -351,6 +475,10 @@ msgctxt "help:company.employee,car:"
 msgid "Preference car"
 msgstr "Préférence véhicule"
 
+msgctxt "help:site.chantiertype,tache:"
+msgid "Tâches disponibles pour ce type de chantier"
+msgstr "Tâches disponibles pour ce type de chantier"
+
 msgctxt "help:site.materiel,outil:"
 msgid "Outils disponibles pour ce matériel"
 msgstr "Outils disponibles pour ce matériel"
@@ -358,6 +486,10 @@ msgstr "Outils disponibles pour ce matériel"
 msgctxt "help:site.outil,materiel:"
 msgid "Matériel"
 msgstr "Matériel"
+
+msgctxt "help:site.tache,chantiertype:"
+msgid "Type de chantier"
+msgstr "Type de chantier"
 
 msgctxt "help:site.work,car:"
 msgid "Car"
@@ -415,6 +547,22 @@ msgctxt "help:taxinomie.taxinomie,commun:"
 msgid "Nom commun"
 msgstr "Nom commun"
 
+msgctxt "help:timesheet.work,chantier:"
+msgid "Chantier type"
+msgstr "Chantier type"
+
+msgctxt "help:timesheet.work,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:timesheet.work,tache:"
+msgid "Tâche"
+msgstr "Tâche"
+
+msgctxt "help:timesheet.work,type:"
+msgid "Type"
+msgstr "Type"
+
 msgctxt "help:timesheet.workline,exportation:"
 msgid "Adresse d'export des matières"
 msgstr "Adresse d'export des matières"
@@ -422,6 +570,10 @@ msgstr "Adresse d'export des matières"
 msgctxt "help:timesheet.workline,tache:"
 msgid "Tache"
 msgstr "Tâche"
+
+msgctxt "model:ir.action,name:act_chantiertype_form"
+msgid "Chantier type"
+msgstr "Chantier type"
 
 msgctxt "model:ir.action,name:act_materiel_form"
 msgid "Matériel"
@@ -451,6 +603,10 @@ msgctxt "model:ir.action,name:act_site_taxinomie_form"
 msgid "Taxinomie"
 msgstr "Taxinomie"
 
+msgctxt "model:ir.action,name:act_site_timesheetwork_form"
+msgid "Works"
+msgstr "Activités"
+
 msgctxt "model:ir.action,name:act_site_tree"
 msgid "Sites/Task"
 msgstr "Chantiers/Tâches"
@@ -458,6 +614,10 @@ msgstr "Chantiers/Tâches"
 msgctxt "model:ir.action,name:act_site_workline_form"
 msgid "Workline"
 msgstr "Tâche"
+
+msgctxt "model:ir.action,name:act_tache_form"
+msgid "Tâches disponibles"
+msgstr "Tâches disponibles"
 
 msgctxt "model:ir.action,name:act_task_form"
 msgid "Tasks"
@@ -470,6 +630,10 @@ msgstr "Véhicule"
 msgctxt "model:ir.action,name:site_work"
 msgid "Fiche de chantier"
 msgstr "Fiche de chantier"
+
+msgctxt "model:ir.ui.menu,name:menu_chantiertype_form"
+msgid "Chantier type"
+msgstr "Chantier type"
 
 msgctxt "model:ir.ui.menu,name:menu_configuration"
 msgid "Configuration"
@@ -495,6 +659,10 @@ msgctxt "model:ir.ui.menu,name:menu_site_tree"
 msgid "Sites/Task"
 msgstr "Chantiers/Tâches"
 
+msgctxt "model:ir.ui.menu,name:menu_tache_form"
+msgid "Tâches disponibles"
+msgstr "Tâches disponibles"
+
 msgctxt "model:ir.ui.menu,name:menu_task_form"
 msgid "Tasks"
 msgstr "Tâches"
@@ -507,6 +675,14 @@ msgctxt "model:res.group,name:group_site_admin"
 msgid "Site Administration"
 msgstr "Chantier administration"
 
+msgctxt "model:site.chantiertype,name:"
+msgid "Chantier type"
+msgstr "Chantier type"
+
+msgctxt "model:site.chantiertype-site.tache,name:"
+msgid "ChantierType - Tache"
+msgstr "Chantier Type - Tâche"
+
 msgctxt "model:site.materiel,name:"
 msgid "Matériel"
 msgstr "Matériel"
@@ -514,6 +690,10 @@ msgstr "Matériel"
 msgctxt "model:site.outil,name:"
 msgid "Outil"
 msgstr "Outil"
+
+msgctxt "model:site.tache,name:"
+msgid "Tache"
+msgstr "Tâche"
 
 msgctxt "model:site.vehicule,name:"
 msgid "Vehicule"
@@ -643,9 +823,25 @@ msgctxt "selection:site.work,type:"
 msgid "Task"
 msgstr "Tâche"
 
+msgctxt "selection:timesheet.work,type:"
+msgid "Activity"
+msgstr "Chantier (Activité)"
+
+msgctxt "selection:timesheet.work,type:"
+msgid "Task"
+msgstr "Tâche (Activité)"
+
+msgctxt "view:site.chantiertype:"
+msgid "Chantier type"
+msgstr ""
+
 msgctxt "view:site.materiel:"
 msgid "Matériel"
 msgstr "Matériel"
+
+msgctxt "view:site.materiel:"
+msgid "Matériels"
+msgstr ""
 
 msgctxt "view:site.outil:"
 msgid "Matériel - Outil"
@@ -654,6 +850,14 @@ msgstr "Matériel - Outil"
 msgctxt "view:site.outil:"
 msgid "Outil"
 msgstr "Outil"
+
+msgctxt "view:site.tache:"
+msgid "Tâche"
+msgstr "Tâche"
+
+msgctxt "view:site.tache:"
+msgid "Tâches"
+msgstr ""
 
 msgctxt "view:site.vehicule:"
 msgid "Véhicule"
@@ -762,3 +966,7 @@ msgstr "Taxinomie"
 msgctxt "view:taxinomie.taxinomie:"
 msgid "Travaux Spéciaux Raisonnés"
 msgstr "Travaux Spéciaux Raisonnés"
+
+msgctxt "view:timesheet.work:"
+msgid "Activity"
+msgstr "Chantier ou Tâche (activités)"

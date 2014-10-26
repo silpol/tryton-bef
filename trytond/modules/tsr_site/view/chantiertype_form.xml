@@ -5,6 +5,7 @@
     <label name="name"/>
     <field name="name"/>
     <label name="lib_long"/>
-    <field name="lib_long"/>  
-    <field name="tache" colspan="4"/>             
+    <field name="lib_long"/>
+    <newline/>
+    <field name="tache" colspan="4"/>
 </form>

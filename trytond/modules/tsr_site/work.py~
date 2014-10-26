@@ -12,14 +12,7 @@ from trytond.pool import Pool, PoolMeta
 class Tache(ModelSQL, ModelView):
     u'Tache'
     __name__ = 'site.tache'
-    _rec_name = 'code'
 
-    chantiertype = fields.Many2One(
-            'site.chantiertype',
-            string=u'Chantier type',
-            help=u'Type de chantier',
-            required = True,
-        )
     code = fields.Char(
             string = u'Code tâche',
             required = True,
@@ -31,6 +24,12 @@ class Tache(ModelSQL, ModelView):
     lib_long = fields.Char(
             string = u'Libellé long de la tâche',
             required = False,
+        )
+    chantiertype = fields.Many2One(
+            'site.chantiertype',
+            string=u'Chantier type',
+            help=u'Type de chantier disposant de cette tâche',
+            required = True,
         )
 
 class ChantierType(ModelSQL, ModelView):
@@ -53,7 +52,7 @@ class ChantierType(ModelSQL, ModelView):
             'site.tache',
             'chantiertype',
             string=u'Tâche',
-            help=u'Tâches disponibles pour ce type de chantier',
+            help=u'Tâches disponibles pour ce chantier',
         )
 
 class Vehicule(ModelSQL, ModelView):
@@ -130,6 +129,8 @@ class Travail(ModelSQL, ModelView):
             help=u'Activity',
             required=True,
             ondelete='CASCADE',
+            # 1 représente l'id de l'activité chantier
+            domain=[('parent', 'child_of', 1, 'parent')],
         )
     site = fields.One2Many(
             'site_site.site',
@@ -170,7 +171,7 @@ class Travail(ModelSQL, ModelView):
         )
     matiere = fields.One2Many(
             'timesheet.workline',
-            'tache',
+            'work',
             string=u'Matières',
             help=u'Matières',
             states={
@@ -178,10 +179,12 @@ class Travail(ModelSQL, ModelView):
                     }
         )
     tache = fields.Function(
-            fields.Char(
+            fields.Many2One(
+                'site.tache',
                 string=u'Tâche'
             ),
-            'get_tache'
+            'get_tache',
+            searcher='search_tache'
         )
     company = fields.Function(
             fields.Many2One(
@@ -189,7 +192,7 @@ class Travail(ModelSQL, ModelView):
                 string=u'Company'
             ),
             'get_company',
-            searcher='search_comany'
+            searcher='search_company'
         )
     parties = fields.Many2Many(
             'site.work-party.party',
@@ -399,12 +402,19 @@ class Travail(ModelSQL, ModelView):
     def get_company(self, name):
         return self.work.company.id
 
-    def get_tache(self, name):
-        return self.work.tache
-
     @classmethod
     def search_company(cls, name, clause):
         return [('work.company',) + tuple(clause[1:])]
+
+    def get_tache(self, name):
+        print str(self.work.tache)
+        if self.work.tache is None:
+            return None
+        return self.work.tache.id
+
+    @classmethod
+    def search_tache(cls, name, clause):
+        return [('site.tache',) + tuple(clause[1:])]
 
     def get_timesheet_available(self, name):
         return self.work.timesheet_available
@@ -559,7 +569,7 @@ class Travail(ModelSQL, ModelView):
             pwdefault = default.copy()
             pwdefault['children'] = None
             pwdefault['work'] = timesheet_work.id
-            new_site_works.extend(super(Work, cls).copy([site_work],
+            new_site_works.extend(super(Travail, cls).copy([site_work],
                     default=pwdefault))
         return new_site_works
 
@@ -570,7 +580,7 @@ class Travail(ModelSQL, ModelView):
         # Get the timesheet works linked to the site works
         timesheet_works = [pw.work for pw in site_works]
 
-        super(Work, cls).delete(site_works)
+        super(Travail, cls).delete(site_works)
 
         TimesheetWork.delete(timesheet_works)
 
@@ -616,20 +626,20 @@ class Work:
             string=u'Name',
             help=u'Name',
             required=True,
-            on_change_with=['tache', 'type', 'chantier']
+            on_change_with=['tache', 'typo', 'chantiertype']
         )
 
     def on_change_with_name(self):
-        if self.chantier is None:
+        if self.chantiertype is None:
             return None
         elif self.tache is None:
             return None
-        elif self.type == 'activity':
+        elif self.typo == 'activity':
             return None
         else:
             return self.tache.name
 
-    type = fields.Selection(
+    typo = fields.Selection(
             [
                 ('activity', 'Activity'),
                 ('task', 'Task')
@@ -639,19 +649,19 @@ class Work:
             required=True,
             select=True
          )
-    chantier = fields.Many2One(
+    chantiertype = fields.Many2One(
             'site.chantiertype',
             string=u'Chantier',
             help=u'Chantier type',
             select=True,
             states={
-                    'invisible': Equal(Eval('type'),'activity')
+                    'invisible': Equal(Eval('typo'),'activity')
                     },
-            on_change_with=['type'],
+            on_change_with=['typo'],
         )
     
-    def on_change_with_chantier(self):
-        if self.type == 'activity':
+    def on_change_with_chantiertype(self):
+        if self.typo == 'activity':
             return None
 
     tache = fields.Many2One(
@@ -660,20 +670,20 @@ class Work:
             help=u'Tâche',
             select=True,
             states={
-                    'invisible': Equal(Eval('type'),'activity')
+                    'invisible': Equal(Eval('typo'),'activity')
                     },
-            on_change_with=['chantier', 'type'],
-            domain=[('chantiertype', '=', Eval('chantier'))],
+            on_change_with=['chantiertype', 'typo'],
+            domain=[('chantiertype', '=', Eval('chantiertype'))],  
          )
 
     def on_change_with_tache(self):
-        if self.type == 'activity':
+        if self.typo == 'activity':
             return None
-        elif self.chantier is None:
-            return None
+        elif self.chantiertype is None:
+            return None   
 
     @staticmethod
-    def default_type():
+    def default_typo():
         return 'activity'
 
     @staticmethod
@@ -681,7 +691,7 @@ class Work:
         return None
 
     @staticmethod
-    def default_chantier():
+    def default_chantiertype():
         return None
 
 class Site:

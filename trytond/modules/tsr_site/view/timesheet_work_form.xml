@@ -4,10 +4,10 @@ this repository contains the full copyright notices and license terms. -->
 <data>
     <xpath expr="/form/label[@name=&quot;name&quot;]" position="before">
             <group string="Activity" id="group_activity" colspan="4" col="6">                
-                <label name="type"/>
-                <field name="type"/>
-                <label name="chantier"/>
-                <field name="chantier" widget="selection"/>
+                <label name="typo"/>
+                <field name="typo"/>
+                <label name="chantiertype"/>
+                <field name="chantiertype" widget="selection"/>
                 <label name="tache"/>
                 <field name="tache" widget="selection"/>        
             </group>

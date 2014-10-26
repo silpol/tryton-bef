@@ -131,33 +131,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_workline_form"/>
         </record>
 
-        <!-- Tache -->
-        <record model="ir.ui.view" id="tache_view_tree">
-            <field name="model">site.tache</field>
-            <field name="type">tree</field>
-            <field name="name">tache_tree</field>
-        </record>
-        <record model="ir.ui.view" id="tache_view_form">
-            <field name="model">site.tache</field>
-            <field name="type">form</field>
-            <field name="name">tache_form</field>
-        </record>
-        <record model="ir.action.act_window" id="act_tache_form">
-            <field name="name">Tâches disponibles</field>
-            <field name="res_model">site.tache</field>
-        </record>
-        <record model="ir.action.act_window.view" id="act_tache_form_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="tache_view_tree"/>
-            <field name="act_window" ref="act_tache_form"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_tache_form_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="tache_view_form"/>
-            <field name="act_window" ref="act_tache_form"/>
-        </record>        
-        <menuitem parent="menu_chantiertype_form" id="menu_tache_form" icon="tryton-work" action="act_tache_form"/>
-
         <!-- Chantier type -->
         <record model="ir.ui.view" id="chantiertype_view_tree">
             <field name="model">site.chantiertype</field>
@@ -184,6 +157,33 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_chantiertype_form"/>
         </record>        
         <menuitem parent="menu_configuration" id="menu_chantiertype_form" icon="tryton-site" action="act_chantiertype_form"/>
+
+        <!-- Tache -->
+        <record model="ir.ui.view" id="tache_view_tree">
+            <field name="model">site.tache</field>
+            <field name="type">tree</field>
+            <field name="name">tache_tree</field>
+        </record>
+        <record model="ir.ui.view" id="tache_view_form">
+            <field name="model">site.tache</field>
+            <field name="type">form</field>
+            <field name="name">tache_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_tache_form">
+            <field name="name">Tâches disponibles</field>
+            <field name="res_model">site.tache</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tache_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tache_view_tree"/>
+            <field name="act_window" ref="act_tache_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tache_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tache_view_form"/>
+            <field name="act_window" ref="act_tache_form"/>
+        </record>        
+        <menuitem parent="menu_chantiertype_form" id="menu_tache_form" icon="tryton-work" action="act_tache_form"/>
 
         <!-- Vehicule -->
         <record model="ir.ui.view" id="vehicule_view_tree">

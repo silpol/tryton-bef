@@ -3,65 +3,6 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-        
-        <record model="ir.ui.view" id="materiel_view_tree">
-            <field name="model">timesheet.materiel</field>
-            <field name="type">tree</field>
-            <field name="name">materiel_tree</field>
-        </record>
-        <record model="ir.ui.view" id="materiel_view_form">
-            <field name="model">timesheet.materiel</field>
-            <field name="type">form</field>
-            <field name="name">materiel_form</field>
-        </record>
-        <record model="ir.action.act_window" id="act_materiel_form">
-            <field name="name">Matériel</field>
-            <field name="res_model">timesheet.materiel</field>
-        </record>
-        <record model="ir.action.act_window.view" id="act_materiel_form_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="materiel_view_tree"/>
-            <field name="act_window" ref="act_materiel_form"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_materiel_form_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="materiel_view_form"/>
-            <field name="act_window" ref="act_materiel_form"/>
-        </record>        
-        <menuitem parent="menu_configuration" id="menu_materiel_form" icon="tryton-list" action="act_materiel_form"/>
-
-        <record model="ir.ui.view" id="materiel_outil_view_tree2">
-            <field name="model">timesheet.outil</field>
-            <field name="type">tree</field>
-            <field name="name">materiel_outil_tree2</field>
-        </record>
-
-        <record model="ir.ui.view" id="outil_view_tree">
-            <field name="model">timesheet.outil</field>
-            <field name="type">tree</field>
-            <field name="name">outil_tree</field>
-        </record>
-        <record model="ir.ui.view" id="outil_view_form">
-            <field name="model">timesheet.outil</field>
-            <field name="type">form</field>
-            <field name="name">outil_form</field>
-        </record>
-        <record model="ir.action.act_window" id="act_outil_form">
-            <field name="name">Outil</field>
-            <field name="res_model">timesheet.outil</field>
-        </record>
-        <record model="ir.action.act_window.view" id="act_outil_form_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="outil_view_tree"/>
-            <field name="act_window" ref="act_outil_form"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_outil_form_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="outil_view_form"/>
-            <field name="act_window" ref="act_outil_form"/>
-        </record>        
-        <menuitem parent="menu_materiel_form" id="menu_outil_form" icon="tryton-list" action="act_outil_form"/>
-
         <record model="ir.ui.view" id="work_view_form">
             <field name="model">timesheet.work</field>
             <field name="type">form</field>
@@ -240,26 +181,6 @@ this repository contains the full copyright notices and license terms. -->
             id="rule_group_work_admin_group_timesheet_admin">
             <field name="rule_group" ref="rule_group_work_admin"/>
             <field name="group" ref="group_timesheet_admin"/>
-        </record>
-
-        <record model="ir.ui.view" id="work_line_view_form">
-            <field name="model">timesheet.workline</field>
-            <field name="type">form</field>
-            <field name="name">work_line_form</field>
-        </record>
-
-        <record model="ir.ui.view" id="work_line_view_tree">
-            <field name="model">timesheet.workline</field>
-            <field name="type">tree</field>
-            <field name="priority" eval="10"/>
-            <field name="name">work_line_tree</field>
-        </record>
-
-        <record model="ir.ui.view" id="work_line_view_tree_sequence">
-            <field name="model">timesheet.workline</field>
-            <field name="type">tree</field>
-            <field name="priority" eval="20"/>
-            <field name="name">work_line_tree_sequence</field>
         </record>
     </data>
 </tryton>

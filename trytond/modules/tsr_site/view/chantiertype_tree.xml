@@ -3,5 +3,5 @@
     <field name="code" />
     <field name="name" />
     <field name="lib_long" />
-    <field name="tache" /> 
+    <field name="tache" />
 </tree>

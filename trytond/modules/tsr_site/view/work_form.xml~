@@ -18,7 +18,7 @@ this repository contains the full copyright notices and license terms. -->
     <field name="car"/>
     <notebook colspan="6">
         <page string="General" id="general" col="6">
-            <label name="timesheet_available"/>
+            <label name="timesheet_available" colspan="2"/>
             <field name="timesheet_available"/>
             <newline/>
             <label name="effort"/>
@@ -52,14 +52,11 @@ this repository contains the full copyright notices and license terms. -->
         </page>
         <page string="Tasks" id="task" states="{'invisible': Not(Equal(Eval('type'), 'task'))}">
             <notebook colspan="6">
-                <page string="General" id="general" col="6">
-                    <label name="work"/>
-                    <field name="work"/>
-                </page>
                 <page string="MaterielsOutils" id="matoutil">
+                    <field name="tache" colspan="4"/>
                     <field name="matoutil"/>                      
                 </page>
-                <page string="Matieres" id="matieres" states="{'invisible': Not(Equal(Eval('tache'), 'exportation'))}">
+                <page string="Matieres" id="matieres" states="{'invisible': Not(Equal(Eval('tache.id'), 'Exportation'))}">
                     <field name="matiere"/>
                 </page>
             </notebook>

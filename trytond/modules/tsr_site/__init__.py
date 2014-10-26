@@ -5,7 +5,7 @@ from trytond.pool import Pool
 from .work import *
 
 def register():
-    Pool.register(
+    Pool.register(        
         ChantierType,
         Tache,
         Vehicule,

@@ -5,18 +5,19 @@ from trytond.pool import Pool
 from .work import *
 
 def register():
-    Pool.register(
+    Pool.register(        
         ChantierType,
         Tache,
+        TacheChantierType,
         Vehicule,
         Materiel,
         Outil,
-        Work,
+        Travail,
         WorkOutil,
         WorkParty,
         Site,
         taxinomie,
         WorkLine,
         Employee,
-        Timesheet,
+        Work,
         module='tsr_site', type_='model')

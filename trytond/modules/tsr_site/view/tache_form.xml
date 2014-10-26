@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <form string="Tâches">
+    <label name="chantiertype"/>
+    <field name="chantiertype" widget="selection"/>
     <label name="code"/>
     <field name="code"/>
     <label name="name"/>
     <field name="name"/>
-    <label name="chantiertype"/>
-    <field name="chantiertype"/>                  
+    <label name="lib_long"/>
+    <field name="lib_long"/>            
 </form>
