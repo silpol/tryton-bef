@@ -56,7 +56,9 @@ this repository contains the full copyright notices and license terms. -->
                     <field name="tache" colspan="4"/>
                     <field name="matoutil"/>                      
                 </page>
-                <page string="Matieres" id="matieres" states="{'invisible': Not(Equal(Eval('tache.id'), 'Exportation'))}">
+                <page string="Matieres" id="matieres" states="{'invisible': Not(Equal(Eval('work.tache.name'), 'Exportation'))}">
+                    <field name="tache" colspan="4"/>
+                    <field name="tacheaffiche" colspan="4"/>
                     <field name="matiere"/>
                 </page>
             </notebook>

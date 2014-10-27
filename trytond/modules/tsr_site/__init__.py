@@ -16,7 +16,7 @@ def register():
         WorkParty,
         Site,
         taxinomie,
-        WorkLine,
         Employee,
         Work,
+        Matiere,
         module='tsr_site', type_='model')

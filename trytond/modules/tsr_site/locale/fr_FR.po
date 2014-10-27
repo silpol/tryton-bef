@@ -9,8 +9,8 @@ msgstr ""
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
 "Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 msgctxt "error:site.work:"
@@ -69,45 +69,13 @@ msgstr "Nom"
 
 msgctxt "field:site.chantiertype,tache:"
 msgid "Tâche"
-msgstr "Tâche"
+msgstr "Tâche type"
 
 msgctxt "field:site.chantiertype,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
 msgctxt "field:site.chantiertype,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site.chantiertype-site.tache,chantiertype:"
-msgid "Chantier type"
-msgstr "Chantier type"
-
-msgctxt "field:site.chantiertype-site.tache,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site.chantiertype-site.tache,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site.chantiertype-site.tache,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site.chantiertype-site.tache,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site.chantiertype-site.tache,tache:"
-msgid "Tâche"
-msgstr "Tâche"
-
-msgctxt "field:site.chantiertype-site.tache,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site.chantiertype-site.tache,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
@@ -148,6 +116,54 @@ msgid "Write Date"
 msgstr "Date de mise à jour"
 
 msgctxt "field:site.materiel,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.matiere,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.matiere,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.matiere,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.matiere,exportation:"
+msgid "Lieu d'export"
+msgstr "Lieu d'export"
+
+msgctxt "field:site.matiere,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.matiere,product:"
+msgid "Matière"
+msgstr "Matière"
+
+msgctxt "field:site.matiere,quantity:"
+msgid "Quantity"
+msgstr "Quantité"
+
+msgctxt "field:site.matiere,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.matiere,unit:"
+msgid "Unit"
+msgstr "Unité"
+
+msgctxt "field:site.matiere,work:"
+msgid "Tache"
+msgstr "Tâche"
+
+msgctxt "field:site.matiere,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.matiere,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
@@ -196,8 +212,8 @@ msgid "Chantier type"
 msgstr "Chantier type"
 
 msgctxt "field:site.tache,code:"
-msgid "Code tâche"
-msgstr "Code tâche"
+msgid "Code tâche type"
+msgstr "Code tâche type"
 
 msgctxt "field:site.tache,create_date:"
 msgid "Create Date"
@@ -212,12 +228,12 @@ msgid "ID"
 msgstr "Identifiant"
 
 msgctxt "field:site.tache,lib_long:"
-msgid "Libellé long de la tâche"
-msgstr "Libellé long de la tâche"
+msgid "Libellé long de la tâche type"
+msgstr "Libellé long de la tâche type"
 
 msgctxt "field:site.tache,name:"
-msgid "Libellé court de la tâche"
-msgstr "Libellé court de la tâche"
+msgid "Libellé court de la tâche type"
+msgstr "Libellé court de la tâche type"
 
 msgctxt "field:site.tache,rec_name:"
 msgid "Name"
@@ -447,7 +463,7 @@ msgctxt "field:taxinomie.taxinomie,commun:"
 msgid "Nom commun"
 msgstr "Nom commun"
 
-msgctxt "field:timesheet.work,chantier:"
+msgctxt "field:timesheet.work,chantiertype:"
 msgid "Chantier"
 msgstr "Chantier"
 
@@ -459,36 +475,52 @@ msgctxt "field:timesheet.work,timesheet_lines:"
 msgid "Timesheet Lines"
 msgstr "Lignes de feuille de présence"
 
-msgctxt "field:timesheet.work,type:"
+msgctxt "field:timesheet.work,typo:"
 msgid "Type"
 msgstr "Type"
-
-msgctxt "field:timesheet.workline,exportation:"
-msgid "Lieu d'export"
-msgstr "Lieu d'export"
-
-msgctxt "field:timesheet.workline,tache:"
-msgid "Tache"
-msgstr "Tâche"
 
 msgctxt "help:company.employee,car:"
 msgid "Preference car"
 msgstr "Préférence véhicule"
 
 msgctxt "help:site.chantiertype,tache:"
-msgid "Tâches disponibles pour ce type de chantier"
+msgid "Tâches disponibles pour ce chantier"
 msgstr "Tâches disponibles pour ce type de chantier"
 
 msgctxt "help:site.materiel,outil:"
 msgid "Outils disponibles pour ce matériel"
 msgstr "Outils disponibles pour ce matériel"
 
+msgctxt "help:site.matiere,comment:"
+msgid "Matiere comment"
+msgstr "Commentaire sur la matière exportée."
+
+msgctxt "help:site.matiere,exportation:"
+msgid "Adresse d'export des matières"
+msgstr "Adresse d'export des matières"
+
+msgctxt "help:site.matiere,product:"
+msgid "Matière exportée"
+msgstr "Matière exportée"
+
+msgctxt "help:site.matiere,quantity:"
+msgid "Matier Quantity"
+msgstr "Quantité de matière"
+
+msgctxt "help:site.matiere,unit:"
+msgid "Matiere unit"
+msgstr "Unité de la matière exportée"
+
+msgctxt "help:site.matiere,work:"
+msgid "Tache"
+msgstr "Tâche"
+
 msgctxt "help:site.outil,materiel:"
 msgid "Matériel"
 msgstr "Matériel"
 
 msgctxt "help:site.tache,chantiertype:"
-msgid "Type de chantier"
+msgid "Type de chantier disposant de cette tâche"
 msgstr "Type de chantier"
 
 msgctxt "help:site.work,car:"
@@ -508,8 +540,8 @@ msgid "Total time spent on this work"
 msgstr "Temps total passé"
 
 msgctxt "help:site.work,matiere:"
-msgid "Matières"
-msgstr "Matières"
+msgid "Matières exportées"
+msgstr "Matières exportées"
 
 msgctxt "help:site.work,matoutil:"
 msgid "Materiels - Outils necessaires à l activite"
@@ -547,7 +579,7 @@ msgctxt "help:taxinomie.taxinomie,commun:"
 msgid "Nom commun"
 msgstr "Nom commun"
 
-msgctxt "help:timesheet.work,chantier:"
+msgctxt "help:timesheet.work,chantiertype:"
 msgid "Chantier type"
 msgstr "Chantier type"
 
@@ -559,17 +591,9 @@ msgctxt "help:timesheet.work,tache:"
 msgid "Tâche"
 msgstr "Tâche"
 
-msgctxt "help:timesheet.work,type:"
+msgctxt "help:timesheet.work,typo:"
 msgid "Type"
 msgstr "Type"
-
-msgctxt "help:timesheet.workline,exportation:"
-msgid "Adresse d'export des matières"
-msgstr "Adresse d'export des matières"
-
-msgctxt "help:timesheet.workline,tache:"
-msgid "Tache"
-msgstr "Tâche"
 
 msgctxt "model:ir.action,name:act_chantiertype_form"
 msgid "Chantier type"
@@ -578,6 +602,10 @@ msgstr "Chantier type"
 msgctxt "model:ir.action,name:act_materiel_form"
 msgid "Matériel"
 msgstr "Matériel"
+
+msgctxt "model:ir.action,name:act_matiere_form"
+msgid "Matières exportées"
+msgstr "Matières exportées"
 
 msgctxt "model:ir.action,name:act_open_child_work"
 msgid "Tasks"
@@ -616,8 +644,8 @@ msgid "Workline"
 msgstr "Tâche"
 
 msgctxt "model:ir.action,name:act_tache_form"
-msgid "Tâches disponibles"
-msgstr "Tâches disponibles"
+msgid "Tâche type"
+msgstr "Tâche type"
 
 msgctxt "model:ir.action,name:act_task_form"
 msgid "Tasks"
@@ -643,6 +671,10 @@ msgctxt "model:ir.ui.menu,name:menu_materiel_form"
 msgid "Matériel"
 msgstr "Matériel"
 
+msgctxt "model:ir.ui.menu,name:menu_matiere_form"
+msgid "Matières exportées"
+msgstr "Matières exportées"
+
 msgctxt "model:ir.ui.menu,name:menu_outil_form"
 msgid "Outil"
 msgstr "Outil"
@@ -660,8 +692,8 @@ msgid "Sites/Task"
 msgstr "Chantiers/Tâches"
 
 msgctxt "model:ir.ui.menu,name:menu_tache_form"
-msgid "Tâches disponibles"
-msgstr "Tâches disponibles"
+msgid "Tâche type"
+msgstr "Tâche type"
 
 msgctxt "model:ir.ui.menu,name:menu_task_form"
 msgid "Tasks"
@@ -679,13 +711,13 @@ msgctxt "model:site.chantiertype,name:"
 msgid "Chantier type"
 msgstr "Chantier type"
 
-msgctxt "model:site.chantiertype-site.tache,name:"
-msgid "ChantierType - Tache"
-msgstr "Chantier Type - Tâche"
-
 msgctxt "model:site.materiel,name:"
 msgid "Matériel"
 msgstr "Matériel"
+
+msgctxt "model:site.matiere,name:"
+msgid "Work matiere"
+msgstr "Matière"
 
 msgctxt "model:site.outil,name:"
 msgid "Outil"
@@ -804,7 +836,7 @@ msgid "\\"
 msgstr ""
 
 msgctxt "odt:site.work:"
-msgid "jeudi 23 octobre 2014"
+msgid "lundi 27 octobre 2014"
 msgstr ""
 
 msgctxt "selection:site.work,state:"
@@ -823,17 +855,17 @@ msgctxt "selection:site.work,type:"
 msgid "Task"
 msgstr "Tâche"
 
-msgctxt "selection:timesheet.work,type:"
+msgctxt "selection:timesheet.work,typo:"
 msgid "Activity"
-msgstr "Chantier (Activité)"
+msgstr "Chantier"
 
-msgctxt "selection:timesheet.work,type:"
+msgctxt "selection:timesheet.work,typo:"
 msgid "Task"
-msgstr "Tâche (Activité)"
+msgstr "Tâche"
 
 msgctxt "view:site.chantiertype:"
 msgid "Chantier type"
-msgstr ""
+msgstr "Chantier type"
 
 msgctxt "view:site.materiel:"
 msgid "Matériel"
@@ -841,6 +873,10 @@ msgstr "Matériel"
 
 msgctxt "view:site.materiel:"
 msgid "Matériels"
+msgstr ""
+
+msgctxt "view:site.matiere:"
+msgid "Matière"
 msgstr ""
 
 msgctxt "view:site.outil:"

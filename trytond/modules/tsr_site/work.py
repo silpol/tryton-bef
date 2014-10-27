@@ -14,15 +14,15 @@ class Tache(ModelSQL, ModelView):
     __name__ = 'site.tache'
 
     code = fields.Char(
-            string = u'Code tâche',
+            string = u'Code tâche type',
             required = True,
         )
     name = fields.Char(
-            string = u'Libellé court de la tâche',
+            string = u'Libellé court de la tâche type',
             required = True,
         )        
     lib_long = fields.Char(
-            string = u'Libellé long de la tâche',
+            string = u'Libellé long de la tâche type',
             required = False,
         )
     chantiertype = fields.Many2One(
@@ -118,6 +118,45 @@ class Materiel(ModelSQL, ModelView):
             help=u'Outils disponibles pour ce matériel',
         )
 
+class Matiere(ModelSQL, ModelView):
+    u'Work matiere'
+    __name__ = 'site.matiere'
+
+    work = fields.Many2One(
+            'site.work',            
+            string=u'Tache',
+            help=u'Tache',
+        )
+    product = fields.Many2One(
+            'product.product',
+            string=u'Matière',
+            help=u'Matière exportée',
+            required=True,
+        )
+    comment = fields.Text(
+            string=u'Comment',
+            help=u'Matiere comment'
+        )
+    exportation = fields.Many2One(
+            'party.address',            
+            string=u'Lieu d\'export',
+            help=u'Adresse d\'export des matières',
+        )
+    quantity = fields.Float(
+            string=u'Quantity',
+            help=u'Matier Quantity',
+            digits=(16, Eval('unit_digits', 2)),
+        )
+    unit = fields.Many2One(
+            'product.uom',
+            string=u'Unit',
+            help=u'Matiere unit',
+            on_change_with=['product'],
+        )
+
+    def on_change_with_unit(self):
+        return self.product.default_uom.id
+
 class Travail(ModelSQL, ModelView):
     u'Work Effort'
     __name__ = 'site.work'
@@ -170,14 +209,11 @@ class Travail(ModelSQL, ModelView):
                     },
         )
     matiere = fields.One2Many(
-            'timesheet.workline',
+            'site.matiere',
             'work',
             string=u'Matières',
-            help=u'Matières',
-            states={
-                    'invisible': Equal(Eval('type'),'site')
-                    }
-        )
+            help=u'Matières exportées',
+        )       
     tache = fields.Function(
             fields.Many2One(
                 'site.tache',
@@ -186,6 +222,16 @@ class Travail(ModelSQL, ModelView):
             'get_tache',
             searcher='search_tache'
         )
+
+    def get_tache(self, name):
+        if self.work.tache is None:
+            return None
+        return self.work.tache.id
+
+    @classmethod
+    def search_tache(cls, name, clause):
+        return [('site.tache',) + tuple(clause[1:])]
+
     company = fields.Function(
             fields.Many2One(
                 'company.company',
@@ -405,15 +451,6 @@ class Travail(ModelSQL, ModelView):
     @classmethod
     def search_company(cls, name, clause):
         return [('work.company',) + tuple(clause[1:])]
-
-    def get_tache(self, name):
-        if self.work.tache is None:
-            return None
-        return self.work.tache.id
-
-    @classmethod
-    def search_tache(cls, name, clause):
-        return [('site.tache',) + tuple(clause[1:])]
 
     def get_timesheet_available(self, name):
         return self.work.timesheet_available
@@ -715,21 +752,6 @@ class taxinomie:
     commun = fields.Char(            
             string=u'Nom commun',
             help=u'Nom commun',
-        )
-
-class WorkLine:
-    __metaclass__ = PoolMeta
-    __name__ = 'timesheet.workline'
-
-    exportation = fields.Many2One(
-            'party.address',            
-            string=u'Lieu d\'export',
-            help=u'Adresse d\'export des matières',
-        )
-    tache = fields.Many2One(
-            'site.work',            
-            string=u'Tache',
-            help=u'Tache',
         )
 
 class Employee:

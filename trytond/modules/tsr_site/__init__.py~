@@ -8,16 +8,15 @@ def register():
     Pool.register(        
         ChantierType,
         Tache,
-        TacheChantierType,
         Vehicule,
         Materiel,
         Outil,
+        Matiere,
         Travail,
         WorkOutil,
         WorkParty,
         Site,
         taxinomie,
-        WorkLine,
         Employee,
         Work,
         module='tsr_site', type_='model')

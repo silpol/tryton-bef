@@ -284,6 +284,10 @@ msgctxt "field:timesheet.work.open.start,to_date:"
 msgid "To Date"
 msgstr "Date de fin"
 
+msgctxt "help:timesheet.work,active:"
+msgid "Active"
+msgstr "Active"
+
 msgctxt "help:timesheet.work,hours:"
 msgid "Total time spent on this work"
 msgstr "Temps total passé sur cette activité"

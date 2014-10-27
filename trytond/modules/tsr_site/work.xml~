@@ -86,6 +86,33 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_taxinomie_form"/>
         </record>
 
+        <!-- Matiere -->
+        <record model="ir.ui.view" id="matiere_view_tree">
+            <field name="model">site.matiere</field>
+            <field name="type">tree</field>
+            <field name="name">matiere_tree</field>
+        </record>
+        <record model="ir.ui.view" id="matiere_view_form">
+            <field name="model">site.matiere</field>
+            <field name="type">form</field>
+            <field name="name">matiere_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_matiere_form">
+            <field name="name">Matières exportées</field>
+            <field name="res_model">site.matiere</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_matiere_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="matiere_view_tree"/>
+            <field name="act_window" ref="act_matiere_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_matiere_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="matiere_view_form"/>
+            <field name="act_window" ref="act_matiere_form"/>
+        </record>        
+        <menuitem parent="menu_site" id="menu_matiere_form" icon="tryton-list" action="act_matiere_form"/>
+
         <!-- Timesheet work -->
         <record model="ir.ui.view" id="site_timesheetwork_view_form">
             <field name="model">timesheet.work</field>
@@ -102,7 +129,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_site_timesheetwork_form"/>
         </record>
 
-        <!-- Timesheet workline
+        <!-- Timesheet workline -->
         <record model="ir.ui.view" id="site_workline_view_form">
             <field name="model">timesheet.workline</field>
             <field name="inherit" ref="timesheet.work_line_view_form" />
@@ -129,7 +156,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="20"/>
             <field name="view" ref="site_workline_view_form"/>
             <field name="act_window" ref="act_site_workline_form"/>
-        </record-->
+        </record>
 
         <!-- Chantier type -->
         <record model="ir.ui.view" id="chantiertype_view_tree">
@@ -170,7 +197,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">tache_form</field>
         </record>
         <record model="ir.action.act_window" id="act_tache_form">
-            <field name="name">Tâches disponibles</field>
+            <field name="name">Tâche type</field>
             <field name="res_model">site.tache</field>
         </record>
         <record model="ir.action.act_window.view" id="act_tache_form_view1">

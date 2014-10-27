@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Matière">
+    <field name="work" />
+    <field name="product" />
+    <field name="quantity"/>
+    <field name="unit"/>
+    <field name="comment" />
+    <field name="exportation" />
+</tree>

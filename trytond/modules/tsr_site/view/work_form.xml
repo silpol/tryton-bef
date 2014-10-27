@@ -57,6 +57,7 @@ this repository contains the full copyright notices and license terms. -->
                     <field name="matoutil"/>                      
                 </page>
                 <page string="Matieres" id="matieres">
+                    <field name="tache" colspan="4"/>
                     <field name="matiere"/>
                 </page>
             </notebook>

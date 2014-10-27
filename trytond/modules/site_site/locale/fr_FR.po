@@ -127,7 +127,7 @@ msgstr "Nom"
 
 msgctxt "field:site_site.lrs,pk:"
 msgid "PK"
-msgstr ""
+msgstr "PK"
 
 msgctxt "field:site_site.lrs,rec_name:"
 msgid "Name"
@@ -135,7 +135,7 @@ msgstr "Nom"
 
 msgctxt "field:site_site.lrs,track:"
 msgid "Track"
-msgstr ""
+msgstr "Track"
 
 msgctxt "field:site_site.lrs,write_date:"
 msgid "Write Date"
@@ -291,7 +291,7 @@ msgstr "Créé par"
 
 msgctxt "field:site_site.poi,end:"
 msgid "PK end"
-msgstr ""
+msgstr "PK fin"
 
 msgctxt "field:site_site.poi,geom:"
 msgid "Geometry"
@@ -307,7 +307,7 @@ msgstr "Nom"
 
 msgctxt "field:site_site.poi,photo:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "field:site_site.poi,poi_image:"
 msgid "Image"
@@ -323,11 +323,11 @@ msgstr "Nom"
 
 msgctxt "field:site_site.poi,start:"
 msgid "PK start"
-msgstr ""
+msgstr "PK début"
 
 msgctxt "field:site_site.poi,track:"
 msgid "Track"
-msgstr ""
+msgstr "Track"
 
 msgctxt "field:site_site.poi,write_date:"
 msgid "Write Date"
@@ -371,7 +371,7 @@ msgstr "Nom"
 
 msgctxt "field:site_site.point,photo:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "field:site_site.point,point_image:"
 msgid "Image"
@@ -383,7 +383,7 @@ msgstr "Image"
 
 msgctxt "field:site_site.point,precaution:"
 msgid "Précautions"
-msgstr ""
+msgstr "Précautions"
 
 msgctxt "field:site_site.point,rec_name:"
 msgid "Name"
@@ -407,7 +407,7 @@ msgstr "Active"
 
 msgctxt "field:site_site.site,avancement:"
 msgid "Av.(%)"
-msgstr ""
+msgstr "Av.(%)"
 
 msgctxt "field:site_site.site,code:"
 msgid "Code"
@@ -423,11 +423,11 @@ msgstr "Créé par"
 
 msgctxt "field:site_site.site,datedeb:"
 msgid "Début"
-msgstr ""
+msgstr "Début"
 
 msgctxt "field:site_site.site,datefin:"
 msgid "Fin"
-msgstr ""
+msgstr "Fin"
 
 msgctxt "field:site_site.site,geom:"
 msgid "Geometry"
@@ -435,7 +435,7 @@ msgstr "Geometry"
 
 msgctxt "field:site_site.site,icon:"
 msgid "icon"
-msgstr ""
+msgstr "icône"
 
 msgctxt "field:site_site.site,id:"
 msgid "ID"
@@ -443,23 +443,23 @@ msgstr "Identifiant"
 
 msgctxt "field:site_site.site,misc_obj_line:"
 msgid "Miscellaneous line objects"
-msgstr ""
+msgstr "Objet géométrique ligne"
 
 msgctxt "field:site_site.site,misc_obj_point:"
 msgid "Miscellaneous point objects"
-msgstr ""
+msgstr "Objet géométrique point"
 
 msgctxt "field:site_site.site,misc_obj_poly:"
 msgid "Miscellaneous polygon objects"
-msgstr ""
+msgstr "Objet géométrique polygone"
 
 msgctxt "field:site_site.site,moa:"
 msgid "MOA"
-msgstr ""
+msgstr "MOA"
 
 msgctxt "field:site_site.site,moe:"
 msgid "MOE"
-msgstr ""
+msgstr "MOE"
 
 msgctxt "field:site_site.site,name:"
 msgid "Name"
@@ -467,11 +467,11 @@ msgstr "Nom"
 
 msgctxt "field:site_site.site,parcelle:"
 msgid "Parcelle"
-msgstr ""
+msgstr "Parcelle"
 
 msgctxt "field:site_site.site,photo:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "field:site_site.site,points:"
 msgid "Points"
@@ -483,23 +483,23 @@ msgstr "Nom"
 
 msgctxt "field:site_site.site,site_image:"
 msgid "Image"
-msgstr "Carte du site"
+msgstr "Carte précise du site"
 
 msgctxt "field:site_site.site,site_map:"
 msgid "Image map"
-msgstr ""
+msgstr "Carte"
 
 msgctxt "field:site_site.site,site_situation:"
 msgid "Situation map"
-msgstr "Carte de situation"
+msgstr "Carte de situation du site"
 
 msgctxt "field:site_site.site,suivi:"
-msgid "Suivi par"
-msgstr ""
+msgid "Intervenant"
+msgstr "Intervenant"
 
 msgctxt "field:site_site.site,tracks:"
 msgid "Tracks"
-msgstr ""
+msgstr "Tracks"
 
 msgctxt "field:site_site.site,typo:"
 msgid "Type"
@@ -515,7 +515,7 @@ msgstr "Mis à jour par"
 
 msgctxt "field:site_site.site,zones:"
 msgid "Zones"
-msgstr ""
+msgstr "Zones"
 
 msgctxt "field:site_site.site-cadastre.parcelle,create_date:"
 msgid "Create Date"
@@ -531,7 +531,7 @@ msgstr "Identifiant"
 
 msgctxt "field:site_site.site-cadastre.parcelle,parcelle:"
 msgid "Parcelle"
-msgstr ""
+msgstr "Parcelle"
 
 msgctxt "field:site_site.site-cadastre.parcelle,rec_name:"
 msgid "Name"
@@ -567,7 +567,7 @@ msgstr "Canton"
 
 msgctxt "field:site_site.surface_site_clc,clc:"
 msgid "CLC"
-msgstr ""
+msgstr "CLC"
 
 msgctxt "field:site_site.surface_site_clc,code:"
 msgid "Code"
@@ -599,7 +599,7 @@ msgstr "Site"
 
 msgctxt "field:site_site.surface_site_clc,surface:"
 msgid "Surface (ha)"
-msgstr ""
+msgstr "Surface (ha)"
 
 msgctxt "field:site_site.surface_site_clc,write_date:"
 msgid "Write Date"
@@ -619,7 +619,7 @@ msgstr "Créé par"
 
 msgctxt "field:site_site.surface_statut_buffer,distance:"
 msgid "Distance (km)"
-msgstr ""
+msgstr "Distance (km)"
 
 msgctxt "field:site_site.surface_statut_buffer,id:"
 msgid "ID"
@@ -635,11 +635,11 @@ msgstr "Nom"
 
 msgctxt "field:site_site.surface_statut_buffer,statut:"
 msgid "Statut"
-msgstr ""
+msgstr "Statut"
 
 msgctxt "field:site_site.surface_statut_buffer,surface:"
 msgid "Surface (ha)"
-msgstr ""
+msgstr "Surface (ha)"
 
 msgctxt "field:site_site.surface_statut_buffer,typo:"
 msgid "Type"
@@ -655,7 +655,7 @@ msgstr "Mis à jour par"
 
 msgctxt "field:site_site.surface_statut_buffer,zone:"
 msgid "Zone"
-msgstr ""
+msgstr "Zone"
 
 msgctxt "field:site_site.surface_statut_buffer.open.start,id:"
 msgid "ID"
@@ -663,7 +663,7 @@ msgstr "Identifiant"
 
 msgctxt "field:site_site.surface_statut_buffer.open.start,zone:"
 msgid "Zone"
-msgstr ""
+msgstr "Zone"
 
 msgctxt "field:site_site.track,active:"
 msgid "Active"
@@ -699,11 +699,11 @@ msgstr "Nom"
 
 msgctxt "field:site_site.track,photo:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "field:site_site.track,precaution:"
 msgid "Précautions"
-msgstr ""
+msgstr "Précautions"
 
 msgctxt "field:site_site.track,rec_name:"
 msgid "Name"
@@ -763,11 +763,11 @@ msgstr "Nom"
 
 msgctxt "field:site_site.zone,photo:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "field:site_site.zone,precaution:"
 msgid "Précautions"
-msgstr ""
+msgstr "Précautions"
 
 msgctxt "field:site_site.zone,rec_name:"
 msgid "Name"
@@ -795,47 +795,47 @@ msgstr "Image"
 
 msgctxt "help:site_site.lrs,geom:"
 msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
 
 msgctxt "help:site_site.lrs,name:"
 msgid "Name of lrs"
-msgstr ""
+msgstr "Nom du LRS (Système de Référence Linéaire)"
 
 msgctxt "help:site_site.lrs,pk:"
 msgid "Pk of track"
-msgstr ""
+msgstr "PK du track"
 
 msgctxt "help:site_site.lrs,track:"
 msgid "Track"
-msgstr ""
+msgstr "Track"
 
 msgctxt "help:site_site.poi,comment:"
 msgid "Comment of POI"
-msgstr ""
+msgstr "Commentaire du POI (Point d'intérêt)"
 
 msgctxt "help:site_site.poi,end:"
 msgid "PK end of POI"
-msgstr ""
+msgstr "PK fin du POI"
 
 msgctxt "help:site_site.poi,geom:"
 msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
 
 msgctxt "help:site_site.poi,name:"
 msgid "Name of POI"
-msgstr ""
+msgstr "Nom du POI"
 
 msgctxt "help:site_site.poi,photo:"
 msgid "Photo of point"
-msgstr ""
+msgstr "Photo du POI"
 
 msgctxt "help:site_site.poi,start:"
 msgid "PK start of POI"
-msgstr ""
+msgstr "PK début du POI"
 
 msgctxt "help:site_site.poi,track:"
 msgid "Track"
-msgstr ""
+msgstr "Track"
 
 msgctxt "help:site_site.point,active:"
 msgid "Active"
@@ -843,27 +843,27 @@ msgstr "Active"
 
 msgctxt "help:site_site.point,code:"
 msgid "Code of point"
-msgstr ""
+msgstr "Code du point d'intérêt"
 
 msgctxt "help:site_site.point,comment:"
 msgid "Comment of point"
-msgstr ""
+msgstr "Commentaire du point d'intérêt"
 
 msgctxt "help:site_site.point,geom:"
 msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
+msgstr "Géométrie MultiLigne (EPSG=2154, RGF93/Lambert 93)"
 
 msgctxt "help:site_site.point,name:"
 msgid "Name of point"
-msgstr ""
+msgstr "Nom du point d'intérêt"
 
 msgctxt "help:site_site.point,photo:"
 msgid "Photo of point"
-msgstr ""
+msgstr "Photo du point"
 
 msgctxt "help:site_site.point,precaution:"
 msgid "Précautions à prendre"
-msgstr ""
+msgstr "Précautions à prendre"
 
 msgctxt "help:site_site.point,site:"
 msgid "Site"
@@ -875,51 +875,51 @@ msgstr "Active"
 
 msgctxt "help:site_site.site,avancement:"
 msgid "Pourcentage de réalisation entre 0 et 100"
-msgstr ""
+msgstr "Pourcentage de réalisation entre 0 et 100"
 
 msgctxt "help:site_site.site,code:"
 msgid "Code of site"
-msgstr ""
+msgstr "Code du site"
 
 msgctxt "help:site_site.site,datedeb:"
 msgid "Date de début de chantier"
-msgstr ""
+msgstr "Date de début de chantier"
 
 msgctxt "help:site_site.site,datefin:"
 msgid "Date de fin de chantier"
-msgstr ""
+msgstr "Date de fin de chantier"
 
 msgctxt "help:site_site.site,geom:"
 msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
 
 msgctxt "help:site_site.site,moa:"
 msgid "Maîtrise d'ouvrage"
-msgstr ""
+msgstr "Maîtrise d'ouvrage"
 
 msgctxt "help:site_site.site,moe:"
 msgid "Maîtrise d'oeuvre"
-msgstr ""
+msgstr "Maîtrise d'oeuvre"
 
 msgctxt "help:site_site.site,name:"
 msgid "Name of site"
-msgstr ""
+msgstr "Nom du site"
 
 msgctxt "help:site_site.site,parcelle:"
 msgid "Parcelle(s) concernée(s)"
-msgstr ""
+msgstr "Parcelle(s) concernée(s)"
 
 msgctxt "help:site_site.site,photo:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "help:site_site.site,suivi:"
-msgid "Affaire suivi par"
-msgstr ""
+msgid "Intervenant TSR"
+msgstr "Intervenant TSR"
 
 msgctxt "help:site_site.site,typo:"
 msgid "Type de site"
-msgstr ""
+msgstr "Type de site"
 
 msgctxt "help:site_site.track,active:"
 msgid "Active"
@@ -927,27 +927,27 @@ msgstr "Active"
 
 msgctxt "help:site_site.track,code:"
 msgid "Code of track"
-msgstr ""
+msgstr "Code du track"
 
 msgctxt "help:site_site.track,comment:"
 msgid "Comment of track"
-msgstr ""
+msgstr "Commentaire sur le track"
 
 msgctxt "help:site_site.track,geom:"
 msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
+msgstr "Géométrie MultiLigne (EPSG=2154, RGF93/Lambert 93)"
 
 msgctxt "help:site_site.track,name:"
 msgid "Name of track"
-msgstr ""
+msgstr "Nom du track"
 
 msgctxt "help:site_site.track,photo:"
 msgid "Photo of track"
-msgstr ""
+msgstr "Photo du track"
 
 msgctxt "help:site_site.track,precaution:"
 msgid "Précautions à prendre"
-msgstr ""
+msgstr "Précautions à prendre"
 
 msgctxt "help:site_site.track,site:"
 msgid "Site"
@@ -959,7 +959,7 @@ msgstr "Active"
 
 msgctxt "help:site_site.zone,code:"
 msgid "Code of zone"
-msgstr ""
+msgstr "Code de la zone"
 
 msgctxt "help:site_site.zone,comment:"
 msgid "Comment"
@@ -967,19 +967,19 @@ msgstr "Commentaire"
 
 msgctxt "help:site_site.zone,geom:"
 msgid "Geometry MultiPolygon (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
+msgstr "Géométrie MultiPolygone (EPSG=2154, RGF93/Lambert 93)"
 
 msgctxt "help:site_site.zone,name:"
 msgid "Name of zone"
-msgstr ""
+msgstr "Nom de la zone"
 
 msgctxt "help:site_site.zone,photo:"
 msgid "Photo of zone"
-msgstr ""
+msgstr "Photo de la zone"
 
 msgctxt "help:site_site.zone,precaution:"
 msgid "Précautions à prendre"
-msgstr ""
+msgstr "Précautions à prendre"
 
 msgctxt "help:site_site.zone,site:"
 msgid "Site"
@@ -995,11 +995,11 @@ msgstr "Configuration"
 
 msgctxt "model:ir.action,name:act_lrs_form"
 msgid "LRS"
-msgstr ""
+msgstr "LRS"
 
 msgctxt "model:ir.action,name:act_poi_form"
 msgid "POI"
-msgstr ""
+msgstr "POI"
 
 msgctxt "model:ir.action,name:act_point_form"
 msgid "Points"
@@ -1011,7 +1011,7 @@ msgstr "Sites"
 
 msgctxt "model:ir.action,name:act_site_misc_obj_line_form"
 msgid "Lines"
-msgstr ""
+msgstr "Lignes"
 
 msgctxt "model:ir.action,name:act_site_misc_obj_point_form"
 msgid "Points"
@@ -1019,31 +1019,31 @@ msgstr "Points"
 
 msgctxt "model:ir.action,name:act_site_misc_obj_poly_form"
 msgid "Polygons"
-msgstr ""
+msgstr "Polygones"
 
 msgctxt "model:ir.action,name:act_surface_site_surface_form"
 msgid "Chantier - Corine Land Cover"
-msgstr "Coupe - Protection - Buffer (ha/Chantier/Statuts)"
+msgstr "Site - Protection - Buffer (ha/Chantier/Statuts)"
 
 msgctxt "model:ir.action,name:act_surface_site_surface_open"
 msgid "Chantier - Corine Land Cover"
-msgstr "Chantier - Statuts de protection"
+msgstr "Site - Statuts de protection"
 
 msgctxt "model:ir.action,name:act_surface_zone_surface_form"
 msgid "Zones - Statuts de protection"
-msgstr ""
+msgstr "Zones - Statuts de protection"
 
 msgctxt "model:ir.action,name:act_surface_zone_surface_open"
 msgid "Zones - Statuts de protection"
-msgstr ""
+msgstr "Zones - Statuts de protection"
 
 msgctxt "model:ir.action,name:act_track_form"
 msgid "Tracks"
-msgstr ""
+msgstr "Tracks"
 
 msgctxt "model:ir.action,name:act_zone_form"
 msgid "Zones"
-msgstr ""
+msgstr "Zones"
 
 msgctxt "model:ir.action,name:report_buffer"
 msgid "Rapport - Zones et Statuts de protection"
@@ -1075,23 +1075,23 @@ msgstr "Ouvrir POI dans QGis..."
 
 msgctxt "model:ir.action,name:report_point_edit"
 msgid "Open Point in QGis..."
-msgstr ""
+msgstr "Ouvrir le(s) point(s) dans QGIS..."
 
 msgctxt "model:ir.action,name:report_site_clc"
 msgid "Rapport Site - CLC"
-msgstr ""
+msgstr "Rapport Site - CLC"
 
 msgctxt "model:ir.action,name:report_site_edit"
 msgid "Open site in QGis..."
-msgstr "Ouvrir la coupe dans QGis..."
+msgstr "Ouvrir le(s) site(s) dans QGis..."
 
 msgctxt "model:ir.action,name:report_track_edit"
 msgid "Open Track in QGis..."
-msgstr "Ouvrir le tronçon dans QGis"
+msgstr "Ouvrir le(s) track(s) dans QGis"
 
 msgctxt "model:ir.action,name:report_zone_edit"
 msgid "Open Zone in QGis..."
-msgstr ""
+msgstr "Ouvrir la (les) zone(s) dans QGIS..."
 
 msgctxt "model:ir.ui.menu,name:menu_code_form"
 msgid "Code"
@@ -1107,11 +1107,11 @@ msgstr "Configuration"
 
 msgctxt "model:ir.ui.menu,name:menu_lrs_form"
 msgid "LRS"
-msgstr ""
+msgstr "LRS"
 
 msgctxt "model:ir.ui.menu,name:menu_poi_form"
 msgid "POI"
-msgstr ""
+msgstr "POI"
 
 msgctxt "model:ir.ui.menu,name:menu_point_form"
 msgid "Points"
@@ -1119,7 +1119,7 @@ msgstr "Points"
 
 msgctxt "model:ir.ui.menu,name:menu_protection_surface_zone_surface"
 msgid "Zones - Statuts de protection"
-msgstr ""
+msgstr "Zones - Statuts de protection"
 
 msgctxt "model:ir.ui.menu,name:menu_rapport"
 msgid "Rapports"
@@ -1135,11 +1135,11 @@ msgstr "Sites"
 
 msgctxt "model:ir.ui.menu,name:menu_site_misc_obj"
 msgid "Misc objects"
-msgstr ""
+msgstr "Objets divers"
 
 msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_line_form"
 msgid "Lines"
-msgstr ""
+msgstr "Lignes"
 
 msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_point_form"
 msgid "Points"
@@ -1147,19 +1147,19 @@ msgstr "Points"
 
 msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_poly_form"
 msgid "Polygons"
-msgstr ""
+msgstr "Polygones"
 
 msgctxt "model:ir.ui.menu,name:menu_surface_site_clc"
 msgid "Chantier - Corine Land Cover"
-msgstr "Coupe - Protection - Buffer (ha/Chantier/Statuts)"
+msgstr "Site - Protection - Buffer (ha/Chantier/Statuts)"
 
 msgctxt "model:ir.ui.menu,name:menu_track_form"
 msgid "Tracks"
-msgstr ""
+msgstr "Tracks"
 
 msgctxt "model:ir.ui.menu,name:menu_zone_form"
 msgid "Zones"
-msgstr ""
+msgstr "Zones"
 
 msgctxt "model:site_site.code,name:"
 msgid "Code"
@@ -1171,23 +1171,23 @@ msgstr "Configuration"
 
 msgctxt "model:site_site.lrs,name:"
 msgid "Lrs"
-msgstr ""
+msgstr "LRS"
 
 msgctxt "model:site_site.misc_obj_line,name:"
 msgid "Miscellaneous line object"
-msgstr ""
+msgstr "Objet géométrique ligne"
 
 msgctxt "model:site_site.misc_obj_point,name:"
 msgid "Miscellaneous point object"
-msgstr ""
+msgstr "Objet géométrique point"
 
 msgctxt "model:site_site.misc_obj_poly,name:"
 msgid "Miscellaneous polygon object"
-msgstr ""
+msgstr "Objet géométrique polygone"
 
 msgctxt "model:site_site.poi,name:"
 msgid "Poi"
-msgstr ""
+msgstr "POI"
 
 msgctxt "model:site_site.point,name:"
 msgid "Point"
@@ -1199,31 +1199,31 @@ msgstr "Site"
 
 msgctxt "model:site_site.site-cadastre.parcelle,name:"
 msgid "Site - Parcelle"
-msgstr ""
+msgstr "Site - Parcelle"
 
 msgctxt "model:site_site.surface_clc_site.open.start,name:"
 msgid "Open surface_clc_site"
-msgstr ""
+msgstr "Ouvrir"
 
 msgctxt "model:site_site.surface_site_clc,name:"
 msgid "Surface (ha/Site/CLC)"
-msgstr ""
+msgstr "Surface (ha/Site/CLC)"
 
 msgctxt "model:site_site.surface_statut_buffer,name:"
 msgid "Buffer (ha/Zone/Statut)"
-msgstr ""
+msgstr "Buffer (ha/Zone/Statut)"
 
 msgctxt "model:site_site.surface_statut_buffer.open.start,name:"
 msgid "Open surface_statut_buffer"
-msgstr ""
+msgstr "Ouvrir"
 
 msgctxt "model:site_site.track,name:"
 msgid "Track"
-msgstr ""
+msgstr "Track"
 
 msgctxt "model:site_site.zone,name:"
 msgid "Zone"
-msgstr ""
+msgstr "Zone"
 
 msgctxt "odt:site_site.rapport_buffer:"
 msgid ":"
@@ -1391,11 +1391,11 @@ msgstr "Point"
 
 msgctxt "selection:site_site.site,typo:"
 msgid "Track"
-msgstr ""
+msgstr "Track"
 
 msgctxt "selection:site_site.site,typo:"
 msgid "Zone"
-msgstr ""
+msgstr "Zone"
 
 msgctxt "view:site_site.code:"
 msgid "Code"
@@ -1411,7 +1411,7 @@ msgstr "Générer"
 
 msgctxt "view:site_site.lrs:"
 msgid "LRS"
-msgstr ""
+msgstr "LRS"
 
 msgctxt "view:site_site.lrs:"
 msgid "Map"
@@ -1423,7 +1423,7 @@ msgstr "Édition"
 
 msgctxt "view:site_site.misc_obj_line:"
 msgid "Miscellaneous line object"
-msgstr ""
+msgstr "Objet géométrique ligne"
 
 msgctxt "view:site_site.misc_obj_point:"
 msgid "Edit"
@@ -1431,7 +1431,7 @@ msgstr "Édition"
 
 msgctxt "view:site_site.misc_obj_point:"
 msgid "Miscellaneous point object"
-msgstr ""
+msgstr "Objet géométrique point"
 
 msgctxt "view:site_site.misc_obj_poly:"
 msgid "Edit"
@@ -1439,7 +1439,7 @@ msgstr "Édition"
 
 msgctxt "view:site_site.misc_obj_poly:"
 msgid "Miscellaneous polygon object"
-msgstr ""
+msgstr "Objet géométrique polygone"
 
 msgctxt "view:site_site.poi:"
 msgid "Edit"
@@ -1459,11 +1459,11 @@ msgstr "Carte"
 
 msgctxt "view:site_site.poi:"
 msgid "POI"
-msgstr ""
+msgstr "POI"
 
 msgctxt "view:site_site.poi:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "view:site_site.point:"
 msgid "Edit"
@@ -1483,7 +1483,7 @@ msgstr "Carte"
 
 msgctxt "view:site_site.point:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "view:site_site.point:"
 msgid "Point"
@@ -1491,11 +1491,11 @@ msgstr "Point"
 
 msgctxt "view:site_site.site:"
 msgid "%"
-msgstr ""
+msgstr "%"
 
 msgctxt "view:site_site.site:"
 msgid "Edit geometries"
-msgstr ""
+msgstr "Éditer les géométries"
 
 msgctxt "view:site_site.site:"
 msgid "General"
@@ -1511,19 +1511,19 @@ msgstr "Générer la carte de situation"
 
 msgctxt "view:site_site.site:"
 msgid "Image Map"
-msgstr "Carte"
+msgstr "Carte précise du site"
 
 msgctxt "view:site_site.site:"
 msgid "Lines"
-msgstr ""
+msgstr "Lignes"
 
 msgctxt "view:site_site.site:"
 msgid "Misc. obj."
-msgstr ""
+msgstr "Objets géométriques"
 
 msgctxt "view:site_site.site:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "view:site_site.site:"
 msgid "Plot"
@@ -1535,7 +1535,7 @@ msgstr "Points"
 
 msgctxt "view:site_site.site:"
 msgid "Polygones"
-msgstr ""
+msgstr "Polygones"
 
 msgctxt "view:site_site.site:"
 msgid "Site"
@@ -1543,55 +1543,55 @@ msgstr "Site"
 
 msgctxt "view:site_site.site:"
 msgid "Situation Map"
-msgstr "Carte de situation"
+msgstr "Carte de situation du site"
 
 msgctxt "view:site_site.surface_clc_site.open.start:"
 msgid "Rapport Site - CLC"
-msgstr ""
+msgstr "Rapport Site - CLC"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Forêts et milieux semi-naturels"
-msgstr ""
+msgstr "Forêts et milieux semi-naturels"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Surface CLC Trace"
-msgstr ""
+msgstr "Surface CLC Trace"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Surface CLC par canton"
-msgstr ""
+msgstr "Surface CLC par canton"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Surface CLC par commune"
-msgstr ""
+msgstr "Surface CLC par commune"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Surface en eau"
-msgstr ""
+msgstr "Surface en eau"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Surface totale (ha)"
-msgstr ""
+msgstr "Surface totale (ha)"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Territoires agricoles"
-msgstr ""
+msgstr "Territoires agricoles"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Territoires artificialisés"
-msgstr ""
+msgstr "Territoires artificialisés"
 
 msgctxt "view:site_site.surface_site_clc:"
 msgid "Zones humides"
-msgstr ""
+msgstr "Zones humides"
 
 msgctxt "view:site_site.surface_statut_buffer.open.start:"
 msgid "Protection - Surface/Zone/Protection"
-msgstr ""
+msgstr "Protection - Surface/Zone/Protection"
 
 msgctxt "view:site_site.surface_statut_buffer:"
 msgid "Surface entre Buffer et Zone"
-msgstr ""
+msgstr "Surface entre Buffer et Zone"
 
 msgctxt "view:site_site.track:"
 msgid "Edit"
@@ -1611,11 +1611,11 @@ msgstr "Carte"
 
 msgctxt "view:site_site.track:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "view:site_site.track:"
 msgid "Track"
-msgstr ""
+msgstr "Track"
 
 msgctxt "view:site_site.zone:"
 msgid "Edit"
@@ -1635,11 +1635,11 @@ msgstr "Carte"
 
 msgctxt "view:site_site.zone:"
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 msgctxt "view:site_site.zone:"
 msgid "Zone"
-msgstr ""
+msgstr "Zone"
 
 msgctxt "wizard_button:site_site.surface_clc_site.open,start,end:"
 msgid "Cancel"

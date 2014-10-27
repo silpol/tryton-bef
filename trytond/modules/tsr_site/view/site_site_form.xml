@@ -10,12 +10,12 @@
             <field name="typo"/>
             <label name="code"/>
             <field name="code"/>
-            <label name="chantier"/>
-            <field name="chantier"/>
             <label name="moe"/>
             <field name="moe"/>
             <label name="moa"/>
             <field name="moa"/>
+            <label name="chantier"/>
+            <field name="chantier"/>
             <label name="suivi"/>
             <field name="suivi"/>
             <label name="active"/>

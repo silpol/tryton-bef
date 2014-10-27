@@ -9,7 +9,7 @@ from trytond.pyson import PYSONEncoder, Not, Bool, Eval, Equal, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
-__all__ = ['Work', 'WorkLine', 'OpenWorkStart', 'OpenWork', 'OpenWork2', 'OpenWorkGraph']
+__all__ = ['Work', 'OpenWorkStart', 'OpenWork', 'OpenWork2', 'OpenWorkGraph']
 
 
 class Work(ModelSQL, ModelView):
@@ -215,101 +215,6 @@ class Work(ModelSQL, ModelView):
             cls.write(childs, {
                     'active': False,
                     })
-
-class WorkLine(ModelSQL, ModelView):
-    'Work Line'
-    __name__ = 'timesheet.workline'
-    _rec_name = 'description'
-
-    work = fields.Many2One(
-            'timesheet.work',
-            string=u'Work',
-            ondelete='CASCADE',
-            select=True
-        )
-    quantity = fields.Float(
-            string=u'Quantity',
-            digits=(16, Eval('unit_digits', 2)),
-            depends=['unit_digits']
-        )
-    unit = fields.Many2One(
-            'product.uom',
-            string=u'Unit',
-            states={
-                    'required': Bool(Eval('product')),                
-                   },
-            domain=[
-                If(Bool(Eval('product_uom_category')),
-                    ('category', '=', Eval('product_uom_category')),
-                    ('category', '!=', -1)),
-                ],
-            on_change=['product', 'quantity', 'unit'],
-            depends=['product', 'product_uom_category']
-        )
-    unit_digits = fields.Function(
-                        fields.Integer(
-                                string=u'Unit Digits',
-                                on_change_with=['unit']
-                            ),
-            'on_change_with_unit_digits'
-        )
-    product = fields.Many2One(
-            'product.product',
-            string=u'Product',                    
-            on_change=['product', 'unit'],
-        )
-    description = fields.Text(
-            string=u'Description',
-            size=None,
-            required=True
-        )
-    product_uom_category = fields.Function(
-                                fields.Many2One(
-                                        'product.uom.category',
-                                        string=u'Product Uom Category',
-                                        on_change_with=['product']
-                                    ),
-            'on_change_with_product_uom_category'
-        )
-
-    @staticmethod
-    def default_unit_digits():
-        return 2
-
-    def on_change_with_unit_digits(self, name=None):
-        if self.unit:
-            return self.unit.digits
-        return 2
-
-    def on_change_product(self):
-        Product = Pool().get('product.product')
-
-        if not self.product:
-            return {}
-        res = {}        
-        return res
-
-    def _get_context_work_price(self):
-        context = {}        
-        if self.unit:
-            context['uom'] = self.unit.id        
-        return context
-
-    def on_change_with_product_uom_category(self, name=None):
-        if self.product:
-            return self.product.default_uom_category.id
-
-    def on_change_quantity(self):
-        Product = Pool().get('product.product')
-
-        if not self.product:
-            return {}
-        res = {}
-        return res
-
-    def on_change_unit(self):
-        return self.on_change_quantity()
-
 
 class OpenWorkStart(ModelView):
     'Open Work'
