@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<form string="Arbre à préconiser - Type de travaux">                   
-    <label name="typetravaux"/>
-    <field name="typetravaux"/>                  
-</form>

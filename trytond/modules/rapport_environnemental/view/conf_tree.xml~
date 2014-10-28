@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<tree string="configuration">
-    <field name="code" />
-    <field name="name" />
-    <field name="lib_long" />
-    <field name="value" />
-</tree>

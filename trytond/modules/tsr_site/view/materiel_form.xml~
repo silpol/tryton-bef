@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<form string="Matériels">
-    <label name="code"/>
-    <field name="code"/>
-    <label name="name"/>
-    <field name="name"/>
-    <field name="site" colspan="4"/>                           
-</form>

@@ -1,8 +1,0 @@
-[tryton]
-version=6.0
-depends:
-    country
-    ir
-    res
-xml:
-    taxinomie.xml

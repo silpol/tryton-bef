@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<form string="Fonctionnalité" col="2">
-    <label name="code"/>
-    <field name="code"/>
-    <label name="observation" col="1"/>
-    <field name="observation" colspan="2"/>
-</form>

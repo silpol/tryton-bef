@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<tree string="equipement">
-    <field name="code" />
-    <field name="name" />
-    <field name="statut" />
-    <field name="hierarchie" />
-    <field name="ug" />
-</tree>

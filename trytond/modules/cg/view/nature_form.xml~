@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<form string="operation">
-    <label name="code"/>
-    <field name="code"/>
-    <label name="name"/>
-    <field name="name"/>
-    <label name="lib_long"/>
-    <field name="lib_long"/>                   
-</form>

@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<form string="VAT Information Exchange System">
-    <image name="tryton-dialog-information" xexpand="0" xfill="0"/>
-    <label string="Arbre KO !"
-        id="arbreko"
-        yalign="0.0" xalign="0.0" xexpand="1"/>
-</form>

@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<tree string="Quality">
-    <field name="tree" />
-    <field name="ecologie" />
-    <field name="note" />
-</tree>

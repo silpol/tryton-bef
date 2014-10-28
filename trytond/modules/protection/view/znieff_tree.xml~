@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<tree string="znieff">
-    <field name="id_mnhn" />
-    <field name="name" />
-    <field name="generation" />
-    <field name="date" />
-    <field name="version" />
-</tree>

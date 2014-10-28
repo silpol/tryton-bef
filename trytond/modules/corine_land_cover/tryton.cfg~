@@ -1,9 +1,0 @@
-[tryton]
-version=1.0
-depends:
-    ir
-    res
-    map
-    geotools
-    qgis
-    wfs     

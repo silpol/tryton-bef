@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<form string="Comment">
-    <label name="date"/>
-    <field name="date"/>
-    <label name="comment"/>
-    <field name="comment"/>                 
-</form>

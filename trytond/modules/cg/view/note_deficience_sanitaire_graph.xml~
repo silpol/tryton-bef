@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<graph string="Note déficience sanitaire" type="vbar">
-    <x>
-        <field name="equipement" />
-    </x>
-    <y>
-        <field name="occ" key="1" domain="Equal(Eval('occ', -1), 1)" color="green" string="Note = 1"/>                        
-    </y>
-</graph>

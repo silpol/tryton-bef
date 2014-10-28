@@ -1,8 +1,0 @@
-[tryton]
-version=1.0
-depends:
-    ir
-    res
-    essence
-xml:
-    couvert.xml

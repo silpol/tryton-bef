@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<tree string="Surface entre Buffer 5000m et Tiers">
-    <field name="tiers" widget="selection"/>
-    <field name="site"/>
-    <field name="type" />
-    <field name="statut" />
-    <field name="nom" />
-    <field name="surface" />
-</tree>

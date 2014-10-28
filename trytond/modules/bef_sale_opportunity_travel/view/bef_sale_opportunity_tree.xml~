@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<tree string="Comment">
-    <field name="date"/>
-    <field name="opportunity"/>
-</tree>

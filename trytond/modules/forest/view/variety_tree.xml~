@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<tree>
-    <field name="short_name" />
-    <field name="forest" />
-    <field name="name" />
-    <field name="splot" />
-</tree>

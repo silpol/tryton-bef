@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<tree string="operation">
-    <field name="ug" />
-    <field name="code" />
-    <field name="name" />
-    <field name="lib_long" />
-    <field name="pilote" />
-    <field name="echeance" />
-</tree>

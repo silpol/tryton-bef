@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<data>
-    <xpath
-        expr="/tree/field[@name=&quot;unit&quot;]" position="after">            
-            <label name="exportation" />
-            <field name="exportation" />                    
-    </xpath>                   
-</data>
-

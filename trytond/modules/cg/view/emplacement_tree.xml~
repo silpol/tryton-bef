@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<tree string="Emplacement">
-    <field name="station" />
-    <field name="code" />
-    <field name="numpostprec" />
-    <field name="coteoppose" />              
-    <field name="evolution" />
-    <field name="arbre" />                    
-</tree>

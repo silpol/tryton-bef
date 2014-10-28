@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<tree string="Occupation du sol">
-    <field name="code" />
-    <field name="number" />
-</tree>

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<form string="Code" col="2">
-    <label name="code"/>
-    <field name="code"/>
-    <label name="number"/>
-    <field name="number"/>
-    <label name="observation" colspan="1"/>
-    <field name="observation" colspan="2"/>
-</form>

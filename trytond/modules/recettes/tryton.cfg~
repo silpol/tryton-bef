@@ -1,7 +1,0 @@
-[tryton]
-version=1.0
-depends:
-    ir
-    res
-xml:
-    recettes.xml

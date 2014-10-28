@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<tree string="clc_geo">
-    <field name="code" />
-    <field name="active" />
-    <field name="annee" />
-    <field name="gid"  />
-</tree>

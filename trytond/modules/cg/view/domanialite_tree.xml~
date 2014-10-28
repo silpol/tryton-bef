@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<tree string="Secteur élagage">                
-    <field name="code" />
-    <field name="name" />
-    <field name="lib_long" />
-</tree>
