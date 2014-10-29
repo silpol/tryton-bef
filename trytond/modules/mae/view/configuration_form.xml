@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="Mae Configuration">
+    <label name="mae_sequence"/>
+    <field name="mae_sequence"/>
+</form>
