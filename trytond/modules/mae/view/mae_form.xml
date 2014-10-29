@@ -20,6 +20,8 @@
             <field name="codeterritoire"/>
             <label name="active" />
             <field name="active" />
+            <label name="reference" />
+            <field name="reference" />
             <notebook colspan="6">
                 <page string="Observation" id="observation">                    
                     <field name="observation" colspan="4"/>

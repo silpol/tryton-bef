@@ -1,816 +1,3363 @@
 #
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Pascal Obstétar <pascal.obstetar@bioecoforests.com>\n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
+"Language: fr_FR\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
-msgctxt "error:allo_quoi.allo:"
-msgid "The address is invalid, no city is defined!"
-msgstr "L'adresse est invalide, pas de ville définie !"
+msgctxt "field:cadastre.parcelle,mae:"
+msgid "Mae"
+msgstr "MAE"
 
-msgctxt "field:allo_quoi.allo,active:"
-msgid "Active"
-msgstr "Active"
-
-msgctxt "field:allo_quoi.allo,address:"
-msgid "Address"
-msgstr "Adresse"
-
-msgctxt "field:allo_quoi.allo,comment:"
-msgid "Commentaires"
-msgstr "Commentaires"
-
-msgctxt "field:allo_quoi.allo,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:allo_quoi.allo,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:allo_quoi.allo,date:"
-msgid "Date"
-msgstr "Date"
-
-msgctxt "field:allo_quoi.allo,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:allo_quoi.allo,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:allo_quoi.allo,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:allo_quoi.allo,image_all:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:allo_quoi.allo,image_map:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:allo_quoi.allo,image_map_filename:"
-msgid "Filename"
-msgstr "Nom de fichier"
-
-msgctxt "field:allo_quoi.allo,party:"
-msgid "Contact"
-msgstr "Contact"
-
-msgctxt "field:allo_quoi.allo,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:allo_quoi.allo,typo:"
-msgid "Type"
-msgstr "Type"
-
-msgctxt "field:allo_quoi.allo,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:allo_quoi.allo,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:allo_quoi.typologie,code:"
-msgid "Code du type d'incident"
-msgstr "Code du type d'incident"
-
-msgctxt "field:allo_quoi.typologie,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:allo_quoi.typologie,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:allo_quoi.typologie,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:allo_quoi.typologie,lib_long:"
-msgid "Libellé long du code de l'incident"
-msgstr "Libellé long du code de l'incident"
-
-msgctxt "field:allo_quoi.typologie,name:"
-msgid "Libellé court du code de l'incident"
-msgstr "Libellé court du code de l'incident"
-
-msgctxt "field:allo_quoi.typologie,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:allo_quoi.typologie,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:allo_quoi.typologie,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:garden.code,code:"
+msgctxt "field:mae.code,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:garden.code,create_date:"
+msgctxt "field:mae.code,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:garden.code,create_uid:"
+msgctxt "field:mae.code,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:garden.code,id:"
+msgctxt "field:mae.code,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:garden.code,lib_long:"
+msgctxt "field:mae.code,lib_long:"
 msgid "Label of code"
 msgstr "Libellé du code"
 
-msgctxt "field:garden.code,name:"
+msgctxt "field:mae.code,name:"
 msgid "Short name of code"
-msgstr "Nom du code"
+msgstr "Nom court du code"
 
-msgctxt "field:garden.code,rec_name:"
+msgctxt "field:mae.code,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:garden.code,write_date:"
+msgctxt "field:mae.code,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:garden.code,write_uid:"
+msgctxt "field:mae.code,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:garden.convention,abri:"
-msgid "Abri"
-msgstr "Abri"
-
-msgctxt "field:garden.convention,active:"
-msgid "Active"
-msgstr "Active"
-
-msgctxt "field:garden.convention,cloture:"
-msgid "Cloture"
-msgstr "Cloture"
-
-msgctxt "field:garden.convention,create_date:"
+msgctxt "field:mae.configuration,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:garden.convention,create_uid:"
+msgctxt "field:mae.configuration,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:garden.convention,date:"
+msgctxt "field:mae.configuration,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.configuration,mae_sequence:"
+msgid "Mae Reference Sequence"
+msgstr "Séquence MAE"
+
+msgctxt "field:mae.configuration,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.configuration,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.configuration,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagno,KEng:"
+msgid "K"
+msgstr "K"
+
+msgctxt "field:mae.diagno,NEng:"
+msgid "N"
+msgstr "N"
+
+msgctxt "field:mae.diagno,PEng:"
+msgid "P"
+msgstr "P"
+
+msgctxt "field:mae.diagno,abreuvement:"
+msgid "Abreuvement du bétail"
+msgstr "Abreuvement du bétail"
+
+msgctxt "field:mae.diagno,abreuvementDefens:"
+msgid "Mise en défens"
+msgstr "Mise en défens"
+
+msgctxt "field:mae.diagno,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:mae.diagno,alignementArbre:"
+msgid "Alignement d'arbres"
+msgstr "Alignement d'arbres"
+
+msgctxt "field:mae.diagno,amenagementCyne:"
+msgid "Aménagement cynégétique"
+msgstr "Aménagement cynégétique"
+
+msgctxt "field:mae.diagno,amenagementFonc:"
+msgid "Fonctionnel"
+msgstr "Fonctionnel"
+
+msgctxt "field:mae.diagno,amenagementReseau:"
+msgid "Aménagement à proposer pour retenir l’eau"
+msgstr "Aménagement à proposer pour retenir l’eau"
+
+msgctxt "field:mae.diagno,anneengag:"
+msgid "Année d’engagement"
+msgstr "Année d’engagement"
+
+msgctxt "field:mae.diagno,aquatiqueSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,araigneeSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,arbreIsole:"
+msgid "Arbre isolé"
+msgstr "Arbre isolé"
+
+msgctxt "field:mae.diagno,arbreIsoleHaie:"
+msgid "Arbre isolé et haie"
+msgstr "Arbre isolé et haie"
+
+msgctxt "field:mae.diagno,arbreIsoleSpecies:"
+msgid "Espèces d'arbres isolés"
+msgstr "Espèces d'arbres isolés"
+
+msgctxt "field:mae.diagno,assolautre:"
+msgid "Précision"
+msgstr "Précision"
+
+msgctxt "field:mae.diagno,assolement:"
+msgid "Assolement"
+msgstr "Assolement"
+
+msgctxt "field:mae.diagno,atterrissementDrain:"
+msgid "Atterrissement"
+msgstr "Atterrissement"
+
+msgctxt "field:mae.diagno,autourMare:"
+msgid "Roselière autour de la mare"
+msgstr "Roselière autour de la mare"
+
+msgctxt "field:mae.diagno,autreSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,aviSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,batrepSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,boisement:"
+msgid "Boisement"
+msgstr "Boisement"
+
+msgctxt "field:mae.diagno,bordparcelle:"
+msgid "En bordure de la parcelle"
+msgstr "En bordure de la parcelle"
+
+msgctxt "field:mae.diagno,boueCurage:"
+msgid "Présence de boue de curage"
+msgstr "Présence de boue de curage"
+
+msgctxt "field:mae.diagno,canalFosse:"
+msgid "Canal/Fossé"
+msgstr "Canal/Fossé"
+
+msgctxt "field:mae.diagno,chargementInstantanePat:"
+msgid "Instantané"
+msgstr "Instantané"
+
+msgctxt "field:mae.diagno,chargementMoyenPat:"
+msgid "Moyen"
+msgstr "Moyen"
+
+msgctxt "field:mae.diagno,coleoSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,comment:"
+msgid "Remarques/Échanges"
+msgstr "Remarques/Échanges"
+
+msgctxt "field:mae.diagno,connectReseau:"
+msgid "Connectée au réseau"
+msgstr "Connectée au réseau"
+
+msgctxt "field:mae.diagno,connexionFosse:"
+msgid "Connexion du canal/Fossé"
+msgstr "Connexion du canal/Fossé"
+
+msgctxt "field:mae.diagno,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagno,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagno,culture:"
+msgid "Culture en bordure"
+msgstr "Culture en bordure"
+
+msgctxt "field:mae.diagno,date:"
 msgid "Date"
 msgstr "Date"
 
-msgctxt "field:garden.convention,entretien:"
+msgctxt "field:mae.diagno,dateFau:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:mae.diagno,dateecheance:"
+msgid "Échéance"
+msgstr "Échéance"
+
+msgctxt "field:mae.diagno,depression:"
+msgid "Dépression humide"
+msgstr "Dépression humide"
+
+msgctxt "field:mae.diagno,drain:"
+msgid "Drain"
+msgstr "Drain"
+
+msgctxt "field:mae.diagno,drainee:"
+msgid "Parcelle drainée"
+msgstr "Parcelle drainée"
+
+msgctxt "field:mae.diagno,dsparcelle:"
+msgid "Dans la parcelle"
+msgstr "Dans la parcelle"
+
+msgctxt "field:mae.diagno,element:"
+msgid "Éléments présents dans ou en bordure de la parcelle"
+msgstr "Éléments présents dans ou en bordure de la parcelle"
+
+msgctxt "field:mae.diagno,enPlein:"
+msgid "Roselière en plein"
+msgstr "Roselière en plein"
+
+msgctxt "field:mae.diagno,eneauDepression:"
+msgid "En eau au moment du diagnostic"
+msgstr "En eau au moment du diagnostic"
+
+msgctxt "field:mae.diagno,eneauFace:"
+msgid "En eau au moment du diagnostic"
+msgstr "En eau au moment du diagnostic"
+
+msgctxt "field:mae.diagno,eneauMare:"
+msgid "En eau au moment du diagnostic"
+msgstr "En eau au moment du diagnostic"
+
+msgctxt "field:mae.diagno,engrais:"
+msgid "Engrais"
+msgstr "Engrais"
+
+msgctxt "field:mae.diagno,entretenue:"
+msgid "Entretenue"
+msgstr "Entretenue"
+
+msgctxt "field:mae.diagno,entretienAlignementArbre:"
 msgid "Entretien"
 msgstr "Entretien"
 
-msgctxt "field:garden.convention,garden:"
-msgid "Garden"
-msgstr "Jardin"
+msgctxt "field:mae.diagno,entretienFosse:"
+msgid "Entretien du canal/Fossé"
+msgstr "Entretien du canal/Fossé"
 
-msgctxt "field:garden.convention,id:"
+msgctxt "field:mae.diagno,envahissanteSpecies:"
+msgid "Espèce envahissante"
+msgstr "Espèce envahissante"
+
+msgctxt "field:mae.diagno,especeAlignementArbre:"
+msgid "Espèces"
+msgstr ""
+
+msgctxt "field:mae.diagno,fauche:"
+msgid "Fauche"
+msgstr ""
+
+msgctxt "field:mae.diagno,floreSpeciesPat:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,fonctionnelDrain:"
+msgid "Drain fonctionnel"
+msgstr ""
+
+msgctxt "field:mae.diagno,gestionPatFau:"
+msgid "Mixte"
+msgstr "Mixte"
+
+msgctxt "field:mae.diagno,guepeSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,haie:"
+msgid "Haie"
+msgstr ""
+
+msgctxt "field:mae.diagno,haieArboree:"
+msgid "Haie arboree"
+msgstr ""
+
+msgctxt "field:mae.diagno,haieArbustive:"
+msgid "Haie arbustive"
+msgstr ""
+
+msgctxt "field:mae.diagno,haieMultiStrate:"
+msgid "Haie multi strate"
+msgstr ""
+
+msgctxt "field:mae.diagno,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:garden.convention,observation:"
+msgctxt "field:mae.diagno,ilot:"
+msgid "Numéro de l'îlot"
+msgstr ""
+
+msgctxt "field:mae.diagno,innondeMarVal:"
+msgid "Innondée"
+msgstr ""
+
+msgctxt "field:mae.diagno,intecolo:"
+msgid "Intérêt"
+msgstr ""
+
+msgctxt "field:mae.diagno,interetEcolo:"
+msgid "Intérêt écologique"
+msgstr ""
+
+msgctxt "field:mae.diagno,interetEcoloAlignementArbre:"
+msgid "Intérêt écologique"
+msgstr ""
+
+msgctxt "field:mae.diagno,lepidoSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,longFosseCanal:"
+msgid "Le long du fossé/canal"
+msgstr ""
+
+msgctxt "field:mae.diagno,longRigole:"
+msgid "Le long de la rigole"
+msgstr ""
+
+msgctxt "field:mae.diagno,mae:"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "field:mae.diagno,mamSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,mare:"
+msgid "Mare"
+msgstr ""
+
+msgctxt "field:mae.diagno,marval:"
+msgid "Marais/Vallée"
+msgstr ""
+
+msgctxt "field:mae.diagno,memo:"
+msgid "Synthèse du diagnostic milieu"
+msgstr ""
+
+msgctxt "field:mae.diagno,mineraleEng:"
+msgid "Minéral"
+msgstr ""
+
+msgctxt "field:mae.diagno,mlHaieArboree:"
+msgid "ml haie arborée"
+msgstr ""
+
+msgctxt "field:mae.diagno,mlHaieArbustive:"
+msgid "ml haie arbustive"
+msgstr ""
+
+msgctxt "field:mae.diagno,mlHaieMultiStrate:"
+msgid "ml haie multi strate"
+msgstr ""
+
+msgctxt "field:mae.diagno,mlLongFosseCanal:"
+msgid "ml le long du fossé/canal"
+msgstr ""
+
+msgctxt "field:mae.diagno,mlLongRigole:"
+msgid "ml le long de la rigole"
+msgstr ""
+
+msgctxt "field:mae.diagno,natureEng:"
+msgid "Nature"
+msgstr ""
+
+msgctxt "field:mae.diagno,natureOcc:"
+msgid "Occupation"
+msgstr ""
+
+msgctxt "field:mae.diagno,naturePat:"
+msgid "Troupeau"
+msgstr ""
+
+msgctxt "field:mae.diagno,nivexpert:"
+msgid "Mes. expert"
+msgstr ""
+
+msgctxt "field:mae.diagno,nivexploitant:"
+msgid "Mes. exploit."
+msgstr ""
+
+msgctxt "field:mae.diagno,nivfinal:"
+msgid "Mes. finale"
+msgstr ""
+
+msgctxt "field:mae.diagno,nombreArbreIsole:"
+msgid "Nombre d'arbres"
+msgstr ""
+
+msgctxt "field:mae.diagno,nombreFace:"
+msgid "Nombre de face"
+msgstr ""
+
+msgctxt "field:mae.diagno,nombreFau:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "field:mae.diagno,nombreMare:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "field:mae.diagno,nombreTetard:"
+msgid "Nombre d'arbres"
+msgstr ""
+
+msgctxt "field:mae.diagno,observation:"
 msgid "Observations"
-msgstr "Observations"
+msgstr ""
 
-msgctxt "field:garden.convention,owner:"
-msgid "Owner"
-msgstr "Propriétaire"
+msgctxt "field:mae.diagno,observationActi:"
+msgid "Autres activités sur et en bordure de la parcelle"
+msgstr ""
 
-msgctxt "field:garden.convention,photo:"
+msgctxt "field:mae.diagno,observationCulture:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationDepression:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationEng:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationEspe:"
+msgid "Autres espèces identifiées par l'agriculteur"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationFau:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationGene:"
+msgid "Autres observations d'ordre général"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationPat:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationPatFau:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:mae.diagno,observationProp:"
+msgid "Propositions, échanges, remarques"
+msgstr ""
+
+msgctxt "field:mae.diagno,odoSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,organicEng:"
+msgid "Organique"
+msgstr ""
+
+msgctxt "field:mae.diagno,owner:"
+msgid "Expert"
+msgstr "Expert"
+
+msgctxt "field:mae.diagno,parcelle:"
+msgid "Plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "field:mae.diagno,paturage:"
+msgid "Pâturage"
+msgstr ""
+
+msgctxt "field:mae.diagno,periodePat:"
+msgid "Période(s)"
+msgstr ""
+
+msgctxt "field:mae.diagno,photo:"
 msgid "Photo"
-msgstr "Photo"
+msgstr ""
 
-msgctxt "field:garden.convention,rec_name:"
+msgctxt "field:mae.diagno,plantationPropose:"
+msgid "Plantation à proposer"
+msgstr ""
+
+msgctxt "field:mae.diagno,pourcentAutourMare:"
+msgid "Pourcentage de recouvrement"
+msgstr ""
+
+msgctxt "field:mae.diagno,pourcentEnPlein:"
+msgid "Pourcentage de la parcelle"
+msgstr ""
+
+msgctxt "field:mae.diagno,pourcentageDepression:"
+msgid "Pourcentage"
+msgstr ""
+
+msgctxt "field:mae.diagno,pourcentageDsParcelle:"
+msgid "Pourcentage"
+msgstr ""
+
+msgctxt "field:mae.diagno,pourcentageMarVal:"
+msgid "Pourcentage"
+msgstr ""
+
+msgctxt "field:mae.diagno,pourcentageOcc:"
+msgid "Pourcentage"
+msgstr ""
+
+msgctxt "field:mae.diagno,pratiquePat:"
+msgid "Pratiques"
+msgstr ""
+
+msgctxt "field:mae.diagno,presence:"
+msgid "Friches/Ronciers/Chardons/..."
+msgstr ""
+
+msgctxt "field:mae.diagno,presenceMarVal:"
+msgid "Présence certaine"
+msgstr ""
+
+msgctxt "field:mae.diagno,propGestionAlignementArbre:"
+msgid "Proposition de gestion"
+msgstr ""
+
+msgctxt "field:mae.diagno,propGestionRoseliere:"
+msgid "Proposition de gestion"
+msgstr ""
+
+msgctxt "field:mae.diagno,quantiteEng:"
+msgid "Quantité"
+msgstr ""
+
+msgctxt "field:mae.diagno,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:garden.convention,utilisation:"
-msgid "Utilisation"
-msgstr "Utilisation"
+msgctxt "field:mae.diagno,restauration:"
+msgid "Besoin de restauration"
+msgstr ""
 
-msgctxt "field:garden.convention,write_date:"
+msgctxt "field:mae.diagno,roseliere:"
+msgid "Roselière"
+msgstr ""
+
+msgctxt "field:mae.diagno,sauteSpecies:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagno,selectionMarais:"
+msgid "Type d'habitat"
+msgstr ""
+
+msgctxt "field:mae.diagno,selectionVallee:"
+msgid "Type d'habitat"
+msgstr ""
+
+msgctxt "field:mae.diagno,surfaceDrain:"
+msgid "Drain de surface végétalisé"
+msgstr ""
+
+msgctxt "field:mae.diagno,surfaceFau:"
+msgid "Surface"
+msgstr ""
+
+msgctxt "field:mae.diagno,surfaceMare:"
+msgid "Surface (m2)"
+msgstr ""
+
+msgctxt "field:mae.diagno,surfacePat:"
+msgid "Surface"
+msgstr ""
+
+msgctxt "field:mae.diagno,territoire:"
+msgid "Territoire"
+msgstr ""
+
+msgctxt "field:mae.diagno,tetard:"
+msgid "Conduit en têtard"
+msgstr ""
+
+msgctxt "field:mae.diagno,typeFau:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:mae.diagno,typeboisement:"
+msgid "Type de boisement"
+msgstr ""
+
+msgctxt "field:mae.diagno,typemae:"
+msgid "Type MAE"
+msgstr ""
+
+msgctxt "field:mae.diagno,vegetalisee:"
+msgid "Végétalisée"
+msgstr ""
+
+msgctxt "field:mae.diagno,vegetaliseeBord:"
+msgid "Végétalisée sur les bords"
+msgstr ""
+
+msgctxt "field:mae.diagno,vegetaliseeMare:"
+msgid "Végétalisée dans la mare"
+msgstr ""
+
+msgctxt "field:mae.diagno,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:garden.convention,write_uid:"
+msgctxt "field:mae.diagno,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:garden.convention-garden.abri,code:"
-msgid "code"
-msgstr "code"
-
-msgctxt "field:garden.convention-garden.abri,convention:"
-msgid "convention"
-msgstr ""
-
-msgctxt "field:garden.convention-garden.abri,create_date:"
+msgctxt "field:mae.diagno-cadastre.parcelle,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:garden.convention-garden.abri,create_uid:"
+msgctxt "field:mae.diagno-cadastre.parcelle,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:garden.convention-garden.abri,id:"
+msgctxt "field:mae.diagno-cadastre.parcelle,diagno:"
+msgid "diagno"
+msgstr ""
+
+msgctxt "field:mae.diagno-cadastre.parcelle,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:garden.convention-garden.abri,rec_name:"
+msgctxt "field:mae.diagno-cadastre.parcelle,parcelle:"
+msgid "parcelle"
+msgstr ""
+
+msgctxt "field:mae.diagno-cadastre.parcelle,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:garden.convention-garden.abri,write_date:"
+msgctxt "field:mae.diagno-cadastre.parcelle,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:garden.convention-garden.abri,write_uid:"
+msgctxt "field:mae.diagno-cadastre.parcelle,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:garden.convention-garden.cloture,code:"
-msgid "code"
-msgstr ""
-
-msgctxt "field:garden.convention-garden.cloture,convention:"
-msgid "convention"
-msgstr ""
-
-msgctxt "field:garden.convention-garden.cloture,create_date:"
+msgctxt "field:mae.diagno-mae.code,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:garden.convention-garden.cloture,create_uid:"
+msgctxt "field:mae.diagno-mae.code,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:garden.convention-garden.cloture,id:"
+msgctxt "field:mae.diagno-mae.code,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagno-mae.code,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:garden.convention-garden.cloture,rec_name:"
+msgctxt "field:mae.diagno-mae.code,natureOcc:"
+msgid "Occupation"
+msgstr ""
+
+msgctxt "field:mae.diagno-mae.code,observationOcc:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:mae.diagno-mae.code,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:garden.convention-garden.cloture,write_date:"
+msgctxt "field:mae.diagno-mae.code,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:garden.convention-garden.cloture,write_uid:"
+msgctxt "field:mae.diagno-mae.code,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:garden.convention-garden.entretien,code:"
-msgid "code"
-msgstr ""
-
-msgctxt "field:garden.convention-garden.entretien,convention:"
-msgid "convention"
-msgstr ""
-
-msgctxt "field:garden.convention-garden.entretien,create_date:"
+msgctxt "field:mae.diagno-protection.area,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:garden.convention-garden.entretien,create_uid:"
+msgctxt "field:mae.diagno-protection.area,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:garden.convention-garden.entretien,id:"
+msgctxt "field:mae.diagno-protection.area,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:garden.convention-garden.entretien,rec_name:"
+msgctxt "field:mae.diagno-protection.area,mae:"
+msgid "mae"
+msgstr ""
+
+msgctxt "field:mae.diagno-protection.area,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:garden.convention-garden.entretien,write_date:"
+msgctxt "field:mae.diagno-protection.area,status:"
+msgid "status"
+msgstr "Statut de protection"
+
+msgctxt "field:mae.diagno-protection.area,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:garden.convention-garden.entretien,write_uid:"
+msgctxt "field:mae.diagno-protection.area,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:garden.convention-garden.utilisation,code:"
-msgid "code"
-msgstr ""
-
-msgctxt "field:garden.convention-garden.utilisation,convention:"
-msgid "convention"
-msgstr ""
-
-msgctxt "field:garden.convention-garden.utilisation,create_date:"
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:garden.convention-garden.utilisation,create_uid:"
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:garden.convention-garden.utilisation,id:"
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:garden.convention-garden.utilisation,rec_name:"
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:garden.convention-garden.utilisation,write_date:"
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:garden.convention-garden.utilisation,write_uid:"
+msgctxt "field:mae.diagnoaquatique-taxinomie.taxinomie,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:garden.garden,active:"
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoaraignee-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoarbreisole-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "Coefficient d'abondance"
+msgstr ""
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,observation:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoaut-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,effectif:"
+msgid "Effectif"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,ethologie:"
+msgid "Éthologie"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,obspot:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,statut:"
+msgid "Statut"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,volpose:"
+msgid "Vol/Pose"
+msgstr ""
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoavi-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,effectif:"
+msgid "Effectif"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,ethologie:"
+msgid "Éthologie"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,reproduction:"
+msgid "Reproduction"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnobatrep-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnocoleo-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoenvahissante-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "Coefficient d'abondance"
+msgstr ""
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,observation:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoflopat-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoguepe-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnolepido-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnomam-mae.code,code:"
+msgid "code"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-mae.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnomam-mae.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnomam-mae.code,diagnomam:"
+msgid "diagnomam"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-mae.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnomam-mae.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnomam-mae.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnomam-mae.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,effectif:"
+msgid "Effectif"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,indice:"
+msgid "Indice de présence"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,presence:"
+msgid "Présence"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,userid:"
+msgid "ID User"
+msgstr ""
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnomam-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnoodonate-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr ""
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.diagnosauterelle-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:mae.mae,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "field:garden.garden,address:"
-msgid "Address"
-msgstr "Adresse"
-
-msgctxt "field:garden.garden,convention:"
-msgid "Convention"
+msgctxt "field:mae.mae,codeterritoire:"
+msgid "Code Territoire"
 msgstr ""
 
-msgctxt "field:garden.garden,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:garden.garden,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:garden.garden,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:garden.garden,image_filename:"
-msgid "Filename"
-msgstr "Nom de fichier"
-
-msgctxt "field:garden.garden,image_map:"
-msgid "Image map"
-msgstr "Image"
-
-msgctxt "field:garden.garden,lieudit:"
-msgid "Lieu-dit"
-msgstr ""
-
-msgctxt "field:garden.garden,name:"
-msgid "Rivoli"
-msgstr ""
-
-msgctxt "field:garden.garden,parcelle:"
-msgid "Parcelle"
-msgstr ""
-
-msgctxt "field:garden.garden,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:garden.garden,section:"
-msgid "Section"
-msgstr ""
-
-msgctxt "field:garden.garden,situation_filename:"
-msgid "Filename"
-msgstr "Nom de fichier"
-
-msgctxt "field:garden.garden,situation_map:"
-msgid "Situation map"
-msgstr "Carte de Situation"
-
-msgctxt "field:garden.garden,surfacedgi:"
-msgid "Surface DGI"
-msgstr ""
-
-msgctxt "field:garden.garden,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:garden.garden,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:garden.geo_lieudit,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:garden.geo_lieudit,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:garden.geo_lieudit,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:garden.geo_lieudit,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:garden.geo_lieudit,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:garden.geo_lieudit,tex:"
-msgid "Short name of code"
-msgstr "Nom du code"
-
-msgctxt "field:garden.geo_lieudit,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:garden.geo_lieudit,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:garden.geo_parcelle,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:garden.geo_parcelle,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:garden.geo_parcelle,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:garden.geo_parcelle,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:garden.geo_parcelle,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:garden.geo_parcelle,tex:"
-msgid "Short name of code"
-msgstr "Nom du code"
-
-msgctxt "field:garden.geo_parcelle,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:garden.geo_parcelle,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:garden.geo_section,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:garden.geo_section,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:garden.geo_section,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:garden.geo_section,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:garden.geo_section,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:garden.geo_section,tex:"
-msgid "Short name of code"
-msgstr "Nom du code"
-
-msgctxt "field:garden.geo_section,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:garden.geo_section,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "help:allo_quoi.allo,comment:"
-msgid "Observations sur l'incident."
-msgstr "Observations sur l'incident."
-
-msgctxt "help:allo_quoi.allo,date:"
-msgid "Date de l'incident"
-msgstr "Date de l'incident"
-
-msgctxt "help:allo_quoi.allo,geom:"
-msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
-
-msgctxt "help:allo_quoi.allo,party:"
-msgid "Contact pour être tenu informé des suites données."
-msgstr "Contact pour être tenu informé des suites données."
-
-msgctxt "help:allo_quoi.allo,typo:"
-msgid "Type d'incident"
-msgstr "Type d'incident"
-
-msgctxt "help:garden.convention,date:"
-msgid "Date of convention"
-msgstr "Date de la convention"
-
-msgctxt "help:garden.garden,name:"
-msgid "Code RIVOLI"
-msgstr ""
-
-msgctxt "help:garden.geo_lieudit,geom:"
-msgid "Geometry point (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
-
-msgctxt "help:garden.geo_parcelle,geom:"
-msgid "Geometry polygon (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
-
-msgctxt "help:garden.geo_section,geom:"
-msgid "Geometry polygon (EPSG=2154, RGF93/Lambert 93)"
-msgstr ""
-
-msgctxt "model:allo_quoi.allo,name:"
-msgid "Allo"
-msgstr "Allo"
-
-msgctxt "model:allo_quoi.typologie,name:"
-msgid "Typologie"
-msgstr "Typologie"
-
-msgctxt "model:garden.code,name:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "model:garden.convention,name:"
-msgid "Convention"
-msgstr ""
-
-msgctxt "model:garden.convention-garden.abri,name:"
-msgid "Convention - Abri"
-msgstr ""
-
-msgctxt "model:garden.convention-garden.cloture,name:"
-msgid "Convention - Cloture"
-msgstr ""
-
-msgctxt "model:garden.convention-garden.entretien,name:"
-msgid "Convention - Entretien"
-msgstr ""
-
-msgctxt "model:garden.convention-garden.utilisation,name:"
-msgid "Convention - Utilisation"
-msgstr ""
-
-msgctxt "model:garden.garden,name:"
-msgid "Garden"
-msgstr "Jardin"
-
-msgctxt "model:garden.geo_lieudit,name:"
-msgid "Lieu-dit"
-msgstr ""
-
-msgctxt "model:garden.geo_parcelle,name:"
-msgid "Parcelle"
-msgstr ""
-
-msgctxt "model:garden.geo_section,name:"
-msgid "Section"
-msgstr ""
-
-msgctxt "model:ir.action,name:act_garden_code_form"
-msgid "Code garden"
-msgstr "Code du jardin"
-
-msgctxt "model:ir.action,name:act_garden_convention_form"
-msgid "Convention garden"
-msgstr "Convention du jardin"
-
-msgctxt "model:ir.action,name:act_garden_garden_form"
-msgid "Garden"
-msgstr "Jardin"
-
-msgctxt "model:ir.action,name:act_garden_geo_lieudit_form"
-msgid "Lieudit garden"
-msgstr "Lieu-dit"
-
-msgctxt "model:ir.action,name:act_garden_geo_parcelle_form"
-msgid "Parcelle garden"
-msgstr "Parcelle"
-
-msgctxt "model:ir.action,name:act_garden_geo_section_form"
-msgid "Section garden"
-msgstr "Section"
-
-msgctxt "model:ir.action,name:report_garden"
-msgid "Fiche jardin"
-msgstr ""
-
-msgctxt "model:ir.action,name:report_garden_edit"
-msgid "Open in QGis..."
-msgstr "Ouvrir dans QGis..."
-
-msgctxt "model:ir.ui.menu,name:menu_garden"
-msgid "Garden"
-msgstr "Jardin"
-
-msgctxt "model:ir.ui.menu,name:menu_garden_code_form"
-msgid "Code garden"
-msgstr "Code"
-
-msgctxt "model:ir.ui.menu,name:menu_garden_configuration"
-msgid "Configuration"
-msgstr "Configuration"
-
-msgctxt "model:ir.ui.menu,name:menu_garden_convention_form"
-msgid "Convention garden"
-msgstr "Convention"
-
-msgctxt "model:ir.ui.menu,name:menu_garden_garden_form"
-msgid "Garden"
-msgstr "Jardin"
-
-msgctxt "model:ir.ui.menu,name:menu_garden_geo_lieudit_form"
-msgid "Lieudit garden"
-msgstr "Lieu-dit"
-
-msgctxt "model:ir.ui.menu,name:menu_garden_geo_parcelle_form"
-msgid "Parcelle garden"
-msgstr "Parcelle"
-
-msgctxt "model:ir.ui.menu,name:menu_garden_geo_section_form"
-msgid "Section garden"
-msgstr "Section"
-
-msgctxt "odt:garden.garden:"
-msgid "("
-msgstr ""
-
-msgctxt "odt:garden.garden:"
-msgid ")"
-msgstr ""
-
-msgctxt "odt:garden.garden:"
-msgid "00"
-msgstr ""
-
-msgctxt "odt:garden.garden:"
-msgid "Adresse"
-msgstr ""
-
-msgctxt "odt:garden.garden:"
-msgid "Code Rivoli"
-msgstr ""
-
-msgctxt "odt:garden.garden:"
+msgctxt "field:mae.mae,commune:"
 msgid "Commune"
 msgstr "Commune"
 
-msgctxt "odt:garden.garden:"
-msgid "Convention en date du"
+msgctxt "field:mae.mae,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:mae.mae,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:mae.mae,diagno:"
+msgid "Diagnostic"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Coordonnées du locataire"
+msgctxt "field:mae.mae,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:mae.mae,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:mae.mae,mae_image:"
+msgid "Image map"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Entretien du terrain"
+msgctxt "field:mae.mae,mae_situation:"
+msgid "Situation map"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Fiche Parcellaire :"
+msgctxt "field:mae.mae,name:"
+msgid "Ilot"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Mise à jour"
+msgctxt "field:mae.mae,nomterritoire:"
+msgid "Nom Territoire"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "N° Parcelle"
+msgctxt "field:mae.mae,num:"
+msgid "Usual Ilot"
+msgstr "Numéro îlot"
+
+msgctxt "field:mae.mae,observation:"
+msgid "Observations"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Observations :"
+msgctxt "field:mae.mae,parcelle:"
+msgid "Plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "field:mae.mae,party:"
+msgid "Exploitant"
+msgstr "Exploitant"
+
+msgctxt "field:mae.mae,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:mae.mae,status:"
+msgid "Protection status"
+msgstr "Statut de protection"
+
+msgctxt "field:mae.mae,surface:"
+msgid "Surface"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Présence d'un abri et son état"
+msgctxt "field:mae.mae,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:mae.mae,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:mae.mae,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:taxinomie.taxinomie,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:taxinomie.taxinomie,commun:"
+msgid "Nom commun"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Présence d'une clôture et son état"
+msgctxt "field:taxinomie.taxinomie,users_id:"
+msgid "Espèce limitée aux utilisateurs connectés"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Section"
+msgctxt "field:taxinomie.taxinomie-res.user,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:taxinomie.taxinomie-res.user,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:taxinomie.taxinomie-res.user,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:taxinomie.taxinomie-res.user,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:taxinomie.taxinomie-res.user,taxinomie:"
+msgid "taxon"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Surface DGI"
+msgctxt "field:taxinomie.taxinomie-res.user,user:"
+msgid "user"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "Type d'utilisation du terrain"
+msgctxt "field:taxinomie.taxinomie-res.user,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:taxinomie.taxinomie-res.user,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:mae.diagno,KEng:"
+msgid "Pourcentage de K"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "dimanche 17 novembre 2013"
+msgctxt "help:mae.diagno,NEng:"
+msgid "Pourcentage de N"
 msgstr ""
 
-msgctxt "odt:garden.garden:"
-msgid "m²"
+msgctxt "help:mae.diagno,PEng:"
+msgid "Pourcentage de P"
 msgstr ""
 
-msgctxt "view:allo_quoi.allo:"
-msgid "Allo voirie"
-msgstr "Allo voirie"
+msgctxt "help:mae.diagno,abreuvement:"
+msgid "Abreuvement du bétail"
+msgstr "Abreuvement du bétail"
 
-msgctxt "view:allo_quoi.allo:"
-msgid "Comment and Map"
-msgstr "Commentaire et Carte"
+msgctxt "help:mae.diagno,abreuvementDefens:"
+msgid "Mise en défens"
+msgstr "Mise en défens"
 
-msgctxt "view:allo_quoi.allo:"
-msgid "Edit"
-msgstr "Édition"
+msgctxt "help:mae.diagno,active:"
+msgid "Active"
+msgstr "Active"
 
-msgctxt "view:allo_quoi.allo:"
-msgid "General"
-msgstr "Général"
+msgctxt "help:mae.diagno,alignementArbre:"
+msgid "Alignement d'arbres"
+msgstr "Alignement d'arbres"
 
-msgctxt "view:allo_quoi.allo:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:allo_quoi.typologie:"
-msgid "Typologie"
-msgstr "Typologie"
-
-msgctxt "view:garden.code:"
-msgid "code"
+msgctxt "help:mae.diagno,amenagementCyne:"
+msgid "Aménagement cynégétique (tonne)"
 msgstr ""
 
-msgctxt "view:garden.convention:"
-msgid "General"
-msgstr "Général"
+msgctxt "help:mae.diagno,amenagementFonc:"
+msgid "Aménagement cynégétique fonctionnel"
+msgstr ""
 
-msgctxt "view:garden.convention:"
+msgctxt "help:mae.diagno,amenagementReseau:"
+msgid "Aménagement à proposer pour retenir l’eau"
+msgstr "Aménagement à proposer pour retenir l’eau"
+
+msgctxt "help:mae.diagno,anneengag:"
+msgid "Année d’engagement"
+msgstr "Année d'engagement"
+
+msgctxt "help:mae.diagno,aquatiqueSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,araigneeSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,arbreIsole:"
+msgid "Arbre isolé"
+msgstr "Arbre isolé"
+
+msgctxt "help:mae.diagno,arbreIsoleHaie:"
+msgid "Arbre isolé et haie"
+msgstr "Arbre isolé et haie"
+
+msgctxt "help:mae.diagno,arbreIsoleSpecies:"
+msgid "Espèces d'arbres isolés"
+msgstr "Espèces d'arbres isolés"
+
+msgctxt "help:mae.diagno,assolautre:"
+msgid "Précision(s) assolement"
+msgstr ""
+
+msgctxt "help:mae.diagno,assolement:"
+msgid "Assolement"
+msgstr "Assolement"
+
+msgctxt "help:mae.diagno,atterrissementDrain:"
+msgid "Drain de surface végétalisé "
+msgstr ""
+
+msgctxt "help:mae.diagno,autourMare:"
+msgid "Roselière autour de la mare"
+msgstr "Roselière autour de la mare"
+
+msgctxt "help:mae.diagno,autreSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,aviSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,batrepSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,boisement:"
+msgid "Boisement"
+msgstr "Boisement"
+
+msgctxt "help:mae.diagno,bordparcelle:"
+msgid "En bordure de la parcelle"
+msgstr "En bordure de la parcelle"
+
+msgctxt "help:mae.diagno,boueCurage:"
+msgid "Présence de boue de curage dans le canal/Fossé"
+msgstr ""
+
+msgctxt "help:mae.diagno,canalFosse:"
+msgid "Canal/Fossé"
+msgstr "Canal/Fossé"
+
+msgctxt "help:mae.diagno,chargementInstantanePat:"
+msgid "Chargement instantané (UGB/ha)"
+msgstr ""
+
+msgctxt "help:mae.diagno,chargementMoyenPat:"
+msgid "Chargement moyen (UGB/ha)"
+msgstr ""
+
+msgctxt "help:mae.diagno,coleoSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,comment:"
+msgid "Remarques et échanges avec l'agriculteur"
+msgstr ""
+
+msgctxt "help:mae.diagno,connectReseau:"
+msgid "Connectée au réseau"
+msgstr "Connectée au réseau"
+
+msgctxt "help:mae.diagno,connexionFosse:"
+msgid "Connexion au réseau du canal/Fossé"
+msgstr ""
+
+msgctxt "help:mae.diagno,culture:"
+msgid "Culture en bordure"
+msgstr ""
+
+msgctxt "help:mae.diagno,date:"
+msgid "Date du diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno,dateFau:"
+msgid "Date de fauche"
+msgstr ""
+
+msgctxt "help:mae.diagno,dateecheance:"
+msgid "Date d'échéance"
+msgstr ""
+
+msgctxt "help:mae.diagno,depression:"
+msgid "Dépression humide"
+msgstr ""
+
+msgctxt "help:mae.diagno,drain:"
+msgid "Type de drain"
+msgstr ""
+
+msgctxt "help:mae.diagno,drainee:"
+msgid "Parcelle drainée"
+msgstr ""
+
+msgctxt "help:mae.diagno,dsparcelle:"
+msgid "Dans la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,element:"
+msgid "Éléments présents dans ou en bordure de la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,enPlein:"
+msgid "Roselière en plein"
+msgstr ""
+
+msgctxt "help:mae.diagno,eneauDepression:"
+msgid "En eau au moment du diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno,eneauFace:"
+msgid "En eau au moment du diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno,eneauMare:"
+msgid "En eau au moment du diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno,engrais:"
+msgid "Engrais"
+msgstr ""
+
+msgctxt "help:mae.diagno,entretenue:"
+msgid "Mare entretenue"
+msgstr ""
+
+msgctxt "help:mae.diagno,entretienAlignementArbre:"
+msgid "Entretien de l'alignement d'arbres"
+msgstr ""
+
+msgctxt "help:mae.diagno,entretienFosse:"
+msgid "Entretien du canal/Fossé"
+msgstr ""
+
+msgctxt "help:mae.diagno,envahissanteSpecies:"
+msgid "Nom de l'espèce envahissante"
+msgstr ""
+
+msgctxt "help:mae.diagno,especeAlignementArbre:"
+msgid "Espèces de l'alignement d'arbres"
+msgstr ""
+
+msgctxt "help:mae.diagno,fauche:"
+msgid "Fauche"
+msgstr ""
+
+msgctxt "help:mae.diagno,floreSpeciesPat:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,fonctionnelDrain:"
+msgid "Drain fonctionnel (avec connexion au fossé)"
+msgstr ""
+
+msgctxt "help:mae.diagno,gestionPatFau:"
+msgid "Gestion mixte Fauche/Pâturage"
+msgstr ""
+
+msgctxt "help:mae.diagno,guepeSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,haie:"
+msgid "Haie"
+msgstr ""
+
+msgctxt "help:mae.diagno,haieArboree:"
+msgid "Haie arboree"
+msgstr ""
+
+msgctxt "help:mae.diagno,haieArbustive:"
+msgid "Haie arbustive"
+msgstr ""
+
+msgctxt "help:mae.diagno,haieMultiStrate:"
+msgid "Haie multi strate"
+msgstr ""
+
+msgctxt "help:mae.diagno,ilot:"
+msgid "Numéro de l'îlot à la date du diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno,innondeMarVal:"
+msgid "Prairie innondée le jour du diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno,intecolo:"
+msgid "Intérêt écologique"
+msgstr ""
+
+msgctxt "help:mae.diagno,interetEcolo:"
+msgid "Intérêt écologique"
+msgstr ""
+
+msgctxt "help:mae.diagno,interetEcoloAlignementArbre:"
+msgid "Intérêt écologique de l'alignement d'arbres"
+msgstr ""
+
+msgctxt "help:mae.diagno,lepidoSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,longFosseCanal:"
+msgid "Le long du fossé/canal"
+msgstr ""
+
+msgctxt "help:mae.diagno,longRigole:"
+msgid "Le long de la rigole"
+msgstr ""
+
+msgctxt "help:mae.diagno,mamSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,mare:"
+msgid "Mare"
+msgstr ""
+
+msgctxt "help:mae.diagno,marval:"
+msgid "Prairie de marais ou de Vallées alluviales"
+msgstr ""
+
+msgctxt "help:mae.diagno,memo:"
+msgid "Synthèse du diagnostic milieu"
+msgstr ""
+
+msgctxt "help:mae.diagno,mineraleEng:"
+msgid "Minérale N,P,K"
+msgstr ""
+
+msgctxt "help:mae.diagno,mlHaieArboree:"
+msgid "Nombre de mètre linéaire d'haie arborée"
+msgstr ""
+
+msgctxt "help:mae.diagno,mlHaieArbustive:"
+msgid "Nombre de mètre linéaire d'haie arbustive"
+msgstr ""
+
+msgctxt "help:mae.diagno,mlHaieMultiStrate:"
+msgid "Nombre de mètre linéaire d'haie multi strate"
+msgstr ""
+
+msgctxt "help:mae.diagno,mlLongFosseCanal:"
+msgid "Nombre de mètre linéaire le long du fossé/canal"
+msgstr ""
+
+msgctxt "help:mae.diagno,mlLongRigole:"
+msgid "Nombre de mètre linéaire le long de la rigole"
+msgstr ""
+
+msgctxt "help:mae.diagno,natureEng:"
+msgid "Nature des produits"
+msgstr ""
+
+msgctxt "help:mae.diagno,natureOcc:"
+msgid "Nature d'occupation des sols"
+msgstr ""
+
+msgctxt "help:mae.diagno,naturePat:"
+msgid "Nature du troupeau"
+msgstr ""
+
+msgctxt "help:mae.diagno,nivexpert:"
+msgid "Mesure préconisée par l’expert"
+msgstr ""
+
+msgctxt "help:mae.diagno,nivexploitant:"
+msgid "Mesure demandée par l’exploitant"
+msgstr ""
+
+msgctxt "help:mae.diagno,nivfinal:"
+msgid "Mesure prise au final par l’exploitant"
+msgstr ""
+
+msgctxt "help:mae.diagno,nombreArbreIsole:"
+msgid "Nombre d'arbres isolés"
+msgstr ""
+
+msgctxt "help:mae.diagno,nombreFace:"
+msgid "Nombre de faces concernées"
+msgstr ""
+
+msgctxt "help:mae.diagno,nombreFau:"
+msgid "Nombre de fauche"
+msgstr ""
+
+msgctxt "help:mae.diagno,nombreMare:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "help:mae.diagno,nombreTetard:"
+msgid "Nombre d'arbres isolés"
+msgstr ""
+
+msgctxt "help:mae.diagno,observation:"
+msgid "Observations diagnostic faunistique"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationActi:"
+msgid "Autres activités sur et en bordure de la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationCulture:"
+msgid "Observation sur la culture"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationDepression:"
+msgid "Observation sur la dépression humide"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationEng:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationEspe:"
+msgid "Autres espèces identifiées par l'agriculteur"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationFau:"
+msgid "Observations fauche"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationGene:"
+msgid "Autres observations d'ordre général"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationPat:"
+msgid "Observations pâturage"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationPatFau:"
+msgid "Observations pâturage/fauche"
+msgstr ""
+
+msgctxt "help:mae.diagno,observationProp:"
+msgid "Propositions, échanges, remarques"
+msgstr ""
+
+msgctxt "help:mae.diagno,odoSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,organicEng:"
+msgid "Organisue"
+msgstr ""
+
+msgctxt "help:mae.diagno,owner:"
+msgid "Expert réalisant le diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno,parcelle:"
+msgid "Cadastral Plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "help:mae.diagno,paturage:"
+msgid "Pâturage"
+msgstr ""
+
+msgctxt "help:mae.diagno,periodePat:"
+msgid "Période(s) de pâturage"
+msgstr ""
+
+msgctxt "help:mae.diagno,photo:"
 msgid "Photo"
 msgstr ""
 
-msgctxt "view:garden.convention:"
-msgid "convention"
+msgctxt "help:mae.diagno,plantationPropose:"
+msgid "Plantation à proposer"
 msgstr ""
 
-msgctxt "view:garden.garden:"
+msgctxt "help:mae.diagno,pourcentAutourMare:"
+msgid "Pourcentage de recouvrement de la mare"
+msgstr ""
+
+msgctxt "help:mae.diagno,pourcentEnPlein:"
+msgid "Pourcentage de la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,pourcentageDepression:"
+msgid "Pourcentage de la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,pourcentageDsParcelle:"
+msgid "Pourcentage de la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,pourcentageMarVal:"
+msgid "Pourcentage de la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,pourcentageOcc:"
+msgid "Pourcentage de la parcelle concernée"
+msgstr ""
+
+msgctxt "help:mae.diagno,pratiquePat:"
+msgid "Pratiques"
+msgstr ""
+
+msgctxt "help:mae.diagno,presence:"
+msgid "Autres types d’éléments sur la parcelle"
+msgstr ""
+
+msgctxt "help:mae.diagno,presenceMarVal:"
+msgid "Présence certaine si coché, probable sinon"
+msgstr ""
+
+msgctxt "help:mae.diagno,propGestionAlignementArbre:"
+msgid "Proposition de gestion de l'alignement d'arbres"
+msgstr ""
+
+msgctxt "help:mae.diagno,propGestionRoseliere:"
+msgid "Proposition de gestion de la roselière"
+msgstr ""
+
+msgctxt "help:mae.diagno,quantiteEng:"
+msgid "Quantité dengrais"
+msgstr ""
+
+msgctxt "help:mae.diagno,restauration:"
+msgid "Besoin de restauration"
+msgstr ""
+
+msgctxt "help:mae.diagno,roseliere:"
+msgid "Roselière"
+msgstr ""
+
+msgctxt "help:mae.diagno,sauteSpecies:"
+msgid "Nom de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagno,selectionMarais:"
+msgid "Type d'habitat des prairies de marais"
+msgstr ""
+
+msgctxt "help:mae.diagno,selectionVallee:"
+msgid "Type d'habitat des prairies de vallées alluviales"
+msgstr ""
+
+msgctxt "help:mae.diagno,surfaceDrain:"
+msgid "Drain de surface végétalisé"
+msgstr ""
+
+msgctxt "help:mae.diagno,surfaceFau:"
+msgid "Surface de fauche"
+msgstr ""
+
+msgctxt "help:mae.diagno,surfaceMare:"
+msgid "Surface (m2)"
+msgstr ""
+
+msgctxt "help:mae.diagno,surfacePat:"
+msgid "Surface paturée (ha)"
+msgstr ""
+
+msgctxt "help:mae.diagno,territoire:"
+msgid "Nom du territoire"
+msgstr ""
+
+msgctxt "help:mae.diagno,tetard:"
+msgid "Arbre conduit en têtard"
+msgstr ""
+
+msgctxt "help:mae.diagno,typeFau:"
+msgid "Type de fauche"
+msgstr ""
+
+msgctxt "help:mae.diagno,typeboisement:"
+msgid "Type de boisement"
+msgstr ""
+
+msgctxt "help:mae.diagno,typemae:"
+msgid "Type MAE"
+msgstr ""
+
+msgctxt "help:mae.diagno,vegetalisee:"
+msgid "Mare végétalisée"
+msgstr ""
+
+msgctxt "help:mae.diagno,vegetaliseeBord:"
+msgid "Mare végétalisée sur les bords"
+msgstr ""
+
+msgctxt "help:mae.diagno,vegetaliseeMare:"
+msgid "Mare végétalisée dans la mare"
+msgstr ""
+
+msgctxt "help:mae.diagno-mae.code,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagno-mae.code,natureOcc:"
+msgid "Nature d'occupation des sols"
+msgstr ""
+
+msgctxt "help:mae.diagno-mae.code,observationOcc:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "help:mae.diagnoaquatique-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoaquatique-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoaquatique-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoaquatique-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoaraignee-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoaraignee-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoaraignee-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoaraignee-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoarbreisole-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoarbreisole-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoarbreisole-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoarbreisole-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "Coefficient d'abondance"
+msgstr ""
+
+msgctxt "help:mae.diagnoaut-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoaut-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoaut-taxinomie.taxinomie,observation:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "help:mae.diagnoaut-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoaut-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "help:mae.diagnoaut-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,effectif:"
+msgid "Classe d'abondance"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,ethologie:"
+msgid "Éthologie : comportement de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,obspot:"
+msgid "Espèce Observée/Espèce Potentielle"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,statut:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoavi-taxinomie.taxinomie,volpose:"
+msgid "Espèce en vol/Espèce posée"
+msgstr ""
+
+msgctxt "help:mae.diagnobatrep-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnobatrep-taxinomie.taxinomie,ethologie:"
+msgid "Éthologie : comportement de l'espèce"
+msgstr ""
+
+msgctxt "help:mae.diagnobatrep-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnobatrep-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnobatrep-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "help:mae.diagnobatrep-taxinomie.taxinomie,reproduction:"
+msgid "Reproduction"
+msgstr ""
+
+msgctxt "help:mae.diagnobatrep-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnocoleo-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnocoleo-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnocoleo-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnocoleo-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoenvahissante-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoenvahissante-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoenvahissante-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoenvahissante-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "Coefficient d'abondance"
+msgstr ""
+
+msgctxt "help:mae.diagnoflopat-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoflopat-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoflopat-taxinomie.taxinomie,observation:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "help:mae.diagnoflopat-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoflopat-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "help:mae.diagnoflopat-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnoguepe-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoguepe-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoguepe-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoguepe-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnolepido-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnolepido-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnolepido-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnolepido-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,indice:"
+msgid "Cocher si l'espèce est susceptible d'être présente"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,presence:"
+msgid "Présence"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,prospection:"
+msgid "Prospection"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnomam-taxinomie.taxinomie,userid:"
+msgid "ID user"
+msgstr ""
+
+msgctxt "help:mae.diagnoodonate-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnoodonate-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnoodonate-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnoodonate-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.diagnosauterelle-taxinomie.taxinomie,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.diagnosauterelle-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr ""
+
+msgctxt "help:mae.diagnosauterelle-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "help:mae.diagnosauterelle-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr ""
+
+msgctxt "help:mae.mae,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:mae.mae,codeterritoire:"
+msgid "Code du Territoire"
+msgstr ""
+
+msgctxt "help:mae.mae,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "help:mae.mae,diagno:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "help:mae.mae,geom:"
+msgid "Géométrie multipolygonale"
+msgstr ""
+
+msgctxt "help:mae.mae,mae_image:"
+msgid "Image map"
+msgstr ""
+
+msgctxt "help:mae.mae,mae_situation:"
+msgid "Situation map"
+msgstr ""
+
+msgctxt "help:mae.mae,name:"
+msgid "PAC Ilot number"
+msgstr "Numéro îlot PAC"
+
+msgctxt "help:mae.mae,nomterritoire:"
+msgid "Nom du Territoire"
+msgstr ""
+
+msgctxt "help:mae.mae,num:"
+msgid "Usual Ilot number"
+msgstr "Numéro usuel de l'îlot"
+
+msgctxt "help:mae.mae,observation:"
+msgid "Observations"
+msgstr ""
+
+msgctxt "help:mae.mae,parcelle:"
+msgid "Cadastral plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "help:mae.mae,party:"
+msgid "Nom de l'exploitant"
+msgstr ""
+
+msgctxt "help:mae.mae,status:"
+msgid "Protection status"
+msgstr "Statut de protection"
+
+msgctxt "help:mae.mae,surface:"
+msgid "Surface (ha)"
+msgstr ""
+
+msgctxt "help:mae.mae,typo:"
+msgid "Type de milieu concerné"
+msgstr ""
+
+msgctxt "help:taxinomie.taxinomie,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "help:taxinomie.taxinomie,commun:"
+msgid "Nom commun"
+msgstr ""
+
+msgctxt "help:taxinomie.taxinomie,users_id:"
+msgid ""
+"Espèce faisant partie de la liste restreinte pour l'utilisateur connecté"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.action,name:act_mae_configuration_form"
+msgid "Mae Configuration"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagno_form"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagno_natureocc_rel_form"
+msgid "Nature Occupation Sol"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoaquatique_taxo_rel_form"
+msgid "Insectes aquatiques"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoaraignee_taxo_rel_form"
+msgid "Araignées"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoarbreisole_taxo_rel_form"
+msgid "Espèces arbres isolés"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoaut_taxo_rel_form"
+msgid "Autres espèces"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoavi_taxo_rel_form"
+msgid "Avifaune"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnobatrep_taxo_rel_form"
+msgid "Batraciens - Reptiles"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnocoleo_taxo_rel_form"
+msgid "Coléoptères"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoenvahissante_taxo_rel_form"
+msgid "Autres espèces"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoflopat_taxo_rel_form"
+msgid "Flore patrimoniale"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoguepe_taxo_rel_form"
+msgid "Guêpes - Mouches"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnolepido_taxo_rel_form"
+msgid "Lépidoptères"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnomam_presence_rel_form"
+msgid "Nature Occupation Sol"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnomam_taxo_rel_form"
+msgid "Mammifères"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnoodonate_taxo_rel_form"
+msgid "Odonates"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_diagnosauterelle_taxo_rel_form"
+msgid "Sauterelles - Criquets"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_geo_lieudit_form"
+msgid "Lieudit"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_geo_parcelle_form"
+msgid "Parcelle"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_geo_section_form"
+msgid "Section"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_mae_mae_form"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "model:ir.action,name:act_mae_taxinomie_form"
+msgid "Taxinomie"
+msgstr ""
+
+msgctxt "model:ir.action,name:report_mae"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "model:ir.action,name:report_mae_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.sequence,name:sequence_mae"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_mae"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "model:ir.ui.menu,name:menu_mae"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "model:ir.ui.menu,name:menu_mae_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_mae_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_mae_diagno_form"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_mae_geo_lieudit_form"
+msgid "Lieudit"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_mae_geo_parcelle_form"
+msgid "Parcelle"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_mae_geo_section_form"
+msgid "Section"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_mae_mae_form"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "model:ir.ui.menu,name:menu_mae_sequence"
+msgid "Mae Configuration"
+msgstr ""
+
+msgctxt "model:mae.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:mae.configuration,name:"
+msgid "Mae Configuration"
+msgstr ""
+
+msgctxt "model:mae.diagno,name:"
+msgid "diagno"
+msgstr ""
+
+msgctxt "model:mae.diagno-cadastre.parcelle,name:"
+msgid "diagno - Parcelle"
+msgstr ""
+
+msgctxt "model:mae.diagno-mae.code,name:"
+msgid "diagno - nature occupation des sols"
+msgstr ""
+
+msgctxt "model:mae.diagno-protection.area,name:"
+msgid "mae - protectionArea"
+msgstr ""
+
+msgctxt "model:mae.diagnoaquatique-taxinomie.taxinomie,name:"
+msgid "diagno - Insectes aquatiques"
+msgstr ""
+
+msgctxt "model:mae.diagnoaraignee-taxinomie.taxinomie,name:"
+msgid "diagno - Araignées"
+msgstr ""
+
+msgctxt "model:mae.diagnoarbreisole-taxinomie.taxinomie,name:"
+msgid "diagno - Arbre isole"
+msgstr ""
+
+msgctxt "model:mae.diagnoaut-taxinomie.taxinomie,name:"
+msgid "diagno - Autres especes"
+msgstr ""
+
+msgctxt "model:mae.diagnoavi-taxinomie.taxinomie,name:"
+msgid "diagno - Avifaune"
+msgstr ""
+
+msgctxt "model:mae.diagnobatrep-taxinomie.taxinomie,name:"
+msgid "diagno - Batracien - Reptile"
+msgstr ""
+
+msgctxt "model:mae.diagnocoleo-taxinomie.taxinomie,name:"
+msgid "diagno - Coléoptères"
+msgstr ""
+
+msgctxt "model:mae.diagnoenvahissante-taxinomie.taxinomie,name:"
+msgid "diagno - Envahissante"
+msgstr ""
+
+msgctxt "model:mae.diagnoflopat-taxinomie.taxinomie,name:"
+msgid "diagno - Flore patrimoniale"
+msgstr ""
+
+msgctxt "model:mae.diagnoguepe-taxinomie.taxinomie,name:"
+msgid "diagno - Guêpes"
+msgstr ""
+
+msgctxt "model:mae.diagnolepido-taxinomie.taxinomie,name:"
+msgid "diagno - Lépidoptères"
+msgstr ""
+
+msgctxt "model:mae.diagnomam-mae.code,name:"
+msgid "diagnomam - code presence"
+msgstr ""
+
+msgctxt "model:mae.diagnomam-taxinomie.taxinomie,name:"
+msgid "diagno - Mammifere"
+msgstr ""
+
+msgctxt "model:mae.diagnoodonate-taxinomie.taxinomie,name:"
+msgid "diagno - Odonate"
+msgstr ""
+
+msgctxt "model:mae.diagnosauterelle-taxinomie.taxinomie,name:"
+msgid "diagno - Sauterelle - Criquets"
+msgstr ""
+
+msgctxt "model:mae.mae,name:"
+msgid "mae"
+msgstr ""
+
+msgctxt "model:taxinomie.taxinomie-res.user,name:"
+msgid "Taxinomie - User"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "odt:mae.mae:"
+msgid "Coordonnées de l'expert"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Coordonnées du locataire"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Diagnostic"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Fiche"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "MAE"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Mise à jour"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "N"
+msgstr "N"
+
+msgctxt "odt:mae.mae:"
+msgid "Niveau Expert"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Niveau Final"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "N° Parcelle"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Surface"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "Type MAE"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "cadastrale"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "en date du"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "ha"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "iveau Exp"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "loitant"
+msgstr ""
+
+msgctxt "odt:mae.mae:"
+msgid "mercredi 29 octobre 2014"
+msgstr ""
+
+msgctxt "selection:mae.diagno,drain:"
+msgid "--"
+msgstr ""
+
+msgctxt "selection:mae.diagno,drain:"
+msgid "Drain de surface (rigole)"
+msgstr ""
+
+msgctxt "selection:mae.diagno,drain:"
+msgid "Drain enterré"
+msgstr ""
+
+msgctxt "selection:mae.diagno,drain:"
+msgid "Pompe"
+msgstr ""
+
+msgctxt "selection:mae.diagno,interetEcolo:"
+msgid "--"
+msgstr ""
+
+msgctxt "selection:mae.diagno,interetEcolo:"
+msgid "Faible"
+msgstr ""
+
+msgctxt "selection:mae.diagno,interetEcolo:"
+msgid "Fort"
+msgstr ""
+
+msgctxt "selection:mae.diagno,interetEcolo:"
+msgid "Moyen"
+msgstr "Moyen"
+
+msgctxt "selection:mae.diagno,interetEcoloAlignementArbre:"
+msgid "--"
+msgstr ""
+
+msgctxt "selection:mae.diagno,interetEcoloAlignementArbre:"
+msgid "Faible"
+msgstr ""
+
+msgctxt "selection:mae.diagno,interetEcoloAlignementArbre:"
+msgid "Fort"
+msgstr ""
+
+msgctxt "selection:mae.diagno,interetEcoloAlignementArbre:"
+msgid "Moyen"
+msgstr "Moyen"
+
+msgctxt "selection:mae.diagno,marval:"
+msgid "--"
+msgstr ""
+
+msgctxt "selection:mae.diagno,marval:"
+msgid "Prairie de Vallée alluviale"
+msgstr ""
+
+msgctxt "selection:mae.diagno,marval:"
+msgid "Prairie de marais"
+msgstr ""
+
+msgctxt "selection:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "0 < individus <= 10"
+msgstr ""
+
+msgctxt "selection:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "10 < individus <= 50"
+msgstr ""
+
+msgctxt "selection:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "200 < individus <= 500"
+msgstr ""
+
+msgctxt "selection:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "50 < individus <= 200"
+msgstr ""
+
+msgctxt "selection:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "500 < individus <= 1000"
+msgstr ""
+
+msgctxt "selection:mae.diagnoaut-taxinomie.taxinomie,abondance:"
+msgid "individus > 1000"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,ethologie:"
+msgid "Alimentation"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,ethologie:"
+msgid "Hivernage"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,ethologie:"
+msgid "Migration"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,ethologie:"
+msgid "Reproduction"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,obspot:"
+msgid "Observée"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,obspot:"
+msgid "Potentielle"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,statut:"
+msgid "Certain"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,statut:"
+msgid "Non nicheur"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,statut:"
+msgid "Possible"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,statut:"
+msgid "Probable"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,volpose:"
+msgid "En vol"
+msgstr ""
+
+msgctxt "selection:mae.diagnoavi-taxinomie.taxinomie,volpose:"
+msgid "Posée"
+msgstr ""
+
+msgctxt "selection:mae.diagnobatrep-taxinomie.taxinomie,ethologie:"
+msgid "Autre"
+msgstr ""
+
+msgctxt "selection:mae.diagnobatrep-taxinomie.taxinomie,ethologie:"
+msgid "Entendue"
+msgstr ""
+
+msgctxt "selection:mae.diagnobatrep-taxinomie.taxinomie,ethologie:"
+msgid "Ponte"
+msgstr ""
+
+msgctxt "selection:mae.diagnobatrep-taxinomie.taxinomie,ethologie:"
+msgid "Vue"
+msgstr ""
+
+msgctxt "selection:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "0 < individus <= 10"
+msgstr ""
+
+msgctxt "selection:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "10 < individus <= 50"
+msgstr ""
+
+msgctxt "selection:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "200 < individus <= 500"
+msgstr ""
+
+msgctxt "selection:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "50 < individus <= 200"
+msgstr ""
+
+msgctxt "selection:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "500 < individus <= 1000"
+msgstr ""
+
+msgctxt "selection:mae.diagnoflopat-taxinomie.taxinomie,abondance:"
+msgid "individus > 1000"
+msgstr ""
+
+msgctxt "view:mae.code:"
+msgid "code"
+msgstr ""
+
+msgctxt "view:mae.configuration:"
+msgid "Mae Configuration"
+msgstr ""
+
+msgctxt "view:mae.diagno-mae.code:"
+msgid "Diagno - Nature d'occupation des sols"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Araignées"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Autres espèces"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Avifaunes"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Batraciens/Reptiles"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Caractéristiques du milieu"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Coléoptères"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Entomofaunes observées"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Espèces patrimoniales"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Faune"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Flore"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
 msgid "General"
 msgstr "Général"
 
-msgctxt "view:garden.garden:"
+msgctxt "view:mae.diagno:"
+msgid "Guêpes/Mouches"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Insectes aquatiques"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Lépidoptères"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Mammifères"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Modalités de gestion actuelles"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Observations diagnostic faunistique"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Odonates"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Parcelle"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Photo de la synthèse"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Propositions, échanges, remarques"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "Sauterelles/Criquets"
+msgstr ""
+
+msgctxt "view:mae.diagno:"
+msgid "convention"
+msgstr ""
+
+msgctxt "view:mae.diagnoaquatique-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie insectes aquatiques"
+msgstr ""
+
+msgctxt "view:mae.diagnoaquatique-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoaquatique-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoaraignee-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie araignées"
+msgstr ""
+
+msgctxt "view:mae.diagnoaraignee-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoaraignee-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoarbreisole-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie - Espèces arbres isolés"
+msgstr ""
+
+msgctxt "view:mae.diagnoarbreisole-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoarbreisole-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoaut-taxinomie.taxinomie:"
+msgid "Diagno - Taxinomie"
+msgstr ""
+
+msgctxt "view:mae.diagnoaut-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie"
+msgstr ""
+
+msgctxt "view:mae.diagnoaut-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoaut-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoavi-taxinomie.taxinomie:"
+msgid "Diagno - Taxinomie"
+msgstr ""
+
+msgctxt "view:mae.diagnoavi-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie Avifaune"
+msgstr ""
+
+msgctxt "view:mae.diagnoavi-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoavi-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnobatrep-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie - Batraciens - Reptiles"
+msgstr ""
+
+msgctxt "view:mae.diagnobatrep-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnobatrep-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnocoleo-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie coléoptères"
+msgstr ""
+
+msgctxt "view:mae.diagnocoleo-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnocoleo-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoenvahissante-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie - Espèces envahissantes"
+msgstr ""
+
+msgctxt "view:mae.diagnoenvahissante-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoenvahissante-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoflopat-taxinomie.taxinomie:"
+msgid "Diagno - Taxinomie"
+msgstr ""
+
+msgctxt "view:mae.diagnoflopat-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie"
+msgstr ""
+
+msgctxt "view:mae.diagnoflopat-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoflopat-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoguepe-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie guêpes mouches"
+msgstr ""
+
+msgctxt "view:mae.diagnoguepe-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie guêpes/mouches"
+msgstr ""
+
+msgctxt "view:mae.diagnoguepe-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoguepe-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnolepido-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie lépidoptères"
+msgstr ""
+
+msgctxt "view:mae.diagnolepido-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie papillons"
+msgstr ""
+
+msgctxt "view:mae.diagnolepido-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnolepido-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnomam-mae.code:"
+msgid "Diagno mammifère - Présence"
+msgstr ""
+
+msgctxt "view:mae.diagnomam-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie mammifères"
+msgstr ""
+
+msgctxt "view:mae.diagnomam-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnomam-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnoodonate-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie odonates"
+msgstr ""
+
+msgctxt "view:mae.diagnoodonate-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnoodonate-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.diagnosauterelle-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie sauterelle criquet"
+msgstr ""
+
+msgctxt "view:mae.diagnosauterelle-taxinomie.taxinomie:"
+msgid "Diagnostic - Taxinomie sauterelles/criquets"
+msgstr ""
+
+msgctxt "view:mae.diagnosauterelle-taxinomie.taxinomie:"
+msgid "Espèce"
+msgstr "Espèce"
+
+msgctxt "view:mae.diagnosauterelle-taxinomie.taxinomie:"
+msgid "Photo"
+msgstr ""
+
+msgctxt "view:mae.mae:"
+msgid "Diagno"
+msgstr ""
+
+msgctxt "view:mae.mae:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:mae.mae:"
 msgid "Generate"
 msgstr "Générer"
 
-msgctxt "view:garden.garden:"
+msgctxt "view:mae.mae:"
+msgid "Mae"
+msgstr "MAE"
+
+msgctxt "view:mae.mae:"
 msgid "Map"
 msgstr "Carte"
 
-msgctxt "view:garden.garden:"
+msgctxt "view:mae.mae:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "view:mae.mae:"
+msgid "Plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "view:mae.mae:"
+msgid "Status"
+msgstr "Statut de protection"
+
+msgctxt "view:mae.mae:"
 msgid "garden"
-msgstr "jardin"
-
-msgctxt "view:garden.geo_lieudit:"
-msgid "geo_lieudit"
 msgstr ""
 
-msgctxt "view:garden.geo_parcelle:"
-msgid "geo_parcelle"
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Général"
 msgstr ""
 
-msgctxt "view:garden.geo_section:"
-msgid "geo_section"
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Ligue de Protection des Oiseaux"
+msgstr ""
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Muséum National d'Histoire Naturelle"
+msgstr ""
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Taxinomie"
 msgstr ""

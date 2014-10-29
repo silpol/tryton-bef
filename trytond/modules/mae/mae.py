@@ -45,6 +45,21 @@ _ETHOLOGIE = [
 _MARVAL = [
     ('marais', u'Prairie de marais'),
     ('vallee', u'Prairie de Vallée alluviale'),
+    ('none', u'--'),
+]
+
+_INTERET = [
+    ('fort', u'Fort'),
+    ('moyen', u'Moyen'),
+    ('faible', u'Faible'),
+    ('none', u'--')
+]
+
+_DRAIN = [
+    ('surface', u'Drain de surface (rigole)'),
+    ('enterre', u'Drain enterré'),
+    ('pompe', u'Pompe'),
+    ('none', u'--')
 ]
 
 class code(ModelSQL, ModelView):
@@ -81,8 +96,8 @@ class diagno(ModelSQL, ModelView):
             required=True,
         )
     ilot = fields.Char(            
-            string = u'Usual Ilot',
-            help = u'PAC Ilot number at this expertise date',
+            string = u'Numéro de l\'îlot',
+            help = u'Numéro de l\'îlot à la date du diagnostic',
             required=True,
             on_change_with=['mae']
         )
@@ -93,11 +108,11 @@ class diagno(ModelSQL, ModelView):
 
     date = fields.Date(
             string = 'Date', 
-            help = u'Date of diagno',
+            help = u'Date du diagnostic',
         )
     dateecheance = fields.Date(
-            string = u'Echeance', 
-            help = u'Date of echeance',
+            string = u'Échéance', 
+            help = u'Date d\'échéance',
             on_change_with=['date']
         )
 
@@ -111,8 +126,8 @@ class diagno(ModelSQL, ModelView):
         )      
     owner = fields.Many2One(
             'party.party',
-            string=u'Owner',
-            help=u'Expert name',
+            string=u'Expert',
+            help=u'Expert réalisant le diagnostic',
             required=True,
             ondelete='RESTRICT',
             domain=[('categories', '=', 'Expert')]
@@ -139,24 +154,28 @@ class diagno(ModelSQL, ModelView):
             'mae.code',
             string = u'Type MAE',
             help = u'Type MAE',
+            required=True,
             domain=[('code', '=', 'TYPEMAE')]
         )
     nivexploitant = fields.Many2One(
             'mae.code',                   
             string = u'Mes. exploit.',
             help = u'Mesure demandée par l’exploitant',
+            required=True,
             domain=[('code', '=', 'TER')]
         )
     nivexpert = fields.Many2One(
             'mae.code',             
             string = u'Mes. expert',
             help = u'Mesure préconisée par l’expert',
+            required=True,
             domain=[('code', '=', 'TER')]
         )
     nivfinal = fields.Many2One(
             'mae.code',             
             string = u'Mes. finale',
             help = u'Mesure prise au final par l’exploitant',
+            required=True,
             domain=[('code', '=', 'TER')]
         )
     intecolo = fields.Many2One(
@@ -166,7 +185,7 @@ class diagno(ModelSQL, ModelView):
             domain=[('code', '=', 'INTECOLO')]
         )
     anneengag = fields.Integer(
-            string=u'Année',
+            string=u'Année d’engagement',
             help=u'Année d’engagement'
         )
 
@@ -261,43 +280,7 @@ class diagno(ModelSQL, ModelView):
 
     def on_change_with_gestionPatFau(self):
         if Bool(Eval(self.paturage)) and Bool(Eval(self.fauche)):
-            return True
-
-    #présence autres types d’éléments sur la parcelle
-    presence = fields.Boolean(
-            string=u'Présence autres types d’éléments sur la parcelle',
-            help=u'Autres types d’éléments sur la parcelle',
-        )
-
-    natureOcc = fields.One2Many(
-            'mae.diagno-mae.code',
-            'diagno',
-            string=u'Occupation',
-            help=u'Nature d\'occupation des sols',
-            states={'invisible': Not(Bool(Eval('presence')))},
-        )    
-    pourcentageOcc = fields.Integer(
-            string='Pourcentage',	
-            help=u'Pourcentage de la parcelle concernée',
-            states={'invisible': Not(Bool(Eval('presence')))},	
-        )
-    typeEntretienOcc = fields.Many2One(
-            'mae.code',
-            string='Type',
-            help=u'Type d\'entretien',
-            states={'invisible': Not(Bool(Eval('presence')))},
-            domain=[('code', '=', 'TYPENTRETIENOCC')],
-        )
-    clotureOcc = fields.Boolean(
-            string=u'Clôtures',
-            help=u'Clôtures traditionnelles',
-            states={'invisible': Not(Bool(Eval('presence')))},
-        )
-    observationOcc = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('presence')))},
-        )
+            return True    
 
     #engrais
     engrais = fields.Boolean(
@@ -359,6 +342,11 @@ class diagno(ModelSQL, ModelView):
             help=u'Prairie de marais ou de Vallées alluviales',
             select=1,
         )
+
+    @staticmethod
+    def default_marval():
+        return 'none'
+
     selectionMarais = fields.Many2One(
             'mae.code',
             string=u'Type d\'habitat',
@@ -408,736 +396,817 @@ class diagno(ModelSQL, ModelView):
             states={'invisible': Not(Bool(Eval('marval')))},	
         )
 
-    #marais subhalophiles
-    subhalo = fields.Boolean(
-            string=u'Marais subhalophiles',
-            help=u'Marais subhalophiles thermophiles atlantiques',
+    # elements présents en ou en bordure de parcelle
+    element = fields.Boolean(
+            string=u'Éléments présents dans ou en bordure de la parcelle',
+            help=u'Éléments présents dans ou en bordure de la parcelle',
         )
 
-    selectionHal = fields.Many2One(
-            'mae.code',
-            string=u'% de la parcelle',
-            help=u'% de la parcelle',
-            states={'invisible': Not(Bool(Eval('subhalo')))},
-            domain=[('code', '=', 'SELECTIONHAL')],
-            on_change_with=['subhalo']
+    # boisement
+    boisement = fields.Boolean(
+            string=u'Boisement',
+            help=u'Boisement',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
         )
 
-    def on_change_with_selectionHal(self):
-        if Bool(Eval(self.subhalo)):
+    def on_change_with_boisement(self):
+        if Bool(Eval(self.element)):
             return None
 
-    pourcentageHal = fields.Integer(
+    dsparcelle = fields.Boolean(
+            string=u'Dans la parcelle',
+            help=u'Dans la parcelle',
+            states={'invisible': Not(Bool(Eval('boisement')))},
+            on_change_with=['element', 'boisement']
+        )
+    
+    def on_change_with_dsparcelle(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.boisement)):
+            return 0
+
+    pourcentageDsParcelle = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('subhalo'))) and Not(Equal(Eval('selectionHal',0),37))},
-            on_change_with=['subhalo', 'selectionHal']
+            states={'invisible': Or(Not(Bool(Eval('dsparcelle'))), Not(Bool(Eval('boisement'))))},
+            on_change_with=['element', 'dsparcelle', 'boisement']
         )
 
-    def on_change_with_pourcentageHal(self):
-        if Bool(Eval(self.subhalo)) and Not(Equal(Eval('selectionHal',0),37)):
+    def on_change_with_pourcentageDsParcelle(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.dsparcelle)) or Bool(Eval(self.boisement)):
             return None
 
-    observationHal = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('subhalo')))},
+    bordparcelle = fields.Boolean(
+            string=u'En bordure de la parcelle',
+            help=u'En bordure de la parcelle',
+            states={'invisible': Not(Bool(Eval('boisement')))},
+            on_change_with=['element', 'boisement']
         )
 
-    #marais doux
-    doux = fields.Boolean(
-            string=u'Marais doux',
-            help=u'Marais doux',
+    def on_change_with_bordparcelle(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.boisement)):
+            return 0
+
+    typeboisement = fields.Text(
+            string=u'Type de boisement',
+            help=u'Type de boisement',
+            states={'invisible': Not(Bool(Eval('boisement')))},            
+            on_change_with=['element', 'boisement']
         )
 
-    selectionDou = fields.Many2One(
-            'mae.code',
-            string=u'% de la parcelle',
-            help=u'% de la parcelle',
-            states={'invisible': Not(Bool(Eval('doux')))},
-            domain=[('code', '=', 'SELECTIONDOU')],
-            on_change_with=['doux']
-        )
-
-    def on_change_with_selectionDou(self):
-        if Bool(Eval(self.doux)):
+    def on_change_with_typeboisement(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.boisement)):
             return None
 
-    pourcentageDou = fields.Integer(
+    # Culture en bordure
+    culture = fields.Boolean(
+            string=u'Culture en bordure',
+            help=u'Culture en bordure',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
+        )
+
+    def on_change_with_culture(self):
+        if Bool(Eval(self.element)):
+            return 0
+
+    observationCulture = fields.Text(
+            string=u'Observation',
+            help=u'Observation sur la culture',
+            states={'invisible': Not(Bool(Eval('culture')))},            
+            on_change_with=['element', 'culture']
+        )
+
+    def on_change_with_observationCulture(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.culture)):
+            return None
+
+    # Dépression humide
+    depression = fields.Boolean(
+            string=u'Dépression humide',
+            help=u'Dépression humide',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
+        )
+
+    def on_change_with_depression(self):
+        if Bool(Eval(self.element)):
+            return 0
+
+    pourcentageDepression = fields.Integer(
             string='Pourcentage',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('doux'))) and Not(Equal(Eval('selectionDou',0),39))},
-            on_change_with=['doux', 'selectionDou']
+            states={'invisible': Not(Bool(Eval('depression')))},
+            on_change_with=['element', 'depression']
         )
 
-    def on_change_with_pourcentageDou(self):
-        if Bool(Eval(self.doux)) and Not(Equal(Eval('selectionDou',0),39)):
+    def on_change_with_pourcentageDepression(self):
+        if Bool(Eval(self.depression)) or Bool(Eval(self.element)):
             return None
 
-    observationDou = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('doux')))},
+    eneauDepression = fields.Boolean(
+            string=u'En eau au moment du diagnostic',
+            help=u'En eau au moment du diagnostic',
+            states={'invisible': Not(Bool(Eval('depression')))},
+            on_change_with=['element', 'depression']
         )
 
-    #prairies de vallées alluviales
-    zonhumi = fields.Boolean(
-            string=u'Prairies',
-            help=u'Prairies de vallées alluviales',
+    def on_change_with_eneauDepression(self):
+        if Bool(Eval(self.depression)) or Bool(Eval(self.element)):
+            return 0
+
+    connectReseau = fields.Boolean(
+            string=u'Connectée au réseau',
+            help=u'Connectée au réseau',
+            states={'invisible': Not(Bool(Eval('eneauDepression')))},
+            on_change_with=['element', 'depression', 'eneauDepression']
         )
 
-    selectionHum = fields.Many2One(
-            'mae.code',
-            string=u'% de la parcelle',
-            help=u'% de la parcelle',
-            states={'invisible': Not(Bool(Eval('zonhumi')))},
-            domain=[('code', '=', 'SELECTIONHUM')],
-            on_change_with=['zonhumi']
+    def on_change_with_connectReseau(self):
+        if Bool(Eval(self.depression)) or Bool(Eval(self.element)) or Bool(Eval(self.eneauDepression)):
+            return 0
+
+    amenagementReseau = fields.Boolean(
+            string=u'Aménagement à proposer pour retenir l’eau',
+            help=u'Aménagement à proposer pour retenir l’eau',
+            states={'invisible': Not(Bool(Eval('eneauDepression')))},
+            on_change_with=['element', 'depression', 'eneauDepression']
         )
 
-    def on_change_with_selectionHum(self):
-        if Bool(Eval(self.zonhumi)):
+    def on_change_with_amenagementReseau(self):
+        if Bool(Eval(self.depression)) or Bool(Eval(self.element)) or Bool(Eval(self.eneauDepression)):
+            return 0
+
+    observationDepression = fields.Text(
+            string=u'Observation',
+            help=u'Observation sur la dépression humide',
+            states={'invisible': Not(Bool(Eval('eneauDepression')))},
+            on_change_with=['element', 'depression']           
+        )
+
+    def on_change_with_observationDepression(self):
+        if Bool(Eval(self.eneauDepression)) or Bool(Eval(self.element)):
             return None
 
-    pourcentageHum = fields.Integer(
-            string='Pourcentage',	
+    # Mare
+    mare = fields.Boolean(
+            string=u'Mare',
+            help=u'Mare',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
+        )
+
+    def on_change_with_mare(self):
+        if Bool(Eval(self.element)):
+            return 0
+
+    nombreMare = fields.Integer(
+            string='Nombre',	
+            help=u'Nombre',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_nombreMare(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return None
+
+    surfaceMare = fields.Integer(
+            string='Surface (m2)',	
+            help=u'Surface (m2)',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_surfaceMare(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return None
+
+    eneauMare = fields.Boolean(
+            string=u'En eau au moment du diagnostic',
+            help=u'En eau au moment du diagnostic',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_eneauMare(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return 0
+
+    entretenue = fields.Boolean(
+            string=u'Entretenue',
+            help=u'Mare entretenue',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_entretenue(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return 0
+
+    vegetalisee = fields.Boolean(
+            string=u'Végétalisée',
+            help=u'Mare végétalisée',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_vegetalisee(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return 0
+
+    vegetaliseeBord = fields.Boolean(
+            string=u'Végétalisée sur les bords',
+            help=u'Mare végétalisée sur les bords',
+            states={'invisible': Not(Bool(Eval('vegetalisee')))},
+            on_change_with=['element', 'mare', 'vegetalisee']
+        )
+
+    def on_change_with_vegetaliseeBord(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)) or Bool(Eval(self.vegetalisee)):
+            return 0
+
+    vegetaliseeMare = fields.Boolean(
+            string=u'Végétalisée dans la mare',
+            help=u'Mare végétalisée dans la mare',
+            states={'invisible': Not(Bool(Eval('vegetalisee')))},
+            on_change_with=['element', 'mare', 'vegetalisee']
+        )
+
+    def on_change_with_vegetaliseeMare(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)) or Bool(Eval(self.vegetalisee)):
+            return 0
+
+    abreuvement = fields.Boolean(
+            string=u'Abreuvement du bétail',
+            help=u'Abreuvement du bétail',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_abreuvement(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return 0
+
+    abreuvementDefens = fields.Boolean(
+            string=u'Mise en défens',
+            help=u'Mise en défens',
+            states={'invisible': Not(Bool(Eval('abreuvement')))},
+            on_change_with=['element', 'mare', 'abreuvement']
+        )
+
+    def on_change_with_abreuvementDefens(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)) or Bool(Eval(self.abreuvement)):
+            return 0
+
+    amenagementCyne = fields.Boolean(
+            string=u'Aménagement cynégétique',
+            help=u'Aménagement cynégétique (tonne)',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_amenagementCyne(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return 0
+
+    amenagementFonc = fields.Boolean(
+            string=u'Fonctionnel',
+            help=u'Aménagement cynégétique fonctionnel',
+            states={'invisible': Not(Bool(Eval('amenagementCyne')))},
+            on_change_with=['element', 'mare', 'amenagementCyne']
+        )
+
+    def on_change_with_amenagementFonc(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)) or Bool(Eval(self.amenagementCyne)):
+            return 0
+
+    interetEcolo = fields.Selection(
+            _INTERET,
+            string=u'Intérêt écologique',
+            help=u'Intérêt écologique',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    @staticmethod
+    def default_interetEcolo():
+        return 'none'
+
+    def on_change_with_interetEcolo(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return 'none'
+
+    restauration = fields.Boolean(
+            string=u'Besoin de restauration',
+            help=u'Besoin de restauration',
+            states={'invisible': Not(Bool(Eval('mare')))},
+            on_change_with=['element', 'mare']
+        )
+
+    def on_change_with_restauration(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.mare)):
+            return 0
+
+    # Parcelle drainée
+    drainee = fields.Boolean(
+            string=u'Parcelle drainée',
+            help=u'Parcelle drainée',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
+        )
+
+    def on_change_with_drainee(self):
+        if Bool(Eval(self.element)):
+            return 0
+
+    drain = fields.Selection(
+            _DRAIN,
+            string=u'Drain',
+            help=u'Type de drain',
+            states={'invisible': Not(Bool(Eval('drainee')))},
+            on_change_with=['element', 'drainee']
+        )
+
+    def on_change_with_drain(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.drainee)):
+            return 'none'
+
+    @staticmethod
+    def default_drain():
+        return 'none'
+
+    fonctionnelDrain = fields.Boolean(
+            string=u'Drain fonctionnel',
+            help=u'Drain fonctionnel (avec connexion au fossé)',
+            states={'invisible': Not(Bool(Eval('drainee')))},
+            on_change_with=['element', 'drainee']
+        )
+
+    def on_change_with_fonctionnelDrain(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.drainee)):
+            return 0
+
+    surfaceDrain = fields.Boolean(
+            string=u'Drain de surface végétalisé',
+            help=u'Drain de surface végétalisé',
+            states={'invisible': Not(Bool(Eval('drainee')))},
+            on_change_with=['element', 'drainee']
+        )
+
+    def on_change_with_surfaceDrain(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.drainee)):
+            return 0
+
+    atterrissementDrain = fields.Boolean(
+            string=u'Atterrissement',
+            help=u'Drain de surface végétalisé ',
+            states={'invisible': Or(Not(Bool(Eval('drainee'))), Not(Bool(Eval('surfaceDrain'))))},
+            on_change_with=['element', 'drainee', 'surfaceDrain']
+        )
+
+    def on_change_with_atterrissementDrain(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.drainee)) or Bool(Eval(self.surfaceDrain)):
+            return 0
+
+
+    # Canal / Fossé
+    canalFosse = fields.Boolean(
+            string=u'Canal/Fossé',
+            help=u'Canal/Fossé',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
+        )
+
+    def on_change_with_canalFosse(self):
+        if Bool(Eval(self.element)):
+            return 0
+
+    nombreFace = fields.Integer(
+            string='Nombre de face',	
+            help=u'Nombre de faces concernées',
+            states={'invisible': Not(Bool(Eval('canalFosse')))},
+            on_change_with=['element', 'canalFosse']
+        )
+
+    def on_change_with_nombreFace(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.canalFosse)):
+            return None
+
+    eneauFace = fields.Boolean(
+            string=u'En eau au moment du diagnostic',
+            help=u'En eau au moment du diagnostic',
+            states={'invisible': Not(Bool(Eval('canalFosse')))},
+            on_change_with=['element', 'canalFosse']
+        )
+
+    def on_change_with_eneauFace(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.canalFosse)):
+            return 0
+
+    envahissanteSpecies = fields.One2Many(
+            'mae.diagnoenvahissante-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèce envahissante',
+            help=u'Nom de l\'espèce envahissante',
+            states={'invisible': Not(Bool(Eval('canalFosse')))},
+            on_change_with=['element', 'canalFosse']
+        )
+
+    def on_change_with_envahissanteSpecies(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.canalFosse)):
+            return None
+
+    entretienFosse = fields.Boolean(
+            string=u'Entretien du canal/Fossé',
+            help=u'Entretien du canal/Fossé',
+            states={'invisible': Not(Bool(Eval('canalFosse')))},
+            on_change_with=['element', 'canalFosse']
+        )
+
+    def on_change_with_entretienFosse(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.canalFosse)):
+            return 0
+
+    connexionFosse = fields.Boolean(
+            string=u'Connexion du canal/Fossé',
+            help=u'Connexion au réseau du canal/Fossé',
+            states={'invisible': Not(Bool(Eval('canalFosse')))},
+            on_change_with=['element', 'canalFosse']
+        )
+
+    def on_change_with_connexionFosse(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.canalFosse)):
+            return 0
+
+    boueCurage = fields.Boolean(
+            string=u'Présence de boue de curage',
+            help=u'Présence de boue de curage dans le canal/Fossé',
+            states={'invisible': Not(Bool(Eval('canalFosse')))},
+            on_change_with=['element', 'canalFosse']
+        )
+
+    def on_change_with_boueCurage(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.canalFosse)):
+            return 0
+
+    # Arbre isolé et haie
+    arbreIsoleHaie = fields.Boolean(
+            string=u'Arbre isolé et haie',
+            help=u'Arbre isolé et haie',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
+        )
+
+    def on_change_with_arbreIsoleHaie(self):
+        if Bool(Eval(self.element)):
+            return 0
+
+    plantationPropose = fields.Boolean(
+            string=u'Plantation à proposer',	
+            help=u'Plantation à proposer',
+            states={'invisible': Or(Not(Bool(Eval('element'))), Bool(Eval('arbreIsoleHaie')))},
+            on_change_with=['element', 'arbreIsoleHaie']
+        )
+
+    def on_change_with_plantationPropose(self):
+        if Bool(Eval(self.element)) and Not(Bool(Eval(self.arbreIsoleHaie))):
+            return 1
+
+    arbreIsole = fields.Boolean(
+            string=u'Arbre isolé',
+            help=u'Arbre isolé',
+            states={'invisible': Not(Bool(Eval('arbreIsoleHaie')))},
+            on_change_with=['element', 'arbreIsoleHaie']
+        )
+
+    def on_change_with_arbreIsole(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)):
+            return 0
+
+    nombreArbreIsole = fields.Integer(
+            string='Nombre d\'arbres',	
+            help=u'Nombre d\'arbres isolés',
+            states={'invisible': Not(Bool(Eval('arbreIsole')))},
+            on_change_with=['element', 'arbreIsole']
+        )
+
+    def on_change_with_nombreArbreIsole(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsole)):
+            return None
+
+    arbreIsoleSpecies = fields.One2Many(
+            'mae.diagnoarbreisole-taxinomie.taxinomie',
+            'diagno',
+            string=u'Espèces d\'arbres isolés',
+            help=u'Espèces d\'arbres isolés',
+            states={'invisible': Not(Bool(Eval('arbreIsole')))},
+            on_change_with=['element', 'arbreIsole']
+        )
+
+    def on_change_with_arbreIsoleSpecies(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsole)):
+            return None
+
+    tetard = fields.Boolean(
+            string=u'Conduit en têtard',
+            help=u'Arbre conduit en têtard',
+            states={'invisible': Not(Bool(Eval('arbreIsoleHaie')))},
+            on_change_with=['element', 'arbreIsoleHaie']
+        )
+
+    def on_change_with_tetard(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)):
+            return 0
+
+    nombreTetard = fields.Integer(
+            string=u'Nombre d\'arbres',	
+            help=u'Nombre d\'arbres isolés',
+            states={'invisible': Not(Bool(Eval('tetard')))},
+            on_change_with=['element', 'arbreIsole', 'tetard']
+        )
+
+    def on_change_with_nombreTetard(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsole)) or Bool(Eval(self.tetard)):
+            return None
+
+    haie = fields.Boolean(
+            string=u'Haie',
+            help=u'Haie',
+            states={'invisible': Not(Bool(Eval('arbreIsoleHaie')))},
+            on_change_with=['element', 'arbreIsoleHaie']
+        )
+
+    def on_change_with_haie(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)):
+            return 0
+
+    haieArbustive = fields.Boolean(
+            string=u'Haie arbustive',
+            help=u'Haie arbustive',
+            states={'invisible': Not(Bool(Eval('haie')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'haie']
+        )
+
+    def on_change_with_haieArbustive(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.haie)):
+            return 0
+
+    mlHaieArbustive = fields.Integer(
+            string=u'ml haie arbustive',	
+            help=u'Nombre de mètre linéaire d\'haie arbustive',
+            states={'invisible': Not(Bool(Eval('haieArbustive')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'haie', 'haieArbustive']
+        )
+
+    def on_change_with_mlHaieArbustive(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.haie)) or Bool(Eval(self.haieArbustive)):
+            return None
+
+    haieArboree = fields.Boolean(
+            string=u'Haie arboree',
+            help=u'Haie arboree',
+            states={'invisible': Not(Bool(Eval('haie')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'haie']
+        )
+
+    def on_change_with_haieArboree(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.haie)):
+            return 0
+
+    mlHaieArboree = fields.Integer(
+            string=u'ml haie arborée',	
+            help=u'Nombre de mètre linéaire d\'haie arborée',
+            states={'invisible': Not(Bool(Eval('haieArboree')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'haie', 'haieArboree']
+        )
+
+    def on_change_with_mlHaieArboree(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.haie)) or Bool(Eval(self.haieArboree)):
+            return None
+
+    haieMultiStrate = fields.Boolean(
+            string=u'Haie multi strate',
+            help=u'Haie multi strate',
+            states={'invisible': Not(Bool(Eval('haie')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'haie']
+        )
+
+    def on_change_with_haieMultiStrate(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.haie)):
+            return 0
+
+    mlHaieMultiStrate = fields.Integer(
+            string=u'ml haie multi strate',	
+            help=u'Nombre de mètre linéaire d\'haie multi strate',
+            states={'invisible': Not(Bool(Eval('haieMultiStrate')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'haie', 'haieMultiStrate']
+        )
+
+    def on_change_with_mlHaieMultiStrate(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.haie)) or Bool(Eval(self.haieMultiStrate)):
+            return None
+
+    alignementArbre = fields.Boolean(
+            string=u'Alignement d\'arbres',
+            help=u'Alignement d\'arbres',
+            states={'invisible': Not(Bool(Eval('arbreIsoleHaie')))},
+            on_change_with=['element', 'arbreIsoleHaie']
+        )
+
+    def on_change_with_alignementArbre(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)):
+            return 0
+
+    especeAlignementArbre = fields.Text(
+            string=u'Espèces',
+            help=u'Espèces de l\'alignement d\'arbres',
+            states={'invisible': Not(Bool(Eval('alignementArbre')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'alignementArbre']
+        )
+
+    def on_change_with_especeAlignementArbre(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.alignementArbre)):
+            return None
+
+    entretienAlignementArbre = fields.Boolean(
+            string=u'Entretien',
+            help=u'Entretien de l\'alignement d\'arbres',
+            states={'invisible': Not(Bool(Eval('alignementArbre')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'alignementArbre']
+        )
+
+    def on_change_with_entretienAlignementArbre(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.alignementArbre)):
+            return 0
+
+    interetEcoloAlignementArbre = fields.Selection(
+            _INTERET,
+            string=u'Intérêt écologique',
+            help=u'Intérêt écologique de l\'alignement d\'arbres',
+            states={'invisible': Not(Bool(Eval('alignementArbre')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'alignementArbre']
+        )
+
+    @staticmethod
+    def default_interetEcoloAlignementArbre():
+        return 'none'
+
+    def on_change_with_interetEcoloAlignementArbre(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.alignementArbre)):
+            return 'none'
+
+    propGestionAlignementArbre = fields.Text(
+            string=u'Proposition de gestion',
+            help=u'Proposition de gestion de l\'alignement d\'arbres',
+            states={'invisible': Not(Bool(Eval('alignementArbre')))},
+            on_change_with=['element', 'arbreIsoleHaie', 'alignementArbre']
+        )
+
+    def on_change_with_propGestionAlignementArbre(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.arbreIsoleHaie)) or Bool(Eval(self.alignementArbre)):
+            return None
+
+    # Roselière
+    roseliere = fields.Boolean(
+            string=u'Roselière',
+            help=u'Roselière',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
+        )
+
+    def on_change_with_roseliere(self):
+        if Bool(Eval(self.element)):
+            return 0
+
+    longFosseCanal = fields.Boolean(
+            string=u'Le long du fossé/canal',
+            help=u'Le long du fossé/canal',
+            states={'invisible': Not(Bool(Eval('roseliere')))},
+            on_change_with=['element', 'roseliere']
+        )
+
+    def on_change_with_longFosseCanal(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)):
+            return 0
+
+    mlLongFosseCanal = fields.Integer(
+            string=u'ml le long du fossé/canal',	
+            help=u'Nombre de mètre linéaire le long du fossé/canal',
+            states={'invisible': Not(Bool(Eval('longFosseCanal')))},
+            on_change_with=['element', 'roseliere', 'longFosseCanal']
+        )
+
+    def on_change_with_mlLongFosseCanal(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)) or Bool(Eval(self.longFosseCanal)):
+            return None
+
+    longRigole = fields.Boolean(
+            string=u'Le long de la rigole',
+            help=u'Le long de la rigole',
+            states={'invisible': Not(Bool(Eval('roseliere')))},
+            on_change_with=['element', 'roseliere']
+        )
+
+    def on_change_with_longRigole(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)):
+            return 0
+
+    mlLongRigole = fields.Integer(
+            string=u'ml le long de la rigole',	
+            help=u'Nombre de mètre linéaire le long de la rigole',
+            states={'invisible': Not(Bool(Eval('longRigole')))},
+            on_change_with=['element', 'roseliere', 'longRigole']
+        )
+
+    def on_change_with_mlLongRigole(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)) or Bool(Eval(self.longRigole)):
+            return None
+
+    autourMare = fields.Boolean(
+            string=u'Roselière autour de la mare',
+            help=u'Roselière autour de la mare',
+            states={'invisible': Not(Bool(Eval('roseliere')))},
+            on_change_with=['element', 'roseliere']
+        )
+
+    def on_change_with_autourMare(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)):
+            return 0
+
+    pourcentAutourMare = fields.Integer(
+            string=u'Pourcentage de recouvrement',	
+            help=u'Pourcentage de recouvrement de la mare',
+            states={'invisible': Not(Bool(Eval('autourMare')))},
+            on_change_with=['element', 'roseliere', 'autourMare']
+        )
+
+    def on_change_with_pourcentAutourMare(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)) or Bool(Eval(self.autourMare)):
+            return None
+
+    enPlein = fields.Boolean(
+            string=u'Roselière en plein',
+            help=u'Roselière en plein',
+            states={'invisible': Not(Bool(Eval('roseliere')))},
+            on_change_with=['element', 'roseliere']
+        )
+
+    def on_change_with_enPlein(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)):
+            return 0
+
+    pourcentEnPlein = fields.Integer(
+            string=u'Pourcentage de la parcelle',	
             help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('zonhumi'))) and Not(Equal(Eval('selectionHum',0),41))},
-            on_change_with=['zonhumi', 'selectionHum']
+            states={'invisible': Not(Bool(Eval('enPlein')))},
+            on_change_with=['element', 'roseliere', 'enPlein']
         )
 
-    def on_change_with_pourcentageHum(self):
-        if Bool(Eval(self.zonhumi)) and Not(Equal(Eval('selectionHum',0),41)):
+    def on_change_with_pourcentEnPlein(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)) or Bool(Eval(self.enPlein)):
             return None
 
-    observationHum = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('zonhumi')))},
+    propGestionRoseliere = fields.Text(
+            string=u'Proposition de gestion',
+            help=u'Proposition de gestion de la roselière',
+            states={'invisible': Not(Bool(Eval('roseliere')))},
+            on_change_with=['element', 'roseliere']
         )
 
-    #terres agricoles
-    agri = fields.Boolean(
-            string=u'Terres agricoles',
-            help=u'Terres agricoles',
-        )
-
-    selectionAgr = fields.Many2One(
-            'mae.code',
-            string=u'% de la parcelle',
-            help=u'% de la parcelle',
-            states={'invisible': Not(Bool(Eval('agri')))},
-            domain=[('code', '=', 'SELECTIONAGR')],
-            on_change_with=['agri']
-        )
-
-    def on_change_with_selectionAgr(self):
-        if Bool(Eval(self.agri)):
+    def on_change_with_propGestionRoseliere(self):
+        if Bool(Eval(self.element)) or Bool(Eval(self.roseliere)):
             return None
 
-    pourcentageAgr = fields.Integer(
-            string='Pourcentage',	
-            help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('agri'))) and Not(Equal(Eval('selectionAgr',0),43))},
-            on_change_with=['agri', 'selectionAgr']
+    # Friches
+    presence = fields.Boolean(
+            string=u'Friches/Ronciers/Chardons/...',
+            help=u'Autres types d’éléments sur la parcelle',
         )
 
-    def on_change_with_pourcentageAgr(self):
-        if Bool(Eval(self.agri)) and Not(Equal(Eval('selectionAgr',0),43)):
-            return None
-
-    observationAgr = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('agri')))},
-        )
-
-    #peupleraie
-    peup = fields.Boolean(
-            string=u'Peupleraie',
-            help=u'Peupleraie',
-        )
-
-    selectionPeu = fields.Many2One(
-            'mae.code',
-            string=u'% de la parcelle',
-            help=u'% de la parcelle',
-            states={'invisible': Not(Bool(Eval('peup')))},
-            domain=[('code', '=', 'SELECTIONPEU')],
-            on_change_with=['peup']
-        )
-
-    def on_change_with_selectionPeu(self):
-        if Bool(Eval(self.peup)):
-            return None
-
-    pourcentagePeu = fields.Integer(
-            string='Pourcentage',	
-            help=u'Pourcentage de la parcelle',
-            states={'invisible': Not(Bool(Eval('peup'))) and Not(Equal(Eval('selectionPeu',0),45))},
-            on_change_with=['peup', 'selectionPeu']
-        )
-
-    def on_change_with_pourcentagePeu(self):
-        if Bool(Eval(self.peup)) and Not(Equal(Eval('selectionPeu',0),45)):
-            return None
-
-    observationPeu = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('peup')))},
-        )
-
-    #autres
-    autre = fields.Boolean(
-            string=u'Autres',
-            help=u'Autres',
-        )
-    observationAut = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('autre')))},
-        )
-
-    #baisse
-    baisse = fields.Boolean(
-            string=u'Baisse',
-            help=u'Baisse',
+    natureOcc = fields.One2Many(
+            'mae.diagno-mae.code',
+            'diagno',
+            string=u'Occupation',
+            help=u'Nature d\'occupation des sols',
+            states={'invisible': Not(Bool(Eval('presence')))},
         )    
-    eneau = fields.Boolean(
-            string=u'En eau',
-            help=u'En eau',
-            states={'invisible': Not(Bool(Eval('baisse')))},
-            on_change_with=['baisse'],
+    pourcentageOcc = fields.Integer(
+            string='Pourcentage',	
+            help=u'Pourcentage de la parcelle concernée',
+            states={'invisible': Not(Bool(Eval('presence')))},	
         )
 
-    def on_change_with_eneau(self):
-        if Bool(Eval(self.baisse)):
-            return False
-
-    paran = fields.Integer(
-            string=u'x/an',
-            help=u'En eau plusieurs fois par an (nombre de fois)',
-            states={'invisible': Not(Bool(Eval('eneau')))},
-            on_change_with=['eneau'],
+    # Synthèse diagno
+    memo = fields.Text(
+            string=u'Synthèse du diagnostic milieu',
+            help=u'Synthèse du diagnostic milieu',            
         )
 
-    def on_change_with_paran(self):
-        if Bool(Eval(self.eneau)):
-            return None
-
-    duree = fields.Integer(
-            string=u'Durée',	
-            help=u'Nombre de jours en eau',
-            states={'invisible': Not(Bool(Eval('eneau')))},
-            on_change_with=['eneau'],
-        )
-
-    def on_change_with_duree(self):
-        if Bool(Eval(self.eneau)):
-            return None
-
-    evacuation = fields.Many2One(
-            'mae.code',
-            string=u'Évacuation',
-            help=u'Évacuation',
-            states={'invisible': Not(Bool(Eval('eneau')))},
-            domain=[('code', '=', 'EVACUATION')],
-            on_change_with=['eneau']
-        )
-
-    def on_change_with_evacuation(self):
-        if Bool(Eval(self.eneau)):
-            return None
-
-    connectee = fields.Boolean(
-            string=u'Connectée',
-            help=u'Connectée',
-            states={'invisible': Not(Bool(Eval('eneau')))},
-            on_change_with=['eneau'],
-        )
-
-    def on_change_with_connectee(self):
-        if Bool(Eval(self.eneau)):
-            return False
-
-    maitrisee = fields.Boolean(
-            string=u'Maîtrisée',
-            help=u'Maîtrisée',
-            states={'invisible': Not(Bool(Eval('eneau')))},
-            on_change_with=['eneau'],
-        )
-
-    def on_change_with_maitrisee(self):
-        if Bool(Eval(self.eneau)):
-            return False
-
-    observationBai = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('baisse')))},
-        )
-
-    #mares et trous d'eau
-    maretrou = fields.Boolean(
-            string=u'Mares/Trous',
-            help=u'Mares et trous d\'eau',
-        )
-    nombreTrou = fields.Integer(
-            string=u'Nombre',	
-            help=u'Nombre de mares/trous d\'eau',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-            on_change_with=['maretrou'],
-        )
-
-    def on_change_with_nombreTrou(self):
-        if Bool(Eval(self.maretrou)):
-            return None
-
-    surfaceTrou = fields.Integer(
-            string=u'Surface (m2)',	
-            help=u'Surface en mètre carré des mares/trous d\'eau',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-            on_change_with=['maretrou'],
-        )
-
-    def on_change_with_surfaceTrou(self):
-        if Bool(Eval(self.maretrou)):
-            return None
-
-    atterrissement = fields.Boolean(
-            string=u'Atterrissement',
-            help=u'Atterrissement',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-            on_change_with=['maretrou'],
-        )
-
-    def on_change_with_atterrissement(self):
-        if Bool(Eval(self.maretrou)):
-            return False
-
-    penteTrou = fields.Many2One(
-            'mae.code',
-            string=u'Pentes',
-            help=u'Pentes',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-            domain=[('code', '=', 'PENTETROU')],
-            on_change_with=['maretrou']
-        )
-
-    def on_change_with_penteTrou(self):
-        if Bool(Eval(self.maretrou)):
-            return None
-
-    fonctionnelle = fields.Boolean(
-            string=u'Fonctionnelles',
-            help=u'Fonctionnelles',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-            on_change_with=['maretrou'],
-        )
-
-    def on_change_with_fonctionnelle(self):
-        if Bool(Eval(self.maretrou)):
-            return False
-
-    dateTrou = fields.Date(
-            string=u'Date',
-            help=u'Date si currage récent',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-            on_change_with=['maretrou'],
-        )
-
-    def on_change_with_dateTrou(self):
-        if Bool(Eval(self.maretrou)):
-            return None
-
-    amgtcynegetique = fields.Boolean(
-            string=u'Amgt Cyné.',
-            help=u'Aménagements cynégétiques (tonne)',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-            on_change_with=['maretrou'],
-        )
-
-    def on_change_with_amgtcynegetique(self):
-        if Bool(Eval(self.maretrou)):
-            return False
-
-    nombreCyn = fields.Integer(
-            string=u'Nombre',
-            help=u'Nombre de tonne',
-            states={'invisible': Not(Bool(Eval('amgtcynegetique')))},
-            on_change_with=['amgtcynegetique'],
-        )
-
-    def on_change_with_nombreCyn(self):
-        if Bool(Eval(self.amgtcynegetique)):
-            return None
-
-    etatCyn = fields.Many2One(
-            'mae.code',
-            string=u'État',	
-            help=u'État des tonnes à eau',
-            states={'invisible': Not(Bool(Eval('amgtcynegetique')))},
-            domain=[('code', '=', 'ETATCYN')],
-            on_change_with=['amgtcynegetique']
-        )
-
-    def on_change_with_etatCyn(self):
-        if Bool(Eval(self.amgtcynegetique)):
-            return None
-
-    observationTro = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('maretrou')))},
-        )
-
-    #bordures des parcelles
-    canfos = fields.Boolean(
-            string=u'Canaux/Fossés',
-            help=u'Canaux/Fossés',
-        )
-    nombreFac = fields.Integer(
-            string=u'Nombre',	
-            help=u'Nombre de faces',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-            on_change_with=['canfos'],
-        )
-
-    def on_change_with_nombreFac(self):
-        if Bool(Eval(self.canfos)):
-            return None
-
-    eneauCan = fields.Boolean(
-            string=u'En eau',
-            help=u'En eau',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-            on_change_with=['canfos'],
-        )
-
-    def on_change_with_eneauCan(self):
-        if Bool(Eval(self.canfos)):
-            return False
-
-    niveauminCan = fields.Integer(
-            string=u'Niveau min.',	
-            help=u'Niveau minimum d\'eau (fossés/sol)',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-            on_change_with=['canfos'],
-        )
-
-    def on_change_with_niveauminCan(self):
-        if Bool(Eval(self.canfos)):
-            return None
-
-    niveaumaxCan = fields.Integer(
-            string=u'Niveau max.',	
-            help=u'Niveau maximum d\'eau (fossés/sol)',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-            on_change_with=['canfos'],
-        )
-
-    def on_change_with_niveaumaxCan(self):
-        if Bool(Eval(self.canfos)):
-            return None
-
-    espaqua = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces aquatiques',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-        )
-    atterrissementCan = fields.Char(
-            string=u'Atterrissement',
-            help=u'Atterrissement',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-        )
-    entretienCan = fields.Boolean(
-            string=u'Entretien',
-            help=u'Entretien',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-            on_change_with=['canfos'],
-        )
-
-    def on_change_with_entretienCan(self):
-        if Bool(Eval(self.canfos)):
-            return False
-
-    typeEnt = fields.Char(
-            string=u'Type',
-            help=u'Type d\'entretien',
-            states={'invisible': Not(Bool(Eval('entretienCan')))},
-            on_change_with=['entretienCan'],
-        )
-
-    def on_change_with_typeEnt(self):
-        if Bool(Eval(self.entretienCan)):
-            return None
-
-    periodiciteEnt = fields.Char(
-            string=u'Périodicité',
-            help=u'Périodicité d\'entretien',
-            states={'invisible': Not(Bool(Eval('entretienCan')))},
-            on_change_with=['entretienCan'],
-        )
-
-    def on_change_with_periodiciteEnt(self):
-        if Bool(Eval(self.entretienCan)):
-            return None
-
-    periodeEnt = fields.Char(
-            string=u'Période',
-            help=u'Période de l\'année d\'entretien',
-            states={'invisible': Not(Bool(Eval('entretienCan')))},
-            on_change_with=['entretienCan'],
-        )
-
-    def on_change_with_periodeEnt(self):
-        if Bool(Eval(self.entretienCan)):
-            return None
-
-    connexionCan = fields.Boolean(
-            string=u'Connexion au réseau',
-            help=u'Connexion au réseau',
-            states={'invisible': Not(Bool(Eval('canfos')))},
-            on_change_with=['canfos'],
-        )
-
-    def on_change_with_connexionCan(self):
-        if Bool(Eval(self.canfos)):
-            return False
-
-    libreCon = fields.Boolean(
-            string=u'Libre permanent',
-            help=u'Libre permanent',
-            states={'invisible': Not(Bool(Eval('connexionCan')))},
-            on_change_with=['connexionCan'],
-        )
-
-    def on_change_with_libreCon(self):
-        if Bool(Eval(self.connexionCan)):
-            return False
-
-    barrageCon = fields.Many2One(
-            'mae.code',
-            string=u'Avec Barrage',
-            help=u'Avec barrage',
-            states={'invisible': Not(Bool(Eval('connexionCan')))},
-            domain=[('code', '=', 'BARRAGECON')],
-            on_change_with=['connexionCan']
-        )
-
-    def on_change_with_barrageCon(self):
-        if Bool(Eval(self.connexionCan)):
-            return None
-
-    arbhaie = fields.Boolean(
-            string=u'Arbres/Arbustes/Haies',
-            help=u'Arbres/Arbustes/Haies',
-        )
-    pourcentArb = fields.Many2One(
-            'mae.code',
-            string=u'Pourcentage',
-            help=u'Pourcentage de canaux concernés',
-            states={'invisible': Not(Bool(Eval('arbhaie')))},
-            domain=[('code', '=', 'POURCENTARB')],
-            on_change_with=['arbhaie']
-        )
-
-    def on_change_with_pourcentArb(self):
-        if Bool(Eval(self.arbhaie)):
-            return None
-
-    tetardsArb = fields.Boolean(
-            string=u'Tétards',
-            help=u'Tétards',
-            states={'invisible': Not(Bool(Eval('arbhaie')))},
-            on_change_with=['arbhaie'],
-        )
-
-    def on_change_with_tetardsArb(self):
-        if Bool(Eval(self.arbhaie)):
-            return False
-
-    especeTet = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces de tétards',
-            states={'invisible': Not(Bool(Eval('tetardsArb')))},
-            on_change_with=['tetardsArb'],
-        )
-
-    def on_change_with_especeTet(self):
-        if Bool(Eval(self.tetardsArb)):
-            return None
-
-    arbreArb = fields.Boolean(
-            string=u'Arbres isolés',
-            help=u'Arbres isolés',
-            states={'invisible': Not(Bool(Eval('arbhaie')))},
-            on_change_with=['arbhaie'],
-        )
-
-    def on_change_with_arbreArb(self):
-        if Bool(Eval(self.arbhaie)):
-            return False
-
-    especeIso = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces d\'arbre isolé',
-            states={'invisible': Not(Bool(Eval('arbreArb')))},
-            on_change_with=['arbreArb'],
-        )
-
-    def on_change_with_especeIso(self):
-        if Bool(Eval(self.arbreArb)):
-            return None
-
-    arbusteArb = fields.Boolean(
-            string=u'Arbustes isolés',
-            help=u'Arbres isolés',
-            states={'invisible': Not(Bool(Eval('arbhaie')))},
-            on_change_with=['arbhaie'],
-        )
-
-    def on_change_with_arbusteArb(self):
-        if Bool(Eval(self.arbhaie)):
-            return False
-
-    especeArbu = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces d\'arbuste isolé',
-            states={'invisible': Not(Bool(Eval('arbusteArb')))},
-            on_change_with=['arbusteArb'],
-        )
-
-    def on_change_with_especeArbu(self):
-        if Bool(Eval(self.arbusteArb)):
-            return None
-
-    haieArb = fields.Boolean(
-            string=u'Haies',
-            help=u'Haies',
-            states={'invisible': Not(Bool(Eval('arbhaie')))},
-            on_change_with=['arbhaie'],
-        )
-
-    def on_change_with_haieArb(self):
-        if Bool(Eval(self.arbhaie)):
-            return False
-
-    especeHaie = fields.Char(
-            string=u'Espèces',
-            help=u'Espèces composant la haie',
-            states={'invisible': Not(Bool(Eval('haieArb')))},
-            on_change_with=['haieArb'],
-        )
-
-    def on_change_with_especeHaie(self):
-        if Bool(Eval(self.haieArb)):
-            return None
-
-    lineaireHaie = fields.Integer(
-            string=u'Linéaire (ml)',
-            help=u'Linéaire de haies en mètre linéaire',
-            states={'invisible': Not(Bool(Eval('haieArb')))},
-            on_change_with=['haieArb'],
-        )
-
-    def on_change_with_lineaireHaie(self):
-        if Bool(Eval(self.haieArb)):
-            return None
-
-    entretienArb = fields.Boolean(
-            string=u'Entretien',
-            help=u'Entretien',
-            states={'invisible': Not(Bool(Eval('arbhaie')))},
-            on_change_with=['arbhaie'],
-        )
-
-    def on_change_with_entretienArb(self):
-        if Bool(Eval(self.arbhaie)):
-            return False
-
-    observationCan = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': And(Not(Bool(Eval('canfos'))), Not(Bool(Eval('arbhaie'))))},
-        )
-
-    #parcelles avec rigole interne
-    rigole = fields.Boolean(
-            string=u'Rigoles',
-            help=u'Parcelles avec rigoles internes',
-        )
-    nombreRig = fields.Integer(
-            string=u'Nombre',	
-            help=u'Nombre de rigoles',
-            states={'invisible': Not(Bool(Eval('rigole')))},
-            on_change_with=['rigole'],
-        )
-
-    def on_change_with_nombreRig(self):
-        if Bool(Eval(self.rigole)):
-            return None
-
-    lineaireRig = fields.Integer(
-            string=u'Linéaire (m)',	
-            help=u'Linéaire total de rigoles (m)',
-            states={'invisible': Not(Bool(Eval('rigole')))},
-            on_change_with=['rigole'],
-        )
-
-    def on_change_with_lineaireRig(self):
-        if Bool(Eval(self.rigole)):
-            return None
-
-    fonctionnelRig = fields.Boolean(
-            string=u'Fonctionnelles',
-            help=u'Fonctionnelles (avec connexion)',
-            states={'invisible': Not(Bool(Eval('rigole')))},
-            on_change_with=['rigole'],
-        )
-
-    def on_change_with_fonctionnelRig(self):
-        if Bool(Eval(self.rigole)):
-            return False
-
-    vegetationRig = fields.Boolean(
-            string=u'Végétation',
-            help=u'Avec végétation',
-            states={'invisible': Not(Bool(Eval('rigole')))},
-            on_change_with=['rigole'],
-        )
-
-    def on_change_with_vegetationRig(self):
-        if Bool(Eval(self.rigole)):
-            return False
-
-    observationRig = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('rigole')))},
-        )
-
-    #jas
-    jas = fields.Boolean(
-            string=u'Jas',
-            help=u'Jas',
-        )
-    nombreJas = fields.Integer(
-            string=u'Nombre',	
-            help=u'Nombre de jas',
-            states={'invisible': Not(Bool(Eval('jas')))},
-            on_change_with=['jas'],
-        )
-
-    def on_change_with_nombreJas(self):
-        if Bool(Eval(self.jas)):
-            return None
-
-    observationJas = fields.Text(
-            string=u'Observations',
-            help=u'Observations',
-            states={'invisible': Not(Bool(Eval('jas')))},
+    # Remarques/échanges avec agriculteur
+    comment = fields.Text(
+            string=u'Remarques/Échanges',
+            help=u'Remarques et échanges avec l\'agriculteur',            
         )
 
     #propositions, échanges, remarques
@@ -1186,7 +1255,7 @@ class diagno(ModelSQL, ModelView):
             help=u'Nom de l\'espèce',
         )
 
-    #autres epsèces
+    #autres espèces
     autreSpecies = fields.One2Many(
             'mae.diagnoaut-taxinomie.taxinomie',
             'diagno',
@@ -1281,10 +1350,68 @@ class diagno(ModelSQL, ModelView):
             help=u'Observations diagnostic faunistique',
         )
 
+class diagnoArbreIsole(ModelSQL, ModelView):
+    u'diagno - Arbre isole'
+    __name__ = 'mae.diagnoarbreisole-taxinomie.taxinomie'
+    _table = 'diagno_arbreisole_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 14), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
+class diagnoEnvahissante(ModelSQL, ModelView):
+    u'diagno - Envahissante'
+    __name__ = 'mae.diagnoenvahissante-taxinomie.taxinomie'
+    _table = 'diagno_envahissante_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 13), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+
 class diagnoOdo(ModelSQL, ModelView):
     u'diagno - Odonate'
     __name__ = 'mae.diagnoodonate-taxinomie.taxinomie'
-    _table = 'diagno_odoante_rel'
+    _table = 'diagno_odonate_rel'
 
     diagno = fields.Many2One(
             'mae.diagno',
@@ -1669,7 +1796,7 @@ class diagnoAvifaune(ModelSQL, ModelView):
              ('PO', u'Possible'),
              ('N', u'Non nicheur')],
             string=u'Statut',
-            help=u'Statu de reproduction',
+            help=u'Statut de reproduction',
             on_change_with=['obspot'],
             states={'invisible': ~Eval('obspot').in_(['observee'])},
             select=1,
@@ -1863,20 +1990,22 @@ class mae(Mapable, ModelSQL, ModelView):
     name = fields.Char(            
             string = 'Ilot',
             help = u'PAC Ilot number',
-            required=True,
-            states=STATES,
-            depends=['party', 'commune'],
-            on_change_with=['party', 'commune']
-            
+            readonly=True,                        
         )
 
-    def on_change_with_name(self):
-        if self.party is not None and self.commune is not None:
-            Seq = Pool().get('mae.mae')
-            seq = str("%05d" % Seq(1).id)
-            return "%s-%s-%s-%s" % (str(self.commune.insee), str("%05d" % int(self.party.code)), datetime.now().year, seq)        
-        else:
-            return None
+    @classmethod
+    def create(cls, vlist):
+        Sequence = Pool().get('ir.sequence')
+        Configuration = Pool().get('mae.configuration')
+        Commune = Pool().get('commune.commune')
+        Party = Pool().get('party.party')     
+        seq = Sequence.get_id(Configuration(1).mae_sequence.id)
+
+        vlist = [x.copy() for x in vlist]
+        for values in vlist:
+            print str("%05d" % int(seq))
+            values['name'] = "%s-%s-%s-%s" % (str(Commune(values.get('commune')).insee), str("%05d" % int(Party(values.get('party')).code)), datetime.now().year, str("%05d" % int(seq)))            
+        return super(mae, cls).create(vlist)
 
     num = fields.Char(
             string=u'Usual Ilot',

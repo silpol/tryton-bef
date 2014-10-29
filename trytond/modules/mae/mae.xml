@@ -125,6 +125,58 @@
             <field name="act_window" ref="act_mae_diagnomam_presence_rel_form"/>
         </record>
 
+        <!-- Espèces envahissantes-->
+        <record model="ir.ui.view" id="mae_diagnoenvahissante_taxo_rel_view_tree">
+            <field name="model">mae.diagnoenvahissante-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnoenvahissante_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnoenvahissante_taxo_rel_view_form">
+            <field name="model">mae.diagnoenvahissante-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnoenvahissante_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnoenvahissante_taxo_rel_form">
+            <field name="name">Espèces envahissantes</field>
+            <field name="res_model">mae.diagnoenvahissante-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoenvahissante_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoenvahissante_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoenvahissante_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoenvahissante_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoenvahissante_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoenvahissante_taxo_rel_form"/>
+        </record>
+
+        <!-- Espèces arbre isolé-->
+        <record model="ir.ui.view" id="mae_diagnoarbreisole_taxo_rel_view_tree">
+            <field name="model">mae.diagnoarbreisole-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">mae_diagnoarbreisole_taxo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mae_diagnoarbreisole_taxo_rel_view_form">
+            <field name="model">mae.diagnoarbreisole-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">mae_diagnoarbreisole_taxo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mae_diagnoarbreisole_taxo_rel_form">
+            <field name="name">Espèces arbres isolés</field>
+            <field name="res_model">mae.diagnoarbreisole-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoarbreisole_taxo_rel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mae_diagnoarbreisole_taxo_rel_view_tree"/>
+            <field name="act_window" ref="act_mae_diagnoarbreisole_taxo_rel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mae_diagnoarbreisole_taxo_rel_form_view2">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="mae_diagnoarbreisole_taxo_rel_view_form"/>
+          <field name="act_window" ref="act_mae_diagnoarbreisole_taxo_rel_form"/>
+        </record>
+
         <!-- Autres espèces -->
         <record model="ir.ui.view" id="mae_diagnoaut_taxo_rel_view_tree">
             <field name="model">mae.diagnoaut-taxinomie.taxinomie</field>
@@ -466,6 +518,22 @@
         </record> 
 
         <menuitem parent="menu_mae" id="menu_mae_mae_form" icon="tryton-mae" action="act_mae_mae_form"/>
+
+        <record model="ir.sequence.type" id="sequence_type_mae">
+            <field name="name">Mae</field>
+            <field name="code">mae.mae</field>
+        </record>
+
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_mae_group_admin">
+            <field name="sequence_type" ref="sequence_type_mae"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+
+        <record model="ir.sequence" id="sequence_mae">
+            <field name="name">Mae</field>
+            <field name="code">mae.mae</field>
+        </record>
 
         <record model="ir.ui.view" id="mae_diagno_view_tree">
             <field name="model">mae.diagno</field>

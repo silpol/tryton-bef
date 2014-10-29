@@ -5,8 +5,8 @@
     <field name="party" />
     <field name="commune" />
     <field name="typo" />
-    <field name="surface" />
-    <field name="diagno" />
     <field name="nomterritoire" />
     <field name="codeterritoire" />
+    <field name="surface" />
+    <field name="diagno" />
 </tree>

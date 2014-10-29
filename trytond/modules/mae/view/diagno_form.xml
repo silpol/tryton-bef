@@ -26,8 +26,6 @@
             <field name="nivfinal" widget="selection"/>
             <label name="intecolo"/>            
             <field name="intecolo" widget="selection"/>
-            <label name="typemae"/>            
-            <field name="typemae" widget="selection"/>
             <label name="anneengag"/>            
             <field name="anneengag"/>
             <label name="active"/>            
@@ -85,25 +83,7 @@
                 <newline/>
                 <label name="observationPatFau"/>            
                 <field name="observationPatFau" colspan="3"/>
-            </group>
-            <!--separator colspan="4"/-->                                     
-            <group id="group_presence" colspan="4">
-                <label name="presence"/>            
-                <field name="presence"/>
-                <newline/>
-                <group id="group_occ" colspan="4">
-                    <label name="natureOcc"/>                             
-                    <field name="natureOcc"/>
-                    <label name="pourcentageOcc"/>            
-                    <field name="pourcentageOcc"/>
-                    <label name="typeEntretienOcc"/>            
-                    <field name="typeEntretienOcc" widget="selection"/>
-                    <label name="clotureOcc"/>            
-                    <field name="clotureOcc"/>
-                    <label name="observationOcc"/>            
-                    <field name="observationOcc" colspan="3"/>
-                </group>
-            </group>
+            </group>            
             <!--separator colspan="4"/-->            
             <group id="group_engrais" colspan="4">
                 <label name="engrais"/>            
@@ -157,250 +137,198 @@
                 </group>
             </group>
             <!--separator colspan="4"/-->
-            <group id="group_subhalo" colspan="4">
-                <label name="subhalo"/>            
-                <field name="subhalo"/>
+            <group id="group_element" colspan="4">
+                <label name="element"/>            
+                <field name="element"/>
                 <newline/>
-                <group id="group_hal" colspan="4">
-                    <label name="selectionHal"/>            
-                    <field name="selectionHal" widget="selection"/>
-                    <label name="pourcentageHal"/>            
-                    <field name="pourcentageHal"/> 
-                    <label name="observationHal"/>            
-                    <field name="observationHal" colspan="3"/>
+                <group id="group_boisement" colspan="4">
+                    <label name="boisement"/>            
+                    <field name="boisement"/>
+                    <label name="bordparcelle"/>            
+                    <field name="bordparcelle"/>
+                    <newline/>
+                    <label name="dsparcelle"/>            
+                    <field name="dsparcelle"/> 
+                    <label name="pourcentageDsParcelle"/>            
+                    <field name="pourcentageDsParcelle"/>
+                    <newline/>
+                    <label name="typeboisement"/>            
+                    <field name="typeboisement" colspan="3"/>
                 </group>
-            </group>
-            <!--separator colspan="4"/-->
-            <group id="group_doux" colspan="4">
-                <label name="doux"/>            
-                <field name="doux"/>
-                <newline/>
-                <group id="group_dou" colspan="4">
-                    <label name="selectionDou"/>            
-                    <field name="selectionDou" widget="selection"/>
-                    <label name="pourcentageDou"/>            
-                    <field name="pourcentageDou"/> 
-                    <label name="observationDou"/>            
-                    <field name="observationDou" colspan="3"/>
+                <group id="group_culture" colspan="4">
+                    <label name="culture"/>            
+                    <field name="culture"/>                    
+                    <newline/>
+                    <label name="observationCulture"/>            
+                    <field name="observationCulture" colspan="3"/>
                 </group>
-            </group>
-            <!--separator colspan="4"/-->
-            <group id="group_humi" colspan="4">
-                <label name="zonhumi"/>            
-                <field name="zonhumi"/>
-                <newline/>
-                <group id="group_hum" colspan="4">
-                    <label name="selectionHum"/>            
-                    <field name="selectionHum" widget="selection"/>
-                    <label name="pourcentageHum"/>            
-                    <field name="pourcentageHum"/> 
-                    <label name="observationHum"/>            
-                    <field name="observationHum" colspan="3"/>
-                </group>
-            </group>
-            <!--separator colspan="4"/-->
-            <group id="group_agri" colspan="4">
-                <label name="agri"/>            
-                <field name="agri"/>
-                <newline/>
-                <group id="group_agr" colspan="4">
-                    <label name="selectionAgr"/>            
-                    <field name="selectionAgr" widget="selection"/>
-                    <label name="pourcentageAgr"/>            
-                    <field name="pourcentageAgr"/> 
-                    <label name="observationAgr"/>            
-                    <field name="observationAgr" colspan="3"/>
-                </group>
-            </group>
-            <!--separator colspan="4"/-->
-            <group id="group_peup" colspan="4">
-                <label name="peup"/>            
-                <field name="peup"/>
-                <newline/>
-                <group id="group_peu" colspan="4">
-                    <label name="selectionPeu"/>            
-                    <field name="selectionPeu" widget="selection"/>
-                    <label name="pourcentagePeu"/>            
-                    <field name="pourcentagePeu"/> 
-                    <label name="observationPeu"/>            
-                    <field name="observationPeu" colspan="3"/>
-                </group>
-            </group>
-            <!--separator colspan="4"/-->
-            <group id="group_aut" colspan="4">
-                <label name="autre"/>            
-                <field name="autre"/>
-                <newline/>
-                <group id="group_aut" colspan="4"> 
-                    <label name="observationAut"/>            
-                    <field name="observationAut" colspan="3"/>
-                </group>
-            </group>
-            <group id="group_baisse" colspan="4">
-                <label name="baisse"/>            
-                <field name="baisse"/>
-                <newline/>
-                <group id="group_bai" colspan="4">
+                <group id="group_depression" colspan="4">
+                    <label name="depression"/>            
+                    <field name="depression"/>
+                    <label name="pourcentageDepression"/>            
+                    <field name="pourcentageDepression"/>
                     <group id="group_eneau" colspan="4">
-                        <label name="eneau"/>            
-                        <field name="eneau"/>
+                        <label name="eneauDepression"/>            
+                        <field name="eneauDepression"/>
+                        <label name="connectReseau"/>            
+                        <field name="connectReseau"/>
+                        <label name="amenagementReseau"/>            
+                        <field name="amenagementReseau"/>                  
                         <newline/>
-                        <group id="group_eau" colspan="4" col="6">
-                            <label name="paran"/>            
-                            <field name="paran"/>
-                            <label name="duree"/>            
-                            <field name="duree"/>
-                            <label name="evacuation"/>            
-                            <field name="evacuation" widget="selection"/>
-                            <label name="connectee"/>            
-                            <field name="connectee"/>
-                            <label name="maitrisee"/>            
-                            <field name="maitrisee"/>
-                        </group>
-                    </group>                
-                    <label name="observationBai"/>            
-                    <field name="observationBai"/>
-                </group>                
-            </group>
-            <!--separator colspan="4"/-->            
-            <group id="group_maretrou" colspan="4">
-                <label name="maretrou"/>            
-                <field name="maretrou"/>
-                <newline/>
-                <group id="group_tro" colspan="4">                    
-                    <label name="nombreTrou"/>            
-                    <field name="nombreTrou"/>
-                    <label name="surfaceTrou"/>            
-                    <field name="surfaceTrou"/>
-                    <label name="atterrissement"/>            
-                    <field name="atterrissement"/>
-                    <label name="penteTrou"/>            
-                    <field name="penteTrou" widget="selection"/>
-                    <label name="fonctionnelle"/>            
-                    <field name="fonctionnelle"/>
-                    <label name="dateTrou"/>            
-                    <field name="dateTrou"/>
-                    <newline/>
-                    <group id="group_amgt" colspan="4" col="6">
-                        <label name="amgtcynegetique"/>            
-                        <field name="amgtcynegetique"/>
-                        <label name="nombreCyn"/>            
-                        <field name="nombreCyn"/>
-                        <label name="etatCyn"/>            
-                        <field name="etatCyn" widget="selection"/>
-                    </group>
-                    <label name="observationTro"/>            
-                    <field name="observationTro" colspan="3"/>
-                </group>
-            </group>
-            <!--separator colspan="4"/-->            
-            <group id="group_canfos" string="Bordures des parcelles" colspan="4">
-                <label name="canfos"/>            
-                <field name="canfos"/>
-                <newline/>
-                <group id="group_can" colspan="4">                    
-                    <label name="nombreFac"/>            
-                    <field name="nombreFac"/>
-                    <label name="eneauCan"/>            
-                    <field name="eneauCan"/>
-                    <label name="niveauminCan"/>            
-                    <field name="niveauminCan"/>
-                    <label name="niveaumaxCan"/>            
-                    <field name="niveaumaxCan"/>
-                    <label name="espaqua"/>            
-                    <field name="espaqua"/>
-                    <label name="atterrissementCan"/>            
-                    <field name="atterrissementCan"/>
-                    <newline/>
-                    <group id="group_ent" colspan="4" col="8">
-                        <label name="entretienCan"/>            
-                        <field name="entretienCan"/>
-                        <label name="typeEnt"/>            
-                        <field name="typeEnt"/>
-                        <label name="periodiciteEnt"/>            
-                        <field name="periodiciteEnt"/>
-                        <label name="periodeEnt"/>            
-                        <field name="periodeEnt"/>
-                    </group>
-                    <newline/>
-                    <group id="group_con" colspan="4" col="6">
-                        <label name="connexionCan"/>            
-                        <field name="connexionCan"/>
-                        <label name="libreCon"/>            
-                        <field name="libreCon"/>
-                        <label name="barrageCon"/>            
-                        <field name="barrageCon" widget="selection"/>
+                        <label name="observationDepression"/>            
+                        <field name="observationDepression" colspan="3"/>
                     </group>
                 </group>
-                <label name="arbhaie"/>            
-                <field name="arbhaie"/>
-                <newline/>
-                <group id="group_arb" colspan="4">
-                    <label name="pourcentArb"/>            
-                    <field name="pourcentArb" widget="selection"/>
-                    <label name="entretienArb"/>            
-                    <field name="entretienArb"/>
-                    <group id="group_tet" colspan="4" col="6">
-                        <label name="tetardsArb"/>            
-                        <field name="tetardsArb"/>
-                        <label name="especeTet"/>            
-                        <field name="especeTet"/>
-                    </group>
-                    <group id="group_arbr" colspan="4" col="6">
-                        <label name="arbreArb"/>            
-                        <field name="arbreArb"/>
-                        <label name="especeIso"/>            
-                        <field name="especeIso"/>
-                    </group>
-                    <group id="group_arbu" colspan="4" col="6">
-                        <label name="arbusteArb"/>            
-                        <field name="arbusteArb"/>
-                        <label name="especeArbu"/>            
-                        <field name="especeArbu"/>
-                    </group>
-                    <group id="group_haie" colspan="4" col="8">
-                        <label name="haieArb"/>            
-                        <field name="haieArb"/>
-                        <label name="especeHaie"/>            
-                        <field name="especeHaie"/>
-                        <label name="lineaireHaie"/>            
-                        <field name="lineaireHaie"/>
-                    </group>
-                </group>
-                <label name="observationCan"/>            
-                <field name="observationCan"/>
-            </group>
-            <!--separator colspan="4"/-->            
-            <group id="group_rigole" colspan="4">
-                <label name="rigole"/>
-                <field name="rigole"/>
-                <newline/>
-                <group id="group_rig" colspan="4">                    
-                    <label name="nombreRig"/>            
-                    <field name="nombreRig"/>
-                    <label name="lineaireRig"/>            
-                    <field name="lineaireRig"/>
-                    <label name="fonctionnelRig"/>            
-                    <field name="fonctionnelRig"/>
-                    <label name="vegetationRig"/>            
-                    <field name="vegetationRig"/>
-                    <label name="observationRig"/>            
-                    <field name="observationRig" colspan="3"/>
-                </group>                
-            </group>
-            <!--separator colspan="4"/-->            
-            <group id="group_jas" colspan="4">
-                <label name="jas"/>
-                <field name="jas"/>
-                <newline/>
-                <group id="group_rig" colspan="4">                    
-                    <label name="nombreJas"/>            
-                    <field name="nombreJas"/>
+                <group id="group_mare" colspan="4">
+                    <label name="mare"/>            
+                    <field name="mare"/>
+                    <label name="nombreMare"/>            
+                    <field name="nombreMare"/>
+                    <label name="surfaceMare"/>            
+                    <field name="surfaceMare"/>
+                    <label name="eneauMare"/>            
+                    <field name="eneauMare"/>
+                    <label name="entretenue"/>            
+                    <field name="entretenue"/>
+                    <newline/>               
+                    <label name="vegetalisee"/>            
+                    <field name="vegetalisee"/>
+                    <label name="vegetaliseeBord"/>            
+                    <field name="vegetaliseeBord"/>
+                    <label name="vegetaliseeMare"/>            
+                    <field name="vegetaliseeMare"/>
                     <newline/>
-                    <label name="observationJas"/>            
-                    <field name="observationJas" colspan="3"/>
+                    <label name="abreuvement"/>            
+                    <field name="abreuvement"/>
+                    <label name="abreuvementDefens"/>            
+                    <field name="abreuvementDefens"/>
+                    <newline/>
+                    <label name="amenagementCyne"/>            
+                    <field name="amenagementCyne"/>
+                    <label name="amenagementFonc"/>            
+                    <field name="amenagementFonc"/>
+                    <newline/>
+                    <label name="interetEcolo"/>            
+                    <field name="interetEcolo"/>
+                    <label name="restauration"/>            
+                    <field name="restauration"/>
+                </group>
+                <group id="group_drainee" colspan="4">
+                    <label name="drainee"/>            
+                    <field name="drainee"/>
+                    <label name="drain"/>            
+                    <field name="drain"/>                    
+                    <label name="fonctionnelDrain"/>            
+                    <field name="fonctionnelDrain"/>
+                    <label name="surfaceDrain"/>            
+                    <field name="surfaceDrain"/>
+                    <label name="atterrissementDrain"/>            
+                    <field name="atterrissementDrain"/>                  
+                </group>
+                <group id="group_canalfosse" colspan="4">
+                    <label name="canalFosse"/>            
+                    <field name="canalFosse"/>
+                    <label name="nombreFace"/>            
+                    <field name="nombreFace"/>                    
+                    <label name="eneauFace"/>            
+                    <field name="eneauFace"/>
+                    <newline/>            
+                    <field name="envahissanteSpecies" colspan="4"/>
+                    <label name="entretienFosse"/>            
+                    <field name="entretienFosse"/>  
+                    <label name="connexionFosse"/>            
+                    <field name="connexionFosse"/>
+                    <label name="boueCurage"/>            
+                    <field name="boueCurage"/>                
+                </group>
+                <group id="group_arbreisolehaie" colspan="4">
+                    <label name="arbreIsoleHaie"/>            
+                    <field name="arbreIsoleHaie"/>
+                    <label name="plantationPropose"/>            
+                    <field name="plantationPropose"/>
+                    <newline/>                  
+                    <label name="arbreIsole"/>            
+                    <field name="arbreIsole"/>
+                    <label name="nombreArbreIsole"/>            
+                    <field name="nombreArbreIsole"/>
+                    <newline/>       
+                    <field name="arbreIsoleSpecies" colspan="4"/>
+                    <label name="tetard"/>            
+                    <field name="tetard"/>
+                    <label name="nombreTetard"/>            
+                    <field name="nombreTetard"/>
+                    <newline/>
+                    <label name="haie"/>            
+                    <field name="haie"/>
+                    <newline/>
+                    <label name="haieArbustive"/>            
+                    <field name="haieArbustive"/> 
+                    <label name="mlHaieArbustive"/>            
+                    <field name="mlHaieArbustive"/>
+                    <label name="haieArboree"/>            
+                    <field name="haieArboree"/>
+                    <label name="mlHaieArboree"/>            
+                    <field name="mlHaieArboree"/>
+                    <label name="haieMultiStrate"/>            
+                    <field name="haieMultiStrate"/>
+                    <label name="mlHaieMultiStrate"/>            
+                    <field name="mlHaieMultiStrate"/>
+                    <newline/>
+                    <label name="alignementArbre"/>            
+                    <field name="alignementArbre"/>
+                    <newline/>
+                    <label name="entretienAlignementArbre"/>            
+                    <field name="entretienAlignementArbre"/>
+                    <label name="especeAlignementArbre"/>            
+                    <field name="especeAlignementArbre"/>
+                    <label name="interetEcoloAlignementArbre"/>            
+                    <field name="interetEcoloAlignementArbre"/> 
+                    <label name="propGestionAlignementArbre"/>            
+                    <field name="propGestionAlignementArbre"/>           
+                </group>
+                <group id="group_roseliere" colspan="4">
+                    <label name="roseliere"/>            
+                    <field name="roseliere"/>
+                    <newline/>
+                    <label name="longFosseCanal"/>            
+                    <field name="longFosseCanal"/>
+                    <label name="mlLongFosseCanal"/>            
+                    <field name="mlLongFosseCanal"/>
+                    <newline/>
+                    <label name="longRigole"/>            
+                    <field name="longRigole"/>
+                    <label name="mlLongRigole"/>            
+                    <field name="mlLongRigole"/>
+                    <newline/>
+                    <label name="autourMare"/>            
+                    <field name="autourMare"/>
+                    <label name="pourcentAutourMare"/>            
+                    <field name="pourcentAutourMare"/>
+                    <newline/>
+                    <label name="enPlein"/>            
+                    <field name="enPlein"/>
+                    <label name="pourcentEnPlein"/>            
+                    <field name="pourcentEnPlein"/>
+                    <newline/>
+                    <label name="propGestionRoseliere"/>            
+                    <field name="propGestionRoseliere"/>                    
+                </group>                                  
+                <group id="group_presence" colspan="4">
+                    <label name="presence"/>            
+                    <field name="presence"/>
+                    <label name="pourcentageOcc"/>            
+                    <field name="pourcentageOcc"/>
+                    <group id="group_occ" colspan="4">                         
+                        <field name="natureOcc" colspan="4"/>
+                    </group>
                 </group>                
-            </group>            
+            </group>
+            <label name="memo" xalign="0"/>
+            <newline/>                            
+            <field name="memo" colspan="4"/>
+            <label name="comment" xalign="0"/>            
+            <newline/>
+            <field name="comment" colspan="4"/>                
         </page>
         <page string="Propositions, échanges, remarques" id="propos" col="2">
             <label name="observationProp" xalign="0" colspan="2"/>
