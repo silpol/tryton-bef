@@ -238,7 +238,7 @@ class Dispositifs(Mapable, ModelSQL, ModelView):
             'dispositif_situation_map_gen': {},
             'dispositif_image_map_gen': {},
             'dispositif_placette_map_gen': {},
-            'generate': {},
+            'dispositif_edit': {},
         })
                
     @classmethod

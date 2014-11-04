@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <form string="Arbre" col="2">
+    <group id="group_ug0" colspan="4" string="Unité de gestion">
+        <label name="idug"/>
+        <field name="idug"/>
+        <label name="equipementug"/>
+        <field name="equipementug"/>
+        <label name="refug"/>
+        <field name="refug"/>
+        <label name="rueug"/>
+        <field name="rueug"/>
+        <label name="debug"/>
+        <field name="debug"/>
+        <label name="finug"/>
+        <field name="finug"/>
+        <label name="communeug"/>
+        <field name="communeug" colspan="3"/>
+    </group>
     <notebook colspan="6">
-        <page string="Général" id="general">
-            <group id="group_ug0" colspan="4" string="Unité de gestion">
-                <label name="idug"/>
-                <field name="idug"/>
-                <label name="equipementug"/>
-                <field name="equipementug"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rueug"/>
-                <field name="rueug"/>
-                <label name="debug"/>
-                <field name="debug"/>
-                <label name="finug"/>
-                <field name="finug"/>
-                <label name="communeug"/>
-                <field name="communeug" colspan="3"/>
-            </group>
+        <page string="Général" id="general">            
             <label name="emplacement"/>
             <field name="emplacement"/>
             <label name="compteur"/>
@@ -41,64 +41,16 @@
             <label name="active"/>
             <field name="active"/>
         </page>
-        <page string="Évolutions" id="evol">
-            <group id="group_ug1" colspan="4" string="Unité de gestion">
-                <label name="idug"/>
-                <field name="idug"/>
-                <label name="equipementug"/>
-                <field name="equipementug"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rueug"/>
-                <field name="rueug"/>
-                <label name="debug"/>
-                <field name="debug"/>
-                <label name="finug"/>
-                <field name="finug"/>
-                <label name="communeug"/>
-                <field name="communeug" colspan="3"/>
-            </group>                            
+        <page string="Évolutions" id="evol">                                        
             <field name="evolution"/>
         </page>
-        <page string="Map" id="map" col="2">
-            <group id="group_ug2" colspan="4" string="Unité de gestion">
-                <label name="idug"/>
-                <field name="idug"/>
-                <label name="equipementug"/>
-                <field name="equipementug"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rueug"/>
-                <field name="rueug"/>
-                <label name="debug"/>
-                <field name="debug"/>
-                <label name="finug"/>
-                <field name="finug"/>
-                <label name="communeug"/>
-                <field name="communeug" colspan="3"/>
-            </group>                         
+        <page string="Map" id="map" col="2">                                   
             <field name="arbre_image" colspan="1" widget="image" img_width="640" img_height="480"/>
             <field name="arbre_map" colspan="1" widget="image" img_width="640" img_height="480"/>
             <button string="Edit" name="arbre_edit" icon="tryton-executable" />
             <button string="Generate" name="generate" icon="tryton-executable" />
         </page>
-        <page string="Photo" id="photo">
-            <group id="group_ug3" colspan="4" string="Unité de gestion">
-                <label name="idug"/>
-                <field name="idug"/>
-                <label name="equipementug"/>
-                <field name="equipementug"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rueug"/>
-                <field name="rueug"/>
-                <label name="debug"/>
-                <field name="debug"/>
-                <label name="finug"/>
-                <field name="finug"/>
-                <label name="communeug"/>
-                <field name="communeug" colspan="3"/>
-            </group>                                                                      
+        <page string="Photo" id="photo">                                                                                  
             <field name="photo" colspan="6" widget="image" img_width="640" img_height="480"/>                                    
         </page>
     </notebook>

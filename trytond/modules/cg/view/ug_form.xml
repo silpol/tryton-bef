@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <form string="Unité de Gestion" col="2">
-    <notebook colspan="6">
-        <page string="General" id="general">
             <group id="group_ug0" colspan="4" string="Unité de gestion">
                 <label name="id"/>
                 <field name="id"/>
@@ -18,6 +16,8 @@
                 <label name="refcom"/>
                 <field name="refcom" colspan="3"/>
             </group>
+    <notebook colspan="6">
+        <page string="General" id="general">            
             <label name="statut"/>
             <field name="statut" widget="selection"/>
             <label name="code"/>
@@ -39,42 +39,10 @@
             <field name="operation" colspan="4" view_ids="cg.cg_operation_view_tree"/>                          
             <field name="commune" colspan="4" view_ids="commune.commune_view_tree"/>                         
         </page>
-        <page string="Stations" id="stations">
-            <group id="group_ug1" colspan="4" string="Unité de gestion">
-                <label name="id"/>
-                <field name="id"/>                           
-                <label name="equipement"/>
-                <field name="equipement"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rue"/>
-                <field name="rue"/>
-                <label name="debut"/>
-                <field name="debut"/>
-                <label name="fin"/>
-                <field name="fin"/>
-                <label name="refcom"/>
-                <field name="refcom" colspan="3"/>
-            </group>
+        <page string="Stations" id="stations">            
             <field name="station"/>
         </page>
-        <page string="Historique" id="historique" col="2">
-            <group id="group_ug2" colspan="4" string="Unité de gestion">
-                <label name="id"/>
-                <field name="id"/>                           
-                <label name="equipement"/>
-                <field name="equipement"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rue"/>
-                <field name="rue"/>
-                <label name="debut"/>
-                <field name="debut"/>
-                <label name="fin"/>
-                <field name="fin"/>
-                <label name="refcom"/>
-                <field name="refcom" colspan="3"/>
-            </group>
+        <page string="Historique" id="historique" col="2">            
             <field name="acequipement" colspan="2"/>
             <group string="Anciennes UG" id="group_acug" col="2">
                 <label name="acug95"/>
@@ -85,23 +53,7 @@
                 <field name="acug09"/>
             </group>
         </page>
-        <page string="Map" id="map" col="2">
-            <group id="group_ug3" colspan="4" string="Unité de gestion">
-                <label name="id"/>
-                <field name="id"/>                           
-                <label name="equipement"/>
-                <field name="equipement"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rue"/>
-                <field name="rue"/>
-                <label name="debut"/>
-                <field name="debut"/>
-                <label name="fin"/>
-                <field name="fin"/>
-                <label name="refcom"/>
-                <field name="refcom" colspan="3"/>
-            </group>
+        <page string="Map" id="map" col="2">            
             <field name="ug_image" colspan="1" widget="image" img_width="640" img_height="480"/>
             <field name="ug_map" colspan="1" widget="image" img_width="640" img_height="480"/>
             <button string="Edit" name="ug_edit" icon="tryton-executable" />
