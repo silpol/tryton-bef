@@ -15,15 +15,17 @@
         <field name="finug"/>
         <label name="communeug"/>
         <field name="communeug" colspan="3"/>
+        <label name="idstation"/>
+        <field name="idstation"/>
+        <label name="station"/>
+        <field name="station"/>
+        <label name="id"/>
+        <field name="id"/>
+        <label name="code"/>
+        <field name="code"/>         
     </group>
     <notebook colspan="6">
-        <page string="Général" id="general">            
-            <label name="id"/>
-            <field name="id"/>
-            <label name="code"/>
-            <field name="code"/> 
-            <label name="station"/>
-            <field name="station"/>                       
+        <page string="Général" id="general">                                               
             <label name="coteoppose"/>
             <field name="coteoppose"/>
             <label name="active"/>

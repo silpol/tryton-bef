@@ -85,6 +85,11 @@ def save_rdata(ids, model_name, filename):
     add_to_map( set(ids), model_name, list_map ) 
 
     df = {}
+
+    tmpdir = os.path.dirname(filename)
+    imagedir = tmpdir + "/images"
+    os.mkdir(imagedir)
+
     for mod_name, id_list in list_map.iteritems():
         model = Pool().get(mod_name)
         records = model.search([('id', 'in', list(id_list))])
@@ -93,6 +98,15 @@ def save_rdata(ids, model_name, filename):
                            if  ttype._type in py2r]
         df[mod_name] = dataframe(records, fields_info)
         print "saving in Rdata: ", mod_name, list(id_list)
+        """ save images """        
+        for name,ttype in model._fields.iteritems():
+            if ttype._type == "binary" and name[-4:] == "_map":
+                for record in records:
+                    value = getattr(record, name)
+                    imgpath = os.path.join(imagedir, (str(record)+'_'+name).replace(',','_').replace('.','_')+'.png')
+                    print "SAVING ", imgpath
+                    imgfile = open(imgpath,'wb')
+                    imgfile.write(value)        
 
     for mod_name, dfr in df.iteritems(): 
         robjects.r.assign(mod_name, dfr)

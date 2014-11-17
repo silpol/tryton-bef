@@ -647,8 +647,8 @@ class station(Mapable, ModelSQL, ModelView):
         )
     idug = fields.Function(
                     fields.Char(
-                        string = u'Identifiant UG',
-                        help=u'Identifiant UG'
+                        string = u'ID UG',
+                        help=u'ID UG'
                     ),
             '_get_idug'
         )
@@ -1010,16 +1010,28 @@ class emplacement(Mapable, ModelSQL, ModelView):
     station = fields.Many2One(
             'cg.station',
             ondelete='CASCADE',
-            string=u'Station',
-            help=u'Station',
+            string=u'Code Station',
+            help=u'Code de la station',
             required = True,
             states=STATES,
             depends=DEPENDS,
         )
+    idstation = fields.Function(
+                    fields.Char(
+                        string = u'ID station',
+                        help=u'Identifiant de la station'
+                    ),
+            '_get_idstation'
+        )
+
+    def _get_idstation(self, ids):
+        u'ID station'       
+        return '%s' % (str(self.station.id))
+
     idug = fields.Function(
                     fields.Char(
-                        string = u'Identifiant UG',
-                        help=u'Identifiant UG'
+                        string = u'ID UG',
+                        help=u'ID UG'
                     ),
             '_get_idug'
         )
@@ -1493,8 +1505,8 @@ class arbre(Mapable, ModelSQL, ModelView):
         )
     idug = fields.Function(
                     fields.Char(
-                        string = u'Identifiant UG',
-                        help=u'Identifiant UG'
+                        string = u'ID UG',
+                        help=u'ID UG'
                     ),
             '_get_idug'
         )

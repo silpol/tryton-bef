@@ -2125,10 +2125,9 @@ msgctxt "help:cg.emplacement,rueug:"
 msgid "Nom de la rue"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.emplacement,station:"
 msgid "Station"
-msgstr "Station"
+msgstr "Code station"
 
 msgctxt "help:cg.equipement,active:"
 msgid "Équipement présent dans les listes déroulantes"

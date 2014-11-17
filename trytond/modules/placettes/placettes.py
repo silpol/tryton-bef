@@ -144,6 +144,10 @@ class Placettes(Mapable, ModelSQL, ModelView):
             ('disp_num_uniq', 'UNIQUE(pla_dispositif, pla_num)',
               u'There can not be two plots with an identical number in a device.'),
         ]
+        cls._buttons.update({
+                    'placettes_edit': {},
+                    'generate': {},
+                })        
 
     pla_dispositif = fields.Many2One(
             'dispositif.dispositif',
@@ -232,14 +236,6 @@ class Placettes(Mapable, ModelSQL, ModelView):
     def default_date():
         Date = Pool().get('ir.date')
         return Date.today()
-
-    @classmethod
-    def __setup__(cls):
-        super(Placettes, cls).__setup__()
-        cls._buttons.update({
-            'placettes_edit': {},
-            'generate': {},
-        })
 
     @classmethod
     @ModelView.button_action('placettes.report_placettes_edit')
