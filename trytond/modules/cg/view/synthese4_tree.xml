@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="Liste des unités de gestion plantée par essence">
+    <field name="essence"/>
+    <field name="ug" tree_invisible="1"/>
+    <field name="codeug"/>                     
+    <field name="equipement"/> 
+    <field name="quantite"/>
+</tree>

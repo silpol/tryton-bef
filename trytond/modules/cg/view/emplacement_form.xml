@@ -32,6 +32,8 @@
             <field name="active"/>
             <label name="numpostprec"/>
             <field name="numpostprec"/>
+            <label name="repere"/>
+            <field name="repere"/>
         </page>
         <page string="Évolutions" id="evol">                                     
             <field name="evolution"/>

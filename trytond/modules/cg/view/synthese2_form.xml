@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Synthèse du patrimoine départemental par commune par gestionnaire">    
+    <label name="commune"/>
+    <field name="commune"/>
+    <label name="gestionnaire"/>
+    <field name="gestionnaire" widget="selection"/>
+</form>

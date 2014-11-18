@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="Synthèse du patrimoine départemental géré par gestionnaire par essence">
+    <label name="gestionnaire"/>
+    <field name="gestionnaire" widget="selection"/>
+</form>

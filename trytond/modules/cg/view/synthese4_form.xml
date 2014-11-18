@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="Liste des unités de gestion plantée par essence">
+    <label name="essence"/>
+    <field name="essence" widget="selection"/>
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Synthèse du patrimoine départemental par commune par gestionnaire">
+    <field name="commune"/>
+    <field name="gestionnaire"/>
+    <field name="conduite"/>                     
+    <field name="quantite"/>
+</tree>

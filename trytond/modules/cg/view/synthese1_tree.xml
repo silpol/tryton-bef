@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Synthèse du patrimoine départemental recensé par commune">
+    <field name="commune"/>
+    <field name="conduite"/>                     
+    <field name="quantite"/>
+</tree>

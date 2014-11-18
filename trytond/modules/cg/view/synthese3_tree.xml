@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Synthèse du patrimoine départemental géré par gestionnaire par essence">
+    <field name="essence"/>
+    <field name="gestionnaire"/>
+    <field name="conduite"/>                     
+    <field name="quantite"/>
+</tree>

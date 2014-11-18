@@ -3,7 +3,8 @@
     <field name="id" />
     <field name="station" />
     <field name="code" />
-    <field name="numpostprec" />
+    <field name="numpostprec" />          
+    <field name="repere"/>
     <field name="coteoppose" />              
     <field name="evolution" />
     <field name="arbre" />                    

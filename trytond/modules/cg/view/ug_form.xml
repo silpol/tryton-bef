@@ -1,21 +1,24 @@
 <?xml version="1.0"?>
 <form string="Unité de Gestion" col="2">
-            <group id="group_ug0" colspan="4" string="Unité de gestion">
-                <label name="id"/>
-                <field name="id"/>
-                <label name="equipement"/>
-                <field name="equipement"/>
-                <label name="refug"/>
-                <field name="refug"/>
-                <label name="rue"/>
-                <field name="rue"/>
-                <label name="debut"/>
-                <field name="debut"/>
-                <label name="fin"/>
-                <field name="fin"/>
-                <label name="refcom"/>
-                <field name="refcom" colspan="3"/>
-            </group>
+    <group id="group_ug0" colspan="4" string="Unité de gestion">
+        <label name="id"/>
+        <field name="id"/>
+        <label name="equipement"/>
+        <field name="equipement"/>
+        <label name="refug"/>
+        <field name="refug"/>
+        <label name="acrefug"/>
+        <field name="acrefug"/>
+        <label name="rue"/>
+        <field name="rue"/>
+        <label name="debut"/>
+        <field name="debut"/>
+        <label name="fin"/>
+        <field name="fin"/>
+        <newline/>
+        <label name="refcom"/>
+        <field name="refcom" colspan="3"/>
+    </group>
     <notebook colspan="6">
         <page string="General" id="general">            
             <label name="statut"/>

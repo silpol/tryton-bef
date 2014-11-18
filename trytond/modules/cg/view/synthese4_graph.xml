@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<graph string="Liste des unités de gestion plantée par essence" type="pie">
+    <x>
+        <field name="codeug" />
+    </x>
+    <y>
+        <field name="quantite" />
+    </y>
+</graph>

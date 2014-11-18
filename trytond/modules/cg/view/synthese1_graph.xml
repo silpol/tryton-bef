@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<graph string="Synthèse du patrimoine départemental recensé par commune" type="vbar">
+    <x>
+        <field name="canton" />
+    </x>
+    <y>
+        <field name="quantite" key="1" domain="Equal(Eval('conduite'), 'archi')" color="#ccff00" string="Rideau"/>
+        <field name="quantite" key="2" domain="Equal(Eval('conduite'), 'libre')" color="#ddaa00" string="Libre"/>
+    </y>
+</graph>

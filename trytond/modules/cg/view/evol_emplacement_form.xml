@@ -4,8 +4,6 @@
         <page string="Général" id="general">                           
             <label name="date"/>
             <field name="date"/>
-            <label name="repere"/>
-            <field name="repere"/>
             <label name="nature"/>
             <field name="nature" widget="selection"/>                            
             <label name="diametre"/>
@@ -13,10 +11,7 @@
             <label name="cause"/>
             <field name="cause" widget="selection"/>
             <label name="anindispo"/>
-            <field name="anindispo"/>
-            <newline/>
-            <label name="observation"/>
-            <field name="observation" colspan="4"/>                        
+            <field name="anindispo"/>                    
         </page>
     </notebook>
 </form>

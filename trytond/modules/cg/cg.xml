@@ -15,19 +15,17 @@
         <menuitem name="Planification travaux" id="menu_cg_travaux" icon="tryton-travaux"/>
         <menuitem parent="menu_cg_admin" sequence="0" name="Configuration" id="menu_cg_equipement_configuration" icon="tryton-preferences"/>
 
-        
+        <!-- Taxinomie -->        
         <record model="ir.ui.view" id="cg_taxinomie_view_form">
             <field name="model">taxinomie.taxinomie</field>
             <field name="inherit" ref="taxinomie.taxinomie_view_form" />       
-            <field name="name">taxinomie_form</field>
+            <field name="name">cg_taxinomie_form</field>
         </record>
-
         <record model="ir.ui.view" id="cg_taxinomie_view_tree">
             <field name="model">taxinomie.taxinomie</field>
-            <field name="type">tree</field>
+            <field name="inherit" ref="taxinomie.taxinomie_view_tree" />
             <field name="name">cg_taxinomie_tree</field>
         </record>
-
         <record model="ir.action.act_window" id="act_cg_taxinomie_form">
             <field name="name">Taxinomie</field>
             <field name="res_model">taxinomie.taxinomie</field>
@@ -43,6 +41,7 @@
             <field name="act_window" ref="act_cg_taxinomie_form"/>
         </record>
 
+        <!-- Commune -->
         <record model="ir.ui.view" id="cg_commune_view_form">
             <field name="model">commune.commune</field>
             <field name="inherit" ref="commune.commune_view_form" />       
@@ -784,7 +783,7 @@
         </record> 
 
         <record model="ir.action.act_window" id="act_note_form">
-            <field name="name">Note de Défiance Sanitaire des arbres</field>
+            <field name="name">Note de Déficience Sanitaire des arbres</field>
             <field name="res_model">cg.note</field>
         </record>
         <record model="ir.action.act_window.view"

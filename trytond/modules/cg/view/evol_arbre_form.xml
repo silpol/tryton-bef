@@ -44,6 +44,9 @@
             <field name="arbre"/>
             <label name="station"/>
             <field name="station"/>
+            <newline/>
+            <label name="observation"/>
+            <field name="observation" colspan="3"/>
         </page>
         <page string="Photo" id="photo">                                                                      
             <field name="photo" colspan="6" widget="image" img_width="640" img_height="480"/>                                    

@@ -2,8 +2,6 @@
 <form string="Équipement" col="2">
     <notebook colspan="6">
         <page string="General" id="general">
-            <label name="id"/>
-            <field name="id"/>
             <label name="code"/>
             <field name="code"/>
             <label name="name"/>

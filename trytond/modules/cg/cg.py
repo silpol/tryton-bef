@@ -52,26 +52,25 @@ STATES = {
 DEPENDS = ['active']
 
 _DOMAINES = [
+    (None, u''),
     ('public', u'Public'),
     ('prive', u'Privé'),
 ]
 
-_DOMANIAL = [
-    ('DEPARTEMENTALE', u'Domaine départemental'),
-    ('AUTRE', u'Autre'),        
-]
-
 _SITUATIONS = [
+    (None, u''),
     ('solitaire', u'Solitaire'),
     ('groupe', u'Groupe'),
 ]
 
 _FOSSES = [
+    (None, u''),
     ('terre', u'Terre/Pierre'),
     ('dalle', u'Dalle de répartition'),
 ]
 
 _MECANIQUES = [
+    (None, u''),
     ('1', u'1 - Aucun défaut'),
     ('2', u'2 - Défaut mineur'),
     ('3', u'3 - Défaut limité'),
@@ -80,6 +79,7 @@ _MECANIQUES = [
 ]
 
 _VIGUEURS = [
+    (None, u''),
     ('1', u'1 - Très bonne'),
     ('2', u'2 - Bonne'),
     ('3', u'3 - Moyenne'),
@@ -88,11 +88,13 @@ _VIGUEURS = [
 ]
 
 _CONDUITES = [
+    (None, u''),
     ('libre', u'Libre'),
     ('archi', u'Architecturé'),
 ]
 
 _PAYSAGER = [
+    (None, u''),
     ('1', u'1 - Remarquable'),
     ('2', u'2 - Beau sujet'),
     ('3', u'3 - Âgé ou malformé'),
@@ -100,12 +102,14 @@ _PAYSAGER = [
 ]
 
 _HAUTEURS = [
+    (None, u''),
     ('1', u'1 - hauteur totale < 10m'),
     ('2', u'2 - 10m <= hauteur totale < 20m'),
     ('3', u'3 - hauteur totale >= 20 m'),
 ]
 
 _ENVIRONNEMENTS = [
+    (None, u''),
     ('1', u'1 - Banquette stabilisée'),
     ('2', u'2 - Banquette engazonnée'),
     ('3', u'3 - Banquette enrobée'),
@@ -318,6 +322,12 @@ class ug(Mapable, ModelSQL, ModelView):
             help=u'Statut de la voirie',
             readonly=False,
         )
+    acrefug = fields.Char(
+            string = u'Anc. Référence UG',
+            help=u'Ancienne Référence UG',
+            states=STATES,
+            depends=DEPENDS,
+        )
     refug = fields.Function(
                     fields.Char(
                         string = u'Référence UG',
@@ -438,7 +448,7 @@ class ug(Mapable, ModelSQL, ModelView):
         u'communes UG'
         res = ''
         for com in self.commune:
-            res = com.name + ", " + res
+            res = com.lb_court + ", " + res
         return res[:-2]
 
     refug = fields.Function(
@@ -781,8 +791,8 @@ class station(Mapable, ModelSQL, ModelView):
         )       
     commune = fields.Many2One(
             'commune.commune',
-            string=u'Communes',
-            help=u'Communes de localisation de la station',
+            string=u'Commune',
+            help=u'Commune de localisation de la station',
             required=False,
             states=STATES,
             depends=DEPENDS,
@@ -987,16 +997,7 @@ class evol_emplacement(ModelSQL, ModelView):
 
     def on_change_with_anindispo(self):
         if self.cause is None:
-            return 2014
- 
-    repere = fields.Char(
-            string = u'Repère',            
-            help=u'Repère',
-        )
-    observation = fields.Text(
-            string = u'Observations',
-            help=u'Observations',
-        )                
+            return 2014              
             
     @staticmethod
     def default_active():
@@ -1133,7 +1134,11 @@ class emplacement(Mapable, ModelSQL, ModelView):
             help=u'Numéro postal précis',
             states=STATES,
             depends=DEPENDS
-        )        
+        )
+    repere = fields.Char(
+            string = u'Repère',            
+            help=u'Repère',
+        )
     coteoppose = fields.Boolean(             
             string = u'Côté opposé',
             help=u'Côté opposé',            
@@ -1385,7 +1390,11 @@ class evol_arbre(ModelSQL, ModelView):
             string=u'Bilan',
             help=u'Bilan de l\'arbre',
             on_change_with=['vigueur', 'mecanique'],
-        )    
+        )
+    observation = fields.Text(
+                string=u'Observations',
+                help=u'Observations',
+            )   
     photo = fields.Binary('Photo')           
             
     @staticmethod
@@ -1488,6 +1497,9 @@ class commune:
             string=u'Fin de mandat',
             help=u'Date de fin de mandat',
         )
+
+    def get_rec_name(self, code):
+        return '%s - (%s)' % (self.lb_court, self.canton)
         
 class arbre(Mapable, ModelSQL, ModelView):
     u'Arbres'
@@ -1598,7 +1610,7 @@ class arbre(Mapable, ModelSQL, ModelView):
             help=u'Compteur arbre : indique combien d\'arbres ont été planté successivement sur cet emplacement',
             required = True,
             states=STATES,
-            depends=DEPENDS,            
+            depends=DEPENDS,         
         )
 
     @staticmethod
@@ -1623,7 +1635,7 @@ class arbre(Mapable, ModelSQL, ModelView):
             'cg.plantation',
             ondelete='CASCADE',
             string=u'MO Plantation',
-            help=u'Modalité de plantation',
+            help=u'Maîtrise d\'oeuvre plantation',
             states=STATES,
             depends=DEPENDS,
         )        
