@@ -1,12 +1,17 @@
 <?xml version="1.0"?>
 <tree string="Station">
-    <field name="id" />
-    <field name="ug" />
-    <field name="code" />
-    <field name="proprietaire" />
-    <field name="domaine" />
-    <field name="gestionnaire" />                    
-    <field name="distance" />                  
-    <field name="commune" /> 
-    <field name="emplacement" />                                                        
+    <field name="code"/>
+    <field name="id"/>
+    <field name="commune"/>
+    <field name="nameug"/>
+    <field name="refug" />
+    <field name="rueug"/>
+    <field name="debug"/>
+    <field name="finug"/>
+    <field name="gestionnaire"/> 
+    <field name="proprietaire"/>
+    <field name="domaine"/>
+    <field name="emplacement"/>
+    <field name="arbre"/>
+    <field name="ug" tree_invisible="1"/>
 </tree>

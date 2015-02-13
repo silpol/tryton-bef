@@ -33,14 +33,27 @@ from trytond.transaction import Transaction
 __all__ = ['Party']
 __metaclass__ = PoolMeta
 
-
 class Party:
     __name__ = 'party.party'
     _rec_name = 'name'
 
     # The 1 in the states parameter represents the "Owner" category
-    pefc = fields.One2Many('pefc.pefc', 'party', 'PEFC certifications',
-                           states={'readonly': ~In(1, Eval('categories', []))}, depends=['categories'])
+    pefc = fields.One2Many(
+            'pefc.pefc',
+            'party',
+            string=u'PEFC certifications',
+            states={'readonly': ~In(1, Eval('categories', [])), 'invisible': ~In(1, Eval('categories', []))},
+            depends=['categories'],
+         )
+
+    # The 1 in the states parameter represents the "Owner" category
+    ggd = fields.One2Many(
+            'ggd.ggd',
+            'party',
+            string=u'GGD garanties',
+            states={'readonly': ~In(1, Eval('categories', [])), 'invisible': ~In(1, Eval('categories', []))},
+            depends=['categories'],
+        )
 
     @staticmethod
     def notify_expiration():
@@ -88,3 +101,50 @@ class Party:
                     server.sendmail(sender, [recipient], msg.as_string())
                     server.quit()
                     logging.debug('Sent PEFC notification mail about %s to %s', pefc.party.name, recipient)
+
+    @staticmethod
+    def notify_ggd_expiration():
+        logging.debug('Checking GGD garanty for notification')
+        pool = Pool()
+        Lang = pool.get('ir.lang')
+        GGD = pool.get('ggd.ggd')
+        ggds = GGD.search([
+            ('enabled', '=', True),
+        ])
+
+        GGDNotifyRecipient = Pool().get('ggd.ggd_notify_recipient')
+
+        for ggd in ggds:
+            month = timedelta(days=30)
+            expiration = ggd.date + (ggd.duration * month)
+            if (expiration - month) != date.today() and \
+                    (expiration - (12 * month)) != date.today():
+                continue
+
+            months = (expiration - date.today()).days / 30
+
+            for notif in GGDNotifyRecipient.search([('sender', '!=', None)]):
+                lang = notif.recipient.lang
+                if not lang:
+                    lang, = Lang.search([('code', '=', 'en_US')], limit=1)
+
+                args = {
+                    'company': pefc.party.name,
+                    'months': months,
+                }
+
+                with Transaction().set_context(language=lang.code):
+                    subject = notif.msg_subject % args
+                    content = notif.msg_content % args
+                    sender = notif.sender.email
+                    recipient = notif.recipient.email
+                    msg = Message()
+                    msg.set_payload(content, 'utf-8')
+                    msg.add_header('To', recipient)
+                    msg.add_header('From', sender)
+                    msg.add_header('Subject', subject)
+
+                    server = get_smtp_server()
+                    server.sendmail(sender, [recipient], msg.as_string())
+                    server.quit()
+                    logging.debug('Sent GGD notification mail about %s to %s', ggd.party.name, recipient)

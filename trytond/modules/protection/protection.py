@@ -29,6 +29,7 @@ import os
 from osgeo import osr
 
 from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
+from trytond.wizard import Wizard, StateView, StateAction, Button, StateTransition
 from trytond.pyson import Bool, Eval, Not
 from trytond.pool import PoolMeta, Pool
 
@@ -125,11 +126,11 @@ class Area(Mapable, ModelSQL, ModelView):
     def _get_url(self, ids):
         base = "http://inpn.mnhn.fr/"
         domain = ""
-        if self.typo == u"Espace protégé":
+        if self.typo == u"Espaces protégés":
             domain = "espace/protege/"
         elif self.typo == "Natura 2000":
             domain = "site/natura2000/"
-        elif self.typo == "ZNIEFF":
+        elif self.typo == "ZNIEFF / ZICO":
             domain = "zone/znieff/"
         return "%s%s%s"%(base, domain, self.id_mnhn)
 
@@ -269,10 +270,10 @@ class ReserveBiologique(Mapable, ModelSQL, ModelView):
         return 'D'
 
     rb_image = fields.Function(
-                    fields.Binary(
-                            string=u'Image',
-                            help=u'Image'
-                        ),
+                fields.Binary(
+                        string=u'Image',
+                        help=u'Image'
+                    ),
             'get_image'
         )
     rb_map = fields.Binary(
@@ -373,10 +374,10 @@ class Zico(Mapable, ModelSQL, ModelView):
         )
 
     zico_image = fields.Function(
-                    fields.Binary(
-                            string=u'Image',
-                            help=u'Image'
-                        ),
+            fields.Binary(
+                    string=u'Image',
+                    help=u'Image'
+                ),
             'get_image'
         )
     zico_map = fields.Binary(
@@ -418,3 +419,16 @@ class Zico(Mapable, ModelSQL, ModelView):
 class ZicoQGis(QGis):
     __name__ = 'protection.zico.qgis'
     TITLES = {'protection.zico': u'ZICO'}
+
+class GenerateAll(Wizard):
+    __name__ = 'protection.generateall'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('protection.area')
+        records = model.browse(Transaction().context.get('active_ids'))
+        #records = model.search([])
+        for record in records:
+            print record
+            record.generate([record])
+        return []

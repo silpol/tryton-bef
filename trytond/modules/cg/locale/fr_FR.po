@@ -1,16 +1,15 @@
-#
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_FR\n"
 "X-Generator: Poedit 1.5.4\n"
+"Language: fr_FR\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 msgctxt "error:cg.travaux:"
@@ -81,21 +80,16 @@ msgstr "Active"
 
 msgctxt "field:cg.arbre,an:"
 msgid "Année"
-msgstr "Année"
-
-msgctxt "field:cg.arbre,arbre_image:"
-msgid "Image"
-msgstr ""
+msgstr "An"
 
 msgctxt "field:cg.arbre,arbre_map:"
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 msgctxt "field:cg.arbre,code:"
 msgid "ID Arbre"
 msgstr "ID Arbre"
 
-#, fuzzy
 msgctxt "field:cg.arbre,communeug:"
 msgid "Communes"
 msgstr "Communes"
@@ -116,25 +110,22 @@ msgctxt "field:cg.arbre,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-#, fuzzy
 msgctxt "field:cg.arbre,date:"
 msgid "Date de suppression"
-msgstr "Date"
+msgstr "Date de suppression"
 
 msgctxt "field:cg.arbre,debug:"
 msgid "Début de tronçon"
-msgstr ""
+msgstr "Début de tronçon"
 
-#, fuzzy
 msgctxt "field:cg.arbre,diametre:"
 msgid "Diamètre plantation"
-msgstr "Diamètre"
+msgstr "Diamètre plantation"
 
 msgctxt "field:cg.arbre,emplacement:"
 msgid "Emplacement"
 msgstr "Emplacement"
 
-#, fuzzy
 msgctxt "field:cg.arbre,equipementug:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -149,7 +140,7 @@ msgstr "Évolutions"
 
 msgctxt "field:cg.arbre,finug:"
 msgid "Fin de tronçon"
-msgstr ""
+msgstr "Fin de tronçon"
 
 msgctxt "field:cg.arbre,fosse:"
 msgid "Fosse"
@@ -161,20 +152,23 @@ msgstr "Géométrie"
 
 msgctxt "field:cg.arbre,id:"
 msgid "ID"
-msgstr "Identifiant"
+msgstr "ID Arbre"
 
 msgctxt "field:cg.arbre,idug:"
-msgid "Identifiant UG"
+msgid "ID UG"
+msgstr ""
+
+msgctxt "field:cg.arbre,motifsuppression:"
+msgid "Motif de suppression"
 msgstr ""
 
 msgctxt "field:cg.arbre,photo:"
 msgid "Photo"
 msgstr "Photo"
 
-#, fuzzy
 msgctxt "field:cg.arbre,plantation:"
 msgid "MO Plantation"
-msgstr "Plantation"
+msgstr "MO Plantation"
 
 msgctxt "field:cg.arbre,rec_name:"
 msgid "Name"
@@ -276,17 +270,14 @@ msgctxt "field:cg.cause,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.check_arbre.open.start,description:"
 msgid "Description"
 msgstr "Description"
 
-#, fuzzy
 msgctxt "field:cg.check_arbre.open.start,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-#, fuzzy
 msgctxt "field:cg.check_arbre.open.start,typetravaux:"
 msgid "Travaux"
 msgstr "Travaux"
@@ -299,17 +290,14 @@ msgctxt "field:cg.check_arbre.result,arbres_succeed:"
 msgid "Arbres - Première préconisation"
 msgstr "Arbres - Première préconisation"
 
-#, fuzzy
 msgctxt "field:cg.check_arbre.result,description:"
 msgid "Description"
 msgstr "Description"
 
-#, fuzzy
 msgctxt "field:cg.check_arbre.result,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-#, fuzzy
 msgctxt "field:cg.check_arbre.result,typetravaux:"
 msgid "Travaux"
 msgstr "Travaux"
@@ -318,17 +306,14 @@ msgctxt "field:cg.diametre,code:"
 msgid "Code diamètre"
 msgstr "Code diamètre"
 
-#, fuzzy
 msgctxt "field:cg.diametre,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.diametre,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-#, fuzzy
 msgctxt "field:cg.diametre,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -341,17 +326,14 @@ msgctxt "field:cg.diametre,name:"
 msgid "Libellé court du diamètre"
 msgstr "Libellé court du diamètre"
 
-#, fuzzy
 msgctxt "field:cg.diametre,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.diametre,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.diametre,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
@@ -360,17 +342,14 @@ msgctxt "field:cg.domanialite,code:"
 msgid "Code domanialité"
 msgstr "Code domanialité"
 
-#, fuzzy
 msgctxt "field:cg.domanialite,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.domanialite,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-#, fuzzy
 msgctxt "field:cg.domanialite,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -383,17 +362,14 @@ msgctxt "field:cg.domanialite,name:"
 msgid "Libellé court domanialité"
 msgstr "Libellé court domanialité"
 
-#, fuzzy
 msgctxt "field:cg.domanialite,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.domanialite,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.domanialite,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
@@ -442,11 +418,102 @@ msgctxt "field:cg.emplacement,arbre:"
 msgid "Arbres"
 msgstr "Arbres"
 
+msgctxt "field:cg.emplacement,arbrearrosage:"
+msgid "Arrosage automatique"
+msgstr "Arrosage automatique"
+
+msgctxt "field:cg.emplacement,arbrebilan:"
+msgid "Bilan"
+msgstr "Bilan"
+
+msgctxt "field:cg.emplacement,arbreconduite:"
+msgid "Conduite"
+msgstr "Conduite"
+
+msgctxt "field:cg.emplacement,arbredate:"
+msgid "Date"
+msgstr "Date MAJ"
+
+msgctxt "field:cg.emplacement,arbredatesuppression:"
+msgid "Date de suppression"
+msgstr "Date de suppression"
+
+msgctxt "field:cg.emplacement,arbrediamhoup:"
+msgid "Diamètre houppier"
+msgstr "Diamètre houppier"
+
+msgctxt "field:cg.emplacement,arbrediamtronc:"
+msgid "Diamètre tronc"
+msgstr "Diamètre tronc"
+
+msgctxt "field:cg.emplacement,arbreempmat:"
+msgid "Emplacement mat."
+msgstr "Emplacement mat."
+
+msgctxt "field:cg.emplacement,arbreenvironnement:"
+msgid "Environnement"
+msgstr "Environnement"
+
+msgctxt "field:cg.emplacement,arbreessence:"
+msgid "Essence"
+msgstr "Essence"
+
+msgctxt "field:cg.emplacement,arbregrille:"
+msgid "Grille"
+msgstr "Grille"
+
+msgctxt "field:cg.emplacement,arbrehfut:"
+msgid "Hauteur fût"
+msgstr "Hauteur fût"
+
+msgctxt "field:cg.emplacement,arbreht:"
+msgid "Hauteur arbre"
+msgstr "Hauteur arbre"
+
+msgctxt "field:cg.emplacement,arbreid:"
+msgid "Arbre ID"
+msgstr "ID Arbre"
+
+msgctxt "field:cg.emplacement,arbrelarghoupriv:"
+msgid "Largeur Houppier Riverain"
+msgstr "Largeur Houppier Riverain"
+
+msgctxt "field:cg.emplacement,arbrelarghoupvoie:"
+msgid "Largeur Houppier Voie"
+msgstr "Largeur Houppier Voie"
+
+msgctxt "field:cg.emplacement,arbrelignelec:"
+msgid "Ligne électrique"
+msgstr "Ligne électrique"
+
+msgctxt "field:cg.emplacement,arbremecanique:"
+msgid "État mécanique"
+msgstr "État mécanique"
+
+msgctxt "field:cg.emplacement,arbremotifsuppression:"
+msgid "Motif de suppression"
+msgstr ""
+
+msgctxt "field:cg.emplacement,arbrepaysager:"
+msgid "Impact paysager"
+msgstr "Impact paysager"
+
+msgctxt "field:cg.emplacement,arbresonde:"
+msgid "Tensio"
+msgstr "Tensio"
+
+msgctxt "field:cg.emplacement,arbresurfacepiedarbre:"
+msgid "Surface pied"
+msgstr "Surface pied"
+
+msgctxt "field:cg.emplacement,arbrevigueur:"
+msgid "Vigueur"
+msgstr "Vigueur"
+
 msgctxt "field:cg.emplacement,code:"
 msgid "Code emplacement"
 msgstr "Code emplacement"
 
-#, fuzzy
 msgctxt "field:cg.emplacement,communeug:"
 msgid "Communes"
 msgstr "Communes"
@@ -475,14 +542,21 @@ msgctxt "field:cg.emplacement,emplacement_map:"
 msgid "Image"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.emplacement,equipementug:"
 msgid "Équipement"
 msgstr "Équipement"
 
+msgctxt "field:cg.emplacement,evocause:"
+msgid "Cause"
+msgstr "Cause"
+
 msgctxt "field:cg.emplacement,evolution:"
 msgid "Évolutions"
 msgstr "Évolutions"
+
+msgctxt "field:cg.emplacement,evonature:"
+msgid "Nature"
+msgstr "Nature"
 
 msgctxt "field:cg.emplacement,finug:"
 msgid "Fin de tronçon"
@@ -494,10 +568,14 @@ msgstr "Géométrie"
 
 msgctxt "field:cg.emplacement,id:"
 msgid "ID"
-msgstr "Identifiant"
+msgstr "ID Emplacement"
+
+msgctxt "field:cg.emplacement,idstation:"
+msgid "ID station"
+msgstr ""
 
 msgctxt "field:cg.emplacement,idug:"
-msgid "Identifiant UG"
+msgid "ID UG"
 msgstr ""
 
 msgctxt "field:cg.emplacement,numpostprec:"
@@ -512,13 +590,17 @@ msgctxt "field:cg.emplacement,refug:"
 msgid "Référence UG"
 msgstr ""
 
+msgctxt "field:cg.emplacement,repere:"
+msgid "Repère"
+msgstr ""
+
 msgctxt "field:cg.emplacement,rueug:"
 msgid "Nom de la rue"
 msgstr ""
 
 msgctxt "field:cg.emplacement,station:"
-msgid "Station"
-msgstr "Station"
+msgid "Code Station"
+msgstr "Code Station"
 
 msgctxt "field:cg.emplacement,write_date:"
 msgid "Write Date"
@@ -536,7 +618,6 @@ msgctxt "field:cg.equipement,code:"
 msgid "Code équipement"
 msgstr "Code équipement"
 
-#, fuzzy
 msgctxt "field:cg.equipement,coder:"
 msgid "Code route"
 msgstr "Code de la route"
@@ -551,7 +632,7 @@ msgstr "Créé par"
 
 msgctxt "field:cg.equipement,id:"
 msgid "ID"
-msgstr "Identifiant"
+msgstr "ID Équipement"
 
 msgctxt "field:cg.equipement,name:"
 msgid "Nom de la route"
@@ -599,7 +680,7 @@ msgstr "Créé par"
 
 msgctxt "field:cg.evol_arbre,date:"
 msgid "Date"
-msgstr "Date"
+msgstr "Date MAJ"
 
 msgctxt "field:cg.evol_arbre,diamhoup:"
 msgid "Diamètre houppier"
@@ -609,19 +690,17 @@ msgctxt "field:cg.evol_arbre,diamtronc:"
 msgid "Diamètre tronc"
 msgstr "Diamètre tronc"
 
-#, fuzzy
 msgctxt "field:cg.evol_arbre,empmat:"
 msgid "Emplacement mat."
-msgstr "Emplacement matérialisé"
+msgstr "Emplacement mat."
 
 msgctxt "field:cg.evol_arbre,environnement:"
 msgid "Environnement"
 msgstr "Environnement"
 
-#, fuzzy
 msgctxt "field:cg.evol_arbre,grille:"
 msgid "Grille"
-msgstr "Existence grille"
+msgstr "Grille"
 
 msgctxt "field:cg.evol_arbre,hfut:"
 msgid "Hauteur fût"
@@ -643,19 +722,21 @@ msgctxt "field:cg.evol_arbre,larghoupvoie:"
 msgid "Largeur Houppier Voie"
 msgstr "Largeur Houppier Voie"
 
-#, fuzzy
 msgctxt "field:cg.evol_arbre,lignelec:"
 msgid "Ligne électrique"
-msgstr "Présence ligne électrique"
+msgstr "Ligne électrique"
 
 msgctxt "field:cg.evol_arbre,mecanique:"
 msgid "État mécanique"
 msgstr "État mécanique"
 
-#, fuzzy
+msgctxt "field:cg.evol_arbre,observation:"
+msgid "Observations"
+msgstr ""
+
 msgctxt "field:cg.evol_arbre,paysager:"
 msgid "Impact paysager"
-msgstr "Paysager"
+msgstr "Impact paysager"
 
 msgctxt "field:cg.evol_arbre,photo:"
 msgid "Photo"
@@ -665,12 +746,10 @@ msgctxt "field:cg.evol_arbre,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.evol_arbre,sonde:"
 msgid "Tensio"
-msgstr "Sonde"
+msgstr "Tensio"
 
-#, fuzzy
 msgctxt "field:cg.evol_arbre,station:"
 msgid "Station"
 msgstr "Station"
@@ -691,10 +770,9 @@ msgctxt "field:cg.evol_arbre,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.evol_emplacement,anindispo:"
 msgid "Année indisponibilité"
-msgstr "Année"
+msgstr "Année indisponibilité"
 
 msgctxt "field:cg.evol_emplacement,cause:"
 msgid "Cause"
@@ -710,16 +788,15 @@ msgstr "Créé par"
 
 msgctxt "field:cg.evol_emplacement,date:"
 msgid "Date"
-msgstr "Date"
+msgstr "Date MAJ"
 
 msgctxt "field:cg.evol_emplacement,diam:"
 msgid "Diam"
 msgstr "Diam"
 
-#, fuzzy
 msgctxt "field:cg.evol_emplacement,diametre:"
 msgid "Diamètre souche"
-msgstr "Diamètre"
+msgstr "Diamètre souche"
 
 msgctxt "field:cg.evol_emplacement,emplacement:"
 msgid "Emplacement"
@@ -733,17 +810,9 @@ msgctxt "field:cg.evol_emplacement,nature:"
 msgid "Nature"
 msgstr "Nature"
 
-msgctxt "field:cg.evol_emplacement,observation:"
-msgid "Observations"
-msgstr "Observations"
-
 msgctxt "field:cg.evol_emplacement,rec_name:"
 msgid "Name"
 msgstr "Nom"
-
-msgctxt "field:cg.evol_emplacement,repere:"
-msgid "Repère"
-msgstr "Repère"
 
 msgctxt "field:cg.evol_emplacement,write_date:"
 msgid "Write Date"
@@ -875,7 +944,7 @@ msgstr "Créé par"
 
 msgctxt "field:cg.note,date:"
 msgid "Date"
-msgstr "Date"
+msgstr "Date MAJ"
 
 msgctxt "field:cg.note,emplacement:"
 msgid "Emplacement"
@@ -937,12 +1006,10 @@ msgctxt "field:cg.operation,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-#, fuzzy
 msgctxt "field:cg.operation,lib_long:"
 msgid "Libellé long de l'opération"
 msgstr "Libellé long du code de l'opération"
 
-#, fuzzy
 msgctxt "field:cg.operation,name:"
 msgid "Libellé court de l'opération"
 msgstr "Libellé court du code de l'opération"
@@ -999,17 +1066,14 @@ msgctxt "field:cg.plantation,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.preconisation,conduite:"
 msgid "Conduite"
 msgstr "Conduite"
 
-#, fuzzy
 msgctxt "field:cg.preconisation,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.preconisation,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
@@ -1018,12 +1082,10 @@ msgctxt "field:cg.preconisation,debut:"
 msgid "Debut de tronçon"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.preconisation,equipement:"
 msgid "Équipement"
 msgstr "Équipement"
 
-#, fuzzy
 msgctxt "field:cg.preconisation,essence:"
 msgid "Essence"
 msgstr "Essence"
@@ -1032,7 +1094,6 @@ msgctxt "field:cg.preconisation,fin:"
 msgid "Fin de tronçon"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.preconisation,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -1041,7 +1102,6 @@ msgctxt "field:cg.preconisation,quantite:"
 msgid "Quantité"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.preconisation,rec_name:"
 msgid "Name"
 msgstr "Nom"
@@ -1054,17 +1114,14 @@ msgctxt "field:cg.preconisation,rue:"
 msgid "Nom de la rue"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.preconisation,ug:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
 
-#, fuzzy
 msgctxt "field:cg.preconisation,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.preconisation,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
@@ -1177,7 +1234,6 @@ msgctxt "field:cg.station,active:"
 msgid "Active"
 msgstr "Active"
 
-#, fuzzy
 msgctxt "field:cg.station,arbre:"
 msgid "Arbres"
 msgstr "Arbres"
@@ -1187,10 +1243,9 @@ msgid "Code station"
 msgstr "Code station"
 
 msgctxt "field:cg.station,commune:"
-msgid "Communes"
-msgstr "Communes"
+msgid "Commune"
+msgstr "Commune"
 
-#, fuzzy
 msgctxt "field:cg.station,communeug:"
 msgid "Communes"
 msgstr "Communes"
@@ -1207,10 +1262,9 @@ msgctxt "field:cg.station,debug:"
 msgid "Début de tronçon"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.station,distance:"
 msgid "Distance au bâti"
-msgstr "Distance"
+msgstr "Distance au bâti"
 
 msgctxt "field:cg.station,domaine:"
 msgid "Domaine"
@@ -1220,7 +1274,6 @@ msgctxt "field:cg.station,emplacement:"
 msgid "Emplacements"
 msgstr "Emplacements"
 
-#, fuzzy
 msgctxt "field:cg.station,equipementug:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -1239,10 +1292,14 @@ msgstr "Gestionnaire"
 
 msgctxt "field:cg.station,id:"
 msgid "ID"
-msgstr "Identifiant"
+msgstr "ID Station"
 
 msgctxt "field:cg.station,idug:"
-msgid "Identifiant UG"
+msgid "ID UG"
+msgstr ""
+
+msgctxt "field:cg.station,nameug:"
+msgid "Nom Route"
 msgstr ""
 
 msgctxt "field:cg.station,proprietaire:"
@@ -1261,18 +1318,13 @@ msgctxt "field:cg.station,rueug:"
 msgid "Nom de la rue"
 msgstr ""
 
-msgctxt "field:cg.station,station_image:"
-msgid "Image"
-msgstr ""
-
 msgctxt "field:cg.station,station_map:"
 msgid "Image"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.station,ug:"
 msgid "Code UG"
-msgstr "UG"
+msgstr "Code UG"
 
 msgctxt "field:cg.station,write_date:"
 msgid "Write Date"
@@ -1318,32 +1370,62 @@ msgctxt "field:cg.statut_voirie,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
+msgctxt "field:cg.suppression,code:"
+msgid "Code motif de suppression"
+msgstr ""
+
+msgctxt "field:cg.suppression,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:cg.suppression,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:cg.suppression,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:cg.suppression,lib_long:"
+msgid "Libellé long motif de suppression"
+msgstr ""
+
+msgctxt "field:cg.suppression,name:"
+msgid "Libellé court motif de suppression"
+msgstr ""
+
+msgctxt "field:cg.suppression,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:cg.suppression,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:cg.suppression,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
 msgctxt "field:cg.synthese1,canton:"
 msgid "Canton"
 msgstr "Canton"
 
-#, fuzzy
 msgctxt "field:cg.synthese1,commune:"
 msgid "Commune"
 msgstr "Commune"
 
-#, fuzzy
 msgctxt "field:cg.synthese1,conduite:"
 msgid "Conduite"
 msgstr "Conduite"
 
-#, fuzzy
 msgctxt "field:cg.synthese1,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.synthese1,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-#, fuzzy
 msgctxt "field:cg.synthese1,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -1352,62 +1434,50 @@ msgctxt "field:cg.synthese1,quantite:"
 msgid "Quantité d'arbre"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.synthese1,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.synthese1,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.synthese1,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.synthese1.open.start,commune:"
 msgid "Commune"
 msgstr "Commune"
 
-#, fuzzy
 msgctxt "field:cg.synthese1.open.start,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,canton:"
 msgid "Canton"
 msgstr "Canton"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,commune:"
 msgid "Commune"
 msgstr "Commune"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,conduite:"
 msgid "Conduite"
 msgstr "Conduite"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,gestionnaire:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -1416,62 +1486,50 @@ msgctxt "field:cg.synthese2,quantite:"
 msgid "Quantité d'arbre"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.synthese2,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.synthese2,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.synthese2.open.start,commune:"
 msgid "Commune"
 msgstr "Commune"
 
-#, fuzzy
 msgctxt "field:cg.synthese2.open.start,gestionnaire:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
 
-#, fuzzy
 msgctxt "field:cg.synthese2.open.start,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,conduite:"
 msgid "Conduite"
 msgstr "Conduite"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,essence:"
 msgid "Essence"
 msgstr "Essence"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,gestionnaire:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -1480,42 +1538,34 @@ msgctxt "field:cg.synthese3,quantite:"
 msgid "Quantité d'arbre"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.synthese3,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.synthese3,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.synthese3.open.start,gestionnaire:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
 
-#, fuzzy
 msgctxt "field:cg.synthese3.open.start,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-#, fuzzy
 msgctxt "field:cg.synthese4,codeug:"
 msgid "Code UG"
-msgstr "UG"
+msgstr "Code UG"
 
-#, fuzzy
 msgctxt "field:cg.synthese4,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.synthese4,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
@@ -1524,12 +1574,10 @@ msgctxt "field:cg.synthese4,equipement:"
 msgid "Equipement"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.synthese4,essence:"
 msgid "Essence"
 msgstr "Essence"
 
-#, fuzzy
 msgctxt "field:cg.synthese4,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -1538,32 +1586,26 @@ msgctxt "field:cg.synthese4,quantite:"
 msgid "Quantité d'arbre"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.synthese4,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.synthese4,ug:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
 
-#, fuzzy
 msgctxt "field:cg.synthese4,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.synthese4,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.synthese4.open.start,essence:"
 msgid "Essence"
 msgstr "Essence"
 
-#, fuzzy
 msgctxt "field:cg.synthese4.open.start,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -1604,7 +1646,6 @@ msgctxt "field:cg.travaux,equipement:"
 msgid "Équipement"
 msgstr "Équipement"
 
-#, fuzzy
 msgctxt "field:cg.travaux,essence:"
 msgid "Essence"
 msgstr "Essence"
@@ -1615,7 +1656,7 @@ msgstr "icône"
 
 msgctxt "field:cg.travaux,id:"
 msgid "ID"
-msgstr "Identifiant"
+msgstr "ID Travaux"
 
 msgctxt "field:cg.travaux,rec_name:"
 msgid "Name"
@@ -1633,17 +1674,14 @@ msgctxt "field:cg.travaux,state:"
 msgid "State"
 msgstr "État"
 
-#, fuzzy
 msgctxt "field:cg.travaux,station:"
 msgid "Station"
 msgstr "Station"
 
-#, fuzzy
 msgctxt "field:cg.travaux,typetravaux:"
 msgid "Travaux"
 msgstr "Travaux"
 
-#, fuzzy
 msgctxt "field:cg.travaux,ug:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
@@ -1659,6 +1697,10 @@ msgstr "Mis à jour par"
 msgctxt "field:cg.ug,acequipement:"
 msgid "Anciens équipements"
 msgstr "Anciens équipements"
+
+msgctxt "field:cg.ug,acrefug:"
+msgid "Anc. Référence UG"
+msgstr ""
 
 msgctxt "field:cg.ug,active:"
 msgid "Active"
@@ -1680,7 +1722,6 @@ msgctxt "field:cg.ug,code:"
 msgid "Code UG"
 msgstr "Code UG"
 
-#, fuzzy
 msgctxt "field:cg.ug,commune:"
 msgid "Communes"
 msgstr "Communes"
@@ -1709,7 +1750,6 @@ msgctxt "field:cg.ug,elagage:"
 msgid "Secteur élagage"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.ug,equipement:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -1718,14 +1758,13 @@ msgctxt "field:cg.ug,fin:"
 msgid "Fin de tronçon"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.ug,geom:"
 msgid "Geometry"
 msgstr "Géométrie"
 
 msgctxt "field:cg.ug,id:"
 msgid "ID"
-msgstr "Identifiant"
+msgstr "ID UG"
 
 msgctxt "field:cg.ug,operation:"
 msgid "Opérations"
@@ -1735,7 +1774,6 @@ msgctxt "field:cg.ug,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.ug,refcom:"
 msgid "Communes"
 msgstr "Communes"
@@ -1766,10 +1804,6 @@ msgstr ""
 
 msgctxt "field:cg.ug,statut:"
 msgid "Statut voirie"
-msgstr ""
-
-msgctxt "field:cg.ug,ug_image:"
-msgid "Image"
 msgstr ""
 
 msgctxt "field:cg.ug,ug_map:"
@@ -1804,7 +1838,6 @@ msgctxt "field:cg.ug-cg.equipement,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
 msgctxt "field:cg.ug-cg.equipement,ug:"
 msgid "UG"
 msgstr "UG"
@@ -1817,17 +1850,14 @@ msgctxt "field:cg.ug-cg.equipement,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-#, fuzzy
 msgctxt "field:cg.ug-cg.operation,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
 msgctxt "field:cg.ug-cg.operation,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-#, fuzzy
 msgctxt "field:cg.ug-cg.operation,id:"
 msgid "ID"
 msgstr "Identifiant"
@@ -1836,7 +1866,6 @@ msgctxt "field:cg.ug-cg.operation,operation:"
 msgid "name"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.ug-cg.operation,rec_name:"
 msgid "Name"
 msgstr "Nom"
@@ -1845,12 +1874,10 @@ msgctxt "field:cg.ug-cg.operation,ug:"
 msgid "code"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:cg.ug-cg.operation,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
 msgctxt "field:cg.ug-cg.operation,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
@@ -1895,7 +1922,6 @@ msgctxt "field:commune.commune,datefin:"
 msgid "Fin de mandat"
 msgstr ""
 
-#, fuzzy
 msgctxt "field:commune.commune,lb_court:"
 msgid "Code"
 msgstr "Code"
@@ -1944,7 +1970,6 @@ msgctxt "help:cg.arbre,code:"
 msgid "Identifiant de l'arbre"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.arbre,communeug:"
 msgid "Communes"
 msgstr "Communes"
@@ -1955,15 +1980,13 @@ msgid ""
 "cet emplacement"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.arbre,conduite:"
 msgid "Conduite"
 msgstr "Conduite"
 
-#, fuzzy
 msgctxt "help:cg.arbre,date:"
 msgid "Date de suppression"
-msgstr "Date"
+msgstr "Date de suppression"
 
 msgctxt "help:cg.arbre,debug:"
 msgid "Début de tronçon"
@@ -1977,7 +2000,6 @@ msgctxt "help:cg.arbre,emplacement:"
 msgid "Code de l'emplacement de référence"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.arbre,equipementug:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -1999,11 +2021,15 @@ msgid "Géométrie point"
 msgstr ""
 
 msgctxt "help:cg.arbre,idug:"
-msgid "Identifiant UG"
+msgid "ID UG"
+msgstr ""
+
+msgctxt "help:cg.arbre,motifsuppression:"
+msgid "Motif de suppression de l'arbre"
 msgstr ""
 
 msgctxt "help:cg.arbre,plantation:"
-msgid "Modalité de plantation"
+msgid "Maîtrise d'oeuvre plantation"
 msgstr ""
 
 msgctxt "help:cg.arbre,refug:"
@@ -2018,7 +2044,6 @@ msgctxt "help:cg.arbre,travaux:"
 msgid "travaux"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.check_arbre.open.start,description:"
 msgid "Description"
 msgstr "Description"
@@ -2027,7 +2052,6 @@ msgctxt "help:cg.check_arbre.open.start,typetravaux:"
 msgid "Type de travaux"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.check_arbre.result,description:"
 msgid "Description"
 msgstr "Description"
@@ -2036,32 +2060,26 @@ msgctxt "help:cg.check_arbre.result,typetravaux:"
 msgid "Type de travaux"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.domanialite,code:"
 msgid "Code domanialité"
 msgstr "Code domanialité"
 
-#, fuzzy
 msgctxt "help:cg.domanialite,lib_long:"
 msgid "Libellé long domanialité"
 msgstr "Libellé long domanialité"
 
-#, fuzzy
 msgctxt "help:cg.domanialite,name:"
 msgid "Libellé court domanialité"
 msgstr "Libellé court domanialité"
 
-#, fuzzy
 msgctxt "help:cg.elagage,code:"
 msgid "Code secteur élegage"
 msgstr "Code secteur élegage"
 
-#, fuzzy
 msgctxt "help:cg.elagage,lib_long:"
 msgid "Libellé long secteur élegage"
 msgstr "Libellé long secteur élegage"
 
-#, fuzzy
 msgctxt "help:cg.elagage,name:"
 msgid "Libellé court secteur élegage"
 msgstr "Libellé court secteur élegage"
@@ -2074,16 +2092,106 @@ msgctxt "help:cg.emplacement,arbre:"
 msgid "Arbres présents sur cet emplacement"
 msgstr ""
 
+msgctxt "help:cg.emplacement,arbrearrosage:"
+msgid "Arrosage automatique"
+msgstr "Arrosage automatique"
+
+msgctxt "help:cg.emplacement,arbrebilan:"
+msgid "Bilan de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbreconduite:"
+msgid "Conduite"
+msgstr "Conduite"
+
+msgctxt "help:cg.emplacement,arbredate:"
+msgid "Date du constat"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbredatesuppression:"
+msgid "Date du suppression de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrediamhoup:"
+msgid "Diamètre du houppier de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrediamtronc:"
+msgid "Classe du diamètre du tronc de l'arbre mesuré à 1,30m"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbreempmat:"
+msgid "Emplacement matérialisé"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbreenvironnement:"
+msgid "Type environnement de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbreessence:"
+msgid "Nom de l'essence"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbregrille:"
+msgid "Existence d'une grille"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrehfut:"
+msgid "Hauteur totale du fût de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbreht:"
+msgid "Hauteur totale de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbreid:"
+msgid "Identifiant de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrelarghoupriv:"
+msgid "Diamètre du houppier de l'arbre sur riverain"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrelarghoupvoie:"
+msgid "Largeur du houppier de l'arbre sur la voie"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrelignelec:"
+msgid "Présence d'une ligne électrique"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbremecanique:"
+msgid "État mécanique de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbremotifsuppression:"
+msgid "Motif de suppression de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrepaysager:"
+msgid "Impact paysager"
+msgstr "Paysager"
+
+msgctxt "help:cg.emplacement,arbresonde:"
+msgid "Sonde tensiométrique"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbresurfacepiedarbre:"
+msgid "Surface du pied de l'arbre"
+msgstr ""
+
+msgctxt "help:cg.emplacement,arbrevigueur:"
+msgid "Vigueur de l'arbre"
+msgstr ""
+
 msgctxt "help:cg.emplacement,code:"
 msgid "Code de l'emplacement"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.emplacement,communeug:"
 msgid "Communes"
 msgstr "Communes"
 
-#, fuzzy
 msgctxt "help:cg.emplacement,coteoppose:"
 msgid "Côté opposé"
 msgstr "Côté opposé"
@@ -2092,13 +2200,20 @@ msgctxt "help:cg.emplacement,debug:"
 msgid "Début de tronçon"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.emplacement,equipementug:"
 msgid "Équipement"
 msgstr "Équipement"
 
+msgctxt "help:cg.emplacement,evocause:"
+msgid "Cause de l'évolution de l'emplacement"
+msgstr ""
+
 msgctxt "help:cg.emplacement,evolution:"
 msgid "Évolutions de l'emplacement"
+msgstr ""
+
+msgctxt "help:cg.emplacement,evonature:"
+msgid "Nature de l'emplacement"
 msgstr ""
 
 msgctxt "help:cg.emplacement,finug:"
@@ -2109,8 +2224,12 @@ msgctxt "help:cg.emplacement,geom:"
 msgid "Géométrie Point"
 msgstr ""
 
+msgctxt "help:cg.emplacement,idstation:"
+msgid "Identifiant de la station"
+msgstr ""
+
 msgctxt "help:cg.emplacement,idug:"
-msgid "Identifiant UG"
+msgid "ID UG"
 msgstr ""
 
 msgctxt "help:cg.emplacement,numpostprec:"
@@ -2121,29 +2240,30 @@ msgctxt "help:cg.emplacement,refug:"
 msgid "Référence UG"
 msgstr ""
 
+msgctxt "help:cg.emplacement,repere:"
+msgid "Repère"
+msgstr ""
+
 msgctxt "help:cg.emplacement,rueug:"
 msgid "Nom de la rue"
 msgstr ""
 
 msgctxt "help:cg.emplacement,station:"
-msgid "Station"
-msgstr "Code station"
+msgid "Code de la station"
+msgstr "Code de la station"
 
 msgctxt "help:cg.equipement,active:"
 msgid "Équipement présent dans les listes déroulantes"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.equipement,code:"
 msgid "Code équipement"
 msgstr "Code équipement"
 
-#, fuzzy
 msgctxt "help:cg.equipement,coder:"
 msgid "Code route"
 msgstr "Code de la route"
 
-#, fuzzy
 msgctxt "help:cg.equipement,name:"
 msgid "Nom de la route"
 msgstr "Nom de la route"
@@ -2152,12 +2272,10 @@ msgctxt "help:cg.equipement,ug:"
 msgid "Unités de gestion de l'équipement"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.evol_arbre,arbre:"
 msgid "Arbre ID"
-msgstr "Arbre ID"
+msgstr "ID Arbre"
 
-#, fuzzy
 msgctxt "help:cg.evol_arbre,arrosage:"
 msgid "Arrosage automatique"
 msgstr "Arrosage automatique"
@@ -2218,16 +2336,18 @@ msgctxt "help:cg.evol_arbre,mecanique:"
 msgid "État mécanique de l'arbre"
 msgstr ""
 
-#, fuzzy
+msgctxt "help:cg.evol_arbre,observation:"
+msgid "Observations"
+msgstr ""
+
 msgctxt "help:cg.evol_arbre,paysager:"
 msgid "Impact paysager"
-msgstr "Paysager"
+msgstr "Impact paysager"
 
 msgctxt "help:cg.evol_arbre,sonde:"
 msgid "Sonde tensiométrique"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.evol_arbre,station:"
 msgid "Station"
 msgstr "Station"
@@ -2256,7 +2376,6 @@ msgctxt "help:cg.evol_emplacement,diametre:"
 msgid "Diamètre de la souche"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.evol_emplacement,emplacement:"
 msgid "Emplacement"
 msgstr "Emplacement"
@@ -2265,52 +2384,34 @@ msgctxt "help:cg.evol_emplacement,nature:"
 msgid "Nature de l'emplacement"
 msgstr ""
 
-#, fuzzy
-msgctxt "help:cg.evol_emplacement,observation:"
-msgid "Observations"
-msgstr "Observations"
-
-#, fuzzy
-msgctxt "help:cg.evol_emplacement,repere:"
-msgid "Repère"
-msgstr "Repère"
-
-#, fuzzy
 msgctxt "help:cg.gestionnaire,code:"
 msgid "Code gestionnaire"
 msgstr "Code gestionnaire"
 
-#, fuzzy
 msgctxt "help:cg.gestionnaire,lib_long:"
 msgid "Libellé long du gestionnaire"
 msgstr "Libellé long du gestionnaire"
 
-#, fuzzy
 msgctxt "help:cg.gestionnaire,name:"
 msgid "Libellé court du gestionnaire"
 msgstr "Libellé court du gestionnaire"
 
-#, fuzzy
 msgctxt "help:cg.operation,code:"
 msgid "Code de l'opération"
 msgstr "Code de l'opération"
 
-#, fuzzy
 msgctxt "help:cg.operation,echeance:"
 msgid "Échéance de l'opération"
 msgstr "Échéance de l'opération"
 
-#, fuzzy
 msgctxt "help:cg.operation,lib_long:"
 msgid "Libellé long de l'opération"
 msgstr "Libellé long du code de l'opération"
 
-#, fuzzy
 msgctxt "help:cg.operation,name:"
 msgid "Libellé court de l'opération"
 msgstr "Libellé court du code de l'opération"
 
-#, fuzzy
 msgctxt "help:cg.operation,pilote:"
 msgid "Pilote de l'opération"
 msgstr "Pilote de l'opération"
@@ -2331,32 +2432,26 @@ msgctxt "help:cg.preconisation,rue:"
 msgid "Nom de la rue"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.proprietaire,code:"
 msgid "Code propriétaire"
 msgstr "Code propriétaire"
 
-#, fuzzy
 msgctxt "help:cg.proprietaire,lib_long:"
 msgid "Libellé long du propriétaire"
 msgstr "Libellé long du propriétaire"
 
-#, fuzzy
 msgctxt "help:cg.proprietaire,name:"
 msgid "Libellé court du propriétaire"
 msgstr "Libellé court du propriétaire"
 
-#, fuzzy
 msgctxt "help:cg.securite,code:"
 msgid "Code du niveau de sécurité"
 msgstr "Code du niveau de sécurité"
 
-#, fuzzy
 msgctxt "help:cg.securite,lib_long:"
 msgid "Libellé long du niveau de sécurité"
 msgstr "Libellé long du niveau de sécurité"
 
-#, fuzzy
 msgctxt "help:cg.securite,name:"
 msgid "Libellé court du niveau de sécurité"
 msgstr "Libellé court du niveau de sécurité"
@@ -2371,13 +2466,12 @@ msgstr ""
 
 msgctxt "help:cg.station,code:"
 msgid "Code de la station"
-msgstr ""
+msgstr "Code de la station"
 
 msgctxt "help:cg.station,commune:"
-msgid "Communes de localisation de la station"
+msgid "Commune de localisation de la station"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.station,communeug:"
 msgid "Communes"
 msgstr "Communes"
@@ -2386,12 +2480,10 @@ msgctxt "help:cg.station,debug:"
 msgid "Début de tronçon"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.station,distance:"
 msgid "Distance au bâti"
-msgstr "Distance"
+msgstr "Distance au bâti"
 
-#, fuzzy
 msgctxt "help:cg.station,domaine:"
 msgid "Domaine"
 msgstr "Domaine"
@@ -2400,7 +2492,6 @@ msgctxt "help:cg.station,emplacement:"
 msgid "Emplacements de la station"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.station,equipementug:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -2413,16 +2504,18 @@ msgctxt "help:cg.station,geom:"
 msgid "Géométries lignes"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.station,gestionnaire:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
 
 msgctxt "help:cg.station,idug:"
-msgid "Identifiant UG"
+msgid "ID UG"
 msgstr ""
 
-#, fuzzy
+msgctxt "help:cg.station,nameug:"
+msgid "Nom de la Route"
+msgstr ""
+
 msgctxt "help:cg.station,proprietaire:"
 msgid "Proprétaire"
 msgstr "Propriétaire"
@@ -2435,12 +2528,10 @@ msgctxt "help:cg.station,rueug:"
 msgid "Nom de la rue"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.station,ug:"
 msgid "Code de l'unité de gestion"
 msgstr "Unité de gestion"
 
-#, fuzzy
 msgctxt "help:cg.synthese3,conduite:"
 msgid "Conduite"
 msgstr "Conduite"
@@ -2473,7 +2564,6 @@ msgctxt "help:cg.synthese4,quantite:"
 msgid "Quantité d'arbre"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.synthese4,ug:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
@@ -2482,10 +2572,9 @@ msgctxt "help:cg.synthese4.open.start,essence:"
 msgid "Nom de l'essence"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.travaux,arbre:"
 msgid "Arbre ID"
-msgstr "Arbre ID"
+msgstr "ID Arbre"
 
 msgctxt "help:cg.travaux,description:"
 msgid "Description"
@@ -2499,12 +2588,10 @@ msgctxt "help:cg.travaux,end_date:"
 msgid "Date de réalisation"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.travaux,equipement:"
 msgid "Équipement"
 msgstr "Équipement"
 
-#, fuzzy
 msgctxt "help:cg.travaux,essence:"
 msgid "Essence"
 msgstr "Essence"
@@ -2517,7 +2604,6 @@ msgctxt "help:cg.travaux,start_date:"
 msgid "Date de préconisation"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.travaux,station:"
 msgid "Station"
 msgstr "Station"
@@ -2526,13 +2612,16 @@ msgctxt "help:cg.travaux,typetravaux:"
 msgid "Type de travaux"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.travaux,ug:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
 
 msgctxt "help:cg.ug,acequipement:"
 msgid "Anciens codes équipement"
+msgstr ""
+
+msgctxt "help:cg.ug,acrefug:"
+msgid "Ancienne Référence UG"
 msgstr ""
 
 msgctxt "help:cg.ug,active:"
@@ -2551,7 +2640,6 @@ msgctxt "help:cg.ug,acug95:"
 msgid "Ancien code Unité de gestion (1995)"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.ug,code:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
@@ -2592,7 +2680,6 @@ msgctxt "help:cg.ug,operation:"
 msgid "Opérations effectuées sur l'unité de gestion"
 msgstr ""
 
-#, fuzzy
 msgctxt "help:cg.ug,refcom:"
 msgid "Communes"
 msgstr "Communes"
@@ -2669,17 +2756,14 @@ msgctxt "model:cg.address,name:"
 msgid "Address"
 msgstr "Adresse"
 
-#, fuzzy
 msgctxt "model:cg.arbre,name:"
 msgid "Arbres"
 msgstr "Arbres"
 
-#, fuzzy
 msgctxt "model:cg.bilan,name:"
 msgid "Bilan"
 msgstr "Bilan"
 
-#, fuzzy
 msgctxt "model:cg.cause,name:"
 msgid "Cause"
 msgstr "Cause"
@@ -2704,12 +2788,10 @@ msgctxt "model:cg.elagage,name:"
 msgid "Secteur élagage"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:cg.emplacement,name:"
 msgid "Emplacement"
 msgstr "Emplacement"
 
-#, fuzzy
 msgctxt "model:cg.equipement,name:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -2722,7 +2804,6 @@ msgctxt "model:cg.evol_emplacement,name:"
 msgid "Évolution d'un emplacement"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:cg.gestionnaire,name:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
@@ -2731,7 +2812,6 @@ msgctxt "model:cg.indispo,name:"
 msgid "Indisponible"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:cg.nature,name:"
 msgid "Nature"
 msgstr "Nature"
@@ -2772,6 +2852,10 @@ msgctxt "model:cg.statut_voirie,name:"
 msgid "Statut de la voirie"
 msgstr ""
 
+msgctxt "model:cg.suppression,name:"
+msgid "Motif de suppression"
+msgstr ""
+
 msgctxt "model:cg.synthese1,name:"
 msgid "Synthese du patrimoine departemental recense par commune"
 msgstr ""
@@ -2808,7 +2892,6 @@ msgctxt "model:cg.travaux,name:"
 msgid "Travaux sur arbre"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:cg.ug,name:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
@@ -2829,7 +2912,6 @@ msgctxt "model:ir.action,name:act_address_form"
 msgid "Adresse"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_cg_arbre_form"
 msgid "Arbres"
 msgstr "Arbres"
@@ -2858,7 +2940,6 @@ msgctxt "model:ir.action,name:act_cg_elagage_form"
 msgid "Secteur élagage"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_cg_emplacement_form"
 msgid "Emplacements"
 msgstr "Emplacements"
@@ -2883,7 +2964,6 @@ msgctxt "model:ir.action,name:act_cg_indispo_form"
 msgid "Indisponibilités"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_cg_nature_form"
 msgid "Nature"
 msgstr "Nature"
@@ -2912,15 +2992,34 @@ msgctxt "model:ir.action,name:act_cg_station_form"
 msgid "Stations"
 msgstr ""
 
+msgctxt "model:ir.action,name:act_cg_station_form1"
+msgid "Stations - Gestion des emplamcents"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_station_form2"
+msgid "Stations - Gestion des emplacements"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_station_form3"
+msgid "Stations - Abattage"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_station_form4"
+msgid "Stations - Plantation"
+msgstr ""
+
 msgctxt "model:ir.action,name:act_cg_statut_voirie_form"
 msgid "Statuts de voirie"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_cg_suppression_form"
+msgid "Motif de suppression de l'arbre"
 msgstr ""
 
 msgctxt "model:ir.action,name:act_cg_taxinomie_form"
 msgid "Taxinomie"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_cg_travaux_form"
 msgid "Travaux"
 msgstr "Travaux"
@@ -2934,7 +3033,7 @@ msgid "Unités de gestion"
 msgstr ""
 
 msgctxt "model:ir.action,name:act_note_form"
-msgid "Note de Défiance Sanitaire des arbres"
+msgid "Note de Déficience Sanitaire des arbres"
 msgstr ""
 
 msgctxt "model:ir.action,name:act_preconisation_form"
@@ -2973,7 +3072,6 @@ msgctxt "model:ir.action,name:act_synthese4_open"
 msgid "Liste des unités de gestion plantée par essence"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.action,name:arbre"
 msgid "Arbres"
 msgstr "Arbres"
@@ -2982,7 +3080,6 @@ msgctxt "model:ir.action,name:notation"
 msgid "Notation"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.action,name:rapport_note_defiance"
 msgid "Équipement"
 msgstr "Équipement"
@@ -3095,7 +3192,6 @@ msgctxt "model:ir.ui.menu,name:menu_cg_admin"
 msgid "Arbres voirie"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.ui.menu,name:menu_cg_arbre_form"
 msgid "Arbres"
 msgstr "Arbres"
@@ -3120,7 +3216,6 @@ msgctxt "model:ir.ui.menu,name:menu_cg_elagage_form"
 msgid "Secteur élagage"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.ui.menu,name:menu_cg_emplacement_form"
 msgid "Emplacements"
 msgstr "Emplacements"
@@ -3133,6 +3228,10 @@ msgctxt "model:ir.ui.menu,name:menu_cg_equipement_form"
 msgid "Équipements"
 msgstr ""
 
+msgctxt "model:ir.ui.menu,name:menu_cg_gestion"
+msgid "Gestion"
+msgstr ""
+
 msgctxt "model:ir.ui.menu,name:menu_cg_gestionnaire_form"
 msgid "Gestionnaires"
 msgstr ""
@@ -3141,7 +3240,6 @@ msgctxt "model:ir.ui.menu,name:menu_cg_indispo_form"
 msgid "Indisponibilités"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.ui.menu,name:menu_cg_nature_form"
 msgid "Nature"
 msgstr "Nature"
@@ -3174,15 +3272,34 @@ msgctxt "model:ir.ui.menu,name:menu_cg_station_form"
 msgid "Stations"
 msgstr ""
 
+msgctxt "model:ir.ui.menu,name:menu_cg_station_form_abattage"
+msgid "Stations - Abattage"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_station_form_gestion_courante"
+msgid "Stations - Gestion des emplacements"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_station_form_gestion_emplacement"
+msgid "Stations - Gestion des emplamcents"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_station_form_plantation"
+msgid "Stations - Plantation"
+msgstr ""
+
 msgctxt "model:ir.ui.menu,name:menu_cg_statut_voirie_form"
 msgid "Statuts de voirie"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cg_suppression_form"
+msgid "Motif de suppression de l'arbre"
 msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_cg_travaux"
 msgid "Planification travaux"
 msgstr ""
 
-#, fuzzy
 msgctxt "model:ir.ui.menu,name:menu_cg_travaux_form"
 msgid "Travaux"
 msgstr "Travaux"
@@ -3192,7 +3309,7 @@ msgid "Unités de gestion"
 msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_note"
-msgid "Note de Défiance Sanitaire des arbres"
+msgid "Note de Déficience Sanitaire des arbres"
 msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_preco_centre"
@@ -3419,7 +3536,6 @@ msgctxt "odt:cg.arbre:"
 msgid "rille :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.arbre:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -3516,7 +3632,6 @@ msgctxt "odt:cg.equipement:"
 msgid "Surf. Pied Arbre :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.equipement:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
@@ -3705,7 +3820,6 @@ msgctxt "odt:cg.notation:"
 msgid "aysager :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.notation:"
 msgid "cm"
 msgstr "cm"
@@ -3726,7 +3840,6 @@ msgctxt "odt:cg.notation:"
 msgid "lantation :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.notation:"
 msgid "m"
 msgstr "m"
@@ -3735,7 +3848,6 @@ msgctxt "odt:cg.notation:"
 msgid "mpatement :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.notation:"
 msgid "m²"
 msgstr "m²"
@@ -3748,7 +3860,6 @@ msgctxt "odt:cg.notation:"
 msgid "rille :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.notation:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -3797,12 +3908,10 @@ msgctxt "odt:cg.rapport_preconisation:"
 msgid "???"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.rapport_preconisation:"
 msgid "Commune"
 msgstr "Commune"
 
-#, fuzzy
 msgctxt "odt:cg.rapport_preconisation:"
 msgid "Conduite"
 msgstr "Conduite"
@@ -3819,7 +3928,6 @@ msgctxt "odt:cg.rapport_preconisation:"
 msgid "Elagage : PORT LIBRES / Secteur OUEST"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.rapport_preconisation:"
 msgid "Essence"
 msgstr "Essence"
@@ -3908,7 +4016,6 @@ msgctxt "odt:cg.rapport_preconisation:"
 msgid "relatorio://line.ug.refug"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.rapport_preconisation:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -4065,12 +4172,10 @@ msgctxt "odt:cg.synthese1:"
 msgid "???"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese1:"
 msgid "Commune"
 msgstr "Commune"
 
-#, fuzzy
 msgctxt "odt:cg.synthese1:"
 msgid "Conduite"
 msgstr "Conduite"
@@ -4171,12 +4276,10 @@ msgctxt "odt:cg.synthese2:"
 msgid "???"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese2:"
 msgid "Commune"
 msgstr "Commune"
 
-#, fuzzy
 msgctxt "odt:cg.synthese2:"
 msgid "Conduite"
 msgstr "Conduite"
@@ -4185,7 +4288,6 @@ msgctxt "odt:cg.synthese2:"
 msgid "Direction des Espaces Verts Départementaux du Val-de-Marne"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese2:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
@@ -4286,7 +4388,6 @@ msgctxt "odt:cg.synthese3:"
 msgid "???"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese3:"
 msgid "Conduite"
 msgstr "Conduite"
@@ -4295,12 +4396,10 @@ msgctxt "odt:cg.synthese3:"
 msgid "Direction des Espaces Verts Départementaux du Val-de-Marne"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese3:"
 msgid "Essence"
 msgstr "Essence"
 
-#, fuzzy
 msgctxt "odt:cg.synthese3:"
 msgid "Gestionnaire"
 msgstr "Gestionnaire"
@@ -4361,16 +4460,14 @@ msgctxt "odt:cg.synthese3:"
 msgid "€"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese4:"
 msgid "Code UG"
-msgstr "UG"
+msgstr "Code UG"
 
 msgctxt "odt:cg.synthese4:"
 msgid "Code Équipement"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese4:"
 msgid "Commune"
 msgstr "Commune"
@@ -4379,7 +4476,6 @@ msgctxt "odt:cg.synthese4:"
 msgid "Début du tronçon"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.synthese4:"
 msgid "Essence"
 msgstr "Essence"
@@ -4424,12 +4520,10 @@ msgctxt "odt:cg.ug:"
 msgid "An"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "Arbre"
 msgstr "Arbre"
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "Bilan"
 msgstr "Bilan"
@@ -4454,7 +4548,6 @@ msgctxt "odt:cg.ug:"
 msgid "Diagno."
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "Diam"
 msgstr "Diam"
@@ -4463,7 +4556,6 @@ msgctxt "odt:cg.ug:"
 msgid "Début :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "Emplacement"
 msgstr "Emplacement"
@@ -4472,12 +4564,10 @@ msgctxt "odt:cg.ug:"
 msgid "Entour."
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "Environnement"
 msgstr "Environnement"
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "Essence"
 msgstr "Essence"
@@ -4486,10 +4576,9 @@ msgctxt "odt:cg.ug:"
 msgid "Fin :"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "Grille"
-msgstr "Existence grille"
+msgstr "Grille"
 
 msgctxt "odt:cg.ug:"
 msgid "H"
@@ -4503,7 +4592,6 @@ msgctxt "odt:cg.ug:"
 msgid "Ht fût"
 msgstr ""
 
-#, fuzzy
 msgctxt "odt:cg.ug:"
 msgid "ID"
 msgstr "Identifiant"
@@ -4638,6 +4726,106 @@ msgstr ""
 
 msgctxt "selection:cg.check_arbre.result,typetravaux:"
 msgid "Taille de réduction"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreconduite:"
+msgid "Architecturé"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreconduite:"
+msgid "Libre"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreenvironnement:"
+msgid "1 - Banquette stabilisée"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreenvironnement:"
+msgid "2 - Banquette engazonnée"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreenvironnement:"
+msgid "3 - Banquette enrobée"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreenvironnement:"
+msgid "4 - Couvre-sol arbustif"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreenvironnement:"
+msgid "5 - Jardinière"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreenvironnement:"
+msgid "6 - Terre végétale"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreht:"
+msgid "1 - hauteur totale < 10m"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreht:"
+msgid "2 - 10m <= hauteur totale < 20m"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbreht:"
+msgid "3 - hauteur totale >= 20 m"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbremecanique:"
+msgid "1 - Aucun défaut"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbremecanique:"
+msgid "2 - Défaut mineur"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbremecanique:"
+msgid "3 - Défaut limité"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbremecanique:"
+msgid "4 - Défaut intense"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbremecanique:"
+msgid "5 - Défaut critique"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrepaysager:"
+msgid "1 - Remarquable"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrepaysager:"
+msgid "2 - Beau sujet"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrepaysager:"
+msgid "3 - Âgé ou malformé"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrepaysager:"
+msgid "4 - Sans intérêt"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrevigueur:"
+msgid "1 - Très bonne"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrevigueur:"
+msgid "2 - Bonne"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrevigueur:"
+msgid "3 - Moyenne"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrevigueur:"
+msgid "4 - Faible"
+msgstr ""
+
+msgctxt "selection:cg.emplacement,arbrevigueur:"
+msgid "5 - Dépérissement irréversible"
 msgstr ""
 
 msgctxt "selection:cg.evol_arbre,conduite:"
@@ -4812,14 +5000,9 @@ msgctxt "view:cg.address:"
 msgid "Adresse"
 msgstr ""
 
-#, fuzzy
 msgctxt "view:cg.arbre:"
 msgid "Arbre"
 msgstr "Arbre"
-
-msgctxt "view:cg.arbre:"
-msgid "Edit"
-msgstr "Éditer"
 
 msgctxt "view:cg.arbre:"
 msgid "Generate"
@@ -4833,7 +5016,6 @@ msgctxt "view:cg.arbre:"
 msgid "Map"
 msgstr "Carte"
 
-#, fuzzy
 msgctxt "view:cg.arbre:"
 msgid "Photo"
 msgstr "Photo"
@@ -4842,12 +5024,10 @@ msgctxt "view:cg.arbre:"
 msgid "Secteur élagage"
 msgstr ""
 
-#, fuzzy
 msgctxt "view:cg.arbre:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
 
-#, fuzzy
 msgctxt "view:cg.arbre:"
 msgid "Évolutions"
 msgstr "Évolutions"
@@ -4880,16 +5060,18 @@ msgctxt "view:cg.elagage:"
 msgid "Secteur élagage"
 msgstr ""
 
-#, fuzzy
+msgctxt "view:cg.emplacement:"
+msgid "Abres"
+msgstr ""
+
+msgctxt "view:cg.emplacement:"
+msgid "Arbre"
+msgstr "Arbre"
+
 msgctxt "view:cg.emplacement:"
 msgid "Arbres"
 msgstr "Arbres"
 
-msgctxt "view:cg.emplacement:"
-msgid "Edit"
-msgstr "Éditer"
-
-#, fuzzy
 msgctxt "view:cg.emplacement:"
 msgid "Emplacement"
 msgstr "Emplacement"
@@ -4906,12 +5088,10 @@ msgctxt "view:cg.emplacement:"
 msgid "Map"
 msgstr "Carte"
 
-#, fuzzy
 msgctxt "view:cg.emplacement:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
 
-#, fuzzy
 msgctxt "view:cg.emplacement:"
 msgid "Évolutions"
 msgstr "Évolutions"
@@ -4924,7 +5104,6 @@ msgctxt "view:cg.equipement:"
 msgid "Unités de gestion"
 msgstr ""
 
-#, fuzzy
 msgctxt "view:cg.equipement:"
 msgid "Équipement"
 msgstr "Équipement"
@@ -4933,7 +5112,6 @@ msgctxt "view:cg.evol_arbre:"
 msgid "General"
 msgstr "Général"
 
-#, fuzzy
 msgctxt "view:cg.evol_arbre:"
 msgid "Photo"
 msgstr "Photo"
@@ -5002,23 +5180,21 @@ msgctxt "view:cg.securite:"
 msgid "securite"
 msgstr ""
 
-#, fuzzy
 msgctxt "view:cg.station:"
-msgid "Arbres"
-msgstr "Arbres"
-
-msgctxt "view:cg.station:"
-msgid "Edit"
-msgstr "Éditer"
-
-#, fuzzy
-msgctxt "view:cg.station:"
-msgid "Emplacements"
-msgstr "Emplacements"
+msgid "Abattage"
+msgstr ""
 
 msgctxt "view:cg.station:"
 msgid "Generate"
 msgstr "Générer"
+
+msgctxt "view:cg.station:"
+msgid "Gestion Courante"
+msgstr ""
+
+msgctxt "view:cg.station:"
+msgid "Gestion Emplacement"
+msgstr ""
 
 msgctxt "view:cg.station:"
 msgid "Général"
@@ -5028,18 +5204,80 @@ msgctxt "view:cg.station:"
 msgid "Map"
 msgstr "Carte"
 
-#, fuzzy
+msgctxt "view:cg.station:"
+msgid "Plantation"
+msgstr ""
+
 msgctxt "view:cg.station:"
 msgid "Station"
 msgstr "Station"
 
-#, fuzzy
 msgctxt "view:cg.station:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
 
 msgctxt "view:cg.statut_voirie:"
 msgid "statut_voirie"
+msgstr ""
+
+msgctxt "view:cg.suppression:"
+msgid "Motif de suppression"
+msgstr ""
+
+msgctxt "view:cg.synthese1.open.start:"
+msgid "Synthèse du patrimoine départemental recensé par commune"
+msgstr ""
+
+msgctxt "view:cg.synthese1:"
+msgid "Libre"
+msgstr ""
+
+msgctxt "view:cg.synthese1:"
+msgid "Rideau"
+msgstr ""
+
+msgctxt "view:cg.synthese1:"
+msgid "Synthèse du patrimoine départemental recensé par commune"
+msgstr ""
+
+msgctxt "view:cg.synthese2.open.start:"
+msgid "Synthèse du patrimoine départemental par commune par gestionnaire"
+msgstr ""
+
+msgctxt "view:cg.synthese2:"
+msgid "Libre"
+msgstr ""
+
+msgctxt "view:cg.synthese2:"
+msgid "Rideau"
+msgstr ""
+
+msgctxt "view:cg.synthese2:"
+msgid "Synthèse du patrimoine départemental par commune par gestionnaire"
+msgstr ""
+
+msgctxt "view:cg.synthese3.open.start:"
+msgid "Synthèse du patrimoine départemental géré par gestionnaire par essence"
+msgstr ""
+
+msgctxt "view:cg.synthese3:"
+msgid "Libre"
+msgstr ""
+
+msgctxt "view:cg.synthese3:"
+msgid "Rideau"
+msgstr ""
+
+msgctxt "view:cg.synthese3:"
+msgid "Synthèse du patrimoine départemental géré par gestionnaire par essence"
+msgstr ""
+
+msgctxt "view:cg.synthese4.open.start:"
+msgid "Liste des unités de gestion plantée par essence"
+msgstr ""
+
+msgctxt "view:cg.synthese4:"
+msgid "Liste des unités de gestion plantée par essence"
 msgstr ""
 
 msgctxt "view:cg.travaux:"
@@ -5058,7 +5296,6 @@ msgctxt "view:cg.travaux:"
 msgid "Réalisé"
 msgstr ""
 
-#, fuzzy
 msgctxt "view:cg.travaux:"
 msgid "Travaux"
 msgstr "Travaux"
@@ -5070,10 +5307,6 @@ msgstr ""
 msgctxt "view:cg.ug:"
 msgid "Anciennes UG"
 msgstr ""
-
-msgctxt "view:cg.ug:"
-msgid "Edit"
-msgstr "Éditer"
 
 msgctxt "view:cg.ug:"
 msgid "General"
@@ -5099,7 +5332,6 @@ msgctxt "view:cg.ug:"
 msgid "Unité de Gestion"
 msgstr ""
 
-#, fuzzy
 msgctxt "view:cg.ug:"
 msgid "Unité de gestion"
 msgstr "Unité de gestion"
@@ -5120,61 +5352,46 @@ msgctxt "view:taxinomie.taxinomie:"
 msgid "Muséum National d'Histoire Naturelle"
 msgstr ""
 
-msgctxt "view:taxinomie.taxinomie:"
-msgid "Taxinomie"
-msgstr ""
-
-#, fuzzy
 msgctxt "wizard_button:cg.check_arbre.open,result,end:"
 msgid "Ok"
 msgstr "Ok"
 
-#, fuzzy
 msgctxt "wizard_button:cg.check_arbre.open,start,check:"
 msgid "Open"
 msgstr "Ouvert"
 
-#, fuzzy
 msgctxt "wizard_button:cg.check_arbre.open,start,end:"
 msgid "Cancel"
 msgstr "Annuler"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese1.open,start,end:"
 msgid "Cancel"
 msgstr "Annuler"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese1.open,start,open_:"
 msgid "Open"
 msgstr "Ouvert"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese2.open,start,end:"
 msgid "Cancel"
 msgstr "Annuler"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese2.open,start,open_:"
 msgid "Open"
 msgstr "Ouvert"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese3.open,start,end:"
 msgid "Cancel"
 msgstr "Annuler"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese3.open,start,open_:"
 msgid "Open"
 msgstr "Ouvert"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese4.open,start,end:"
 msgid "Cancel"
 msgstr "Annuler"
 
-#, fuzzy
 msgctxt "wizard_button:cg.synthese4.open,start,open_:"
 msgid "Open"
 msgstr "Ouvert"

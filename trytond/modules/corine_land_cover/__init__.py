@@ -10,9 +10,13 @@ def register():
     Pool.register(                
         CorineLandCover,
         CorineLandCoverGeo,                                           
-        module='corine_land_cover', type_='model')
+        module='corine_land_cover',
+        type_='model'
+    )
         
     Pool.register(
         ClcQGis,
-        module='corine_land_cover', type_='report')
+        module='corine_land_cover',
+        type_='report'
+    )
 

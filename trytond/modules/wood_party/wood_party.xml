@@ -21,140 +21,116 @@ Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
         <record model="ir.ui.view" id="wood_owner_view_form">
             <field name="model">party.party</field>
             <field name="inherit" ref="party.party_view_form" />
-            <field name="arch" type="xml">
-                <![CDATA[
-                <data>
-                    <xpath
-                        expr="/form/notebook/page[@id=&quot;general&quot;]"
-                        position="after">
-                            <page string="PEFC" col="1" id="property">
-                            <field name="pefc"/>
-                        </page>
-                    </xpath>
-                </data>
-                ]]>
-            </field>
+            <field name="name">wood_party_party</field>
         </record>
 
         <!-- PEFC certification notifications -->
         <record model="ir.ui.view" id="pefc_notify_view_tree">
             <field name="model">pefc.pefc_notify_recipient</field>
             <field name="type">tree</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                    <tree>
-                        <field name="sender"/>
-                        <field name="recipient"/>
-                    </tree>
-                ]]>
-            </field>
+            <field name="name">pefc_notify_recipient_tree</field>
         </record>
         <record model="ir.ui.view" id="pefc_notify_view_form">
             <field name="model">pefc.pefc_notify_recipient</field>
             <field name="type">form</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                    <form string="PEFC notifications recipient" col="2">
-                        <label name="sender"/>
-                        <field name="sender"/>
-                        <label name="recipient"/>
-                        <field name="recipient"/>
-                        <label name="msg_subject"/>
-                        <field name="msg_subject"/>
-                        <label name="msg_content"/>
-                        <field name="msg_content"/>
-                    </form>
-                ]]>
-            </field>
+            <field name="name">pefc_notify_recipient_form</field>
         </record>
-
         <record model="ir.action.act_window" id="act_pefc_notify_form_view">
             <field name="name">PEFC notifications</field>
             <field name="res_model">pefc.pefc_notify_recipient</field>
         </record>
-
         <record model="ir.action.act_window.view" id="act_pefc_notify_form_view1">
             <field name="sequence" eval="10"/>
             <field name="view" ref="pefc_notify_view_tree"/>
             <field name="act_window" ref="act_pefc_notify_form_view"/>
         </record>
-
         <record model="ir.action.act_window.view" id="act_pefc_notify_form_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="pefc_notify_view_form"/>
             <field name="act_window" ref="act_pefc_notify_form_view"/>
         </record>
-
         <record model="ir.ui.view" id="pefc_view_tree">
             <field name="model">pefc.pefc</field>
             <field name="type">tree</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                    <tree>
-                        <field name="enabled"/>
-                        <field name="region"/>
-                        <field name="pefc_no"/>
-                        <field name="date"/>
-                        <field name="duration"/>
-                        <field name="validity"/>
-                    </tree>
-                ]]>
-            </field>
+            <field name="name">pefc_tree</field>
         </record>
-
         <record model="ir.ui.view" id="pefc_view_form">
             <field name="model">pefc.pefc</field>
             <field name="type">form</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                    <form string="PEFC certificate" col="2">
-                        <label name="enabled"/>
-                        <field name="enabled"/>
-                        <label name="region"/>
-                        <field name="region" widget="selection"/>
-                        <label name="pefc_no"/>
-                        <field name="pefc_no"/>
-                        <label name="date"/>
-                        <field name="date"/>
-                        <label name="duration"/>
-                        <field name="duration"/>
-                        <label name="validity"/>
-                        <field name="validity"/>
-                    </form>
-                ]]>
-            </field>
+            <field name="name">pefc_form</field>
         </record>
-
         <record model="ir.action.act_window" id="act_pefc_form_view">
             <field name="name">PEFC certification</field>
             <field name="res_model">pefc.pefc</field>
         </record>
-
         <record model="ir.action.act_window.view" id="act_pefc_form_view1">
             <field name="sequence" eval="10"/>
             <field name="view" ref="pefc_view_tree"/>
             <field name="act_window" ref="act_pefc_form_view"/>
         </record>
-
         <record model="ir.action.act_window.view" id="act_pefc_form_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="pefc_view_form"/>
             <field name="act_window" ref="act_pefc_form_view"/>
         </record>
-
         <menuitem parent="ir.menu_administration" sequence="0" id="menu_pefc_notify" icon="tryton-list" action="act_pefc_notify_form_view"/>
 
+        <!-- GGD garanty notifications -->
+        <record model="ir.ui.view" id="ggd_notify_view_tree">
+            <field name="model">ggd.ggd_notify_recipient</field>
+            <field name="type">tree</field>
+            <field name="name">ggd_notify_recipient_tree</field>
+        </record>
+        <record model="ir.ui.view" id="ggd_notify_view_form">
+            <field name="model">ggd.ggd_notify_recipient</field>
+            <field name="type">form</field>
+            <field name="name">ggd_notify_recipient_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_ggd_notify_form_view">
+            <field name="name">GGD notifications</field>
+            <field name="res_model">ggd.ggd_notify_recipient</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_ggd_notify_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="ggd_notify_view_tree"/>
+            <field name="act_window" ref="act_ggd_notify_form_view"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_ggd_notify_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="ggd_notify_view_form"/>
+            <field name="act_window" ref="act_ggd_notify_form_view"/>
+        </record>
+        <record model="ir.ui.view" id="ggd_view_tree">
+            <field name="model">ggd.ggd</field>
+            <field name="type">tree</field>
+            <field name="name">ggd_tree</field>
+        </record>
+        <record model="ir.ui.view" id="ggd_view_form">
+            <field name="model">ggd.ggd</field>
+            <field name="type">form</field>
+            <field name="name">ggd_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_ggd_form_view">
+            <field name="name">GGD certification</field>
+            <field name="res_model">ggd.ggd</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_ggd_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="ggd_view_tree"/>
+            <field name="act_window" ref="act_ggd_form_view"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_ggd_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="ggd_view_form"/>
+            <field name="act_window" ref="act_ggd_form_view"/>
+        </record>
+        <menuitem parent="ir.menu_administration" sequence="0" id="menu_ggd_notify" icon="tryton-list" action="act_ggd_notify_form_view"/>
+
+        <!-- Menu PEFC -->
         <record model="ir.ui.view" id="wood_party_view">
             <field name="model">party.party</field>
             <field name="type">tree</field>
-            <field name="arch" type="xml">
-                <![CDATA[
-                    <tree>
-                        <field name="name"/>
-                        <field name="pefc"/>
-                    </tree>
-                ]]>
-            </field>
+            <field name="name">party_tree</field>
         </record>
         <record model="ir.action.act_window" id="act_wood_party_form">
             <field name="name">Owner parties</field>

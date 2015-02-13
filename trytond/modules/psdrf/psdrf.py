@@ -27,6 +27,7 @@ from osgeo import osr
 from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
 from trytond.pyson import Bool, Eval, Not
 from trytond.pool import PoolMeta, Pool
+from trytond.wizard import Wizard
 
 from trytond.modules.geotools.tools import get_as_epsg4326, envelope_union
 from trytond.modules.map.map_render import MapRender
@@ -82,18 +83,15 @@ class Dispositif(ModelSQL, ModelView):
             help=u'Dispositif name',
             required=True
         )
-
     codernf = fields.Char(
             string=u'Other Code',
             help=u'Dispositif code (RNF, ONF,...)'
         )
-
     cycles = fields.One2Many(
             'psdrf.cycle',
             'dispositif',
             string=u'Cycles'
         )
-
     status = fields.Many2Many(
             'psdrf.dispositif-protection.area',
             'dispositif_many',
@@ -101,32 +99,26 @@ class Dispositif(ModelSQL, ModelView):
             string=u'Statuts',
             help=u'Protection status'
         )
-
     altitudemin = fields.Float(
             string=u'MIN altitude',
             help='Minimum altitude of the dispositif'
         )
-
     altitudemoy = fields.Float(
             string=u'MED altitude',
             help=u'Medium altitude of the dispositif'
         )
-
     altitudemax = fields.Float(
             string=u'MAX altitude',
             help=u'Maximum altitude of the dispositif'
         )
-
     observation = fields.Text(
             string=u'Observations',
             help='Observation of the dispositif'
         )
-
     date = fields.Date(
             string=u'Date',
             help=u'Arrest date of the dispositif'
         )
-
     country = fields.Many2Many(
             'psdrf.dispositif-commune.commune',
             'dispositif_many',
@@ -134,13 +126,24 @@ class Dispositif(ModelSQL, ModelView):
             string=u'Communes',
             help='Communes situation of the dispositif'
         )
-
     party = fields.Many2Many(
             'psdrf.dispositif-party.party',
             'dispositif_many',
             'party_many',
             string=u'Partner',
             help=u'Dispositif partner of the dispositif'
+        )
+    plot = fields.One2Many(
+            'psdrf.plot',
+            'dispositif',
+            string=u'Plot',
+            help=u'Plot'
+        )
+    tarif = fields.One2Many(
+            'psdrf.tarif',
+            'dispositif',
+            string=u'Tarif',
+            help=u'Tarif'
         )
 
     @classmethod
@@ -239,12 +242,10 @@ class Essence(ModelSQL, ModelView):
             help='Species group code',
             required=True
         )
-
     libelle = fields.Char(
             string=u'Label',
             help=u'Group species label'
         )
-
     taxons = fields.Many2Many(
             'psdrf.essence-taxinomie.taxinomie',
             'essence',
@@ -271,7 +272,6 @@ class EssenceTaxon(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     taxon = fields.Many2One(
             'taxinomie.taxinomie',
             'taxon',
@@ -279,7 +279,6 @@ class EssenceTaxon(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
 
 class Cycle(ModelSQL, ModelView):
     'Cycles'
@@ -310,7 +309,6 @@ class Cycle(ModelSQL, ModelView):
             help=u'Cycle number',
             required=True
         )
-
     dispositif = fields.Many2One(
             'psdrf.dispositif',
             string=u'Dispositif',
@@ -318,12 +316,10 @@ class Cycle(ModelSQL, ModelView):
             help=u'Associated device to cycle',
             select=True
         )
-
     startdate = fields.Date(
             string=u'Start date',
             help=u'Date on which the cycle was performed'
         )
-
     enddate = fields.Date(
             string=u'End date',
             help=u'End date measurement cycle'
@@ -340,42 +336,34 @@ class Cycle(ModelSQL, ModelView):
             string=u'Operators',
             help=u'Operators who made ​​the measurement cycle'
         )
-
     facpb = fields.Numeric(
             string=u'Factor PB',
             help=u'Slenderness factor of small wood'
         )
-
     facgb = fields.Numeric(
             string=u'Factor GB',
             help=u'Slenderness factor of large timber'
         )
-
     tarif = fields.Integer(
             string=u'Tarif SL',
             help=u'Tarif number Schaeffer Lent default'
         )
-
     observation = fields.Text(
             string=u'Observations',
             help=u'Observations of cycle'
         )
-
     nombre_placette = fields.Integer(
             string=u'Number',
             help=u'Number of measured plot'
         )
-
     raison = fields.Text(
             string=u'Reason',
             help=u'Reason of cycle',
         )
-
     caracteristique = fields.Text(
             string=u'Specifications',
             help=u'Cycle specifications'
         )
-
     party = fields.Many2Many(
             'psdrf.cycle-party.party_backer',
             'cycle_many',
@@ -383,12 +371,10 @@ class Cycle(ModelSQL, ModelView):
             string=u'Funders',
             help=u'Cycle funders'
         )
-
     strate_obs = fields.Text(
             string=u'Observations',
             help='Strata observations'
         )
-
 
 class Plot(ModelSQL, ModelView):
     'Plot'
@@ -436,18 +422,39 @@ class Plot(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
+    stand_tree = fields.One2Many(
+            'psdrf.stand_tree',
+            'plot',
+            string=u'Stand tree',
+            help=u'Stand tree',
+        )
+    transect = fields.One2Many(
+            'psdrf.transect',
+            'plot',
+            string=u'Transect',
+            help=u'Transect',
+        )
+    regeneration = fields.One2Many(
+            'psdrf.regeneration',
+            'plot',
+            string=u'Regeneration',
+            help=u'Regeneration',
+        )
+    coarse = fields.One2Many(
+            'psdrf.coarse',
+            'plot',
+            string=u'Coarse',
+            help=u'Coarse',
+        )
     num = fields.Integer(
             string=u'Plot',
             help=u'Number of the plot',
             required=True
         )
-
     date = fields.Date(
             string=u'Date',
             help=u'Measurement date of the plot'
         )
-
     last_year_exploit = fields.Char(
             string=u'Last exploitation',
             help=u'Last year operating',
@@ -469,27 +476,22 @@ class Plot(ModelSQL, ModelView):
             string=u'Strata',
             help=u'identifying the stratum belongs plot'
         )
-
     forest_name = fields.Char(
             string=u'Forest',
             help=u'Forest name'
         )
-
     acc = fields.Numeric(
             string=u'Precision',
             help=u'Accuracy of the measurement (m)'
         )
-
     slope = fields.Numeric(
             string=u'Slope',
             help=u'Slope of the plot (%)'
         )
-
     exp = fields.Numeric(
             string=u'Exposure',
             help=u'Exposure of the plot (gr)'
         )
-
     corine_code = fields.Many2One(
             'habitat.corine_biotope',
             string=u'CORINE Code',               
@@ -500,12 +502,10 @@ class Plot(ModelSQL, ModelView):
                         ('france', '=', 'TRUE')
                      ]
         )
-
     charact = fields.Text(
             string=u'Characters stationnels',
             help=u'Stationnels characters plot'
         )
-
     relasco = fields.Integer(
             string=u'Relascopique angle',
             help=u'Coefficient used to measure angles of the basal area (1, 2, 3, 4, 5)',
@@ -531,12 +531,10 @@ class Plot(ModelSQL, ModelView):
             string=u'Tracking',
             help=u'Path to access the plot',
         )
-
     centre = fields.Text(
             string=u'Spotting',
             help=u'Locating the center of the plot',
         )
-
     geom = fields.MultiPoint(
             string=u'Geometry',
             help=u'Geometry point (EPSG=2154, RGF93/Lambert 93)',
@@ -651,6 +649,17 @@ class Plot(ModelSQL, ModelView):
             data = m.render()
             cls.write([record], {'image_map': buffer(data)})
 
+class GeneratePlot(Wizard):
+    __name__ = 'psdrf.generateplot'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('psdrf.plot')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate([record])
+        return []
+
 class PlotQGis(QGis):
     __name__ = 'psdrf.plot.qgis'
     TITLES = {'psdrf.plot': u'Plot'}
@@ -666,17 +675,14 @@ class Typo(ModelSQL, ModelView):
             help=u'Code of typo',
             required=True
         )
-
     libelle = fields.Char(
             string=u'Label',
             help=u'Label of typo',
         )
-
     observation = fields.Text(
             string=u'Observations',
             help=u'Observations of typo',
         )
-
 
 class Rot(ModelSQL, ModelView):
     'Rot'
@@ -688,12 +694,10 @@ class Rot(ModelSQL, ModelView):
             help=u'Code of rot',
             required=True
         )
-
     libelle = fields.Char(
             string=u'Lablel',
             help=u'Label of rot',
         )
-
     observation = fields.Text(
             string='Observations',
             help=u'Rot observations',
@@ -710,12 +714,10 @@ class Bark(ModelSQL, ModelView):
             help=u'Bark code',
             required=True
         )
-
     libelle = fields.Char(
             string=u'Label',
             help=u'Bark label',
         )
-
     observation = fields.Text(
             string=u'Observations',
             help=u'Bark observations'
@@ -745,7 +747,6 @@ class Measure(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     tree = fields.Many2One(
             'psdrf.stand_tree',
             string=u'Tree',
@@ -757,7 +758,6 @@ class Measure(ModelSQL, ModelView):
             depends=['dispositif'],
             select=True
         )
-
     dispositif = fields.Function(
             fields.Many2One(
                 'psdrf.dispositif', string=u'Dispositif'
@@ -774,22 +774,18 @@ class Measure(ModelSQL, ModelView):
             required=True,
             select=True
         ) # used for graphs
-
     dbh2 = fields.Numeric(
             string=u'Diameter 2',
             help=u'Diameter 1.30 m, parallel to the radius of the plot (cm)'
         )
-
     height = fields.Numeric(
             string=u'Height',
             help=u'tree height'
         )
-
     coppice = fields.Char(
             string=u'Clump', # Cépée
             help=u'Tree derived from clump'
         )
-
     typo = fields.Many2One(
             'psdrf.typo',
             string=u'Type',
@@ -797,7 +793,6 @@ class Measure(ModelSQL, ModelView):
             help=u'Type dead standing tree',
             select=True
         )
-
     bark_stage = fields.Many2One(
             'psdrf.bark',
             string=u'Bark stage',
@@ -805,7 +800,6 @@ class Measure(ModelSQL, ModelView):
             help=u'Stage of decomposition bark',
             select=True
         )
-
     rot_stage = fields.Many2One(
             'psdrf.rot',
             string=u'Decay stage', # Stade pourriture
@@ -813,12 +807,10 @@ class Measure(ModelSQL, ModelView):
             help=u'Stage of decomposition rot',
             select=True
         )
-
     observation = fields.Text(
             string=u'Observations',
             help=u'Observations',
         )
-
     ecologie = fields.One2Many(
             'psdrf.measure-psdrf.ecologie',
             'measure',
@@ -848,12 +840,10 @@ class StandTree(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     num = fields.Integer(
             string=u'Number',
             help=u'Tree number sampled'
         )
-
     essence = fields.Many2One(
             'psdrf.essence',
             string=u'Species',
@@ -862,17 +852,14 @@ class StandTree(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     azimut = fields.Float(
             string=u'Azimut',
             help=u'Azimut to the center of the plot'
         )
-
     distance = fields.Float(
             string=u'Distance',
             help=u'Distance to the center of the plot'
         )
-
     measure = fields.One2Many(
             'psdrf.measure',
             'tree',
@@ -883,7 +870,6 @@ class StandTree(ModelSQL, ModelView):
                    ],
             depends=['dispositif']
         )
-
     dispositif = fields.Function(
             fields.Many2One(
                 'psdrf.dispositif',
@@ -996,7 +982,6 @@ class MeasureCoarse(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     coarse = fields.Many2One(
             'psdrf.coarse',
             string=u'Coarse',
@@ -1006,39 +991,32 @@ class MeasureCoarse(ModelSQL, ModelView):
                    ],
             select=True
         )
-
     base_diam = fields.Numeric(
             string=u'Start diameter',
             help=u'Initial diameter of the wood piece sampled (cm)'
         )
-
     top_diam = fields.Numeric(
             string=u'End diameter',
             help=u'Final diameter of the workpiece sampled (cm)'
         )
-
     mid_diam = fields.Numeric(
             string=u'Median diameter',
             help=u'Median diameter of the wood piece sampled (cm)',
             required=True
         )
-
     length = fields.Numeric(
             string=u'Length',
             help=u'Length of the sampled piece of wood (m)',
             required=True
         )
-
     contact = fields.Numeric(
             string=u'Contact',
             help=u'Percentage of contacting the piece of timber with soil (%)'
-        )
-    
+        )   
     windfall = fields.Boolean(
             string=u'Chablis',
             help=u'Chablis (checked if the piece of wood is attached to the stem)',
         )
-
     bark_stage = fields.Many2One(
             'psdrf.bark',
             string=u'Bark',
@@ -1046,7 +1024,6 @@ class MeasureCoarse(ModelSQL, ModelView):
             help=u'Stage of decomposition bark',
             select=True
         )
-
     rot_stage = fields.Many2One(
             'psdrf.rot',
             string=u'Decay',
@@ -1054,12 +1031,10 @@ class MeasureCoarse(ModelSQL, ModelView):
             help=u'Stage of decomposition rot',
             select=True
         )
-
     observation = fields.Text(
             string=u'Observations',
             help=u'Observations'
         )
-
 
 class Coarse(ModelSQL, ModelView):
     'Coarse'
@@ -1081,13 +1056,11 @@ class Coarse(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     num = fields.Integer(
             string=u'Number',
             required=True,
             help=u'Part Number wood sampled (possible repeat)'
         )
-
     species = fields.Many2One(
             'psdrf.essence',
             string=u'Species',
@@ -1096,14 +1069,12 @@ class Coarse(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     measure = fields.One2Many(
             'psdrf.measure_coarse',
             'coarse',
             string=u'Measure',
             help=u'Coarse measure',
         )
-
 
 class Transect(ModelSQL, ModelView):
     'Transect'
@@ -1117,7 +1088,6 @@ class Transect(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     plot = fields.Many2One(
             'psdrf.plot',
             string=u'Plot',
@@ -1129,7 +1099,6 @@ class Transect(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     dispositif = fields.Function(
             fields.Many2One(
                     'psdrf.dispositif',
@@ -1146,7 +1115,6 @@ class Transect(ModelSQL, ModelView):
             help=u'Transect number',
             required=True
         )
-
     species = fields.Many2One(
             'psdrf.essence',
             string=u'Species',
@@ -1155,28 +1123,23 @@ class Transect(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     diam = fields.Numeric(
             string=u'Diameter',
             help=u'Diameter taken at the place where the piece of wood cut transect (cm)',
             required=True
         )
-
     angle = fields.Numeric(
             string=u'Angle',
             help=u'Angle (deg) of the workpiece relative to the ground'
         )
-
     contact = fields.Boolean(
             string=u'Contact',
             help=u'Contact or not the piece of timber with the ground'
         )
-
     windfall = fields.Boolean(
             string=u'Chablis',
             help=u'Chablis (checked if the piece of wood is attached to the stem)'
         )
-
     bark_stage = fields.Many2One(
             'psdrf.bark',
             string=u'Bark stage',
@@ -1184,7 +1147,6 @@ class Transect(ModelSQL, ModelView):
             help=u'Stage of decomposition bark',
             select=True
         )
-
     rot_stage = fields.Many2One(
             'psdrf.rot',
             string=u'Decomposition stage',
@@ -1192,17 +1154,14 @@ class Transect(ModelSQL, ModelView):
             help=u'Stage of decomposition rot',
             select=True
         )
-
     observation = fields.Text(
             string=u'Observations',
             help=u'Transect observations',
         )
 
-
 class Regeneration(ModelSQL, ModelView):
     u'Regeneration'
     __name__ = 'psdrf.regeneration'
-
 
     cycle = fields.Many2One(
             'psdrf.cycle',
@@ -1212,7 +1171,6 @@ class Regeneration(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     plot = fields.Many2One(
             'psdrf.plot',
             string=u'Plot',
@@ -1225,7 +1183,6 @@ class Regeneration(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     dispositif = fields.Function(
             fields.Many2One(
                     'psdrf.dispositif',
@@ -1242,7 +1199,6 @@ class Regeneration(ModelSQL, ModelView):
             help=u'Number subplot (1, 2 or 3)',
             required=True
         )
-
     species = fields.Many2One(
             'psdrf.essence',
             string=u'Species',
@@ -1251,42 +1207,34 @@ class Regeneration(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     coppice = fields.Boolean(
             string=u'Clump',
             help=u'Clump of seedlings from'
         )
-
     seed_cover = fields.Integer(
             string=u'Recovery', # Recouvrement
             help='Recovery percentage of seedlings (%)'
         )
-
     browsing = fields.Boolean(
             string=u'Abrouti',
             help='Sowing abrouti'
         )
-
     observation = fields.Text(
             string=u'Observations',
             help=u'Regeneration observation'
         )
-
     class1 = fields.Integer(
             string=u'Class 1',
             help='Number of seedlings Class 1'
         )
-
     class2 = fields.Integer(
             string=u'Class 2',
             help='Number of seedlings Class 2'
         )
-
     class3 = fields.Integer(
             string=u'Class 3',
             help='Number of seedlings Class 3'
         )
-
 
 class Tarif(ModelSQL, ModelView):
     'Tarif'
@@ -1300,7 +1248,6 @@ class Tarif(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     essence = fields.Many2One(
             'psdrf.essence',
             string=u'Species',
@@ -1308,7 +1255,6 @@ class Tarif(ModelSQL, ModelView):
             required=True,
             select=True
         )
-
     name = fields.Selection(
             [
                 (u'schr', 'Schaeffer rapide'),
@@ -1317,13 +1263,11 @@ class Tarif(ModelSQL, ModelView):
             string=u'Schaeffer type',
             help=u'Choosing a type of fare Schaeffer'
         )
-
     number = fields.Integer(
             string=u'Number',
             help=u'Tarif number',
             required=True
         )
-
 
 class DispositifCommune(ModelSQL):
     """Psdrf Dispositif - Commune"""

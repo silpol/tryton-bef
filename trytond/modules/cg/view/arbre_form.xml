@@ -19,13 +19,13 @@
     <notebook colspan="6">
         <page string="Général" id="general">            
             <label name="emplacement"/>
-            <field name="emplacement"/>
-            <label name="compteur"/>
-            <field name="compteur"/>                            
+            <field name="emplacement"/>                           
             <label name="an"/>
             <field name="an"/>
             <label name="diametre"/>
             <field name="diametre" widget="selection"/>
+            <label name="compteur"/>
+            <field name="compteur"/> 
             <label name="plantation"/>
             <field name="plantation" widget="selection"/>
             <label name="situation"/>
@@ -36,6 +36,8 @@
             <field name="essence" view_ids="cg.cg_taxinomie_view_tree"/>
             <label name="conduite"/>
             <field name="conduite"/>
+            <label name="motifsuppression"/>
+            <field name="motifsuppression" widget="selection"/>
             <label name="date"/>
             <field name="date"/>
             <label name="active"/>
@@ -44,10 +46,8 @@
         <page string="Évolutions" id="evol">                                        
             <field name="evolution"/>
         </page>
-        <page string="Map" id="map" col="2">                                   
-            <field name="arbre_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+        <page string="Map" id="map" col="1">                                   
             <field name="arbre_map" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <button string="Edit" name="arbre_edit" icon="tryton-executable" />
             <button string="Generate" name="generate" icon="tryton-executable" />
         </page>
         <page string="Photo" id="photo">                                                                                  

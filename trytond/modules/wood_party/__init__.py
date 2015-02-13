@@ -22,6 +22,7 @@ Copyright (c) 2012 Bio Eco Forests <contact@bioecoforests.com>
 from trytond.pool import Pool
 
 from .pefc import *
+from .ggd import *
 from .wood_party import *
 
 
@@ -30,4 +31,6 @@ def register():
         Party,
         PEFCNotifyRecipient,
         PEFC,
+        GGDNotifyRecipient,
+        GGD,
         module='wood_party', type_='model')

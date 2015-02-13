@@ -21,56 +21,25 @@ Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
         <record model="ir.ui.view" id="act_sale_opportunity_view_form">
             <field name="model">sale.opportunity</field>
             <field name="inherit" ref="sale_opportunity.opportunity_view_form" />
-            <field name="arch" type="xml">
-                <![CDATA[
-                <data>
-                    <xpath
-                        expr="/form/notebook/page[@id=&quot;opportunity&quot;]/separator[@name=&quot;comment&quot;]" position="replace">
-                    </xpath>                
-                    <xpath
-                        expr="/form/notebook/page[@id=&quot;opportunity&quot;]/field[@name=&quot;comment&quot;]" position="replace">
-                        <notebook>
-                            <page string="Comment" id="comment">
-                                <field name="comment"/>
-                            </page>
-                            <page string="Contacts" id="contacts">
-                                <field name="contacts" view_ids="bef_sale_opportunity.bef_sale_opportunity_view_form"/>
-                            </page>
-                        </notebook>
-                    </xpath>                                       
-                </data>
-                ]]>
-            </field>
+            <field name="name">sale_opportunity_form</field>
         </record>
-
         <record model="ir.ui.view" id="act_sale_opportunity_view_tree">
             <field name="model">sale.opportunity</field>
             <field name="inherit" ref="sale_opportunity.opportunity_view_tree" />
-            <field name="arch" type="xml">
-                <![CDATA[
-                <data>
-                    <xpath
-                        expr="/tree">
-                    </xpath>
-                </data>
-                ]]>
-            </field>
+            <field name="name">sale_opportunity_tree</field>
         </record>
-
         <record model="ir.ui.view" id="bef_sale_opportunity_view_form">
             <field name="model">bef_sale_opportunity.contact</field>
             <field name="type">form</field>
             <field name="name">bef_sale_opportunity_form</field>
         </record>
-
         <record model="ir.ui.view" id="bef_sale_opportunity_view_tree">
             <field name="model">bef_sale_opportunity.contact</field>
             <field name="type">tree</field>
             <field name="name">bef_sale_opportunity_tree</field>
         </record>
-
         <record model="ir.action.act_window" id="act_bef_sale_opportunity_form">
-            <field name="name">Comments</field>
+            <field name="name">Contacts</field>
             <field name="res_model">bef_sale_opportunity.contact</field>
         </record>
         <record model="ir.action.act_window.view" id="act_bef_sale_opportunity_form_view1">
@@ -83,7 +52,6 @@ Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
             <field name="view" ref="bef_sale_opportunity_view_form"/>
             <field name="act_window" ref="act_bef_sale_opportunity_form"/>
         </record>
-
         <menuitem parent="sale.menu_sale" action="act_bef_sale_opportunity_form" id="menu_bef_sale_opportunity_form" sequence="6"/>
     </data>
 </tryton>

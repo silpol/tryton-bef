@@ -36,12 +36,13 @@ from trytond.modules.qgis.qgis import QGis
 class Forest(ModelSQL, ModelView):
     'Forest'
     __name__ = 'forest.forest'
+    _rec_name = 'name'
 
     short_name = fields.Char('ID', required=True)
     name = fields.Char('Name', required=True)
     owner = fields.Many2One('party.party', 'Owner', required=True, ondelete='RESTRICT',
                             domain=[('categories', 'child_of', 1, 'parent')])
-    address = fields.Many2One('party.address', 'Address', required=True)
+    address = fields.Many2One('party.address', 'Address', required=False)
     proximity = fields.Char('Proximity')
     place_name = fields.Char('Place name')
 

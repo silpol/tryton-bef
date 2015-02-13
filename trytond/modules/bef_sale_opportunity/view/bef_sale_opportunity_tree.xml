@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
-<tree string="Comment" editable="bottom">
-    <field name="date"/>
+<tree string="Contact" editable="bottom">
+    <field name="opportunity" widget="selection"/>
     <field name="code"/>
     <field name="codcom"/>
-    <field name="party"/>
-    <field name="standard"/>    
-    <field name="lastname"/>
-    <field name="name"/>
-    <field name="directline"/>
+    <field name="party"/>    
     <field name="fonction"/>
-    <field name="portable"/>
     <field name="comment"/>
 </tree>

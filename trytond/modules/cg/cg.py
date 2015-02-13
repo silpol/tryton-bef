@@ -3,16 +3,15 @@
 GPLv3
 """
 
-import datetime
-import time
-from collections import OrderedDict
 from datetime import date
+from dateutil.relativedelta import relativedelta
+from collections import OrderedDict
 import os
 
 from osgeo import osr
 
 from trytond.model import ModelView, ModelSingleton, ModelSQL, fields, Workflow
-from trytond.pyson import Bool, Eval, Not, Equal, In, If, Get, PYSONEncoder
+from trytond.pyson import Bool, Eval, Not, Equal, In, If, Get, PYSONEncoder, Id
 from trytond.pool import PoolMeta, Pool
 from trytond.transaction import Transaction
 
@@ -497,18 +496,9 @@ class ug(Mapable, ModelSQL, ModelView):
             help = u'Géométrie multipolygonale',            
             readonly = False,           
         )            
-    ug_image = fields.Function(
-            fields.Binary(
-                    'Image'
-                ),
-            'get_image'
-        )
     ug_map = fields.Binary(
             string=u'Image',
         )
-
-    def get_image(self, ids):
-        return self._get_image( 'ug_image.qgs', 'carte' )
 
     def get_map(self, ids):
         return self._get_image( 'ug_map.qgs', 'carte' ) 
@@ -679,41 +669,74 @@ class station(Mapable, ModelSQL, ModelView):
         u'equipement UG'        
         return '%s' % (self.ug.equipement.rec_name)
 
+    nameug = fields.Function(
+                    fields.Char(
+                        string = u'Nom Route',
+                        help=u'Nom de la Route'
+                    ),
+            '_get_nameug',
+            searcher='search_nameug'
+        )
+
+    def _get_nameug(self, ids):
+        u'Nom de la route UG'        
+        return '%s' % (self.ug.equipement.name)
+
+
+    @classmethod
+    def search_nameug(cls, name, clause):
+        return [('ug.equipement.name',) + tuple(clause[1:])]
+
     refug = fields.Function(
                     fields.Char(
                         string = u'Référence UG',
                         help=u'Référence UG'
                     ),
-            '_get_refug'
+            '_get_refug',
+            searcher='search_refug'
         )
 
     def _get_refug(self, ids):
         u'Référence UG'        
         return '%s' % (self.ug.refug)
 
+    @classmethod
+    def search_refug(cls, name, clause):
+        return [('ug.refug',) + tuple(clause[1:])]
+
     rueug = fields.Function(
                     fields.Char(
                         string = u'Nom de la rue',
                         help=u'Nom de la rue'
                     ),
-            '_get_rueug'
+            '_get_rueug',
+            searcher='search_rueug'
         )
 
     def _get_rueug(self, ids):
         u'Rue UG'        
         return '%s' % (self.ug.rue)
 
+    @classmethod
+    def search_rueug(cls, name, clause):
+        return [('ug.rue',) + tuple(clause[1:])]
+
     debug = fields.Function(
                     fields.Char(
                         string = u'Début de tronçon',
                         help=u'Début de tronçon'
                     ),
-            '_get_debug'
+            '_get_debug',
+            searcher='search_debug'
         )
 
     def _get_debug(self, ids):
         u'Debut tronçon UG'        
         return '%s' % (self.ug.debut)
+
+    @classmethod
+    def search_debug(cls, name, clause):
+        return [('ug.debut',) + tuple(clause[1:])]
 
     finug = fields.Function(
                     fields.Char(
@@ -727,10 +750,14 @@ class station(Mapable, ModelSQL, ModelView):
         u'Fin de tronçon UG'        
         return '%s' % (self.ug.fin)
 
+    @classmethod
+    def search_finug(cls, name, clause):
+        return [('ug.fin',) + tuple(clause[1:])]
+
     communeug = fields.Function(
                     fields.Char(                        
-                        string=u'Communes',
-                        help=u'Communes'
+                        string=u'Communes UG',
+                        help=u'Communes de l\'Unité de Gestion'
                     ),
                 'get_commune'
         )
@@ -806,15 +833,35 @@ class station(Mapable, ModelSQL, ModelView):
             states=STATES,
             depends=DEPENDS,
         )
-    arbre = fields.One2Many(
-            'cg.evol_arbre',
-            'station',            
-            string=u'Arbres',
-            help=u'Évolution des diagnotics de l\'arbre',
-            required=False,
-            states=STATES,
-            depends=DEPENDS,
+    arbre = fields.Function(
+                fields.Char(                               
+                    string=u'Arbres',
+                    help=u'Arbres de la station',            
+                ),
+            'get_arbre'
         )
+
+    def get_arbre(self, ids):                                              
+        cursor = Transaction().cursor
+        def get_arbre_actif(station_id):
+            cursor.execute('SELECT COUNT(a.id) '
+                'FROM cg_arbre a, '
+                '(SELECT id '
+                'FROM cg_emplacement '
+                'WHERE station= %s) as foo '
+                'WHERE a.emplacement=foo.id and active=true', (str(station_id),))                    
+            try:
+                ca = cursor.fetchone()[0]                                    
+            except:
+                ca = {}                    
+            return ca
+        result = "(0)"
+        # Donne l'ID de la station
+        station_id = self.id
+        if station_id:                
+            result = "( " + str(get_arbre_actif(station_id)) + " )"
+        return result
+
     geom = fields.MultiLineString(
             string=u'Geometry',
             help=u'Géométries lignes',
@@ -824,18 +871,9 @@ class station(Mapable, ModelSQL, ModelView):
             readonly=False,            
         )            
             
-    station_image = fields.Function(
-                fields.Binary(
-                        string=u'Image'
-             ),
-            'get_image'
-        )
     station_map = fields.Binary(
             string=u'Image'
         )  
-
-    def get_image(self, ids):
-        return self._get_image( 'station_image.qgs', 'carte' )
 
     def get_map(self, ids):
         return self._get_image( 'station_map.qgs', 'carte' ) 
@@ -946,6 +984,12 @@ class evol_emplacement(ModelSQL, ModelView):
             string = u'Date',            
             help=u'Date du constat',
         )
+
+    @staticmethod
+    def default_date():
+        Date = Pool().get('ir.date')
+        return Date.today()
+
     nature = fields.Many2One(
             'cg.nature',
             string = u'Nature',
@@ -962,20 +1006,27 @@ class evol_emplacement(ModelSQL, ModelView):
 
     def on_change_with_diametre(self, name=None):
         if self.nature is not None:
-            if self.nature.code == 'SOU':                
-                return self.diam
+            if self.nature.code == 'SOU':
+                try:
+                    index = self.diam.id
+                    return index
+                except:             
+                    return None
 
-    diam = fields.Function(
-            fields.Integer(                    
-                    string=u'Diam'
-                ),
-            getter='get_diam'
+    diam = fields.Function(                 
+            fields.Many2One(
+                'cg.diametre',
+                string = u'Diam',
+                on_change_with=['nature', 'emplacement'],
+                depends=['nature', 'emplacement']
+            ),
+            'on_change_with_diam'
         )
 
-    def get_diam(self, ids):
-        if self.emplacement is not None:
+    def on_change_with_diam(self, name=None):
+        if self.nature is not None:
             try:
-                index = self.emplacement.arbre[-1].evolution[-1].diamtronc.id
+                index = self.emplacement.arbrediamtronc.id
                 return index
             except:
                 return None
@@ -989,15 +1040,13 @@ class evol_emplacement(ModelSQL, ModelView):
     anindispo = fields.Integer(
             string=u'Année indisponibilité',
             help=u'Année où l\'emplacement est devenu indisponible pour une plantation',
-            states={
-                    'invisible': Equal(Eval('cause', None), None),
-                   },
+            states={'invisible': Equal(Eval('cause', None), None)},
             on_change_with=['cause']
         )
 
     def on_change_with_anindispo(self):
-        if self.cause is None:
-            return 2014              
+        if self.cause is not None:
+            return date.today().year             
             
     @staticmethod
     def default_active():
@@ -1006,7 +1055,6 @@ class evol_emplacement(ModelSQL, ModelView):
 class emplacement(Mapable, ModelSQL, ModelView):
     u'Emplacement'
     __name__ = 'cg.emplacement'
-    _rec_name = 'code'
        
     station = fields.Many2One(
             'cg.station',
@@ -1152,15 +1200,428 @@ class emplacement(Mapable, ModelSQL, ModelView):
             help=u'Évolutions de l\'emplacement',            
             states=STATES,
             depends=DEPENDS,
-        )        
+        )
+    evonature = fields.Function(
+            fields.Many2One(
+                'cg.nature',
+                string = u'Nature',
+                help=u'Nature de l\'emplacement',
+            ),
+            'get_evonature',
+        )
+
+    def get_evonature(self, ids):        
+        try:
+            index = self.evolution[-1].nature.id
+            return index
+        except:
+            return None
+
+    evocause = fields.Function(
+            fields.Many2One(
+                'cg.cause',
+                ondelete='CASCADE',
+                string=u'Cause',
+                help=u'Cause de l\'évolution de l\'emplacement',
+            ),
+            'get_evocause',
+        )
+
+    def get_evocause(self, ids):        
+        try:
+            index = self.evolution[-1].cause.id
+            return index
+        except:
+            return None
+
     arbre = fields.One2Many(
             'cg.arbre',
             'emplacement',           
             string=u'Arbres',
             help=u'Arbres présents sur cet emplacement',            
-            states=STATES,
-            depends=DEPENDS,
-        )    
+            states=STATES,            
+            depends=DEPENDS,            
+        )
+    arbreessence = fields.Function(
+            fields.Many2One(
+                'taxinomie.taxinomie',                       
+                string=u'Essence',
+                help=u'Nom de l\'essence',                
+            ),
+            'get_arbreessence',
+        )
+
+    def get_arbreessence(self, ids):        
+        try:
+            index = self.arbre[-1].essence.id
+            return index
+        except:
+            return None
+
+    arbreid = fields.Function(
+                fields.Integer(                    
+                    string=u'ID Arbre',
+                    help=u'Identifiant de l\'arbre',
+                    states=STATES,
+                    depends=DEPENDS,
+                ),
+                'get_arbreid',               
+        )
+
+    def get_arbreid(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].arbre.id
+            return index
+        except:
+            return None
+
+    arbredatesuppression = fields.Function(
+                fields.Date(                    
+                    string=u'Date de suppression',
+                    help=u'Date du suppression de l\'arbre',
+                    states=STATES,
+                    depends=DEPENDS,
+                ),
+                'get_arbredatesuppression',               
+        )
+
+    def get_arbredatesuppression(self, ids):        
+        try:
+            index = self.arbre[-1].date
+            return index
+        except:
+            return None
+
+    arbremotifsuppression = fields.Function(
+                fields.Many2One(
+                    'cg.suppression',
+                    string=u'Motif de suppression',
+                    help=u'Motif de suppression de l\'arbre',
+                ),  
+                'get_arbremotifsuppression',               
+        )
+
+    def get_arbremotifsuppression(self, ids):        
+        try:
+            index = self.arbre[-1].motifsuppression.id
+            return index
+        except:
+            return None
+
+    arbredate = fields.Function(
+                fields.Date(                    
+                    string=u'Date',
+                    help=u'Date du constat',
+                    states=STATES,
+                    depends=DEPENDS,
+                ),
+                'get_arbredate',               
+        )
+
+    def get_arbredate(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].date
+            return index
+        except:
+            return None
+        
+    arbremecanique = fields.Function(
+            fields.Selection(
+                _MECANIQUES, 
+                string = u'État mécanique',
+                help = u'État mécanique de l\'arbre',
+            ),
+            'get_arbremecanique',
+        )
+
+    def get_arbremecanique(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].mecanique
+            return index
+        except:
+            return None
+                    
+    arbrevigueur = fields.Function(
+            fields.Selection(
+                _VIGUEURS,            
+                string=u'Vigueur',
+                help=u'Vigueur de l\'arbre',
+            ),
+            'get_arbrevigueur',
+        )
+
+    def get_arbrevigueur(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].vigueur
+            return index
+        except:
+            return None
+        
+    arbreconduite = fields.Function(
+                fields.Selection(
+                    _CONDUITES,
+                    string=u'Conduite',
+                    help=u'Conduite',
+                    states=STATES,
+                    depends=DEPENDS,
+                ),
+                'get_arbreconduite',               
+        )
+
+    def get_arbreconduite(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].conduite
+            return index
+        except:
+            return None
+
+    arbrepaysager = fields.Function(
+            fields.Selection(
+                _PAYSAGER,
+                string=u'Impact paysager',
+                help=u'Impact paysager',
+            ),
+            'get_arbrepaysager',
+        )
+
+    def get_arbrepaysager(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].paysager
+            return index
+        except:
+            return None
+
+    arbreht = fields.Function(
+            fields.Selection(
+                _HAUTEURS, 
+                string = u'Hauteur arbre',
+                help = u'Hauteur totale de l\'arbre',
+                sort=False
+            ),
+            'get_arbreht',
+        )
+
+    def get_arbreht(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].ht
+            return index
+        except:
+            return None
+
+    arbrehfut = fields.Function(
+            fields.Integer(             
+                string = u'Hauteur fût',
+                help = u'Hauteur totale du fût de l\'arbre',
+            ),
+            'get_arbrehfut',
+        )
+
+    def get_arbrehfut(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].hfut
+            return index
+        except:
+            return None
+       
+    arbrediamhoup = fields.Function(
+            fields.Integer(             
+                string = u'Diamètre houppier',
+                help = u'Diamètre du houppier de l\'arbre',
+            ),
+            'get_arbrediamhoup',
+        )
+
+    def get_arbrediamhoup(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].diamhoup
+            return index
+        except:
+            return None
+
+    arbrelarghoupvoie = fields.Function(
+            fields.Float(             
+                string = u'Largeur Houppier Voie',
+                help = u'Largeur du houppier de l\'arbre sur la voie',
+            ),
+            'get_arbrelarghoupvoie',
+        )
+
+    def get_arbrelarghoupvoie(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].larghoupvoie
+            return index
+        except:
+            return None
+
+    arbrelarghoupriv = fields.Function(
+            fields.Float(             
+                string = u'Largeur Houppier Riverain',
+                help = u'Diamètre du houppier de l\'arbre sur riverain',
+            ),
+            'get_arbrelarghoupriv',
+        ) 
+
+    def get_arbrelarghoupriv(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].larghoupriv
+            return index
+        except:
+            return None
+       
+    arbrediamtronc = fields.Function(
+            fields.Many2One(
+                'cg.diametre',
+                ondelete='CASCADE',             
+                string = u'Diamètre tronc',
+                help = u'Classe du diamètre du tronc de l\'arbre mesuré à 1,30m',
+            ),
+            'get_arbrediamtronc',
+        )
+
+    def get_arbrediamtronc(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].diamtronc.id
+            return index
+        except:
+            return None
+                              
+    arbregrille = fields.Function(
+            fields.Boolean(
+                string=u'Grille',
+                help=u'Existence d\'une grille',
+            ),
+            'get_arbregrille',
+        )   
+
+    def get_arbregrille(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].grille
+            return index
+        except:
+            return None
+ 
+    arbrelignelec = fields.Function(
+            fields.Boolean(
+                string=u'Ligne électrique',
+                help=u'Présence d\'une ligne électrique',
+            ),
+            'get_arbrelignelec',
+        )
+
+    def get_arbrelignelec(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].lignelec
+            return index
+        except:
+            return None
+   
+    arbresonde = fields.Function(
+            fields.Boolean(
+                string = u'Tensio',
+                help=u'Sonde tensiométrique',            
+            ),
+            'get_arbresonde',
+        )
+        
+    def get_arbresonde(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].sonde
+            return index
+        except:
+            return None
+       
+    arbreempmat = fields.Function(
+            fields.Boolean(
+                string=u'Emplacement mat.',
+                help=u'Emplacement matérialisé'
+            ),
+            'get_arbreempmat',
+        )
+
+    def get_arbreempmat(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].empmat
+            return index
+        except:
+            return None
+  
+    arbresurfacepiedarbre = fields.Function(
+            fields.Float(             
+                string = u'Surface pied',
+                help = u'Surface du pied de l\'arbre',
+            ),
+            'get_arbresurfacepiedarbre',
+        ) 
+
+    def get_arbresurfacepiedarbre(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].surfacepiedarbre
+            return index
+        except:
+            return None
+   
+    arbrearrosage = fields.Function(
+            fields.Boolean(
+                string=u'Arrosage automatique',
+                help=u'Arrosage automatique'
+            ),
+            'get_arbrearrosage',
+        )
+
+    def get_arbrearrosage(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].arrosage
+            return index
+        except:
+            return None
+   
+    arbreenvironnement = fields.Function(
+            fields.Selection(
+                _ENVIRONNEMENTS, 
+                string = u'Environnement',
+                help = u'Type environnement de l\'arbre',
+            ),
+            'get_arbreenvironnement',
+        )
+
+    def get_arbreenvironnement(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].environnement
+            return index
+        except:
+            return None
+       
+    arbrebilan = fields.Function(
+            fields.Many2One(
+                'cg.bilan',
+                string=u'Bilan',
+                help=u'Bilan de l\'arbre',                
+            ),
+            'get_arbrebilan',
+        )
+
+    def get_arbrebilan(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].bilan.id
+            return index
+        except:
+            return None
+
+    arbreobservation = fields.Function(
+            fields.Text(                
+                string=u'Observation',
+                help=u'Observation sur l\'arbre',                
+            ),
+            'get_arbreobservation',
+        )
+
+    def get_arbreobservation(self, ids):        
+        try:
+            index = self.arbre[-1].evolution[-1].observation
+            return index
+        except:
+            return None
+
     geom = fields.MultiPoint(
             string=u'Geometry',
             help=u'Géométrie Point',
@@ -1177,9 +1638,6 @@ class emplacement(Mapable, ModelSQL, ModelView):
     emplacement_map = fields.Binary(
             string=u'Image'
         )
-
-    def get_image(self, ids):
-        return self._get_image( 'emplacement_image.qgs', 'carte' )
 
     def get_map(self, ids):
         return self._get_image( 'emplacement_map.qgs', 'carte' ) 
@@ -1252,7 +1710,28 @@ class plantation(ModelSQL, ModelView):
             string = u'Libellé long plantation',
             required = False,
             readonly = False,
-        )                    
+        )
+
+class suppression(ModelSQL, ModelView):
+    u'Motif de suppression'
+    __name__ = 'cg.suppression'
+    _rec_name = 'name'
+    
+    code = fields.Char(
+            string = u'Code motif de suppression',
+            required = True,
+            readonly = False,
+        )
+    name = fields.Char(
+            string = u'Libellé court motif de suppression',
+            required = False,
+            readonly = False,
+        )        
+    lib_long = fields.Char(
+            string = u'Libellé long motif de suppression',
+            required = False,
+            readonly = False,
+        )                   
 
 class bilan(ModelSQL, ModelView):
     u'Bilan'
@@ -1282,29 +1761,24 @@ class evol_arbre(ModelSQL, ModelView):
 
     arbre = fields.Many2One(
             'cg.arbre',
-            string=u'Arbre ID',
-            help=u'Arbre ID',
-        )
-    station = fields.Many2One(
-            'cg.station',
-            ondelete='CASCADE',
-            string=u'Station',
-            help=u'Station',
-            readonly = True,
-            required = True,
-            on_change_with=['arbre'],
+            string=u'ID Arbre',
+            help=u'Identifiant de l\'arbre',
         )
 
-    def on_change_with_station(self):
-        u'Station'
-        print self.arbre.emplacement.station
-        return self.arbre.emplacement.station
+    def get_rec_name(self, code):
+        return '%s - %s' % (self.arbre, self.date)
 
     date = fields.Date(
-            string = u'Date',            
-            help=u'Date du constat',
+            string = u'Date MAJ',            
+            help=u'Date du constat ou de sa mise à jour',
             required = True,
-        )        
+        )
+
+    @staticmethod
+    def default_date():
+        Date = Pool().get('ir.date')
+        return Date.today()
+
     mecanique = fields.Selection(
             _MECANIQUES, 
             string = u'État mécanique',
@@ -1383,7 +1857,11 @@ class evol_arbre(ModelSQL, ModelView):
             _ENVIRONNEMENTS, 
             string = u'Environnement',
             help = u'Type environnement de l\'arbre',
-        )        
+        )
+    resine = fields.Boolean(
+            string=u'Résine',
+            help=u'Présence de résine'
+        )      
     bilan = fields.Many2One(
             'cg.bilan',
             ondelete='CASCADE',
@@ -1428,7 +1906,7 @@ class evol_arbre(ModelSQL, ModelView):
 class taxinomie:
     __metaclass__ = PoolMeta
     __name__ = 'taxinomie.taxinomie'
-    _rec_name = 'commun'
+    _rec_name = 'code'
 
     code = fields.Char(            
             string=u'Code',
@@ -1444,7 +1922,7 @@ class taxinomie:
         )
 
     def get_rec_name(self, code):
-        return '%s - %s' % (self.commun, self.lb_nom)
+        return '%s (%s - %s)' % (self.code, self.commun, self.lb_nom)
 
     tenuemeca = fields.Char(            
             string=u'Tenue Mécanique',
@@ -1499,12 +1977,11 @@ class commune:
         )
 
     def get_rec_name(self, code):
-        return '%s - (%s)' % (self.lb_court, self.canton)
+        return '%s - (%s)' % (self.lb_court, self.name)
         
 class arbre(Mapable, ModelSQL, ModelView):
     u'Arbres'
-    __name__ = 'cg.arbre'
-    _rec_name = 'code'             
+    __name__ = 'cg.arbre'             
 
     emplacement = fields.Many2One(
             'cg.emplacement',
@@ -1515,6 +1992,11 @@ class arbre(Mapable, ModelSQL, ModelView):
             states=STATES,
             depends=DEPENDS,
         )
+
+    @staticmethod
+    def default_emplacement():
+        return Transaction().context.get('emplacement')
+
     idug = fields.Function(
                     fields.Char(
                         string = u'ID UG',
@@ -1602,27 +2084,44 @@ class arbre(Mapable, ModelSQL, ModelView):
     code = fields.Char(
             string = u'ID Arbre',
             help=u'Identifiant de l\'arbre',
-            required = True,
+            required = False,
             readonly = False,
         )
     compteur = fields.Integer(
             string = u'Compteur',
             help=u'Compteur arbre : indique combien d\'arbres ont été planté successivement sur cet emplacement',
             required = True,
-            states=STATES,
-            depends=DEPENDS,         
+            on_change_with=['diametre', 'emplacement'],
+            depends=['diametre', 'emplacement']
         )
 
     @staticmethod
-    def default_compteur():
+    def default_compteur():        
         return 1
 
+    def on_change_with_compteur(self):
+        if self.emplacement is not None :
+            try:
+                index = self.emplacement.arbre[-1].compteur + 1
+                return index
+            except:             
+                return 1
+
     an = fields.Integer(
-            string = u'Année',            
+            string = u'An',            
             help=u'Année de plantation',
             states=STATES,
             depends=DEPENDS,
-        )        
+        )
+
+    @staticmethod
+    def default_an():
+        Date = Pool().get('ir.date')
+        if Date.today().month>=10:
+            return Date.today().year+1
+        else:
+            return Date.today().year
+
     diametre = fields.Many2One(
             'cg.diametre',
             ondelete='CASCADE',
@@ -1666,13 +2165,29 @@ class arbre(Mapable, ModelSQL, ModelView):
             required = False,
             states=STATES,
             depends=DEPENDS,
-        )        
+            on_change_with=['motifsuppression']
+        )
+
+
+    def on_change_with_date(self):
+        if self.motifsuppression is not None:
+            Date = Pool().get('ir.date')
+            return Date.today()
+
+    motifsuppression = fields.Many2One(
+            'cg.suppression',
+            ondelete='CASCADE',
+            string=u'Motif de suppression',
+            help=u'Motif de suppression de l\'arbre',
+            states=STATES,
+            depends=DEPENDS,
+        )  
     evolution = fields.One2Many(
             'cg.evol_arbre',
             'arbre',                       
             string=u'Évolutions',
             help=u'Évolutions de l\'arbre',                       
-            states=STATES,
+            states={'readonly': ~Eval('active', True), 'required': Not(Equal(Eval('emplacement.evonature',0),2))},
             depends=DEPENDS,
         )
     conduite = fields.Selection(
@@ -1681,8 +2196,12 @@ class arbre(Mapable, ModelSQL, ModelView):
                 help=u'Conduite',
                 states=STATES,
                 depends=DEPENDS,
-                on_change_with=['evolution']
+                on_change_with=['evolution'],                
         )
+
+    def on_change_with_conduite(self):
+        return self.evolution[-1].conduite
+
     travaux = fields.One2Many(
             'cg.travaux',
             'arbre',
@@ -1691,11 +2210,6 @@ class arbre(Mapable, ModelSQL, ModelView):
             states=STATES,
             depends=DEPENDS,
         )
-
-    def on_change_with_conduite(self):
-        return self.evolution[-1].conduite
-
-
     photo = fields.Binary(
             string=u'Photo'
         )    
@@ -1715,18 +2229,9 @@ class arbre(Mapable, ModelSQL, ModelView):
             required=False,
         )    
 
-    arbre_image = fields.Function(
-                fields.Binary(
-                        string=u'Image'
-                ),
-            'get_image'
-        )
     arbre_map = fields.Binary(
             string=u'Image'
         )
-
-    def get_image(self, ids):
-        return self._get_image( 'arbre_image.qgs', 'carte' )
 
     def get_map(self, ids):
         return self._get_image( 'arbre_map.qgs', 'carte' ) 
@@ -1950,8 +2455,8 @@ class Travaux(Workflow, ModelSQL, ModelView):
 
     arbre = fields.Many2One(
             'cg.arbre',
-            string=u'Arbre ID',
-            help=u'Arbre ID',
+            string=u'ID Arbre',
+            help=u'ID Arbre',
             required=True,
         ) 
     essence = fields.Function(
@@ -2196,8 +2701,8 @@ class OpenCheckArbre(Wizard):
                 'WHERE e.id=a.emplacement AND a.essence=t.id AND s.id=e.station AND u.id=s.ug AND q.id=u.equipement AND a.id=ea.arbre '
                 'AND q.id=%s AND u.id=%s and t.commun=\'%s\' and a.conduite=\'%s\' '
                 'GROUP BY q.id, u.id, t.commun, a.conduite, a.id' % (
-                    ligne.equipement.id, ligne.ug.id, ligne.essence, ligne.conduite))
-            for arbreid in cursor.fetchall():                            
+                    ligne.equipement.id, ligne.ug.id, ligne.essence, ligne.conduite))            
+            for arbreid in cursor.fetchall():                                            
                 arbres = Arbres.browse(arbreid)            
                 for arbre in arbres:            
                     try:

@@ -26,9 +26,10 @@ from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
 from trytond.pyson import Bool, Eval, Not
 from trytond.pool import PoolMeta, Pool
 
-from trytond.modules.geotools.tools import get_as_epsg4326, envelope_union, bbox_aspect
+from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
+from trytond.modules.qgis.mapable import Mapable
 
 __all__ = ['CorineLandCover', 'CorineLandCoverGeo', 'ClcQGis', ]
 
@@ -50,18 +51,6 @@ class Habitat(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(Habitat, cls).__setup__()
-        cls._sql_constraints = [
-            ('name_parent_uniq', 'UNIQUE(code, parent)',
-                '%s code must be unique by parent!' % cls.__doc__),
-        ]
-        cls._constraints += [
-            ('check_recursion', 'recursive_codes'),
-            ('check_code', 'wrong_code'),
-        ]
-        cls._error_messages.update({
-            'recursive_codes': 'You can not create recursive code!',
-            'wrong_code': 'You can not use "%s" in code field!' % SEPARATOR,
-        })
         cls._order.insert(1, ('code', 'ASC'))
 
     @staticmethod
@@ -129,7 +118,7 @@ class CorineLandCover(Habitat):
        'Children', states=STATES, depends=DEPENDS)
 
 
-class CorineLandCoverGeo(ModelSQL, ModelView):
+class CorineLandCoverGeo(Mapable, ModelSQL, ModelView):
     'CORINE LAND COVER GEO'
     __name__ = 'corine_land_cover.clc_geo'
 
@@ -138,23 +127,41 @@ class CorineLandCoverGeo(ModelSQL, ModelView):
     code = fields.Many2One(
             'corine_land_cover.clc',
             ondelete='CASCADE',
-            string=u"""Code""",
-            help=u"""Code Corine Land Cover""",
+            string=u'Code',
+            help=u'Code Corine Land Cover',
         )
     
     geom = fields.MultiPolygon(
-            string = u"""Geometry""",
+            string = u'Geometry',
             srid = 2154,
-            help = u"""Géométrie multipolygonale""",          
+            help = u'Géométrie multipolygonale',          
+        )
+    boundingBoxX1 = fields.Float(
+            string=u'Bounding box x1'
+        )
+    boundingBoxY1 = fields.Float(
+            string=u'Bounding box y1'
+        )
+    boundingBoxX2 = fields.Float(
+            string=u'Bounding box x2'
+        )
+    boundingBoxY2 = fields.Float(
+            string=u'Bounding box y2'
         )
     
     active = fields.Boolean('Active')
 
-    annee = fields.Date('Date')                     
+    annee = fields.Date('Date')
+    version = fields.Date('Date de version')                     
             
-    image = fields.Function(fields.Binary('Image'), 'get_image')
-    image_map = fields.Binary('Image', filename='image_map_filename')
-    image_map_filename = fields.Function(fields.Char('Filename', readonly=True, depends=['gid']), '_get_clc_filename')
+    clc_image = fields.Function(
+                fields.Binary('Image'),
+            'get_image'
+        )
+    clc_map = fields.Binary(
+            string=u'Map',
+            help=u'Map'
+        )    
 
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.4)
@@ -165,35 +172,17 @@ class CorineLandCoverGeo(ModelSQL, ModelView):
         return True   
     
     def get_image(self, ids):
-        if self.geom is None:
-            return buffer('')
+        return self._get_image('clc_image.qgs', 'carte')
 
-        areas, envelope, _area = get_as_epsg4326([self.geom])
-        
-        if areas == []:
-            return buffer('')
-            
-        _envelope = bbox_aspect(envelope, 640, 480)    
-            
-        # Léger dézoom pour afficher correctement les aires qui touchent la bbox
-        envelope = [
-            _envelope[0] - 0.001,
-            _envelope[1] + 0.001,
-            _envelope[2] - 0.001,
-            _envelope[3] + 0.001,
-        ]                    
-
-        m = MapRender(640, 480, envelope, True)
-                       
-        m.plot_geom(areas[0], self.gid, None, color=self.COLOR, bgcolor=self.BGCOLOR)
-        return buffer(m.render())     
+    def get_map(self, ids):
+        return self._get_image('clc_map.qgs', 'carte')    
     
 
     @classmethod
     def __setup__(cls):
         super(CorineLandCoverGeo, cls).__setup__()
         cls._buttons.update({           
-            'clc_geo_edit': {},
+            'clc_edit': {},
             'generate': {},
         })
 
@@ -202,8 +191,8 @@ class CorineLandCoverGeo(ModelSQL, ModelView):
         return '%s - CLC map.jpg' % self.gid
                
     @classmethod
-    @ModelView.button_action('corine_land_cover.clc_geo_edit')
-    def clc_geo_edit(cls, ids):
+    @ModelView.button_action('corine_land_cover.clc_edit')
+    def clc_edit(cls, ids):
         pass
         
     @classmethod
@@ -212,25 +201,7 @@ class CorineLandCoverGeo(ModelSQL, ModelView):
         for record in records:
             if record.gid is None:
                 continue
-                                   
-            areas, _envelope, _area = get_as_epsg4326([record.geom])
-            
-            # Léger dézoom pour afficher correctement les points qui touchent la bbox
-            envelope = [
-                _envelope[0] - 0.001,
-                _envelope[1] + 0.001,
-                _envelope[2] - 0.001,
-                _envelope[3] + 0.001,
-            ]            
-            
-            m = MapRender(640, 480, envelope, True)
-            m.add_bg()
-                      
-            m.plot_geom(areas[0], record.gid, None, color=cls.COLOR, bgcolor=cls.BGCOLOR)            
-           
-            data = m.render()
-            cls.write([record], {'image_map': buffer(data)})        
-
+            cls.write([record], {'clc_map': cls.get_map(record, 'map')})  
         
 class ClcQGis(QGis):
     __name__ = 'corine_land_cover.clc_geo.qgis'

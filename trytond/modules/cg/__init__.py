@@ -32,6 +32,7 @@ def register():
         bilan,        
         taxinomie,
         commune,
+        suppression,
         arbre,
         Travaux,
         evol_arbre,

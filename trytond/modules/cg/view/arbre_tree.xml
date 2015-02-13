@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
-<tree string="Arbre">
-    <field name="emplacement" />                 
-    <field name="code" />                   
-    <field name="compteur" />
-    <field name="an" />
-    <field name="diametre" />
-    <field name="plantation" />
-    <field name="situation" />
-    <field name="fosse" />
-    <field name="essence" />
-    <field name="conduite" />
-    <field name="evolution" />
-    <field name="date" />                     
+<tree string="Arbre" editable="bottom">
+    <field name="emplacement"/>                  
+    <field name="an"/>
+    <field name="diametre"/>
+    <field name="compteur"/>
+    <field name="plantation" widget="selection"/>
+    <field name="situation"/>
+    <field name="fosse"/>
+    <field name="essence"/>
+    <field name="conduite"/>
+    <field name="evolution"/>
+    <field name="motifsuppression" widget="selection"/>
+    <field name="date"/>
+    <field name="active"/>                    
 </tree>

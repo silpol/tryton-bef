@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
-        
+        <!-- Icones -->
         <record model="ir.ui.icon" id="travaux_icon">
             <field name="name">tryton-travaux</field>
             <field name="path">icons/tryton-travaux.svg</field>
@@ -11,8 +11,10 @@
             <field name="path">icons/tryton-preconise.svg</field>
         </record>
     
-        <menuitem name="Arbres voirie" id="menu_cg_admin"/>
+        <!-- Menus -->
+        <menuitem name="Arbres voirie" id="menu_cg_admin"/>        
         <menuitem name="Planification travaux" id="menu_cg_travaux" icon="tryton-travaux"/>
+        <menuitem parent="menu_cg_admin" sequence="1" name="Gestion" id="menu_cg_gestion"/>
         <menuitem parent="menu_cg_admin" sequence="0" name="Configuration" id="menu_cg_equipement_configuration" icon="tryton-preferences"/>
 
         <!-- Taxinomie -->        
@@ -47,18 +49,17 @@
             <field name="inherit" ref="commune.commune_view_form" />       
             <field name="name">commune_form</field>
         </record>        
-
         <record model="ir.action.act_window" id="act_cg_commune_form">
             <field name="name">Commune</field>
             <field name="res_model">commune.commune</field>
         </record>
-
         <record model="ir.action.act_window.view" id="act_cg_commune_form_view">
             <field name="sequence" eval="10"/>
             <field name="view" ref="cg_commune_view_form"/>
             <field name="act_window" ref="act_cg_commune_form"/>
         </record>
         
+        <!-- Equipement -->
         <record model="ir.ui.view" id="cg_equipement_view_tree">
             <field name="model">cg.equipement</field>
             <field name="type">tree</field>
@@ -82,10 +83,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_equipement_view_form"/>
             <field name="act_window" ref="act_cg_equipement_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_admin" id="menu_cg_equipement_form" icon="tryton-list" action="act_cg_equipement_form"/>
         
+        <!-- Statut voirie -->
         <record model="ir.ui.view" id="cg_statut_voirie_view_tree">
             <field name="model">cg.statut_voirie</field>
             <field name="type">tree</field>
@@ -109,10 +110,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_statut_voirie_view_form"/>
             <field name="act_window" ref="act_cg_statut_voirie_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_statut_voirie_form" icon="tryton-list" action="act_cg_statut_voirie_form"/>
         
+        <!-- Opérations -->
         <record model="ir.ui.view" id="cg_operation_view_tree">
             <field name="model">cg.operation</field>
             <field name="type">tree</field>
@@ -136,10 +137,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_operation_view_form"/>
             <field name="act_window" ref="act_cg_operation_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_operation_form" icon="tryton-list" action="act_cg_operation_form"/>
 
+        <!-- Elagage -->
         <record model="ir.ui.view" id="cg_elagage_view_tree">
             <field name="model">cg.elagage</field>
             <field name="type">tree</field>
@@ -163,10 +164,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_elagage_view_form"/>
             <field name="act_window" ref="act_cg_elagage_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_elagage_form" icon="tryton-list" action="act_cg_elagage_form"/>
 
+        <!-- Domanialité -->
         <record model="ir.ui.view" id="cg_domanialite_view_tree">
             <field name="model">cg.domanialite</field>
             <field name="type">tree</field>
@@ -190,10 +191,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_domanialite_view_form"/>
             <field name="act_window" ref="act_cg_domanialite_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_domanialite_form" icon="tryton-list" action="act_cg_domanialite_form"/>
 
+        <!-- Nature -->
         <record model="ir.ui.view" id="cg_nature_view_tree">
             <field name="model">cg.nature</field>
             <field name="type">tree</field>
@@ -217,10 +218,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_nature_view_form"/>
             <field name="act_window" ref="act_cg_nature_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_nature_form" icon="tryton-list" action="act_cg_nature_form"/>                
         
+        <!-- Securité -->
         <record model="ir.ui.view" id="cg_securite_view_tree">
             <field name="model">cg.securite</field>
             <field name="type">tree</field>
@@ -244,10 +245,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_securite_view_form"/>
             <field name="act_window" ref="act_cg_securite_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_securite_form" icon="tryton-list" action="act_cg_securite_form"/>
 
+        <!-- Ancienne Unité de gestion -->
         <record model="ir.ui.view" id="cg_ug_acug_view_tree">
             <field name="model">cg.ug-cg.ug</field>
             <field name="type">tree</field>
@@ -297,8 +298,7 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_ug_view_form"/>
             <field name="act_window" ref="act_cg_ug_form"/>
-        </record>
-        
+        </record>        
         <record model="ir.action.report" id="report_ug_edit">
             <field name="name">Open in QGis...</field>
             <field name="model">cg.ug</field>
@@ -310,7 +310,6 @@
             <field name="model">cg.ug,-1</field>
             <field name="action" ref="report_ug_edit"/>
         </record>
-
         <record model="ir.action.report" id="ug">
             <field name="name">Unité de Gestion</field>
             <field name="model">cg.ug</field>
@@ -321,8 +320,7 @@
             <field name="keyword">form_print</field>
             <field name="model">cg.ug,-1</field>
             <field name="action" ref="ug"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_admin" id="menu_cg_ug_form" icon="tryton-list" action="act_cg_ug_form"/>
         
         <!-- Propriétaire -->
@@ -349,10 +347,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_proprietaire_view_form"/>
             <field name="act_window" ref="act_cg_proprietaire_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_proprietaire_form" icon="tryton-list" action="act_cg_proprietaire_form"/>
         
+        <!-- Gestionnaire -->
         <record model="ir.ui.view" id="cg_gestionnaire_view_tree">
             <field name="model">cg.gestionnaire</field>
             <field name="type">tree</field>
@@ -376,8 +374,7 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_gestionnaire_view_form"/>
             <field name="act_window" ref="act_cg_gestionnaire_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_gestionnaire_form" icon="tryton-list" action="act_cg_gestionnaire_form"/>
         
         <!-- Station -->
@@ -391,6 +388,39 @@
             <field name="type">form</field>
             <field name="name">station_form</field>
         </record>
+        <record model="ir.ui.view" id="cg_station_view_form_gestion_courante">
+            <field name="model">cg.station</field>
+            <field name="type">form</field>
+            <field name="name">station_form_gestion_courante</field>
+        </record>      
+        <record model="ir.ui.view" id="cg_station_view_form_gestion_emplacement">
+            <field name="model">cg.station</field>
+            <field name="type">form</field>
+            <field name="name">station_form_gestion_emplacement</field>
+        </record>
+        <record model="ir.ui.view" id="cg_station_view_form_abattage">
+            <field name="model">cg.station</field>
+            <field name="type">form</field>
+            <field name="name">station_form_abattage</field>
+        </record>
+        <record model="ir.ui.view" id="cg_station_view_form_plantation">
+            <field name="model">cg.station</field>
+            <field name="type">form</field>
+            <field name="name">station_form_plantation</field>
+        </record>                       
+        <record model="ir.action.report" id="report_station_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cg.station</field>
+            <field name="report_name">cg.station.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_station_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cg.station,-1</field>
+            <field name="action" ref="report_station_edit"/>
+        </record> 
+
+        <!-- Station -->
         <record model="ir.action.act_window" id="act_cg_station_form">
             <field name="name">Stations</field>
             <field name="res_model">cg.station</field>
@@ -404,22 +434,78 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_station_view_form"/>
             <field name="act_window" ref="act_cg_station_form"/>
-        </record>
-                
-        <record model="ir.action.report" id="report_station_edit">
-            <field name="name">Open in QGis...</field>
-            <field name="model">cg.station</field>
-            <field name="report_name">cg.station.qgis</field>
-            <field name="report">qgis/qgis.qgs</field>
-        </record>
-        <record model="ir.action.keyword" id="report_station_edit_kwd">
-            <field name="keyword">form_action</field>
-            <field name="model">cg.station,-1</field>
-            <field name="action" ref="report_station_edit"/>
-        </record>
-        
+        </record>       
         <menuitem parent="menu_cg_admin" id="menu_cg_station_form" icon="tryton-list" action="act_cg_station_form"/>
+
+        <!-- Station - Gestion courante-->
+        <record model="ir.action.act_window" id="act_cg_station_form1">
+            <field name="name">Stations - Gestion courante</field>
+            <field name="res_model">cg.station</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view11">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_station_view_tree"/>
+            <field name="act_window" ref="act_cg_station_form1"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view16">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_station_view_form_gestion_courante"/>
+            <field name="act_window" ref="act_cg_station_form1"/>
+        </record>        
+        <menuitem parent="menu_cg_gestion" sequence="1" id="menu_cg_station_form_gestion_courante" icon="tryton-list" action="act_cg_station_form1"/>
+
+        <!-- Station - Gestion emplacement-->
+        <record model="ir.action.act_window" id="act_cg_station_form2">
+            <field name="name">Stations - Gestion des emplacements</field>
+            <field name="res_model">cg.station</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view21">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_station_view_tree"/>
+            <field name="act_window" ref="act_cg_station_form2"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view23">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="cg_station_view_form_gestion_emplacement"/>
+            <field name="act_window" ref="act_cg_station_form2"/>
+        </record>
+        <menuitem parent="menu_cg_gestion" sequence="2" id="menu_cg_station_form_gestion_emplacement" icon="tryton-list" action="act_cg_station_form2"/>
         
+        <!-- Station - Abattage-->
+        <record model="ir.action.act_window" id="act_cg_station_form3">
+            <field name="name">Stations - Abattage</field>
+            <field name="res_model">cg.station</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view31">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_station_view_tree"/>
+            <field name="act_window" ref="act_cg_station_form3"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view34">
+            <field name="sequence" eval="40"/>
+            <field name="view" ref="cg_station_view_form_abattage"/>
+            <field name="act_window" ref="act_cg_station_form3"/>
+        </record>
+        <menuitem parent="menu_cg_gestion" sequence="3" id="menu_cg_station_form_abattage" icon="tryton-list" action="act_cg_station_form3"/>
+
+        <!-- Station - Plantation-->
+        <record model="ir.action.act_window" id="act_cg_station_form4">
+            <field name="name">Stations - Plantation</field>
+            <field name="res_model">cg.station</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view41">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_station_view_tree"/>
+            <field name="act_window" ref="act_cg_station_form4"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_station_form_view45">
+            <field name="sequence" eval="50"/>
+            <field name="view" ref="cg_station_view_form_plantation"/>
+            <field name="act_window" ref="act_cg_station_form4"/>
+        </record>
+        <menuitem parent="menu_cg_gestion" sequence="4" id="menu_cg_station_form_plantation" icon="tryton-list" action="act_cg_station_form4"/>
+                
+        <!-- Emplacement -->
         <record model="ir.ui.view" id="cg_emplacement_view_tree">
             <field name="model">cg.emplacement</field>
             <field name="type">tree</field>
@@ -430,6 +516,46 @@
             <field name="type">form</field>
             <field name="name">emplacement_form</field>
         </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_tree_gestion_courante">
+            <field name="model">cg.emplacement</field>
+            <field name="type">tree</field>
+            <field name="name">emplacement_tree_gestion_courante</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_form_gestion_courante">
+            <field name="model">cg.emplacement</field>
+            <field name="type">form</field>
+            <field name="name">emplacement_form_gestion_courante</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_tree_gestion_emplacement">
+            <field name="model">cg.emplacement</field>
+            <field name="type">tree</field>
+            <field name="name">emplacement_tree_gestion_emplacement</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_form_gestion_emplacement">
+            <field name="model">cg.emplacement</field>
+            <field name="type">form</field>
+            <field name="name">emplacement_form_gestion_emplacement</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_form_abattage">
+            <field name="model">cg.emplacement</field>
+            <field name="type">form</field>
+            <field name="name">emplacement_form_abattage</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_tree_abattage">
+            <field name="model">cg.emplacement</field>
+            <field name="type">tree</field>
+            <field name="name">emplacement_tree_abattage</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_form_plantation">
+            <field name="model">cg.emplacement</field>
+            <field name="type">form</field>
+            <field name="name">emplacement_form_plantation</field>
+        </record>
+        <record model="ir.ui.view" id="cg_emplacement_view_tree_plantation">
+            <field name="model">cg.emplacement</field>
+            <field name="type">tree</field>
+            <field name="name">emplacement_tree_plantation</field>
+        </record>        
         <record model="ir.action.act_window" id="act_cg_emplacement_form">
             <field name="name">Emplacements</field>
             <field name="res_model">cg.emplacement</field>
@@ -454,10 +580,10 @@
             <field name="keyword">form_action</field>
             <field name="model">cg.emplacement,-1</field>
             <field name="action" ref="report_emplacement_edit"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_admin" id="menu_cg_emplacement_form" icon="tryton-list" action="act_cg_emplacement_form"/>
         
+        <!-- Cause -->
         <record model="ir.ui.view" id="cg_cause_view_tree">
             <field name="model">cg.cause</field>
             <field name="type">tree</field>
@@ -481,10 +607,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_cause_view_form"/>
             <field name="act_window" ref="act_cg_cause_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_cause_form" icon="tryton-list" action="act_cg_cause_form"/>
         
+        <!-- indisponibilité -->
         <record model="ir.ui.view" id="cg_indispo_view_tree">
             <field name="model">cg.indispo</field>
             <field name="type">tree</field>
@@ -508,10 +634,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_indispo_view_form"/>
             <field name="act_window" ref="act_cg_indispo_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_indispo_form" icon="tryton-list" action="act_cg_indispo_form"/>
         
+        <!-- Evolution emplacement -->
         <record model="ir.ui.view" id="cg_evol_emplacement_view_tree">
             <field name="model">cg.evol_emplacement</field>
             <field name="type">tree</field>
@@ -521,6 +647,11 @@
             <field name="model">cg.evol_emplacement</field>
             <field name="type">form</field>
             <field name="name">evol_emplacement_form</field>
+        </record>
+        <record model="ir.ui.view" id="cg_evol_emplacement_view_tree_abattage">
+            <field name="model">cg.evol_emplacement</field>
+            <field name="type">tree</field>
+            <field name="name">evol_emplacement_tree_abattage</field>
         </record>
         <record model="ir.action.act_window" id="act_cg_evol_emplacement_form">
             <field name="name">Évolution des emplacements</field>
@@ -537,6 +668,7 @@
             <field name="act_window" ref="act_cg_evol_emplacement_form"/>
         </record>        
         
+        <!-- Diametre -->
         <record model="ir.ui.view" id="cg_diametre_view_tree">
             <field name="model">cg.diametre</field>
             <field name="type">tree</field>
@@ -560,10 +692,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_diametre_view_form"/>
             <field name="act_window" ref="act_cg_diametre_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_diametre_form" icon="tryton-list" action="act_cg_diametre_form"/>
         
+        <!-- Plantation -->
         <record model="ir.ui.view" id="cg_plantation_view_tree">
             <field name="model">cg.plantation</field>
             <field name="type">tree</field>
@@ -587,10 +719,37 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_plantation_view_form"/>
             <field name="act_window" ref="act_cg_plantation_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_plantation_form" icon="tryton-list" action="act_cg_plantation_form"/>
-        
+
+        <!-- Motif de suppression -->
+        <record model="ir.ui.view" id="cg_suppression_view_tree">
+            <field name="model">cg.suppression</field>
+            <field name="type">tree</field>
+            <field name="name">suppression_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cg_suppression_view_form">
+            <field name="model">cg.suppression</field>
+            <field name="type">form</field>
+            <field name="name">suppression_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cg_suppression_form">
+            <field name="name">Motif de suppression de l'arbre</field>
+            <field name="res_model">cg.suppression</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_suppression_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cg_suppression_view_tree"/>
+            <field name="act_window" ref="act_cg_suppression_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cg_suppression_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cg_suppression_view_form"/>
+            <field name="act_window" ref="act_cg_suppression_form"/>
+        </record>        
+        <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_suppression_form" icon="tryton-list" action="act_cg_suppression_form"/>        
+
+        <!-- Arbre -->
         <record model="ir.ui.view" id="cg_arbre_view_tree">
             <field name="model">cg.arbre</field>
             <field name="type">tree</field>
@@ -600,6 +759,36 @@
             <field name="model">cg.arbre</field>
             <field name="type">form</field>
             <field name="name">arbre_form</field>
+        </record>
+        <record model="ir.ui.view" id="cg_arbre_view_form_abattage">
+            <field name="model">cg.arbre</field>
+            <field name="type">form</field>
+            <field name="name">arbre_form_abattage</field>
+        </record>
+        <record model="ir.ui.view" id="cg_arbre_view_tree_abattage">
+            <field name="model">cg.arbre</field>
+            <field name="type">tree</field>
+            <field name="name">arbre_tree_abattage</field>
+        </record>
+        <record model="ir.ui.view" id="cg_arbre_view_form_plantation">
+            <field name="model">cg.arbre</field>
+            <field name="type">form</field>
+            <field name="name">arbre_form_plantation</field>
+        </record>
+        <record model="ir.ui.view" id="cg_arbre_view_tree_plantation">
+            <field name="model">cg.arbre</field>
+            <field name="type">tree</field>
+            <field name="name">arbre_tree_plantation</field>
+        </record>
+        <record model="ir.ui.view" id="cg_arbre_view_tree_gestion_courante">
+            <field name="model">cg.arbre</field>
+            <field name="type">tree</field>
+            <field name="name">arbre_tree_gestion_courante</field>
+        </record>
+        <record model="ir.ui.view" id="cg_arbre_view_form_gestion_courante">
+            <field name="model">cg.arbre</field>
+            <field name="type">form</field>
+            <field name="name">arbre_form_gestion_courante</field>
         </record>
         <record model="ir.action.act_window" id="act_cg_arbre_form">
             <field name="name">Arbres</field>
@@ -625,10 +814,10 @@
             <field name="keyword">form_action</field>
             <field name="model">cg.arbre,-1</field>
             <field name="action" ref="report_arbre_edit"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_admin" id="menu_cg_arbre_form" icon="tryton-list" action="act_cg_arbre_form"/>
         
+        <!-- Bilan -->
         <record model="ir.ui.view" id="cg_bilan_view_tree">
             <field name="model">cg.bilan</field>
             <field name="type">tree</field>
@@ -652,10 +841,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_bilan_view_form"/>
             <field name="act_window" ref="act_cg_bilan_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_bilan_form" icon="tryton-list" action="act_cg_bilan_form"/>
         
+        <!-- Paysager -->
         <record model="ir.ui.view" id="cg_paysager_view_tree">
             <field name="model">cg.paysager</field>
             <field name="type">tree</field>
@@ -679,10 +868,10 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_paysager_view_form"/>
             <field name="act_window" ref="act_cg_paysager_form"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_equipement_configuration" id="menu_cg_paysager_form" icon="tryton-list" action="act_cg_paysager_form"/>
         
+        <!-- Evolution Arbre -->
         <record model="ir.ui.view" id="cg_evol_arbre_view_tree">
             <field name="model">cg.evol_arbre</field>
             <field name="type">tree</field>
@@ -697,6 +886,11 @@
             <field name="name">Évolution des arbres</field>
             <field name="res_model">cg.evol_arbre</field>
         </record>
+        <record model="ir.ui.view" id="cg_evol_arbre_view_tree_gestion_courante">
+            <field name="model">cg.evol_arbre</field>
+            <field name="type">tree</field>
+            <field name="name">evol_arbre_tree_gestion_courante</field>
+        </record>
         <record model="ir.action.act_window.view" id="act_cg_evol_arbre_form_view1">
             <field name="sequence" eval="10"/>
             <field name="view" ref="cg_evol_arbre_view_tree"/>
@@ -706,8 +900,9 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="cg_evol_arbre_view_form"/>
             <field name="act_window" ref="act_cg_evol_arbre_form"/>
-        </record>
-        
+        </record>        
+
+        <!-- Notation -->        
         <record model="ir.action.report" id="notation">
             <field name="name">Notation</field>
             <field name="model">cg.equipement</field>
@@ -720,6 +915,7 @@
             <field name="action" ref="notation"/>
         </record>
 
+        <!-- Rapport Equipement -->
         <record model="ir.action.report" id="rapport_note_defiance">
             <field name="name">Équipement</field>
             <field name="model">cg.equipement</field>
@@ -732,6 +928,7 @@
             <field name="action" ref="rapport_note_defiance"/>
         </record>
         
+        <!-- Rapport Arbre -->
         <record model="ir.action.report" id="arbre">
             <field name="name">Arbres</field>
             <field name="model">cg.arbre</field>
@@ -744,6 +941,7 @@
             <field name="action" ref="arbre"/>
         </record>
         
+        <!-- Rapport produits -->
         <record model="ir.action.report" id="report_produit">
             <field name="name">Rapport Produits</field>
             <field name="model">cg.rapport_produit</field>
@@ -756,6 +954,7 @@
             <field name="action" ref="report_produit"/>
         </record>
 
+        <!-- Rapport préconisations -->
         <record model="ir.action.report" id="report_preconisation">
             <field name="name">Rapport préconisations</field>
             <field name="model">cg.preconisation</field>
@@ -766,8 +965,7 @@
             <field name="keyword">form_print</field>
             <field name="model">cg.preconisation,-1</field>
             <field name="action" ref="report_preconisation"/>
-        </record>
-                 
+        </record>                 
         <menuitem name="Rapports" id="menu_cg_rapport"/>
 
         <!-- Note -->
@@ -781,7 +979,6 @@
             <field name="type">graph</field>
             <field name="name">note_graph</field>
         </record> 
-
         <record model="ir.action.act_window" id="act_note_form">
             <field name="name">Note de Déficience Sanitaire des arbres</field>
             <field name="res_model">cg.note</field>
@@ -797,8 +994,7 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="note_view_graph"/>
             <field name="act_window" ref="act_note_form"/>
-        </record>                       
-        
+        </record>                               
         <menuitem parent="menu_cg_rapport" action="act_note_form" icon="tryton-graph" id="menu_note"/>
 
         <!-- Synhtèse 1 -->
@@ -812,7 +1008,6 @@
             <field name="type">graph</field>
             <field name="name">synthese1_graph</field>
         </record> 
-
         <record model="ir.action.act_window" id="act_synthese1_form">
             <field name="name">Synthèse du patrimoine départemental recensé par commune</field>
             <field name="res_model">cg.synthese1</field>
@@ -848,8 +1043,7 @@
             <field name="keyword">form_print</field>
             <field name="model">cg.synthese1,-1</field>
             <field name="action" ref="synthese1"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_rapport" action="act_synthese1_open" icon="tryton-graph" id="menu_synthese1"/>
 
         <!-- Synhtèse 2 -->
@@ -863,7 +1057,6 @@
             <field name="type">graph</field>
             <field name="name">synthese2_graph</field>
         </record> 
-
         <record model="ir.action.act_window" id="act_synthese2_form">
             <field name="name">Synthèse du patrimoine départemental par commune par gestionnaire</field>
             <field name="res_model">cg.synthese2</field>
@@ -899,8 +1092,7 @@
             <field name="keyword">form_print</field>
             <field name="model">cg.synthese2,-1</field>
             <field name="action" ref="synthese2"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_rapport" action="act_synthese2_open" icon="tryton-graph" id="menu_synthese2"/>
 
         <!-- Synhtèse 3 -->
@@ -914,7 +1106,6 @@
             <field name="type">graph</field>
             <field name="name">synthese3_graph</field>
         </record> 
-
         <record model="ir.action.act_window" id="act_synthese3_form">
             <field name="name">Synthèse du patrimoine départemental géré par gestionnaire par essence</field>
             <field name="res_model">cg.synthese3</field>
@@ -950,8 +1141,7 @@
             <field name="keyword">form_print</field>
             <field name="model">cg.synthese3,-1</field>
             <field name="action" ref="synthese3"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_rapport" action="act_synthese3_open" icon="tryton-graph" id="menu_synthese3"/>
 
         <!-- Synhtèse 4 -->
@@ -965,7 +1155,6 @@
             <field name="type">graph</field>
             <field name="name">synthese4_graph</field>
         </record> 
-
         <record model="ir.action.act_window" id="act_synthese4_form">
             <field name="name">Liste des unités de gestion plantée par essence</field>
             <field name="res_model">cg.synthese4</field>
@@ -1001,8 +1190,7 @@
             <field name="keyword">form_print</field>
             <field name="model">cg.synthese4,-1</field>
             <field name="action" ref="synthese4"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_rapport" action="act_synthese4_open" icon="tryton-graph" id="menu_synthese4"/>
 
         <!-- Préconisation des arbres -->
@@ -1275,8 +1463,7 @@
         <record model="ir.model.button" id="travaux_annuler_button">
             <field name="name">annuler</field>
             <field name="model" search="[('model', '=', 'cg.travaux')]"/>
-        </record>
-        
+        </record>        
         <menuitem parent="menu_cg_travaux" id="menu_cg_travaux_form" icon="tryton-list" action="act_cg_travaux_form"/>
 
     </data>

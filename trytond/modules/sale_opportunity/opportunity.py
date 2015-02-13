@@ -37,6 +37,7 @@ class SaleOpportunity(Workflow, ModelSQL, ModelView):
     __name__ = "sale.opportunity"
     _history = True
     _rec_name = 'description'
+
     party = fields.Many2One('party.party', 'Party', required=True, select=True,
         on_change=['party'], states=_STATES_STOP, depends=_DEPENDS_STOP)
     address = fields.Many2One('party.address', 'Address',
@@ -91,7 +92,10 @@ class SaleOpportunity(Workflow, ModelSQL, ModelView):
             'invisible': Eval('state') != 'converted',
             }, depends=['state'])
 
-    icon = fields.Char('icon', on_change_with=['probability'])
+    icon = fields.Char('icon', on_change_with=['probability', 'party'])
+
+    def get_rec_name(self, code):
+        return '%s - %s' % (self.party.name, self.description)
 
     def on_change_with_icon(self):
         if self.probability is None:

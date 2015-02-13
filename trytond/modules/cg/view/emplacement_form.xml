@@ -22,7 +22,7 @@
         <label name="id"/>
         <field name="id"/>
         <label name="code"/>
-        <field name="code"/>         
+        <field name="code"/>
     </group>
     <notebook colspan="6">
         <page string="Général" id="general">                                               
@@ -41,10 +41,8 @@
         <page string="Arbres" id="arbres">                                    
             <field name="arbre"/>
         </page>
-        <page string="Map" id="map" col="2">                                      
-            <field name="emplacement_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+        <page string="Map" id="map" col="1">                                      
             <field name="emplacement_map" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <button string="Edit" name="emplacement_edit" icon="tryton-executable" />
             <button string="Generate" name="generate" icon="tryton-executable" />
         </page>
     </notebook>

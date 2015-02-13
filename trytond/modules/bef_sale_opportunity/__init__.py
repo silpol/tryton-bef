@@ -27,5 +27,4 @@ def register():
     Pool.register(
         opportunity,
         SaleOpportunityContact,
-        OpportunityContact,
         module='bef_sale_opportunity', type_='model')

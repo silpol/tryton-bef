@@ -20,7 +20,7 @@ Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
 """
 
 from trytond.model import ModelView, ModelSingleton, ModelSQL, fields
-from trytond.pyson import Bool, Eval, Not
+from trytond.pyson import Bool, Eval, Not, In
 from trytond.pool import PoolMeta, Pool
 from datetime import date
 
@@ -39,47 +39,80 @@ CODES = [
     ('8', 'Client'),
 ]
 
+_STATES_STOP = {
+    'readonly': In(Eval('state'), ['converted', 'lost', 'cancelled']),
+}
+_DEPENDS_STOP = ['state']
+
 class opportunity:
     __name__ = 'sale.opportunity'
 
-    contacts = fields.Many2Many('sale.opportunity-bef_sale_opportunity.contact',
+    contacts = fields.One2Many(
+            'bef_sale_opportunity.contact',
             'opportunity',
-            'comment',
             string='Contacts',
+            help=u'Contacts'
         )
+    date_comment = fields.Date(
+            string=u'Date du commentaire',
+            help=u'Date du commentaire',
+        )
+    comment = fields.Text(
+            string=u'Comment',
+            states=_STATES_STOP,
+            depends=_DEPENDS_STOP,
+            on_change_with=['date_comment'],            
+        )
+
+    def on_change_with_comment(self):        
+        if self.date_comment is not None:
+            return str(self.date_comment)+" - "
+            
+
+    @staticmethod
+    def default_date_comment():
+        Date = Pool().get('ir.date')
+        return Date.today()
 
 class SaleOpportunityContact(ModelSQL, ModelView):
     'Sale Opportunity Contact'
     __name__ = "bef_sale_opportunity.contact"
-    _rec_name = 'comment'
-    
-    date = fields.Date('Date')
-    code = fields.Selection(CODES, 'Code', sort=False)
-    codcom = fields.Char('Code', on_change_with=['code'])
-    party=fields.Many2One('party.party', 'Party')
-    standard=fields.Char('Standard')
-    name=fields.Char('Name')
-    lastname=fields.Char('Last Name')
-    directline=fields.Char('Direct Line')
-    fonction=fields.Char('Fonction')
-    portable=fields.Char('Portable')    
-    comment = fields.Text('Comment')
+    _rec_name = 'party'
 
-    @staticmethod
-    def default_date():
-        Date = Pool().get('ir.date')
-        return Date.today()
+    opportunity = fields.Many2One(
+            'sale.opportunity',
+            string=u'Opportunity',
+            ondelete='CASCADE',
+            required=True,
+        )
+    code = fields.Selection(
+            CODES,
+            string=u'Code',
+            help=u'Code',
+            sort=False,
+        )
+    codcom = fields.Char(
+            string=u'Code',
+            help=u'Code',
+            readonly=True,
+            on_change_with=['code'],
+        )
+    party=fields.Many2One(
+            'party.party',
+            string=u'Party',
+            help=u'Party',
+        )    
+    fonction=fields.Char(
+            string=u'Fonction',
+            help=u'Fonction',
+        )
+    comment = fields.Text(
+            string=u'Comment',
+            help=u'Comment',
+            on_change_with=['date_comment'],
+        )
 
     def on_change_with_codcom(self):
         if self.code is None:
             return ''        
-        return self.code
-    
-class OpportunityContact(ModelSQL):
-    'Opportunity - Contact'
-    __name__ = 'sale.opportunity-bef_sale_opportunity.contact'
-    _table = 'opportunity_contact_rel'
-    opportunity = fields.Many2One('sale.opportunity', 'Opportunity',
-        ondelete='CASCADE', required=True) 
-    comment = fields.Many2One('bef_sale_opportunity.contact', 'Contact', ondelete='CASCADE',
-            required=True) 
+        return self.code   

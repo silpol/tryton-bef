@@ -1182,7 +1182,13 @@ class diagno(ModelSQL, ModelView):
     presence = fields.Boolean(
             string=u'Friches/Ronciers/Chardons/...',
             help=u'Autres types d’éléments sur la parcelle',
+            states={'invisible': Not(Bool(Eval('element')))},
+            on_change_with=['element']
         )
+
+    def on_change_with_presence(self):
+        if Bool(Eval(self.element)):
+            return 0
 
     natureOcc = fields.One2Many(
             'mae.diagno-mae.code',

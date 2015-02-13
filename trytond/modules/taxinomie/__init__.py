@@ -4,7 +4,7 @@ GPLv3
 """
 
 from trytond.pool import Pool
-from .taxinomie import *
+from taxinomie import *
 
 def register():
     Pool.register(

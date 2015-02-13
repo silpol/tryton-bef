@@ -35,6 +35,13 @@ def register():
     Pool.register(
         AreaQGis,               
         ReserveBiologiqueQGis,
+        ZicoQGis,
         module='protection',
         type_='report'
+    )
+
+    Pool.register(
+        GenerateAll,
+        module='protection',
+        type_='wizard'
     )

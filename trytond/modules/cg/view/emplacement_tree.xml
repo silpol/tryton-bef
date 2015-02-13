@@ -1,11 +1,35 @@
 <?xml version="1.0"?>
-<tree string="Emplacement">
+<tree string="Emplacement" editable="bottom">
     <field name="id" />
     <field name="station" />
     <field name="code" />
     <field name="numpostprec" />          
     <field name="repere"/>
-    <field name="coteoppose" />              
-    <field name="evolution" />
-    <field name="arbre" />                    
+    <field name="coteoppose" />
+    <field name="evonature" />
+    <field name="evocause" />
+    <field name="arbre" tree_invisible="1"/>
+    <field name="arbreessence" />
+    <field name="arbreid" />
+    <field name="arbredatesuppression" /> 
+    <field name="arbremotifsuppression" /> 
+    <field name="arbredate" />                 
+    <field name="arbremecanique" />
+    <field name="arbrevigueur" />
+    <field name="arbreconduite" />
+    <field name="arbrepaysager" />
+    <field name="arbreht" />                   
+    <field name="arbrehfut" />
+    <field name="arbrediamhoup" />
+    <field name="arbrelarghoupvoie" />
+    <field name="arbrelarghoupriv" />
+    <field name="arbrediamtronc" />                    
+    <field name="arbregrille" />
+    <field name="arbrelignelec" />
+    <field name="arbresonde" />
+    <field name="arbreempmat" />
+    <field name="arbresurfacepiedarbre" />
+    <field name="arbrearrosage" />
+    <field name="arbreenvironnement" />
+    <field name="arbrebilan" />               
 </tree>

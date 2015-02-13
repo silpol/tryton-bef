@@ -56,10 +56,8 @@
                 <field name="acug09"/>
             </group>
         </page>
-        <page string="Map" id="map" col="2">            
-            <field name="ug_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+        <page string="Map" id="map" col="1">
             <field name="ug_map" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <button string="Edit" name="ug_edit" icon="tryton-executable" />
             <button string="Generate" name="generate" icon="tryton-executable" />
         </page>
     </notebook>

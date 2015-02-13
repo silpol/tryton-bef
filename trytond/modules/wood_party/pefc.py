@@ -85,37 +85,74 @@ class PEFC(ModelView, ModelSQL):
     "PEFC certificate"
     __name__ = 'pefc.pefc'
     _rec_name = 'label'
-    enabled = fields.Boolean('Active')
+
+    enabled = fields.Boolean(
+            string=u'Active',
+            help=u'Active'
+        )
 
     STATES = {
         'readonly': Not(Bool(Eval('enabled'))),
         'required': Bool(Eval('enabled')),
     }
 
-    pefc_no = fields.Char('PEFC ID', states=STATES,
-                          help='PEFC ID number in the form "XX-XX-XX/XXX"',
-                          required=True)
-    date = fields.Date('Certification date', states=STATES)
-    duration = fields.Integer('Certificate duration in months', states=STATES)
-    PEFC_RE = re.compile('[0-9]+-[0-9]+-[0-9]+/[0-9]+$')
-    label = fields.Function(fields.Char('Label',
-                                        depends=['date', 'duration', 'pefc_no', 'region'], readonly=True,
-                                        on_change_with=['date', 'duration', 'pefc_no', 'region']),
-                            'get_label')
-    region = fields.Many2One('country.subdivision', 'Region', domain=[('type', '=', 'metropolitan region')],
-                             required=True, states=STATES)
-    validity = fields.Function(fields.Boolean('Validity',
-                               depends=['date', 'duration'], readonly=True,
-                               on_change_with=['date', 'duration']),
-                               'is_valid',
-                               searcher='search_is_valid')
-    party = fields.Many2One('party.party', 'Party', ondelete='RESTRICT')
+    pefc_no = fields.Char(
+            string=u'PEFC ID',
+            states=STATES,
+            help='PEFC ID number in the form "XX-XX-XX/XXX"',
+            required=True
+        )
+    date = fields.Date(
+            string=u'Certification date',
+            help=u'Certification date',
+            states=STATES
+        )
+    duration = fields.Integer(
+            string=u'Certificate duration in months',
+            help=u'Certificate duration in months',
+            states=STATES
+        )
+    
+    label = fields.Function(
+                    fields.Char('Label',
+                                depends=['date', 'duration', 'pefc_no', 'region'],
+                                readonly=True,
+                                on_change_with=['date', 'duration', 'pefc_no', 'region']
+                ),'get_label'
+        )
+    surface  = fields.Float(
+            string=u'Surface (ha)', 
+            help=u'Surface garanty in hectare',
+            digits=(16, 4),
+            states=STATES,
+        )
+    region = fields.Many2One(
+            'country.subdivision',
+            string=u'Region',
+            domain=[('type', '=', 'metropolitan region')],
+            required=True,
+            states=STATES
+        )
+    validity = fields.Function(
+                    fields.Boolean('Validity',
+                                depends=['date', 'duration'],
+                                readonly=True,
+                                on_change_with=['date', 'duration']
+                ),'is_valid',
+                searcher='search_is_valid'
+        )
+    party = fields.Many2One(
+            'party.party',
+            string=u'Party',
+            ondelete='RESTRICT',
+            domain=[('categories', 'child_of', [1], 'parent')]
+        )
 
     @classmethod
     def __setup__(cls):
         super(PEFC, cls).__setup__()
         cls._sql_constraints += [('pefc_uniq', 'UNIQUE(pefc_no, date)', 'The certification date must be unique!')]
-        cls._error_messages = {'invalid_no': 'You must provide a PEFC certification ID in the form "XX-XX-XX/XXX"!'}
+        cls._error_messages = {'invalid_no': 'You must provide a PEFC certification ID in the form "XX-XX-XX/XXXX"!'}
 
     @classmethod
     def validate(cls, records):
@@ -123,8 +160,8 @@ class PEFC(ModelView, ModelSQL):
         for record in records:
             if not record.enabled:
                 continue
-
-            if cls.PEFC_RE.match(record.pefc_no) is None:
+            
+            if not re.match(u"\d{2}-\d{2}-\d{2}/\d{1,}$", record.pefc_no):
                 cls.raise_user_error('invalid_no')
 
     def is_valid(self, ids):

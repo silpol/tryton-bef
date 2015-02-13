@@ -20,12 +20,24 @@ from .psdrf import *
 
 
 def register():
-    Pool.register(Bark, Rot, Typo, Essence, EssenceTaxon, Dispositif, Cycle,
+    Pool.register(
+        Bark, Rot, Typo, Essence, EssenceTaxon, Dispositif, Cycle,
         Plot, Ecologie, StandTree, Measure, Coarse, MeasureCoarse, Transect,
         Regeneration, Tarif, DispositifCommune, DispositifParty,
         CyclePartyOperator, CyclePartyBacker, DispositifStatus, MeasureEcologie,
-        module='psdrf', type_='model')
+        module='psdrf',
+        type_='model'
+    )
 
-    Pool.register(PlotQGis,
-        module='psdrf', type_='report')
+    Pool.register(
+        PlotQGis,
+        module='psdrf',
+        type_='report'
+    )
+
+    Pool.register(
+        GeneratePlot,        
+        module='psdrf',
+        type_='wizard'
+    )
 

@@ -38,6 +38,18 @@
                 </page>
             </notebook>
         </page>
+        <page string="Stand tree" id="standtree" col="2">				                                                            
+            <field name="stand_tree"/>            
+        </page>
+        <page string="Transect" id="transect" col="2">				                                                            
+            <field name="transect"/>            
+        </page>
+        <page string="Regeneration" id="regeneration" col="2">				                                                            
+            <field name="regeneration"/>            
+        </page>
+        <page string="Coarse" id="coarse" col="2">				                                                            
+            <field name="coarse"/>            
+        </page>
         <page string="Map" id="map" col="2">				                                                            
             <field name="image" colspan="1" widget="image" img_width="640" img_height="480"/>
             <field name="image_map" colspan="1" widget="image" img_width="640" img_height="480"/>                         

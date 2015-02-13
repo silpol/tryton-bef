@@ -15,8 +15,12 @@
             <label name="date" />
             <field name="date" />
             <field name="cycles" colspan="4" />
-            <label name="observation" />
-            <field name="observation" colspan="4" />
+        </page>
+        <page string="Plot" id="plot">
+            <field name="plot"/>
+        </page>
+        <page string="Tarif" id="tarif">
+            <field name="tarif"/>
         </page>
         <page string="Protection status" id="status">
             <field name="status" view_ids="protection.area_view_tree,protection.area_view_form" />
@@ -26,6 +30,9 @@
         </page>
         <page string="Partners" id="party">
             <field name="party" view_ids="party.party_view_tree,party.party_view_form" />
+        </page>
+        <page string="Observation" id="observation">
+            <field name="observation"/>
         </page>
     </notebook>
 </form>

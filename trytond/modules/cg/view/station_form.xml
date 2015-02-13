@@ -16,12 +16,14 @@
         <label name="communeug"/>
         <field name="communeug" colspan="3"/>
     </group>
+    <group id="group_station0" colspan="4" string="Station">
+        <label name="id"/>
+        <field name="id"/>
+        <label name="code"/>
+        <field name="code"/>
+    </group>
     <notebook colspan="6">
-        <page string="Général" id="general">            
-            <label name="id"/>
-            <field name="id"/>
-            <label name="code"/>
-            <field name="code"/>
+        <page string="Général" id="general">
             <label name="ug"/>
             <field name="ug"/>                             
             <label name="proprietaire"/>
@@ -37,16 +39,11 @@
             <label name="active"/>
             <field name="active"/>                         
         </page>
-        <page string="Emplacements" id="emplacement">            
-            <field name="emplacement"/>
+        <page string="Gestion Emplacement" id="gestion_emplacement">
+            <field name="emplacement" />
         </page>
-        <page string="Arbres" id="arbre">            
-            <field name="arbre"/>
-        </page>
-        <page string="Map" id="map" col="2">            
-            <field name="station_image" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <field name="station_map" colspan="1" widget="image" img_width="640" img_height="480"/>
-            <button string="Edit" name="station_edit" icon="tryton-executable" />
+        <page string="Map" id="map" col="1">                        
+            <field name="station_map" colspan="1" widget="image" img_width="640" img_height="480"/>            
             <button string="Generate" name="generate" icon="tryton-executable" />
         </page>
     </notebook>

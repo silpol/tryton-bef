@@ -1,12 +1,48 @@
-# 
+#
 msgid ""
-msgstr "Content-Type: text/plain; charset=utf-8\n"
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "error:ggd.ggd:"
+msgid "The garanty date must be unique!"
+msgstr "La garantie doit être unique"
+
+msgctxt "error:ggd.ggd_notify_recipient:"
+msgid "Recipients of GGD notifications must have a valid mail address!"
+msgstr ""
+"Le destinataire de la notification de garantie de Gestion Durable doit avoir "
+"une adresse email valide !"
+
+msgctxt "error:pefc.pefc:"
+msgid "The certification date must be unique!"
+msgstr "La date de certification doit être unique !"
+
+msgctxt "error:pefc.pefc:"
+msgid "You must provide a PEFC certification ID in the form \"XX-XX-XX/XXX\"!"
+msgstr "Vous devez entrer l'identifiant PEFC sous la forme \"XX-XX-XX/XXX\" !"
 
 msgctxt "error:pefc.pefc:"
 msgid "You must provide a PEFC certification ID in the form \"XX-XX-XX/XXX\"."
 msgstr ""
-"Vous devez définir un code de certification PEFC de la forme \"XX-XX-"
-"XX/XXX\"."
+"Vous devez définir un code de certification PEFC de la forme \"XX-XX-XX/XXX"
+"\"."
+
+msgctxt "error:pefc.pefc_notify_recipient:"
+msgid ""
+"Recipients of PEFC expiration notifications must have a valid mail address!"
+msgstr ""
+"Le destinataire de l'expiration de la date du cerificat PEFC doit avoir une "
+"adresse email valide !"
 
 msgctxt "error:pefc.pefc_notify_recipient:"
 msgid ""
@@ -19,9 +55,113 @@ msgctxt "error:pefc.pefc_notify_recipient:"
 msgid "The notification must be unique"
 msgstr "La notification doit être unique"
 
+msgctxt "field:ggd.ggd,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ggd.ggd,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ggd.ggd,date:"
+msgid "Agreement date"
+msgstr "Date d'agrément"
+
+msgctxt "field:ggd.ggd,departement:"
+msgid "Department"
+msgstr "Département"
+
+msgctxt "field:ggd.ggd,duration:"
+msgid "Duration (m)"
+msgstr "Durée (m)"
+
+msgctxt "field:ggd.ggd,enabled:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:ggd.ggd,ggd_no:"
+msgid "GGD ID"
+msgstr "ID GGD"
+
+msgctxt "field:ggd.ggd,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:ggd.ggd,label:"
+msgid "Label"
+msgstr "Libellé"
+
+msgctxt "field:ggd.ggd,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:ggd.ggd,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ggd.ggd,surface:"
+msgid "Surface (ha)"
+msgstr "Surface (ha)"
+
+msgctxt "field:ggd.ggd,validity:"
+msgid "Validity"
+msgstr "Validité"
+
+msgctxt "field:ggd.ggd,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ggd.ggd,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ggd.ggd_notify_recipient,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ggd.ggd_notify_recipient,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ggd.ggd_notify_recipient,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:ggd.ggd_notify_recipient,msg_content:"
+msgid "Message content"
+msgstr "Contenu du message"
+
+msgctxt "field:ggd.ggd_notify_recipient,msg_subject:"
+msgid "Message subject"
+msgstr "Sujet du message"
+
+msgctxt "field:ggd.ggd_notify_recipient,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ggd.ggd_notify_recipient,recipient:"
+msgid "Recipient"
+msgstr "Destinataire"
+
+msgctxt "field:ggd.ggd_notify_recipient,sender:"
+msgid "Sender"
+msgstr "Émetteur"
+
+msgctxt "field:ggd.ggd_notify_recipient,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ggd.ggd_notify_recipient,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:party.party,ggd:"
+msgid "GGD garanties"
+msgstr "Garantie GGD"
+
 msgctxt "field:party.party,pefc:"
 msgid "PEFC certifications"
-msgstr "Certifications PEFC"
+msgstr "Certification PEFC"
 
 msgctxt "field:pefc.pefc,create_date:"
 msgid "Create Date"
@@ -66,6 +206,10 @@ msgstr "Code PEFC"
 msgctxt "field:pefc.pefc,rec_name:"
 msgid "Name"
 msgstr "Nom"
+
+msgctxt "field:pefc.pefc,region:"
+msgid "Region"
+msgstr "Région"
 
 msgctxt "field:pefc.pefc,validity:"
 msgid "Validity"
@@ -119,16 +263,42 @@ msgctxt "field:pefc.pefc_notify_recipient,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
+msgctxt "help:ggd.ggd,date:"
+msgid "GGD agreement date"
+msgstr "Date d'agrément GGD"
+
+msgctxt "help:ggd.ggd,duration:"
+msgid "Garanty duration in months"
+msgstr "Durée de la garantie en mois"
+
+msgctxt "help:ggd.ggd,ggd_no:"
+msgid "GGD ID number"
+msgstr "Numéro GGD"
+
+msgctxt "help:ggd.ggd,surface:"
+msgid "Surface garanty in hectare"
+msgstr "Surface garantie en hectare"
+
+msgctxt "help:ggd.ggd_notify_recipient,recipient:"
+msgid "User that will receive mail notifications about GGD expiration"
+msgstr ""
+"L'utilisateur qui recevra l'email de notification au sujet de la date "
+"d'expiration de la garantie de gestion durable"
+
+msgctxt "help:ggd.ggd_notify_recipient,sender:"
+msgid "User used for the From address in notifications about GGD expiration"
+msgstr ""
+"Adresse Email de l'utilisateur pour la notification de l'expiration de la "
+"garantie de gestion durable"
+
 msgctxt "help:pefc.pefc,pefc_no:"
 msgid "PEFC ID number in the form \"XX-XX-XX/XXX\""
 msgstr "Identifiant PEFC de la forme \"XX-XX-XX/XXX\""
 
 msgctxt "help:pefc.pefc_notify_recipient,recipient:"
 msgid ""
-"User that will receive mail notifications about PEFC certification "
-"expiration"
-msgstr ""
-"L'utilisateur qui recevra les mails de notification d'expiraation PEFC"
+"User that will receive mail notifications about PEFC certification expiration"
+msgstr "L'utilisateur qui recevra les mails de notification d'expiraation PEFC"
 
 msgctxt "help:pefc.pefc_notify_recipient,sender:"
 msgid ""
@@ -136,6 +306,22 @@ msgid ""
 "expiration"
 msgstr ""
 "Utilisateur utilisé dans le champs From des notifications d'expiration PEFC"
+
+msgctxt "model:ggd.ggd,name:"
+msgid "GGD"
+msgstr "GGD"
+
+msgctxt "model:ggd.ggd_notify_recipient,name:"
+msgid "GGD notification recipient"
+msgstr "Destinataire de la notification de la GGD"
+
+msgctxt "model:ir.action,name:act_ggd_form_view"
+msgid "ggd certification"
+msgstr "Garantie de Gestion Durable (GGD)"
+
+msgctxt "model:ir.action,name:act_ggd_notify_form_view"
+msgid "ggd notifications"
+msgstr "Notifications de GGD"
 
 msgctxt "model:ir.action,name:act_pefc_form_view"
 msgid "PEFC certification"
@@ -149,13 +335,21 @@ msgctxt "model:ir.action,name:act_wood_party_form"
 msgid "Owner parties"
 msgstr "Tiers propriétaires"
 
+msgctxt "model:ir.cron,name:ggd_certification_cron"
+msgid "GGD garanty check"
+msgstr "Contrôle de la GGD"
+
 msgctxt "model:ir.cron,name:pefc_certification_cron"
 msgid "PEFC certification check"
 msgstr "Validité de la certification PEFC"
 
+msgctxt "model:ir.ui.menu,name:menu_ggd_notify"
+msgid "ggd notifications"
+msgstr "Notifications de GGD"
+
 msgctxt "model:ir.ui.menu,name:menu_pefc_notify"
 msgid "PEFC notifications"
-msgstr "Notification PEFC"
+msgstr "Notifications PEFC"
 
 msgctxt "model:ir.ui.menu,name:menu_wood_party"
 msgid "Owner parties"
@@ -166,9 +360,37 @@ msgid "PEFC certificate"
 msgstr "Certificat PEFC"
 
 msgctxt "model:pefc.pefc_notify_recipient,name:"
-msgid "PEFCNotifyRecipient"
+msgid "PEFC notification recipient"
 msgstr "Destinataire de la notification PEFC"
+
+msgctxt "view:ggd.ggd:"
+msgid "PEFC"
+msgstr "PEFC"
+
+msgctxt "view:ggd.ggd:"
+msgid "PEFC certificate"
+msgstr "Certificat PEFC"
+
+msgctxt "view:party.party:"
+msgid "GGD"
+msgstr "GGD"
 
 msgctxt "view:party.party:"
 msgid "PEFC"
 msgstr "PEFC"
+
+msgctxt "view:party.party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "view:pefc.pefc:"
+msgid "PEFC"
+msgstr "PEFC"
+
+msgctxt "view:pefc.pefc:"
+msgid "PEFC certificate"
+msgstr "Certificat PEFC"
+
+msgctxt "view:pefc.pefc_notify_recipient:"
+msgid "PEFC notifications recipient"
+msgstr "Destinataire de la notification PEFC"

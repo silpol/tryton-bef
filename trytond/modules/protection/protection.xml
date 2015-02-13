@@ -197,7 +197,8 @@
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_reserve_naturelle_chasse_faune_sauvage"/>
     </record>
-    <menuitem parent="menu_protection" sequence="1" id="menu_reserve_naturelle_chasse_faune_sauvage" icon="tryton-list" action="window_reserve_naturelle_chasse_faune_sauvage"/>      
+    <menuitem parent="menu_protection" sequence="1" id="menu_reserve_naturelle_chasse_faune_sauvage" icon="tryton-list"
+        action="window_reserve_naturelle_chasse_faune_sauvage"/>      
 
     <!-- Site d’importance communautaire -->
     <record model="ir.action.act_window" id="window_site_importance_communautaire">
@@ -243,7 +244,8 @@
         <field name="view" ref="zico_view_form"/>
         <field name="act_window" ref="window_site_importance_communautaire_oiseaux"/>
     </record>
-    <menuitem parent="menu_protection" sequence="1" id="menu_site_importance_communautaire_oiseaux" icon="tryton-list" action="window_site_importance_communautaire_oiseaux"/>
+    <menuitem parent="menu_protection" sequence="1" id="menu_site_importance_communautaire_oiseaux" icon="tryton-list"
+        action="window_site_importance_communautaire_oiseaux"/>
     <record model="ir.action.report" id="report_zico_edit">
         <field name="name">Open in QGis...</field>
         <field name="model">protection.zico</field>
@@ -418,5 +420,18 @@
         <field name="model">protection.reserve_biologique,-1</field>
         <field name="action" ref="report_rb_edit"/>
     </record>
+
+    <!-- generate all maps -->
+    <record model="ir.action.wizard" id="generateall">
+        <field name="name">Generate all maps...</field>
+        <field name="model">protection.area</field>
+        <field name="wiz_name">protection.generateall</field>
+    </record>
+    <record model="ir.action.keyword" id="generate_all_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">protection.area,-1</field>
+        <field name="action" ref="generateall"/>
+    </record>
+
     </data>
 </tryton>
