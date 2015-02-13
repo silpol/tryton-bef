@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<form string="La mosaïque des milieux - La situation générale sur votre commune" col="4">
+    <label name="portrait" xalign="0"/>
+    <field name="portrait" xalign="20" colspan="3"/>
+    <notebook>
+        <page string="ZONES" id="zone" col="2">
+            <label name="zmin"/>
+            <field name="zmin"/>
+            <label name="zmax"/>
+            <field name="zmax"/>            
+        </page>        
+        <page string="Climat" id="climat"  col="1">
+            <field name="page19_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate19_01"  name="generate19_01" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="Relief et altitude" id="relief"  col="1">
+            <field name="page19_02_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate19_02"  name="generate19_02" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="Géologie et pédologie" id="geologie"  col="1">
+            <field name="page19_03_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate19_03"  name="generate19_03" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="Hydropgraphie" id="hydropgraphie"  col="1">
+            <field name="page19_04_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate19_04"  name="generate19_04" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page19_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate19_empty"  name="generate19_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

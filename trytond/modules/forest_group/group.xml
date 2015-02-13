@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.icon" id="gf_icon">
+            <field name="name">tryton-gf</field>
+            <field name="path">icons/tryton-gf.svg</field>
+        </record>
+
+        <menuitem name="Groupement Forestier" id="menu_forest_group_group" icon="tryton-gf" sequence="2"/>
+        <menuitem parent="menu_forest_group_group" name="Groupements Forestiers" id="menu_forest_group_groups" icon="tryton-gf"/>
+        <menuitem parent="menu_forest_group_group" name="Rapport" id="menu_forest_group_rapport"/>
+
+		<!-- Groupement forestier -->
+        <record model="ir.ui.view" id="forest_group_view_form">
+            <field name="model">forest_group.group</field>
+            <field name="type">form</field>            
+            <field name="name">group_form</field>
+        </record>
+        <record model="ir.ui.view" id="forest_group_view_tree">
+            <field name="model">forest_group.group</field>
+            <field name="type">tree</field>            
+            <field name="name">group_tree</field>
+        </record>
+        <!-- Menu "Groupements forestiers" de rapport -->     
+        <record model="ir.action.act_window" id="act_forest_group_tree">
+            <field name="name">Groups</field>
+            <field name="res_model">forest_group.group</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_forest_group_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="forest_group_view_tree"/>
+            <field name="act_window" ref="act_forest_group_tree"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_forest_group_tree_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="forest_group_view_form"/>
+            <field name="act_window" ref="act_forest_group_tree"/>
+        </record>
+        <menuitem parent="menu_forest_group_groups" action="act_forest_group_tree" id="menu_forest_group_tree"/>
+        <!-- Menu "Tiers groupements forestiers" de Tiers -->
+        <record model="ir.action.act_window" id="act_forest_group_party_form">
+            <field name="name">Tiers groupements forestiers</field>
+            <field name="res_model">party.party</field>
+            <!-- Pour le contexte et la catégorie, 2 est la catégorie "Groupement forestier" -->
+            <field name="context">{'categories': [2]}</field>
+            <field name="domain">[('categories', 'child_of', [2], 'parent')]</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_forest_group_party_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="forest_group_view_tree"/>
+            <field name="act_window" ref="act_forest_group_party_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_forest_group_party_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party.party_view_form"/>
+            <field name="act_window" ref="act_forest_group_party_form"/>
+        </record>
+        <menuitem parent="party.menu_party_form" sequence="0" id="menu_forest_group_party" icon="tryton-list" action="act_forest_group_party_form"/>
+        
+		<!-- Membre adhérent du groupement forestier -->
+        <record model="ir.ui.view" id="member_view_form">
+            <field name="model">forest_group.member</field>
+            <field name="type">form</field>
+            <field name="priority">10</field>
+            <field name="name">member_form</field>
+        </record>
+        <record model="ir.ui.view" id="member_view_tree">
+            <field name="model">forest_group.member</field>
+            <field name="type">tree</field>
+            <field name="name">member_tree</field>
+        </record>        
+        <record model="ir.action.act_window" id="act_member_form">
+            <field name="name">Members</field>
+            <field name="res_model">forest_group.member</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_member_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="member_view_tree"/>
+            <field name="act_window" ref="act_member_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_member_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="member_view_form"/>
+            <field name="act_window" ref="act_member_form"/>
+        </record>
+        <menuitem parent="menu_forest_group_groups" action="act_member_form" id="menu_member_form"/>
+
+		<!-- Tiers Membre Indivision -->
+        <record model="ir.ui.view" id="member_party_view_form">
+            <field name="model">forest_group.parties</field>
+            <field name="type">form</field>
+            <field name="priority">10</field>
+            <field name="name">member_party_form</field>
+        </record>
+        <record model="ir.ui.view" id="member_party_view_tree">
+            <field name="model">forest_group.parties</field>
+            <field name="type">tree</field>
+            <field name="name">member_party_tree</field>
+        </record>        
+        <record model="ir.action.act_window" id="act_member_party_form">
+            <field name="name">Member Party</field>
+            <field name="res_model">forest_group.parties</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_member_party_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="member_party_view_tree"/>
+            <field name="act_window" ref="act_member_party_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_member_party_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="member_party_view_form"/>
+            <field name="act_window" ref="act_member_party_form"/>
+        </record>
+
+		<!-- Membre conseil de gérance du groupement forestier -->
+        <record model="ir.ui.view" id="conseil_view_form">
+            <field name="model">forest_group.group-forest_group.conseil</field>
+            <field name="type">form</field>
+            <field name="priority">10</field>
+            <field name="name">conseil_form</field>
+        </record>
+        <record model="ir.ui.view" id="conseil_view_tree">
+            <field name="model">forest_group.group-forest_group.conseil</field>
+            <field name="type">tree</field>
+            <field name="name">conseil_tree</field>
+        </record>        
+        <record model="ir.action.act_window" id="act_conseil_form">
+            <field name="name">Conseil members</field>
+            <field name="res_model">forest_group.group-forest_group.conseil</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_conseil_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="conseil_view_tree"/>
+            <field name="act_window" ref="act_conseil_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_conseil_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="conseil_view_form"/>
+            <field name="act_window" ref="act_conseil_form"/>
+        </record>
+        <menuitem parent="menu_forest_group_groups" action="act_conseil_form" id="menu_conseil_form"/>
+
+        <!-- Membre gérant du groupement forestier -->
+        <record model="ir.ui.view" id="gerant_view_form">
+            <field name="model">forest_group.group-forest_group.gerant</field>
+            <field name="type">form</field>
+            <field name="priority">10</field>
+            <field name="name">gerant_form</field>
+        </record>
+        <record model="ir.ui.view" id="gerant_view_tree">
+            <field name="model">forest_group.group-forest_group.gerant</field>
+            <field name="type">tree</field>
+            <field name="name">gerant_tree</field>
+        </record>        
+        <record model="ir.action.act_window" id="act_gerant_form">
+            <field name="name">Gerant members</field>
+            <field name="res_model">forest_group.group-forest_group.gerant</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gerant_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gerant_view_tree"/>
+            <field name="act_window" ref="act_gerant_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gerant_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gerant_view_form"/>
+            <field name="act_window" ref="act_gerant_form"/>
+        </record>
+        <menuitem parent="menu_forest_group_groups" action="act_gerant_form" id="menu_gerant_form"/>
+
+		<!-- Parts sociales -->
+        <record model="ir.ui.view" id="share_view_form">
+            <field name="model">forest_group.share</field>
+            <field name="type">form</field>
+            <field name="inherit" eval="None"/>
+            <field name="priority">10</field>
+            <field name="name">share_form</field>
+        </record>
+        <record model="ir.ui.view" id="share_view_tree">
+            <field name="model">forest_group.share</field>
+            <field name="type">tree</field>
+            <field name="name">share_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_share_form">
+            <field name="name">Shares</field>
+            <field name="res_model">forest_group.share</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_share_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="share_view_tree"/>
+            <field name="act_window" ref="act_share_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_share_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="share_view_form"/>
+            <field name="act_window" ref="act_share_form"/>
+        </record>
+        <record model="ir.ui.view" id="check_share_open_start_view_form">
+            <field name="model">forest_group.check_share.open.start</field>
+            <field name="type">form</field>
+            <field name="name">check_share_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_check_share_open">
+            <field name="name">Création de parts sociales</field>
+            <field name="wiz_name">forest_group.check_share.open</field>
+            <field name="model">forest_group.share</field>
+        </record>
+        <record model="ir.action.keyword" id="check_share_open_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">forest_group.share,-1</field>
+            <field name="action" ref="wizard_check_share_open"/>
+        </record>        
+        <record model="ir.ui.view" id="check_share_result">
+            <field name="model">forest_group.check_share.result</field>
+            <field name="type">form</field>
+            <field name="name">check_share_result</field>
+        </record>
+        <menuitem parent="menu_forest_group_groups" action="act_share_form" id="menu_share_form"/>
+
+        <!-- Liste associés -->
+        <record model="ir.ui.view" id="listeassocie_view_tree">
+            <field name="model">forest_group.listeassocie</field>
+            <field name="type">tree</field>
+            <field name="name">listeassocie_tree</field>
+        </record>
+        <record model="ir.ui.view" id="listeassocie_view_graph">
+            <field name="model">forest_group.listeassocie</field>
+            <field name="type">graph</field>
+            <field name="name">listeassocie_graph</field>
+        </record> 
+        <record model="ir.action.act_window" id="act_listeassocie_form">
+            <field name="name">Liste des porteurs de parts par groupement forestier</field>
+            <field name="res_model">forest_group.listeassocie</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_listeassocie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="listeassocie_view_tree"/>
+            <field name="act_window" ref="act_listeassocie_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_listeassocie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="listeassocie_view_graph"/>
+            <field name="act_window" ref="act_listeassocie_form"/>
+        </record>
+        <record model="ir.ui.view" id="listeassocie_open_start_view_form">
+            <field name="model">forest_group.listeassocie.open.start</field>
+            <field name="type">form</field>
+            <field name="name">listeassocie_form</field>
+        </record>
+        <record model="ir.action.wizard" id="act_listeassocie_open">
+            <field name="name">Liste des porteurs de parts par groupement forestier</field>
+            <field name="wiz_name">forest_group.listeassocie.open</field>
+        </record>
+        <record model="ir.action.report" id="listeassocie">
+            <field name="name">Liste des porteurs de parts</field>
+            <field name="model">forest_group.listeassocie</field>
+            <field name="report_name">forest_group.listeassocie</field>
+            <field name="report">forest_group/liste_associes.ods</field>            
+        </record>
+        <record model="ir.action.keyword" id="synthese_listeassocie">
+            <field name="keyword">form_print</field>
+            <field name="model">forest_group.listeassocie,-1</field>
+            <field name="action" ref="listeassocie"/>
+        </record>
+        <record model="ir.action.report" id="listeemargement">
+            <field name="name">Liste d'émargement</field>
+            <field name="model">forest_group.listeassocie</field>
+            <field name="report_name">forest_group.listeemargement</field>
+            <field name="report">forest_group/liste_emargement.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="synthese_listeemargement">
+            <field name="keyword">form_print</field>
+            <field name="model">forest_group.listeassocie,-1</field>
+            <field name="action" ref="listeemargement"/>
+        </record>        
+        <menuitem parent="menu_forest_group_rapport" action="act_listeassocie_open" icon="tryton-graph" id="menu_listeassocie"/>
+
+        <!-- Fiche porteur de parts -->
+        <record model="ir.ui.view" id="ficheporteur_view_tree">
+            <field name="model">forest_group.ficheporteur</field>
+            <field name="type">tree</field>
+            <field name="name">ficheporteur_tree</field>
+        </record>
+        <record model="ir.ui.view" id="ficheporteur_view_graph">
+            <field name="model">forest_group.ficheporteur</field>
+            <field name="type">graph</field>
+            <field name="name">ficheporteur_graph</field>
+        </record> 
+        <record model="ir.action.act_window" id="act_ficheporteur_form">
+            <field name="name">Fiche des groupements forestiers par porteurs de parts</field>
+            <field name="res_model">forest_group.ficheporteur</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_ficheporteur_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="ficheporteur_view_tree"/>
+            <field name="act_window" ref="act_ficheporteur_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_ficheporteur_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="ficheporteur_view_graph"/>
+            <field name="act_window" ref="act_ficheporteur_form"/>
+        </record>
+        <record model="ir.ui.view" id="ficheporteur_open_start_view_form">
+            <field name="model">forest_group.ficheporteur.open.start</field>
+            <field name="type">form</field>
+            <field name="name">ficheporteur_form</field>
+        </record>
+        <record model="ir.action.wizard" id="act_ficheporteur_open">
+            <field name="name">Fiche des groupements forestiers par porteurs de parts</field>
+            <field name="wiz_name">forest_group.ficheporteur.open</field>
+        </record>        
+        <record model="ir.action.report" id="ficheporteur">
+            <field name="name">Fiche des porteurs de parts</field>
+            <field name="model">forest_group.ficheporteur</field>
+            <field name="report_name">forest_group.ficheporteur</field>
+            <field name="report">forest_group/fiche_porteur_parts.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="synthese_ficheporteur">
+            <field name="keyword">form_print</field>
+            <field name="model">forest_group.ficheporteur,-1</field>
+            <field name="action" ref="ficheporteur"/>
+        </record>
+        
+        <menuitem parent="menu_forest_group_rapport" action="act_ficheporteur_open" icon="tryton-graph" id="menu_ficheporteur"/>
+    </data>
+</tryton>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<form string="Emplacement" col="2">
+    <group id="group_emplacement0" colspan="4" string="Emplacement">
+        <label name="code"/>
+        <field name="code"/>         
+        <label name="id"/>
+        <field name="id"/>        
+    </group>
+    <group id="group_arbre0" colspan="4" string="Arbre">
+        <label name="arbreessence"/>
+        <field name="arbreessence"/>         
+    </group>
+    <notebook colspan="6">        
+        <page string="Abres" id="arbre">                                     
+            <field name="arbre" mode="tree,form" view_ids="cg.cg_arbre_view_tree_gestion_courante,cg.cg_arbre_view_form_gestion_courante"/>
+        </page>
+        <page string="Map" id="map" col="1">                                      
+            <field name="emplacement_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

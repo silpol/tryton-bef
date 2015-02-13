@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Table 1">
+    <label name="cd_dep"/>
+    <field name="cd_dep"/>
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="groupe_taxo"/>
+    <field name="groupe_taxo"/>
+    <label name="nb_cd_ref"/>
+    <field name="nb_cd_ref"/>
+    <label name="permalien_inseec"/>
+    <field name="permalien_inseec" widget="url"/>   
+</form>

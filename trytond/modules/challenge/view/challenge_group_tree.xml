@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Group">
+    <field name="bfa" />
+    <field name="rf" />
+    <field name="pv" />
+</tree>

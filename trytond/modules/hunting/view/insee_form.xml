@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Indice des prix à la consommation" col="6">    
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="mois"/>
+    <field name="mois"/>
+    <label name="valeur"/>
+    <field name="valeur"/>
+</form>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="garden">
+    <field name="name" />
+    <field name="parcelles" />
+    <field name="info" />
+    <field name="horaire" />
+    <field name="gestion" />
+    <field name="datecrea" />
+    <field name="adherent" />
+    <field name="participant" />
+    <field name="beneficiaire" />
+</tree>

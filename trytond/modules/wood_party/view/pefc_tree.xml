@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="PEFC">
+    <field name="enabled"/>
+    <field name="region"/>
+    <field name="pefc_no"/>
+    <field name="date"/>
+    <field name="duration"/>
+    <field name="validity"/>
+    <field name="surface"/>
+</tree>

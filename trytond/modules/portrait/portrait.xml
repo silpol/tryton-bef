@@ -1,0 +1,1147 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        <menuitem name="Portrait Biodiversité" id="menu_portrait"/>
+        <menuitem parent="portrait.menu_portrait" name="La biodiversité sur votre territoire" id="menu_portrait_biodiversite"/>
+        <menuitem parent="portrait.menu_portrait" name="La mosaïque des milieux présents sur votre territoire" id="menu_portrait_mosaique"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité et sols" id="menu_portrait_sol"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux artificialisés (urbanisation, industrie…)" id="menu_portrait_artificiel"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux agricoles" id="menu_portrait_agricole"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux forestiers" id="menu_portrait_forestier"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux humides et aquatiques" id="menu_portrait_aquatique"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité, mer, littoral et milieux côtiers" id="menu_portrait_mer"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux montagnards" id="menu_portrait_montagne"/>
+        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux particuliers" id="menu_portrait_particulier"/>
+        <menuitem parent="portrait.menu_portrait" name="Espaces naturels remarqués et milieux protégés" id="menu_portrait_ens"/>
+        <menuitem parent="portrait.menu_portrait" name="Des espèces sur votre commune" id="menu_portrait_species"/>
+        <menuitem parent="portrait.menu_portrait" name="GLOSSAIRE/SIGLES" id="menu_portrait_glossaire"/>
+        <menuitem parent="portrait.menu_portrait" name="CONCLUSION" id="menu_portrait_conclusion"/>
+
+        <!-- Portrait -->        
+        <record model="ir.ui.view" id="portrait_view_tree">
+            <field name="model">portrait.portrait</field>
+            <field name="type">tree</field>
+            <field name="name">portrait_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_view_form">
+            <field name="model">portrait.portrait</field>
+            <field name="type">form</field>
+            <field name="name">portrait_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_portrait">
+            <field name="name">Portrait</field>
+            <field name="res_model">portrait.portrait</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_portrait_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_view_tree"/>
+            <field name="act_window" ref="window_portrait"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_portrait_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_view_form"/>
+            <field name="act_window" ref="window_portrait"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.portrait</field>
+            <field name="report_name">portrait.portrait.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.portrait,-1</field>
+            <field name="action" ref="report_portrait_edit"/>
+        </record>
+        <menuitem sequence="1" name="1-Portrait des communes" parent="portrait.menu_portrait"
+            id="menu_portrait_communes" icon="tryton-list" action="window_portrait"/>
+
+        <!-- Portrait PDF -->
+        <record model="ir.ui.view" id="portraitpdf_view_tree">
+            <field name="model">portrait.pdf</field>
+            <field name="type">tree</field>
+            <field name="name">portraitpdf_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portraitpdf_view_form">
+            <field name="model">portrait.pdf</field>
+            <field name="type">form</field>
+            <field name="name">portraitpdf_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portraitpdf_form">
+            <field name="name">Portrait PDF</field>
+            <field name="res_model">portrait.pdf</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_portraitpdf_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portraitpdf_view_tree"/>
+            <field name="act_window" ref="act_portraitpdf_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_portraitpdf_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portraitpdf_view_form"/>
+            <field name="act_window" ref="act_portraitpdf_form"/>
+        </record>
+        <record model="ir.ui.view" id="portraitpdf_open_start_view_form">
+            <field name="model">portrait.portraitpdf.open.start</field>
+            <field name="type">form</field>
+            <field name="name">start_portraitpdf_form</field>
+        </record>
+        <record model="ir.action.wizard" id="act_portraitpdf_open">
+            <field name="name">Portrait PDF</field>
+            <field name="wiz_name">portrait.portraitpdf.open</field>
+        </record>
+        <record model="ir.action.report" id="report_portraitpdf_pdf">
+            <field name="name">Portrait (pdf)</field>
+            <field name="model">portrait.pdf</field>
+            <field name="report_name">rtryton.pdfreport</field>
+            <field name="report">portrait/portrait.Rnw</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portraitpdf_kwd_pdf">
+            <field name="keyword">form_print</field>
+            <field name="model">portrait.pdf,-1</field>
+            <field name="action" ref="report_portraitpdf_pdf"/>
+        </record>
+        
+        <menuitem sequence="0" action="act_portraitpdf_open" icon="tryton-graph"
+            id="menu_portraitpdf"/>
+
+        <!-- Page 2 - Présentation -->        
+        <record model="ir.ui.view" id="page2_view_tree">
+            <field name="model">portrait.page2</field>
+            <field name="type">tree</field>
+            <field name="name">page2_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page2_view_form">
+            <field name="model">portrait.page2</field>
+            <field name="type">form</field>
+            <field name="name">page2_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page2">
+            <field name="name">Portrait - Page 2 - Présentation</field>
+            <field name="res_model">portrait.page2</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page2_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page2_view_tree"/>
+            <field name="act_window" ref="window_page2"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page2_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page2_view_form"/>
+            <field name="act_window" ref="window_page2"/>
+        </record>
+        <menuitem sequence="2" name="2-Présentation" parent="portrait.menu_portrait"
+            id="menu_presentation_page2" action="window_page2"/>
+
+        <!-- Page 3 - Éditorial -->        
+        <record model="ir.ui.view" id="page3_view_tree">
+            <field name="model">portrait.page3</field>
+            <field name="type">tree</field>
+            <field name="name">page3_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page3_view_form">
+            <field name="model">portrait.page3</field>
+            <field name="type">form</field>
+            <field name="name">page3_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page3">
+            <field name="name">Portrait - Page 3 - Éditorial</field>
+            <field name="res_model">portrait.page3</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page3_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page3_view_tree"/>
+            <field name="act_window" ref="window_page3"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page3_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page3_view_form"/>
+            <field name="act_window" ref="window_page3"/>
+        </record>
+        <menuitem sequence="3" name="3-Éditorial" parent="portrait.menu_presentation_page2"
+            id="menu_editorial_page3" icon="tryton-list" action="window_page3"/>
+
+        <!-- Page 4 - La biodiversité et vous, dans votre commune -->        
+        <record model="ir.ui.view" id="page4_view_tree">
+            <field name="model">portrait.page4</field>
+            <field name="type">tree</field>
+            <field name="name">page4_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page4_view_form">
+            <field name="model">portrait.page4</field>
+            <field name="type">form</field>
+            <field name="name">page4_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page4">
+            <field name="name">Portrait - Page 4 - La biodiversité et vous, dans votre commune</field>
+            <field name="res_model">portrait.page4</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page4_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page4_view_tree"/>
+            <field name="act_window" ref="window_page4"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page4_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page4_view_form"/>
+            <field name="act_window" ref="window_page4"/>
+        </record>
+        <menuitem sequence="4" name="4-La biodiversité et vous, dans votre commune" parent="portrait.menu_portrait"
+            id="menu_biodiv_commune_page4" icon="tryton-list" action="window_page4"/>
+
+        <!-- Page 5 - Avertissement - Comment lire et utiliser votre protrait -->        
+        <record model="ir.ui.view" id="page5_view_tree">
+            <field name="model">portrait.page5</field>
+            <field name="type">tree</field>
+            <field name="name">page5_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page5_view_form">
+            <field name="model">portrait.page5</field>
+            <field name="type">form</field>
+            <field name="name">page5_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page5">
+            <field name="name">Portrait - Page 5 - Avertissement - Comment lire et utiliser votre protrait</field>
+            <field name="res_model">portrait.page5</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page5_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page5_view_tree"/>
+            <field name="act_window" ref="window_page5"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page5_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page5_view_form"/>
+            <field name="act_window" ref="window_page5"/>
+        </record>
+        <menuitem sequence="5" name="5-Avertissement - Comment lire et utiliser votre portrait" parent="portrait.menu_portrait"
+            id="menu_avertissement_page5" icon="tryton-list" action="window_page5"/>
+
+        <!-- Page 6 - Communes bénéficiant du portrait actuellement -->
+        <record model="ir.ui.view" id="page6_view_tree">
+            <field name="model">portrait.page6</field>
+            <field name="type">tree</field>
+            <field name="name">page6_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page6_view_form">
+            <field name="model">portrait.page6</field>
+            <field name="type">form</field>
+            <field name="name">page6_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page6">
+            <field name="name">Portrait - Page 6 - Communes bénéficiant du portrait actuellement</field>
+            <field name="res_model">portrait.page6</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page6_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page6_view_tree"/>
+            <field name="act_window" ref="window_page6"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page6_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page6_view_form"/>
+            <field name="act_window" ref="window_page6"/>
+        </record>        
+        <record model="ir.action.report" id="report_page6_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page6</field>
+            <field name="report_name">portrait.page6.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page6_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page6,-1</field>
+            <field name="action" ref="report_page6_geo_edit"/>
+        </record>
+        <menuitem sequence="6" name="6-Communes bénéficiant du portrait actuellement" parent="portrait.menu_portrait"
+            id="menu_communes_benef_page6" icon="tryton-list" action="window_page6"/>
+
+        <!-- Page 8 - La biodiversite et ses multiples facettes -->        
+        <record model="ir.ui.view" id="page8_view_tree">
+            <field name="model">portrait.page8</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page8_view_form">
+            <field name="model">portrait.page8</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page8">
+            <field name="name">Portrait - Page 8 - La biodiversite et ses multiples facettes...</field>
+            <field name="res_model">portrait.page8</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page8_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page8_view_tree"/>
+            <field name="act_window" ref="window_page8"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page8_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page8_view_form"/>
+            <field name="act_window" ref="window_page8"/>
+        </record>
+        <menuitem sequence="8" name="8-La biodiversite et ses multiples facettes..." 
+            parent="portrait.menu_portrait_biodiversite" id="menu_biodiversite_page8" action="window_page8"/>
+
+        <!-- Page 9 - La biodiversite et ses multiples facettes sur votre commune -->
+        <record model="ir.ui.view" id="page9_view_tree">
+            <field name="model">portrait.page9</field>
+            <field name="type">tree</field>
+            <field name="name">page9_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page9_view_form">
+            <field name="model">portrait.page9</field>
+            <field name="type">form</field>
+            <field name="name">page9_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page9">
+            <field name="name">Portrait - Page 9 - La biodiversite et ses multiples facettes sur votre commune</field>
+            <field name="res_model">portrait.page9</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page9_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page9_view_tree"/>
+            <field name="act_window" ref="window_page9"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page9_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page9_view_form"/>
+            <field name="act_window" ref="window_page9"/>
+        </record>        
+        <record model="ir.action.report" id="report_page9_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page9</field>
+            <field name="report_name">portrait.page9.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page9_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page9,-1</field>
+            <field name="action" ref="report_page9_geo_edit"/>
+        </record>
+        <menuitem sequence="9" name="9-La biodiversite et ses multiples facettes...sur votre commune"
+            parent="portrait.menu_portrait_biodiversite" icon="tryton-list" id="menu_biodiversite_page9" action="window_page9"/>
+
+        <!-- generate9 all maps -->
+        <record model="ir.action.wizard" id="generate9">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page9</field>
+            <field name="wiz_name">portrait.generate9</field>
+        </record>
+        <record model="ir.action.keyword" id="generate9_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page9,-1</field>
+            <field name="action" ref="generate9"/>
+        </record>
+
+        <!-- generate foret maps -->
+        <record model="ir.action.wizard" id="generateall9map">
+            <field name="name">Generate all foret maps...</field>
+            <field name="model">portrait.page9</field>
+            <field name="wiz_name">portrait.generateforetmap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall9map_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page9,-1</field>
+            <field name="action" ref="generateall9map"/>
+        </record>
+
+        <!-- Page 10 - La biodiversite en tant que bien et services -->        
+        <record model="ir.ui.view" id="page10_view_tree">
+            <field name="model">portrait.page10</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page10_view_form">
+            <field name="model">portrait.page10</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page10">
+            <field name="name">Portrait - Page 10 - La biodiversite en tant que bien et services</field>
+            <field name="res_model">portrait.page10</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page10_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page10_view_tree"/>
+            <field name="act_window" ref="window_page10"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page10_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page10_view_form"/>
+            <field name="act_window" ref="window_page10"/>
+        </record>
+        <menuitem sequence="10" name="10-La biodiversite en tant que bien et services..." icon="tryton-list"
+            parent="portrait.menu_portrait_biodiversite" id="menu_biodiversite_page10" action="window_page10"/>
+
+        <!-- Page 11 - La biodiversite en tant que bien et services sur votre commune -->
+        <record model="ir.ui.view" id="page11_view_tree">
+            <field name="model">portrait.page11</field>
+            <field name="type">tree</field>
+            <field name="name">page11_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page11_view_form">
+            <field name="model">portrait.page11</field>
+            <field name="type">form</field>
+            <field name="name">page11_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page11">
+            <field name="name">Portrait - Page 11 - La biodiversite en tant que bien et services sur votre commune</field>
+            <field name="res_model">portrait.page11</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page11_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page11_view_tree"/>
+            <field name="act_window" ref="window_page11"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page11_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page11_view_form"/>
+            <field name="act_window" ref="window_page11"/>
+        </record>        
+        <record model="ir.action.report" id="report_page11_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page11</field>
+            <field name="report_name">portrait.page11.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page11_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page11,-1</field>
+            <field name="action" ref="report_page11_geo_edit"/>
+        </record>
+        <menuitem sequence="11" name="11-La biodiversite en tant que bien et services...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_biodiversite" id="menu_biodiversite_page11" action="window_page11"/>
+
+        <!-- generate11 all maps -->
+        <record model="ir.action.wizard" id="generate11">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page11</field>
+            <field name="wiz_name">portrait.generate11</field>
+        </record>
+        <record model="ir.action.keyword" id="generate11_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page11,-1</field>
+            <field name="action" ref="generate11"/>
+        </record>
+
+        <!-- generate sousecteur maps -->
+        <record model="ir.action.wizard" id="generateall11map">
+            <field name="name">Generate all sous secteur maps...</field>
+            <field name="model">portrait.page11</field>
+            <field name="wiz_name">portrait.generatessecteurmap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall11map_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page11,-1</field>
+            <field name="action" ref="generateall11map"/>
+        </record>
+
+        <!-- Page 12 - La biodiversite en tant que bien et services -->        
+        <record model="ir.ui.view" id="page12_view_tree">
+            <field name="model">portrait.page12</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page12_view_form">
+            <field name="model">portrait.page12</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page12">
+            <field name="name">Portrait - Page 12 - Les causes de l'érosion de la biodiversité</field>
+            <field name="res_model">portrait.page12</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page12_tree">
+            <field name="sequence" eval="12"/>
+            <field name="view" ref="page12_view_tree"/>
+            <field name="act_window" ref="window_page12"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page12_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page12_view_form"/>
+            <field name="act_window" ref="window_page12"/>
+        </record>
+        <menuitem sequence="12" name="12-Les causes de l'érosion de la biodiversité..." icon="tryton-list"
+            parent="portrait.menu_portrait_biodiversite" id="menu_biodiversite_page12" action="window_page12"/>
+
+        <!-- Page 13 - ...et comment répondre à l'érosion de la biodiversité -->        
+        <record model="ir.ui.view" id="page13_view_tree">
+            <field name="model">portrait.page13</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page13_view_form">
+            <field name="model">portrait.page13</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page13">
+            <field name="name">Portrait - Page 13 - ...et comment répondre à l'érosion de la biodiversité</field>
+            <field name="res_model">portrait.page13</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page13_tree">
+            <field name="sequence" eval="13"/>
+            <field name="view" ref="page13_view_tree"/>
+            <field name="act_window" ref="window_page13"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page13_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page13_view_form"/>
+            <field name="act_window" ref="window_page13"/>
+        </record>
+        <menuitem sequence="13" name="13-...et comment répondre à l'érosion de la biodiversité" icon="tryton-list"
+            parent="portrait.menu_portrait_biodiversite" id="menu_biodiversite_page13" action="window_page13"/>
+
+        <!-- Page 14 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page14_view_tree">
+            <field name="model">portrait.page14</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page14_view_form">
+            <field name="model">portrait.page14</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page14">
+            <field name="name">Portrait - Page 14 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page14</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page14_tree">
+            <field name="sequence" eval="14"/>
+            <field name="view" ref="page14_view_tree"/>
+            <field name="act_window" ref="window_page14"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page14_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page14_view_form"/>
+            <field name="act_window" ref="window_page14"/>
+        </record>
+        <menuitem sequence="14" name="14-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_biodiversite" id="menu_biodiversite_page14" action="window_page14"/>
+
+        <!-- Page 16 - La mosaïque des milieux... -->        
+        <record model="ir.ui.view" id="page16_view_tree">
+            <field name="model">portrait.page16</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page16_view_form">
+            <field name="model">portrait.page16</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page16">
+            <field name="name">Portrait - Page 16 - La mosaïque des milieux...</field>
+            <field name="res_model">portrait.page16</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page16_tree">
+            <field name="sequence" eval="12"/>
+            <field name="view" ref="page16_view_tree"/>
+            <field name="act_window" ref="window_page16"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page16_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page16_view_form"/>
+            <field name="act_window" ref="window_page16"/>
+        </record>
+        <menuitem sequence="16" name="16-La mosaïque des milieux..." icon="tryton-list"
+            parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page16" action="window_page16"/>
+
+        <!-- Page 17 - La mosaïque des milieux ...sur votre commune -->
+        <record model="ir.ui.view" id="page17_view_tree">
+            <field name="model">portrait.page17</field>
+            <field name="type">tree</field>
+            <field name="name">page17_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page17_view_form">
+            <field name="model">portrait.page17</field>
+            <field name="type">form</field>
+            <field name="name">page17_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page17">
+            <field name="name">Portrait - Page 17 - La mosaïque des milieux ...sur votre commune</field>
+            <field name="res_model">portrait.page17</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page17_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page17_view_tree"/>
+            <field name="act_window" ref="window_page17"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page17_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page17_view_form"/>
+            <field name="act_window" ref="window_page17"/>
+        </record>        
+        <record model="ir.action.report" id="report_page17_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page17</field>
+            <field name="report_name">portrait.page17.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page17_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page17,-1</field>
+            <field name="action" ref="report_page17_geo_edit"/>
+        </record>
+        <menuitem sequence="17" name="17-La mosaïque des milieux...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page17" action="window_page17"/>
+
+        <!-- generate17 all maps -->
+        <record model="ir.action.wizard" id="generate17">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page17</field>
+            <field name="wiz_name">portrait.generate17</field>
+        </record>
+        <record model="ir.action.keyword" id="generate17_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page17,-1</field>
+            <field name="action" ref="generate17"/>
+        </record>
+
+        <!-- generate corine land cover maps -->
+        <record model="ir.action.wizard" id="generateall17map">
+            <field name="name">Generate all Corine Land Cover maps...</field>
+            <field name="model">portrait.page17</field>
+            <field name="wiz_name">portrait.generateclcmap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall17map_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page17,-1</field>
+            <field name="action" ref="generateall17map"/>
+        </record>
+
+        <!-- Page 18 - La mosaïque des milieux - la situation générale -->        
+        <record model="ir.ui.view" id="page18_view_tree">
+            <field name="model">portrait.page18</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page18_view_form">
+            <field name="model">portrait.page18</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page18">
+            <field name="name">Portrait - Page 18 - La situation générale</field>
+            <field name="res_model">portrait.page18</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page18_tree">
+            <field name="sequence" eval="18"/>
+            <field name="view" ref="page18_view_tree"/>
+            <field name="act_window" ref="window_page18"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page18_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page18_view_form"/>
+            <field name="act_window" ref="window_page18"/>
+        </record>
+        <menuitem sequence="18" name="18-La situation générale..." icon="tryton-list"
+            parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page18" action="window_page18"/>
+
+        <!-- Page 19 - La mosaïque des milieux ...sur votre commune -->
+        <record model="ir.ui.view" id="page19_view_tree">
+            <field name="model">portrait.page19</field>
+            <field name="type">tree</field>
+            <field name="name">page19_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page19_view_form">
+            <field name="model">portrait.page19</field>
+            <field name="type">form</field>
+            <field name="name">page19_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page19">
+            <field name="name">Portrait - Page 19 - La situation générale ...sur votre commune</field>
+            <field name="res_model">portrait.page19</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page19_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page19_view_tree"/>
+            <field name="act_window" ref="window_page19"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page19_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page19_view_form"/>
+            <field name="act_window" ref="window_page19"/>
+        </record>        
+        <record model="ir.action.report" id="report_page19_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page19</field>
+            <field name="report_name">portrait.page19.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page19_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page19,-1</field>
+            <field name="action" ref="report_page19_geo_edit"/>
+        </record>
+        <menuitem sequence="19" name="19-La situation générale...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page19" action="window_page19"/>
+
+        <!-- generate19 all maps -->
+        <record model="ir.action.wizard" id="generate19">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page19</field>
+            <field name="wiz_name">portrait.generate19</field>
+        </record>
+        <record model="ir.action.keyword" id="generate19_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page19,-1</field>
+            <field name="action" ref="generate19"/>
+        </record>
+
+        <!-- Page 20 - La mosaïque des milieux - prenons un peu de hauteur -->        
+        <record model="ir.ui.view" id="page20_view_tree">
+            <field name="model">portrait.page20</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page20_view_form">
+            <field name="model">portrait.page20</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page20">
+            <field name="name">Portrait - Page 20 - Prenons un peu de hauteur</field>
+            <field name="res_model">portrait.page20</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page20_tree">
+            <field name="sequence" eval="18"/>
+            <field name="view" ref="page20_view_tree"/>
+            <field name="act_window" ref="window_page20"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page20_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page20_view_form"/>
+            <field name="act_window" ref="window_page20"/>
+        </record>
+        <menuitem sequence="20" name="20-Prenons un peu de hauteur..." icon="tryton-list"
+            parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page20" action="window_page20"/>
+
+        <!-- Page 21 - La mosaïque des milieux ...au-delà de votre commune -->
+        <record model="ir.ui.view" id="page21_view_tree">
+            <field name="model">portrait.page21</field>
+            <field name="type">tree</field>
+            <field name="name">page21_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page21_view_form">
+            <field name="model">portrait.page21</field>
+            <field name="type">form</field>
+            <field name="name">page21_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page21">
+            <field name="name">Portrait - Page 21 - La mosaïque des milieux ...au-delà de votre commune</field>
+            <field name="res_model">portrait.page21</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page21_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page21_view_tree"/>
+            <field name="act_window" ref="window_page21"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page21_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page21_view_form"/>
+            <field name="act_window" ref="window_page21"/>
+        </record>        
+        <record model="ir.action.report" id="report_page21_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page21</field>
+            <field name="report_name">portrait.page21.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page21_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page21,-1</field>
+            <field name="action" ref="report_page21_geo_edit"/>
+        </record>
+        <menuitem sequence="21" name="21-Prenons un peu de hauteur...au-delà de votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page21" action="window_page21"/>
+
+        <!-- generate21 all maps -->
+        <record model="ir.action.wizard" id="generate21">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page21</field>
+            <field name="wiz_name">portrait.generate21</field>
+        </record>
+        <record model="ir.action.keyword" id="generate21_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page21,-1</field>
+            <field name="action" ref="generate21"/>
+        </record>
+
+        <!-- generate all greco maps -->
+        <record model="ir.action.wizard" id="generateall21greco">
+            <field name="name">Generate all GRECO...</field>
+            <field name="model">portrait.page21</field>
+            <field name="wiz_name">portrait.generategrecomap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall21greco_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page21,-1</field>
+            <field name="action" ref="generateall21greco"/>
+        </record>
+
+        <!-- generate all ser maps -->
+        <record model="ir.action.wizard" id="generateall21ser">
+            <field name="name">Generate all SER...</field>
+            <field name="model">portrait.page21</field>
+            <field name="wiz_name">portrait.generatesermap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall21ser_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page21,-1</field>
+            <field name="action" ref="generateall21ser"/>
+        </record>
+
+        <!-- generate all serar maps -->
+        <record model="ir.action.wizard" id="generateall21serar">
+            <field name="name">Generate all SERAR...</field>
+            <field name="model">portrait.page21</field>
+            <field name="wiz_name">portrait.generateserarmap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall21serar_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page21,-1</field>
+            <field name="action" ref="generateall21serar"/>
+        </record>
+
+        <!-- generate all her1 maps -->
+        <record model="ir.action.wizard" id="generateall21her1">
+            <field name="name">Generate all HER1...</field>
+            <field name="model">portrait.page21</field>
+            <field name="wiz_name">portrait.generateher1map</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall21her1_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page21,-1</field>
+            <field name="action" ref="generateall21her1"/>
+        </record>
+
+        <!-- generate all her2 maps -->
+        <record model="ir.action.wizard" id="generateall21her2">
+            <field name="name">Generate all HER2...</field>
+            <field name="model">portrait.page21</field>
+            <field name="wiz_name">portrait.generateher2map</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall21her2_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page21,-1</field>
+            <field name="action" ref="generateall21her2"/>
+        </record>
+
+        <!-- Page 22 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page22_view_tree">
+            <field name="model">portrait.page22</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page22_view_form">
+            <field name="model">portrait.page22</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page22">
+            <field name="name">Portrait - Page 22 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page22</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page22_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page22_view_tree"/>
+            <field name="act_window" ref="window_page22"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page22_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page22_view_form"/>
+            <field name="act_window" ref="window_page22"/>
+        </record>
+        <menuitem sequence="22" name="22-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page22" action="window_page22"/>
+
+        <!-- Page 24 - Mieux connaître les sols... -->        
+        <record model="ir.ui.view" id="page24_view_tree">
+            <field name="model">portrait.page24</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page24_view_form">
+            <field name="model">portrait.page24</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page24">
+            <field name="name">Portrait - Page 24 - Mieux connaître les sols...</field>
+            <field name="res_model">portrait.page24</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page24_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page24_view_tree"/>
+            <field name="act_window" ref="window_page24"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page24_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page24_view_form"/>
+            <field name="act_window" ref="window_page24"/>
+        </record>
+        <menuitem sequence="24" name="24-Mieux connaître les sols..." icon="tryton-list"
+            parent="portrait.menu_portrait_sol" id="menu_biodiversite_page24" action="window_page24"/>
+
+        <!-- Page 26 - Facteurs d'évolution de la biodiversité des sols... -->        
+        <record model="ir.ui.view" id="page26_view_tree">
+            <field name="model">portrait.page26</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page26_view_form">
+            <field name="model">portrait.page26</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page26">
+            <field name="name">Portrait - Page 26 - Facteurs d'évolution de la biodiversité des sols...</field>
+            <field name="res_model">portrait.page26</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page26_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page26_view_tree"/>
+            <field name="act_window" ref="window_page26"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page26_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page26_view_form"/>
+            <field name="act_window" ref="window_page26"/>
+        </record>
+        <menuitem sequence="26" name="26-Facteurs d'évolution de la biodiversité des sols..." icon="tryton-list"
+            parent="portrait.menu_portrait_sol" id="menu_biodiversite_page26" action="window_page26"/>
+
+        <!-- Page 28 - Réponses pour la biodiversité des sols... -->        
+        <record model="ir.ui.view" id="page28_view_tree">
+            <field name="model">portrait.page28</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page28_view_form">
+            <field name="model">portrait.page28</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page28">
+            <field name="name">Portrait - Page 28 - Réponses pour la biodiversité des sols...</field>
+            <field name="res_model">portrait.page28</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page28_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page28_view_tree"/>
+            <field name="act_window" ref="window_page28"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page28_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page28_view_form"/>
+            <field name="act_window" ref="window_page28"/>
+        </record>
+        <menuitem sequence="28" name="28-Réponses pour la biodiversité des sols..." icon="tryton-list"
+            parent="portrait.menu_portrait_sol" id="menu_biodiversite_page28" action="window_page28"/>
+
+        <!-- Page 30 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page30_view_tree">
+            <field name="model">portrait.page30</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page30_view_form">
+            <field name="model">portrait.page30</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page30">
+            <field name="name">Portrait - Page 30 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page30</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page30_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page30_view_tree"/>
+            <field name="act_window" ref="window_page30"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page30_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page30_view_form"/>
+            <field name="act_window" ref="window_page30"/>
+        </record>
+        <menuitem sequence="30" name="30-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_sol" id="menu_biodiversite_page30" action="window_page30"/>
+
+        <!-- Page 32 - Mieux connaître les milieux artificialisés... -->        
+        <record model="ir.ui.view" id="page32_view_tree">
+            <field name="model">portrait.page32</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page32_view_form">
+            <field name="model">portrait.page32</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page32">
+            <field name="name">Portrait - Page 32 - Mieux connaître les milieux artificialisés...</field>
+            <field name="res_model">portrait.page32</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page32_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page32_view_tree"/>
+            <field name="act_window" ref="window_page32"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page32_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page32_view_form"/>
+            <field name="act_window" ref="window_page32"/>
+        </record>
+        <menuitem sequence="32" name="32-Mieux connaître les milieux artificialisés..." icon="tryton-list"
+            parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page32" action="window_page32"/>
+
+        <!-- Page 33 - Mieux connaître les milieux artificialisés...sur votre commune-->
+        <record model="ir.ui.view" id="page33_view_tree">
+            <field name="model">portrait.page33</field>
+            <field name="type">tree</field>
+            <field name="name">page33_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page33_view_form">
+            <field name="model">portrait.page33</field>
+            <field name="type">form</field>
+            <field name="name">page33_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page33">
+            <field name="name">Portrait - Page 33 - Mieux connaître les milieux artificialisés...sur votre commune</field>
+            <field name="res_model">portrait.page33</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page33_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page33_view_tree"/>
+            <field name="act_window" ref="window_page33"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page33_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page33_view_form"/>
+            <field name="act_window" ref="window_page33"/>
+        </record>        
+        <record model="ir.action.report" id="report_page33_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page33</field>
+            <field name="report_name">portrait.page33.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page33_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page33,-1</field>
+            <field name="action" ref="report_page33_geo_edit"/>
+        </record>
+        <menuitem sequence="33" name="33-Mieux connaître les milieux artificialisés...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page33" action="window_page33"/>
+
+        <!-- generate33 all maps -->
+        <record model="ir.action.wizard" id="generate33">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page33</field>
+            <field name="wiz_name">portrait.generate33</field>
+        </record>
+        <record model="ir.action.keyword" id="generate33_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page33,-1</field>
+            <field name="action" ref="generate33"/>
+        </record>
+
+        <!-- Page 34 - Facteurs d'évolution de la biodiversité en milieux artificialisés... -->        
+        <record model="ir.ui.view" id="page34_view_tree">
+            <field name="model">portrait.page34</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page34_view_form">
+            <field name="model">portrait.page34</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page34">
+            <field name="name">Portrait - Page 34 - Facteurs d'évolution de la biodiversité en milieux artificialisés...</field>
+            <field name="res_model">portrait.page34</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page34_tree">
+            <field name="sequence" eval="12"/>
+            <field name="view" ref="page34_view_tree"/>
+            <field name="act_window" ref="window_page34"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page34_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page34_view_form"/>
+            <field name="act_window" ref="window_page34"/>
+        </record>
+        <menuitem sequence="34" name="34-La mosaïque des milieux..." icon="tryton-list"
+            parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page34" action="window_page34"/>
+
+        <!-- Page 71 - Espaces naturels remarqués et milieux protégés-->
+        <record model="ir.ui.view" id="page71_view_tree">
+            <field name="model">portrait.page71</field>
+            <field name="type">tree</field>
+            <field name="name">page71_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page71_view_form">
+            <field name="model">portrait.page71</field>
+            <field name="type">form</field>
+            <field name="name">page71_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page71">
+            <field name="name">Portrait - Page 71 - Espaces naturels remarqués et milieux protégés</field>
+            <field name="res_model">portrait.page71</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page71_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page71_view_tree"/>
+            <field name="act_window" ref="window_page71"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page71_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page71_view_form"/>
+            <field name="act_window" ref="window_page71"/>
+        </record>        
+        <record model="ir.action.report" id="report_page71_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page71</field>
+            <field name="report_name">portrait.page71.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page71_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page71,-1</field>
+            <field name="action" ref="report_page71_geo_edit"/>
+        </record>
+        <menuitem sequence="71" name="71-Espaces naturels remarqués et milieux protégés" icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_communes_benef_page71" action="window_page71"/>
+
+        <!-- generate71 all maps -->
+        <record model="ir.action.wizard" id="generate71">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page71</field>
+            <field name="wiz_name">portrait.generate71</field>
+        </record>
+        <record model="ir.action.keyword" id="generate71_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page71,-1</field>
+            <field name="action" ref="generate71"/>
+        </record>
+
+        <!-- generate protection maps -->
+        <record model="ir.action.wizard" id="generateallmap">
+            <field name="name">Generate all protection maps...</field>
+            <field name="model">portrait.page71</field>
+            <field name="wiz_name">portrait.generateprotectionmap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateallmap_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page71,-1</field>
+            <field name="action" ref="generateallmap"/>
+        </record>
+
+    </data>
+</tryton>

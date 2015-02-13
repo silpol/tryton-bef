@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Évolution des emplacements" editable="bottom">
+    <field name="date"/>
+    <field name="nature" widget="selection"/>
+    <field name="diametre" widget="selection"/>
+    <field name="diam" tree_invisible="1"/>              
+</tree>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<form string="Emplacement" col="2">
+    <group id="group_emplacement0" colspan="4" string="Emplacement">
+        <label name="id"/>
+        <field name="id"/>
+        <label name="code"/>
+        <field name="code"/>        
+        <label name="numpostprec"/>
+        <field name="numpostprec"/>
+        <label name="coteoppose"/>
+        <field name="coteoppose"/>
+        <label name="repere"/>
+        <field name="repere"/>
+        <label name="active"/>
+        <field name="active"/>
+    </group>
+    <group id="group_arbre0" colspan="4" string="Arbre">
+        <label name="arbreessence"/>
+        <field name="arbreessence"/>         
+    </group>
+    <notebook colspan="6">        
+        <page string="Évolutions" id="evol">                                     
+            <field name="evolution"/>
+        </page>
+        <page string="Abres" id="arbre" states="{'invisible': Equal(Eval('evonature',0),2)}">                                     
+            <field name="arbre" mode="tree,form" view_ids="cg.cg_arbre_view_tree_plantation,cg.cg_arbre_view_form_plantation"/>
+        </page>
+        <page string="Map" id="map" col="1">                                      
+            <field name="emplacement_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Table D">
+    <field name="cd_insee"/>
+    <field name="code_site"/>
+    <field name="nom_site"/>
+</tree>

@@ -1,0 +1,1134 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="analytic_account.account" id="1">
+            <field name="code">1</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="mandatory">False</field>
+            <field name="state">draft</field>
+            <field name="type">root</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Recettes</field>
+        </record>
+        <record model="analytic_account.account" id="2">
+            <field name="code">2</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="mandatory">False</field>
+            <field name="state">draft</field>
+            <field name="type">root</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Dépenses</field>
+        </record>
+        <record model="analytic_account.account" id="3">
+            <field name="code">2100</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="mandatory">False</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Exploitation</field>
+            <field name="parent">2</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="4">
+            <field name="code">2101</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Travaux forestiers</field>
+            <field name="parent">3</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="5">
+            <field name="code">2102</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Façonnage/Débardage</field>
+            <field name="parent">3</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="6">
+            <field name="code">2103</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Essence</field>
+            <field name="parent">3</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="7">
+            <field name="code">2104</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Matériel</field>
+            <field name="parent">3</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="8">
+            <field name="code">2105</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Véhicule</field>
+            <field name="parent">3</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="9">
+            <field name="code">2106</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais de commercialisation</field>
+            <field name="parent">3</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="10">
+            <field name="code">2199</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">3</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="11">
+            <field name="code">2200</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Route</field>
+            <field name="parent">2</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="12">
+            <field name="code">2201</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Entretien</field>
+            <field name="parent">11</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="13">
+            <field name="code">2202</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Création</field>
+            <field name="parent">11</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="14">
+            <field name="code">2203</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Droit de passage</field>
+            <field name="parent">11</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="15">
+            <field name="code">2204</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Prêt FFN</field>
+            <field name="parent">11</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="16">
+            <field name="code">2299</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">11</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="17">
+            <field name="code">2300</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Maison forestière</field>
+            <field name="parent">2</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="18">
+            <field name="code">2301</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Entretien</field>
+            <field name="parent">17</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="19">
+            <field name="code">2302</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Assurance</field>
+            <field name="parent">17</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="20">
+            <field name="code">2303</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Électricité/Gaz</field>
+            <field name="parent">17</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="21">
+            <field name="code">2304</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Eau</field>
+            <field name="parent">17</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="22">
+            <field name="code">2305</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Taxe d'habitation</field>
+            <field name="parent">17</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="23">
+            <field name="code">2306</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Téléphone</field>
+            <field name="parent">17</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="24">
+            <field name="code">2399</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">17</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="25">
+            <field name="code">2400</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais généraux</field>
+            <field name="parent">2</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="26">
+            <field name="code">2401</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Salaires garde et sylviculture</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="27">
+            <field name="code">2402</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Salaire gestion</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="28">
+            <field name="code">2403</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Charges</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="29">
+            <field name="code">2404</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais personnel</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="30">
+            <field name="code">2405</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais financiers/intérêts</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="31">
+            <field name="code">2406</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais bancaires</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="32">
+            <field name="code">2407</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Syndicat propriétaires</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="33">
+            <field name="code">2408</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Taxes foncières</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="34">
+            <field name="code">2409</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">CVO</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="35">
+            <field name="code">2410</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais AG/Gérance</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="36">
+            <field name="code">2411</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Assurance forêt</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="37">
+            <field name="code">2412</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Expert comptable</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="38">
+            <field name="code">2413</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Expert forestier (solde n-1)</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="39">
+            <field name="code">2414</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Expert forestier (acompte n)</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="40">
+            <field name="code">2415</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">PSG</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="41">
+            <field name="code">2416</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Certification PEFC</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="42">
+            <field name="code">2417</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Notaire</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="43">
+            <field name="code">2418</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Avocat</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="44">
+            <field name="code">2419</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">RCS</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="45">
+            <field name="code">2499</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">25</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="46">
+            <field name="code">2500</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Chasse</field>
+            <field name="parent">2</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="47">
+            <field name="code">2501</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Réservation/Location</field>
+            <field name="parent">46</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="48">
+            <field name="code">2502</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Fauchage/Entretien de ligne</field>
+            <field name="parent">46</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="49">
+            <field name="code">2599</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">46</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="50">
+            <field name="code">2600</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Étang/Pêche</field>
+            <field name="parent">2</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="51">
+            <field name="code">2601</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais pêche</field>
+            <field name="parent">50</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="52">
+            <field name="code">2602</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Entretien</field>
+            <field name="parent">50</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="53">
+            <field name="code">2699</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">50</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="54">
+            <field name="code">2700</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Carrière</field>
+            <field name="parent">2</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="55">
+            <field name="code">2701</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais carrière</field>
+            <field name="parent">54</field>
+            <field name="root">2</field>
+        </record>
+        <record model="analytic_account.account" id="56">
+            <field name="code">2799</field>
+            <field name="currency">50</field>
+            <field name="display_balance">credit-debit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">54</field>
+            <field name="root">2</field>
+        </record>
+
+        <!-- Recettes -->
+        <record model="analytic_account.account" id="57">
+            <field name="code">1000</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Coupes</field>
+            <field name="parent">1</field>
+            <field name="root">1</field>
+        </record> 
+        <record model="analytic_account.account" id="58">
+            <field name="code">1100</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Effets ventes n-1 sur pied</field>
+            <field name="parent">57</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="59">
+            <field name="code">1101</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Effets ventes n-1 abatus</field>
+            <field name="parent">57</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="60">
+            <field name="code">1102</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Bois d'oeuvre sur pied</field>
+            <field name="parent">57</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="61">
+            <field name="code">1103</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Frais de mise à port</field>
+            <field name="parent">57</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="62">
+            <field name="code">1104</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Bois d'oeuvre abattus</field>
+            <field name="parent">57</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="63">
+            <field name="code">1105</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Chablis</field>
+            <field name="parent">57</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="64">
+            <field name="code">1199</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">57</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="65">
+            <field name="code">1200</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Ventes diverses</field>
+            <field name="parent">1</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="66">
+            <field name="code">1201</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Éclaircie mécanisée</field>
+            <field name="parent">65</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="67">
+            <field name="code">1202</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Bois d'industrie</field>
+            <field name="parent">65</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="68">
+            <field name="code">1203</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Bois de chauffage</field>
+            <field name="parent">65</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="69">
+            <field name="code">1299</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">65</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="70">
+            <field name="code">1300</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres produits</field>
+            <field name="parent">1</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="71">
+            <field name="code">1301</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Vente de foin</field>
+            <field name="parent">70</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="72">
+            <field name="code">1302</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Fermage</field>
+            <field name="parent">70</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="73">
+            <field name="code">1304</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Droit de passage</field>
+            <field name="parent">70</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="74">
+            <field name="code">1399</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">70</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="75">
+            <field name="code">1400</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Divers</field>
+            <field name="parent">1</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="76">
+            <field name="code">1401</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Remboursement salaire et charge</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="77">
+            <field name="code">1402</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Remboursement frais voiture</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="78">
+            <field name="code">1403</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Remboursement frais garde</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="79">
+            <field name="code">1404</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres remboursements</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="80">
+            <field name="code">1405</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Remboursement caisse maladie</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="81">
+            <field name="code">1406</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Intérêts financiers</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="82">
+            <field name="code">1407</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Subventions</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="83">
+            <field name="code">1408</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Indemnités de préjudice</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="84">
+            <field name="code">1499</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">75</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="85">
+            <field name="code">1500</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Chasse</field>
+            <field name="parent">1</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="86">
+            <field name="code">1501</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Location</field>
+            <field name="parent">85</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="87">
+            <field name="code">1599</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">85</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="88">
+            <field name="code">1600</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Étang et Pêche</field>
+            <field name="parent">1</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="89">
+            <field name="code">1601</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Vente de poissons</field>
+            <field name="parent">88</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="90">
+            <field name="code">1602</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Location pêche</field>
+            <field name="parent">88</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="91">
+            <field name="code">1699</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">88</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="92">
+            <field name="code">1700</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Carrière</field>
+            <field name="parent">1</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="93">
+            <field name="code">1701</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Droit de foretage</field>
+            <field name="parent">92</field>
+            <field name="root">1</field>
+        </record>
+        <record model="analytic_account.account" id="94">
+            <field name="code">1799</field>
+            <field name="currency">50</field>
+            <field name="display_balance">debit-credit</field>
+            <field name="state">draft</field>
+            <field name="type">normal</field>
+            <field name="company">1</field>
+            <field name="active">TRUE</field>
+            <field name="name">Autres</field>
+            <field name="parent">92</field>
+            <field name="root">1</field>
+        </record>
+    </data>
+</tryton>

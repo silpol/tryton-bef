@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <!-- HER2 -->      
+        <record model="ir.ui.view" id="portrait_her2_view_tree">
+            <field name="model">portrait.her2</field>
+            <field name="type">tree</field>
+            <field name="name">her2_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_her2_view_form">
+            <field name="model">portrait.her2</field>
+            <field name="type">form</field>
+            <field name="name">her2_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_her2_form">
+            <field name="name">HER2</field>
+            <field name="res_model">portrait.her2</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_her2_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_her2_view_tree"/>
+            <field name="act_window" ref="act_portrait_her2_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_her2_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_her2_view_form"/>
+            <field name="act_window" ref="act_portrait_her2_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_her2_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.her2</field>
+            <field name="report_name">portrait.her2.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_her2_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.her2,-1</field>
+            <field name="action" ref="report_portrait_her2_edit"/>
+        </record> 
+        <menuitem parent="portrait_carthage.menu_carthage" sequence="1" id="menu_portrait_her2_form" icon="tryton-list" action="act_portrait_her2_form"/>
+
+        <!-- Code HER2 -->      
+        <record model="ir.ui.view" id="portrait_codeher2_view_tree">
+            <field name="model">portrait.codeher2</field>
+            <field name="type">tree</field>
+            <field name="name">codeher2_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_codeher2_view_form">
+            <field name="model">portrait.codeher2</field>
+            <field name="type">form</field>
+            <field name="name">codeher2_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_codeher2_form">
+            <field name="name">Code HER2</field>
+            <field name="res_model">portrait.codeher2</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codeher2_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_codeher2_view_tree"/>
+            <field name="act_window" ref="act_portrait_codeher2_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codeher2_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_codeher2_view_form"/>
+            <field name="act_window" ref="act_portrait_codeher2_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_codeher2_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.codeher2</field>
+            <field name="report_name">portrait.codeher2.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_codeher2_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.codeher2,-1</field>
+            <field name="action" ref="report_portrait_codeher2_edit"/>
+        </record> 
+        <menuitem parent="menu_her_codes" sequence="1" id="menu_portrait_codeher2_form" icon="tryton-list" action="act_portrait_codeher2_form"/>
+                
+    </data>
+</tryton>

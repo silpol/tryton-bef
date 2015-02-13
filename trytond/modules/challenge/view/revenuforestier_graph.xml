@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<graph string="Revenus forestiers par groupement forestier" type="vbar">
+    <x>
+        <field name="groupe" />
+    </x>
+    <y>
+        <field name="montant" key="1" domain="Equal(Eval('typo'), 'bf')" color="#fa0000" string="Base forfaitaire agricole (€)"/>
+        <field name="montant" key="2" domain="Equal(Eval('typo'), 'rf')" color="#ffff00" string="Revenus fonciers (€)"/>
+        <field name="montant" key="3" domain="Equal(Eval('typo'), 'pv')" color="#00ff00" string="Plus-values (€)"/>        
+    </y>
+</graph>

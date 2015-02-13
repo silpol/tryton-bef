@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<form string="La biodiversite et ses multiples facettes sur votre commune" col="4">
+    <label name="portrait" xalign="0"/>
+    <field name="portrait" xalign="20" colspan="3"/>
+    <notebook>
+        <page string="ZONES" id="zone" col="2">
+            <label name="nbeau"/>
+            <field name="nbeau"/>
+            <field name="ssecteur" colspan="2"/>           
+            <field name="courseau" colspan="2"/>
+            <field name="geom"/>
+        </page>
+        <page string="GÉNÉRAL" id="general" col="1">            
+            <field name="page11_all_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate11_all"  name="generate11_all" icon="tryton-executable" />            
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page11_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate11_empty"  name="generate11_empty" icon="tryton-executable" />            
+        </page>
+    </notebook>
+</form>

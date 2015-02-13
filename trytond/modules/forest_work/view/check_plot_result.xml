@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Parcelles à préconiser" col="2">
+    <label name="party"/>
+    <field name="party"/>
+    <label name="address"/>
+    <field name="address"/>
+    <label name="typetravaux"/>
+    <field name="typetravaux"/>
+    <label name="description"/>
+    <field name="description"/>
+    <field name="plots_succeed" view_ids="forest_work.se_parcelle_view_tree" colspan="2"/>
+    <field name="plots_failed" view_ids="forest_work.se_parcelle_view_tree" colspan="2"/>
+</form>

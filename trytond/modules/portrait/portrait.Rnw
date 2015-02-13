@@ -1,0 +1,4035 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Portrait de la Biodiversité
+% Modèle LaTeX
+% Version 1.0 (05/11/14)
+%
+% Auteur Original:
+% Pascal Obstétar (pascal.obstetar@gmail.com)
+%
+% Licence:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compilation du modèle:
+% Ce modèle utilise biber pour la section bibliographie et makeindex pour
+% créer les index.
+% Si vous ouvrez pour la première fois le modèle, compilez-le en ligne de
+% commande 
+% Passez les commandes suivantes dans l'ordre et assurez-vous d'avoir une
+% distribution correctement configurée :
+%
+% 1) pdflatex portrait
+% 2) makeindex portrait.idx -s StyleInd.ist
+% 3) biber portrait
+% 4) pdflatex portrait (2 fois de suite)
+%
+% Après cela, pour mettre à jour la bibliographie/index utilisez la
+% commande idoine et assurez-vous de propager les modifications dans le
+% document latex.
+% 
+% Ce modèle utilise un nombre important de paquet pour optimiser le
+% compilation. Il est fortement recommandé de mettre à jour votre version
+% LaTex pour ne pas avoir des erreurs de compilation.
+%
+% Note importante :
+% Les images des chapitredoivent avoir un ration 2:1 largeur:hauteur,
+% ie 920px de large et 460px de haut.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PAQUETS ET AUTRES CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Police par défaut, taille et justification à droite
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,a4paper]{geometry} % Marge des pages
+
+\usepackage{xcolor} % Requis pour spécifier les couleurs par leur nom
+\definecolor{ocre}{RGB}{196,55,44} % Definie la couleur ocre de mise en évidence du document
+\definecolor{NatureFrance}{RGB}{128,204,40} % Definie la couleur nature france
+\definecolor{biodiversite}{RGB}{194,100,0} % Definie la couleur
+\definecolor{mosaique}{RGB}{128,204,40} % Definie la couleur
+\definecolor{sol}{RGB}{196,55,44} % Definie la couleur
+\definecolor{artificiel}{RGB}{148,148,147} % Definie la couleur
+\definecolor{agricole}{RGB}{123,94,153} % Definie la couleur
+\definecolor{forestier}{RGB}{53,91,35} % Definie la couleur
+\definecolor{humide}{RGB}{0,86,151} % Definie la couleur
+\definecolor{mer}{RGB}{0,136,152} % Definie la couleur
+\definecolor{montagne}{RGB}{137,109,69} % Definie la couleur
+\definecolor{particulier}{RGB}{196,55,44} % Definie la couleur
+\definecolor{remarquable}{RGB}{194,100,0} % Definie la couleur
+\definecolor{espece}{RGB}{112,130,39} % Definie la couleur
+
+% Paramètres de la police
+\usepackage{avant} % Utilise la police Avantgarde pour l'entête
+%\usepackage{times} % Utilise la police Times pour l'entête
+\usepackage{mathptmx} % Utilise la police Adobe Times Roman comme police
+% par défaut du texte
+
+\usepackage{microtype} % Modifie légèrement l'espacement dans la police
+\usepackage[utf8]{inputenc} % Requis pour la langue française et la gestion
+% des accents
+\usepackage[T1]{fontenc} % Utilise l'encodage 8-bit
+
+\usepackage{float} % Permet de forcer l'emplacement des figures, tables...
+\restylefloat{table} % Force l'emplacement des tables
+\usepackage{colortbl} % Permet de colorer les cellules dans un tableau
+
+% Bibliographie
+\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+%\addbibresource{bibliography.bib} % Fichier BibTeX de la bibliographie
+\defbibheading{bibempty}{}
+
+% Index
+\usepackage{calc} % utilisé pour calculer l'espacement automatiquement
+% entre les mots et les lettres
+\usepackage{makeidx} % Requis pour les index
+\makeindex % Indique à LaTeX de créer les fichiers requis pour les index
+
+\usepackage{multicol} % Permet d'écrire sur plusieurs colonnes dans un tableau
+\usepackage{multirow} % Permet d'écrire sur plusieurs lignes dans un tableau
+\usepackage{array,makecell} % Permet d'écrire sur plusieurs lignes dans un tableau
+\usepackage[tikz]{bclogo} % Permet d'afficher des boîtes originales
+
+%----------------------------------------------------------------------------------------
+
+\usepackage{structure} % Insert le fichier structure.sty contenant la majorité
+% de la strucuture du modèle portrait de la biodiversité
+
+\graphicspath{{images/}}
+
+
+%----------------------------------------------------------------------------------------
+%  DÉCLARATION DES VARIALBES
+%----------------------------------------------------------------------------------------
+
+<<Variables, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+commune <- portrait.pdf$commune
+id <- portrait.pdf$id
+page2 <- portrait.pdf$page2
+page3 <- portrait.pdf$page3
+page4_1 <- portrait.pdf$page4_1
+page4_2 <- portrait.pdf$page4_2
+page5_1 <- portrait.pdf$page5_1
+page5_2 <- portrait.pdf$page5_2
+page8 <- portrait.pdf$page8
+page9 <- portrait.pdf$page9
+page10 <- portrait.pdf$page10
+page11 <- portrait.pdf$page11
+page12 <- portrait.pdf$page12
+page13 <- portrait.pdf$page13
+page14 <- portrait.pdf$page14
+page16 <- portrait.pdf$page16
+page17 <- portrait.pdf$page17
+page18 <- portrait.pdf$page18
+page19 <- portrait.pdf$page19
+page20 <- portrait.pdf$page20
+page21 <- portrait.pdf$page21
+page22 <- portrait.pdf$page22
+page24 <- portrait.pdf$page24
+page26 <- portrait.pdf$page26
+page28 <- portrait.pdf$page28
+page30 <- portrait.pdf$page30
+page32 <- portrait.pdf$page32
+page71 <- portrait.pdf$page71
+@
+
+%----------------------------------------------------------------------------------------
+%	DÉBUT DU DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	PAGE DE TITRE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1]{background}}} % Image d'arrière plan (background)
+\par\normalfont\fontsize{40}{45}\sffamily\selectfont
+\noindent\textcolor{NatureFrance}{Commune de}\par % Commune de
+\par\textcolor{NatureFrance}{\Sexpr{commune}}\par % Nom de la commune
+\vspace*{10cm}
+\par\normalfont\fontsize{25}{30}\sffamily\selectfont
+\textcolor{white}{Portrait de la}\par % Portrait de la
+\par\normalfont\fontsize{55}{60}\sffamily\selectfont
+\textcolor{NatureFrance}{Biodiversité}\par % Biodiversité
+\begin{flushright}
+\textcolor{white}{Communale}\par % Communale
+\end{flushright}
+\rfoot{\normalfont\fontsize{20}{10}\sffamily\selectfont\textcolor{white}\today} % Date du jour au format Jour Mois Année
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\bgline % Image de fond lignes colorées des bas de page
+\bgimgpres % Image de fond (../Image/presentation.pdf)
+\vspace*{10cm} % Espacement depuis le bord haut de la page
+\begingroup
+\par\normalfont\fontsize{25}{30}\sffamily\selectfont
+\begin{flushright}
+\noindent\textcolor{ocre}{PRÉSENTATION}\par % PRÉSENTATION
+\end{flushright}
+\endgroup
+\Sexpr{page2} % texte de présentation de la page 2
+
+%----------------------------------------------------------------------------------------
+%	ÉDITORIAL
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\bgimgedit % Image de fond (../Image/presentation.pdf)
+\begingroup
+\par\normalfont\fontsize{25}{30}\sffamily\selectfont
+\begin{center}
+\noindent\textcolor{ocre}{Éditorial}\par % Éditorial
+\end{center}
+\endgroup
+\Sexpr{page3} % texte de l'éditorial de la page 3
+
+%----------------------------------------------------------------------------------------
+%	DEUX COLONNES
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\bgimgedit % Image de fond (../Image/presentation.pdf)
+\begin{multicols}{2}
+\begingroup
+\par\normalfont\fontsize{20}{30}\sffamily\selectfont
+\begin{center}
+\noindent\textcolor{ocre}{La biodiversité et vous, dans votre commune}\par
+\end{center}
+\endgroup
+\Sexpr{page4_1} % texte de présentation de la page 4 colonne 1
+\columnbreak
+\begingroup
+\par\normalfont\fontsize{20}{30}\sffamily\selectfont
+\begin{center}
+\noindent\textcolor{ocre}{Que contient le portrait de votre commune ?}\par
+\end{center}
+\endgroup
+\Sexpr{page4_2} % texte de présentation de la page 4 colonne 2
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	AVERTISSEMENT
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\bgimgedit % Image de fond (../Image/presentation.pdf)
+\begin{multicols}{2}
+\begingroup
+\par\normalfont\fontsize{20}{30}\sffamily\selectfont
+\begin{center}
+\noindent\textcolor{ocre}{Avertissement}\par
+\noindent\textcolor{ocre}{Comment lire et utiliser votre portrait}\par
+\end{center}
+\endgroup
+\Sexpr{page5_1} % texte de présentation de la page 5 colonne 1
+\columnbreak
+\begingroup
+\par\normalfont\fontsize{20}{30}\sffamily\selectfont
+\begin{center}
+\noindent\textcolor{ocre}{}\par
+\end{center}
+\endgroup
+\Sexpr{page5_2} % texte de présentation de la page 5 colonne 2
+\end{multicols}
+
+\begin{center}
+\includegraphics[scale=0.8]{terreverte.png}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNES BÉNÉFICIAIRES
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\bgimgedit % Image de fond (../Image/presentation.pdf)
+\begingroup
+\par\normalfont\fontsize{20}{30}\sffamily\selectfont
+\begin{center}
+\noindent\textcolor{ocre}{Communes bénéficiant du Portrait \today}\par
+\end{center}
+\endgroup
+\includegraphics[scale=0.8]{portrait_pdf_\Sexpr{id}_page6_map.png}
+
+%----------------------------------------------------------------------------------------
+%	SOMMAIRE
+%----------------------------------------------------------------------------------------
+\renewcommand{\contentsname}{Sommaire} % Renomme Table des matières en Sommaire
+\thispagestyle{plain} % Style plain pour cette page
+\chapterimage{chapter_sommaire.pdf} % Image vide du sommaire
+\tableofcontents % Crée le sommaire
+
+\cleardoublepage % Force le sommaire à commencer sur une page de droite
+
+\pagestyle{fancy} % Entête
+
+%----------------------------------------------------------------------------------------
+%	LA BIODIVERSITÉ SUR VOTRE TERRITOIRE
+%----------------------------------------------------------------------------------------
+
+<<Biodiversite8, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page8_chapo <- portrait.page8$page_chapo
+page8_msg1 <- portrait.page8$page_msg1
+page8_msg2 <- portrait.page8$page_msg2
+page8_msg3 <- portrait.page8$page_msg3
+page8_msg4 <- portrait.page8$page_msg4
+page8_loin <- portrait.page8$page_loin
+page8_geste <- portrait.page8$page_geste
+page8_chiffre <- portrait.page8$page_chiffre
+page8_anec <- portrait.page8$page_anec
+@
+
+\ClearShipoutPicture % Supprime les fonds image affiché
+\chapterimage{chapter_biodiversite.png} % Image du chapitre introduction
+\chapter{La biodiversité sur votre territoire}
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - La biodiversité et ses multiples facettes...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgBiodiversite % Image de fond
+\section{La biodiversité et ses multiples facettes...}
+
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page8_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page8_\Sexpr{page8}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page8_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page8_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page8_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page8_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page8_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page8_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page8_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page8_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page8_\Sexpr{page8}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - ...sur votre commune
+%----------------------------------------------------------------------------------------
+<<Biodiversite9, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+foret <- if(exists("forest.forest")){data.frame(forest.forest$rec_name)} else {NULL}
+frt <- data.frame(portrait.page9$frt_dom, portrait.page9$frt_ndom, portrait.page9$frt_aut)
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\includegraphics[scale=0.8]{portrait_page9_\Sexpr{page9}_page9_all_map.png}
+\begin{tabular}{|*{3}{>{\centering\arraybackslash}m{4.86cm}|}}
+\hline
+\rowcolor{espece} \multicolumn{2}{|m{10.14cm}|}{\textbf{FORÊTS RELEVANT DU RÉGIME FORESTIER}} & \\
+\cline{1-2}
+\rowcolor{espece} Forêts domaniales & Forêts communales & \multirow{-2}{*}{\textbf{AUTRES FORÊTS}} \\
+\hline
+\Sexpr{frt[1,1]} & \Sexpr{frt[1,2]} & \Sexpr{frt[1,3]}\\
+\hline
+\rowcolor{espece} \multicolumn{3}{|m{15.44cm}|}{\textbf{FORÊTS SUR VOTRE COMMUNE}} \\
+\hline
+\multicolumn{3}{|c|}{\Sexpr{foret[1,1]}} \\
+\hline
+\multicolumn{3}{|c|}{\Sexpr{foret[2,1]}} \\
+\hline
+\multicolumn{3}{|c|}{\Sexpr{foret[3,1]}} \\
+\hline
+\multicolumn{3}{|c|}{\Sexpr{foret[4,1]}} \\
+\hline
+\multicolumn{3}{|c|}{\Sexpr{foret[5,1]}} \\
+\hline
+\end{tabular}
+\end{figure}
+
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - La biodiversité, en tant que biens et services...
+%----------------------------------------------------------------------------------------
+
+<<Biodiversite10, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page10_chapo <- portrait.page10$page_chapo
+page10_msg1 <- portrait.page10$page_msg1
+page10_msg2 <- portrait.page10$page_msg2
+page10_msg3 <- portrait.page10$page_msg3
+page10_msg4 <- portrait.page10$page_msg4
+page10_loin <- portrait.page10$page_loin
+page10_geste <- portrait.page10$page_geste
+page10_chiffre <- portrait.page10$page_chiffre
+page10_anec <- portrait.page10$page_anec
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{La biodiversité, en tant que biens et services...}
+
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page10_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page10_\Sexpr{page10}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page10_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page10_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page10_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page10_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page10_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page10_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page10_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page10_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page10_\Sexpr{page10}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+<<Biodiversite11, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+ss <- if(exists("carthage.soussecteur")){data.frame(carthage.soussecteur$rec_name)} else {NULL}
+eau <- if(exists("carthage.courseau")){data.frame(carthage.courseau$rec_name)} else {NULL}
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\includegraphics[scale=0.8]{portrait_page11_\Sexpr{page11}_page11_all_map.png}
+\begin{tabular}{|m{15.44cm}|}
+\hline
+\rowcolor{espece} \textbf{SOUS SECTEUR CARTHAGE} \\
+\hline
+\Sexpr{ss[1,1]} \\
+\hline
+\Sexpr{ss[2,1]} \\
+\hline
+\Sexpr{ss[3,1]} \\
+\hline
+\rowcolor{espece} \textbf{COURS D'EAU} \\
+\hline
+\Sexpr{eau[1,1]} \\
+\hline
+\Sexpr{eau[2,1]} \\
+\hline
+\Sexpr{eau[3,1]} \\
+\hline
+\Sexpr{eau[4,1]} \\
+\hline
+\Sexpr{eau[5,1]} \\
+\hline
+\end{tabular}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - Les causes de l’érosion de la biodiversité...
+%----------------------------------------------------------------------------------------
+
+<<Biodiversite12, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page12_chapo <- portrait.page12$page_chapo
+page12_msg1 <- portrait.page12$page_msg1
+page12_msg2 <- portrait.page12$page_msg2
+page12_msg3 <- portrait.page12$page_msg3
+page12_msg4 <- portrait.page12$page_msg4
+page12_loin <- portrait.page12$page_loin
+page12_geste <- portrait.page12$page_geste
+page12_chiffre <- portrait.page12$page_chiffre
+page12_anec <- portrait.page12$page_anec
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Les causes de l’érosion de la biodiversité...}
+
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page12_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page12_\Sexpr{page12}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page12_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page12_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page12_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page12_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page12_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page12_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page12_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page12_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page12_\Sexpr{page12}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - ...et comment répondre à l'érosion de la biodiversité
+%----------------------------------------------------------------------------------------
+
+<<Biodiversite13, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page13_chapo <- portrait.page13$page_chapo
+page13_msg1 <- portrait.page13$page_msg1
+page13_msg2 <- portrait.page13$page_msg2
+page13_msg3 <- portrait.page13$page_msg3
+page13_msg4 <- portrait.page13$page_msg4
+page13_loin <- portrait.page13$page_loin
+page13_geste <- portrait.page13$page_geste
+page13_chiffre <- portrait.page13$page_chiffre
+page13_anec <- portrait.page13$page_anec
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...et comment répondre à l'érosion de la biodiversité}
+
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page13_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page13_\Sexpr{page13}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page13_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page13_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page13_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page13_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page13_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page13_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page13_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page13_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page13_\Sexpr{page13}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+<<Biodiversite14, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page14_chapo <- portrait.page14$page_chapo
+page14_msg1 <- portrait.page14$page_msg1
+page14_msg2 <- portrait.page14$page_msg2
+page14_msg3 <- portrait.page14$page_msg3
+page14_msg4 <- portrait.page14$page_msg4
+page14_loin <- portrait.page14$page_loin
+page14_geste <- portrait.page14$page_geste
+page14_chiffre <- portrait.page14$page_chiffre
+page14_anec <- portrait.page14$page_anec
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page14_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page14_\Sexpr{page14}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page14_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page14_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page14_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page14_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page14_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page14_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page14_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page14_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page14_\Sexpr{page14}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La biodiversité sur votre territoire - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerBiodiversite % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%	LA MOSAÏQUE DES MILIEUX PRÉSENTS SUR VOTRE TERRITOIRE
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_mosaique.png} % Image du chapitre introudction
+
+\chapter{La mosaïque des milieux présents \\ sur votre territoire}
+
+%----------------------------------------------------------------------------------------
+%	La mosaïque des milieux présents sur votre territoire - La mosaïque des milieux...
+%----------------------------------------------------------------------------------------
+<<Biodiversite16, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page16_chapo <- portrait.page16$page_chapo
+page16_msg1 <- portrait.page16$page_msg1
+page16_msg2 <- portrait.page16$page_msg2
+page16_msg3 <- portrait.page16$page_msg3
+page16_msg4 <- portrait.page16$page_msg4
+page16_loin <- portrait.page16$page_loin
+page16_geste <- portrait.page16$page_geste
+page16_chiffre <- portrait.page16$page_chiffre
+page16_anec <- portrait.page16$page_anec
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgMosaique % Image de fond
+\section{La mosaïque des milieux...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page16_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page16_\Sexpr{page16}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page16_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page16_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page16_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page16_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page16_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page16_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page16_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page16_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page16_\Sexpr{page16}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La mosaïque des milieux présents sur votre territoire - ...sur votre commune
+%----------------------------------------------------------------------------------------
+<<Biodiversite17, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+clc <- data.frame(portrait.page17$artificial, portrait.page17$agricole, portrait.page17$foret, portrait.page17$marais, portrait.page17$mer)
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\includegraphics[scale=0.8]{portrait_page17_\Sexpr{page17}_page17_all_map.png}
+\begin{tabular}{|*{5}{>{\centering\arraybackslash}m{2.75cm}|}}
+\hline
+\rowcolor{mosaique} \multicolumn{5}{|m{15.50cm}|}{\textbf{ZONES CORINE LAND COVER}} \\
+\hline
+\rowcolor{mosaique} Surface artificielle (ha) & Aire agricole (ha) & Forêt et zone naturelle (ha) & Marais et zone humide (ha) & Cours d'eau, mers et océans (ha) \\
+\hline
+\Sexpr{clc[1,1]} & \Sexpr{clc[1,2]} & \Sexpr{clc[1,3]} & \Sexpr{clc[1,4]} & \Sexpr{clc[1,5]} \\
+\hline
+\end{tabular}
+\end{figure}
+
+
+%----------------------------------------------------------------------------------------
+%  La mosaïque des milieux présents sur votre territoire - La situation générale...
+%----------------------------------------------------------------------------------------
+<<Biodiversite18, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page18_chapo <- portrait.page18$page_chapo
+page18_msg1 <- portrait.page18$page_msg1
+page18_msg2 <- portrait.page18$page_msg2
+page18_msg3 <- portrait.page18$page_msg3
+page18_msg4 <- portrait.page18$page_msg4
+page18_loin <- portrait.page18$page_loin
+page18_geste <- portrait.page18$page_geste
+page18_chiffre <- portrait.page18$page_chiffre
+page18_anec <- portrait.page18$page_anec
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{La situation générale...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page18_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page18_\Sexpr{page18}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page18_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page18_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page18_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page18_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page18_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page18_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page18_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page18_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page18_\Sexpr{page18}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La mosaïque des milieux présents sur votre territoire - ...sur votre commune
+%----------------------------------------------------------------------------------------
+<<Biodiversite19, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+alt <- data.frame(portrait.page19$zmin, portrait.page19$zmax)
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Climat & Relief et Altitude \\
+\hline
+\includegraphics[scale=0.35]{portrait_page19_\Sexpr{page19}_page19_01_map.png} & \includegraphics[scale=0.35]{portrait_page19_\Sexpr{page19}_page19_02_map.png} \\
+\hline
+Géologie et Pédologie & Hydrographie \\
+\hline
+\includegraphics[scale=0.35]{portrait_page19_\Sexpr{page19}_page19_03_map.png} & \includegraphics[scale=0.35]{portrait_page19_\Sexpr{page19}_page19_04_map.png} \\
+\hline
+\end{tabular}
+\begin{tabular}{|*{2}{>{\centering\arraybackslash}m{6.99cm}|}}
+\hline
+\rowcolor{mosaique} \multicolumn{2}{|m{14.41cm}|}{\textbf{ALTITUDES}} \\
+\hline
+\rowcolor{mosaique} Altitude minimale (m) & Altitude maximale (m) \\
+\hline
+\Sexpr{alt[1,1]} & \Sexpr{alt[1,2]} \\
+\hline
+\end{tabular}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%  La mosaïque des milieux présents sur votre territoire - Prenons un peu de hauteur...
+%----------------------------------------------------------------------------------------
+<<Biodiversite20, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page20_chapo <- portrait.page20$page_chapo
+page20_msg1 <- portrait.page20$page_msg1
+page20_msg2 <- portrait.page20$page_msg2
+page20_msg3 <- portrait.page20$page_msg3
+page20_msg4 <- portrait.page20$page_msg4
+page20_loin <- portrait.page20$page_loin
+page20_geste <- portrait.page20$page_geste
+page20_chiffre <- portrait.page20$page_chiffre
+page20_anec <- portrait.page20$page_anec
+@
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Prenons un peu de hauteur...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page20_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page20_\Sexpr{page20}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page20_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page20_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page20_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page20_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page20_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page20_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page20_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page20_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page20_\Sexpr{page20}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+
+%----------------------------------------------------------------------------------------
+%	La mosaïque des milieux présents sur votre territoire - ...au-delà de votre commune
+%----------------------------------------------------------------------------------------
+<<Biodiversite21, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+greco <- if(exists("portrait.greco")){data.frame(portrait.greco$rec_name)} else {NULL}
+ser <- if(exists("portrait.ser")){data.frame(portrait.ser$rec_name)} else {NULL}
+serar <- if(exists("portrait.serar")){data.frame(portrait.serar$rec_name)} else {NULL}
+her1 <- if(exists("portrait.her1")){data.frame(portrait.her1$rec_name)} else {NULL}
+her2 <- if(exists("portrait.her2")){data.frame(portrait.her2$rec_name)} else {NULL}
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...au-delà de votre commune}
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+GRECO & SER \\
+\hline
+\includegraphics[scale=0.35]{portrait_page21_\Sexpr{page21}_page21_01_map.png} & \includegraphics[scale=0.35]{portrait_page21_\Sexpr{page21}_page21_02_map.png} \\
+\hline
+SERAR & \\
+\hline
+& \cellcolor{mosaique} GRECO \\\cline{2-2}
+& \Sexpr{greco[1,1]} \\\cline{2-2}
+& \Sexpr{greco[2,1]} \\\cline{2-2}
+& \cellcolor{mosaique} SER \\\cline{2-2}
+& \Sexpr{ser[1,1]} \\\cline{2-2}
+& \Sexpr{ser[2,1]} \\\cline{2-2}
+& \cellcolor{mosaique} SERAR \\\cline{2-2}
+& \Sexpr{serar[1,1]} \\\cline{2-2}
+& \Sexpr{serar[2,1]} \\\cline{2-2}
+& \cellcolor{mosaique} HER1 \\\cline{2-2}
+& \Sexpr{her1[1,1]} \\\cline{2-2}
+& \Sexpr{her1[2,1]} \\\cline{2-2}
+& \cellcolor{mosaique} HER2 \\\cline{2-2}
+& \Sexpr{her2[1,1]} \\\cline{2-2}
+\multirow{-15}{*}{\includegraphics[scale=0.35]{portrait_page21_\Sexpr{page21}_page21_03_map.png}} & \Sexpr{her2[2,1]} \\\cline{2-2}
+\hline
+HER1 & HER2 \\
+\hline
+\includegraphics[scale=0.35]{portrait_page21_\Sexpr{page21}_page21_04_map.png} & \includegraphics[scale=0.35]{portrait_page21_\Sexpr{page21}_page21_05_map.png} \\
+\hline
+\end{tabular}
+\caption{La mosaïque des milieux au-delà de votre commune}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%  La biodiversité sur votre territoire - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+<<Biodiversite22, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page22_chapo <- portrait.page22$page_chapo
+page22_msg1 <- portrait.page22$page_msg1
+page22_msg2 <- portrait.page22$page_msg2
+page22_msg3 <- portrait.page22$page_msg3
+page22_msg4 <- portrait.page22$page_msg4
+page22_loin <- portrait.page22$page_loin
+page22_geste <- portrait.page22$page_geste
+page22_chiffre <- portrait.page22$page_chiffre
+page22_anec <- portrait.page22$page_anec
+@
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page22_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page22_\Sexpr{page22}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page22_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page22_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page22_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page22_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page22_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page22_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page22_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page22_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page22_\Sexpr{page22}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	La mosaïque des milieux présents sur votre territoire - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerMosaique % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ ET SOLS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_sols.png} % Image du chapitre introduction
+
+\chapter{Biodiversité et sols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et sols - Mieux connaître les sols...
+%----------------------------------------------------------------------------------------
+<<Biodiversite24, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page24_chapo <- portrait.page24$page_chapo
+page24_msg1 <- portrait.page24$page_msg1
+page24_msg2 <- portrait.page24$page_msg2
+page24_msg3 <- portrait.page24$page_msg3
+page24_msg4 <- portrait.page24$page_msg4
+page24_loin <- portrait.page24$page_loin
+page24_geste <- portrait.page24$page_geste
+page24_chiffre <- portrait.page24$page_chiffre
+page24_anec <- portrait.page24$page_anec
+@
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgSols % Image de fond
+\section{Mieux connaître les sols...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page24_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page24_\Sexpr{page24}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page24_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page24_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page24_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page24_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page24_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page24_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page24_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page24_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page24_\Sexpr{page24}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Biodiversité et sols - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et sols - Facteurs d'évolution de la biodiversité des sols...
+%----------------------------------------------------------------------------------------
+<<Biodiversite26, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page26_chapo <- portrait.page26$page_chapo
+page26_msg1 <- portrait.page26$page_msg1
+page26_msg2 <- portrait.page26$page_msg2
+page26_msg3 <- portrait.page26$page_msg3
+page26_msg4 <- portrait.page26$page_msg4
+page26_loin <- portrait.page26$page_loin
+page26_geste <- portrait.page26$page_geste
+page26_chiffre <- portrait.page26$page_chiffre
+page26_anec <- portrait.page26$page_anec
+@
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Facteurs d'évolution de la biodiversité des sols...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page26_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page26_\Sexpr{page26}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page26_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page26_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page26_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page26_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page26_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page26_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page26_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page26_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page26_\Sexpr{page26}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Biodiversité et sols - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et sols - Réponses pour la biodiversité des sols...
+%----------------------------------------------------------------------------------------
+<<Biodiversite28, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page28_chapo <- portrait.page28$page_chapo
+page28_msg1 <- portrait.page28$page_msg1
+page28_msg2 <- portrait.page28$page_msg2
+page28_msg3 <- portrait.page28$page_msg3
+page28_msg4 <- portrait.page28$page_msg4
+page28_loin <- portrait.page28$page_loin
+page28_geste <- portrait.page28$page_geste
+page28_chiffre <- portrait.page28$page_chiffre
+page28_anec <- portrait.page28$page_anec
+@
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour la biodiversité des sols...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page28_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page28_\Sexpr{page28}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page28_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page28_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page28_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page28_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page28_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page28_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page28_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page28_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page28_\Sexpr{page28}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Biodiversité et sols - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et sols - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+<<Biodiversite30, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page30_chapo <- portrait.page30$page_chapo
+page30_msg1 <- portrait.page30$page_msg1
+page30_msg2 <- portrait.page30$page_msg2
+page30_msg3 <- portrait.page30$page_msg3
+page30_msg4 <- portrait.page30$page_msg4
+page30_loin <- portrait.page30$page_loin
+page30_geste <- portrait.page30$page_geste
+page30_chiffre <- portrait.page30$page_chiffre
+page30_anec <- portrait.page30$page_anec
+@
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page30_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page30_\Sexpr{page30}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page30_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page30_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page30_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page30_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page30_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page30_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page30_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page30_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page30_\Sexpr{page30}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Biodiversité et sols - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerSols % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ ET MILIEUX ARTIFICIALISÉS (URBANISATION, INDUSTRIE...)
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_artificiel.png} % Image du chapitre introduction
+
+\chapter{Biodiversité et milieux artificialisés (urbanisation, industrie...)}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Mieux connaître les milieux artificialisés...
+%----------------------------------------------------------------------------------------
+<<Biodiversite32, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+page32_chapo <- portrait.page32$page_chapo
+page32_msg1 <- portrait.page32$page_msg1
+page32_msg2 <- portrait.page32$page_msg2
+page32_msg3 <- portrait.page32$page_msg3
+page32_msg4 <- portrait.page32$page_msg4
+page32_loin <- portrait.page32$page_loin
+page32_geste <- portrait.page32$page_geste
+page32_chiffre <- portrait.page32$page_chiffre
+page32_anec <- portrait.page32$page_anec
+@
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgArtificiel % Image de fond
+\section{Mieux connaître les milieux artificialisés...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page32_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+\includegraphics[width=8cm, height=6cm]{portrait_page32_\Sexpr{page32}_page_photo_map.png}
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page32_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page32_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page32_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page32_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page32_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page32_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page32_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page32_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page32_\Sexpr{page32}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux artificialisés (urbanisation, industrie...) - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Facteurs d'évolution de la biodiversité en milieux artificialisés...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgArtificiel % Image de fond
+\section{Facteurs d'évolution de la biodiversité en milieux artificialisés...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Biodiversité et milieux artificialisés (urbanisation, industrie...) - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Réponses pour la biodiversité en milieux artificialisés...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour la biodiversité en milieux artificialisés...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	 Biodiversité et milieux artificialisés (urbanisation, industrie...) - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	 Biodiversité et milieux artificialisés (urbanisation, industrie...) - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerArtificiel % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ ET MILIEUX AGRICOLES
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_agricole.png} % Image du chapitre introduction
+
+\chapter{Biodiversité et milieux agricoles}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux agricoles - Mieux connaître les milieux agricoles...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgAgricole % Image de fond
+\section{Mieux connaître les milieux agricoles...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux agricoles - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux agricoles - Facteurs d'évolution de la biodiversité en milieux agricoles...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Facteurs d'évolution de la biodiversité en milieux agricoles...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux agricoles - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux agricoles - Réponses pour la biodiversité en milieux agricoles...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour la biodiversité en milieux agricoles...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	 Biodiversité et milieux agricoles - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux agricoles - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	 Biodiversité et milieux agricoles - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerAgricole % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ ET MILIEUX FORESTIERS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_forestier.png} % Image du chapitre introduction
+
+\chapter{Biodiversité et milieux forestiers}
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux forestiers - Mieux connaître les milieux forestiers...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgForestier % Image de fond
+\section{Mieux connaître les milieux forestiers...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux forestiers - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux forestiers - Facteurs d'évolution de la biodiversité en milieu forestier...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Facteurs d'évolution de la biodiversité en milieu forestier...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux forestiers - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux forestiers - Réponses pour la biodiversité en milieu forestier...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour la biodiversité en milieu forestier...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%   Biodiversité et milieux forestiers - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux forestiers - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	 Biodiversité et milieux forestiers - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerForestier % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ ET MILIEUX HUMIDES ET AQUATIQUES
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_humide.png} % Image du chapitre introduction
+
+\chapter{Biodiversité et milieux humides \\ et aquatiques}
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux humides et aquatiques - Mieux connaître les milieux humides et aquatiques...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgHumide % Image de fond
+\section{Mieux connaître les milieux humides et aquatiques...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux humides et aquatiques - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux humides et aquatiques - Facteurs d'évolution de la biodiversité en milieu humide et aquatique...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Facteurs d'évolution de la biodiversité en milieu humide et aquatique...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux humides et aquatiques - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux humides et aquatiques - Réponses pour la biodiversité en milieu humide et aquatique...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour la biodiversité en milieu humide et aquatique...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%   Biodiversité et milieux humides et aquatiques - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux humides et aquatiques - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%   Biodiversité et milieux humides et aquatiques - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerHumide % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ, MER, LITTORAL ET MILIEUX CÔTIERS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_mer.png} % Image du chapitre introduction
+
+\chapter{Biodiversité, mer, littoral \\ et milieux côtiers}
+%----------------------------------------------------------------------------------------
+%  Biodiversité, mer, littoral et milieux côtiers - Mieux connaître les milieux côtiers...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgMer % Image de fond
+\section{Mieux connaître les milieux côtiers...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité, mer, littoral et milieux côtiers  - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité, mer, littoral et milieux côtiers  - Facteurs d'évolution de la biodiversité en milieux côtiers...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Facteurs d'évolution de la biodiversité en milieux côtiers...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité, mer, littoral et milieux côtiers  - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité, mer, littoral et milieux côtiers  - Réponses pour la biodiversité en milieux côtiers...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour la biodiversité en milieux côtiers...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%   Biodiversité, mer, littoral et milieux côtiers  - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité, mer, littoral et milieux côtiers  - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%   Biodiversité, mer, littoral et milieux côtiers - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerMer % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ ET MILIEUX MONTAGNARDS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_montagne.png} % Image du chapitre introduction
+
+\chapter{Biodiversité et milieux montagnards}
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux montagnards - Mieux connaître les milieux montagnards...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgMontagne % Image de fond
+\section{Mieux connaître les milieux montagnards...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux montagnards  - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux montagnards  - Facteurs d'évolution de la biodiversité en milieux montagnards...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Facteurs d'évolution de la biodiversité en milieux montagnards...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux montagnards  - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux montagnards  - Réponses pour la biodiversité en milieux montagnards...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour la biodiversité en milieux montagnards...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux montagnards - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux montagnards - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%   Biodiversité et milieux montagnards - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerMontagne % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIODIVERSITÉ ET MILIEUX PARTICULIERS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_particulier.png} % Image du chapitre introduction
+
+\chapter{Biodiversité et milieux particuliers}
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux particuliers - Mieux connaître les milieux particuliers...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgMosaique % Image de fond
+\section{Mieux connaître les milieux particuliers...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux particuliers  - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux particuliers  - Facteurs d'évolution de la biodiversité en milieux particuliers...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgMosaique % Image de fond
+\section{Facteurs d'évolution de la biodiversité en milieux particuliers...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux particuliers  - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux particuliers  - Réponses pour la biodiversité en milieux particuliers...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgMosaique % Image de fond
+\section{Réponses pour la biodiversité en milieux particuliers...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux particuliers - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\lipsum[1-4] % texte
+
+%----------------------------------------------------------------------------------------
+%  Biodiversité et milieux particuliers - Clefs de lecture...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Clefs de lecture...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%   Biodiversité et milieux particuliers - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerMosaique % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  ESPACES NATURELS REMARQUÉS ET MILIEUX PROTÉGÉS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_remarquable.png} % Image du chapitre
+
+\chapter{Espaces naturels remarqués \\ et milieux protégés}
+
+%----------------------------------------------------------------------------------------
+%  Espaces naturels remarqués et milieux protégés - Mieux connaître les espaces naturels remarqués...
+%----------------------------------------------------------------------------------------
+
+<<Biodiversite71, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+protection <- data.frame(protection.area$rec_name, protection.area$url)
+espace <- data.frame(portrait.page71$espaces_proteges, portrait.page71$znieff_zico, portrait.page71$natura)
+@
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgRemarquable % Image de fond
+\section{Mieux connaître les espaces naturels remarqués...}
+
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page12_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+Photo
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page12_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page12_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page12_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page12_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page12_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page12_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page12_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page12_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page12_\Sexpr{page12}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Espaces naturels remarqués et milieux protégés - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\includegraphics[scale=0.8]{portrait_page71_\Sexpr{page71}_page71_all_map.png}
+\begin{tabular}{|*{3}{>{\centering\arraybackslash}m{5cm}|}}
+\hline
+\rowcolor{espece} Espaces protégés & ZNIEFF/ZICO & Natura 2000 \\
+\hline
+\Sexpr{espace[1,1]} & \Sexpr{espace[1,2]} & \Sexpr{espace[1,3]}\\
+\hline
+\rowcolor{espece} \multicolumn{2}{|m{10.44cm}|}{Statuts de protection sur votre commune} & Lien URL \\
+\hline
+\multicolumn{2}{|c|}{\Sexpr{protection[1,1]}} & \url{\Sexpr{protection[1,2]}} \\
+\hline
+\multicolumn{2}{|c|}{\Sexpr{protection[2,1]}} & \url{\Sexpr{protection[2,2]}} \\
+\hline
+\multicolumn{2}{|c|}{\Sexpr{protection[3,1]}} & \url{\Sexpr{protection[3,2]}} \\
+\hline
+\multicolumn{2}{|c|}{\Sexpr{protection[4,1]}} & \url{\Sexpr{protection[4,2]}} \\
+\hline
+\multicolumn{2}{|c|}{\Sexpr{protection[5,1]}} & \url{\Sexpr{protection[5,2]}} \\
+\hline
+\end{tabular}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%  Espaces naturels remarqués et milieux protégés - Mieux connaître les espaces naturels remarqués...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgRemarquable % Image de fond
+\section{Mieux connaître les espaces naturels remarqués...}
+
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+\Sexpr{page12_chapo}
+\end{bclogo}
+\vspace*{0.3cm}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{}
+Photo
+\end{bclogo}
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+\Sexpr{page12_msg1}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+\Sexpr{page12_msg2}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+\Sexpr{page12_msg3}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+\Sexpr{page12_msg4}
+\end{bclogo}
+\begin{multicols}{2}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Quelques chiffres}
+\Sexpr{page12_chiffre}
+\end{bclogo}
+\columnbreak
+\vfill
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Anecdote ou citation}
+\Sexpr{page12_anec}
+\end{bclogo}
+\end{multicols}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+\Sexpr{page12_loin}
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+\Sexpr{page12_geste}
+\end{bclogo}
+\vfill
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Dessin}
+\includegraphics[width=3cm, height=3cm]{portrait_page12_\Sexpr{page12}_page_dessin_map.png}
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Espaces naturels remarqués et milieux protégés - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Espaces protégés} \\
+\hline
+RAMSAR - Biosphère & Aire de Protection de Biotope \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_01_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_02_map.png} \\
+\hline
+Parc National & Parc Naturel Marin \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_03_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_04_map.png} \\
+\hline
+Parc Naturel Régional & Réserve Naturelle Régionale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_05_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_06_map.png} \\
+\hline
+\end{tabular}
+\caption{Espaces protégés}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	Espaces naturels remarqués et milieux protégés - Réponses pour les milieux protégés...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour les milieux protégés...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Espaces naturels remarqués et milieux protégés - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Espaces protégés} \\
+\hline
+Réserve Naturelle Nationale & Réserve Naturelle de Corse \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_07_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_08_map.png} \\
+\hline
+R.N. de Chasse et Faune Sauvage & Conservatoire Du Littoral \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_09_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_12_map.png} \\
+\hline
+Conservatoire d'Espaces Naturels & Réserve Biologique \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_13_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_15_map.png} \\
+\hline
+\end{tabular}
+\caption{Espaces protégés}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	Espaces naturels remarqués et milieux protégés - Réponses pour les milieux protégés...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Réponses pour les milieux protégés...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Espaces naturels remarqués et milieux protégés - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Inventaires d'Espaces Naturels} \\
+\hline
+ZNIEFF I et II & ZICO \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_14_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_16_map.png} \\
+\hline
+\multicolumn{2}{|c|}{Natura 2000} \\
+\hline
+Site d'Importance Communautaire & Zone de Protection Spéciale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_10_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_11_map.png} \\
+\hline
+\end{tabular}
+\caption{Inventaires d'Espaces Naturels et Natura 2000}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	Espaces naturels remarqués et milieux protégés - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerRemarquable % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%	DES ESPÈCES SUR VOTRE COMMUNE
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_espece.png} % Image du chapitre
+
+\chapter{Des espèces sur votre commune}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - Parlons de la connaissance...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgEspece % Image de fond
+\section{Parlons de la connaissance...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Espaces protégés} \\
+\hline
+RAMSAR - Biosphère & Aire de Protection de Biotope \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_01_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_02_map.png} \\
+\hline
+Parc National & Parc Naturel Marin \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_03_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_04_map.png} \\
+\hline
+Parc Naturel Régional & Réserve Naturelle Régionale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_05_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_06_map.png} \\
+\hline
+\end{tabular}
+\caption{Espaces protégés}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - Parlons des espèces...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Parlons des espèces...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Espaces protégés} \\
+\hline
+Réserve Naturelle Nationale & Réserve Naturelle de Corse \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_07_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_08_map.png} \\
+\hline
+R.N. de Chasse et Faune Sauvage & Conservatoire Du Littoral \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_09_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_12_map.png} \\
+\hline
+Conservatoire d'Espaces Naturels & Réserve Biologique \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_13_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_15_map.png} \\
+\hline
+\end{tabular}
+\caption{Espaces protégés}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - Volet faune - Les mammifères et les oiseaux...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Volet faune - Les mammifères et les oiseaux...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Inventaires d'Espaces Naturels} \\
+\hline
+ZNIEFF I et II & ZICO \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_14_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_16_map.png} \\
+\hline
+\multicolumn{2}{|c|}{Natura 2000} \\
+\hline
+Site d'Importance Communautaire & Zone de Protection Spéciale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_10_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_11_map.png} \\
+\hline
+\end{tabular}
+\caption{Inventaires d'Espaces Naturels et Natura 2000}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%  Des espèces sur votre commune - Volet faune - Les reptiles, les amphibiens et les poissons...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Volet faune - Les reptiles, les amphibiens et les poissons...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Inventaires d'Espaces Naturels} \\
+\hline
+ZNIEFF I et II & ZICO \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_14_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_16_map.png} \\
+\hline
+\multicolumn{2}{|c|}{Natura 2000} \\
+\hline
+Site d'Importance Communautaire & Zone de Protection Spéciale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_10_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_11_map.png} \\
+\hline
+\end{tabular}
+\caption{Inventaires d'Espaces Naturels et Natura 2000}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%  Des espèces sur votre commune - Volet faune - Les arthropodes et les mollusques...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Volet faune - Les arthropodes et les mollusques...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%  Des espèces sur votre commune - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Inventaires d'Espaces Naturels} \\
+\hline
+ZNIEFF I et II & ZICO \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_14_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_16_map.png} \\
+\hline
+\multicolumn{2}{|c|}{Natura 2000} \\
+\hline
+Site d'Importance Communautaire & Zone de Protection Spéciale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_10_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_11_map.png} \\
+\hline
+\end{tabular}
+\caption{Inventaires d'Espaces Naturels et Natura 2000}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%  Des espèces sur votre commune - Volet flore et fonge - Les champignons, les fougères, lichens, algues et mousses...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Volet flore et fonge - Les champignons, les fougères, lichens, algues et mousses...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Inventaires d'Espaces Naturels} \\
+\hline
+ZNIEFF I et II & ZICO \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_14_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_16_map.png} \\
+\hline
+\multicolumn{2}{|c|}{Natura 2000} \\
+\hline
+Site d'Importance Communautaire & Zone de Protection Spéciale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_10_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_11_map.png} \\
+\hline
+\end{tabular}
+\caption{Inventaires d'Espaces Naturels et Natura 2000}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%  Des espèces sur votre commune - Volet flore - Les plantes à graines...
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{Volet flore - Les plantes à graines...}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{INTRO DU CHAPITRE}
+Petite introduction
+\end{bclogo}
+\vspace*{0.3cm}
+
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=]{Photo}
+Petite introduction
+\end{bclogo}
+
+\begin{multicols}{2}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ÉTAT}
+État
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{MENACES}
+Menaces
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{ACTIONS}
+Actions
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{RÉPONSES}
+Réponses
+\end{bclogo}
+\columnbreak
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0, couleurBord=blue!30, epBarre=0, logo=]{Des petits gestes}
+Des petits gestes
+\end{bclogo}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleurBord=blue!30, epBarre=0, logo=]{Pour aller plus loin}
+Pour aller plus loin
+\end{bclogo}
+\begin{bclogo}[arrondi=0.2, couleur=green!20, couleurBord=blue!30, epBarre=0, logo=\bccrayon]{Photo}
+Petite introduction
+\end{bclogo}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - ...sur votre commune
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\section{...sur votre commune}
+\begin{figure}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Inventaires d'Espaces Naturels} \\
+\hline
+ZNIEFF I et II & ZICO \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_14_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_16_map.png} \\
+\hline
+\multicolumn{2}{|c|}{Natura 2000} \\
+\hline
+Site d'Importance Communautaire & Zone de Protection Spéciale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_10_map.png} & \includegraphics[scale=0.35]{portrait_page71_\Sexpr{page71}_page71_11_map.png} \\
+\hline
+\end{tabular}
+\caption{Inventaires d'Espaces Naturels et Natura 2000}
+\end{figure}
+
+
+%----------------------------------------------------------------------------------------
+%	Des espèces sur votre commune - Dernière page de chapitre
+%----------------------------------------------------------------------------------------
+
+\newpage % Nouvelle page
+\thispagestyle{plain} % Style plain pour cette page
+\ClearShipoutPicture % Supprime les fonds image affiché
+\bgDerEspece % Image de fond
+\section*{}
+
+%----------------------------------------------------------------------------------------
+%  BIBLIOGRAPHIE
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_biblio.pdf} % Image vide du sommaire
+\chapter*{Bibliographie}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+\section*{Livres}
+\addcontentsline{toc}{section}{Books}
+\printbibliography[heading=bibempty,type=book]
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles}
+\printbibliography[heading=bibempty,type=article]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form string="Member" col="2">
+    <label name="name"/>
+    <field name="name"/>
+    <notebook>
+        <page string="Parties" col="1" id="parties">
+            <field name="parties"/>
+        </page>
+        <page string="Shares" col="1" id="shares">
+            <field name="shares"/>
+        </page>
+        <page string="Gerant" col="1" id="gerant">
+            <field name="gerant"/>
+        </page>
+        <page string="Conseil" col="1" id="conseil">
+            <field name="conseil"/>
+        </page>
+    </notebook>
+</form>

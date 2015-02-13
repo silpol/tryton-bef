@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<form string="Espaces naturels remarqués et milieux protégés" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>
+    <notebook>
+        <page string="ZONES" id="zone" col="2">
+            <label name="espaces_proteges"/>
+            <field name="espaces_proteges"/>
+            <label name="znieff_zico"/>
+            <field name="znieff_zico"/>
+            <label name="natura"/>
+            <field name="natura"/>
+            <field name="protection" colspan="2"/>            
+        </page>
+        <page string="GÉNÉRAL" id="general" col="1">            
+            <field name="page71_all_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_all"  name="generate71_all" icon="tryton-executable" />
+        </page>
+        <page string="RAMSAR - BIOS" id="ramsarbios"  col="1">
+            <field name="page71_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_01"  name="generate71_01" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="APB" id="apb"  col="1">
+            <field name="page71_02_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_02"  name="generate71_02" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="PN" id="pncoeur"  col="1">
+            <field name="page71_03_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_03"  name="generate71_03" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="PNM" id="pnm"  col="1">
+            <field name="page71_04_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_04"  name="generate71_04" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="PNR" id="pnr"  col="1">
+            <field name="page71_05_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_05"  name="generate71_05" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="RNR" id="rnr"  col="1">
+            <field name="page71_06_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_06"  name="generate71_06" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="RNN" id="rnn"  col="1">
+            <field name="page71_07_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_07"  name="generate71_07" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="RNC" id="rnc"  col="1">
+            <field name="page71_08_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_08"  name="generate71_08" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="RNCFS" id="rncfs"  col="1">
+            <field name="page71_09_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_09"  name="generate71_09" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="SIC" id="sic"  col="1">
+            <field name="page71_10_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_10"  name="generate71_10" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="ZPS" id="zps"  col="1">
+            <field name="page71_11_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_11"  name="generate71_11" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="CDL" id="cdl"  col="1">
+            <field name="page71_12_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_12"  name="generate71_12" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="CEN" id="cen"  col="1">
+            <field name="page71_13_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_13"  name="generate71_13" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>   
+        <page string="ZNIEFF I et II" id="znieff"  col="1">
+            <field name="page71_14_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_14"  name="generate71_14" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="RB" id="rb"  col="1">
+            <field name="page71_15_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_15"  name="generate71_15" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="ZICO" id="zico"  col="1">
+            <field name="page71_16_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_16"  name="generate71_16" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="VIDE" id="vide" col="1">
+            <field name="page71_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate71_empty"  name="generate71_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<data>
+    <xpath
+        expr="/form/notebook/page[@id='accounting']/field[@name='vat_number']"
+        position="after">
+        <separator string="IBAN/BIC" colspan="4" id="iban"/>
+        <label name="banq"/>
+        <field name="banq"/>
+        <label name="iban"/>
+        <field name="iban"/>
+        <label name="bic"/>
+        <field name="bic"/>
+    </xpath>
+</data>

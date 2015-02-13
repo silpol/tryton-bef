@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="portrait.codeher2" id="1">
+            <field name="code">1</field>
+            <field name="name">Plateau calcaire haute Saône</field>
+            <field name="r">2</field>
+            <field name="v">83</field>
+            <field name="b">158</field>
+        </record>
+        <record model="portrait.codeher2" id="2">
+            <field name="code">2</field>
+            <field name="name">Jura premier plateau</field>
+            <field name="r">50</field>
+            <field name="v">158</field>
+            <field name="b">112</field>
+        </record>
+        <record model="portrait.codeher2" id="3">
+            <field name="code">3</field>
+            <field name="name">Jura nord</field>
+            <field name="r">230</field>
+            <field name="v">206</field>
+            <field name="b">107</field>
+        </record>
+        <record model="portrait.codeher2" id="4">
+            <field name="code">4</field>
+            <field name="name">Forêt de Chaux</field>
+            <field name="r">233</field>
+            <field name="v">222</field>
+            <field name="b">176</field>
+        </record>
+        <record model="portrait.codeher2" id="5">
+            <field name="code">5</field>
+            <field name="name">Jura sud</field>
+            <field name="r">232</field>
+            <field name="v">88</field>
+            <field name="b">111</field>
+        </record>
+        <record model="portrait.codeher2" id="6">
+            <field name="code">6</field>
+            <field name="name">Massif Chablais Giffre</field>
+            <field name="r">217</field>
+            <field name="v">238</field>
+            <field name="b">244</field>
+        </record>
+        <record model="portrait.codeher2" id="7">
+            <field name="code">7</field>
+            <field name="name">Dombes</field>
+            <field name="r">246</field>
+            <field name="v">249</field>
+            <field name="b">235</field>
+        </record>       
+        <record model="portrait.codeher2" id="8">
+            <field name="code">8</field>
+            <field name="name">Massif du Mont Blanc</field>
+            <field name="r">195</field>
+            <field name="v">141</field>
+            <field name="b">155</field>
+        </record> 
+        <record model="portrait.codeher2" id="9">
+            <field name="code">9</field>
+            <field name="name">Massif Schisteux Maurienne Tarentaise</field>
+            <field name="r">160</field>
+            <field name="v">166</field>
+            <field name="b">174</field>
+        </record>
+        <record model="portrait.codeher2" id="10">
+            <field name="code">10</field>
+            <field name="name">Massif de la Vanoise</field>
+            <field name="r">113</field>
+            <field name="v">166</field>
+            <field name="b">64</field>
+        </record>
+        <record model="portrait.codeher2" id="11">
+            <field name="code">11</field>
+            <field name="name">Vercors nord</field>
+            <field name="r">212</field>
+            <field name="v">200</field>
+            <field name="b">224</field>
+        </record>
+        <record model="portrait.codeher2" id="12">
+            <field name="code">12</field>
+            <field name="name">Massif de l'Oisans</field>
+            <field name="r">170</field>
+            <field name="v">123</field>
+            <field name="b">88</field>
+        </record>
+        <record model="portrait.codeher2" id="13">
+            <field name="code">13</field>
+            <field name="name">Dévoluy Vercors sud</field>
+            <field name="r">250</field>
+            <field name="v">219</field>
+            <field name="b">218</field>
+        </record>
+        <record model="portrait.codeher2" id="14">
+            <field name="code">14</field>
+            <field name="name">Préalpes dromoises Baronnies</field>
+            <field name="r">183</field>
+            <field name="v">209</field>
+            <field name="b">114</field>
+        </record>
+        <record model="portrait.codeher2" id="15">
+            <field name="code">15</field>
+            <field name="name">Gapencais Embrunais</field>
+            <field name="r">244</field>
+            <field name="v">242</field>
+            <field name="b">185</field>
+        </record>
+        <record model="portrait.codeher2" id="16">
+            <field name="code">16</field>
+            <field name="name">Plateau calcaire de provence - ventoux</field>
+            <field name="r">208</field>
+            <field name="v">187</field>
+            <field name="b">154</field>
+        </record>
+        <record model="portrait.codeher2" id="17">
+            <field name="code">17</field>
+            <field name="name">Plateaux calcaires de Provence</field>
+            <field name="r">181</field>
+            <field name="v">143</field>
+            <field name="b">187</field>
+        </record>
+        <record model="portrait.codeher2" id="18">
+            <field name="code">18</field>
+            <field name="name">Ile de Ré</field>
+            <field name="r">212</field>
+            <field name="v">236</field>
+            <field name="b">239</field>
+        </record>
+        <record model="portrait.codeher2" id="19">
+            <field name="code">19</field>
+            <field name="name">Ile d'oléron</field>
+            <field name="r">205</field>
+            <field name="v">113</field>
+            <field name="b">153</field>
+        </record>
+        <record model="portrait.codeher2" id="20">
+            <field name="code">20</field>
+            <field name="name">Dunes de Royan</field>
+            <field name="r">59</field>
+            <field name="v">187</field>
+            <field name="b">232</field>
+        </record>
+        <record model="portrait.codeher2" id="21">
+            <field name="code">21</field>
+            <field name="name">Landes</field>
+            <field name="r">91</field>
+            <field name="v">53</field>
+            <field name="b">43</field>
+        </record>
+        <record model="portrait.codeher2" id="22">
+            <field name="code">22</field>
+            <field name="name">Corse</field>
+            <field name="r">235</field>
+            <field name="v">109</field>
+            <field name="b">29</field>
+        </record>
+        <record model="portrait.codeher2" id="23">
+            <field name="code">23</field>
+            <field name="name">Pyrénées Étage montagnard</field>
+            <field name="r">227</field>
+            <field name="v">203</field>
+            <field name="b">105</field>
+        </record>
+        <record model="portrait.codeher2" id="24">
+            <field name="code">24</field>
+            <field name="name">Pyrénées orientales</field>
+            <field name="r">250</field>
+            <field name="v">240</field>
+            <field name="b">146</field>
+        </record>
+        <record model="portrait.codeher2" id="25">
+            <field name="code">25</field>
+            <field name="name">Plateau lorrain</field>
+            <field name="r">208</field>
+            <field name="v">211</field>
+            <field name="b">202</field>
+        </record>
+        <record model="portrait.codeher2" id="26">
+            <field name="code">26</field>
+            <field name="name">Bassin de Forbach</field>
+            <field name="r">58</field>
+            <field name="v">71</field>
+            <field name="b">149</field>
+        </record>
+        <record model="portrait.codeher2" id="27">
+            <field name="code">27</field>
+            <field name="name">Plaine de Woëvre</field>
+            <field name="r">163</field>
+            <field name="v">73</field>
+            <field name="b">36</field>
+        </record>
+        <record model="portrait.codeher2" id="28">
+            <field name="code">28</field>
+            <field name="name">Sologne-Forêt d'Orléans</field>
+            <field name="r">59</field>
+            <field name="v">138</field>
+            <field name="b">197</field>
+        </record>
+        <record model="portrait.codeher2" id="30">
+            <field name="code">30</field>
+            <field name="name">Pays de Caen</field>
+            <field name="r">246</field>
+            <field name="v">172</field>
+            <field name="b">101</field>
+        </record>
+        <record model="portrait.codeher2" id="31">
+            <field name="code">31</field>
+            <field name="name">Flandres intérieures</field>
+            <field name="r">178</field>
+            <field name="v">178</field>
+            <field name="b">214</field>
+        </record>
+        <record model="portrait.codeher2" id="32">
+            <field name="code">32</field>
+            <field name="name">Boulonnais</field>
+            <field name="r">173</field>
+            <field name="v">153</field>
+            <field name="b">30</field>
+        </record>
+        <record model="portrait.codeher2" id="33">
+            <field name="code">33</field>
+            <field name="name">Douai-Condé</field>
+            <field name="r">110</field>
+            <field name="v">197</field>
+            <field name="b">215</field>
+        </record>
+        <record model="portrait.codeher2" id="34">
+            <field name="code">34</field>
+            <field name="name">Ardennes</field>
+            <field name="r">141</field>
+            <field name="v">178</field>
+            <field name="b">92</field>
+        </record>
+        <record model="portrait.codeher2" id="35">
+            <field name="code">35</field>
+            <field name="name">Pays de Bray</field>
+            <field name="r">237</field>
+            <field name="v">226</field>
+            <field name="b">218</field>
+        </record>
+        <record model="portrait.codeher2" id="36">
+            <field name="code">36</field>
+            <field name="name">BP-Ile de France</field>
+            <field name="r">90</field>
+            <field name="v">171</field>
+            <field name="b">38</field>
+        </record>
+        <record model="portrait.codeher2" id="37">
+            <field name="code">37</field>
+            <field name="name">Cotentin Est</field>
+            <field name="r">244</field>
+            <field name="v">234</field>
+            <field name="b">111</field>
+        </record>
+        <record model="portrait.codeher2" id="38">
+            <field name="code">38</field>
+            <field name="name">TC-auréole crétacé</field>
+            <field name="r">235</field>
+            <field name="v">126</field>
+            <field name="b">142</field>
+        </record>
+        <record model="portrait.codeher2" id="39">
+            <field name="code">39</field>
+            <field name="name">Thiérache</field>
+            <field name="r">107</field>
+            <field name="v">176</field>
+            <field name="b">144</field>
+        </record>
+        <record model="portrait.codeher2" id="40">
+            <field name="code">40</field>
+            <field name="name">Champagne humide</field>
+            <field name="r">166</field>
+            <field name="v">60</field>
+            <field name="b">66</field>
+        </record>
+        <record model="portrait.codeher2" id="41">
+            <field name="code">41</field>
+            <field name="name">Tables calcaires Sud Loire</field>
+            <field name="r">152</field>
+            <field name="v">177</field>
+            <field name="b">106</field>
+        </record>
+        <record model="portrait.codeher2" id="42">
+            <field name="code">42</field>
+            <field name="name">Épandages éluviaux</field>
+            <field name="r">178</field>
+            <field name="v">213</field>
+            <field name="b">162</field>
+        </record>
+        <record model="portrait.codeher2" id="43">
+            <field name="code">43</field>
+            <field name="name">MC-Dépressions internes</field>
+            <field name="r">134</field>
+            <field name="v">105</field>
+            <field name="b">95</field>
+        </record>
+        <record model="portrait.codeher2" id="44">
+            <field name="code">44</field>
+            <field name="name">MC-Terres Granitiques orientales</field>
+            <field name="r">249</field>
+            <field name="v">236</field>
+            <field name="b">107</field>
+        </record>
+        <record model="portrait.codeher2" id="45">
+            <field name="code">45</field>
+            <field name="name">Plaine du Forez</field>
+            <field name="r">132</field>
+            <field name="v">25</field>
+            <field name="b">122</field>
+        </record>
+        <record model="portrait.codeher2" id="46">
+            <field name="code">46</field>
+            <field name="name">Limagne de l'Allier</field>
+            <field name="r">195</field>
+            <field name="v">190</field>
+            <field name="b">114</field>
+        </record>
+        <record model="portrait.codeher2" id="47">
+            <field name="code">47</field>
+            <field name="name">MC-Dépression du Puy</field>
+            <field name="r">220</field>
+            <field name="v">0</field>
+            <field name="b">58</field>
+        </record>
+        <record model="portrait.codeher2" id="48">
+            <field name="code">48</field>
+            <field name="name">Montagne bourbonnaise</field>
+            <field name="r">81</field>
+            <field name="v">172</field>
+            <field name="b">215</field>
+        </record>
+        <record model="portrait.codeher2" id="49">
+            <field name="code">49</field>
+            <field name="name">Hautes Terres Volcaniques orientales</field>
+            <field name="r">153</field>
+            <field name="v">207</field>
+            <field name="b">186</field>
+        </record>
+        <record model="portrait.codeher2" id="50">
+            <field name="code">50</field>
+            <field name="name">Hautes Terres Granitiques orientales</field>
+            <field name="r">76</field>
+            <field name="v">120</field>
+            <field name="b">182</field>
+        </record>
+        <record model="portrait.codeher2" id="51">
+            <field name="code">51</field>
+            <field name="name">Bazois Auxois</field>
+            <field name="r">242</field>
+            <field name="v">223</field>
+            <field name="b">33</field>
+        </record>
+        <record model="portrait.codeher2" id="52">
+            <field name="code">52</field>
+            <field name="name">Fosses tectoniques</field>
+            <field name="r">246</field>
+            <field name="v">191</field>
+            <field name="b">206</field>
+        </record>
+        <record model="portrait.codeher2" id="53">
+            <field name="code">53</field>
+            <field name="name">BP-Côtes calcaires</field>
+            <field name="r">183</field>
+            <field name="v">134</field>
+            <field name="b">181</field>
+        </record>
+        <record model="portrait.codeher2" id="54">
+            <field name="code">54</field>
+            <field name="name">TC-Nord Loire-Perche</field>
+            <field name="r">121</field>
+            <field name="v">74</field>
+            <field name="b">148</field>
+        </record>
+        <record model="portrait.codeher2" id="55">
+            <field name="code">55</field>
+            <field name="name">MA-nord est</field>
+            <field name="r">203</field>
+            <field name="v">28</field>
+            <field name="b">28</field>
+        </record>
+        <record model="portrait.codeher2" id="56">
+            <field name="code">56</field>
+            <field name="name">Collines de Basse Provence</field>
+            <field name="r">237</field>
+            <field name="v">122</field>
+            <field name="b">120</field>
+        </record>
+        <record model="portrait.codeher2" id="57">
+            <field name="code">57</field>
+            <field name="name">TC - Haute Normandie Picardie</field>
+            <field name="r">241</field>
+            <field name="v">221</field>
+            <field name="b">227</field>
+        </record>
+        <record model="portrait.codeher2" id="58">
+            <field name="code">58</field>
+            <field name="name">MA-sud intérieur</field>
+            <field name="r">177</field>
+            <field name="v">207</field>
+            <field name="b">118</field>
+        </record>
+        <record model="portrait.codeher2" id="59">
+            <field name="code">59</field>
+            <field name="name">MA-ouest</field>
+            <field name="r">58</field>
+            <field name="v">83</field>
+            <field name="b">41</field>
+        </record>
+        <record model="portrait.codeher2" id="61">
+            <field name="code">61</field>
+            <field name="name">Alsace-collines</field>
+            <field name="r">229</field>
+            <field name="v">190</field>
+            <field name="b">146</field>
+        </record>
+        <record model="portrait.codeher2" id="62">
+            <field name="code">62</field>
+            <field name="name">Alsace- plaine</field>
+            <field name="r">0</field>
+            <field name="v">77</field>
+            <field name="b">151</field>
+        </record>
+        <record model="portrait.codeher2" id="63">
+            <field name="code">63</field>
+            <field name="name">Vosges granitiques</field>
+            <field name="r">228</field>
+            <field name="v">213</field>
+            <field name="b">229</field>
+        </record>
+        <record model="portrait.codeher2" id="64">
+            <field name="code">64</field>
+            <field name="name">Collines Calcaires de Dordogne (Cahors)</field>
+            <field name="r">242</field>
+            <field name="v">146</field>
+            <field name="b">54</field>
+        </record>
+        <record model="portrait.codeher2" id="65">
+            <field name="code">65</field>
+            <field name="name">Causses du Quercy</field>
+            <field name="r">191</field>
+            <field name="v">190</field>
+            <field name="b">188</field>
+        </record>
+        <record model="portrait.codeher2" id="66">
+            <field name="code">66</field>
+            <field name="name">Côteaux molassiques Nord Aquitaine</field>
+            <field name="r">88</field>
+            <field name="v">88</field>
+            <field name="b">87</field>
+        </record>
+        <record model="portrait.codeher2" id="67">
+            <field name="code">67</field>
+            <field name="name">Bordure Pyrénéenne Centrale</field>
+            <field name="r">249</field>
+            <field name="v">218</field>
+            <field name="b">159</field>
+        </record>
+        <record model="portrait.codeher2" id="68">
+            <field name="code">68</field>
+            <field name="name">Côteaux molassiques Est Aquitaine</field>
+            <field name="r">216</field>
+            <field name="v">154</field>
+            <field name="b">104</field>
+        </record>
+        <record model="portrait.codeher2" id="69">
+            <field name="code">69</field>
+            <field name="name">Bordure Pyrénéenne atlantique</field>
+            <field name="r">148</field>
+            <field name="v">191</field>
+            <field name="b">53</field>
+        </record>
+        <record model="portrait.codeher2" id="70">
+            <field name="code">70</field>
+            <field name="name">Haute Loire Cévenole</field>
+            <field name="r">137</field>
+            <field name="v">66</field>
+            <field name="b">143</field>
+        </record>
+        <record model="portrait.codeher2" id="71">
+            <field name="code">71</field>
+            <field name="name">Cévennes</field>
+            <field name="r">229</field>
+            <field name="v">65</field>
+            <field name="b">99</field>
+        </record>
+        <record model="portrait.codeher2" id="72">
+            <field name="code">72</field>
+            <field name="name">Montagne noire</field>
+            <field name="r">179</field>
+            <field name="v">182</field>
+            <field name="b">111</field>
+        </record>
+        <record model="portrait.codeher2" id="73">
+            <field name="code">73</field>
+            <field name="name">Collines du Sundgau</field>
+            <field name="r">235</field>
+            <field name="v">108</field>
+            <field name="b">28</field>
+        </record>
+        <record model="portrait.codeher2" id="74">
+            <field name="code">74</field>
+            <field name="name">Vosges gréseuses</field>
+            <field name="r">121</field>
+            <field name="v">200</field>
+            <field name="b">212</field>
+        </record>
+        <record model="portrait.codeher2" id="75">
+            <field name="code">75</field>
+            <field name="name">Collines de Haute-Saône</field>
+            <field name="r">224</field>
+            <field name="v">237</field>
+            <field name="b">214</field>
+        </record>
+        <record model="portrait.codeher2" id="76">
+            <field name="code">76</field>
+            <field name="name">Piedmont Alpes Jura</field>
+            <field name="r">80</field>
+            <field name="v">73</field>
+            <field name="b">149</field>
+        </record>
+        <record model="portrait.codeher2" id="77">
+            <field name="code">77</field>
+            <field name="name">Côteaux molassiques bassin de l'Adour</field>
+            <field name="r">136</field>
+            <field name="v">48</field>
+            <field name="b">135</field>
+        </record>
+        <record model="portrait.codeher2" id="78">
+            <field name="code">78</field>
+            <field name="name">Côteaux molassiques Centre Aquitaine</field>
+            <field name="r">251</field>
+            <field name="v">229</field>
+            <field name="b">239</field>
+        </record>
+        <record model="portrait.codeher2" id="79">
+            <field name="code">79</field>
+            <field name="name">Massifs Calcaires Chartreuse Aravis</field>
+            <field name="r">229</field>
+            <field name="v">206</field>
+            <field name="b">135</field>
+        </record>
+        <record model="portrait.codeher2" id="80">
+            <field name="code">80</field>
+            <field name="name">Vallée du Drac</field>
+            <field name="r">26</field>
+            <field name="v">73</field>
+            <field name="b">150</field>
+        </record>
+        <record model="portrait.codeher2" id="81">
+            <field name="code">81</field>
+            <field name="name">Plaine de Bourgogne</field>
+            <field name="r">107</field>
+            <field name="v">126</field>
+            <field name="b">34</field>
+        </record>
+        <record model="portrait.codeher2" id="82">
+            <field name="code">82</field>
+            <field name="name">Côtes de Mâcon</field>
+            <field name="r">252</field>
+            <field name="v">234</field>
+            <field name="b">27</field>
+        </record>
+        <record model="portrait.codeher2" id="83">
+            <field name="code">83</field>
+            <field name="name">Beaujolais calcaire</field>
+            <field name="r">182</field>
+            <field name="v">180</field>
+            <field name="b">214</field>
+        </record>
+        <record model="portrait.codeher2" id="84">
+            <field name="code">84</field>
+            <field name="name">Bresse</field>
+            <field name="r">235</field>
+            <field name="v">110</field>
+            <field name="b">116</field>
+        </record>
+        <record model="portrait.codeher2" id="85">
+            <field name="code">85</field>
+            <field name="name">Collines du Bas Dauphine</field>
+            <field name="r">88</field>
+            <field name="v">152</field>
+            <field name="b">205</field>
+        </record>
+        <record model="portrait.codeher2" id="86">
+            <field name="code">86</field>
+            <field name="name">Mont du Lyonnais - Pilat</field>
+            <field name="r">99</field>
+            <field name="v">174</field>
+            <field name="b">37</field>
+        </record>
+        <record model="portrait.codeher2" id="87">
+            <field name="code">87</field>
+            <field name="name">Morvan - Charollais</field>
+            <field name="r">99</field>
+            <field name="v">120</field>
+            <field name="b">37</field>
+        </record>
+        <record model="portrait.codeher2" id="88">
+            <field name="code">88</field>
+            <field name="name">Corse plaine d'Aleria</field>
+            <field name="r">99</field>
+            <field name="v">80</field>
+            <field name="b">37</field>
+        </record>
+        <record model="portrait.codeher2" id="89">
+            <field name="code">89</field>
+            <field name="name">Hautes Terres Limousines</field>
+            <field name="r">99</field>
+            <field name="v">80</field>
+            <field name="b">37</field>
+        </record>
+        <record model="portrait.codeher2" id="90">
+            <field name="code">90</field>
+            <field name="name">Hautes Terres Granitiques - Margeride</field>
+            <field name="r">99</field>
+            <field name="v">80</field>
+            <field name="b">37</field>
+        </record>	
+        <record model="portrait.codeher2" id="91">
+            <field name="code">91</field>
+            <field name="name">Hautes Terres Volcaniques humides</field>
+            <field name="r">99</field>
+            <field name="v">80</field>
+            <field name="b">37</field>
+        </record>	
+        <record model="portrait.codeher2" id="92">
+            <field name="code">92</field>
+            <field name="name">MC Plateau Limousin</field>
+            <field name="r">99</field>
+            <field name="v">80</field>
+            <field name="b">40</field>
+        </record>	
+        <record model="portrait.codeher2" id="93">
+            <field name="code">93</field>
+            <field name="name">MC versant occidental</field>
+            <field name="r">99</field>
+            <field name="v">80</field>
+            <field name="b">10</field>
+        </record>	
+        <record model="portrait.codeher2" id="94">
+            <field name="code">94</field>
+            <field name="name">Pyrénées Étage alpin et subalpin occidental</field>
+            <field name="r">99</field>
+            <field name="v">125</field>
+            <field name="b">111</field>
+        </record>
+        <record model="portrait.codeher2" id="95">
+            <field name="code">95</field>
+            <field name="name">Pyrénées Étage alpin et subalpin central</field>
+            <field name="r">99</field>
+            <field name="v">125</field>
+            <field name="b">10</field>
+        </record>
+        <record model="portrait.codeher2" id="96">
+            <field name="code">96</field>
+            <field name="name">Pyrénées Étage montagnard</field>
+            <field name="r">99</field>
+            <field name="v">67</field>
+            <field name="b">10</field>
+        </record>	
+        <record model="portrait.codeher2" id="97">
+            <field name="code">97</field>
+            <field name="name">TC - Charentes Poitou</field>
+            <field name="r">99</field>
+            <field name="v">125</field>
+            <field name="b">10</field>
+        </record>
+        <record model="portrait.codeher2" id="98">
+            <field name="code">98</field>
+            <field name="name">Collines sous-Vosgiennes</field>
+            <field name="r">40</field>
+            <field name="v">125</field>
+            <field name="b">10</field>
+        </record>	
+        <record model="portrait.codeher2" id="99">
+            <field name="code">99</field>
+            <field name="name">Cotes de Bourgogne</field>
+            <field name="r">99</field>
+            <field name="v">65</field>
+            <field name="b">10</field>
+        </record>
+        <record model="portrait.codeher2" id="101">
+            <field name="code">101</field>
+            <field name="name">Massif Beaufortain Belledonne</field>
+            <field name="r">99</field>
+            <field name="v">125</field>
+            <field name="b">95</field>
+        </record>
+        <record model="portrait.codeher2" id="102">
+            <field name="code">102</field>
+            <field name="name">Plaine littorale méditerranéene</field>
+            <field name="r">42</field>
+            <field name="v">125</field>
+            <field name="b">10</field>
+        </record>	
+        <record model="portrait.codeher2" id="103">
+            <field name="code">103</field>
+            <field name="name">Montagne Noire Climat cévenol</field>
+            <field name="r">99</field>
+            <field name="v">52</field>
+            <field name="b">113</field>
+        </record>
+        <record model="portrait.codeher2" id="104">
+            <field name="code">104</field>
+            <field name="name">Garrigues sub cévenoles</field>
+            <field name="r">70</field>
+            <field name="v">40</field>
+            <field name="b">101</field>
+        </record>	
+        <record model="portrait.codeher2" id="105">
+            <field name="code">105</field>
+            <field name="name">Plaine méditerranéenne</field>
+            <field name="r">70</field>
+            <field name="v">120</field>
+            <field name="b">101</field>
+        </record>	
+        <record model="portrait.codeher2" id="106">
+            <field name="code">106</field>
+            <field name="name">Préalpes Digne Haute vallée du var</field>
+            <field name="r">125</field>
+            <field name="v">40</field>
+            <field name="b">101</field>
+        </record>
+        <record model="portrait.codeher2" id="107">
+            <field name="code">107</field>
+            <field name="name">Alpes Internes du Sud</field>
+            <field name="r">125</field>
+            <field name="v">40</field>
+            <field name="b">10</field>
+        </record>	
+        <record model="portrait.codeher2" id="108">
+            <field name="code">108</field>
+            <field name="name">Maures Esterel</field>
+            <field name="r">2</field>
+            <field name="v">2</field>
+            <field name="b">2</field>
+        </record>	
+        <record model="portrait.codeher2" id="112">
+            <field name="code">112</field>
+            <field name="name">Collines calcaires de basse provence</field>
+            <field name="r">12</field>
+            <field name="v">42</field>
+            <field name="b">92</field>
+        </record>	
+        <record model="portrait.codeher2" id="113">
+            <field name="code">113</field>
+            <field name="name">Grands Causses</field>
+            <field name="r">112</field>
+            <field name="v">42</field>
+            <field name="b">92</field>
+        </record>	
+        <record model="portrait.codeher2" id="114">
+            <field name="code">114</field>
+            <field name="name">Corbières</field>
+            <field name="r">112</field>
+            <field name="v">42</field>
+            <field name="b">92</field>
+        </record>	
+        <record model="portrait.codeher2" id="115">
+            <field name="code">115</field>
+            <field name="name">Causses cévenoles</field>
+            <field name="r">112</field>
+            <field name="v">22</field>
+            <field name="b">102</field>
+        </record>
+        <record model="portrait.codeher2" id="116">
+            <field name="code">116</field>
+            <field name="name">Bordure Orientale des Pyrénées</field>
+            <field name="r">112</field>
+            <field name="v">108</field>
+            <field name="b">92</field>
+        </record>
+        <record model="portrait.codeher2" id="117">
+            <field name="code">117</field>
+            <field name="name">MA-est intérieur</field>
+            <field name="r">112</field>
+            <field name="v">42</field>
+            <field name="b">12</field>
+        </record>
+        <record model="portrait.codeher2" id="118">
+            <field name="code">118</field>
+            <field name="name">MA-côtes du nord</field>
+            <field name="r">80</field>
+            <field name="v">42</field>
+            <field name="b">45</field>
+        </record>
+        <record model="portrait.codeher2" id="119">
+            <field name="code">119</field>
+            <field name="name">Moères</field>
+            <field name="r">54</field>
+            <field name="v">67</field>
+            <field name="b">28</field>
+        </record>
+        <record model="portrait.codeher2" id="120">
+            <field name="code">120</field>
+            <field name="name">Bugey</field>
+            <field name="r">15</field>
+            <field name="v">100</field>
+            <field name="b">20</field>
+        </record>	        
+    </data>
+</tryton>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Parcelle" col="2">
+    <notebook colspan="6">
+        <page string="Général" id="general">
+            <label name="forest"/>
+            <field name="forest"/>
+            <label name="name"/>
+            <field name="name"/>            
+        </page>        
+    </notebook>
+</form>

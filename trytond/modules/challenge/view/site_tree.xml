@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="name" />
+    <field name="owner" />
+    <field name="lot" />
+    <field name="pefc" />
+    <field name="site_supervision" />
+    <field name="site_date" />
+    <field name="dead_line_work" />
+    <field name="moa" />
+    <field name="moe" />    
+    <field name="commune" />
+    <field name="volume" />
+    <field name="taxon" />
+    <field name="nature" />
+    <field name="direccte" />
+</tree>

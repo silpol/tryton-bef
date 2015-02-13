@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Fiche des groupements forestiers par porteurs de parts">
+    <field name="groupe"/>
+    <field name="member"/>                     
+    <field name="typo"/>
+    <field name="nb"/>
+    <field name="deb"/>
+    <field name="fin"/>
+</tree>

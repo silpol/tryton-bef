@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form string="Table 1">
+    <label name="cd_dep"/>
+    <field name="cd_dep"/>
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="nb_cd_ref_protegees"/>
+    <field name="nb_cd_ref_protegees"/>
+    <label name="nb_esp_menacees"/>
+    <field name="nb_esp_menacees"/>
+    <label name="nb_i"/>
+    <field name="nb_i"/>
+    <label name="nb_e_s"/>
+    <field name="nb_e_s"/>
+    <label name="nb_j"/>
+    <field name="nb_j"/>
+    <label name="permalien_inseec"/>
+    <field name="permalien_inseec" widget="url"/>
+</form>

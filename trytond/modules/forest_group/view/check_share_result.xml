@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<form string="Parts sociales créées" col="2">
+    <field name="shares_succeed" colspan="2"/>
+</form>

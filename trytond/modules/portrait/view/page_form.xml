@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form string="Page" col="1">
+    <notebook>
+        <page string="Page" id="page">
+            <label name="portrait"/>
+            <field name="portrait" colspan="3"/>
+            <label name="page_chapo"/>
+            <field name="page_chapo" colspan="3"/>
+            <label name="page_msg1"/>
+            <field name="page_msg1"/>
+            <label name="page_msg2"/>
+            <field name="page_msg2"/>
+            <label name="page_msg3"/>
+            <field name="page_msg3"/>
+            <label name="page_msg4"/>
+            <field name="page_msg4"/>
+            <label name="page_loin"/>
+            <field name="page_loin"/>
+            <label name="page_geste"/>
+            <field name="page_geste"/>
+            <label name="page_chiffre"/>
+            <field name="page_chiffre"/>
+            <label name="page_anec"/>
+            <field name="page_anec"/>
+        </page>
+        <page string="Photo et Dessin" id="photodessin">
+            <field name="page_photo_map" widget="image" img_width="400" img_height="200"/>
+            <field name="page_dessin_map" widget="image" img_width="200" img_height="200"/>                                                                
+        </page>
+    </notebook>
+</form>

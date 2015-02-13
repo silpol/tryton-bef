@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<graph string="DEFI Travaux par groupement forestier" type="pie">
+    <x>
+        <field name="code" />
+    </x>
+    <y>
+        <field name="debitretenu" />               
+    </y>
+</graph>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Table 1">
+    <field name="cd_dep"/>
+    <field name="cd_insee"/>
+    <field name="classe1"/>
+    <field name="classe2"/>
+    <field name="classe3"/>
+    <field name="classe4"/>
+</tree>

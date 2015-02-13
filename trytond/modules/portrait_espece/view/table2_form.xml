@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Table 2">
+    <label name="cd_dep"/>
+    <field name="cd_dep"/>
+    <label name="groupe_taxo"/>
+    <field name="groupe_taxo"/>
+    <label name="nb_cd_ref"/>
+    <field name="nb_cd_ref"/>  
+</form>

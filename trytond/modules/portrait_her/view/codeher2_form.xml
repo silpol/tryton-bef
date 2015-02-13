@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Code HER2" col="2">    
+    <label name="code" />
+    <field name="code" />
+    <label name="name" />
+    <field name="name" />                             
+    <label name="r" />
+    <field name="r" /> 
+    <label name="v" />
+    <field name="v" /> 
+    <label name="b" />
+    <field name="b" /> 
+</form>

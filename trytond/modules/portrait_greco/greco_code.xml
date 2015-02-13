@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="portrait.codegreco" id="200">
+            <field name="code">A</field>
+            <field name="name">Grand Ouest cristallin et océanique</field>
+            <field name="domaine">Atlantique</field>
+            <field name="r">144</field>
+            <field name="v">124</field>
+            <field name="b">96</field>
+        </record>
+        <record model="portrait.codegreco" id="202">
+            <field name="code">B</field>
+            <field name="name">Centre Nord semi-océanique</field>
+            <field name="domaine">Atlantique</field>
+            <field name="r">34</field>
+            <field name="v">154</field>
+            <field name="b">118</field>
+        </record>
+        <record model="portrait.codegreco" id="203">
+            <field name="code">C</field>
+            <field name="name">Grand Est semi-continental</field>
+            <field name="domaine">Continental</field>
+            <field name="r">108</field>
+            <field name="v">120</field>
+            <field name="b">186</field>
+        </record>
+        <record model="portrait.codegreco" id="204">
+            <field name="code">D</field>
+            <field name="name">Vosges</field>
+            <field name="domaine">Continental</field>
+            <field name="r">252</field>
+            <field name="v">240</field>
+            <field name="b">205</field>
+        </record>
+        <record model="portrait.codegreco" id="205">
+            <field name="code">F</field>
+            <field name="name">Sud-Ouest océanique</field>
+            <field name="domaine">Atlantique</field>
+            <field name="r">123</field>
+            <field name="v">184</field>
+            <field name="b">223</field>
+        </record>
+        <record model="portrait.codegreco" id="206">
+            <field name="code">G</field>
+            <field name="name">Massif central</field>
+            <field name="domaine">Atlantique</field>
+            <field name="r">143</field>
+            <field name="v">70</field>
+            <field name="b">151</field>
+        </record>
+        <record model="portrait.codegreco" id="207">
+            <field name="code">E</field>
+            <field name="name">Jura</field>
+            <field name="domaine">Continental</field>
+            <field name="r">242</field>
+            <field name="v">209</field>
+            <field name="b">113</field>
+        </record>
+        <record model="portrait.codegreco" id="208">
+            <field name="code">H</field>
+            <field name="name">Alpes</field>
+            <field name="domaine">Hautes Montagnes</field>
+            <field name="r">96</field>
+            <field name="v">175</field>
+            <field name="b">71</field>
+        </record>
+        <record model="portrait.codegreco" id="209">
+            <field name="code">I</field>
+            <field name="name">Pyrénées</field>
+            <field name="domaine">Hautes Montagnes</field>
+            <field name="r">95</field>
+            <field name="v">163</field>
+            <field name="b">117</field>
+        </record>
+        <record model="portrait.codegreco" id="210">
+            <field name="code">J</field>
+            <field name="name">Méditerranée</field>
+            <field name="domaine">Méditerranéen</field>
+            <field name="r">241</field>
+            <field name="v">147</field>
+            <field name="b">97</field>
+        </record>
+        <record model="portrait.codegreco" id="211">
+            <field name="code">K</field>
+            <field name="name">Corse</field>
+            <field name="domaine">Méditerranéen</field>
+            <field name="r">195</field>
+            <field name="v">169</field>
+            <field name="b">157</field>
+        </record>
+        <record model="portrait.codegreco" id="212">
+            <field name="code">L</field>
+            <field name="name">Alluvions récentes</field>
+            <field name="r">184</field>
+            <field name="v">217</field>
+            <field name="b">240</field>
+        </record>
+    </data>
+</tryton>
+
+

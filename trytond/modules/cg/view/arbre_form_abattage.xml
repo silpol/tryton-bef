@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form string="Arbre" col="2">
+    <notebook colspan="6">
+        <page string="Général" id="general">            
+            <label name="motifsuppression"/>
+            <field name="motifsuppression" widget="selection"/>
+            <label name="date"/>
+            <field name="date"/>
+        </page>
+        <page string="Map" id="map" col="1">                                   
+            <field name="arbre_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+        <page string="Photo" id="photo">                                                                                  
+            <field name="photo" colspan="6" widget="image" img_width="640" img_height="480"/>                                    
+        </page>
+    </notebook>
+</form>

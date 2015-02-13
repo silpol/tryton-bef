@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Parts sociales à créer">                   
+    <label name="fromcode"/>
+    <field name="fromcode"/>
+    <label name="tocode"/>
+    <field name="tocode"/>
+    <label name="typo"/>
+    <field name="typo"/>
+    <label name="groupe"/>
+    <field name="groupe"/>
+    <label name="member"/>
+    <field name="member"/>
+</form>

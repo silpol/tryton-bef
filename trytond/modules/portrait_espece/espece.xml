@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <menuitem parent="portrait_commune.menu_portrait_admin" name="Portrait Espèce" id="menu_portrait_admin_espece"/>
+        
+        <!-- Table 1 -->
+        <record model="ir.ui.view" id="table1_view_tree">
+            <field name="model">portrait.table1</field>
+            <field name="type">tree</field>
+            <field name="name">table1_tree</field>
+        </record>
+        <record model="ir.ui.view" id="table1_view_form">
+            <field name="model">portrait.table1</field>
+            <field name="type">form</field>
+            <field name="name">table1_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_table1_form">
+            <field name="name">Nombre de taxons identifiés par groupe taxonomique dans les communes</field>
+            <field name="res_model">portrait.table1</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table1_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="table1_view_tree"/>
+            <field name="act_window" ref="act_table1_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table1_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="table1_view_form"/>
+            <field name="act_window" ref="act_table1_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espece" id="menu_table1_form" icon="tryton-list" action="act_table1_form"/>
+
+        <!-- Table 2 -->
+        <record model="ir.ui.view" id="table2_view_tree">
+            <field name="model">portrait.table2</field>
+            <field name="type">tree</field>
+            <field name="name">table2_tree</field>
+        </record>
+        <record model="ir.ui.view" id="table2_view_form">
+            <field name="model">portrait.table2</field>
+            <field name="type">form</field>
+            <field name="name">table2_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_table2_form">
+            <field name="name">Nombre de taxons, par groupe taxonomique, par département</field>
+            <field name="res_model">portrait.table2</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table2_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="table2_view_tree"/>
+            <field name="act_window" ref="act_table2_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table2_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="table2_view_form"/>
+            <field name="act_window" ref="act_table2_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espece" id="menu_table2_form" icon="tryton-list" action="act_table2_form"/>
+
+        <!-- Table 3 -->
+        <record model="ir.ui.view" id="table3_view_tree">
+            <field name="model">portrait.table3</field>
+            <field name="type">tree</field>
+            <field name="name">table3_tree</field>
+        </record>
+        <record model="ir.ui.view" id="table3_view_form">
+            <field name="model">portrait.table3</field>
+            <field name="type">form</field>
+            <field name="name">table3_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_table3_form">
+            <field name="name">Nombre de taxons, par groupe taxonomique et par région</field>
+            <field name="res_model">portrait.table3</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table3_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="table3_view_tree"/>
+            <field name="act_window" ref="act_table3_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table3_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="table3_view_form"/>
+            <field name="act_window" ref="act_table3_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espece" id="menu_table3_form" icon="tryton-list" action="act_table3_form"/>
+
+        <!-- Table 4 -->
+        <record model="ir.ui.view" id="table4_view_tree">
+            <field name="model">portrait.table4</field>
+            <field name="type">tree</field>
+            <field name="name">table4_tree</field>
+        </record>
+        <record model="ir.ui.view" id="table4_view_form">
+            <field name="model">portrait.table4</field>
+            <field name="type">form</field>
+            <field name="name">table4_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_table4_form">
+            <field name="name">Nombre de taxons à «statut» identifié par commune</field>
+            <field name="res_model">portrait.table4</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table4_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="table4_view_tree"/>
+            <field name="act_window" ref="act_table4_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table4_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="table4_view_form"/>
+            <field name="act_window" ref="act_table4_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espece" id="menu_table4_form" icon="tryton-list" action="act_table4_form"/>
+
+        <!-- Table 5 -->
+        <record model="ir.ui.view" id="table5_view_tree">
+            <field name="model">portrait.table5</field>
+            <field name="type">tree</field>
+            <field name="name">table5_tree</field>
+        </record>
+        <record model="ir.ui.view" id="table5_view_form">
+            <field name="model">portrait.table5</field>
+            <field name="type">form</field>
+            <field name="name">table5_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_table5_form">
+            <field name="name">Nombre de taxons observés, par classe de dernière observation par commune</field>
+            <field name="res_model">portrait.table5</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table5_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="table5_view_tree"/>
+            <field name="act_window" ref="act_table5_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table5_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="table5_view_form"/>
+            <field name="act_window" ref="act_table5_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espece" id="menu_table5_form" icon="tryton-list" action="act_table5_form"/>
+
+        <!-- Table 6 -->
+        <record model="ir.ui.view" id="table6_view_tree">
+            <field name="model">portrait.table6</field>
+            <field name="type">tree</field>
+            <field name="name">table6_tree</field>
+        </record>
+        <record model="ir.ui.view" id="table6_view_form">
+            <field name="model">portrait.table6</field>
+            <field name="type">form</field>
+            <field name="name">table6_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_table6_form">
+            <field name="name">Liste des taxons observés par groupe taxonomique et par commune et statut de protection</field>
+            <field name="res_model">portrait.table6</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table6_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="table6_view_tree"/>
+            <field name="act_window" ref="act_table6_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_table6_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="table6_view_form"/>
+            <field name="act_window" ref="act_table6_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espece" id="menu_table6_form" icon="tryton-list" action="act_table6_form"/>
+
+    </data>
+</tryton>

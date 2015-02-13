@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Revenus forestiers">        
+    <field name="groupe"/>
+    <field name="member"/>
+    <field name="typo"/>
+    <field name="annee"/>
+    <field name="montant"/>
+    <field name="totmember"/>
+    <field name="totgroup"/>
+</tree>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Communes bénéficiant du Portrait">
+    <label name="commune" xalign="0" colspan="4"/>         
+    <field name="commune" colspan="4"/>
+    <field name="portrait_map" widget="image" img_width="640" img_height="480" colspan="4"/>
+    <newline/>
+    <button string="Generate"  name="generate" icon="tryton-executable" colspan="4"/>
+    <field name="geom"/>
+</form>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<graph string="Liste des associés par groupement forestier" type="vbar">
+    <x>
+        <field name="groupe" />
+    </x>
+    <y>
+        <field name="pp" color="#ccff00" string="Pleine propriété"/>
+        <field name="us" color="#ddaa00" string="Usufruit"/>
+        <field name="np" color="#ff0000" string="Nue propriété"/>
+    </y>
+</graph>

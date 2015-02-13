@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Hunting Plot">
+    <field name="hunting" />
+    <field name="plot" />
+    <field name="sslocation" />
+</tree>

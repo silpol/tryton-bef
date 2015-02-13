@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<form string="Hunting" col="2">
+    <label name="bailleur"/>
+    <field name="bailleur"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="name"/>
+    <field name="name"/>
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="locataire"/>
+            <field name="locataire"/>
+            <label name="cofermier"/>
+            <field name="cofermier"/>
+            <label name="date"/>
+            <field name="date"/>
+            <label name="duree"/>
+            <field name="duree"/>    
+            <label name="datedeb"/>
+            <field name="datedeb"/>
+            <label name="datefin"/>
+            <field name="datefin"/>
+            <label name="loyer"/>
+            <field name="loyer"/>
+            <label name="indiceref"/>
+            <field name="indiceref"/>
+        </page>  
+        <page string="Plots" id="plotshunting">            
+            <field name="plots" colspan="4"/>
+            <newline/>
+            <label name="totsurfloc"/>
+            <field name="totsurfloc"/>
+            <label name="totsurfnotloc"/>
+            <field name="totsurfnotloc"/>
+        </page>
+        <page string="Map" id="map" col="1">            
+            <field name="hunting_map" widget="image" img_width="600" img_height="600"/>
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+        <page string="Observations" id="observation" col="1">
+            <field name="observation"/>
+        </page>
+    </notebook>
+    <label name="active"/>
+    <field name="active"/>
+</form>

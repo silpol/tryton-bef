@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="portrait.codeserar" id="100">
+            <field name="code">L1</field>
+            <field name="name">Vallées des bassins Artois, Picardie et Seine-Normandie</field>
+            <field name="r">54</field>
+            <field name="v">179</field>
+            <field name="b">170</field>
+        </record>
+        <record model="portrait.codeserar" id="102">
+            <field name="code">L2</field>
+            <field name="name">Vallées du bassin Rhin-Meuse</field>
+            <field name="r">22</field>
+            <field name="v">58</field>
+            <field name="b">24</field>
+        </record>
+        <record model="portrait.codeserar" id="103">
+            <field name="code">L3</field>
+            <field name="name">Vallées du bassin Loire-Bretagne</field>
+            <field name="r">174</field>
+            <field name="v">199</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.codeserar" id="104">
+            <field name="code">L4</field>
+            <field name="name">Vallées du bassin Adour-Garonne</field>
+            <field name="r">19</field>
+            <field name="v">54</field>
+            <field name="b">51</field>
+        </record>
+        <record model="portrait.codeserar" id="105">
+            <field name="code">L5</field>
+            <field name="name">Vallées du bassin Rhône-Méditerranée</field>
+            <field name="r">190</field>
+            <field name="v">221</field>
+            <field name="b">195</field>
+        </record>          
+    </data>
+</tryton>

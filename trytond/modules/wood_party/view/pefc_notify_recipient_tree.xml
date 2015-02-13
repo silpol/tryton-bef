@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<tree string="PEFC notifications recipient">
+    <field name="sender"/>
+    <field name="recipient"/>                  
+</tree>

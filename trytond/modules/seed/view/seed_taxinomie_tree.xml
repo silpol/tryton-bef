@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Taxinomie">
+    <field name="nom_complet" />
+    <field name="code"/>
+    <field name="commun"/>                  
+</tree>
+

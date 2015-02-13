@@ -1,0 +1,1966 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "error:site.site:"
+msgid "The commune is invalid, no commune is defined!"
+msgstr "Cette commune est invalide, pas de commune définie !"
+
+msgctxt "error:site.site:"
+msgid "You cannot set duplicated site ID!"
+msgstr "Vous ne pouvez pas dupliquer cet identifiant !"
+
+msgctxt "field:account.invoice,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:challenge.bfa,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:challenge.bfa,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.bfa,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.bfa,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:challenge.bfa,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:challenge.bfa,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.bfa,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.bfa,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.bfa,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.bfa,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.bfa,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:challenge.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:challenge.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:challenge.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.code,typo:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "field:challenge.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.pv,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.pv,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.pv,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:challenge.pv,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:challenge.pv,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.pv,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.pv,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.pv,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.pv,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.pv,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.revenuforestier,annee:"
+msgid "Année"
+msgstr "Année"
+
+msgctxt "field:challenge.revenuforestier,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.revenuforestier,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.revenuforestier,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "field:challenge.revenuforestier,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.revenuforestier,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:challenge.revenuforestier,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.revenuforestier,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.revenuforestier,totgroup:"
+msgid "Groupe (nb)"
+msgstr "Groupe (nb)"
+
+msgctxt "field:challenge.revenuforestier,totmember:"
+msgid "Membre (nb)"
+msgstr "Membre (nb)"
+
+msgctxt "field:challenge.revenuforestier,typo:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "field:challenge.revenuforestier,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.revenuforestier,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.revenuforestier.open.start,end_date:"
+msgid "End Date"
+msgstr "Date de fin"
+
+msgctxt "field:challenge.revenuforestier.open.start,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:challenge.revenuforestier.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.revenuforestier.open.start,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:challenge.revenuforestier.open.start,start_date:"
+msgid "Start Date"
+msgstr "Date de début"
+
+msgctxt "field:challenge.rf,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.rf,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.rf,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:challenge.rf,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:challenge.rf,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.rf,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.rf,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.rf,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.rf,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.rf,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.group,bfa:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "field:forest_group.group,pv:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "field:forest_group.group,rf:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "field:purchase.purchase,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:site.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:site.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:site.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_line,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_line,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_line,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_line,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_line,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_line,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_line,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_line,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_line,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_line,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_point,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_point,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_poly,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_poly,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_poly,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site,area:"
+msgid "Area"
+msgstr "Surface"
+
+msgctxt "field:site.site,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:site.site,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site,dead_line_work:"
+msgid "Deadline"
+msgstr "Date de fin de travaux"
+
+msgctxt "field:site.site,direccte:"
+msgid "DIRECCTE"
+msgstr "DIRECCTE"
+
+msgctxt "field:site.site,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.site,gps:"
+msgid "GPS"
+msgstr "GPS"
+
+msgctxt "field:site.site,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site,image_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site.site,image_map:"
+msgid "Image map"
+msgstr "Carte locale"
+
+msgctxt "field:site.site,lot:"
+msgid "Lot"
+msgstr "Lot"
+
+msgctxt "field:site.site,misc_obj_line:"
+msgid "Miscellaneous line objects"
+msgstr "Linéaire"
+
+msgctxt "field:site.site,misc_obj_point:"
+msgid "Miscellaneous point objects"
+msgstr "Point"
+
+msgctxt "field:site.site,misc_obj_poly:"
+msgid "Miscellaneous polygon objects"
+msgstr "Zone"
+
+msgctxt "field:site.site,moa:"
+msgid "MOA"
+msgstr "MOA"
+
+msgctxt "field:site.site,moe:"
+msgid "MOE"
+msgstr "MOE"
+
+msgctxt "field:site.site,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site,nature:"
+msgid "Nature"
+msgstr "Nature"
+
+msgctxt "field:site.site,ouvrage:"
+msgid "Ouvrages divers"
+msgstr "Ouvrages divers"
+
+msgctxt "field:site.site,owner:"
+msgid "Owner"
+msgstr "Propriétaire"
+
+msgctxt "field:site.site,pefc:"
+msgid "PEFC"
+msgstr "PEFC"
+
+msgctxt "field:site.site,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site,risque:"
+msgid "Autres risques"
+msgstr "Autres risques"
+
+msgctxt "field:site.site,site_date:"
+msgid "Site date"
+msgstr "Date"
+
+msgctxt "field:site.site,site_supervision:"
+msgid "Site supervision"
+msgstr "Suivi de chantier"
+
+msgctxt "field:site.site,situation_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site.site,situation_map:"
+msgid "Situation map"
+msgstr "Carte de situation"
+
+msgctxt "field:site.site,taxon:"
+msgid "Taxons"
+msgstr "Essences"
+
+msgctxt "field:site.site,voie:"
+msgid "Voies de circulation"
+msgstr "Voies de circulation"
+
+msgctxt "field:site.site,volume:"
+msgid "Volume"
+msgstr "Volume"
+
+msgctxt "field:site.site,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.nature,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.nature,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.nature,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.nature,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.nature,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.nature,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.nature,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.nature,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.ouvrage,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.ouvrage,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.ouvrage,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.ouvrage,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.ouvrage,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.ouvrage,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.ouvrage,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.ouvrage,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.risque,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.risque,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.risque,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.risque,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.risque,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.risque,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.risque,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.risque,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.taxon,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.taxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.taxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.taxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.taxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.taxon,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.taxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.taxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.voie,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.voie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.voie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.voie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.voie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.voie,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.voie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.voie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:account.invoice,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "help:challenge.bfa,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "help:challenge.bfa,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:challenge.bfa,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "help:challenge.bfa,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.bfa,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:challenge.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "help:challenge.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "help:challenge.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "help:challenge.code,typo:"
+msgid "Type de DEFI"
+msgstr "Type de DEFI"
+
+msgctxt "help:challenge.pv,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:challenge.pv,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "help:challenge.pv,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.pv,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:challenge.revenuforestier,annee:"
+msgid "Année"
+msgstr "Année"
+
+msgctxt "help:challenge.revenuforestier,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "help:challenge.revenuforestier,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "help:challenge.revenuforestier,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.revenuforestier,totgroup:"
+msgid "Nombre de parts (Groupement forestier)"
+msgstr "Nombre de parts (Groupement forestier)"
+
+msgctxt "help:challenge.revenuforestier,totmember:"
+msgid "Nombre de parts (Membre)"
+msgstr "Nombre de parts (Membre)"
+
+msgctxt "help:challenge.revenuforestier,typo:"
+msgid "Type de DEFI"
+msgstr "Type de DEFI"
+
+msgctxt "help:challenge.revenuforestier.open.start,end_date:"
+msgid "End Date"
+msgstr "Date de fin"
+
+msgctxt "help:challenge.revenuforestier.open.start,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "help:challenge.revenuforestier.open.start,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "help:challenge.revenuforestier.open.start,start_date:"
+msgid "Start date"
+msgstr "Date de début"
+
+msgctxt "help:challenge.rf,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:challenge.rf,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "help:challenge.rf,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.rf,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:forest_group.group,bfa:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "help:forest_group.group,pv:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "help:forest_group.group,rf:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "help:purchase.purchase,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "help:site.site,dead_line_work:"
+msgid "Deadline for completion of work"
+msgstr "Date de fin de chantier"
+
+msgctxt "help:site.site,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "model:analytic_account.account,name:1"
+msgid "Recettes"
+msgstr "Recettes"
+
+msgctxt "model:analytic_account.account,name:10"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:11"
+msgid "Route"
+msgstr "Route"
+
+msgctxt "model:analytic_account.account,name:12"
+msgid "Entretien"
+msgstr "Entretien"
+
+msgctxt "model:analytic_account.account,name:13"
+msgid "Création"
+msgstr "Création"
+
+msgctxt "model:analytic_account.account,name:14"
+msgid "Droit de passage"
+msgstr "Droit de passage"
+
+msgctxt "model:analytic_account.account,name:15"
+msgid "Prêt FFN"
+msgstr "Prêt FFN"
+
+msgctxt "model:analytic_account.account,name:16"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:17"
+msgid "Maison forestière"
+msgstr "Maison forestière"
+
+msgctxt "model:analytic_account.account,name:18"
+msgid "Entretien"
+msgstr "Entretien"
+
+msgctxt "model:analytic_account.account,name:19"
+msgid "Assurance"
+msgstr "Assurance"
+
+msgctxt "model:analytic_account.account,name:2"
+msgid "Dépenses"
+msgstr "Dépenses"
+
+msgctxt "model:analytic_account.account,name:20"
+msgid "Électricité/Gaz"
+msgstr "Électricité/Gaz"
+
+msgctxt "model:analytic_account.account,name:21"
+msgid "Eau"
+msgstr "Eau"
+
+msgctxt "model:analytic_account.account,name:22"
+msgid "Taxe d'habitation"
+msgstr "Taxe d'habitation"
+
+msgctxt "model:analytic_account.account,name:23"
+msgid "Téléphone"
+msgstr "Téléphone"
+
+msgctxt "model:analytic_account.account,name:24"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:25"
+msgid "Frais généraux"
+msgstr "Frais généraux"
+
+msgctxt "model:analytic_account.account,name:26"
+msgid "Salaires garde et sylviculture"
+msgstr "Salaires garde et sylviculture"
+
+msgctxt "model:analytic_account.account,name:27"
+msgid "Salaire gestion"
+msgstr "Salaire gestion"
+
+msgctxt "model:analytic_account.account,name:28"
+msgid "Charges"
+msgstr "Charges"
+
+msgctxt "model:analytic_account.account,name:29"
+msgid "Frais personnel"
+msgstr "Frais personnel"
+
+msgctxt "model:analytic_account.account,name:3"
+msgid "Exploitation"
+msgstr "Exploitation"
+
+msgctxt "model:analytic_account.account,name:30"
+msgid "Frais financiers/intérêts"
+msgstr "Frais financiers/intérêts"
+
+msgctxt "model:analytic_account.account,name:31"
+msgid "Frais bancaires"
+msgstr "Frais bancaires"
+
+msgctxt "model:analytic_account.account,name:32"
+msgid "Syndicat propriétaires"
+msgstr "Syndicat propriétaires"
+
+msgctxt "model:analytic_account.account,name:33"
+msgid "Taxes foncières"
+msgstr "Taxes foncières"
+
+msgctxt "model:analytic_account.account,name:34"
+msgid "CVO"
+msgstr "CVO"
+
+msgctxt "model:analytic_account.account,name:35"
+msgid "Frais AG/Gérance"
+msgstr "Frais AG/Gérance"
+
+msgctxt "model:analytic_account.account,name:36"
+msgid "Assurance forêt"
+msgstr "Assurance forêt"
+
+msgctxt "model:analytic_account.account,name:37"
+msgid "Expert comptable"
+msgstr "Expert comptable"
+
+msgctxt "model:analytic_account.account,name:38"
+msgid "Expert forestier (solde n-1)"
+msgstr "Expert forestier (solde n-1)"
+
+msgctxt "model:analytic_account.account,name:39"
+msgid "Expert forestier (acompte n)"
+msgstr "Expert forestier (acompte n)"
+
+msgctxt "model:analytic_account.account,name:4"
+msgid "Travaux forestiers"
+msgstr "Travaux forestiers"
+
+msgctxt "model:analytic_account.account,name:40"
+msgid "PSG"
+msgstr "PSG"
+
+msgctxt "model:analytic_account.account,name:41"
+msgid "Certification PEFC"
+msgstr "Certification PEFC"
+
+msgctxt "model:analytic_account.account,name:42"
+msgid "Notaire"
+msgstr "Notaire"
+
+msgctxt "model:analytic_account.account,name:43"
+msgid "Avocat"
+msgstr "Avocat"
+
+msgctxt "model:analytic_account.account,name:44"
+msgid "RCS"
+msgstr "RCS"
+
+msgctxt "model:analytic_account.account,name:45"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:46"
+msgid "Chasse"
+msgstr "Chasse"
+
+msgctxt "model:analytic_account.account,name:47"
+msgid "Réservation/Location"
+msgstr "Réservation/Location"
+
+msgctxt "model:analytic_account.account,name:48"
+msgid "Fauchage/Entretien de ligne"
+msgstr "Fauchage/Entretien de ligne"
+
+msgctxt "model:analytic_account.account,name:49"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:5"
+msgid "Façonnage/Débardage"
+msgstr "Façonnage/Débardage"
+
+msgctxt "model:analytic_account.account,name:50"
+msgid "Étang/Pêche"
+msgstr "Étang/Pêche"
+
+msgctxt "model:analytic_account.account,name:51"
+msgid "Frais pêche"
+msgstr "Frais pêche"
+
+msgctxt "model:analytic_account.account,name:52"
+msgid "Entretien"
+msgstr "Entretien"
+
+msgctxt "model:analytic_account.account,name:53"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:54"
+msgid "Carrière"
+msgstr "Carrière"
+
+msgctxt "model:analytic_account.account,name:55"
+msgid "Frais carrière"
+msgstr "Frais carrière"
+
+msgctxt "model:analytic_account.account,name:56"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:57"
+msgid "Coupes"
+msgstr "Coupes"
+
+msgctxt "model:analytic_account.account,name:58"
+msgid "Effets ventes n-1 sur pied"
+msgstr "Effets ventes n-1 sur pied"
+
+msgctxt "model:analytic_account.account,name:59"
+msgid "Effets ventes n-1 abatus"
+msgstr "Effets ventes n-1 abatus"
+
+msgctxt "model:analytic_account.account,name:6"
+msgid "Essence"
+msgstr "Essence"
+
+msgctxt "model:analytic_account.account,name:60"
+msgid "Bois d'oeuvre sur pied"
+msgstr "Bois d’œuvre sur pied"
+
+msgctxt "model:analytic_account.account,name:61"
+msgid "Frais de mise à port"
+msgstr "Frais de mise à port"
+
+msgctxt "model:analytic_account.account,name:62"
+msgid "Bois d'oeuvre abattus"
+msgstr "Bois d'œuvre abattus"
+
+msgctxt "model:analytic_account.account,name:63"
+msgid "Chablis"
+msgstr "Chablis"
+
+msgctxt "model:analytic_account.account,name:64"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:65"
+msgid "Ventes diverses"
+msgstr "Ventes diverses"
+
+msgctxt "model:analytic_account.account,name:66"
+msgid "Éclaircie mécanisée"
+msgstr "Éclaircie mécanisée"
+
+msgctxt "model:analytic_account.account,name:67"
+msgid "Bois d'industrie"
+msgstr "Bois d'industrie"
+
+msgctxt "model:analytic_account.account,name:68"
+msgid "Bois de chauffage"
+msgstr "Bois de chauffage"
+
+msgctxt "model:analytic_account.account,name:69"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:7"
+msgid "Matériel"
+msgstr "Matériel"
+
+msgctxt "model:analytic_account.account,name:70"
+msgid "Autres produits"
+msgstr "Autres produits"
+
+msgctxt "model:analytic_account.account,name:71"
+msgid "Vente de foin"
+msgstr "Vente de foin"
+
+msgctxt "model:analytic_account.account,name:72"
+msgid "Fermage"
+msgstr "Fermage"
+
+msgctxt "model:analytic_account.account,name:73"
+msgid "Droit de passage"
+msgstr "Droit de passage"
+
+msgctxt "model:analytic_account.account,name:74"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:75"
+msgid "Divers"
+msgstr "Divers"
+
+msgctxt "model:analytic_account.account,name:76"
+msgid "Remboursement salaire et charge"
+msgstr "Remboursement salaire et charge"
+
+msgctxt "model:analytic_account.account,name:77"
+msgid "Remboursement frais voiture"
+msgstr "Remboursement frais voiture"
+
+msgctxt "model:analytic_account.account,name:78"
+msgid "Remboursement frais garde"
+msgstr "Remboursement frais garde"
+
+msgctxt "model:analytic_account.account,name:79"
+msgid "Autres remboursements"
+msgstr "Autres remboursements"
+
+msgctxt "model:analytic_account.account,name:8"
+msgid "Véhicule"
+msgstr "Véhicule"
+
+msgctxt "model:analytic_account.account,name:80"
+msgid "Remboursement caisse maladie"
+msgstr "Remboursement caisse maladie"
+
+msgctxt "model:analytic_account.account,name:81"
+msgid "Intérêts financiers"
+msgstr "Intérêts financiers"
+
+msgctxt "model:analytic_account.account,name:82"
+msgid "Subventions"
+msgstr "Subventions"
+
+msgctxt "model:analytic_account.account,name:83"
+msgid "Indemnités de préjudice"
+msgstr "Indemnités de préjudice"
+
+msgctxt "model:analytic_account.account,name:84"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:85"
+msgid "Chasse"
+msgstr "Chasse"
+
+msgctxt "model:analytic_account.account,name:86"
+msgid "Location"
+msgstr "Emplacement"
+
+msgctxt "model:analytic_account.account,name:87"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:88"
+msgid "Étang et Pêche"
+msgstr "Étang et Pêche"
+
+msgctxt "model:analytic_account.account,name:89"
+msgid "Vente de poissons"
+msgstr "Vente de poissons"
+
+msgctxt "model:analytic_account.account,name:9"
+msgid "Frais de commercialisation"
+msgstr "Frais de commercialisation"
+
+msgctxt "model:analytic_account.account,name:90"
+msgid "Location pêche"
+msgstr "Location pêche"
+
+msgctxt "model:analytic_account.account,name:91"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:analytic_account.account,name:92"
+msgid "Carrière"
+msgstr "Carrière"
+
+msgctxt "model:analytic_account.account,name:93"
+msgid "Droit de foretage"
+msgstr "Droit de foretage"
+
+msgctxt "model:analytic_account.account,name:94"
+msgid "Autres"
+msgstr "Autres"
+
+msgctxt "model:challenge.bfa,name:"
+msgid "Base Forfaitaire Agricole"
+msgstr "Base Forfaitaire Agricole"
+
+msgctxt "model:challenge.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:challenge.pv,name:"
+msgid "Plus Value"
+msgstr "Plus Value"
+
+msgctxt "model:challenge.revenuforestier,name:"
+msgid "Revenus Forestiers"
+msgstr "Revenus Forestiers"
+
+msgctxt "model:challenge.revenuforestier.open.start,name:"
+msgid "Open revenu forestier"
+msgstr "Ouvrir revenu forestier"
+
+msgctxt "model:challenge.rf,name:"
+msgid "Revenu Foncier"
+msgstr "Revenu Foncier"
+
+msgctxt "model:ir.action,name:act_challenge_bfa_form"
+msgid "Base Forfaitaire agricole"
+msgstr "Base Forfaitaire agricole"
+
+msgctxt "model:ir.action,name:act_challenge_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.action,name:act_challenge_group_form"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "model:ir.action,name:act_challenge_pv_form"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "model:ir.action,name:act_challenge_rf_form"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "model:ir.action,name:act_revenuforestier_form"
+msgid "Revenus forestiers par groupement forestier"
+msgstr "Revenus forestiers par groupement forestier"
+
+msgctxt "model:ir.action,name:act_revenuforestier_open"
+msgid "Revenus forestiers par groupement forestier"
+msgstr "Revenus forestiers par groupement forestier"
+
+msgctxt "model:ir.action,name:synthese_revenuforestier"
+msgid "Revenus forestiers"
+msgstr "Revenus forestiers"
+
+msgctxt "model:ir.ui.menu,name:menu_challenge_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_challenge_configuration"
+msgid "Configuration DEFI"
+msgstr "Revenus Forestiers"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_group_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_revenuforestier"
+msgid "Revenus forestiers par groupement forestier"
+msgstr "Revenus forestiers par groupement forestier"
+
+msgctxt "model:site.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:site.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr "Linéaire"
+
+msgctxt "model:site.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr "Point"
+
+msgctxt "model:site.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr "Zone"
+
+msgctxt "model:site.site,name:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "model:site.site-site.nature,name:"
+msgid "Site - Nature"
+msgstr "Site - Nature"
+
+msgctxt "model:site.site-site.ouvrage,name:"
+msgid "Site - Ouvrage"
+msgstr "Site - Ouvrage"
+
+msgctxt "model:site.site-site.risque,name:"
+msgid "Site - Risque"
+msgstr "Site - Risque"
+
+msgctxt "model:site.site-site.taxon,name:"
+msgid "Site - Taxon"
+msgstr "Site - Taxon"
+
+msgctxt "model:site.site-site.voie,name:"
+msgid "Site - Voie"
+msgstr "Site - Voie"
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "("
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ")"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ","
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "- €"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "/"
+msgstr "/"
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "00/00/0000"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "00:00:00"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "08/12/2014"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ""
+"=  bf : Base forfaitaire agricole, rf : Revenus fonciers, pv : Plus-values"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "???"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Associé"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Base forfaitaire agricole"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Code postal"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Détail par associé :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Groupement forestier :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Gérant :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Montant (€)"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Nombre de parts au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Nombre de parts au 08/12/14"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Page"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Plus-values"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "REVENUS FORESTIERS"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Revenus fonciers"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Revenus forestiers au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Synthèse au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Total des parts :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ""
+"Travaux d'entretien des arbres le long des Routes Départementales / "
+"Programme prévisionnel 2014"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ""
+"Travaux d'entretien des arbres le long des Routes Départementales / "
+"Programme prévisionnel au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Type*"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Ville"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio:///choose"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio:///for"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio:///when"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://choose test=\"\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"g in objects[0].groupe.gerants\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"line in objects\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"p in objects[0].groupe.bfa\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"p in objects[0].groupe.pv\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"p in objects[0].groupe.rf\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://g.member.name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.member.parties[0].party.addresses[0].city"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.member.parties[0].party.addresses[0].name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.member.parties[0].party.addresses[0].zip"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.montant"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.totmember"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.typo"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://objects[0].groupe.party.full_name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://objects[0].totgroup"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://p.commune.name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://p.montant"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://p.name.name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://when test=\"p.date == objects[0].annee\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "€"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "(1 par équipe de moins de 5 jusqu'à décembre 2013)"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "/"
+msgstr "/"
+
+msgctxt "odt:site.site:"
+msgid "Arrêté du 31 mars relatif à la fiche de chantier"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Autres risques :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "C"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "D"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Décret n°2010-1603 du 17 décembre 2010"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Définir les distances de sécurité entre les travailleurs."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Email :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Essence(s) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Extincteur valide sur les engins ou les voitures (Cf. Décret départementaux)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "F"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Fiche de chantier N°"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "L"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Minimum 2 sauveteurs secouristes du travail par équipe."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "N"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Nom du (des) donneur(s) d'ordres (propriétaire ou entreprise) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Nom du propriétaire ou gestionnaire :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "N° de Lot :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Ouvrages divers :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Port des EPI pour tous (casque complet, chaussures de sécurité, pantalon de "
+"sécurité, gants)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Pour les bûcherons : 2 fois la longueur des arbres à abattre."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Pour les porteurs et têtes abatteuse : voir conformité des engins (distance "
+"dédié sur les grues)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Pour les skidders : une longueur de câble déroulé."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "R"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Rappeler les consignes de sécurité au nouveau personnel (formation "
+"d'embauche)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Renseignements généraux"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Règles de sécurité pour les intervenants"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "S"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Si présence, indiquer les consignes à respecter :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Stationner les véhicules dans le sens du départ et laisser la voie d'accès "
+"libre."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Suivi chantier :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Trousse de sécurité sur le chantier et à portée de mains du matériel leur "
+"permettant d'arrêter un saignement abondant."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Tél :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "V"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Voies de circulation :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Vêtements de couleur vive."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ate :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ature des travaux :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ax :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ieu-dit :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "olume (m3) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ommune :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "oordonnées GPS (en général place de dépôt) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "urface du chantier :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "° PEFC :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "éférence parcellaire ou cadastrale :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "élai de réalisation des travaux :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "épartement :"
+msgstr ""
+
+msgctxt "selection:challenge.code,typo:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "selection:challenge.code,typo:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "selection:challenge.code,typo:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "selection:challenge.revenuforestier,typo:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "selection:challenge.revenuforestier,typo:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "selection:challenge.revenuforestier,typo:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "view:challenge.bfa:"
+msgid "Base Forfaitaire agricole"
+msgstr "Base Forfaitaire agricole"
+
+msgctxt "view:challenge.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:challenge.pv:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "view:challenge.revenuforestier.open.start:"
+msgid "Revenus forestiers"
+msgstr "Revenus forestiers"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Base forfaitaire agricole (€)"
+msgstr "Base forfaitaire agricole (€)"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Plus-values (€)"
+msgstr "Plus-values (€)"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Revenus fonciers (€)"
+msgstr "Revenus fonciers (€)"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Revenus forestiers"
+msgstr "Revenus forestiers"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Revenus forestiers par groupement forestier"
+msgstr "Revenus forestiers par groupement forestier"
+
+msgctxt "view:challenge.rf:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "view:forest_group.group:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "view:forest_group.group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "view:forest_group.group:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "view:forest_group.group:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "view:site.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:site.code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "view:site.misc_obj_line:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_line:"
+msgid "Miscellaneous line object"
+msgstr "Linéaire"
+
+msgctxt "view:site.misc_obj_point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_point:"
+msgid "Miscellaneous point object"
+msgstr "Point"
+
+msgctxt "view:site.misc_obj_poly:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_poly:"
+msgid "Miscellaneous polygon object"
+msgstr "Zone"
+
+msgctxt "view:site.site:"
+msgid "Codes"
+msgstr "Codes"
+
+msgctxt "view:site.site:"
+msgid "Edit geometries"
+msgstr "Éditer"
+
+msgctxt "view:site.site:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site.site:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site.site:"
+msgid "Image"
+msgstr "Carte de situation"
+
+msgctxt "view:site.site:"
+msgid "Lines"
+msgstr "Linéaires"
+
+msgctxt "view:site.site:"
+msgid "Map"
+msgstr "Carte locale"
+
+msgctxt "view:site.site:"
+msgid "Misc. obj."
+msgstr "Objets divers"
+
+msgctxt "view:site.site:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:site.site:"
+msgid "Polygones"
+msgstr "Zones"
+
+msgctxt "view:site.site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "wizard_button:challenge.revenuforestier.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:challenge.revenuforestier.open,start,open_:"
+msgid "Open"
+msgstr "Ouvrir"

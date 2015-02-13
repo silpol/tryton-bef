@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Arbre" editable="bottom">
+    <field name="emplacement"/>                  
+    <field name="an" />    
+    <field name="essence" />
+    <field name="conduite" />
+    <field name="evolution" />
+    <field name="active"/>                    
+</tree>

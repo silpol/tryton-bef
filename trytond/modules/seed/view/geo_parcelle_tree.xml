@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="geo_parcelle">
+    <field name="garden" />        
+    <field name="tex" />   
+    <field name="details" /> 
+    <field name="surfpar" />                
+</tree>

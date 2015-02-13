@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="Liste des associés par groupement forestier">    
+    <label name="groupe"/>
+    <field name="groupe" widget="selection"/>
+</form>

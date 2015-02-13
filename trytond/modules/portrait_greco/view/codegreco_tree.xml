@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Code GRECO">
+    <field name="code" />
+    <field name="name" />
+    <field name="domaine" />
+    <field name="r" />
+    <field name="v" />
+    <field name="b" />
+</tree>

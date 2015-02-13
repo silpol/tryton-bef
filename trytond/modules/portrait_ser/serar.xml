@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <!-- SERAR -->      
+        <record model="ir.ui.view" id="portrait_serar_view_tree">
+            <field name="model">portrait.serar</field>
+            <field name="type">tree</field>
+            <field name="name">serar_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_serar_view_form">
+            <field name="model">portrait.serar</field>
+            <field name="type">form</field>
+            <field name="name">serar_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_serar_form">
+            <field name="name">SERAR</field>
+            <field name="res_model">portrait.serar</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_serar_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_serar_view_tree"/>
+            <field name="act_window" ref="act_portrait_serar_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_serar_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_serar_view_form"/>
+            <field name="act_window" ref="act_portrait_serar_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_serar_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.serar</field>
+            <field name="report_name">portrait.serar.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_serar_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.serar,-1</field>
+            <field name="action" ref="report_portrait_serar_edit"/>
+        </record> 
+        <menuitem parent="menu_ifn" sequence="1" id="menu_portrait_serar_form" icon="tryton-list" action="act_portrait_serar_form"/>
+
+        <!-- Code SERAR -->      
+        <record model="ir.ui.view" id="portrait_codeserar_view_tree">
+            <field name="model">portrait.codeserar</field>
+            <field name="type">tree</field>
+            <field name="name">codeserar_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_codeserar_view_form">
+            <field name="model">portrait.codeserar</field>
+            <field name="type">form</field>
+            <field name="name">codeserar_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_codeserar_form">
+            <field name="name">Code SERAR</field>
+            <field name="res_model">portrait.codeserar</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codeserar_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_codeserar_view_tree"/>
+            <field name="act_window" ref="act_portrait_codeserar_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codeserar_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_codeserar_view_form"/>
+            <field name="act_window" ref="act_portrait_codeserar_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_codeserar_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.codeserar</field>
+            <field name="report_name">portrait.codeserar.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_codeserar_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.codeserar,-1</field>
+            <field name="action" ref="report_portrait_codeserar_edit"/>
+        </record> 
+        <menuitem parent="menu_ifn_codes" sequence="1" id="menu_portrait_codeserar_form" icon="tryton-list" action="act_portrait_codeserar_form"/>
+                
+    </data>
+</tryton>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Table B">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="nm_sffzn"/>
+    <field name="nm_sffzn"/>
+    <label name="lb_zn"/>
+    <field name="lb_zn"/> 
+</form>

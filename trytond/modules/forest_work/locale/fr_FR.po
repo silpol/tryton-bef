@@ -1,0 +1,1967 @@
+# 
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "error:forest_group.share:"
+msgid "Une part sociale ne peut pas être référencée deux fois dans un groupement forestier avec le même type."
+msgstr "Une part sociale ne peut pas être référencée deux fois dans un groupement forestier avec le même type."
+
+msgctxt "error:forest_work.travaux:"
+msgid "La ligne de Travaux \"%s\" ne peut pas être annulée au statut \"Annulé\"."
+msgstr "La ligne de Travaux \"%s\" ne peut pas être annulée au statut \"Annulé\"."
+
+msgctxt "field:company.company,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:company.company,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:company.company,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:company.company,currency:"
+msgid "Currency"
+msgstr "Devise"
+
+msgctxt "field:company.company,employees:"
+msgid "Employees"
+msgstr "Employés"
+
+msgctxt "field:company.company,footer:"
+msgid "Footer"
+msgstr "Pied de Page"
+
+msgctxt "field:company.company,header:"
+msgid "Header"
+msgstr "Entête de Page"
+
+msgctxt "field:company.company,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:company.company,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:company.company,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:company.company,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:company.company,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:company.company,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:company.company.config.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:company.employee,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:company.employee,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:company.employee,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:company.employee,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:company.employee,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:company.employee,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:company.employee,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:company.employee,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.plot,travaux:"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "field:forest_group.check_share.open.start,fromcode:"
+msgid "From"
+msgstr "De"
+
+msgctxt "field:forest_group.check_share.open.start,group:"
+msgid "group"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.check_share.open.start,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.check_share.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.check_share.open.start,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.check_share.open.start,tocode:"
+msgid "To"
+msgstr "À"
+
+msgctxt "field:forest_group.check_share.open.start,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:forest_group.check_share.result,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.check_share.result,shares_failed:"
+msgid "Share failed"
+msgstr "Parts sociales non crées"
+
+msgctxt "field:forest_group.check_share.result,shares_succeed:"
+msgid "Share succeed"
+msgstr "Parts sociales créées"
+
+msgctxt "field:forest_group.ficheporteur,a:"
+msgid "à"
+msgstr "à"
+
+msgctxt "field:forest_group.ficheporteur,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.ficheporteur,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.ficheporteur,de:"
+msgid "De"
+msgstr "De"
+
+msgctxt "field:forest_group.ficheporteur,deb:"
+msgid "de n°"
+msgstr "de n°"
+
+msgctxt "field:forest_group.ficheporteur,fin:"
+msgid "à n°"
+msgstr "à n°"
+
+msgctxt "field:forest_group.ficheporteur,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.ficheporteur,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.ficheporteur,member:"
+msgid "Membre"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.ficheporteur,nb:"
+msgid "Nombre"
+msgstr "Nombre"
+
+msgctxt "field:forest_group.ficheporteur,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.ficheporteur,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:forest_group.ficheporteur,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.ficheporteur,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.ficheporteur.open.start,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.ficheporteur.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.ficheporteur.open.start,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.group,conseil:"
+msgid "Conseil de gérance"
+msgstr "Conseil de gérance"
+
+msgctxt "field:forest_group.group,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.group,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.group,footer:"
+msgid "Footer"
+msgstr "Pied de Page"
+
+msgctxt "field:forest_group.group,gerants:"
+msgid "Gérants"
+msgstr "Gérants"
+
+msgctxt "field:forest_group.group,header:"
+msgid "Header"
+msgstr "Entête de Page"
+
+msgctxt "field:forest_group.group,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.group,members:"
+msgid "Members"
+msgstr "Porteurs de parts"
+
+msgctxt "field:forest_group.group,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:forest_group.group,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:forest_group.group,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.group,shares:"
+msgid "Shares"
+msgstr "Parts sociales"
+
+msgctxt "field:forest_group.group,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.group,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.group-forest_group.conseil,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.group-forest_group.conseil,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.group-forest_group.conseil,groupe:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:forest_group.group-forest_group.conseil,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.group-forest_group.conseil,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.group-forest_group.conseil,president:"
+msgid "Président du conseil"
+msgstr "Président du conseil"
+
+msgctxt "field:forest_group.group-forest_group.conseil,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.group-forest_group.conseil,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.group-forest_group.conseil,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.group-forest_group.gerance,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.group-forest_group.gerance,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.group-forest_group.gerance,groupe:"
+msgid "Group"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.group-forest_group.gerance,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.group-forest_group.gerance,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.group-forest_group.gerance,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.group-forest_group.gerance,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.group-forest_group.gerance,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.group-forest_group.gerant,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.group-forest_group.gerant,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.group-forest_group.gerant,groupe:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:forest_group.group-forest_group.gerant,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.group-forest_group.gerant,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.group-forest_group.gerant,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.group-forest_group.gerant,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.group-forest_group.gerant,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.group-forest_group.member,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.group-forest_group.member,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.group-forest_group.member,group:"
+msgid "group"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.group-forest_group.member,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.group-forest_group.member,member:"
+msgid "member"
+msgstr "porteur de part"
+
+msgctxt "field:forest_group.group-forest_group.member,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.group-forest_group.member,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.group-forest_group.member,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.listeassocie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.listeassocie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.listeassocie,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.listeassocie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.listeassocie,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.listeassocie,np:"
+msgid "NP"
+msgstr "NP"
+
+msgctxt "field:forest_group.listeassocie,pp:"
+msgid "PP"
+msgstr "PP"
+
+msgctxt "field:forest_group.listeassocie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.listeassocie,us:"
+msgid "US"
+msgstr "US"
+
+msgctxt "field:forest_group.listeassocie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.listeassocie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.listeassocie.open.start,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.listeassocie.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.member,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.member,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.member,gerances:"
+msgid "Gérance"
+msgstr "Gérance"
+
+msgctxt "field:forest_group.member,group:"
+msgid "Group"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.member,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.member,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:forest_group.member,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.member,shares:"
+msgid "Shares"
+msgstr "Parts sociales"
+
+msgctxt "field:forest_group.member,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.member,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.member-forest_group.group,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.member-forest_group.group,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.member-forest_group.group,group:"
+msgid "Group"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.member-forest_group.group,groupe:"
+msgid "Group"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.member-forest_group.group,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.member-forest_group.group,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.member-forest_group.group,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.member-forest_group.group,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.member-forest_group.group,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.share,code:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "field:forest_group.share,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.share,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.share,group:"
+msgid "group"
+msgstr "groupement"
+
+msgctxt "field:forest_group.share,groupe:"
+msgid "groupe"
+msgstr "Groupement"
+
+msgctxt "field:forest_group.share,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.share,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.share,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.share,sharemember:"
+msgid "ShareMember"
+msgstr "Parts sociales - Porteur de parts"
+
+msgctxt "field:forest_group.share,sharetype:"
+msgid "Share type"
+msgstr "Type de parts sociales"
+
+msgctxt "field:forest_group.share,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:forest_group.share,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.share,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.share-forest_group.member,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_group.share-forest_group.member,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_group.share-forest_group.member,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_group.share-forest_group.member,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:forest_group.share-forest_group.member,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_group.share-forest_group.member,share:"
+msgid "Share"
+msgstr "Parts sociales"
+
+msgctxt "field:forest_group.share-forest_group.member,typo:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:forest_group.share-forest_group.member,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_group.share-forest_group.member,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_work.check_plot.open.start,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:forest_work.check_plot.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_work.check_plot.open.start,typetravaux:"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "field:forest_work.check_plot.result,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:forest_work.check_plot.result,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_work.check_plot.result,plot_failed:"
+msgid "Parcelles - Déjà préconisée(s)"
+msgstr "Parcelles - Déjà préconisée(s)"
+
+msgctxt "field:forest_work.check_plot.result,plot_succeed:"
+msgid "Parcelles - Première préconisation"
+msgstr "Parcelles - Première préconisation"
+
+msgctxt "field:forest_work.check_plot.result,plots_failed:"
+msgid "Parcelles - Déjà préconisée(s)"
+msgstr "Parcelles - Déjà préconisée(s)"
+
+msgctxt "field:forest_work.check_plot.result,plots_succeed:"
+msgid "Parcelles - Première préconisation"
+msgstr "Parcelles - Première préconisation"
+
+msgctxt "field:forest_work.check_plot.result,typetravaux:"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "field:forest_work.preconisation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_work.preconisation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_work.preconisation,forest:"
+msgid "Forêts"
+msgstr "Forêts"
+
+msgctxt "field:forest_work.preconisation,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_work.preconisation,plot:"
+msgid "Plot"
+msgstr "Parcelle forestière"
+
+msgctxt "field:forest_work.preconisation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_work.preconisation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_work.preconisation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_work.travaux,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:forest_work.travaux,annule_reason:"
+msgid "Raison de l'annulation"
+msgstr "Raison de l'annulation"
+
+msgctxt "field:forest_work.travaux,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_work.travaux,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_work.travaux,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:forest_work.travaux,end_date:"
+msgid "End Date"
+msgstr "Date de fin"
+
+msgctxt "field:forest_work.travaux,icon:"
+msgid "icon"
+msgstr "icon"
+
+msgctxt "field:forest_work.travaux,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_work.travaux,plot:"
+msgid "Plot"
+msgstr "Parcelle forestière"
+
+msgctxt "field:forest_work.travaux,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_work.travaux,start_date:"
+msgid "Start Date"
+msgstr "Date de début"
+
+msgctxt "field:forest_work.travaux,state:"
+msgid "State"
+msgstr "État"
+
+msgctxt "field:forest_work.travaux,typetravaux:"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "field:forest_work.travaux,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_work.travaux,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_work.typotravaux,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:forest_work.typotravaux,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest_work.typotravaux,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest_work.typotravaux,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest_work.typotravaux,lib_long:"
+msgid "Libellé long"
+msgstr "Libellé long"
+
+msgctxt "field:forest_work.typotravaux,name:"
+msgid "Libellé court"
+msgstr "Libellé court"
+
+msgctxt "field:forest_work.typotravaux,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest_work.typotravaux,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest_work.typotravaux,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ir.cron,companies:"
+msgid "Companies"
+msgstr "Sociétés"
+
+msgctxt "field:ir.cron-company.company,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:ir.cron-company.company,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:ir.cron-company.company,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:ir.cron-company.company,cron:"
+msgid "Cron"
+msgstr "Cron"
+
+msgctxt "field:ir.cron-company.company,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ir.cron-company.company,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:ir.cron-company.company,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:ir.cron-company.company,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:ir.property,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:ir.sequence,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:ir.sequence.strict,company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "field:res.user,companies:"
+msgid "Current Companies"
+msgstr "Sociétés actuelles"
+
+msgctxt "field:res.user,company:"
+msgid "Current Company"
+msgstr "Société actuelle"
+
+msgctxt "field:res.user,employee:"
+msgid "Current Employee"
+msgstr "Employé actuel"
+
+msgctxt "field:res.user,employees:"
+msgid "Employees"
+msgstr "Employés"
+
+msgctxt "field:res.user,main_company:"
+msgid "Main Company"
+msgstr "Société principale"
+
+msgctxt "field:res.user-company.employee,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:res.user-company.employee,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:res.user-company.employee,employee:"
+msgid "Employee"
+msgstr "Employé"
+
+msgctxt "field:res.user-company.employee,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:res.user-company.employee,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:res.user-company.employee,user:"
+msgid "User"
+msgstr "Utilisateur"
+
+msgctxt "field:res.user-company.employee,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:res.user-company.employee,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:forest.plot,travaux:"
+msgid "Travaux réalisés sur la parcelle"
+msgstr "Travaux réalisés sur la parcelle"
+
+msgctxt "help:forest_group.check_share.open.start,fromcode:"
+msgid "From number"
+msgstr "Du numéro"
+
+msgctxt "help:forest_group.check_share.open.start,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "help:forest_group.check_share.open.start,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "help:forest_group.check_share.open.start,tocode:"
+msgid "To number"
+msgstr "au numéro"
+
+msgctxt "help:forest_group.check_share.open.start,typo:"
+msgid "Type de propriété (PP, US, NP)"
+msgstr "Type de propriété (PP, US, NP)"
+
+msgctxt "help:forest_group.ficheporteur,a:"
+msgid "à la part n°"
+msgstr "à la part n°"
+
+msgctxt "help:forest_group.ficheporteur,de:"
+msgid "De la part n°"
+msgstr "De la part n°"
+
+msgctxt "help:forest_group.ficheporteur,deb:"
+msgid "De la part n°"
+msgstr "De la part n°"
+
+msgctxt "help:forest_group.ficheporteur,fin:"
+msgid "à la part n°"
+msgstr "à la part n°"
+
+msgctxt "help:forest_group.ficheporteur,groupe:"
+msgid "Groupement forestier"
+msgstr "Groupement forestier"
+
+msgctxt "help:forest_group.ficheporteur,member:"
+msgid "Porteur de parts"
+msgstr "Porteur de parts"
+
+msgctxt "help:forest_group.ficheporteur,nb:"
+msgid "Nombre de parts"
+msgstr "Nombre de parts"
+
+msgctxt "help:forest_group.ficheporteur,typo:"
+msgid "Type de propriété (PP, US, NP)"
+msgstr "Type de propriété (PP, US, NP)"
+
+msgctxt "help:forest_group.group,conseil:"
+msgid "Membre du conseil de gérance"
+msgstr "Membre du conseil de gérance"
+
+msgctxt "help:forest_group.group,footer:"
+msgid "Footer"
+msgstr "Pied de Page"
+
+msgctxt "help:forest_group.group,gerants:"
+msgid "Gérants du groupement forestier"
+msgstr "Gérants du groupement forestier"
+
+msgctxt "help:forest_group.group,header:"
+msgid "Header"
+msgstr "Entête de Page"
+
+msgctxt "help:forest_group.group,members:"
+msgid "Members"
+msgstr "Porteurs de parts"
+
+msgctxt "help:forest_group.group,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "help:forest_group.group,shares:"
+msgid "Shares"
+msgstr "Parts sociales"
+
+msgctxt "help:forest_group.group-forest_group.conseil,groupe:"
+msgid "Groupement forestier"
+msgstr "Groupement forestier"
+
+msgctxt "help:forest_group.group-forest_group.conseil,president:"
+msgid "Président du conseil"
+msgstr "Président du conseil"
+
+msgctxt "help:forest_group.listeassocie,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "help:forest_group.listeassocie,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "help:forest_group.listeassocie,np:"
+msgid "Nue propriété"
+msgstr "Nue propriété"
+
+msgctxt "help:forest_group.listeassocie,pp:"
+msgid "Pleine Propriété"
+msgstr "Pleine Propriété"
+
+msgctxt "help:forest_group.listeassocie,us:"
+msgid "Usufruit"
+msgstr "Usufruit"
+
+msgctxt "help:forest_group.member,gerances:"
+msgid "Conseil de gérance"
+msgstr "Conseil de gérance"
+
+msgctxt "help:forest_group.member,group:"
+msgid "Group"
+msgstr "Groupement"
+
+msgctxt "help:forest_group.member,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "help:forest_group.member,shares:"
+msgid "Shares"
+msgstr "Parts sociales"
+
+msgctxt "help:forest_group.share,code:"
+msgid "Number"
+msgstr "Numéro"
+
+msgctxt "help:forest_group.share,groupe:"
+msgid "groupe"
+msgstr "Groupement forestier"
+
+msgctxt "help:forest_group.share,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "help:forest_group.share,sharemember:"
+msgid "ShareMember"
+msgstr "Parts sociales - Porteur de parts"
+
+msgctxt "help:forest_group.share,sharetype:"
+msgid "Share type"
+msgstr "Type de parts sociales"
+
+msgctxt "help:forest_group.share,typo:"
+msgid "Type de propriété (PP, US, NP)"
+msgstr "Type de propriété (PP, US, NP)"
+
+msgctxt "help:forest_group.share-forest_group.member,typo:"
+msgid "Type de propriété (PP, US, NP)"
+msgstr "Type de propriété (PP, US, NP)"
+
+msgctxt "help:forest_work.check_plot.open.start,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "help:forest_work.check_plot.open.start,typetravaux:"
+msgid "Type de travaux"
+msgstr "Type de travaux"
+
+msgctxt "help:forest_work.check_plot.result,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "help:forest_work.check_plot.result,typetravaux:"
+msgid "Type de travaux"
+msgstr "Type de travaux"
+
+msgctxt "help:forest_work.travaux,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "help:forest_work.travaux,end_date:"
+msgid "Date de réalisation"
+msgstr "Date de réalisation"
+
+msgctxt "help:forest_work.travaux,plot:"
+msgid "Plot"
+msgstr "Parcelle forestière"
+
+msgctxt "help:forest_work.travaux,start_date:"
+msgid "Date de préconisation"
+msgstr "Date de préconisation"
+
+msgctxt "help:forest_work.travaux,typetravaux:"
+msgid "Type de travaux"
+msgstr "Type de travaux"
+
+msgctxt "help:forest_work.typotravaux,code:"
+msgid "Code de la typologie de travaux"
+msgstr "Code de la typologie de travaux"
+
+msgctxt "help:forest_work.typotravaux,lib_long:"
+msgid "Libellé long du code travaux"
+msgstr "Libellé long du code travaux"
+
+msgctxt "help:forest_work.typotravaux,name:"
+msgid "Libellé court du code travaux"
+msgstr "Libellé court du code travaux"
+
+msgctxt "help:ir.cron,companies:"
+msgid "Companies registered for this cron"
+msgstr "Sociétés enregistrées pour ce planificateur"
+
+msgctxt "model:company.company,name:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "model:company.company.config.start,name:"
+msgid "Company Config"
+msgstr "Configuration société"
+
+msgctxt "model:company.employee,name:"
+msgid "Employee"
+msgstr "Employé"
+
+msgctxt "model:forest_group.check_share.open.start,name:"
+msgid "Open CheckShare"
+msgstr "Ouvrir porteur de parts"
+
+msgctxt "model:forest_group.check_share.result,name:"
+msgid "Check Share"
+msgstr "Vérifier les parts sociales"
+
+msgctxt "model:forest_group.ficheporteur,name:"
+msgid "Fiche porteur de parts par groupement forestier"
+msgstr "Fiche porteur de parts par groupement forestier"
+
+msgctxt "model:forest_group.ficheporteur.open.start,name:"
+msgid "Open fiche porteur"
+msgstr "Ouvrir fiche porteur"
+
+msgctxt "model:forest_group.group,name:"
+msgid "Group"
+msgstr "Groupement"
+
+msgctxt "model:forest_group.group-forest_group.conseil,name:"
+msgid "Member - Conseil"
+msgstr "Membre - Conseil"
+
+msgctxt "model:forest_group.group-forest_group.gerance,name:"
+msgid "Member - Gerance"
+msgstr "Porteur de parts - Gérance"
+
+msgctxt "model:forest_group.group-forest_group.gerant,name:"
+msgid "Member - Gerant"
+msgstr "Membre - Gérant"
+
+msgctxt "model:forest_group.group-forest_group.member,name:"
+msgid "Group - Member"
+msgstr "Groupement forestier - Porteur de parts"
+
+msgctxt "model:forest_group.listeassocie,name:"
+msgid "Liste des associés par groupement forestier"
+msgstr "Liste des porteurs de parts par groupement forestier"
+
+msgctxt "model:forest_group.listeassocie.open.start,name:"
+msgid "Open liste associés"
+msgstr "Ouvrir la liste des porteurs de parts"
+
+msgctxt "model:forest_group.member,name:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "model:forest_group.member-forest_group.group,name:"
+msgid "Member - Gerance"
+msgstr "Porteur de parts - Gérance"
+
+msgctxt "model:forest_group.share,name:"
+msgid "Share"
+msgstr "Parts sociales"
+
+msgctxt "model:forest_group.share-forest_group.member,name:"
+msgid "Share - Member - Typo"
+msgstr "Parts sociales - Porteur de parts - Type"
+
+msgctxt "model:forest_work.check_plot.open.start,name:"
+msgid "Open CheckPlot"
+msgstr "Open CheckPlot"
+
+msgctxt "model:forest_work.check_plot.result,name:"
+msgid "Check Plot"
+msgstr "Parcelle valide"
+
+msgctxt "model:forest_work.preconisation,name:"
+msgid "Preconisation"
+msgstr "Préconisation"
+
+msgctxt "model:forest_work.travaux,name:"
+msgid "Travaux sur forêt"
+msgstr "Travaux sur forêt"
+
+msgctxt "model:forest_work.typotravaux,name:"
+msgid "Typologie de travaux"
+msgstr "Typologie de travaux"
+
+msgctxt "model:ir.action,name:act_forest_work_travaux_form"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "model:ir.action,name:act_forest_work_typotravaux_form"
+msgid "typotravaux"
+msgstr "Typologie de travaux"
+
+msgctxt "model:ir.action,name:act_preconisation_form"
+msgid "Préconisation des parcelles en travaux"
+msgstr "Préconisation des parcelles en travaux"
+
+msgctxt "model:ir.action,name:window_parcelle"
+msgid "Parcelles"
+msgstr "Parcelles"
+
+msgctxt "model:ir.action,name:wizard_check_plot_open"
+msgid "Parcelle(s) à préconiser par Type de travaux"
+msgstr "Parcelle(s) à préconiser par Type de travaux"
+
+msgctxt "model:ir.action.act_window.domain,name:act_forest_work_travaux_form_domain_all"
+msgid "Tous"
+msgstr "Tous"
+
+msgctxt "model:ir.action.act_window.domain,name:act_forest_work_travaux_form_domain_annuler"
+msgid "Annulés"
+msgstr "Annulés"
+
+msgctxt "model:ir.action.act_window.domain,name:act_forest_work_travaux_form_domain_apreconsier"
+msgid "À préconiser"
+msgstr "À préconiser"
+
+msgctxt "model:ir.action.act_window.domain,name:act_forest_work_travaux_form_domain_preconise"
+msgid "Préconisés"
+msgstr "Préconisés"
+
+msgctxt "model:ir.action.act_window.domain,name:act_forest_work_travaux_form_domain_realise"
+msgid "Réalisés"
+msgstr "Réalisés"
+
+msgctxt "model:ir.cron-company.company,name:"
+msgid "Cron - Company"
+msgstr "Cron - Société"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_work"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_work_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_work_travaux_form"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_work_typotravaux_form"
+msgid "typotravaux"
+msgstr "Typologie des travaux"
+
+msgctxt "model:ir.ui.menu,name:menu_preconisation"
+msgid "Préconisation des parcelles en travaux"
+msgstr "Préconisation des parcelles en travaux"
+
+msgctxt "model:res.user-company.employee,name:"
+msgid "User - Employee"
+msgstr "Utilisateur - Employé"
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid ") :"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "*"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "CONSEIL(S) DE GÉRANCE"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Dans le cadre d'une mise à jour régulière de nos fichiers, nous vous remercions de bien vouloir examiner les renseignements mentionnés par cette fiche et d'y porter les modifications éventuelles."
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Deuxième adresse (facultatif) :"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "FICHE"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Fax (facutatif) :"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Goupement Forestier"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "IBAN/BIC"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Membre du conseil de gérance *"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Nbre de parts"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Nue propriété"
+msgstr "Nue propriété"
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "N° des parts *"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "O"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "PORTEUR DE PARTS SOCIALES"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Pleine Propriété"
+msgstr "Pleine Propriété"
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Propriétaire(s)"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Relevé d'Identité Bancaire ("
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "RÉPARTITON DES PARTS SOCIALES"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Type de parts"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Tél. (facultatif) :"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Usufruit"
+msgstr "Usufruit"
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "V"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "Veuillez signaler tout oubli ou erreur."
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "bservations :"
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "euillez signaler tout oubli ou erreur."
+msgstr ""
+
+msgctxt "odt:forest_group.ficheporteur:"
+msgid "à"
+msgstr "à"
+
+msgctxt "odt:forest_group.group:"
+msgid "Adresse"
+msgstr ""
+
+msgctxt "odt:forest_group.group:"
+msgid "Associés et répartition des parts sociales"
+msgstr ""
+
+msgctxt "odt:forest_group.group:"
+msgid "Code postal"
+msgstr ""
+
+msgctxt "odt:forest_group.group:"
+msgid "Groupement forestier"
+msgstr "Groupement forestier"
+
+msgctxt "odt:forest_group.group:"
+msgid "LISTE ASSOCIES"
+msgstr ""
+
+msgctxt "odt:forest_group.group:"
+msgid "NP"
+msgstr "NP"
+
+msgctxt "odt:forest_group.group:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "odt:forest_group.group:"
+msgid "PP"
+msgstr "PP"
+
+msgctxt "odt:forest_group.group:"
+msgid "US"
+msgstr "US"
+
+msgctxt "odt:forest_group.group:"
+msgid "Ville"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "("
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid ")"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid ","
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "- €"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "/"
+msgstr "/"
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "00/00/0000"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "00:00:00"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "???"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Adresse"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Code postal"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Groupement forestier"
+msgstr "Groupement forestier"
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "NP"
+msgstr "NP"
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "PP"
+msgstr "PP"
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Page"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "SYNTHÈSE DES PARTS SOCIALES POUR LE GROUPEMENT FORESTIER"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Synthèse au"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Travaux d'entretien des arbres le long des Routes Départementales / Programme prévisionnel 2014"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Travaux d'entretien des arbres le long des Routes Départementales / Programme prévisionnel au"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "US"
+msgstr "US"
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "Ville"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio:///for"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://for each=\"line in objects\""
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.groupe.party.full_name"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.member.party.addresses[0].city"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.member.party.addresses[0].street"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.member.party.addresses[0].zip"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.member.party.full_name"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.np"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.pp"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "relatorio://line.us"
+msgstr ""
+
+msgctxt "odt:forest_group.listeassocie:"
+msgid "€"
+msgstr ""
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "/"
+msgstr "/"
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "05/30/2014"
+msgstr ""
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "ASSEMBLÉE GÉNÉRALE ORDINAIRE du"
+msgstr ""
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "ASSOCIÉ et RÉPARTITION des PARTS SOCIALES"
+msgstr ""
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "D'ÉMARGEMENT"
+msgstr ""
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "Groupement forestier"
+msgstr "Groupement forestier"
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "LISTE"
+msgstr ""
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "NP"
+msgstr "NP"
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "PP"
+msgstr "PP"
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "US"
+msgstr "US"
+
+msgctxt "odt:forest_group.listeemargement:"
+msgid "Émargement :"
+msgstr ""
+
+msgctxt "odt:party.letter:"
+msgid "Best Regards,"
+msgstr "Bien cordialement,"
+
+msgctxt "odt:party.letter:"
+msgid "Best Regards,"
+msgstr "Bien cordialement,"
+
+msgctxt "odt:party.letter:"
+msgid "Date:"
+msgstr "Date :"
+
+msgctxt "odt:party.letter:"
+msgid "Date:"
+msgstr "Date :"
+
+msgctxt "odt:party.letter:"
+msgid "Dear Madams and Sirs,"
+msgstr "Chère madame, cher monsieur,"
+
+msgctxt "odt:party.letter:"
+msgid "Dear Madams and Sirs,"
+msgstr "Chère madame, cher monsieur,"
+
+msgctxt "odt:party.letter:"
+msgid "E-Mail:"
+msgstr "E-Mail :"
+
+msgctxt "odt:party.letter:"
+msgid "E-Mail:"
+msgstr "E-Mail :"
+
+msgctxt "odt:party.letter:"
+msgid "Phone:"
+msgstr "Téléphone"
+
+msgctxt "odt:party.letter:"
+msgid "Phone:"
+msgstr "Téléphone"
+
+msgctxt "odt:party.letter:"
+msgid "Subject:"
+msgstr "Sujet :"
+
+msgctxt "odt:party.letter:"
+msgid "Subject:"
+msgstr "Sujet :"
+
+msgctxt "odt:party.letter:"
+msgid "VAT Number:"
+msgstr "Numéro TVA :"
+
+msgctxt "odt:party.letter:"
+msgid "VAT Number:"
+msgstr "Numéro TVA :"
+
+msgctxt "selection:forest_group.check_share.open.start,typo:"
+msgid "Nue propriété"
+msgstr "Nue propriété"
+
+msgctxt "selection:forest_group.check_share.open.start,typo:"
+msgid "Pleine propriété"
+msgstr "Pleine propriété"
+
+msgctxt "selection:forest_group.check_share.open.start,typo:"
+msgid "Usufruit"
+msgstr "Usufruit"
+
+msgctxt "selection:forest_group.ficheporteur,typo:"
+msgid "Nue propriété"
+msgstr "Nue propriété"
+
+msgctxt "selection:forest_group.ficheporteur,typo:"
+msgid "Pleine propriété"
+msgstr "Pleine propriété"
+
+msgctxt "selection:forest_group.ficheporteur,typo:"
+msgid "Usufruit"
+msgstr "Usufruit"
+
+msgctxt "selection:forest_group.share,typo:"
+msgid "Nu propriete"
+msgstr "Nue propriété"
+
+msgctxt "selection:forest_group.share,typo:"
+msgid "Nue propriété"
+msgstr "Nue propriété"
+
+msgctxt "selection:forest_group.share,typo:"
+msgid "Pleine propriete"
+msgstr "Pleine propriété"
+
+msgctxt "selection:forest_group.share,typo:"
+msgid "Pleine propriété"
+msgstr "Pleine propriété"
+
+msgctxt "selection:forest_group.share,typo:"
+msgid "Usufruit"
+msgstr "Usufruit"
+
+msgctxt "selection:forest_group.share-forest_group.member,typo:"
+msgid "Nu propriete"
+msgstr "Nue propriété"
+
+msgctxt "selection:forest_group.share-forest_group.member,typo:"
+msgid "Pleine propriete"
+msgstr "Pleine propriété"
+
+msgctxt "selection:forest_group.share-forest_group.member,typo:"
+msgid "Usufruit"
+msgstr "Usufruit"
+
+msgctxt "selection:forest_work.travaux,state:"
+msgid "Annulé"
+msgstr "Annulé"
+
+msgctxt "selection:forest_work.travaux,state:"
+msgid "Préconisé"
+msgstr "Préconisé"
+
+msgctxt "selection:forest_work.travaux,state:"
+msgid "Réalisé"
+msgstr "Réalisé"
+
+msgctxt "selection:forest_work.travaux,state:"
+msgid "À préconiser"
+msgstr "À préconiser"
+
+msgctxt "view:cg.plot_arbre.open.start:"
+msgid "Parcelles à préconiser - Type de travaux"
+msgstr "Parcelles à préconiser - Type de travaux"
+
+msgctxt "view:company.company.config.start:"
+msgid "Create Company"
+msgstr "Créer la sociéte"
+
+msgctxt "view:company.company.config.start:"
+msgid "You can now add your company into the system."
+msgstr "Vous pouvez maintenant ajouter votre société au système"
+
+msgctxt "view:company.company:"
+msgid "Companies"
+msgstr "Sociétés"
+
+msgctxt "view:company.company:"
+msgid "Companies"
+msgstr "Sociétés"
+
+msgctxt "view:company.company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "view:company.company:"
+msgid "Company"
+msgstr "Société"
+
+msgctxt "view:company.company:"
+msgid "Reports"
+msgstr "Rapports"
+
+msgctxt "view:company.company:"
+msgid "Reports"
+msgstr "Rapports"
+
+msgctxt "view:company.employee:"
+msgid "Employee"
+msgstr "Employé"
+
+msgctxt "view:company.employee:"
+msgid "Employee"
+msgstr "Employé"
+
+msgctxt "view:company.employee:"
+msgid "Employees"
+msgstr "Employés"
+
+msgctxt "view:company.employee:"
+msgid "Employees"
+msgstr "Employés"
+
+msgctxt "view:forest.plot:"
+msgid "Général"
+msgstr "Général"
+
+msgctxt "view:forest.plot:"
+msgid "Parcelle"
+msgstr "Parcelle"
+
+msgctxt "view:forest_group.check_share.open.start:"
+msgid "Parts sociales à créer"
+msgstr "Parts sociales à créer"
+
+msgctxt "view:forest_group.check_share.result:"
+msgid "Parts sociales créées"
+msgstr "Parts sociales créées"
+
+msgctxt "view:forest_group.ficheporteur.open.start:"
+msgid "Liste des porteurs de parts par groupement forestier"
+msgstr "Liste des porteurs de parts par groupement forestier"
+
+msgctxt "view:forest_group.ficheporteur:"
+msgid "Liste des porteurs de parts par groupement forestier"
+msgstr "Liste des porteurs de parts par groupement forestier"
+
+msgctxt "view:forest_group.ficheporteur:"
+msgid "Pleine propriété"
+msgstr "Pleine propriété"
+
+msgctxt "view:forest_group.group-forest_group.conseil:"
+msgid "Conseil member"
+msgstr "Membre du conseil"
+
+msgctxt "view:forest_group.group-forest_group.conseil:"
+msgid "Conseil members"
+msgstr "Membres du conseil"
+
+msgctxt "view:forest_group.group-forest_group.gerant:"
+msgid "Gerant member"
+msgstr "Membre gérant"
+
+msgctxt "view:forest_group.group-forest_group.gerant:"
+msgid "Gerant members"
+msgstr "Membres gérant"
+
+msgctxt "view:forest_group.group:"
+msgid "Conseil de gérance"
+msgstr "Conseil de gérance"
+
+msgctxt "view:forest_group.group:"
+msgid "Group"
+msgstr "Groupement"
+
+msgctxt "view:forest_group.group:"
+msgid "Gérants"
+msgstr "Gérants"
+
+msgctxt "view:forest_group.group:"
+msgid "Shares"
+msgstr "Parts sociales"
+
+msgctxt "view:forest_group.listeassocie.open.start:"
+msgid "Liste des associés par groupement forestier"
+msgstr "Liste des porteurs de parts par groupement forestier"
+
+msgctxt "view:forest_group.listeassocie:"
+msgid "Liste des associés par groupement forestier"
+msgstr "Liste des porteurs de parts par groupement forestier"
+
+msgctxt "view:forest_group.listeassocie:"
+msgid "Nue propriété"
+msgstr "Nue propriété"
+
+msgctxt "view:forest_group.listeassocie:"
+msgid "Pleine propriété"
+msgstr "Pleine propriété"
+
+msgctxt "view:forest_group.listeassocie:"
+msgid "Usufruit"
+msgstr "Usufruit"
+
+msgctxt "view:forest_group.member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "view:forest_group.share:"
+msgid "Share"
+msgstr "Partage"
+
+msgctxt "view:forest_work.check_plot.result:"
+msgid "Parcelles à préconiser"
+msgstr "Parcelles à préconiser"
+
+msgctxt "view:forest_work.preconisation:"
+msgid "Préconisation des parcelles"
+msgstr "Préconisation des parcelles"
+
+msgctxt "view:forest_work.travaux:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "view:forest_work.travaux:"
+msgid "Cancel comment"
+msgstr "Commentaire"
+
+msgctxt "view:forest_work.travaux:"
+msgid "Préconisé"
+msgstr "Préconisé"
+
+msgctxt "view:forest_work.travaux:"
+msgid "Réalisé"
+msgstr "Réalisé"
+
+msgctxt "view:forest_work.travaux:"
+msgid "Travaux"
+msgstr "Travaux"
+
+msgctxt "view:forest_work.travaux:"
+msgid "À préconiser"
+msgstr "À préconiser"
+
+msgctxt "view:forest_work.typotravaux:"
+msgid "Typologie des travaux"
+msgstr "Typologie des travaux"
+
+msgctxt "wizard_button:company.company.config,company,add:"
+msgid "Add"
+msgstr "Ajouter"
+
+msgctxt "wizard_button:company.company.config,company,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:company.company.config,start,company:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:company.company.config,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:forest_group.check_arbre.open,result,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:forest_group.check_arbre.open,start,check:"
+msgid "Open"
+msgstr "Ouvrir"
+
+msgctxt "wizard_button:forest_group.check_arbre.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:forest_group.check_share.open,result,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:forest_group.check_share.open,start,check:"
+msgid "Open"
+msgstr "Ouvrir"
+
+msgctxt "wizard_button:forest_group.check_share.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:forest_group.ficheporteur.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:forest_group.ficheporteur.open,start,open_:"
+msgid "Open"
+msgstr "Ouvrir"
+
+msgctxt "wizard_button:forest_group.listeassocie.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:forest_group.listeassocie.open,start,open_:"
+msgid "Open"
+msgstr "Ouvrir"
+
+msgctxt "wizard_button:forest_work.check_plot.open,result,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:forest_work.check_plot.open,start,check:"
+msgid "Open"
+msgstr "Ouvrir"
+
+msgctxt "wizard_button:forest_work.check_plot.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+

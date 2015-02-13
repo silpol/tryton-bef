@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/form/notebook/page[@id=&quot;general&quot;]"
+        position="after">
+        <page string="PEFC" col="1" id="pefc">
+            <field name="pefc"/>            
+        </page>
+        <page string="GGD" col="1" id="ggd">
+            <field name="ggd"/>            
+        </page>
+    </xpath>
+</data>

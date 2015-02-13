@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form string="forest" col="2">
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="code" />
+            <field name="code" />
+            <label name="name" />
+            <field name="name" />
+            <label name="rf" />
+            <field name="rf" />
+            <label name="domanial" />
+            <field name="domanial" />       
+            <notebook colspan="6">                        
+                <page string="Map" id="map" col="2">                                                                        
+                    <field name="forest_image" colspan="1" widget="image" img_width="640" img_height="480"/>                                 
+                    <field name="forest_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+                    <button string="Edit" name="forest_edit" icon="tryton-executable" />                           
+                    <button string="Generate" name="generate" icon="tryton-executable" />
+                </page>
+            </notebook>
+        </page>
+    </notebook>
+</form>

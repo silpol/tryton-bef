@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.icon" id="insee_icon">
+            <field name="name">tryton-insee</field>
+            <field name="path">icons/tryton-insee.svg</field>
+        </record>
+
+        <menuitem name="INSEE" parent="ir.menu_administration" id="menu_insee" icon="tryton-insee"/>
+
+        <!-- INSEE -->      
+        <record model="ir.ui.view" id="portrait_insee_view_tree">
+            <field name="model">portrait.insee</field>
+            <field name="type">tree</field>
+            <field name="name">insee_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_insee_view_form">
+            <field name="model">portrait.insee</field>
+            <field name="type">form</field>
+            <field name="name">insee_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_insee_form">
+            <field name="name">INSEE</field>
+            <field name="res_model">portrait.insee</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_insee_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_insee_view_tree"/>
+            <field name="act_window" ref="act_portrait_insee_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_insee_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_insee_view_form"/>
+            <field name="act_window" ref="act_portrait_insee_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_insee_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.insee</field>
+            <field name="report_name">portrait.insee.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_insee_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.insee,-1</field>
+            <field name="action" ref="report_portrait_insee_edit"/>
+        </record> 
+        <menuitem parent="menu_insee" sequence="1" id="menu_portrait_insee_form" icon="tryton-list" action="act_portrait_insee_form"/>        
+                
+    </data>
+</tryton>

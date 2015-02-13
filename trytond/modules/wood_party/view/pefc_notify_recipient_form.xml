@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="PEFC notifications recipient" col="2">
+    <label name="sender"/>
+    <field name="sender"/>
+    <label name="recipient"/>
+    <field name="recipient"/>
+    <label name="msg_subject"/>
+    <field name="msg_subject"/>
+    <label name="msg_content"/>
+    <field name="msg_content"/>
+</form>        

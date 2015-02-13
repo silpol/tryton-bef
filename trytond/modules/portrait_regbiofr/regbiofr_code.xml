@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="portrait.coderegbiofr" id="1">
+            <field name="code">1</field>
+            <field name="name">Atlantique</field>
+            <field name="r">204</field>
+            <field name="v">236</field>
+            <field name="b">244</field>
+        </record>
+        <record model="portrait.coderegbiofr" id="2">
+            <field name="code">2</field>
+            <field name="name">Continental</field>
+            <field name="r">204</field>
+            <field name="v">234</field>
+            <field name="b">151</field>
+        </record>
+        <record model="portrait.coderegbiofr" id="3">
+            <field name="code">3</field>
+            <field name="name">Alpin</field>
+            <field name="r">249</field>
+            <field name="v">155</field>
+            <field name="b">204</field>
+        </record>
+        <record model="portrait.coderegbiofr" id="4">
+            <field name="code">4</field>
+            <field name="name">Méditerranéen</field>
+            <field name="r">253</field>
+            <field name="v">204</field>
+            <field name="b">138</field>
+        </record>       
+    </data>
+</tryton>
+
+

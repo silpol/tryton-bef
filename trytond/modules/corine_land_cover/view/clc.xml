@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="corine_land_cover.clc" id="1">
+            <field name="code">1</field>
+            <field name="name">Artificial surfaces</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">0</field>
+        </record>
+        <record model="corine_land_cover.clc" id="11">
+            <field name="code">11</field>
+            <field name="name">Urban fabric</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">0</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="corine_land_cover.clc" id="111">
+            <field name="code">111</field>
+            <field name="name">Continuous urban fabric</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">0</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="corine_land_cover.clc" id="112">
+            <field name="code">112</field>
+            <field name="name">Discontinuous urban fabric</field>
+            <field name="blue">0</field>
+            <field name="red">255</field>
+            <field name="green">0</field>
+            <field name="parent" ref="11"/>
+        </record>
+
+    </data>
+</tryton>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="GGD">
+    <field name="enabled"/>
+    <field name="departement"/>
+    <field name="typo"/>
+    <field name="ggd_no"/>
+    <field name="date"/>
+    <field name="duration"/>
+    <field name="date_fin"/>
+    <field name="validity"/>
+    <field name="surface"/>
+</tree>

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.icon" id="carthage_icon">
+            <field name="name">tryton-carthage</field>
+            <field name="path">icons/tryton-carthage.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="eau_icon">
+            <field name="name">tryton-eau</field>
+            <field name="path">icons/tryton-eau.svg</field>
+        </record>
+
+        <menuitem name="Carthage" parent="ir.menu_administration" id="menu_carthage" icon="tryton-carthage"/>    
+
+        <!-- SousSecteur -->      
+        <record model="ir.ui.view" id="carthage_soussecteur_view_tree">
+            <field name="model">carthage.soussecteur</field>
+            <field name="type">tree</field>
+            <field name="name">soussecteur_tree</field>
+        </record>
+        <record model="ir.ui.view" id="carthage_soussecteur_view_form">
+            <field name="model">carthage.soussecteur</field>
+            <field name="type">form</field>
+            <field name="name">soussecteur_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_carthage_soussecteur_form">
+            <field name="name">Carthage SousSecteur</field>
+            <field name="res_model">carthage.soussecteur</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_carthage_soussecteur_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="carthage_soussecteur_view_tree"/>
+            <field name="act_window" ref="act_carthage_soussecteur_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_carthage_soussecteur_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="carthage_soussecteur_view_form"/>
+            <field name="act_window" ref="act_carthage_soussecteur_form"/>
+        </record>
+        <record model="ir.action.report" id="report_carthage_soussecteur_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">carthage.soussecteur</field>
+            <field name="report_name">carthage.soussecteur.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_carthage_soussecteur_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">carthage.soussecteur,-1</field>
+            <field name="action" ref="report_carthage_soussecteur_edit"/>
+        </record> 
+        <menuitem parent="menu_carthage" sequence="1" id="menu_carthage_soussecteur_form" icon="tryton-carthage" action="act_carthage_soussecteur_form"/>
+
+        <!-- Cours d'eau -->      
+        <record model="ir.ui.view" id="carthage_courseau_view_tree">
+            <field name="model">carthage.courseau</field>
+            <field name="type">tree</field>
+            <field name="name">courseau_tree</field>
+        </record>
+        <record model="ir.ui.view" id="carthage_courseau_view_form">
+            <field name="model">carthage.courseau</field>
+            <field name="type">form</field>
+            <field name="name">courseau_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_carthage_courseau_form">
+            <field name="name">Carthage Cours d'eau</field>
+            <field name="res_model">carthage.courseau</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_carthage_courseau_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="carthage_courseau_view_tree"/>
+            <field name="act_window" ref="act_carthage_courseau_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_carthage_courseau_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="carthage_courseau_view_form"/>
+            <field name="act_window" ref="act_carthage_courseau_form"/>
+        </record>
+        <record model="ir.action.report" id="report_carthage_courseau_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">carthage.courseau</field>
+            <field name="report_name">carthage.courseau.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_carthage_courseau_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">carthage.courseau,-1</field>
+            <field name="action" ref="report_carthage_courseau_edit"/>
+        </record> 
+        <menuitem parent="menu_carthage" sequence="1" id="menu_carthage_courseau_form" icon="tryton-eau" action="act_carthage_courseau_form"/>
+                
+    </data>
+</tryton>

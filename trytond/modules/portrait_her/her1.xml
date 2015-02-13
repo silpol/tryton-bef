@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.icon" id="ifn_codes">
+            <field name="name">tryton-codes</field>
+            <field name="path">icons/applications-system.svg</field>
+        </record>
+
+        <menuitem parent="portrait_carthage.menu_carthage" sequence="1" id="menu_her_codes" name="Codes" icon="tryton-codes" />   
+
+        <!-- HER1 -->      
+        <record model="ir.ui.view" id="portrait_her1_view_tree">
+            <field name="model">portrait.her1</field>
+            <field name="type">tree</field>
+            <field name="name">her1_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_her1_view_form">
+            <field name="model">portrait.her1</field>
+            <field name="type">form</field>
+            <field name="name">her1_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_her1_form">
+            <field name="name">HER1</field>
+            <field name="res_model">portrait.her1</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_her1_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_her1_view_tree"/>
+            <field name="act_window" ref="act_portrait_her1_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_her1_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_her1_view_form"/>
+            <field name="act_window" ref="act_portrait_her1_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_her1_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.her1</field>
+            <field name="report_name">portrait.her1.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_her1_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.her1,-1</field>
+            <field name="action" ref="report_portrait_her1_edit"/>
+        </record> 
+        <menuitem parent="portrait_carthage.menu_carthage" sequence="1" id="menu_portrait_her1_form" icon="tryton-list" action="act_portrait_her1_form"/>
+
+        <!-- Code HER1 -->      
+        <record model="ir.ui.view" id="portrait_codeher1_view_tree">
+            <field name="model">portrait.codeher1</field>
+            <field name="type">tree</field>
+            <field name="name">codeher1_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_codeher1_view_form">
+            <field name="model">portrait.codeher1</field>
+            <field name="type">form</field>
+            <field name="name">codeher1_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_codeher1_form">
+            <field name="name">Code HER1</field>
+            <field name="res_model">portrait.codeher1</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codeher1_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_codeher1_view_tree"/>
+            <field name="act_window" ref="act_portrait_codeher1_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codeher1_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_codeher1_view_form"/>
+            <field name="act_window" ref="act_portrait_codeher1_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_codeher1_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.codeher1</field>
+            <field name="report_name">portrait.codeher1.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_codeher1_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.codeher1,-1</field>
+            <field name="action" ref="report_portrait_codeher1_edit"/>
+        </record> 
+        <menuitem parent="menu_her_codes" sequence="1" id="menu_portrait_codeher1_form" icon="tryton-list" action="act_portrait_codeher1_form"/>
+                
+    </data>
+</tryton>

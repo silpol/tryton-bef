@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <!-- icône -->
+        <record model="ir.ui.icon" id="portrait_territoire">
+            <field name="name">tryton-oten</field>
+            <field name="path">icons/tryton-oten.svg</field>
+        </record>
+
+        <menuitem parent="portrait_commune.menu_portrait_admin" name="Portrait Territoire" id="menu_portrait_admin_territoire" icon="tryton-oten"/>
+        
+        <!-- AFR -->
+        <record model="ir.ui.view" id="afr_view_tree">
+            <field name="model">portrait.afr</field>
+            <field name="type">tree</field>
+            <field name="name">afr_tree</field>
+        </record>
+        <record model="ir.ui.view" id="afr_view_form">
+            <field name="model">portrait.afr</field>
+            <field name="type">form</field>
+            <field name="name">afr_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_afr_form">
+            <field name="name">Communes éligibles au zonage d'aide à finalité régionale (AFR)</field>
+            <field name="res_model">portrait.afr</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_afr_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="afr_view_tree"/>
+            <field name="act_window" ref="act_afr_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_afr_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="afr_view_form"/>
+            <field name="act_window" ref="act_afr_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_territoire" id="menu_afr_form" icon="tryton-list" action="act_afr_form"/>        
+
+    </data>
+</tryton>

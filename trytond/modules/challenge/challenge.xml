@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<!--
+     This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Pascal Obstetar
+-->
+<tryton>
+    <data>
+    <menuitem parent="forest_group.menu_forest_group_group" name="Configuration" id="menu_forest_group_configuration" sequence="0" icon="tryton-preferences"/>
+    <menuitem parent="menu_forest_group_configuration" sequence="1" name="Revenus Forestiers" id="menu_challenge_configuration" icon="tryton-currency"/>
+    <menuitem parent="menu_forest_group_configuration" sequence="2" name="DEFI" id="menu_challenge_defi" icon="tryton-currency"/>
+
+    <!-- Code -->
+    <record model="ir.ui.view" id="challenge_code_view_tree">
+        <field name="model">challenge.code</field>
+        <field name="type">tree</field>
+        <field name="name">code_tree</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_code_view_form">
+        <field name="model">challenge.code</field>
+        <field name="type">form</field>
+        <field name="name">code_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_challenge_code_form">
+        <field name="name">Code</field>
+        <field name="res_model">challenge.code</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_code_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_code_view_tree"/>
+        <field name="act_window" ref="act_challenge_code_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_code_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_code_view_form"/>
+        <field name="act_window" ref="act_challenge_code_form"/>
+    </record>        
+
+    <!-- Code BFA, PV, RF-->
+    <record model="ir.action.act_window" id="window_code_form">
+        <field name="name">Code (Base forfaitaire agricole, Plus-values, Revenus fonciers)</field>
+        <field name="res_model">challenge.code</field>
+        <field name="domain">['OR', [('typo', '=', 'rf')], [('typo', '=', 'bf')], [('typo', '=', 'pv')]]</field>
+        <field name="context">{'code': 'BFA'}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="view_code_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_code_view_tree"/>
+        <field name="act_window" ref="window_code_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="view_code_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_code_view_form"/>
+        <field name="act_window" ref="window_code_form"/>
+    </record>    
+    <menuitem parent="menu_challenge_configuration" id="menu_challenge_code_form" icon="tryton-list" action="window_code_form"/>
+
+    <!-- Code CI-->
+    <record model="ir.action.act_window" id="window_code_ci_form">
+        <field name="name">Crédit d'impôt (DEFI Travaux)</field>
+        <field name="res_model">challenge.code</field>
+        <field name="domain">[('typo', '=', 'ci')]</field>
+        <field name="context">{'code': 'CI'}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="view_code_ci_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_code_view_tree"/>
+        <field name="act_window" ref="window_code_ci_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="view_code_ci_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_code_view_form"/>
+        <field name="act_window" ref="window_code_ci_form"/>
+    </record>    
+    <menuitem parent="menu_challenge_defi" id="menu_challenge_code_ci_form" icon="tryton-list" action="window_code_ci_form"/>
+
+    <!-- Code RI-->
+    <record model="ir.action.act_window" id="window_code_ri_form">
+        <field name="name">Réduction d'impôt (DEFI Assurance)</field>
+        <field name="res_model">challenge.code</field>
+        <field name="domain">[('typo', '=', 'ri')]</field>
+        <field name="context">{'code': 'RI'}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="view_code_ri_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_code_view_tree"/>
+        <field name="act_window" ref="window_code_ri_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="view_code_ri_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_code_view_form"/>
+        <field name="act_window" ref="window_code_ri_form"/>
+    </record>    
+    <menuitem parent="menu_challenge_defi" id="menu_challenge_code_ri_form" icon="tryton-list" action="window_code_ri_form"/>
+
+    <!-- Group -->
+    <record model="ir.ui.view" id="challenge_group_view_form">
+        <field name="model">forest_group.group</field>
+        <field name="inherit" ref="forest_group.forest_group_view_form" />       
+        <field name="name">challenge_group_form</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_group_view_tree">
+        <field name="model">forest_group.group</field>
+        <field name="type">tree</field>
+        <field name="name">challenge_group_tree</field>
+    </record>
+    <record model="ir.action.act_window" id="act_challenge_group_form">
+        <field name="name">Group</field>
+        <field name="res_model">forest_group.group</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_group_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_group_view_tree"/>
+        <field name="act_window" ref="act_challenge_group_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_group_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_group_view_form"/>
+        <field name="act_window" ref="act_challenge_group_form"/>
+    </record>
+
+    <!-- Base Forfaitaire agricole -->
+    <record model="ir.ui.view" id="challenge_bfa_view_tree">
+        <field name="model">challenge.bfa</field>
+        <field name="type">tree</field>
+        <field name="name">bfa_tree</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_bfa_view_form">
+        <field name="model">challenge.bfa</field>
+        <field name="type">form</field>
+        <field name="name">bfa_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_challenge_bfa_form">
+        <field name="name">Base Forfaitaire agricole</field>
+        <field name="res_model">challenge.bfa</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_bfa_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_bfa_view_tree"/>
+        <field name="act_window" ref="act_challenge_bfa_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_bfa_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_bfa_view_form"/>
+        <field name="act_window" ref="act_challenge_bfa_form"/>
+    </record>
+
+    <!-- Revenus fonciers -->
+    <record model="ir.ui.view" id="challenge_rf_view_tree">
+        <field name="model">challenge.rf</field>
+        <field name="type">tree</field>
+        <field name="name">rf_tree</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_rf_view_form">
+        <field name="model">challenge.rf</field>
+        <field name="type">form</field>
+        <field name="name">rf_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_challenge_rf_form">
+        <field name="name">Revenus fonciers</field>
+        <field name="res_model">challenge.rf</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_rf_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_rf_view_tree"/>
+        <field name="act_window" ref="act_challenge_rf_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_rf_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_rf_view_form"/>
+        <field name="act_window" ref="act_challenge_rf_form"/>
+    </record>
+
+    <!-- Plus-values -->
+    <record model="ir.ui.view" id="challenge_pv_view_tree">
+        <field name="model">challenge.pv</field>
+        <field name="type">tree</field>
+        <field name="name">pv_tree</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_pv_view_form">
+        <field name="model">challenge.pv</field>
+        <field name="type">form</field>
+        <field name="name">pv_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_challenge_pv_form">
+        <field name="name">Plus-values</field>
+        <field name="res_model">challenge.pv</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_pv_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="challenge_pv_view_tree"/>
+        <field name="act_window" ref="act_challenge_pv_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_challenge_pv_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="challenge_pv_view_form"/>
+        <field name="act_window" ref="act_challenge_pv_form"/>
+    </record>
+
+    <!-- Revenus forestiers -->
+    <record model="ir.ui.view" id="revenuforestier_view_tree">
+        <field name="model">challenge.revenuforestier</field>
+        <field name="type">tree</field>
+        <field name="name">revenuforestier_tree</field>
+    </record>
+    <record model="ir.ui.view" id="revenuforestier_view_graph">
+        <field name="model">challenge.revenuforestier</field>
+        <field name="type">graph</field>
+        <field name="name">revenuforestier_graph</field>
+    </record> 
+    <record model="ir.action.act_window" id="act_revenuforestier_form">
+        <field name="name">Revenus forestiers par groupement forestier</field>
+        <field name="res_model">challenge.revenuforestier</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_revenuforestier_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="revenuforestier_view_tree"/>
+        <field name="act_window" ref="act_revenuforestier_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_revenuforestier_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="revenuforestier_view_graph"/>
+        <field name="act_window" ref="act_revenuforestier_form"/>
+    </record>
+    <record model="ir.ui.view" id="revenuforestier_open_start_view_form">
+        <field name="model">challenge.revenuforestier.open.start</field>
+        <field name="type">form</field>
+        <field name="name">revenuforestier_form</field>
+    </record>
+    <record model="ir.action.wizard" id="act_revenuforestier_open">
+        <field name="name">Revenus forestiers par groupement forestier</field>
+        <field name="wiz_name">challenge.revenuforestier.open</field>
+    </record>
+    <record model="ir.action.report" id="synthese_revenuforestier">
+        <field name="name">Revenus forestiers</field>
+        <field name="model">challenge.revenuforestier</field>
+        <field name="report_name">challenge.revenuforestier</field>
+        <field name="report">challenge/revenuforestier.ods</field>            
+    </record>
+    <record model="ir.action.keyword" id="key_synthese_revenuforestier">
+        <field name="keyword">form_print</field>
+        <field name="model">challenge.revenuforestier,-1</field>
+        <field name="action" ref="synthese_revenuforestier"/>
+    </record>        
+    <menuitem parent="forest_group.menu_forest_group_rapport" action="act_revenuforestier_open" icon="tryton-graph" id="menu_revenuforestier"/>
+
+    <!-- Purchase -->
+    <record model="ir.ui.view" id="challenge_purchase_view_form">
+        <field name="model">purchase.purchase</field>
+        <field name="inherit" ref="purchase.purchase_view_form" />       
+        <field name="name">purchase_form</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_purchase_view_tree">
+        <field name="model">purchase.purchase</field>
+        <field name="inherit" ref="purchase.purchase_view_tree" />       
+        <field name="name">purchase_tree</field>
+    </record>
+
+    <!-- Invoice -->
+    <record model="ir.ui.view" id="challenge_invoice_view_form">
+        <field name="model">account.invoice</field>
+        <field name="inherit" ref="account_invoice.invoice_view_form" />       
+        <field name="name">invoice_form</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_invoice_view_tree">
+        <field name="model">account.invoice</field>
+        <field name="inherit" ref="account_invoice.invoice_view_tree" />       
+        <field name="name">invoice_tree</field>
+    </record>
+
+    <!-- PEFC -->
+    <record model="ir.ui.view" id="challenge_pefc_view_form">
+        <field name="model">pefc.pefc</field>
+        <field name="inherit" ref="wood_party.pefc_view_form" />       
+        <field name="name">pefc_form</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_pefc_view_tree">
+        <field name="model">pefc.pefc</field>
+        <field name="inherit" ref="wood_party.pefc_view_tree" />       
+        <field name="name">pefc_tree</field>
+    </record>
+
+    <!-- GGD -->
+    <record model="ir.ui.view" id="challenge_ggd_view_form">
+        <field name="model">ggd.ggd</field>
+        <field name="inherit" ref="wood_party.ggd_view_form" />       
+        <field name="name">ggd_form</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_ggd_view_tree">
+        <field name="model">ggd.ggd</field>
+        <field name="inherit" ref="wood_party.ggd_view_tree" />       
+        <field name="name">ggd_tree</field>
+    </record>
+
+    <!-- Forest -->
+    <record model="ir.ui.view" id="challenge_forest_view_form">
+        <field name="model">forest.forest</field>
+        <field name="inherit" ref="forest.forest_forest_view_form" />       
+        <field name="name">forest_form</field>
+    </record>
+    <record model="ir.ui.view" id="challenge_forest_view_tree">
+        <field name="model">forest.forest</field>
+        <field name="inherit" ref="forest.forest_forest_view_tree" />       
+        <field name="name">forest_tree</field>
+    </record>
+
+    <!-- DEFI Travaux -->
+    <record model="ir.ui.view" id="defitravaux_view_tree">
+        <field name="model">challenge.defitravaux</field>
+        <field name="type">tree</field>
+        <field name="name">defitravaux_tree</field>
+    </record>
+    <record model="ir.ui.view" id="defitravaux_view_graph">
+        <field name="model">challenge.defitravaux</field>
+        <field name="type">graph</field>
+        <field name="name">defitravaux_graph</field>
+    </record> 
+    <record model="ir.action.act_window" id="act_defitravaux_form">
+        <field name="name">DEFI Travaux par groupement forestier</field>
+        <field name="res_model">challenge.defitravaux</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_defitravaux_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="defitravaux_view_tree"/>
+        <field name="act_window" ref="act_defitravaux_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_defitravaux_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="defitravaux_view_graph"/>
+        <field name="act_window" ref="act_defitravaux_form"/>
+    </record>
+    <record model="ir.ui.view" id="defitravaux_open_start_view_form">
+        <field name="model">challenge.defitravaux.open.start</field>
+        <field name="type">form</field>
+        <field name="name">defitravaux_form</field>
+    </record>
+    <record model="ir.action.wizard" id="act_defitravaux_open">
+        <field name="name">DEFI Travaux par groupement forestier</field>
+        <field name="wiz_name">challenge.defitravaux.open</field>
+    </record>
+    <record model="ir.action.report" id="synthese_defitravaux">
+        <field name="name">DEFI Travaux</field>
+        <field name="model">challenge.defitravaux</field>
+        <field name="report_name">challenge.defitravaux</field>
+        <field name="report">challenge/defitravaux.odt</field>            
+    </record>
+    <record model="ir.action.keyword" id="key_synthese_defitravaux">
+        <field name="keyword">form_print</field>
+        <field name="model">challenge.defitravaux,-1</field>
+        <field name="action" ref="synthese_defitravaux"/>
+    </record>
+    <menuitem parent="forest_group.menu_forest_group_rapport" action="act_defitravaux_open" icon="tryton-graph" id="menu_defitravaux"/>
+
+    <!-- DEFI Assurance -->
+    <record model="ir.ui.view" id="defiassurance_view_tree">
+        <field name="model">challenge.defiassurance</field>
+        <field name="type">tree</field>
+        <field name="name">defiassurance_tree</field>
+    </record>
+    <record model="ir.ui.view" id="defiassurance_view_graph">
+        <field name="model">challenge.defiassurance</field>
+        <field name="type">graph</field>
+        <field name="name">defiassurance_graph</field>
+    </record> 
+    <record model="ir.action.act_window" id="act_defiassurance_form">
+        <field name="name">DEFI Assurance par groupement forestier</field>
+        <field name="res_model">challenge.defiassurance</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_defiassurance_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="defiassurance_view_tree"/>
+        <field name="act_window" ref="act_defiassurance_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_defiassurance_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="defiassurance_view_graph"/>
+        <field name="act_window" ref="act_defiassurance_form"/>
+    </record>
+    <record model="ir.ui.view" id="defiassurance_open_start_view_form">
+        <field name="model">challenge.defiassurance.open.start</field>
+        <field name="type">form</field>
+        <field name="name">defiassurance_form</field>
+    </record>
+    <record model="ir.action.wizard" id="act_defiassurance_open">
+        <field name="name">DEFI Assurance par groupement forestier</field>
+        <field name="wiz_name">challenge.defiassurance.open</field>
+    </record>
+    <record model="ir.action.report" id="synthese_defiassurance">
+        <field name="name">DEFI Assurance</field>
+        <field name="model">challenge.defiassurance</field>
+        <field name="report_name">challenge.defiassurance</field>
+        <field name="report">challenge/defiassurance.odt</field>            
+    </record>
+    <record model="ir.action.keyword" id="key_synthese_defiassurance">
+        <field name="keyword">form_print</field>
+        <field name="model">challenge.defiassurance,-1</field>
+        <field name="action" ref="synthese_defiassurance"/>
+    </record>
+    <menuitem parent="forest_group.menu_forest_group_rapport" action="act_defiassurance_open" icon="tryton-graph" id="menu_defiassurance"/>
+    </data>
+</tryton>

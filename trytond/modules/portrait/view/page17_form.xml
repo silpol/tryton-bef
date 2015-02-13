@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<form string="La mosaïque des milieux sur votre commune" col="4">
+    <label name="portrait"/>
+    <field name="portrait" colspan="3"/>
+    <notebook>
+        <page string="ZONES" id="zone" col="4">
+            <label name="artificial"/>
+            <field name="artificial"/>
+            <label name="agricole"/>
+            <field name="agricole"/>
+            <label name="foret"/>
+            <field name="foret"/>
+            <label name="marais"/>
+            <field name="marais"/>
+            <label name="mer"/>
+            <field name="mer"/>
+            <field name="clc" colspan="4"/>
+            <field name="geom"/>
+        </page>
+        <page string="GÉNÉRAL" id="general" col="1">            
+            <field name="page17_all_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate17_all"  name="generate17_all" icon="tryton-executable" />            
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page17_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate17_empty"  name="generate17_empty" icon="tryton-executable" />            
+        </page>
+    </notebook>
+</form>

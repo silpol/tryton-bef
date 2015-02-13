@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Table 1">
+    <field name="cd_dep"/>
+    <field name="cd_insee"/>
+    <field name="nb_cd_ref_protegees"/>
+    <field name="nb_esp_menacees"/>
+    <field name="nb_i"/>
+    <field name="nb_e_s"/>
+    <field name="nb_j"/>
+    <field name="permalien_inseec"/>
+</tree>

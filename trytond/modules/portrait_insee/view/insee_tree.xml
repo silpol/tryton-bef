@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="GRECO">
+    <field name="code" />
+    <field name="name" />
+    <field name="idk" />
+    <field name="individu" />
+    <field name="version" />
+</tree>

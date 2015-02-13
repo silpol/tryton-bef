@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Travaux">
+    <field name="plot"/>
+    <field name="typetravaux"/>
+    <field name="state">
+        <prefix icon='icon'/>
+    </field>
+    <field name="description"/>
+    <field name="start_date" />
+    <field name="end_date" />
+</tree>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Hunting">
+    <field name="name" />
+    <field name="code" />
+    <field name="plots" />
+    <field name="bailleur" />
+    <field name="locataire" />
+    <field name="cofermier" />
+    <field name="date" />
+    <field name="observation" />
+    <field name="active" />
+    <field name="totsurfloc" />
+    <field name="totsurfnotloc" />
+</tree>

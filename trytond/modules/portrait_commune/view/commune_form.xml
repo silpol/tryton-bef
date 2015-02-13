@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="Commune">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="departement"/>
+    <field name="departement"/>
+    <label name="insee"/>
+    <field name="insee"/>
+    <label name="postal"/>
+    <field name="postal"/>
+    <label name="zmax"/>
+    <field name="zmax"/>
+    <label name="zmin"/>
+    <field name="zmin"/>
+    <newline/> 
+    <field name="population" colspan="4"/>
+    <newline/>    
+    <field name="commune_map" widget="image" img_width="640" img_height="480" colspan="4"/>
+    <newline/>    
+    <button string="Generate"  name="generate" icon="tryton-executable" colspan="4"/>
+</form>

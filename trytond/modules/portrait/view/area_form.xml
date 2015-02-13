@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Area" col="1">
+    <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="name"  />
+            <field name="name" />
+            <newline/>
+            <field name="image"  widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" widget="image" img_width="640" img_height="480"/>
+            <newline/>
+            <button string="Edit" name="area_edit" icon="tryton-executable" />
+            <button string="Generate"  name="generate" icon="tryton-executable" />
+        </page>                        
+    </notebook>
+</form>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Arbre" col="2">
+    <notebook colspan="6">        
+        <page string="Évolutions" id="evol">                                        
+            <field name="evolution" mode="tree,form" view_ids="cg.cg_evol_arbre_view_tree_gestion_courante,cg.cg_evol_arbre_view_form"/>
+        </page>
+        <page string="Map" id="map" col="1">                                   
+            <field name="arbre_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+        <page string="Photo" id="photo">                                                                                  
+            <field name="photo" colspan="6" widget="image" img_width="640" img_height="480"/>                                    
+        </page>
+    </notebook>
+</form>

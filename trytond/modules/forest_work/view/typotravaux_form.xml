@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Typologie des travaux" col="2">
+    <label name="analyticaccount"/>
+    <field name="analyticaccount"/>
+    <label name="product"/>
+    <field name="product"/>                                                                        
+</form>

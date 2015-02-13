@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Table C">
+    <field name="cd_insee"/>
+    <field name="sitecode"/>
+    <field name="site_name"/>
+</tree>

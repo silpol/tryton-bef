@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Communes bénéficiant du Portrait" col="2">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="portrait"/>
+    <field name="portrait"/>
+    <newline/>
+    <field name="page6_map" widget="image" img_width="640" img_height="480" colspan="2"/>
+    <newline/>
+    <button string="Generate"  name="generate" icon="tryton-executable" colspan="2"/>
+</form>

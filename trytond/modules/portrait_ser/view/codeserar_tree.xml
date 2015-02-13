@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="Code SERAR">
+    <field name="code" />
+    <field name="name" />
+    <field name="r" />
+    <field name="v" />
+    <field name="b" />
+</tree>

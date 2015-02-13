@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Parcelles à préconiser - Type de travaux">
+    <label name="party"/>
+    <field name="party"/>
+    <label name="address"/>
+    <field name="address"/>                 
+    <label name="typetravaux"/>
+    <field name="typetravaux"/>
+    <label name="description"/>
+    <field name="description"/> 
+</form>

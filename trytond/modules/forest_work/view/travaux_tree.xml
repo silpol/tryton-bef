@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<tree string="Travaux">
+    <field name="typetravaux"/>
+    <field name="foret"/>
+    <field name="plot"/>
+    <field name="state">
+        <prefix icon='icon'/>
+    </field>
+    <field name="description"/>
+    <field name="start_date" />
+    <field name="end_date" />    
+    <button name="annuler" string="Annuler"/>
+    <button name="apreconiser" string="À préconiser"/>
+    <button name="preconise" string="Préconisé"/>
+    <button name="realise" string="Réalisé"/>
+    <button name="afacturer" string="À facturer"/>
+    <button name="facture" string="Facturé"/>
+</tree>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Base Forfaitaire agricole">
+    <label name="date"/>
+    <field name="date"/>
+    <label name="name"/>
+    <field name="name" widget="selection"/>
+    <label name="commune"/>
+    <field name="commune"/>
+    <label name="montant"/>
+    <field name="montant"/>                   
+</form>

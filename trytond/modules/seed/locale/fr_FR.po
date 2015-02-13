@@ -1,0 +1,908 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: fr_FR\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "error:seed.typo_garden:"
+msgid "Type de jardins code must be unique by parent!"
+msgstr "Le code type de jardin doit être unique par parent !"
+
+msgctxt "error:seed.typo_garden:"
+msgid "You can not use \" / \" in code field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans un code de champ !"
+
+msgctxt "field:seed.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:seed.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:seed.code,name:"
+msgid "Short name of code"
+msgstr "Nom court du code"
+
+msgctxt "field:seed.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.garden,acces:"
+msgid "Acces"
+msgstr "Accès"
+
+msgctxt "field:seed.garden,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:seed.garden,adherent:"
+msgid "Adherent"
+msgstr "Adhérent"
+
+msgctxt "field:seed.garden,beneficiaire:"
+msgid "Beneficaire"
+msgstr "Bénéficiaire"
+
+msgctxt "field:seed.garden,closetime:"
+msgid "Close"
+msgstr "Fermeture"
+
+msgctxt "field:seed.garden,contact:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "field:seed.garden,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.garden,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.garden,datecrea:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:seed.garden,equipement:"
+msgid "Equipements"
+msgstr "Équipement"
+
+msgctxt "field:seed.garden,garden_image:"
+msgid "Image map"
+msgstr "Carte précise du jardin"
+
+msgctxt "field:seed.garden,garden_situation:"
+msgid "Situation map"
+msgstr "Carte de situation du jardin"
+
+msgctxt "field:seed.garden,gardenproduction:"
+msgid "Production"
+msgstr "Production"
+
+msgctxt "field:seed.garden,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:seed.garden,gestion:"
+msgid "Gestion"
+msgstr "Gestion"
+
+msgctxt "field:seed.garden,horaire:"
+msgid "Horaires"
+msgstr "Horaires"
+
+msgctxt "field:seed.garden,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.garden,info:"
+msgid "Informations"
+msgstr "Informations"
+
+msgctxt "field:seed.garden,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.garden,opentime:"
+msgid "Open"
+msgstr "Ouverture"
+
+msgctxt "field:seed.garden,parcelles:"
+msgid "Plots"
+msgstr "Parcelles"
+
+msgctxt "field:seed.garden,participant:"
+msgid "Participant"
+msgstr "Participant"
+
+msgctxt "field:seed.garden,presentation:"
+msgid "Presentation"
+msgstr "Présentation"
+
+msgctxt "field:seed.garden,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.garden,surfplot:"
+msgid "Garden Surface"
+msgstr "Surface du jardin"
+
+msgctxt "field:seed.garden,typo:"
+msgid "Typology"
+msgstr "Typologie"
+
+msgctxt "field:seed.garden,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.garden,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.garden-party.adherent,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.garden-party.adherent,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.garden-party.adherent,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "field:seed.garden-party.adherent,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.garden-party.adherent,party:"
+msgid "Adherent"
+msgstr "Adhérent"
+
+msgctxt "field:seed.garden-party.adherent,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.garden-party.adherent,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.garden-party.adherent,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.garden-party.beneficiaire,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.garden-party.beneficiaire,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.garden-party.beneficiaire,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "field:seed.garden-party.beneficiaire,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.garden-party.beneficiaire,party:"
+msgid "Beneficiaire"
+msgstr "Bénéficiaire"
+
+msgctxt "field:seed.garden-party.beneficiaire,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.garden-party.beneficiaire,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.garden-party.beneficiaire,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.garden-party.participant,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.garden-party.participant,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.garden-party.participant,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "field:seed.garden-party.participant,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.garden-party.participant,party:"
+msgid "Participant"
+msgstr "Participant"
+
+msgctxt "field:seed.garden-party.participant,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.garden-party.participant,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.garden-party.participant,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.garden-seed.code,code:"
+msgid "Equipement"
+msgstr "Équipement"
+
+msgctxt "field:seed.garden-seed.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.garden-seed.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.garden-seed.code,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "field:seed.garden-seed.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.garden-seed.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.garden-seed.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.garden-seed.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,liste:"
+msgid "Liste personnelle"
+msgstr "Liste personnelle"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,plot:"
+msgid "Plot"
+msgstr "Parcelle"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,poids:"
+msgid "Poids"
+msgstr "Poids"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.garden-taxinomie.taxinomie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.geo_parcelle,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.geo_parcelle,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.geo_parcelle,details:"
+msgid "Details plot"
+msgstr "Détails de la parcelle"
+
+msgctxt "field:seed.geo_parcelle,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "field:seed.geo_parcelle,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:seed.geo_parcelle,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.geo_parcelle,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:seed.geo_parcelle,plot_image:"
+msgid "Image"
+msgstr "Carte de la parcelle"
+
+msgctxt "field:seed.geo_parcelle,plot_map:"
+msgid "Image"
+msgstr "Carte de situation de la parcelle"
+
+msgctxt "field:seed.geo_parcelle,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.geo_parcelle,surfpar:"
+msgid "Parcelle Surface"
+msgstr "Surface de la parcelle"
+
+msgctxt "field:seed.geo_parcelle,tex:"
+msgid "Short name of parcelle"
+msgstr "Nom de la parcelle"
+
+msgctxt "field:seed.geo_parcelle,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.geo_parcelle,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:seed.typo_garden,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:seed.typo_garden,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:seed.typo_garden,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:seed.typo_garden,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:seed.typo_garden,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:seed.typo_garden,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:seed.typo_garden,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:seed.typo_garden,parent:"
+msgid "Parent"
+msgstr "Parent"
+
+msgctxt "field:seed.typo_garden,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:seed.typo_garden,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:seed.typo_garden,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:taxinomie.taxinomie,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:taxinomie.taxinomie,commun:"
+msgid "Nom commun"
+msgstr "Nom commun"
+
+msgctxt "field:taxinomie.taxinomie,typo:"
+msgid "Production"
+msgstr "Production"
+
+msgctxt "field:taxinomie.taxinomie,users_id:"
+msgid "Espèce limitée aux utilisateurs connectés"
+msgstr "Espèce limitée aux utilisateurs connectés"
+
+msgctxt "field:taxinomie.taxinomie-res.user,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:taxinomie.taxinomie-res.user,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:taxinomie.taxinomie-res.user,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:taxinomie.taxinomie-res.user,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:taxinomie.taxinomie-res.user,taxinomie:"
+msgid "taxon"
+msgstr "taxon"
+
+msgctxt "field:taxinomie.taxinomie-res.user,user:"
+msgid "user"
+msgstr "utilisateur"
+
+msgctxt "field:taxinomie.taxinomie-res.user,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:taxinomie.taxinomie-res.user,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:seed.garden,acces:"
+msgid "Garden acces"
+msgstr "Accès au jardin"
+
+msgctxt "help:seed.garden,adherent:"
+msgid "Garden adherent"
+msgstr "Adhérent du jardin"
+
+msgctxt "help:seed.garden,beneficiaire:"
+msgid "Garden beneficaire"
+msgstr "Bénéficiaire du jardin"
+
+msgctxt "help:seed.garden,closetime:"
+msgid "Close time"
+msgstr "Horaire de fermeture"
+
+msgctxt "help:seed.garden,contact:"
+msgid "Garden contact"
+msgstr "Contact du jardin"
+
+msgctxt "help:seed.garden,datecrea:"
+msgid "Garden create date"
+msgstr "Date de création du jardin"
+
+msgctxt "help:seed.garden,equipement:"
+msgid "Garden equipement"
+msgstr "Équipement du jardin"
+
+msgctxt "help:seed.garden,garden_image:"
+msgid "Image map"
+msgstr "Carte du jardin"
+
+msgctxt "help:seed.garden,garden_situation:"
+msgid "Situation map"
+msgstr "Carte de situation du jardin"
+
+msgctxt "help:seed.garden,gardenproduction:"
+msgid "Production garden"
+msgstr "Production du jardin"
+
+msgctxt "help:seed.garden,geom:"
+msgid "Geometry polygon (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie polygone (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:seed.garden,gestion:"
+msgid "Garden gestion"
+msgstr "Gestion du jardin"
+
+msgctxt "help:seed.garden,horaire:"
+msgid "Horaires informations"
+msgstr "Informations horaires"
+
+msgctxt "help:seed.garden,info:"
+msgid "Praticals informations"
+msgstr "Informations pratiques"
+
+msgctxt "help:seed.garden,name:"
+msgid "Garden name"
+msgstr "Nom du jardin"
+
+msgctxt "help:seed.garden,opentime:"
+msgid "Open time"
+msgstr "Horaire d'ouverture"
+
+msgctxt "help:seed.garden,parcelles:"
+msgid "Garden plots"
+msgstr "Parcelle du jardin"
+
+msgctxt "help:seed.garden,participant:"
+msgid "Garden participant"
+msgstr "Participant du jardin"
+
+msgctxt "help:seed.garden,presentation:"
+msgid "Garden presentation"
+msgstr "Présentation du jardin"
+
+msgctxt "help:seed.garden,surfplot:"
+msgid "Surface garden (m2)"
+msgstr "Surface du jardin (m2)"
+
+msgctxt "help:seed.garden,typo:"
+msgid "Garden typology"
+msgstr "Topologie du jardin"
+
+msgctxt "help:seed.garden-taxinomie.taxinomie,garden:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "help:seed.garden-taxinomie.taxinomie,liste:"
+msgid "liste restreinte à l'utlisateur connectée"
+msgstr "Liste restreinte à l'utilisateur connectée"
+
+msgctxt "help:seed.garden-taxinomie.taxinomie,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:seed.garden-taxinomie.taxinomie,plot:"
+msgid "Plot"
+msgstr "Parcelle"
+
+msgctxt "help:seed.garden-taxinomie.taxinomie,poids:"
+msgid "Production poids (kg)"
+msgstr "Production poids (kg)"
+
+msgctxt "help:seed.garden-taxinomie.taxinomie,taxinomie:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "help:seed.geo_parcelle,details:"
+msgid "Garden plot details"
+msgstr "Détails de la parcelle"
+
+msgctxt "help:seed.geo_parcelle,garden:"
+msgid "Garden of plot"
+msgstr "Jardin de la parcelle"
+
+msgctxt "help:seed.geo_parcelle,geom:"
+msgid "Geometry polygon (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie polygone (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:seed.geo_parcelle,surfpar:"
+msgid "Surface parcelle (m2)"
+msgstr "Surface de la parcelle (m2)"
+
+msgctxt "help:seed.typo_garden,code:"
+msgid "Code numbers"
+msgstr "Numéro"
+
+msgctxt "help:taxinomie.taxinomie,commun:"
+msgid "Nom commun"
+msgstr "Nom commun"
+
+msgctxt "help:taxinomie.taxinomie,typo:"
+msgid "Type production"
+msgstr "Type de production"
+
+msgctxt "help:taxinomie.taxinomie,users_id:"
+msgid ""
+"Espèce faisant partie de la liste restreinte pour l'utilisateur connecté"
+msgstr ""
+"Espèce faisant partie de la liste restreinte pour l'utilisateur connecté"
+
+msgctxt "model:ir.action,name:act_seed_code_form"
+msgid "Code garden"
+msgstr "Code du jardin"
+
+msgctxt "model:ir.action,name:act_seed_garden_form"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:ir.action,name:act_seed_garden_production_form"
+msgid "Garden production"
+msgstr "Production du jardin"
+
+msgctxt "model:ir.action,name:act_seed_geo_parcelle_form"
+msgid "Parcelle garden"
+msgstr "Parcelle du jardin"
+
+msgctxt "model:ir.action,name:act_seed_taxinomie_form"
+msgid "Taxinomie"
+msgstr "Taxinomie"
+
+msgctxt "model:ir.action,name:act_typo_garden_list"
+msgid "Typo garden"
+msgstr "Typologie de jardin"
+
+msgctxt "model:ir.action,name:act_typo_garden_tree"
+msgid "Typo garden"
+msgstr "Typologie de jardin"
+
+msgctxt "model:ir.action,name:report_garden"
+msgid "Fiche jardin"
+msgstr "Fiche jardin"
+
+msgctxt "model:ir.action,name:report_garden_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.action,name:report_geo_parcelle_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_seed"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_seed_code_form"
+msgid "Code garden"
+msgstr "Code du jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_seed_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_seed_garden_form"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_seed_garden_production_form"
+msgid "Garden production"
+msgstr "Production du jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_seed_geo_parcelle_form"
+msgid "Parcelle garden"
+msgstr "Parcelle du jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_garden_list"
+msgid "Typo garden"
+msgstr "Typologie du jardin"
+
+msgctxt "model:ir.ui.menu,name:menu_typo_garden_tree"
+msgid "Typo garden"
+msgstr "Typologie du jardin"
+
+msgctxt "model:seed.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:seed.garden,name:"
+msgid "Garden"
+msgstr "Jardin"
+
+msgctxt "model:seed.garden-party.adherent,name:"
+msgid "garden - Adherent"
+msgstr "Jardin - Adhérent"
+
+msgctxt "model:seed.garden-party.beneficiaire,name:"
+msgid "garden - Beneficiaire"
+msgstr "Jardin - Bénéficiaire"
+
+msgctxt "model:seed.garden-party.participant,name:"
+msgid "garden - Participant"
+msgstr "Jardin - Participant"
+
+msgctxt "model:seed.garden-seed.code,name:"
+msgid "garden - Equipement"
+msgstr "Jardin - Équipement"
+
+msgctxt "model:seed.garden-taxinomie.taxinomie,name:"
+msgid "garden - production"
+msgstr "Jardin - Production"
+
+msgctxt "model:seed.geo_parcelle,name:"
+msgid "Parcelle"
+msgstr "Parcelle"
+
+msgctxt "model:seed.typo_garden,name:"
+msgid "Type de jardins"
+msgstr "Type de jardins"
+
+msgctxt "model:taxinomie.taxinomie-res.user,name:"
+msgid "Taxinomie - User"
+msgstr "Taxinomie - Utilisateur"
+
+msgctxt "odt:seed.garden:"
+msgid "(s)"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "Accès"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "Adresse"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "odt:seed.garden:"
+msgid "Espèce"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "Horaires"
+msgstr "Horaires"
+
+msgctxt "odt:seed.garden:"
+msgid "Info."
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "Jardin"
+msgstr "Jardin"
+
+msgctxt "odt:seed.garden:"
+msgid "Mise à jour"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "P"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "Poids"
+msgstr "Poids"
+
+msgctxt "odt:seed.garden:"
+msgid "Production"
+msgstr "Production"
+
+msgctxt "odt:seed.garden:"
+msgid "Production de"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "arcelle"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "kg"
+msgstr ""
+
+msgctxt "odt:seed.garden:"
+msgid "lundi 3 novembre 2014"
+msgstr ""
+
+msgctxt "view:seed.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:seed.garden-taxinomie.taxinomie:"
+msgid "Garden production"
+msgstr "Production du jardin"
+
+msgctxt "view:seed.garden:"
+msgid "Adherent"
+msgstr "Adhérent"
+
+msgctxt "view:seed.garden:"
+msgid "Beneficiaire"
+msgstr "Bénéficiaire"
+
+msgctxt "view:seed.garden:"
+msgid "Equipement"
+msgstr "Équipement"
+
+msgctxt "view:seed.garden:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:seed.garden:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:seed.garden:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:seed.garden:"
+msgid "Participant"
+msgstr "Participant"
+
+msgctxt "view:seed.garden:"
+msgid "Plots"
+msgstr "Parcelle"
+
+msgctxt "view:seed.garden:"
+msgid "Production"
+msgstr "Production"
+
+msgctxt "view:seed.garden:"
+msgid "garden"
+msgstr "jardin"
+
+msgctxt "view:seed.geo_parcelle:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:seed.geo_parcelle:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:seed.geo_parcelle:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:seed.geo_parcelle:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:seed.geo_parcelle:"
+msgid "geo_parcelle"
+msgstr "geo_parcelle"
+
+msgctxt "view:seed.typo_garden:"
+msgid "Typo garden"
+msgstr "Type de jardin"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Graines de jardins"
+msgstr "Graines de jardins"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Général"
+msgstr "Général"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Muséum National d'Histoire Naturelle"
+msgstr "Muséum National d'Histoire Naturelle"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Taxinomie"
+msgstr "Taxinomie"

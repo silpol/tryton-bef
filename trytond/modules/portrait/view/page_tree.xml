@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="Page">
+    <field name="page_chapo" />
+    <field name="page_msg1" />
+    <field name="page_msg2" />
+    <field name="page_msg3" />
+    <field name="page_msg4" />
+    <field name="page_loin" />
+    <field name="page_geste" />
+    <field name="page_chiffre" />
+    <field name="page_anec" />
+</tree>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Emplacement" editable="bottom">
+    <field name="code"/>
+    <field name="numpostprec"/>
+    <field name="coteoppose"/>
+    <field name="repere"/>
+    <field name="evonature"/>
+    <field name="evocause"/>
+    <field name="arbre" tree_invisible="1"/>
+    <field name="arbreessence"/>
+</tree>

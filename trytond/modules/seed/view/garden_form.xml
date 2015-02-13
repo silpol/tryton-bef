@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<form string="garden">
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="name" />
+            <field name="name" />
+            <label name="typo" />
+            <field name="typo" widget="selection"/>
+            <label name="datecrea" />
+            <field name="datecrea" />
+            <label name="surfplot" />
+            <field name="surfplot" />
+            <label name="info" />
+            <field name="info" colspan="3"/>
+            <label name="opentime" />
+            <field name="opentime" />
+            <label name="closetime" />
+            <field name="closetime" />
+            <label name="horaire" />
+            <field name="horaire" colspan="3"/>
+            <label name="gestion" />
+            <field name="gestion"/>
+            <label name="contact" />
+            <field name="contact" />
+            <label name="presentation" />
+            <field name="presentation" colspan="3" />
+            <label name="acces" />
+            <field name="acces" colspan="3" />
+            <label name="active" />
+            <field name="active" />
+        </page>
+        <page string="Plots" id="plots"> 
+            <field name="parcelles" />
+        </page>
+        <page string="Equipement" id="equipement">            
+            <field name="equipement" />
+        </page>
+        <page string="Adherent" id="adherent">            
+            <field name="adherent" />
+        </page>
+        <page string="Participant" id="participant">
+            <field name="participant" />
+        </page>
+        <page string="Beneficiaire" id="beneficiaire">
+            <field name="beneficiaire" />
+        </page>
+        <page string="Production" id="production">
+            <field name="gardenproduction" />
+        </page>
+        <page string="Map" id="map">
+            <field name="garden_situation" colspan="2" widget="image" img_width="640" img_height="480"/>
+            <field name="garden_image" colspan="2" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" colspan="2" name="situation_map_gen" icon="tryton-executable" />                           
+            <button string="Generate" colspan="2" name="image_map_gen" icon="tryton-executable" />                                                             
+        </page>                     
+    </notebook>                   
+</form>

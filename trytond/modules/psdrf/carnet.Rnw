@@ -1,0 +1,735 @@
+\documentclass[a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor} 
+\usepackage{hyperref} 
+\usepackage{tikz}
+\usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{pgfsys}
+\usepackage{keyval}
+\usepackage{subfig}
+
+\voffset -2cm
+\hoffset 0cm
+\oddsidemargin 0cm
+\evensidemargin -0.5cm
+\textwidth 17cm
+\topmargin 1cm
+\textheight 24cm
+\parindent 0cm
+\columnsep 0.7cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<OptionsGenerales, include=FALSE>>=
+opts_chunk$set(concordance=T,include=T,tidy=F, warning=F, comment=F, error=F)
+opts_chunk$set(size='normalsize')
+opts_chunk$set(fig.path='Figures/', dev='pdf')
+opts_chunk$set(fig.align='center',fig.show='hold')
+options(width=45)
+opts_knit$set(eval.after = 'fig.cap') # evaluate fig.cap after the chunk
+par(mar=c(0,0,0,0))
+@
+
+<<Librairies, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+# library(RPostgreSQL)
+# library(DBI)
+library(xtable)
+library(ggplot2)
+library(reshape2)
+library(plyr)
+library(scales)
+library(doBy)
+library(gridExtra)
+library(lattice)
+
+# ------------- Formats
+MyTheme <-  theme_bw() +
+  theme(axis.text.x  = element_text(size=8), 
+        axis.title.x  = element_text(size=9),
+        axis.title.y  = element_text(size=9), 
+        axis.text.y  = element_text(size=8),
+        plot.margin = unit(c(0.1,0.1,0,0), "cm"))
+@
+
+<<Init, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+# -------Import des donnees ------
+# ------- Table arbres  ------
+t           <- subset(psdrf.stand_tree, select= c("id","num","plot","essence","distance","azimut"))
+t           <- merge(t, psdrf.measure[, c("id","typo","dbh1","dbh2","height","bark_stage","rot_stage","cycle")], 
+                     by="id", all.x=T, sort=F)
+t$Cycle     <- t$cycle
+t$cycle     <- NULL
+t           <- merge(t, psdrf.cycle[, c("id","cycle")], by.x="Cycle", by.y="id", all.x=T, sort=F)
+t$X         <- t$distance*sin(t$azimut/200*pi)
+t$Y         <- t$distance*cos(t$azimut/200*pi)
+pos         <- which(is.na(t$dbh2) | t$dbh2==0)
+t$dbh2[pos] <- t$dbh1[pos]
+t$Diam      <- (t$dbh1 + t$dbh2)/2
+t$Classe    <- floor(t$Diam/5+0.5)*5
+t$Cat       <- cut(t$Diam, breaks = c(0, 17.5, 27.5, 47.5, 67.5, 500), 
+                   labels = c("PER", "PB", "BM", "GB", "TGB"), include.lowest = T, right = F)
+
+# Extraction des arbres vivants
+#Arbres <- t[which(is.na(t$typo)),]
+Arbres <- t
+
+# Calcul du poids des arbres (Attention : très important !!!!!!!!)
+Arbres            <- merge(Arbres, psdrf.plot[,c("id","relasco","dispositif")], 
+                           by.x = "plot", by.y="id", all.x = T, sort=F)
+Arbres$Lim        <- ifelse(Arbres$dbh1 >= Arbres$distance * Arbres$relasco, 0, 1)
+Arbres$Poids      <- 0
+SeuilDiam         <- 30
+pos               <- which(Arbres$Diam < SeuilDiam & Arbres$distance <=10)
+Arbres$Poids[pos] <- 10000/pi/10^2
+pos               <- which(Arbres$Diam >= SeuilDiam)
+Arbres$Poids[pos] <- 10000*Arbres$relasco[pos]^2/pi/Arbres$dbh1[pos]^2*(1-Arbres$Lim[pos])
+# Calcul de la surface terriere
+Arbres$g          <- pi*Arbres$dbh1^2/40000
+Arbres$Gha        <- Arbres$g*Arbres$Poids
+# Calcul du volume
+Arbres            <- merge(Arbres, psdrf.tarif[,c(8,5,4,6)], by.x = c("dispositif","essence"), 
+                           by.y=c("dispositif","essence"), all.x=T, all.y=F, sort=F)
+
+######################### A supprimer des que base complète #########################
+Arbres$name[which(is.na(Arbres$name))] <- "schl"
+Arbres$number[which(is.na(Arbres$number))] <- 6
+####################################################################################
+Arbres$V    <-  ifelse (Arbres$name == "schr", 
+                        5/70000*(8+Arbres$number)*(Arbres$Diam-5)*(Arbres$Diam-10), 
+                        5/90000*(8+Arbres$number)*(Arbres$Diam-5)*Arbres$Diam)
+Arbres$Vha  <- Arbres$V*Arbres$Poids
+Arbres$typo <- NULL
+
+# ------- Bois mort sur pied ---------------------------
+t           <- t[which(!is.na(t$typo)),]
+pos         <- which(is.na(t$dbh2) | t$dbh2==0)
+t$Diam[pos] <- t$dbh1[pos]
+t$Classe    <- floor(t$Diam/5+0.5)*5
+t$Nha       <- ifelse(t$Diam <30, 10000/pi/10^2, 10000/pi/20^2)
+t$Nha[which(t$distance > 10 & t$Diam < 30)] <- 0
+t$Nha[which(t$distance > 20)] <- 0
+t$g         <- pi*t$Diam^2/40000
+t$Vol       <- ifelse(is.na(t$height), 8*t$g, pi/40000*(t$Diam-(t$height/2-1.3))^2*t$height)
+t$Gha       <- t$g * t$Nha
+t$Vha       <- t$Vol * t$Nha
+BMP         <- t
+
+# ------- Table Regeneration  ------
+psdrf.regeneration$class1[is.na(psdrf.regeneration$class1)] <- 0
+psdrf.regeneration$class2[is.na(psdrf.regeneration$class2)] <- 0
+psdrf.regeneration$class3[is.na(psdrf.regeneration$class3)] <- 0
+Rege      <- subset(psdrf.regeneration, select=c("plot","subplot","seed_cover","species","class1","class2","class3"))
+Rege      <- merge(Rege, psdrf.essence[, c("id","libelle")], by.x="species", by.y="id", all.x=T, sort=F)
+Rege$Classe1Ha <- Rege$class1* 10000/pi/1.5^2
+Rege$Classe2Ha <- Rege$class2* 10000/pi/1.5^2
+Rege$Classe3Ha <- Rege$class3* 10000/pi/1.5^2
+
+# ------- Bois mort au sol ---------------------------
+# ----- Echantillonnage lineaire
+t   <- merge(psdrf.transect, psdrf.rot[,c("id","libelle")], by.x="rot_stage", by.y="id", all.x=T, sort=F)
+t   <- merge(t, psdrf.bark[,c("id","libelle")], by.x="bark_stage", by.y="id", all.x=T, sort=F)
+names(t)[19:20] <- c("Dureté", "Ecorce")
+t$angle[is.na(t$angle)] <- 0 # remplissage des NA pour les angles par des 0
+t$Classe  <- floor(t$diam/5+0.5)*5
+t$Vha     <- pi^2/8/60*t$diam^2/cos(t$angle/180*pi)
+t$StadeE  <- t$bark_stage
+t$StadeD  <- t$rot_stage
+t$cycleID <- t$cycle ; t$cycle <- NULL
+t         <- merge(t, psdrf.cycle[, c("id","cycle")], by.x="cycleID", by.y="id", all.x=T, sort=F)
+BMSline   <- subset(t, select =c("plot","cycle","num","species","StadeD","StadeE","diam","Classe","Vha"))
+
+# ----- Cercle de 20 m
+t1 <- subset(psdrf.coarse, select=c("id","plot","species"))
+t2 <- subset(psdrf.measure_coarse, 
+             select=c("id","bark_stage","rot_stage","base_diam","mid_diam","top_diam","length","cycle"))
+t  <- merge(t1, t2, by="id", all.x=T,sort=F)
+rm(t1,t2)
+t$StadeE  <- t$bark_stage
+t$StadeD  <- t$rot_stage
+
+t$base_diam[is.na(t$base_diam)] <- 0
+t$top_diam[is.na(t$top_diam)] <- 0
+t$mid_diam[is.na(t$mid_diam)] <- 0
+t$Vha <- 0
+t$Classe <- 0
+# ---- formule de Huber
+pos <- which((t$base_diam+ t$top_diam)==0)
+t$Vha[pos] <- pi/40000*t$mid_diam[pos]^2*t$length[pos] * 10000/pi/20^2
+t$Classe[pos] <- floor(t$mid_diam[pos]/5+0.5)*5
+# ---- formule de Smalian
+pos <- which((t$base_diam+ t$top_diam)!=0 & t$mid_diam==0)
+t$Vha[pos] <- pi/80000*(t$base_diam[pos]^2+t$top_diam[pos]^2)*t$length[pos] * 10000/pi/20^2
+t$Classe[pos] <- floor((t$base_diam[pos]+t$top_diam[pos])/2/5+0.5)*5
+# ---- formule de Newton
+pos <- which((t$base_diam+ t$top_diam)!=0 & t$mid_diam!=0)
+t$Vha[pos] <- pi/240000*(t$base_diam[pos]^2+t$top_diam[pos]^2 + 4*t$mid_diam[pos]^2)*t$length[pos] * 10000/pi/20^2
+t$Classe[pos] <- floor((t$base_diam[pos]+t$top_diam[pos]+t$base_diam[pos])/3/5+0.5)*5
+t$cycleID <- t$cycle ; t$cycle <- NULL
+t         <- merge(t, psdrf.cycle[, c("id","cycle")], by.x="cycleID", by.y="id", all.x=T, sort=F)
+BMSsup30 <- t[,-1]
+
+################### Creation des tables par placettes #####################
+# -------------- Bois mort au sol de petite dimension
+psdrfBMSlineV <- summaryBy(Vha ~ plot + cycle + Classe + StadeD + StadeE, data=BMSline, FUN=sum, keep.names=T)
+psdrfBMSlineVEss    <- summaryBy(Vha ~ plot + species, data=BMSline, FUN=sum, keep.names=T)
+names(psdrfBMSlineVEss)[2] <- "Essence"
+psdrfBMSlineVEss <- merge(psdrfBMSlineVEss, psdrf.essence[,c("id","code")], by.x="Essence", by.y="id", all.x=T, sort=F) 
+
+psdrfBMSlineVClasse <- summaryBy(Vha ~ plot + cycle + Classe, data=BMSline, FUN=sum, keep.names=T, na.rm=T)
+psdrfBMSlineVStadeD <- summaryBy(Vha ~ plot + cycle + StadeD, data=BMSline, FUN=sum, keep.names=T, na.rm=T)
+psdrfBMSlineVStadeD <- merge(psdrfBMSlineVStadeD, psdrf.rot[,c("id","code")], by.x="StadeD", by.y="id", all.x=T)
+psdrfBMSlineVStadeD$StadeD <- psdrfBMSlineVStadeD$code; psdrfBMSlineVStadeD$code <- NULL
+psdrfBMSlineVStadeE <- summaryBy(Vha ~ plot + cycle + StadeE, data=BMSline, FUN=sum, keep.names=T, na.rm=T)
+psdrfBMSlineVStadeE <- merge(psdrfBMSlineVStadeE, psdrf.bark[,c("id","code")], by.x="StadeE", by.y="id", all.x=T)
+psdrfBMSlineVStadeE$StadeE <- psdrfBMSlineVStadeE$code; psdrfBMSlineVStadeE$code <- NULL
+
+# -------------- Bois mort au sol sup a 30 cm
+psdrfBMSsup30V     <- summaryBy(Vha ~ plot + cycle + Classe + StadeD + StadeE, data=BMSsup30, FUN=sum, keep.names=T)
+psdrfBMSsup30VEss  <- summaryBy(Vha ~ plot + cycle + species, data=BMSsup30, FUN=sum, keep.names=T)
+psdrfBMSsup30VEss  <- merge(psdrfBMSsup30VEss, psdrf.essence[,c("id","code","libelle")], by.x="species", by.y="id", all.x=T, sort=F)
+psdrfBMSsup30VClasse <- summaryBy(Vha ~ plot + cycle + Classe, data=BMSsup30, FUN=sum, keep.names=T, na.rm=T)
+psdrfBMSsup30VStadeD <- summaryBy(Vha ~ plot + cycle + StadeD, data=BMSsup30, FUN=sum, keep.names=T, na.rm=T)
+psdrfBMSsup30VStadeD <- merge(psdrfBMSsup30VStadeD, psdrf.rot[,c("id","code")], by.x="StadeD", by.y="id", all.x=T)
+psdrfBMSsup30VStadeD$StadeD <- psdrfBMSsup30VStadeD$code; psdrfBMSsup30VStadeD$code <- NULL
+psdrfBMSsup30VStadeE <- summaryBy(Vha ~ plot + cycle + StadeE, data=BMSsup30, FUN=sum, keep.names=T, na.rm=T)
+psdrfBMSsup30VStadeE <- merge(psdrfBMSsup30VStadeE, psdrf.bark[,c("id","code")], by.x="StadeE", by.y="id", all.x=T)
+psdrfBMSsup30VStadeE$StadeE <- psdrfBMSsup30VStadeE$code; psdrfBMSsup30VStadeE$code <- NULL
+
+# -------------- Bois mort sur pied inferieur a 30 cm
+psdrfBMPV        <- summaryBy(Vha ~ plot + cycle + Classe + rot_stage + bark_stage, data=BMP, FUN=sum, keep.names=T)
+#psdrfBMPinf30V   <- summaryBy(Vha ~ plot + cycle + Classe + rot_stage + bark_stage, data=BMP[BMP$Diam<30,], FUN=sum, keep.names=T)
+psdrfBMPsup30V   <- summaryBy(Vha ~ plot + cycle + Classe + rot_stage + bark_stage, data=BMP[BMP$Diam>=30,], FUN=sum, keep.names=T)
+psdrfBMPVClasse  <- summaryBy(Vha ~ plot + cycle + Classe, data=BMP, FUN=sum, keep.names=T)
+psdrfBMPVClasse  <- merge(psdrfBMPVClasse, unique(psdrf.plot[,c("forest_name","id")]), by.x="plot", by.y="id", all.x=T, sort=F)
+psdrfBMPVStadeD  <- summaryBy(Vha ~ plot + cycle + rot_stage, data=BMP, FUN=sum, keep.names=T)
+psdrfBMPVStadeD  <- merge(psdrfBMPVStadeD, unique(psdrf.plot[,c("forest_name","id")]), by.x="plot", by.y="id", all.x=T, sort=F)
+psdrfBMPVStadeE  <- summaryBy(Vha ~ plot + cycle + bark_stage, data=BMP, FUN=sum, keep.names=T)
+psdrfBMPVStadeE  <- merge(psdrfBMPVStadeE, unique(psdrf.plot[,c("forest_name","id")]), by.x="plot", by.y="id", all.x=T, sort=F)
+
+# -------------- Bois total
+t1            <- summaryBy(Vha + Vha^2 ~ plot + cycle, data=psdrfBMSlineV, FUN=sum, keep.names=T)
+t2            <- summaryBy(Vha + Vha^2 ~ plot + cycle, data=psdrfBMSsup30V, FUN=sum, keep.names=T)
+#t3            <- summaryBy(Vha + Vha^2 ~ plot + cycle, data=psdrfBMPinf30V, FUN=sum, keep.names=T)
+t4            <- summaryBy(Vha + Vha^2 ~ plot + cycle, data=psdrfBMPsup30V, FUN=sum, keep.names=T)
+psdrfBoisMT   <- merge(t1,t2, by=c("plot","cycle"), all=T)
+#psdrfBoisMT   <- merge(psdrfBoisMT,t3, by=c("plot","cycle"), all=T)
+names(psdrfBoisMT)[3:6] <- c("SolInf30","SolCarInf30","SolSup30","SolCarSup30")
+psdrfBoisMT   <- merge(psdrfBoisMT,t4, by=c("plot","cycle"), all=T)
+names(psdrfBoisMT)[7:8] <- c("PiedSup30","PiedCarSup30")
+
+# -------------- Bois vivant (volume et surface terriere)
+psdrfArbresV       <- summaryBy(Vha + Gha + Poids ~ plot + cycle + Classe + Cat + essence, data=Arbres, 
+                                FUN=sum, keep.names=T)
+psdrfArbresV$Nha    <- psdrfArbresV$Poids; psdrfArbresV$Poids  <- NULL
+psdrfArbresV       <- merge(psdrfArbresV, psdrf.plot[,c("id","dispositif")], by.x="plot", by.y="id", all.x=T)
+psdrfArbresV       <- merge(psdrfArbresV, psdrf.essence[,c("id","code")], by.x="essence", by.y="id", all.x=T)
+psdrfArbresV       <- psdrfArbresV[,-1]
+
+psdrfArbresVEss    <- summaryBy(Vha + Gha ~ plot + cycle + essence, data=Arbres, FUN=sum, keep.names=T)
+psdrfArbresVClasse <- summaryBy(Vha + Gha ~ plot + cycle + Classe, data=Arbres, FUN=sum, keep.names=T)
+psdrfArbresVCat    <- summaryBy(Vha + Gha ~ plot + cycle + Cat, data=Arbres, FUN=sum, keep.names=T)
+# psdrfArbresVStadeD <- summaryBy(Vha + Gha ~ plot + cycle + StadeD, data=Arbres, FUN=sum, keep.names=T)
+# psdrfArbresVStadeE <- summaryBy(Vha + Gha ~ plot + cycle + StadeE, data=Arbres, FUN=sum, keep.names=T)
+
+
+# -------------- Regeneration
+psdrfRegeHa        <- summaryBy(Classe1Ha + Classe2Ha + Classe3Ha ~ plot, data=Rege, FUN=sum, keep.names=T)
+psdrfRegeHa[,2:4]  <- psdrfRegeHa[,2:4]/3
+names(psdrfRegeHa)[2:4] <- c("Classe1","Classe2","Classe3")
+
+################### Resultats par dispositif ###########################################
+# Attention il faut connaître le poids des placettes
+########################################################################################
+psdrfDispNbPlac <- data.frame(table(psdrf.plot$forest_name))
+names(psdrfDispNbPlac) <- c("forest_name", "NbrePlac")
+psdrfDispNbPlac <- merge(psdrfDispNbPlac, unique(psdrf.plot[,c("forest_name","dispositif")]), by="forest_name", all.x=T, sort=F)
+
+# ----- Variables dendrométriques
+psdrfDispClasse    <- summaryBy(Vha + Gha + Nha ~ dispositif + cycle + Classe, data=psdrfArbresV, FUN=sum, na.rm=T, keep.names=T)
+psdrfDispCat       <- summaryBy(Vha + Gha + Nha ~ dispositif + cycle + Cat, data=psdrfArbresV, FUN=sum, na.rm=T, keep.names=T)
+psdrfDispEss       <- summaryBy(Vha + Gha + Nha ~ dispositif + cycle + essence, data=psdrfArbresV, FUN=sum, na.rm=T, keep.names=T)
+psdrfDispEssCat    <- summaryBy(Vha + Nha ~ dispositif + cycle + code + Cat, data=psdrfArbresV, FUN=sum, na.rm=T, keep.names=T)
+
+psdrfDispEr        <- summaryBy(Vha + Gha + Nha ~ plot + dispositif + cycle, data=psdrfArbresV, FUN=sum, na.rm=T, keep.names=T)
+psdrfDispEr$Vha2    <- psdrfDispEr$Vha^2
+psdrfDispEr$Gha2    <- psdrfDispEr$Gha^2
+psdrfDispEr$Nha2    <- psdrfDispEr$Nha^2
+psdrfDispEr        <- summaryBy(Vha2 + Gha2 + Nha2 ~ dispositif + cycle, data=psdrfDispEr, FUN=sum, na.rm=T, keep.names=T)
+psdrfDisp          <- summaryBy(Vha + Gha + Nha ~ dispositif + cycle, data=psdrfArbresV, FUN=sum, na.rm=T, keep.names=T)
+psdrfDispDendro    <- summaryBy(Vha + Gha + Nha ~ dispositif + cycle, data=psdrfArbresV, FUN=sum, na.rm=T, keep.names=T)
+psdrfDispClasse    <- merge(psdrfDispClasse, psdrfDispNbPlac[,2:3], by="dispositif", all.x=T, sort=F)
+psdrfDispCat       <- merge(psdrfDispCat, psdrfDispNbPlac[,2:3], by="dispositif", all.x=T, sort=F)
+psdrfDispEss       <- merge(psdrfDispEss, psdrfDispNbPlac[,2:3], by="dispositif", all.x=T, sort=F)
+psdrfDisp          <- merge(psdrfDisp, psdrfDispNbPlac[,2:3], by="dispositif", all.x=T, sort=F)
+
+
+psdrfDispClasse[,4:6]  <- psdrfDispClasse[,4:6]/psdrfDispClasse$NbrePlac
+psdrfDispCat[,4:6]     <- psdrfDispCat[,4:6]/psdrfDispCat$NbrePlac
+psdrfDispEss[,3:5]     <- psdrfDispEss[,3:5]/psdrfDispEss$NbrePlac
+psdrfDisp[,3:5]        <- psdrfDisp[,3:5]/psdrfDisp$NbrePlac
+
+tab <- merge(psdrfDisp,psdrfDispEr, by="dispositif")
+tab$ErV <- with(tab, ((NbrePlac*Vha2-(NbrePlac*Vha)^2)/NbrePlac/(NbrePlac-1))^0.5)
+tab$CVV <- tab$ErV/tab$Vha*100
+tab$ErG <- with(tab, ((NbrePlac*Gha2-(NbrePlac*Gha)^2)/NbrePlac/(NbrePlac-1))^0.5)
+tab$CVG <- tab$ErG/tab$Gha*100
+tab$ErN <- with(tab, ((NbrePlac*Nha2-(NbrePlac*Nha)^2)/NbrePlac/(NbrePlac-1))^0.5)
+tab$CVN <- tab$ErN/tab$Nha*100
+tab$ErV <- qt(.975, df=tab$NbrePlac-1)*tab$CVV/tab$NbrePlac^0.5
+tab$ErG <- qt(.975, df=tab$NbrePlac-1)*tab$CVG/tab$NbrePlac^0.5
+tab$ErN <- qt(.975, df=tab$NbrePlac-1)*tab$CVN/tab$NbrePlac^0.5
+tab <- merge(tab, psdrf.dispositif[,c("id","name")], by.x="dispositif", by.y="id")
+tab <- subset(tab, select=c("name","Vha","ErV","CVV","Gha","ErG","CVG","Nha","ErN","CVN","NbrePlac"))
+psdrfDendro <- tab[order(tab$name),]
+
+# ----- Bois mort
+t1 <- merge(psdrfBMSlineVClasse, psdrf.plot[,c("id","forest_name")], by.x="plot", by.y="id", all.x=T, sort=F)
+t1 <- summaryBy(Vha ~ forest_name + cycle, data=t1, FUN=sum, na.rm=T, keep.names=T)
+t1$Type <- "Sol inf 30"
+t2 <- merge(psdrfBMSsup30VClasse, psdrf.plot[,c("id","forest_name")], by.x="plot", by.y="id", all.x=T, sort=F)
+t2 <- summaryBy(Vha ~ forest_name + cycle, data=t2, FUN=sum, na.rm=T, keep.names=T)
+t2$Type <- "Sol sup 30"
+psdrfDispBMSType      <- rbind(t1,t2)
+psdrfDispBMSType      <- merge(psdrfDispBMSType, psdrfDispNbPlac[,1:2], by="forest_name", all.x=T, sort=F)
+psdrfDispBMSType$Vha  <- psdrfDispBMSType$Vha/psdrfDispBMSType$NbrePlac
+psdrfDispBMS <- summaryBy(Vha ~ forest_name + cycle, data=psdrfDispBMSType, FUN=sum, na.rm=T, keep.names=T)
+
+
+psdrfBoisMT <- merge(psdrfBoisMT, psdrf.plot[,c("id","forest_name")], by.x="plot", by.y="id", all.x=T, sort=F)
+#t3 <- summaryBy(PiedInf30 ~ forest_name + cycle, data=psdrfBoisMT, FUN=sum, na.rm=T, keep.names=T)
+#names(t3)[3] <- "Vha"
+#t3$Type <- "Pied inf 30"
+t4 <- summaryBy(PiedSup30 ~ forest_name + cycle, data=psdrfBoisMT, FUN=sum, na.rm=T, keep.names=T)
+names(t4)[3] <- "Vha"
+t4$Type <- "Pied sup 30"
+psdrfDispBMPType      <- t4 #rbind(t3,t4)
+psdrfDispBMPType      <- merge(psdrfDispBMPType, psdrfDispNbPlac[,1:2], by="forest_name", all.x=T, sort=F)
+psdrfDispBMPType$Vha  <- psdrfDispBMPType$Vha/psdrfDispBMPType$NbrePlac
+psdrfDispBMP <- summaryBy(Vha ~ forest_name + cycle, data=psdrfDispBMPType, FUN=sum, na.rm=T, keep.names=T)
+
+# ----- Precision Bois mort
+# psdrfBoisM  <- merge(psdrfBoisM, psdrf_plot[,c("id","dispositif")], by.x="plot", by.y="id", all.x=T)
+
+
+# ----- Regeneration
+psdrfRegeHa <- merge(psdrfRegeHa, psdrf.plot[,c("id","forest_name")], by.x="plot", by.y="id", all.x=T, sort=F)
+psdrfDispRege <- summaryBy(Classe1 + Classe2 + Classe3 ~ forest_name, data=psdrfRegeHa, FUN=sum, keep.names=T)
+psdrfDispRege      <- merge(psdrfDispRege, psdrfDispNbPlac[,1:2], by="forest_name", all.x=T, sort=F)
+psdrfDispRege[,2:4]  <- psdrfDispRege[,2:4]/psdrfDispRege$NbrePlac
+
+PlotRegeSurf <- summaryBy(class1 + class2 + class3 ~ plot + subplot, data=psdrf.regeneration, FUN=sum, keep.names=T)
+PlotRegeSurf$Surf <- ifelse(PlotRegeSurf$class1 + PlotRegeSurf$class2 + PlotRegeSurf$class3 >=5,1,0)
+PlotRegeSurf <- summaryBy(Surf ~ plot, data=PlotRegeSurf, FUN=sum, keep.names=T)
+PlotRegeSurf$Surf <- PlotRegeSurf$Surf/3
+PlotRegeSurf <- merge(psdrf.plot[,c("id","forest_name")],PlotRegeSurf, by.x="id", by.y="plot", all.x=T)
+psdrfDispRegeSurf <- summaryBy(Surf ~ forest_name, data=PlotRegeSurf, FUN=sum, keep.names=T)
+psdrfDispRegeSurf <- merge(psdrfDispRegeSurf, psdrfDispNbPlac[,1:2], by="forest_name", all.x=T, sort=F)
+psdrfDispRegeSurf$Surf <- psdrfDispRegeSurf$Surf/psdrfDispRegeSurf$NbrePlac
+
+# -------Extraction ------
+dispositif <- data.frame(psdrf.dispositif)
+status <- data.frame(protection.area)
+cycle <- data.frame(psdrf.cycle)
+protection <-data.frame(protection.area)
+party<-data.frame(party.party)
+standtree<-data.frame(psdrf.stand_tree)
+adresse<-data.frame(party.address)
+plot<-data.frame(psdrf.plot)
+
+NomDisp                 <- dispositif$rec_name
+PlacEnTour              <- plot[,10]
+ArbresEnTour            <- Arbres
+DendroEnTour            <- psdrfDendro
+DispCatEnTour           <- psdrfDispCat
+DispClasseEnTour        <- psdrfDispClasse
+DispBMPTypeEnTour       <- psdrfDispBMPType
+DispBMSTypeEnTour       <- psdrfDispBMSType
+RegeEnTour              <- subset(Rege, plot %in% PlacEnTour)
+BMSlineVClasseEnTour    <- subset(psdrfBMSlineVClasse, plot %in% PlacEnTour)
+BMSsup30VClasseEnTour   <- subset(psdrfBMSsup30VClasse, plot %in% PlacEnTour)
+BMSlineVEssEnTour       <- subset(psdrfBMSlineVEss, plot %in% PlacEnTour)
+BMSsup30VEssEnTour      <- subset(psdrfBMSsup30VEss, plot %in% PlacEnTour)
+BMSlineVStadeDEnTour    <- subset(psdrfBMSlineVStadeD, plot %in% PlacEnTour)
+BMSsup30VStadeDEnTour   <- subset(psdrfBMSsup30VStadeD, plot %in% PlacEnTour)
+BMSlineVStadeEEnTour    <- subset(psdrfBMSlineVStadeE, plot %in% PlacEnTour)
+BMSsup30VStadeEEnTour   <- subset(psdrfBMSsup30VStadeE, plot %in% PlacEnTour)
+BMPEnTour               <- subset(BMP, plot %in% PlacEnTour)
+DispEssCatEnTour        <- psdrfDispEssCat
+TarifEnTour             <- subset(psdrf.tarif, select=c("essence","name","number"))
+
+NbPlac <- dim(psdrf.plot)[1]
+NbArb <- dim(ArbresEnTour)[1]
+Angle <- round(mean(psdrf.plot$relasco),1)
+
+@
+
+\title{Dispositif n°\Sexpr{dispositif[1,18]} : \Sexpr{dispositif[1,1]}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\clearpage
+\tableofcontents
+
+
+\chapter{Présentation du site}
+
+\section{Généralités}
+
+\subsection{Renseignements administratifs}
+
+\begin{tabular}{ll}
+Nom : & \Sexpr{dispositif[1,1]} \\ 
+Commune : &  \Sexpr{commune.commune$name}\\
+Code postal : & \Sexpr{commune.commune$insee}\\ 
+
+Code RNF : & \Sexpr{dispositif[1,8]} \\
+Création : & \Sexpr{dispositif[1,3]} \\
+\end{tabular} 
+
+
+\subsection{Contacts}
+\begin{tabular}{ll}
+Organisme : & \Sexpr{party[1,5]}\\
+Gestionnaire : & \Sexpr{party[1,5]}\\
+Adresse : & \Sexpr{adresse[1,10]}\\
+Tel. : & \Sexpr{party[1,23]}\\
+Email : & \Sexpr{party[1,24]}\\
+\end{tabular}
+
+\subsection{Milieux}
+\begin{tabular}{ll}
+Habitats : & \Sexpr{status[1,1]}-\href{\Sexpr{status[1,7]}}{Lien}\\
+& \Sexpr{status[2,1]}-\href{\Sexpr{status[2,7]}}{Lien}\\
+& \Sexpr{status[3,1]}-\href{\Sexpr{status[3,7]}}{Lien}\\
+Altitude min : & \Sexpr{psdrf.dispositif$altitudemin} m\\
+Altitude max : & \Sexpr{psdrf.dispositif$altitudemax} m\\
+\end{tabular}
+
+\subsection{Stratégie d'échantillonnage}
+\begin{tabular}{ll}
+Angle (\%): & \Sexpr{Angle} \\
+Nombre de strates : & \\
+Nombre de placettes : & \Sexpr{NbPlac} \\
+Nombre d'arbres : & \Sexpr{NbArb} \\
+Nombre d'arbres/placette : & \Sexpr{round(NbArb/NbPlac,1)} \\
+\end{tabular} \\
+
+La figure \ref{fig:DiamDist} permet de détecter d'éventuels arbres limites
+<<DiamDist, echo=F, fig.height=3.5, fig.cap= "Vérification de l'échantillon.">>=
+tab <- subset(ArbresEnTour, select=c("distance","dbh1","Diam"))
+tab$Type <- ifelse(tab$Diam <17.5,"Perches","Arbres")
+t1 <- subset(BMPEnTour, select=c("distance","dbh1","Diam"))
+t1$Type <- "BMP"
+tab <- rbind(tab,t1)
+p <- ggplot(tab, aes(distance, dbh1, colour=Type)) + geom_point(alpha=0.5) + theme_bw()
+p <- p + geom_hline(yintercept=c(7.5,30), colour="blue", linetype=2, size=0.5) 
+p <- p + geom_abline(intercept = 0, slope = Angle, colour="blue")
+p + geom_vline(xintercept=c(10,20), colour="blue", linetype=2, size=0.5) + 
+  theme(axis.text.x = element_text(size=9), axis.title.x = element_text(size=10),
+        axis.text.x = element_text(size=9), axis.title.y = element_text(size=10),
+        legend.text = element_text(size = 9))
+@
+
+Le tableau \ref{Tarifs} rappelle les tarifs de cubage retenus.
+<<Tarifs, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+tab <- merge(psdrf.essence[,c("id","libelle")], TarifEnTour, by.x="id", by.y="essence", all.y=T)
+tab <- tab[,-1]
+names(tab) <- c("Essence", "Type de tarif", "Numéro")
+print(xtable(tab, caption = "Tarifs de cubage retenus", 
+      digits=rep(0,4),label = "Tarifs", caption.placement = "top"), include.rownames=F,
+      size="\\footnotesize")
+@
+
+\newpage
+\section{Localisation}
+Périmètre, Scan 1/25000, \\
+- Localisation \\
+- Localisation des placettes \\
+
+\section{Tableaux de synthèse}
+
+<<Dendro, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+tab <- data.frame(matrix(c(DendroEnTour[1,2:10]),ncol=3))
+names(tab) <- c("Vha","Gha","Nha")
+row.names(tab) <- c("Moyenne", "Erreur rel. (%)", "CV (%)")
+Dec <- matrix(c(rep(0,4),rep(1,5),0,1,1), nrow=3)
+
+print(xtable(tab, caption = "Principales caratéristiques dendrométriques, ainsi que leur précision.", 
+      digits=Dec,label = "Dendro", caption.placement = "top"), include.rownames=T,
+      size="\\footnotesize")
+@
+
+<<Structure, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+tab <- DispCatEnTour[,2:6]
+t1 <- prop.table(as.matrix(tab[,3:5]),margin=2)
+tab <- cbind(tab,t1)
+names(tab)[6:8] <- c("Vha (%)", "Gha (%)", "Nha (%)")
+
+print(xtable(tab, caption = "Analyse de la structure des peuplements en valeurs absolues et en pourcentages. Valeurs moyennes à l'échelle de la forêt.", 
+      digits=c(rep(0,4),1,0,rep(3,3)),label = "Structure", caption.placement = "top"), include.rownames=FALSE,
+      size="\\footnotesize")
+@
+
+<<BoisMort, echo=FALSE, results='asis', fig.pos='h', comment=F>>=
+tab <- rbind(DispBMPTypeEnTour, DispBMSTypeEnTour)
+tab <- subset(tab, select=c("Type", "Vha"))
+print(xtable(tab, caption = "Importance et type de bois mort.", 
+      digits=c(0,0,1),label = "BoisMort", caption.placement = "top"), include.rownames=FALSE,
+      size="\\footnotesize")
+@
+
+\chapter{Bois vivant}
+
+\section {Histogrammes}
+La figure \ref{fig:Classe} permet de visualiser les histogrammes en volume et en nombre de tiges par classe de diamètre.
+<<Classe, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.height=2.5, fig.width=3.2, fig.cap= "Répartition du matériel vivant sur pied par classe de diamètre.", fig.subcap=c("En volume", "En nombre de tiges", out.width='.49\\linewidth', out.extra='scale=1')>>= 
+ggplot(DispClasseEnTour, aes(x=Classe, y=Vha)) + geom_bar(stat = "identity", fill="grey") + theme_bw() +
+  theme(axis.text.x = element_text(size=8), axis.title.x=element_text(size=9), 
+        axis.text.y = element_text(size=8), axis.title.y=element_text(size=9))
+ggplot(DispClasseEnTour, aes(x=Classe, y=Nha)) + geom_bar(stat = "identity", fill="grey") + theme_bw() +
+theme(axis.text.x = element_text(size=8), axis.title.x=element_text(size=9), 
+        axis.text.y = element_text(size=8), axis.title.y=element_text(size=9))
+@
+
+\section{Composition}
+
+\subsection{Biodiversité}
+<<Biodiversite, echo=F>>=
+t1 <- summaryBy(Vha ~ essence, data=ArbresEnTour, FUN=sum, keep.names=T)
+t2 <- summaryBy(seed_cover + class1 + class2 + class3 ~ species, data=RegeEnTour, FUN=sum, keep.names=T)
+tab <- merge(t1,t2, by.x="essence", by.y="species", all=T)
+tab <- merge(tab, psdrf.essence[,c("id","libelle")], by.x="essence", by.y="id", all.x=T, sort=F)
+ListEss     <- tab[order(tab$libelle), -1]
+names(ListEss)[1] <- "Arbres"
+@
+
+Le dispositif possède au total \Sexpr{length(unique(ListEss[,1]))} espèces sous forme de semis, de brins de taillis ou d'arbres de franc-pied. La figure \ref{fig:CompoGlobal} donne une image de l'importance des essences dans chacun des stades de vie de l'arbre. Elle fournit la composition en pourcentage du volume pour les arbres (diamètre supérieur à 7,5cm) du recouvrement pour les semis inférieur à 50 cm de haut, et du nombre de tiges pour les différentes classes (class1, class2, class3) de semis de hauteur supérieure à 50 cm. Lorsqu'une classe de semis est absente, elle n'est pas représentée. \\
+Cette figure \ref{fig:CompoGlobal} est une représentation visuelle de l'indice de biodiversité de Shannon.
+
+<<CompoGlobal, echo=FALSE, size='footnotesize', include=TRUE, fig.width=6, fig.height=3.5, fig.cap="Importance des essences selon les différents stades de vie de l'arbre.", error=F, comment=F, warning=F, message=F>>=
+if (sum(ListEss$class3, na.rm=T)==0) {ListEss$class3 <- NULL}
+if (sum(ListEss$class2, na.rm=T)==0) {ListEss$class2 <- NULL}
+if (sum(ListEss$class1, na.rm=T)==0) {ListEss$class1 <- NULL}
+ListEss.m <- melt(ListEss, id="libelle")
+ListEss.m <- ddply(ListEss.m, .(variable), transform, rescale = rescale(value))
+ggplot(ListEss.m, aes(variable, libelle)) + geom_tile(aes(fill = rescale),
+    	colour = "white") + scale_fill_gradient(low = "white", high = "black") + theme_bw() + labs(x = NULL, y=NULL) +
+      theme(axis.text.x  = element_text(size=9), axis.text.y  = element_text(size=9))
+@
+
+\subsection{Importance relative}
+La figure \ref{fig:Compo} illustre l'importance relative des différentes essences. Elle est constituée de 2 graphiques : \\
+- Celui de gauche fournit l'importance des différentes essences en nombre de tige (Nha), volume (Vha). \\
+- Celui de droite fournit la répartition en nombre de tiges par classes de diamètre des différentes essences. 
+
+<<Compo, echo=FALSE, size='footnotesize', include=TRUE, fig.width=9, fig.height=4, fig.cap="Importance relative des différentes essences.", fig.keep='last', fig.pos="htdp">>=
+ArbresEnTour     <- Arbres
+NbPlac <- dim(psdrf.plot)[1]
+ArbresEnTour$Nha <- ArbresEnTour$Poids
+ArbresEnTour$Poids <- NULL
+Ess <- summaryBy(Vha ~ essence, data=ArbresEnTour, FUN=sum, keep.names=T)
+Ess <- merge(Ess, psdrf.essence[,c("id","code")], by.x="essence", by.y="id", all.x=T)
+Ess.m <- melt(Ess[,-1], id="code")
+p1 <- ggplot(Ess.m, aes(x=variable, y=value, fill=code)) + 
+    	geom_bar(stat='identity', position='fill') +  coord_polar(theta = "y") + 
+			scale_x_discrete("") + theme(legend.position="bottom") + theme_bw() +
+      theme(axis.title.y=element_blank())
+Ess <- summaryBy(Nha ~ essence + Classe, data=ArbresEnTour, FUN=sum, keep.names=T)
+Ess$Nha <- Ess$Nha/NbPlac
+Ess <- merge(Ess, psdrf.essence[,c("id","code")], by.x="essence", by.y="id", all.x=T)
+p2 <- ggplot(Ess, aes(x=Classe, y=Nha, fill=code)) + geom_bar(stat='identity', position='stack') + 
+			guides(fill=FALSE) + theme_bw()
+grid.arrange(p2, p2, ncol=2)
+@
+
+\subsection{Composition et structure}
+<<CompoNG, echo=FALSE, size='footnotesize', include=TRUE, fig.pos='h', fig.width=9, fig.height=6, fig.cap="Composition en essence en nombre de tige et en surface terrière, de manière absolue ou relative.", error=F, comment=F, warning=F, message=F>>=
+temp <- DispEssCatEnTour
+temp[,5:6] <- temp[,5:6]/NbPlac
+temp <- temp[order(-temp$Nha),]
+p1 <- ggplot(temp, aes(Cat, Nha, fill=code)) + geom_bar(stat="identity", position="stack") +
+  labs(x = NULL) + guides(fill=FALSE) + theme_bw()
+p2 <- ggplot(temp, aes(Cat, Nha, fill=code)) + geom_bar(stat="identity", position="fill") +
+  labs(x = NULL) + theme(legend.position = "none") + theme_bw()
+
+temp <- temp[order(-temp$Vha),]
+p3 <- ggplot(temp, aes(Cat, Vha, fill=code)) + geom_bar(stat="identity", position="stack")+ guides(fill=FALSE) + theme_bw()
+p4 <- ggplot(temp, aes(Cat, Vha, fill=code)) + geom_bar(stat="identity", position="fill") + theme_bw() 
+grid.arrange(p1, p2, p3, p4, ncol=2)
+@
+
+\chapter{Bois mort}
+
+\section{Bois mort au sol}
+
+\subsection{Importance par dimension et essence}
+La figure \ref{fig:BMSline1} fournit l'importance du bois mort au sol, exprimée en volume, tandis que la figure \ref{fig:BMSline2} l'exprime par stade de décomposition.
+<<BMSline1, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.width=3, fig.height=1.7, fig.cap= "Importance du bois mort au sol.", fig.subcap=c("Par classe de diamètre", "Par essence", out.width='.49\\linewidth', out.extra='scale=1')>>=
+t1 <- summaryBy(Vha ~ Classe, data=BMSlineVClasseEnTour, FUN=sum, keep.names=T)
+t1$Vha <- t1$Vha/NbPlac
+if (dim(BMSsup30VClasseEnTour)[1] > 0) {
+  t2 <- summaryBy(Vha ~ Classe, data=BMSsup30VClasseEnTour, FUN=sum, keep.names=T)
+  t2$Vha <- t2$Vha/NbPlac
+  BMSClasse <- rbind(t1,t2)
+} else {
+  BMSClasse <- t1
+}
+ggplot(BMSClasse, aes(x=Classe, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") + MyTheme
+
+t1 <- summaryBy(Vha ~ code, data=BMSlineVEssEnTour, FUN=sum, keep.names=T)
+t1$Vha <- t1$Vha/NbPlac
+if (dim(BMSsup30VEssEnTour)[1] > 0) {
+  t2 <- summaryBy(Vha ~ code, data=BMSsup30VEssEnTour, FUN=sum, keep.names=T)
+  t2$Vha <- t2$Vha/NbPlac
+  tab <- rbind(t1,t2)
+} else {
+  tab <- t1
+}  
+ggplot(tab, aes(x=code, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") + MyTheme
+@
+
+\subsection{Répartition par stade de décomposition}
+<<BMSline2, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.width=2.5, fig.height=1.7, fig.cap= "Répartition du bois mort au sol par stade de décomposition.", fig.subcap=c("Par stade de dureté du bois", "Par importance de l'écorce", out.width='.49\\linewidth', out.extra='scale=1')>>=
+StadeDline <- summaryBy(Vha ~ StadeD, data=BMSlineVStadeDEnTour, FUN=sum, keep.names=T)
+StadeDline$Vha <- StadeDline$Vha/NbPlac
+if (dim(BMSsup30VStadeDEnTour)[1] > 0) {
+  StadeDSup30 <- summaryBy(Vha ~ StadeD, data=BMSsup30VStadeDEnTour, FUN=sum, keep.names=T)
+  StadeDSup30$Vha <- StadeDSup30$Vha/NbPlac
+  tab <- rbind(StadeDline,StadeDSup30)
+} else {
+  tab <- StadeDline
+}
+p1 <- ggplot(tab, aes(x=StadeD, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey")
+p1 + MyTheme
+
+StadeEline <- summaryBy(Vha ~ StadeE, data=BMSlineVStadeEEnTour, FUN=sum, keep.names=T)
+StadeEline$Vha <- StadeEline$Vha/NbPlac
+if (dim(BMSsup30VStadeDEnTour)[1] > 0) {
+  StadeESup30 <- summaryBy(Vha ~ StadeE, data=BMSsup30VStadeEEnTour, FUN=sum, keep.names=T)
+  StadeESup30$Vha <- StadeESup30$Vha/NbPlac
+  tab <- rbind(StadeEline,StadeESup30)
+} else {
+  tab <- StadeEline
+}
+p2 <- ggplot(tab, aes(x=StadeE, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") 
+p2 + MyTheme
+@
+
+
+\section{Bois mort sur pied}
+
+<<BMP, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.height=2, fig.cap= "Importance du bois mort sur pied par classes de diamètre et stades de décomposition.">>= 
+BMPClasseEnTour <- summaryBy(Vha ~ cycle + Classe, data=BMPEnTour, FUN=sum, keep.names=T)
+BMPClasseEnTour$Vha <- BMPClasseEnTour$Vha/NbPlac
+BMPStadeDEnTour <- summaryBy(Vha ~ cycle + rot_stage, data=BMPEnTour, FUN=sum, keep.names=T)
+BMPStadeDEnTour <- merge(BMPStadeDEnTour,psdrf.rot[,c("id","code")], by.x="rot_stage", by.y="id", all.x=T)
+BMPStadeDEnTour$StadeD <- BMPStadeDEnTour$code; BMPStadeDEnTour$code <- NULL
+BMPStadeDEnTour$Vha <- BMPStadeDEnTour$Vha/NbPlac
+BMPStadeEEnTour <- summaryBy(Vha ~ cycle + bark_stage, data=BMPEnTour, FUN=sum, keep.names=T)
+BMPStadeEEnTour <- merge(BMPStadeEEnTour,psdrf.bark[,c("id","code")], by.x="bark_stage", by.y="id", all.x=T)
+BMPStadeEEnTour$StadeE <- BMPStadeEEnTour$code; BMPStadeEEnTour$code <- NULL
+BMPStadeEEnTour$Vha <- BMPStadeEEnTour$Vha/NbPlac
+
+p1 <- ggplot(BMPClasseEnTour, aes(x=Classe, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") 
+p2 <- ggplot(BMPStadeDEnTour, aes(x=StadeD, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey")
+p3 <- ggplot(BMPStadeEEnTour, aes(x=StadeE, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey")
+
+grid.arrange(p1+MyTheme, p2+MyTheme, p3+MyTheme, ncol=3)
+@
+
+\section{Bois mort total}
+
+<<BMTotal, echo=F, size='footnotesize', include=T, fig.pos='h', fig.height=2, fig.cap= "Importance du bois mort par classes de diamètre et stades de décomposition.">>=
+t1 <- summaryBy(Vha ~ Classe, data=BMSlineVClasseEnTour, FUN=sum, keep.names=T)
+t1$Vha <- t1$Vha/NbPlac
+t1$Type <- "inf30"
+if (dim(BMSsup30VClasseEnTour)[1] > 0) {
+  t2 <- summaryBy(Vha ~ Classe, data=BMSsup30VClasseEnTour, FUN=sum, keep.names=T)
+  t2$Vha <- t2$Vha/NbPlac
+  t2$Type <- "inf30"
+  tab <- rbind(t1,t2)
+} else {
+  tab <- t1
+}
+t3 <- BMPClasseEnTour[,-1]
+t3$Type <- "Pied"
+tab <- rbind(tab,t3)
+p1 <- ggplot(tab, aes(x=Classe, y=Vha, fill=Type)) + geom_bar(stat = "identity", position='stack') + 
+  scale_fill_grey() + guides(fill=FALSE)
+
+t3 <- BMPStadeDEnTour[,-c(1:2)]
+t3$Type <- "Pied"
+StadeDline$Type <- "inf30"
+if (dim(BMSsup30VStadeDEnTour)[1] > 0) {
+  StadeDSup30$Type <- "sup30"
+  tab <- rbind(StadeDline,StadeDSup30,t3)
+} else {
+  tab <- rbind(StadeDline,t3)
+}
+p2 <- ggplot(tab, aes(x=StadeD, y=Vha, fill=Type)) + geom_bar(stat = "identity", position='stack') +
+  scale_fill_grey() + guides(fill=FALSE)
+
+t3 <- BMPStadeEEnTour[,-c(1:2)]
+t3$Type <- "Pied"
+StadeEline$Type <- "inf30"
+if (dim(BMSsup30VStadeEEnTour)[1] > 0) {
+  StadeESup30$Type <- "sup30"
+  tab <- rbind(StadeEline,StadeESup30,t3)
+} else {
+  tab <- rbind(StadeEline,t3)
+}
+
+p3 <- ggplot(tab, aes(x=StadeE, y=Vha, fill=Type)) + geom_bar(stat = "identity", position='stack') + 
+  scale_fill_grey() + MyTheme + 
+  theme(legend.position = c(.8, .8), legend.text=element_text(size=6), legend.title=element_text(size=7)) 
+
+grid.arrange(p1+MyTheme, p2+MyTheme, p3, ncol=3)
+@
+
+
+\chapter{Codes écologiques}
+
+
+Hist : N microhabitats ou N arbres porteurs microhabitats (sous ensemble position)
+
+Hist : N microhabitats ou N arbres porteurs microhabitats (vitalité)
+
+Graph : Note écologique/essence/cat diamètre
+
+Graph : camemberts essences / hist (Ncodes/ha/essence) /codes regroupés
+
+
+\chapter{Renouvellement}
+
+\section{Régénération}
+
+\subsection{Par stade de développement}
+<<Rege1, echo=F, size='footnotesize', include=T, fig.pos='h', fig.height=2.5, fig.cap= "Régénération par stade de développement.">>=
+tab <- RegeEnTour[,c(4,8:11)]
+tab[,c(1,3:5)] <- tab[,c(1,3:5)]/NbPlac
+tab$seed_cover <- tab$seed_cover*50/3 # On suppose que 5000 semis classe1 = recouv complet
+tab.m <- melt(tab, id="libelle")
+ggplot(tab.m, aes(x=variable, y=value, fill=libelle)) + geom_bar(stat = "identity", position='stack') + theme_bw()
+@
+
+\subsection{Abroutissement}
+<<Abroutissement, echo=F, size='footnotesize', include=T, fig.pos='h', fig.height=2, fig.width=4, fig.cap= "Abroutissement.">>=
+t1 <- subset(psdrf.regeneration, plot %in% PlacEnTour, 
+                          select=c("seed_cover","browsing","species","class1"))
+t1$browsing <- ifelse(t1$browsing=="oui","oui","non")
+t1 <- summaryBy(seed_cover + class1 ~ browsing, data=t1, FUN=sum, keep.names=T)
+t1.m <- melt(t1, id="browsing")
+ggplot(t1.m, aes(x=variable, y=value, fill=browsing)) + geom_bar(stat = "identity", position='fill',colour="black") + 
+  scale_fill_manual(values=c("white", "black")) + theme_bw()
+@
+
+\end{document}

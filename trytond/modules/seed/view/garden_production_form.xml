@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form string="Garden production" col="4">
+    <label name="taxinomie"/>
+    <field name="taxinomie"/>
+    <label name="liste"/>
+    <field name="liste"/>
+    <label name="typo"/>
+    <field name="typo" widget="selection"/>
+    <label name="poids"/>
+    <field name="poids"/>
+    <label name="daterecolte"/>
+    <field name="daterecolte"/>
+    <field name="photo" colspan="4" widget="image" img_width="640" img_height="480"/>
+    <label name="plot"/>
+    <field name="plot"/>
+    <label name="garden"/>
+    <field name="garden"/>
+</form>

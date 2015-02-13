@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Table D">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="code_site"/>
+    <field name="code_site"/>
+    <label name="nom_site"/>
+    <field name="nom_site"/> 
+</form>

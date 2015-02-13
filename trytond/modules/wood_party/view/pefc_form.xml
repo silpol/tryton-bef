@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="PEFC certificate" col="2">
+    <label name="enabled"/>
+    <field name="enabled"/>
+    <label name="region"/>
+    <field name="region" widget="selection"/>
+    <label name="pefc_no"/>
+    <field name="pefc_no"/>
+    <label name="date"/>
+    <field name="date"/>
+    <label name="duration"/>
+    <field name="duration"/>
+    <label name="validity"/>
+    <field name="validity"/>
+    <label name="surface"/>
+    <field name="surface"/>
+</form>     

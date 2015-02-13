@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<form string="Emplacement" col="2">
+    <group id="group_emplacement0" colspan="4" string="Emplacement">
+        <label name="code"/>
+        <field name="code"/>
+        <label name="id"/>
+        <field name="id"/>
+        <label name="numpostprec"/>
+        <field name="numpostprec"/>
+        <label name="coteoppose"/>
+        <field name="coteoppose"/>
+        <label name="repere"/>
+        <field name="repere"/>
+        <label name="active"/>
+        <field name="active"/>    
+    </group>
+    <notebook colspan="6">       
+        <page string="Évolutions" id="evol">                                     
+            <field name="evolution"/>
+        </page>
+        <page string="Map" id="map" col="1">                                      
+            <field name="emplacement_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

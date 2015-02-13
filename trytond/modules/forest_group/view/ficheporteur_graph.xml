@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<graph string="Fiche des groupements forestiers par porteurs de parts" type="vbar">
+    <x>
+        <field name="groupe" />
+    </x>
+    <y>
+        <field name="nb" color="#ccff00" string="Pleine propriété"/>
+    </y>
+</graph>

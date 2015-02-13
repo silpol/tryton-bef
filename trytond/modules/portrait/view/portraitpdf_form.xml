@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form string="Portrait PDF recensé par commune">    
+    <label name="commune"/>
+    <field name="commune"/>
+    <notebook>                
+        <page string="Pages du portrait" id="pages">
+            <label name="page9"/>
+            <field name="page9"/>
+            <label name="page11"/>
+            <field name="page11"/>
+            <label name="page17"/>
+            <field name="page17"/>
+            <label name="page19"/>
+            <field name="page19"/>
+            <label name="page21"/>
+            <field name="page21"/>
+            <label name="page33"/>
+            <field name="page33"/>
+            <label name="page71"/>
+            <field name="page71"/>
+        </page>
+    </notebook>
+</form>

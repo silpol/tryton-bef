@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Table 1">
+    <field name="cd_reg"/>
+    <field name="lb_adm_tr"/>
+    <field name="groupe_taxo"/>
+    <field name="nb_cd_ref"/>
+</tree>

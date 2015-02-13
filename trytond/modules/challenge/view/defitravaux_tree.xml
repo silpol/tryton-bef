@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="DEFI Travaux">        
+    <field name="groupe"/>
+    <field name="forest"/>
+    <field name="member"/>
+    <field name="code"/>
+    <field name="annee"/>
+    <field name="date"/>
+    <field name="party"/>
+    <field name="debit"/>
+    <field name="debitretenumember"/>
+    <field name="totmember"/>
+    <field name="totgroup"/>
+</tree>

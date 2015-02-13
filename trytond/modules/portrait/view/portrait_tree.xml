@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<tree string="Communes bénéficiant du Portrait">
+    <field name="commune" />
+</tree>

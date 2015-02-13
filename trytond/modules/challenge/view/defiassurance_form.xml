@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="DEFI Assurance">    
+    <label name="groupe"/>
+    <field name="groupe" widget="selection"/>
+    <label name="member"/>
+    <field name="member" widget="selection"/>
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="start_date"/>
+    <field name="start_date"/>
+    <label name="end_date"/>
+    <field name="end_date"/>
+</form>

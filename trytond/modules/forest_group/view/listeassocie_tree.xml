@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="Liste des associés par groupement forestier">
+    <field name="groupe"/>
+    <field name="member"/>                     
+    <field name="pp"/>
+    <field name="us"/>
+    <field name="np"/>
+</tree>

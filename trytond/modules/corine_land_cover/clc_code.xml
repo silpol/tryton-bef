@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="corine_land_cover.clc" id="1">
+            <field name="code">1</field>
+            <field name="name">Artificial surfaces</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">0</field>
+        </record>
+        <record model="corine_land_cover.clc" id="11">
+            <field name="code">11</field>
+            <field name="name">Urban fabric</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">0</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="corine_land_cover.clc" id="111">
+            <field name="code">111</field>
+            <field name="name">Continuous urban fabric</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">0</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="corine_land_cover.clc" id="112">
+            <field name="code">112</field>
+            <field name="name">Discontinuous urban fabric</field>
+            <field name="blue">0</field>
+            <field name="red">255</field>
+            <field name="green">0</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="corine_land_cover.clc" id="12">
+            <field name="code">12</field>
+            <field name="name">Industrial, commercial and transport units</field>
+            <field name="blue">242</field>
+            <field name="red">204</field>
+            <field name="green">77</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="corine_land_cover.clc" id="121">
+            <field name="code">121</field>
+            <field name="name">Industrial or commercial units</field>
+            <field name="blue">242</field>
+            <field name="red">204</field>
+            <field name="green">77</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="corine_land_cover.clc" id="122">
+            <field name="code">122</field>
+            <field name="name">Road and rail networks and associated land</field>
+            <field name="blue">0</field>
+            <field name="red">204</field>
+            <field name="green">0</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="corine_land_cover.clc" id="123">
+            <field name="code">123</field>
+            <field name="name">Port areas</field>
+            <field name="blue">204</field>
+            <field name="red">230</field>
+            <field name="green">204</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="corine_land_cover.clc" id="124">
+            <field name="code">124</field>
+            <field name="name">Airports</field>
+            <field name="blue">230</field>
+            <field name="red">230</field>
+            <field name="green">204</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="corine_land_cover.clc" id="13">
+            <field name="code">13</field>
+            <field name="name">Mine, dump and construction sites</field>
+            <field name="blue">204</field>
+            <field name="red">166</field>
+            <field name="green">0</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="corine_land_cover.clc" id="131">
+            <field name="code">131</field>
+            <field name="name">Mineral extraction sites</field>
+            <field name="blue">204</field>
+            <field name="red">166</field>
+            <field name="green">0</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="corine_land_cover.clc" id="132">
+            <field name="code">132</field>
+            <field name="name">Dump sites</field>
+            <field name="blue">0</field>
+            <field name="red">166</field>
+            <field name="green">77</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="corine_land_cover.clc" id="133">
+            <field name="code">133</field>
+            <field name="name">Construction sites</field>
+            <field name="blue">255</field>
+            <field name="red">255</field>
+            <field name="green">77</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="corine_land_cover.clc" id="14">
+            <field name="code">14</field>
+            <field name="name">Artificial, non-agricultural vegetated areas</field>
+            <field name="blue">255</field>
+            <field name="red">255</field>
+            <field name="green">166</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="corine_land_cover.clc" id="141">
+            <field name="code">141</field>
+            <field name="name">Green urban areas</field>
+            <field name="blue">255</field>
+            <field name="red">255</field>
+            <field name="green">166</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="corine_land_cover.clc" id="142">
+            <field name="code">142</field>
+            <field name="name">Sport and leisure facilities</field>
+            <field name="blue">255</field>
+            <field name="red">255</field>
+            <field name="green">230</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="corine_land_cover.clc" id="2">
+            <field name="code">2</field>
+            <field name="name">Agricultural areas</field>
+            <field name="blue">168</field>
+            <field name="red">255</field>
+            <field name="green">255</field>
+        </record>
+        <record model="corine_land_cover.clc" id="21">
+            <field name="code">21</field>
+            <field name="name">Arable land</field>
+            <field name="blue">168</field>
+            <field name="red">255</field>
+            <field name="green">255</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="corine_land_cover.clc" id="211">
+            <field name="code">211</field>
+            <field name="name">Non-irrigated arable land</field>
+            <field name="blue">168</field>
+            <field name="red">255</field>
+            <field name="green">255</field>
+            <field name="parent" ref="21"/>
+        </record>
+        <record model="corine_land_cover.clc" id="212">
+            <field name="code">212</field>
+            <field name="name">Permanently irrigated land</field>
+            <field name="blue">0</field>
+            <field name="red">255</field>
+            <field name="green">255</field>
+            <field name="parent" ref="21"/>
+        </record>
+        <record model="corine_land_cover.clc" id="213">
+            <field name="code">213</field>
+            <field name="name">Rice fields</field>
+            <field name="blue">0</field>
+            <field name="red">230</field>
+            <field name="green">230</field>
+            <field name="parent" ref="21"/>
+        </record>
+        <record model="corine_land_cover.clc" id="22">
+            <field name="code">22</field>
+            <field name="name">Permanent crops</field>
+            <field name="blue">0</field>
+            <field name="red">230</field>
+            <field name="green">128</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="corine_land_cover.clc" id="221">
+            <field name="code">221</field>
+            <field name="name">Vineyards</field>
+            <field name="blue">0</field>
+            <field name="red">230</field>
+            <field name="green">128</field>
+            <field name="parent" ref="22"/>
+        </record>
+        <record model="corine_land_cover.clc" id="222">
+            <field name="code">222</field>
+            <field name="name">Fruit trees and berry plantations</field>
+            <field name="blue">77</field>
+            <field name="red">242</field>
+            <field name="green">166</field>
+            <field name="parent" ref="22"/>
+        </record>
+        <record model="corine_land_cover.clc" id="223">
+            <field name="code">223</field>
+            <field name="name">Olive groves</field>
+            <field name="blue">0</field>
+            <field name="red">230</field>
+            <field name="green">166</field>
+            <field name="parent" ref="22"/>
+        </record>
+        <record model="corine_land_cover.clc" id="23">
+            <field name="code">23</field>
+            <field name="name">Pastures</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">230</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="corine_land_cover.clc" id="231">
+            <field name="code">231</field>
+            <field name="name">Pastures</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">230</field>
+            <field name="parent" ref="23"/>
+        </record>
+        <record model="corine_land_cover.clc" id="24">
+            <field name="code">24</field>
+            <field name="name">Heterogeneous agricultural areas</field>
+            <field name="blue">166</field>
+            <field name="red">255</field>
+            <field name="green">230</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="corine_land_cover.clc" id="241">
+            <field name="code">241</field>
+            <field name="name">Annual crops associated with permanent crops</field>
+            <field name="blue">166</field>
+            <field name="red">255</field>
+            <field name="green">230</field>
+            <field name="parent" ref="24"/>
+        </record>
+        <record model="corine_land_cover.clc" id="242">
+            <field name="code">242</field>
+            <field name="name">Complex cultivation patterns</field>
+            <field name="blue">77</field>
+            <field name="red">255</field>
+            <field name="green">230</field>
+            <field name="parent" ref="24"/>
+        </record>
+        <record model="corine_land_cover.clc" id="243">
+            <field name="code">243</field>
+            <field name="name">Land principally occupied by agriculture, with significant areas of natural vegetation</field>
+            <field name="blue">77</field>
+            <field name="red">230</field>
+            <field name="green">204</field>
+            <field name="parent" ref="24"/>
+        </record>
+        <record model="corine_land_cover.clc" id="244">
+            <field name="code">244</field>
+            <field name="name">Agro-forestry areasd</field>
+            <field name="blue">166</field>
+            <field name="red">242</field>
+            <field name="green">204</field>
+            <field name="parent" ref="24"/>
+        </record>
+        <record model="corine_land_cover.clc" id="3">
+            <field name="code">3</field>
+            <field name="name">Forest and semi natural areas</field>
+            <field name="blue">0</field>
+            <field name="red">128</field>
+            <field name="green">255</field>
+        </record>
+        <record model="corine_land_cover.clc" id="31">
+            <field name="code">31</field>
+            <field name="name">Forests</field>
+            <field name="blue">0</field>
+            <field name="red">128</field>
+            <field name="green">255</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="corine_land_cover.clc" id="311">
+            <field name="code">311</field>
+            <field name="name">Broad-leaved forest</field>
+            <field name="blue">0</field>
+            <field name="red">128</field>
+            <field name="green">255</field>
+            <field name="parent" ref="31"/>
+        </record>
+        <record model="corine_land_cover.clc" id="312">
+            <field name="code">312</field>
+            <field name="name">Coniferous forest</field>
+            <field name="blue">0</field>
+            <field name="red">0</field>
+            <field name="green">166</field>
+            <field name="parent" ref="31"/>
+        </record>
+        <record model="corine_land_cover.clc" id="313">
+            <field name="code">313</field>
+            <field name="name">Mixed forest</field>
+            <field name="blue">0</field>
+            <field name="red">77</field>
+            <field name="green">255</field>
+            <field name="parent" ref="31"/>
+        </record>
+        <record model="corine_land_cover.clc" id="32">
+            <field name="code">32</field>
+            <field name="name">Scrub and/or herbaceous vegetation associations</field>
+            <field name="blue">77</field>
+            <field name="red">204</field>
+            <field name="green">242</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="corine_land_cover.clc" id="321">
+            <field name="code">321</field>
+            <field name="name">Natural grasslands</field>
+            <field name="blue">77</field>
+            <field name="red">204</field>
+            <field name="green">242</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="corine_land_cover.clc" id="322">
+            <field name="code">322</field>
+            <field name="name">Moors and heathland</field>
+            <field name="blue">128</field>
+            <field name="red">166</field>
+            <field name="green">255</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="corine_land_cover.clc" id="323">
+            <field name="code">323</field>
+            <field name="name">Sclerophyllous vegetation</field>
+            <field name="blue">77</field>
+            <field name="red">166</field>
+            <field name="green">230</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="corine_land_cover.clc" id="324">
+            <field name="code">324</field>
+            <field name="name">Transitional woodland-shrub</field>
+            <field name="blue">0</field>
+            <field name="red">166</field>
+            <field name="green">242</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="corine_land_cover.clc" id="33">
+            <field name="code">33</field>
+            <field name="name">Open spaces with little or no vegetation</field>
+            <field name="blue">230</field>
+            <field name="red">230</field>
+            <field name="green">230</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="corine_land_cover.clc" id="331">
+            <field name="code">331</field>
+            <field name="name">Beaches, dunes, sands</field>
+            <field name="blue">230</field>
+            <field name="red">230</field>
+            <field name="green">230</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="corine_land_cover.clc" id="332">
+            <field name="code">332</field>
+            <field name="name">Bare rocks</field>
+            <field name="blue">204</field>
+            <field name="red">204</field>
+            <field name="green">204</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="corine_land_cover.clc" id="333">
+            <field name="code">333</field>
+            <field name="name">Sparsely vegetated areas</field>
+            <field name="blue">204</field>
+            <field name="red">204</field>
+            <field name="green">255</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="corine_land_cover.clc" id="334">
+            <field name="code">334</field>
+            <field name="name">Burnt areas</field>
+            <field name="blue">0</field>
+            <field name="red">0</field>
+            <field name="green">0</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="corine_land_cover.clc" id="335">
+            <field name="code">335</field>
+            <field name="name">Glaciers and perpetual snow</field>
+            <field name="blue">204</field>
+            <field name="red">166</field>
+            <field name="green">230</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="corine_land_cover.clc" id="4">
+            <field name="code">4</field>
+            <field name="name">Wetlands</field>
+            <field name="blue">255</field>
+            <field name="red">166</field>
+            <field name="green">166</field>
+        </record>
+        <record model="corine_land_cover.clc" id="41">
+            <field name="code">41</field>
+            <field name="name">Inland wetlands</field>
+            <field name="blue">255</field>
+            <field name="red">166</field>
+            <field name="green">166</field>
+            <field name="parent" ref="4"/>
+        </record>
+        <record model="corine_land_cover.clc" id="411">
+            <field name="code">411</field>
+            <field name="name">Inland marshes</field>
+            <field name="blue">255</field>
+            <field name="red">166</field>
+            <field name="green">166</field>
+            <field name="parent" ref="41"/>
+        </record>
+        <record model="corine_land_cover.clc" id="412">
+            <field name="code">412</field>
+            <field name="name">Peat bogs</field>
+            <field name="blue">255</field>
+            <field name="red">77</field>
+            <field name="green">77</field>
+            <field name="parent" ref="41"/>
+        </record>
+        <record model="corine_land_cover.clc" id="42">
+            <field name="code">42</field>
+            <field name="name">Maritime wetlands</field>
+            <field name="blue">255</field>
+            <field name="red">204</field>
+            <field name="green">204</field>
+            <field name="parent" ref="4"/>
+        </record>
+        <record model="corine_land_cover.clc" id="421">
+            <field name="code">421</field>
+            <field name="name">Salt marshes</field>
+            <field name="blue">255</field>
+            <field name="red">204</field>
+            <field name="green">204</field>
+            <field name="parent" ref="42"/>
+        </record>
+        <record model="corine_land_cover.clc" id="422">
+            <field name="code">422</field>
+            <field name="name">Salines</field>
+            <field name="blue">255</field>
+            <field name="red">230</field>
+            <field name="green">230</field>
+            <field name="parent" ref="42"/>
+        </record>
+        <record model="corine_land_cover.clc" id="423">
+            <field name="code">423</field>
+            <field name="name">Intertidal flats</field>
+            <field name="blue">230</field>
+            <field name="red">166</field>
+            <field name="green">166</field>
+            <field name="parent" ref="42"/>
+        </record>
+        <record model="corine_land_cover.clc" id="5">
+            <field name="code">5</field>
+            <field name="name">Water bodies</field>
+            <field name="blue">242</field>
+            <field name="red">0</field>
+            <field name="green">204</field>
+        </record>
+        <record model="corine_land_cover.clc" id="51">
+            <field name="code">51</field>
+            <field name="name">Inland waters</field>
+            <field name="blue">242</field>
+            <field name="red">0</field>
+            <field name="green">204</field>
+            <field name="parent" ref="5"/>
+        </record>
+        <record model="corine_land_cover.clc" id="511">
+            <field name="code">511</field>
+            <field name="name">Water courses</field>
+            <field name="blue">242</field>
+            <field name="red">0</field>
+            <field name="green">204</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="corine_land_cover.clc" id="512">
+            <field name="code">512</field>
+            <field name="name">Water bodies</field>
+            <field name="blue">230</field>
+            <field name="red">128</field>
+            <field name="green">242</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="corine_land_cover.clc" id="52">
+            <field name="code">52</field>
+            <field name="name">Marine waters</field>
+            <field name="blue">166</field>
+            <field name="red">0</field>
+            <field name="green">255</field>
+            <field name="parent" ref="5"/>
+        </record>
+        <record model="corine_land_cover.clc" id="521">
+            <field name="code">521</field>
+            <field name="name">Coastal lagoons</field>
+            <field name="blue">166</field>
+            <field name="red">0</field>
+            <field name="green">255</field>
+            <field name="parent" ref="52"/>
+        </record>
+        <record model="corine_land_cover.clc" id="522">
+            <field name="code">522</field>
+            <field name="name">Estuaries</field>
+            <field name="blue">230</field>
+            <field name="red">166</field>
+            <field name="green">255</field>
+            <field name="parent" ref="52"/>
+        </record>
+        <record model="corine_land_cover.clc" id="523">
+            <field name="code">523</field>
+            <field name="name">Sea and ocean</field>
+            <field name="blue">255</field>
+            <field name="red">230</field>
+            <field name="green">242</field>
+            <field name="parent" ref="52"/>
+        </record>        
+    </data>
+</tryton>

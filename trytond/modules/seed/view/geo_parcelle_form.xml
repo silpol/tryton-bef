@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form string="geo_parcelle" col="2">
+    <notebook colspan="6">        
+        <page string="Map" id="map" col="2">
+            <group col="2" colspan="6" id="group1">
+                <label name="tex"/>
+                <field name="tex"/>
+                <label name="garden"/>
+                <field name="garden"/>
+                <label name="details" />
+                <field name="details" widget="selection" />
+                <label name="surfpar" />
+                <field name="surfpar" />
+            </group>                         
+            <field name="plot_image" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <field name="plot_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="geo_parcelle_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+        <page string="Photo" id="photo">
+            <group col="2" colspan="6" id="group2">
+                <label name="tex"/>
+                <field name="tex"/>
+                <label name="garden"/>
+                <field name="garden"/>
+            </group>                                                                      
+            <field name="photo" colspan="6" widget="image" img_width="640" img_height="480"/>                                    
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="GGD garanty" col="2">
+    <label name="enabled"/>
+    <field name="enabled"/>
+    <label name="departement"/>
+    <field name="departement" widget="selection"/>
+    <label name="typo"/>
+    <field name="typo"/>
+    <label name="ggd_no"/>
+    <field name="ggd_no"/>
+    <label name="date"/>
+    <field name="date"/>
+    <label name="duration"/>
+    <field name="duration"/>
+    <label name="date_fin"/>
+    <field name="date_fin"/>
+    <label name="validity"/>
+    <field name="validity"/>
+    <label name="surface"/>
+    <field name="surface"/>
+</form>     

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        
+        <!-- Aires urbaines 2010 -->
+        <record model="ir.ui.view" id="aireurbaine_view_tree">
+            <field name="model">portrait.aireurbaine</field>
+            <field name="type">tree</field>
+            <field name="name">aireurbaine_tree</field>
+        </record>
+        <record model="ir.ui.view" id="aireurbaine_view_form">
+            <field name="model">portrait.aireurbaine</field>
+            <field name="type">form</field>
+            <field name="name">aireurbaine_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_aireurbaine_form">
+            <field name="name">Aires urbaines 2010</field>
+            <field name="res_model">portrait.aireurbaine</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_aireurbaine_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="aireurbaine_view_tree"/>
+            <field name="act_window" ref="act_aireurbaine_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_aireurbaine_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="aireurbaine_view_form"/>
+            <field name="act_window" ref="act_aireurbaine_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_territoire" id="menu_aireurbaine_form" icon="tryton-list" action="act_aireurbaine_form"/>        
+
+    </data>
+</tryton>

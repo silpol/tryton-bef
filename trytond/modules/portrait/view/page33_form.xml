@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<form string="Mieux connaître les milieux artificialisés...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>
+    <notebook>
+        <page string="Aires urbaines 2010" id="aire" col="2">
+            <label name="aireurbaine"/>
+            <field name="aireurbaine"/>           
+        </page>
+        <page string="Part artificialisée" id="artif"  col="1">
+            <field name="page33_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate33_01"  name="generate33_01" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="Part non artificialisée" id="artif"  col="1">
+            <field name="page33_02_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate33_02"  name="generate33_02" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="Données carroyées INSEE" id="insee"  col="1">
+            <field name="page33_03_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate33_03"  name="generate33_03" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="Aires urbaines" id="aireurbaine"  col="1">
+            <field name="page33_04_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate33_04"  name="generate33_04" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page33_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate33_empty"  name="generate33_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Revenus fonciers">
+    <field name="date" />
+    <field name="annee" />
+    <field name="name" />
+    <field name="montant" />
+</tree>

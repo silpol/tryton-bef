@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form string="La biodiversite et ses multiples facettes sur votre commune" col="4">
+    <label name="portrait" xalign="0"/>
+    <field name="portrait" xalign="20" colspan="3"/>
+    <notebook>
+        <page string="ZONES" id="zone" col="2">
+            <label name="frt_dom"/>
+            <field name="frt_dom"/>
+            <label name="frt_ndom"/>
+            <field name="frt_ndom"/>
+            <label name="frt_aut"/>
+            <field name="frt_aut"/>           
+            <field name="foret" colspan="2"/>
+            <field name="geom"/>
+        </page>
+        <page string="GÉNÉRAL" id="general" col="1">            
+            <field name="page9_all_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate9_all"  name="generate9_all" icon="tryton-executable" />            
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page9_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate9_empty"  name="generate9_empty" icon="tryton-executable" />            
+        </page>
+    </notebook>
+</form>

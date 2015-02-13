@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Table 1">
+    <field name="cd_dep"/>
+    <field name="cd_insee"/>
+    <field name="groupe_taxo"/>
+    <field name="cd_ref"/>
+    <field name="lb_nom"/>
+    <field name="statut_reglementation"/>
+    <field name="statut_protection"/>
+    <field name="permalien_cd_ref"/>
+</tree>

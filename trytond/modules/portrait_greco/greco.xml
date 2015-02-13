@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>  
+        <!-- GRECO -->      
+        <record model="ir.ui.view" id="portrait_greco_view_tree">
+            <field name="model">portrait.greco</field>
+            <field name="type">tree</field>
+            <field name="name">greco_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_greco_view_form">
+            <field name="model">portrait.greco</field>
+            <field name="type">form</field>
+            <field name="name">greco_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_greco_form">
+            <field name="name">GRECO</field>
+            <field name="res_model">portrait.greco</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_greco_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_greco_view_tree"/>
+            <field name="act_window" ref="act_portrait_greco_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_greco_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_greco_view_form"/>
+            <field name="act_window" ref="act_portrait_greco_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_greco_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.greco</field>
+            <field name="report_name">portrait.greco.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_greco_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.greco,-1</field>
+            <field name="action" ref="report_portrait_greco_edit"/>
+        </record> 
+        <menuitem parent="portrait_ser.menu_ifn" sequence="1" id="menu_portrait_greco_form" icon="tryton-list" action="act_portrait_greco_form"/>
+
+        <!-- Code GRECO -->      
+        <record model="ir.ui.view" id="portrait_codegreco_view_tree">
+            <field name="model">portrait.codegreco</field>
+            <field name="type">tree</field>
+            <field name="name">codegreco_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_codegreco_view_form">
+            <field name="model">portrait.codegreco</field>
+            <field name="type">form</field>
+            <field name="name">codegreco_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_codegreco_form">
+            <field name="name">Code GRECO</field>
+            <field name="res_model">portrait.codegreco</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codegreco_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_codegreco_view_tree"/>
+            <field name="act_window" ref="act_portrait_codegreco_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_codegreco_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_codegreco_view_form"/>
+            <field name="act_window" ref="act_portrait_codegreco_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_codegreco_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.codegreco</field>
+            <field name="report_name">portrait.codegreco.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_codegreco_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.codegreco,-1</field>
+            <field name="action" ref="report_portrait_codegreco_edit"/>
+        </record> 
+        <menuitem parent="portrait_ser.menu_ifn_codes" sequence="1" id="menu_portrait_codegreco_form" icon="tryton-list" action="act_portrait_codegreco_form"/>
+                
+    </data>
+</tryton>

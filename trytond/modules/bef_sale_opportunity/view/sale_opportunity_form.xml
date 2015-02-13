@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/form/notebook/page[@id=&quot;opportunity&quot;]/separator[@name=&quot;comment&quot;]" position="replace">
+    </xpath>                
+    <xpath
+        expr="/form/notebook/page[@id=&quot;opportunity&quot;]/field[@name=&quot;comment&quot;]" position="replace">
+        <notebook>
+            <page string="Comment" id="comment">
+                <label name="date_comment"/>
+                <field name="date_comment"/>
+                <newline/>
+                <field name="comment" colspan="2"/>
+            </page>
+            <page string="Contacts" id="contacts">
+                <field name="contacts"/>
+            </page>
+        </notebook>
+    </xpath>                                       
+</data>

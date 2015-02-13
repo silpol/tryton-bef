@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Party">
+    <field name="name"/>
+    <field name="pefc"/>
+    <field name="ggd"/>
+</tree>

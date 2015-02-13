@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Page2" col="1">
+    <label name="portrait" xalign="0"/>
+    <field name="portrait"/>
+    <label name="page2" xalign="0"/>
+    <field name="page2"/>
+</form>

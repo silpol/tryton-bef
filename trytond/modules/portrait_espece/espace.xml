@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <menuitem parent="portrait_commune.menu_portrait_admin" name="Portrait Espace" id="menu_portrait_admin_espace"/>
+        
+        <!-- Table A -->
+        <record model="ir.ui.view" id="tablea_view_tree">
+            <field name="model">portrait.tablea</field>
+            <field name="type">tree</field>
+            <field name="name">tablea_tree</field>
+        </record>
+        <record model="ir.ui.view" id="tablea_view_form">
+            <field name="model">portrait.tablea</field>
+            <field name="type">form</field>
+            <field name="name">tablea_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_tablea_form">
+            <field name="name">Présence d'espaces protégés et gérés par commune</field>
+            <field name="res_model">portrait.tablea</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tablea_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tablea_view_tree"/>
+            <field name="act_window" ref="act_tablea_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tablea_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tablea_view_form"/>
+            <field name="act_window" ref="act_tablea_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espace" id="menu_tablea_form" icon="tryton-list" action="act_tablea_form"/>
+
+        <!-- Table B -->
+        <record model="ir.ui.view" id="tableb_view_tree">
+            <field name="model">portrait.tableb</field>
+            <field name="type">tree</field>
+            <field name="name">tableb_tree</field>
+        </record>
+        <record model="ir.ui.view" id="tableb_view_form">
+            <field name="model">portrait.tableb</field>
+            <field name="type">form</field>
+            <field name="name">tableb_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_tableb_form">
+            <field name="name">Présence de ZNIEFF par commune</field>
+            <field name="res_model">portrait.tableb</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tableb_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tableb_view_tree"/>
+            <field name="act_window" ref="act_tableb_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tableb_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tableb_view_form"/>
+            <field name="act_window" ref="act_tableb_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espace" id="menu_tableb_form" icon="tryton-list" action="act_tableb_form"/>
+
+        <!-- Table C -->
+        <record model="ir.ui.view" id="tablec_view_tree">
+            <field name="model">portrait.tablec</field>
+            <field name="type">tree</field>
+            <field name="name">tablec_tree</field>
+        </record>
+        <record model="ir.ui.view" id="tablec_view_form">
+            <field name="model">portrait.tablec</field>
+            <field name="type">form</field>
+            <field name="name">tablec_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_tablec_form">
+            <field name="name">Présence de sites Natura 2000 par commune (SIC/ZPS)</field>
+            <field name="res_model">portrait.tablec</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tablec_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tablec_view_tree"/>
+            <field name="act_window" ref="act_tablec_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tablec_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tablec_view_form"/>
+            <field name="act_window" ref="act_tablec_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espace" id="menu_tablec_form" icon="tryton-list" action="act_tablec_form"/>
+
+        <!-- Table D -->
+        <record model="ir.ui.view" id="tabled_view_tree">
+            <field name="model">portrait.tabled</field>
+            <field name="type">tree</field>
+            <field name="name">tabled_tree</field>
+        </record>
+        <record model="ir.ui.view" id="tabled_view_form">
+            <field name="model">portrait.tabled</field>
+            <field name="type">form</field>
+            <field name="name">tabled_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_tabled_form">
+            <field name="name">Présence de sites archéozoologiques et archéobotaniques par commune</field>
+            <field name="res_model">portrait.tabled</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tabled_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tabled_view_tree"/>
+            <field name="act_window" ref="act_tabled_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tabled_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tabled_view_form"/>
+            <field name="act_window" ref="act_tabled_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin_espace" id="menu_tabled_form" icon="tryton-list" action="act_tabled_form"/>
+    </data>
+</tryton>

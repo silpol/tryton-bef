@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+   
+        <record model="ir.ui.icon" id="seed_garden">
+            <field name="name">tryton-garden</field>
+            <field name="path">icons/tryton-garden.svg</field>
+        </record>    
+        <record model="ir.ui.icon" id="seed_codes">
+            <field name="name">tryton-codes</field>
+            <field name="path">icons/tryton-codes.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="seed_parcelle">
+            <field name="name">tryton-parcelle</field>
+            <field name="path">icons/tryton-parcelle.svg</field>
+        </record>            
+
+        <menuitem name="Garden" id="menu_seed" icon="tryton-garden"/>
+        <menuitem parent="menu_seed" sequence="0" name="Configuration" id="menu_seed_configuration" icon="tryton-preferences"/>
+
+        <!-- taxinomie -->
+        <record model="ir.ui.view" id="seed_taxinomie_view_form">
+            <field name="model">taxinomie.taxinomie</field>
+            <field name="inherit" ref="taxinomie.taxinomie_view_form" />       
+            <field name="name">taxinomie_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="seed_taxinomie_view_tree">
+            <field name="model">taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">seed_taxinomie_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_seed_taxinomie_form">
+            <field name="name">Taxinomie</field>
+            <field name="res_model">taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_taxinomie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="seed_taxinomie_view_tree"/>
+            <field name="act_window" ref="act_seed_taxinomie_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_taxinomie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="seed_taxinomie_view_form"/>
+            <field name="act_window" ref="act_seed_taxinomie_form"/>
+        </record>
+        
+        <!-- garden -->
+        <record model="ir.ui.view" id="seed_garden_view_tree">
+            <field name="model">seed.garden</field>
+            <field name="type">tree</field>
+            <field name="name">garden_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="seed_garden_view_form">
+            <field name="model">seed.garden</field>
+            <field name="type">form</field>
+            <field name="name">garden_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_seed_garden_form">
+            <field name="name">Garden</field>
+            <field name="res_model">seed.garden</field></record>
+
+        <record model="ir.action.act_window.view" id="act_seed_garden_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="seed_garden_view_tree"/>
+            <field name="act_window" ref="act_seed_garden_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_seed_garden_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="seed_garden_view_form"/>
+            <field name="act_window" ref="act_seed_garden_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_garden_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">seed.garden</field>
+            <field name="report_name">seed.garden.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_garden_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">seed.garden,-1</field>
+            <field name="action" ref="report_garden_edit"/>
+        </record>
+
+        <record model="ir.action.report" id="report_garden">
+            <field name="name">Fiche jardin</field>
+            <field name="model">seed.garden</field>
+            <field name="report_name">seed.garden</field>
+            <field name="report">seed/garden.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="report_seed_garden">
+            <field name="keyword">form_print</field>
+            <field name="model">seed.garden,-1</field>
+            <field name="action" ref="report_garden"/>
+        </record> 
+
+        <menuitem parent="menu_seed" id="menu_seed_garden_form" icon="tryton-garden" action="act_seed_garden_form"/>        
+
+
+        <!-- code -->	
+        <record model="ir.ui.view" id="seed_code_view_tree">
+            <field name="model">seed.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="seed_code_view_form">
+            <field name="model">seed.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_seed_code_form">
+            <field name="name">Code garden</field>
+            <field name="res_model">seed.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="seed_code_view_tree"/>
+            <field name="act_window" ref="act_seed_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="seed_code_view_form"/>
+            <field name="act_window" ref="act_seed_code_form"/>
+        </record>
+        
+        <menuitem parent="menu_seed_configuration" id="menu_seed_code_form" icon="tryton-codes" action="act_seed_code_form"/>
+
+        <!-- typo garden -->
+        <record model="ir.ui.view" id="typo_garden_view_form">
+            <field name="model">seed.typo_garden</field>
+            <field name="type">form</field>
+            <field name="name">typo_garden_form</field>
+        </record>
+
+	    <record model="ir.ui.view" id="typo_garden_view_tree">
+		    <field name="model">seed.typo_garden</field>
+		    <field name="type">tree</field>
+            <field name="field_childs">childs</field>
+		    <field name="name">typo_garden_tree</field>
+        </record>
+        <record model="ir.ui.view" id="typo_garden_view_list">
+            <field name="model">seed.typo_garden</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="10"/>
+            <field name="name">typo_garden_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_typo_garden_tree">
+            <field name="name">Typo garden</field>
+            <field name="res_model">seed.typo_garden</field>
+            <field name="domain">[('parent', '=', False)]</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_typo_garden_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="typo_garden_view_tree"/>
+            <field name="act_window" ref="act_typo_garden_tree"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_typo_garden_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="typo_garden_view_form"/>
+            <field name="act_window" ref="act_typo_garden_tree"/>
+        </record>
+
+        <menuitem parent="menu_seed_configuration" id="menu_typo_garden_tree" icon="tryton-codes" action="act_typo_garden_tree"/>
+
+        <record model="ir.action.act_window" id="act_typo_garden_list">
+            <field name="name">Typo garden</field>
+            <field name="res_model">seed.typo_garden</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_typo_garden_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="typo_garden_view_list"/>
+            <field name="act_window" ref="act_typo_garden_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_typo_garden_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="typo_garden_view_form"/>
+            <field name="act_window" ref="act_typo_garden_list"/>
+        </record>
+
+        <menuitem parent="menu_typo_garden_tree" id="menu_typo_garden_list" icon="tryton-list" action="act_typo_garden_list"/>
+
+        <!-- geo parcelle -->
+        <record model="ir.ui.view" id="seed_geo_parcelle_view_tree">
+            <field name="model">seed.geo_parcelle</field>
+            <field name="type">tree</field>
+            <field name="name">geo_parcelle_tree</field>
+        </record>
+        <record model="ir.ui.view" id="seed_geo_parcelle_view_form">
+            <field name="model">seed.geo_parcelle</field>
+            <field name="type">form</field>
+            <field name="name">geo_parcelle_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_seed_geo_parcelle_form">
+            <field name="name">Parcelle garden</field>
+            <field name="res_model">seed.geo_parcelle</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_geo_parcelle_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="seed_geo_parcelle_view_tree"/>
+            <field name="act_window" ref="act_seed_geo_parcelle_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_geo_parcelle_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="seed_geo_parcelle_view_form"/>
+            <field name="act_window" ref="act_seed_geo_parcelle_form"/>
+        </record>
+        <record model="ir.action.report" id="report_geo_parcelle_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">seed.geo_parcelle</field>
+            <field name="report_name">seed.geo_parcelle.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_geo_parcelle_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">seed.geo_parcelle,-1</field>
+            <field name="action" ref="report_geo_parcelle_edit"/>
+        </record>
+        
+        <menuitem parent="menu_seed" id="menu_seed_geo_parcelle_form" icon="tryton-parcelle" action="act_seed_geo_parcelle_form"/> 
+
+        <!-- garden production-->
+        <record model="ir.ui.view" id="seed_garden_production_view_tree">
+            <field name="model">seed.garden-taxinomie.taxinomie</field>
+            <field name="type">tree</field>
+            <field name="name">garden_production_tree</field>
+        </record>
+        <record model="ir.ui.view" id="seed_garden_production_view_form">
+            <field name="model">seed.garden-taxinomie.taxinomie</field>
+            <field name="type">form</field>
+            <field name="name">garden_production_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_seed_garden_production_form">
+            <field name="name">Garden production</field>
+            <field name="res_model">seed.garden-taxinomie.taxinomie</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_garden_production_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="seed_garden_production_view_tree"/>
+            <field name="act_window" ref="act_seed_garden_production_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_seed_garden_production_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="seed_garden_production_view_form"/>
+            <field name="act_window" ref="act_seed_garden_production_form"/>
+        </record>
+        
+        <menuitem parent="menu_seed" id="menu_seed_garden_production_form" icon="tryton-graph" action="act_seed_garden_production_form"/>
+    </data>
+</tryton>

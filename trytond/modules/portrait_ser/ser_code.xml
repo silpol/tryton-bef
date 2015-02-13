@@ -1,0 +1,607 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="portrait.codeser" id="1">
+            <field name="code">A11</field>
+            <field name="name">Ouest-Bretagne et Nord-Cotentin</field>
+            <field name="r">2</field>
+            <field name="v">83</field>
+            <field name="b">158</field>
+        </record>
+        <record model="portrait.codeser" id="2">
+            <field name="code">A12</field>
+            <field name="name">Pays de Saint-Malo</field>
+            <field name="r">50</field>
+            <field name="v">158</field>
+            <field name="b">112</field>
+        </record>
+        <record model="portrait.codeser" id="3">
+            <field name="code">A13</field>
+            <field name="name">Bocage normand et Pays de Fougères</field>
+            <field name="r">230</field>
+            <field name="v">206</field>
+            <field name="b">107</field>
+        </record>
+        <record model="portrait.codeser" id="4">
+            <field name="code">A21</field>
+            <field name="name">Bretagne méridionale</field>
+            <field name="r">233</field>
+            <field name="v">222</field>
+            <field name="b">176</field>
+        </record>
+        <record model="portrait.codeser" id="5">
+            <field name="code">A22</field>
+            <field name="name">Bocage armoricain</field>
+            <field name="r">232</field>
+            <field name="v">88</field>
+            <field name="b">111</field>
+        </record>
+        <record model="portrait.codeser" id="6">
+            <field name="code">A30</field>
+            <field name="name">Bocage vendéen</field>
+            <field name="r">217</field>
+            <field name="v">238</field>
+            <field name="b">244</field>
+        </record>
+        <record model="portrait.codeser" id="7">
+            <field name="code">B10</field>
+            <field name="name">Côtes et plateaux de la Manche</field>
+            <field name="r">246</field>
+            <field name="v">249</field>
+            <field name="b">235</field>
+        </record>       
+        <record model="portrait.codeser" id="8">
+            <field name="code">B21</field>
+            <field name="name">Flandres</field>
+            <field name="r">195</field>
+            <field name="v">141</field>
+            <field name="b">155</field>
+        </record> 
+        <record model="portrait.codeser" id="9">
+            <field name="code">B22</field>
+            <field name="name">Plaine picarde</field>
+            <field name="r">160</field>
+            <field name="v">166</field>
+            <field name="b">174</field>
+        </record>
+        <record model="portrait.codeser" id="10">
+            <field name="code">B23</field>
+            <field name="name">Mosan, Thiérache et Hainaut</field>
+            <field name="r">113</field>
+            <field name="v">166</field>
+            <field name="b">64</field>
+        </record>
+        <record model="portrait.codeser" id="11">
+            <field name="code">B31</field>
+            <field name="name">Campagne de Caen et Pays d'Auge</field>
+            <field name="r">212</field>
+            <field name="v">200</field>
+            <field name="b">224</field>
+        </record>
+        <record model="portrait.codeser" id="12">
+            <field name="code">B32</field>
+            <field name="name">Plateaux de l'Eure</field>
+            <field name="r">170</field>
+            <field name="v">123</field>
+            <field name="b">88</field>
+        </record>
+        <record model="portrait.codeser" id="13">
+            <field name="code">B33</field>
+            <field name="name">Perche</field>
+            <field name="r">250</field>
+            <field name="v">219</field>
+            <field name="b">218</field>
+        </record>
+        <record model="portrait.codeser" id="14">
+            <field name="code">B41</field>
+            <field name="name">Bassin parisien tertiaire</field>
+            <field name="r">183</field>
+            <field name="v">209</field>
+            <field name="b">114</field>
+        </record>
+        <record model="portrait.codeser" id="15">
+            <field name="code">B42</field>
+            <field name="name">Brie et Tardenois</field>
+            <field name="r">244</field>
+            <field name="v">242</field>
+            <field name="b">185</field>
+        </record>
+        <record model="portrait.codeser" id="16">
+            <field name="code">B43</field>
+            <field name="name">Champagne crayeuse</field>
+            <field name="r">208</field>
+            <field name="v">187</field>
+            <field name="b">154</field>
+        </record>
+        <record model="portrait.codeser" id="17">
+            <field name="code">B44</field>
+            <field name="name">Beauce</field>
+            <field name="r">181</field>
+            <field name="v">143</field>
+            <field name="b">187</field>
+        </record>
+        <record model="portrait.codeser" id="18">
+            <field name="code">B51</field>
+            <field name="name">Champagne humide</field>
+            <field name="r">212</field>
+            <field name="v">236</field>
+            <field name="b">239</field>
+        </record>
+        <record model="portrait.codeser" id="19">
+            <field name="code">B52</field>
+            <field name="name">Pays d'Othe et Gatinais oriental</field>
+            <field name="r">205</field>
+            <field name="v">113</field>
+            <field name="b">153</field>
+        </record>
+        <record model="portrait.codeser" id="20">
+            <field name="code">B53</field>
+            <field name="name">Pays-Fort, Nivernais et plaines prémorvandelles</field>
+            <field name="r">59</field>
+            <field name="v">187</field>
+            <field name="b">232</field>
+        </record>
+        <record model="portrait.codeser" id="21">
+            <field name="code">B61</field>
+            <field name="name">Baugeois-Maine</field>
+            <field name="r">91</field>
+            <field name="v">53</field>
+            <field name="b">43</field>
+        </record>
+        <record model="portrait.codeser" id="22">
+            <field name="code">B62</field>
+            <field name="name">Champeigne-Gâtine tourangelle</field>
+            <field name="r">235</field>
+            <field name="v">109</field>
+            <field name="b">29</field>
+        </record>
+        <record model="portrait.codeser" id="23">
+            <field name="code">B70</field>
+            <field name="name">Sologne-Orléanais</field>
+            <field name="r">227</field>
+            <field name="v">203</field>
+            <field name="b">105</field>
+        </record>
+        <record model="portrait.codeser" id="24">
+            <field name="code">B81</field>
+            <field name="name">Loudunais et Saumurois</field>
+            <field name="r">250</field>
+            <field name="v">240</field>
+            <field name="b">146</field>
+        </record>
+        <record model="portrait.codeser" id="25">
+            <field name="code">B82</field>
+            <field name="name">Brenne et Brandes</field>
+            <field name="r">208</field>
+            <field name="v">211</field>
+            <field name="b">202</field>
+        </record>
+        <record model="portrait.codeser" id="26">
+            <field name="code">B91</field>
+            <field name="name">Boischaut et Champagne berrichonne</field>
+            <field name="r">58</field>
+            <field name="v">71</field>
+            <field name="b">149</field>
+        </record>
+        <record model="portrait.codeser" id="27">
+            <field name="code">B92</field>
+            <field name="name">Bourbonnais et Charolais</field>
+            <field name="r">163</field>
+            <field name="v">73</field>
+            <field name="b">36</field>
+        </record>
+        <record model="portrait.codeser" id="28">
+            <field name="code">C11</field>
+            <field name="name">Ardenne primaire</field>
+            <field name="r">59</field>
+            <field name="v">138</field>
+            <field name="b">197</field>
+        </record>
+        <record model="portrait.codeser" id="29">
+            <field name="code">C12</field>
+            <field name="name">Argonne</field>
+            <field name="r">145</field>
+            <field name="v">90</field>
+            <field name="b">71</field>
+        </record>
+        <record model="portrait.codeser" id="30">
+            <field name="code">C20</field>
+            <field name="name">Plateaux calcaires du Nord-Est</field>
+            <field name="r">246</field>
+            <field name="v">172</field>
+            <field name="b">101</field>
+        </record>
+        <record model="portrait.codeser" id="31">
+            <field name="code">C30</field>
+            <field name="name">Plaines et dépressions argileuses du Nord-Est</field>
+            <field name="r">178</field>
+            <field name="v">178</field>
+            <field name="b">214</field>
+        </record>
+        <record model="portrait.codeser" id="32">
+            <field name="code">C41</field>
+            <field name="name">Plaine d'Alsace</field>
+            <field name="r">173</field>
+            <field name="v">153</field>
+            <field name="b">30</field>
+        </record>
+        <record model="portrait.codeser" id="33">
+            <field name="code">C42</field>
+            <field name="name">Sundgau alsacien et belfortain</field>
+            <field name="r">110</field>
+            <field name="v">197</field>
+            <field name="b">215</field>
+        </record>
+        <record model="portrait.codeser" id="34">
+            <field name="code">C51</field>
+            <field name="name">Saône, Bresse et Dombes</field>
+            <field name="r">141</field>
+            <field name="v">178</field>
+            <field name="b">92</field>
+        </record>
+        <record model="portrait.codeser" id="35">
+            <field name="code">C52</field>
+            <field name="name">Plaines et piémonts alpins</field>
+            <field name="r">237</field>
+            <field name="v">226</field>
+            <field name="b">218</field>
+        </record>
+        <record model="portrait.codeser" id="36">
+            <field name="code">D11</field>
+            <field name="name">Massif vosgien central</field>
+            <field name="r">90</field>
+            <field name="v">171</field>
+            <field name="b">38</field>
+        </record>
+        <record model="portrait.codeser" id="37">
+            <field name="code">D12</field>
+            <field name="name">Collines périvosgiennes et Warndt</field>
+            <field name="r">244</field>
+            <field name="v">234</field>
+            <field name="b">111</field>
+        </record>
+        <record model="portrait.codeser" id="38">
+            <field name="code">E10</field>
+            <field name="name">Premier plateau du Jura</field>
+            <field name="r">235</field>
+            <field name="v">126</field>
+            <field name="b">142</field>
+        </record>
+        <record model="portrait.codeser" id="39">
+            <field name="code">E20</field>
+            <field name="name">Deuxième plateau et Haut-Jura</field>
+            <field name="r">107</field>
+            <field name="v">176</field>
+            <field name="b">144</field>
+        </record>
+        <record model="portrait.codeser" id="40">
+            <field name="code">F11</field>
+            <field name="name">Terres rouges</field>
+            <field name="r">166</field>
+            <field name="v">60</field>
+            <field name="b">66</field>
+        </record>
+        <record model="portrait.codeser" id="41">
+            <field name="code">F12</field>
+            <field name="name">Groies</field>
+            <field name="r">152</field>
+            <field name="v">177</field>
+            <field name="b">106</field>
+        </record>
+        <record model="portrait.codeser" id="42">
+            <field name="code">F13</field>
+            <field name="name">Marais littoraux</field>
+            <field name="r">178</field>
+            <field name="v">213</field>
+            <field name="b">162</field>
+        </record>
+        <record model="portrait.codeser" id="43">
+            <field name="code">F14</field>
+            <field name="name">Champagne charentaise</field>
+            <field name="r">134</field>
+            <field name="v">105</field>
+            <field name="b">95</field>
+        </record>
+        <record model="portrait.codeser" id="44">
+            <field name="code">F15</field>
+            <field name="name">Périgord</field>
+            <field name="r">249</field>
+            <field name="v">236</field>
+            <field name="b">107</field>
+        </record>
+        <record model="portrait.codeser" id="45">
+            <field name="code">F21</field>
+            <field name="name">Landes de Gascogne</field>
+            <field name="r">132</field>
+            <field name="v">25</field>
+            <field name="b">122</field>
+        </record>
+        <record model="portrait.codeser" id="46">
+            <field name="code">F22</field>
+            <field name="name">Dunes atlantiques</field>
+            <field name="r">195</field>
+            <field name="v">190</field>
+            <field name="b">114</field>
+        </record>
+        <record model="portrait.codeser" id="47">
+            <field name="code">F23</field>
+            <field name="name">Bazadais, Double et Landais</field>
+            <field name="r">220</field>
+            <field name="v">0</field>
+            <field name="b">58</field>
+        </record>
+        <record model="portrait.codeser" id="48">
+            <field name="code">F30</field>
+            <field name="name">Coteaux de la Garonne</field>
+            <field name="r">81</field>
+            <field name="v">172</field>
+            <field name="b">215</field>
+        </record>
+        <record model="portrait.codeser" id="49">
+            <field name="code">F40</field>
+            <field name="name">Causses du Sud-Ouest</field>
+            <field name="r">153</field>
+            <field name="v">207</field>
+            <field name="b">186</field>
+        </record>
+        <record model="portrait.codeser" id="50">
+            <field name="code">F51</field>
+            <field name="name">Adour atlantique</field>
+            <field name="r">76</field>
+            <field name="v">120</field>
+            <field name="b">182</field>
+        </record>
+        <record model="portrait.codeser" id="51">
+            <field name="code">F52</field>
+            <field name="name">Collines de l'Adour</field>
+            <field name="r">242</field>
+            <field name="v">223</field>
+            <field name="b">33</field>
+        </record>
+        <record model="portrait.codeser" id="52">
+            <field name="code">G11</field>
+            <field name="name">Châtaigneraie du Centre et de l'Ouest</field>
+            <field name="r">246</field>
+            <field name="v">191</field>
+            <field name="b">206</field>
+        </record>
+        <record model="portrait.codeser" id="53">
+            <field name="code">G12</field>
+            <field name="name">Marches du Massif central</field>
+            <field name="r">183</field>
+            <field name="v">134</field>
+            <field name="b">181</field>
+        </record>
+        <record model="portrait.codeser" id="54">
+            <field name="code">G13</field>
+            <field name="name">Plateaux limousins</field>
+            <field name="r">121</field>
+            <field name="v">74</field>
+            <field name="b">148</field>
+        </record>
+        <record model="portrait.codeser" id="55">
+            <field name="code">G21</field>
+            <field name="name">Plateaux granitiques ouest du Massif central</field>
+            <field name="r">203</field>
+            <field name="v">28</field>
+            <field name="b">28</field>
+        </record>
+        <record model="portrait.codeser" id="56">
+            <field name="code">G22</field>
+            <field name="name">Plateaux granitiques du centre du Massif central</field>
+            <field name="r">237</field>
+            <field name="v">122</field>
+            <field name="b">120</field>
+        </record>
+        <record model="portrait.codeser" id="57">
+            <field name="code">G23</field>
+            <field name="name">Morvan et Autunois</field>
+            <field name="r">241</field>
+            <field name="v">221</field>
+            <field name="b">227</field>
+        </record>
+        <record model="portrait.codeser" id="58">
+            <field name="code">G30</field>
+            <field name="name">Massif central volcanique</field>
+            <field name="r">177</field>
+            <field name="v">207</field>
+            <field name="b">118</field>
+        </record>
+        <record model="portrait.codeser" id="59">
+            <field name="code">G41</field>
+            <field name="name">Bordure Nord-Est du Massif central</field>
+            <field name="r">58</field>
+            <field name="v">83</field>
+            <field name="b">41</field>
+        </record>
+        <record model="portrait.codeser" id="60">
+            <field name="code">G42</field>
+            <field name="name">Monts du Vivarais et du Pilat</field>
+            <field name="r">253</field>
+            <field name="v">237</field>
+            <field name="b">197</field>
+        </record>
+        <record model="portrait.codeser" id="61">
+            <field name="code">G50</field>
+            <field name="name">Ségala et Châtaigneraie auvergnate</field>
+            <field name="r">229</field>
+            <field name="v">190</field>
+            <field name="b">146</field>
+        </record>
+        <record model="portrait.codeser" id="62">
+            <field name="code">G60</field>
+            <field name="name">Grands Causses</field>
+            <field name="r">0</field>
+            <field name="v">77</field>
+            <field name="b">151</field>
+        </record>
+        <record model="portrait.codeser" id="63">
+            <field name="code">G70</field>
+            <field name="name">Cévennes</field>
+            <field name="r">228</field>
+            <field name="v">213</field>
+            <field name="b">229</field>
+        </record>
+        <record model="portrait.codeser" id="64">
+            <field name="code">G80</field>
+            <field name="name">Haut-Languedoc et Lévézou</field>
+            <field name="r">242</field>
+            <field name="v">146</field>
+            <field name="b">54</field>
+        </record>
+        <record model="portrait.codeser" id="65">
+            <field name="code">G90</field>
+            <field name="name">Plaines alluviales et piémonts du Massif central</field>
+            <field name="r">191</field>
+            <field name="v">190</field>
+            <field name="b">188</field>
+        </record>
+        <record model="portrait.codeser" id="66">
+            <field name="code">H10</field>
+            <field name="name">Préalpes du Nord</field>
+            <field name="r">88</field>
+            <field name="v">88</field>
+            <field name="b">87</field>
+        </record>
+        <record model="portrait.codeser" id="67">
+            <field name="code">H21</field>
+            <field name="name">Alpes externes du Nord</field>
+            <field name="r">249</field>
+            <field name="v">218</field>
+            <field name="b">159</field>
+        </record>
+        <record model="portrait.codeser" id="68">
+            <field name="code">H22</field>
+            <field name="name">Alpes internes du Nord</field>
+            <field name="r">216</field>
+            <field name="v">154</field>
+            <field name="b">104</field>
+        </record>
+        <record model="portrait.codeser" id="69">
+            <field name="code">H30</field>
+            <field name="name">Alpes externes du Sud</field>
+            <field name="r">148</field>
+            <field name="v">191</field>
+            <field name="b">53</field>
+        </record>
+        <record model="portrait.codeser" id="70">
+            <field name="code">H41</field>
+            <field name="name">Alpes intermédiaires du Sud</field>
+            <field name="r">137</field>
+            <field name="v">66</field>
+            <field name="b">143</field>
+        </record>
+        <record model="portrait.codeser" id="71">
+            <field name="code">H42</field>
+            <field name="name">Alpes internes du Sud</field>
+            <field name="r">229</field>
+            <field name="v">65</field>
+            <field name="b">99</field>
+        </record>
+        <record model="portrait.codeser" id="72">
+            <field name="code">I11</field>
+            <field name="name">Marches pyrénéennes</field>
+            <field name="r">179</field>
+            <field name="v">182</field>
+            <field name="b">111</field>
+        </record>
+        <record model="portrait.codeser" id="73">
+            <field name="code">I12</field>
+            <field name="name">Pyrénées cathares</field>
+            <field name="r">235</field>
+            <field name="v">108</field>
+            <field name="b">28</field>
+        </record>
+        <record model="portrait.codeser" id="74">
+            <field name="code">I13</field>
+            <field name="name">Corbières</field>
+            <field name="r">121</field>
+            <field name="v">200</field>
+            <field name="b">212</field>
+        </record>
+        <record model="portrait.codeser" id="75">
+            <field name="code">I21</field>
+            <field name="name">Haute-chaîne pyrénéenne</field>
+            <field name="r">224</field>
+            <field name="v">237</field>
+            <field name="b">214</field>
+        </record>
+        <record model="portrait.codeser" id="76">
+            <field name="code">I22</field>
+            <field name="name">Pyrénées catalanes</field>
+            <field name="r">80</field>
+            <field name="v">73</field>
+            <field name="b">149</field>
+        </record>
+        <record model="portrait.codeser" id="77">
+            <field name="code">J10</field>
+            <field name="name">Garrigues</field>
+            <field name="r">136</field>
+            <field name="v">48</field>
+            <field name="b">135</field>
+        </record>
+        <record model="portrait.codeser" id="78">
+            <field name="code">J21</field>
+            <field name="name">Roussillon</field>
+            <field name="r">251</field>
+            <field name="v">229</field>
+            <field name="b">239</field>
+        </record>
+        <record model="portrait.codeser" id="79">
+            <field name="code">J22</field>
+            <field name="name">Plaines et collines rhodaniennes et languedociennes</field>
+            <field name="r">229</field>
+            <field name="v">206</field>
+            <field name="b">135</field>
+        </record>
+        <record model="portrait.codeser" id="80">
+            <field name="code">J23</field>
+            <field name="name">Provence calcaire</field>
+            <field name="r">26</field>
+            <field name="v">73</field>
+            <field name="b">150</field>
+        </record>
+        <record model="portrait.codeser" id="81">
+            <field name="code">J24</field>
+            <field name="name">Secteurs niçois et préligure</field>
+            <field name="r">107</field>
+            <field name="v">126</field>
+            <field name="b">34</field>
+        </record>
+        <record model="portrait.codeser" id="82">
+            <field name="code">J30</field>
+            <field name="name">Maures et Esterel</field>
+            <field name="r">252</field>
+            <field name="v">234</field>
+            <field name="b">27</field>
+        </record>
+        <record model="portrait.codeser" id="83">
+            <field name="code">J40</field>
+            <field name="name">Préalpes du Sud</field>
+            <field name="r">182</field>
+            <field name="v">180</field>
+            <field name="b">214</field>
+        </record>
+        <record model="portrait.codeser" id="84">
+            <field name="code">K11</field>
+            <field name="name">Corse occidentale</field>
+            <field name="r">235</field>
+            <field name="v">110</field>
+            <field name="b">116</field>
+        </record>
+        <record model="portrait.codeser" id="85">
+            <field name="code">K12</field>
+            <field name="name">Montagne corse</field>
+            <field name="r">88</field>
+            <field name="v">152</field>
+            <field name="b">205</field>
+        </record>
+        <record model="portrait.codeser" id="86">
+            <field name="code">K13</field>
+            <field name="name">Corse orientale</field>
+            <field name="r">99</field>
+            <field name="v">174</field>
+            <field name="b">37</field>
+        </record>           
+    </data>
+</tryton>

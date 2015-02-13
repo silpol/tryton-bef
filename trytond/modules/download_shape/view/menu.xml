@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<!-- This file describes the menu tree. -->
+<tryton>
+    <data>
+        <!-- icône -->
+        <record model="ir.ui.icon" id="download_shape_data">
+            <field name="name">tryton-data</field>
+            <field name="path">icons/tryton-data.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_inpn">
+            <field name="name">tryton-inpn</field>
+            <field name="path">icons/tryton-inpn.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_brgm">
+            <field name="name">tryton-brgm</field>
+            <field name="path">icons/tryton-brgm.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_sandre">
+            <field name="name">tryton-sandre</field>
+            <field name="path">icons/tryton-sandre.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_ifn">
+            <field name="name">tryton-ifn</field>
+            <field name="path">icons/tryton-ifn.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_irstea">
+            <field name="name">tryton-irstea</field>
+            <field name="path">icons/tryton-irstea.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_insee">
+            <field name="name">tryton-insee</field>
+            <field name="path">icons/tryton-insee.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_datagouvfr">
+            <field name="name">tryton-datagouvfr</field>
+            <field name="path">icons/tryton-datagouvfr.svg</field>
+        </record>
+
+        <!-- Top level -->
+        <menuitem parent="ir.menu_administration"
+            sequence="1"
+            name="Data" id="menu_download_shape_data"
+            icon="tryton-data"/>
+
+        <!-- INPN -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="1"
+            name="INPN (http://inpn.mnhn.fr/)" 
+            id="menu_download_shape_data_inpn"
+            icon="tryton-inpn"/>
+
+        <!-- CARMEN BRGM -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="2"
+            name="BRGM-CARMEN (http://data.carmencarto.fr/)" 
+            id="menu_download_shape_data_brgm_carmen"
+            icon="tryton-brgm"/>
+
+        <!-- SANDRE CARTHAGE -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="3"
+            name="SANDRE-CARTHAGE (http://services.sandre.eaufrance.fr/)" 
+            id="menu_download_shape_data_sandre"
+            icon="tryton-sandre"/>
+
+        <!-- IGN-IFN -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="4"
+            name="IGN-IFN (http://inventaire-forestier.ign.fr/)" 
+            id="menu_download_shape_data_ifn"
+            icon="tryton-ifn"/>
+
+        <!-- IRSTEA-HER -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="5"
+            name="IRSTEA-HER (http://www.irstea.fr/)" 
+            id="menu_download_shape_data_irstea"
+            icon="tryton-irstea"/>
+
+        <!-- INSEE -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="6"
+            name="INSEE (http://www.insee.fr/)" 
+            id="menu_download_shape_data_inseem"
+            icon="tryton-insee"/>
+
+        <!-- DATA.GOUV.FR -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="7"
+            name="CORINE LAND COVER (http://www.statistiques.developpement-durable.gouv.fr/)" 
+            id="menu_download_shape_data_datagouvfr"
+            icon="tryton-datagouvfr"/>
+       
+
+        <!-- Data -->
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_ramsar"
+                icon="tryton-list"
+                action="act_download_shape_protection_ramsar"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_biotope"
+                icon="tryton-list"
+                action="act_download_shape_protection_biotope"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_parcnat"
+                icon="tryton-list"
+                action="act_download_shape_protection_parcnat"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_parcmarin"
+                icon="tryton-list"
+                action="act_download_shape_protection_parcmarin"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_parcreg"
+                icon="tryton-list"
+                action="act_download_shape_protection_parcreg"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_resreg"
+                icon="tryton-list"
+                action="act_download_shape_protection_resreg"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_resnat"
+                icon="tryton-list"
+                action="act_download_shape_protection_resnat"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_rescorse"
+                icon="tryton-list"
+                action="act_download_shape_protection_rescorse"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_resnatcf"
+                icon="tryton-list"
+                action="act_download_shape_protection_resnatcf"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_sic"
+                icon="tryton-list"
+                action="act_download_shape_protection_sic"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_zps"
+                icon="tryton-list"
+                action="act_download_shape_protection_zps"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_bio"
+                icon="tryton-list"
+                action="act_download_shape_protection_bio"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_littoral"
+                icon="tryton-list"
+                action="act_download_shape_protection_littoral"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_cen"
+                icon="tryton-list"
+                action="act_download_shape_protection_cen"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_znieff1"
+                icon="tryton-list"
+                action="act_download_shape_protection_znieff1"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_znieff2"
+                icon="tryton-list"
+                action="act_download_shape_protection_znieff2"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_resbio"
+                icon="tryton-list"
+                action="act_download_shape_protection_resbio"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_zico"
+                icon="tryton-list"
+                action="act_download_shape_protection_zico"/>
+        <menuitem  parent="menu_download_shape_data_datagouvfr"
+                id="menu_download_shape_data_clc"
+                icon="tryton-list"
+                action="act_download_shape_clc"/>
+        <menuitem  parent="menu_download_shape_data_brgm_carmen"
+                id="menu_download_shape_data_foret"
+                icon="tryton-list"
+                action="act_download_shape_foret"/>
+        <menuitem  parent="menu_download_shape_data_sandre"
+                id="menu_download_shape_data_ssecteur"
+                icon="tryton-list"
+                action="act_download_shape_ssecteur"/>
+        <menuitem  parent="menu_download_shape_data_sandre"
+                id="menu_download_shape_data_courseau"
+                icon="tryton-list"
+                action="act_download_shape_courseau"/>
+        <menuitem  parent="menu_download_shape_data_ifn"
+                id="menu_download_shape_data_ser"
+                icon="tryton-list"
+                action="act_download_shape_ser"/>
+        <menuitem  parent="menu_download_shape_data_ifn"
+                id="menu_download_shape_data_serar"
+                icon="tryton-list"
+                action="act_download_shape_serar"/>
+        <menuitem  parent="menu_download_shape_data_ifn"
+                id="menu_download_shape_data_greco"
+                icon="tryton-list"
+                action="act_download_shape_greco"/>
+        <menuitem  parent="menu_download_shape_data_irstea"
+                id="menu_download_shape_data_her1"
+                icon="tryton-list"
+                action="act_download_shape_her1"/>
+        <menuitem  parent="menu_download_shape_data_irstea"
+                id="menu_download_shape_data_her2"
+                icon="tryton-list"
+                action="act_download_shape_her2"/>
+        <menuitem  parent="menu_download_shape_data_inseem"
+                id="menu_download_shape_data_insee"
+                icon="tryton-list"
+                action="act_download_shape_insee"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_regbiofr"
+                icon="tryton-list"
+                action="act_download_shape_regbiofr"/>
+    </data>
+</tryton>

@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.icon" id="travaux_icon">
+            <field name="name">tryton-travaux</field>
+            <field name="path">icons/tryton-travaux.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="preconise_icon">
+            <field name="name">tryton-preconise</field>
+            <field name="path">icons/tryton-preconise.svg</field>
+        </record>
+
+        <menuitem name="Travaux" id="menu_forest_work" icon="tryton-travaux"/>
+        <menuitem parent="menu_forest_work" sequence="0" name="Configuration" id="menu_forest_work_configuration" icon="tryton-preferences"/>
+
+        <!-- Typologie travaux -->
+        <record model="ir.ui.view" id="forest_work_typotravaux_view_tree">
+            <field name="model">forest_work.typotravaux</field>
+            <field name="type">tree</field>
+            <field name="name">typotravaux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="forest_work_typotravaux_view_form">
+            <field name="model">forest_work.typotravaux</field>
+            <field name="type">form</field>
+            <field name="name">typotravaux_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_forest_work_typotravaux_form">
+            <field name="name">Typologie des travaux</field>
+            <field name="res_model">forest_work.typotravaux</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_forest_work_typotravaux_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="forest_work_typotravaux_view_tree"/>
+            <field name="act_window" ref="act_forest_work_typotravaux_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_forest_work_typotravaux_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="forest_work_typotravaux_view_form"/>
+            <field name="act_window" ref="act_forest_work_typotravaux_form"/>
+        </record>        
+        <menuitem parent="menu_forest_work_configuration" id="menu_forest_work_typotravaux_form" icon="tryton-list" action="act_forest_work_typotravaux_form"/>
+
+        <!-- Préconiser des parcelles en travaux -->
+        <record model="ir.ui.view" id="preconisation_view_tree">
+            <field name="model">forest_work.preconisation</field>
+            <field name="type">tree</field>
+            <field name="name">preconisation_tree</field>
+        </record>
+        <record model="ir.ui.view" id="preconisation_view_form">
+            <field name="model">forest_work.preconisation</field>
+            <field name="type">form</field>
+            <field name="name">preconisation_form</field>
+        </record> 
+        <record model="ir.action.act_window" id="act_preconisation_form">
+            <field name="name">Préconiser des parcelles en travaux</field>
+            <field name="res_model">forest_work.preconisation</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_preconisation_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="preconisation_view_tree"/>
+            <field name="act_window" ref="act_preconisation_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_preconisation_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="preconisation_view_form"/>
+            <field name="act_window" ref="act_preconisation_form"/>
+        </record>                               
+        <menuitem parent="menu_forest_work" action="act_preconisation_form" icon="tryton-list" id="menu_preconisation"/>
+
+        <!-- Parcelles à préconiser par forêt -->
+        <record model="ir.ui.view" id="se_parcelle_view_tree">
+            <field name="model">forest.plot</field>
+            <field name="type">tree</field>
+            <field name="name">se_parcelle_tree</field>
+        </record>
+        <record model="ir.ui.view" id="se_parcelle_view_form">
+            <field name="model">forest.plot</field>
+            <field name="type">form</field>
+            <field name="name">se_parcelle_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_parcelle">
+            <field name="name">Parcelles</field>
+            <field name="res_model">forest.plot</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_parcelle_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="se_parcelle_view_tree"/>
+            <field name="act_window" ref="window_parcelle"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_parcelle_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="se_parcelle_view_form"/>
+            <field name="act_window" ref="window_parcelle"/>
+        </record>
+        <record model="ir.ui.view" id="check_plot_open_start_view_form">
+            <field name="model">forest_work.check_plot.open.start</field>
+            <field name="type">form</field>
+            <field name="name">check_plot_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_check_plot_open">
+            <field name="name">Parcelle(s) à préconiser par Type de travaux</field>
+            <field name="wiz_name">forest_work.check_plot.open</field>
+            <field name="model">forest_work.preconisation</field>
+        </record>
+        <record model="ir.action.keyword" id="check_plot_open_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">forest_work.preconisation,-1</field>
+            <field name="action" ref="wizard_check_plot_open"/>
+        </record>        
+        <record model="ir.ui.view" id="check_plot_result">
+            <field name="model">forest_work.check_plot.result</field>
+            <field name="type">form</field>
+            <field name="name">check_plot_result</field>
+        </record>
+
+        <!-- Travaux -->        
+        <record model="ir.ui.view" id="forest_work_travaux_view_tree">
+            <field name="model">forest_work.travaux</field>
+            <field name="type">tree</field>
+            <field name="name">travaux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="forest_work_se_travaux_view_tree">
+            <field name="model">forest_work.travaux</field>
+            <field name="type">tree</field>
+            <field name="name">se_travaux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="forest_work_travaux_view_form">
+            <field name="model">forest_work.travaux</field>
+            <field name="type">form</field>
+            <field name="name">travaux_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_forest_work_travaux_form">
+            <field name="name">Travaux en cours</field>
+            <field name="res_model">forest_work.travaux</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_forest_work_travaux_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="forest_work_travaux_view_tree"/>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_forest_work_travaux_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="forest_work_travaux_view_form"/>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_forest_work_travaux_form_domain_apreconsier">
+            <field name="name">À préconiser</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[("state", "=", "apreconiser")]</field>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_forest_work_travaux_form_domain_preconise">
+            <field name="name">Préconisés</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[("state", "=", "preconise")]</field>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_forest_work_travaux_form_domain_realise">
+            <field name="name">Réalisés</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[("state", "=", "realise")]</field>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_forest_work_travaux_form_domain_afacturer">
+            <field name="name">À facturer</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[("state", "=", "afacturer")]</field>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_forest_work_travaux_form_domain_facture">
+            <field name="name">Facturés</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[("state", "=", "facture")]</field>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_forest_work_travaux_form_domain_annuler">
+            <field name="name">Annulés</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain">[("state", "=", "annuler")]</field>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_forest_work_travaux_form_domain_all">
+            <field name="name">Tous</field>
+            <field name="sequence" eval="9999"/>
+            <field name="domain"></field>
+            <field name="act_window" ref="act_forest_work_travaux_form"/>
+        </record>
+        <record model="ir.model.button" id="travaux_apreconsier_button">
+            <field name="name">apreconiser</field>
+            <field name="model" search="[('model', '=', 'forest_work.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_preconise_button">
+            <field name="name">preconise</field>
+            <field name="model" search="[('model', '=', 'forest_work.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_realise_button">
+            <field name="name">realise</field>
+            <field name="model" search="[('model', '=', 'forest_work.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_afacturer_button">
+            <field name="name">afacturer</field>
+            <field name="model" search="[('model', '=', 'forest_work.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_facture_button">
+            <field name="name">facture</field>
+            <field name="model" search="[('model', '=', 'forest_work.travaux')]"/>
+        </record>
+        <record model="ir.model.button" id="travaux_annuler_button">
+            <field name="name">annuler</field>
+            <field name="model" search="[('model', '=', 'forest_work.travaux')]"/>
+        </record>
+        
+        <menuitem parent="menu_forest_work" id="menu_forest_work_travaux_form" icon="tryton-list" action="act_forest_work_travaux_form"/>
+
+        <!-- Travaux line -->
+        <record model="ir.ui.view" id="travaux_line_view_form">
+            <field name="model">invoice.travaux.line</field>
+            <field name="type">form</field>
+            <field name="name">travaux_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="travaux_line_view_tree">
+            <field name="model">invoice.travaux.line</field>
+            <field name="type">tree</field>
+            <field name="name">travaux_line_tree</field>
+        </record>
+
+    </data>
+</tryton>

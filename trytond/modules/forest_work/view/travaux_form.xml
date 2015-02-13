@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<form string="Travaux" col="2">
+    <label name="plot"/>
+    <field name="plot"/>
+    <label name="foret"/>
+    <field name="foret"/>
+    <label name="typetravaux"/>
+    <field name="typetravaux"/>
+    <label name="description"/>
+    <field name="description"/>
+    <label name="start_date"/>
+    <field name="start_date"/>            
+    <label name="end_date"/>
+    <field name="end_date"/>    
+    <group col="10" colspan="2" id="buttons">
+        <label name="state"/>
+        <field name="state"/>
+        <label name="invoice"/>
+        <field name="invoice"/>
+        <button name="annuler" string="Annuler"
+            icon="tryton-cancel"/>
+        <button name="apreconiser" string="À préconiser"
+            icon="tryton-go-previous"/>
+        <button name="preconise" string="Préconisé"
+            icon="tryton-go-next"/>
+        <button name="realise" string="Réalisé"
+            icon="tryton-go-next"/>
+        <button name="afacturer" string="À facturer"
+            icon="tryton-go-next"/>
+        <button name="facture" string="Facturé"
+            icon="tryton-go-next"/>
+    </group>
+    <notebook colspan="4">
+        <page string="Cancel comment" id="comment" states="{'invisible': Eval('state') != 'annuler'}">            
+            <field name="annule_reason"/>
+        </page>
+        <page string="Lines" id="lines" states="{'invisible': Eval('state') != 'afacturer'}">
+            <label name="party"/>
+            <field name="party"/>
+            <label name="address"/>
+            <field name="address"/>
+            <label name="company"/>
+            <field name="company"/>
+            <label name="payment_term"/>
+            <field name="payment_term"/>
+            <field name="lines" colspan="4"/>
+        </page>
+    </notebook>
+    <group col="2" colspan="2" id="active" states="{'invisible': Eval('state') != 'facture'}">
+        <label name="active"/>
+        <field name="active"/>
+    </group>    
+</form>

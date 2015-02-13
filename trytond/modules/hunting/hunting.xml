@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!--
+     This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Pascal Obstetar
+-->
+<tryton>
+    <data>
+        <record model="ir.ui.icon" id="hunting_icon">
+            <field name="name">tryton-hunting</field>
+            <field name="path">icons/tryton-hunting.svg</field>
+        </record>
+
+        <menuitem name="Hunting" id="menu_hunting" icon="tryton-hunting"/>
+        <menuitem parent="menu_hunting" sequence="0" name="Configuration" id="menu_hunting_configuration" icon="tryton-preferences"/>
+
+        <!-- Hunting -->
+        <record model="ir.ui.view" id="hunting_hunting_view_tree">
+            <field name="model">hunting.hunting</field>
+            <field name="type">tree</field>
+            <field name="name">hunting_tree</field>
+        </record>
+        <record model="ir.ui.view" id="hunting_hunting_view_form">
+            <field name="model">hunting.hunting</field>
+            <field name="type">form</field>
+            <field name="name">hunting_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_hunting_hunting_form">
+            <field name="name">Hunting</field>
+            <field name="res_model">hunting.hunting</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hunting_hunting_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="hunting_hunting_view_tree"/>
+            <field name="act_window" ref="act_hunting_hunting_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hunting_hunting_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="hunting_hunting_view_form"/>
+            <field name="act_window" ref="act_hunting_hunting_form"/>
+        </record>        
+        <record model="ir.action.report" id="report_hunting_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">hunting.hunting</field>
+            <field name="report_name">hunting.hunting.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_hunting_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">hunting.hunting,-1</field>
+            <field name="action" ref="report_hunting_edit"/>
+        </record>
+        <record model="ir.action.report" id="hunting1">
+            <field name="name">Bail (57-67-68)</field>
+            <field name="model">hunting.hunting</field>
+            <field name="report_name">hunting.hunting1</field>
+            <field name="report">hunting/hunting1.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="hunting_hunting1">
+            <field name="keyword">form_print</field>
+            <field name="model">hunting.hunting,-1</field>
+            <field name="action" ref="hunting1"/>
+        </record>
+        <record model="ir.action.report" id="hunting2">
+            <field name="name">Bail (Autres)</field>
+            <field name="model">hunting.hunting</field>
+            <field name="report_name">hunting.hunting2</field>
+            <field name="report">hunting/hunting2.odt</field>            
+        </record>
+        <record model="ir.action.keyword" id="hunting_hunting2">
+            <field name="keyword">form_print</field>
+            <field name="model">hunting.hunting,-1</field>
+            <field name="action" ref="hunting2"/>
+        </record>                
+        <menuitem parent="menu_hunting" sequence="1" action="act_hunting_hunting_form" icon="tryton-hunting" id="menu_hunting_hunting"/>
+
+        <!-- INSEE -->
+        <record model="ir.ui.view" id="hunting_insee_view_tree">
+            <field name="model">hunting.insee</field>
+            <field name="type">tree</field>
+            <field name="name">insee_tree</field>
+        </record>
+        <record model="ir.ui.view" id="hunting_insee_view_form">
+            <field name="model">hunting.insee</field>
+            <field name="type">form</field>
+            <field name="name">insee_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_hunting_insee_form">
+            <field name="name">Indice à la consommation (INSEE)</field>
+            <field name="res_model">hunting.insee</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hunting_insee_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="hunting_insee_view_tree"/>
+            <field name="act_window" ref="act_hunting_insee_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hunting_insee_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="hunting_insee_view_form"/>
+            <field name="act_window" ref="act_hunting_insee_form"/>
+        </record>
+        <menuitem parent="menu_hunting_configuration" sequence="1" action="act_hunting_insee_form" icon="tryton-list" id="menu_hunting_insee"/>
+
+        <!-- Hunting Plot -->
+        <record model="ir.ui.view" id="hunting_cadastre_view_tree">
+            <field name="model">hunting.hunting-cadastre.parcelle</field>
+            <field name="type">tree</field>
+            <field name="name">hunting_cadastre_tree</field>
+        </record>
+        <record model="ir.ui.view" id="hunting_cadastre_view_form">
+            <field name="model">hunting.hunting-cadastre.parcelle</field>
+            <field name="type">form</field>
+            <field name="name">hunting_cadastre_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_hunting_cadastre_form">
+            <field name="name">Hunting Plot</field>
+            <field name="res_model">hunting.hunting-cadastre.parcelle</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hunting_cadastre_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="hunting_cadastre_view_tree"/>
+            <field name="act_window" ref="act_hunting_cadastre_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_hunting_cadastre_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="hunting_cadastre_view_form"/>
+            <field name="act_window" ref="act_hunting_cadastre_form"/>
+        </record>
+    
+    </data>
+</tryton>

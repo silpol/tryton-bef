@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<tree string="Aires urbaines 2010">
+    <field name="cd_insee"/>
+    <field name="aire"/>
+</tree>

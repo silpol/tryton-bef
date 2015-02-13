@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <menuitem name="Portrait" parent="ir.menu_administration" id="menu_portrait_admin"/>
+
+        <record model="ir.ui.view" id="commune_view_tree">
+            <field name="model">portrait.commune</field>
+            <field name="type">tree</field>
+            <field name="name">commune_tree</field>
+        </record>
+        <record model="ir.ui.view" id="commune_view_form">
+            <field name="model">portrait.commune</field>
+            <field name="type">form</field>
+            <field name="name">commune_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_commune_form">
+            <field name="name">Commune</field>
+            <field name="res_model">portrait.commune</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commune_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="commune_view_tree"/>
+            <field name="act_window" ref="act_commune_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_commune_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="commune_view_form"/>
+            <field name="act_window" ref="act_commune_form"/>
+        </record>        
+        <menuitem parent="menu_portrait_admin" id="menu_commune_form" icon="tryton-list" action="act_commune_form"/>
+
+        <record model="ir.action.report" id="report_commune_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.commune</field>
+            <field name="report_name">portrait.commune.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_commune_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.commune,-1</field>
+            <field name="action" ref="report_commune_edit"/>
+        </record>
+    </data>
+</tryton>

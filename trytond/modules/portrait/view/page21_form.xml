@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<form string="La mosaïque des milieux ...au-delà de votre commune" col="4">
+    <label name="portrait"/>
+    <field name="portrait" colspan="3"/>
+    <notebook>
+        <page string="ZONES" id="zone" col="4">
+            <field name="greco" colspan="4"/>
+            <field name="ser" colspan="4"/>
+            <field name="serar" colspan="4"/>
+            <field name="her1" colspan="4"/>
+            <field name="her2" colspan="4"/>
+            <field name="geom"/>
+        </page>
+        <page string="GRECO" id="greco"  col="1">
+            <field name="page21_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate21_01"  name="generate21_01" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="SER" id="ser"  col="1">
+            <field name="page21_02_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate21_02"  name="generate21_02" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="SERAR" id="serar"  col="1">
+            <field name="page21_03_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate21_03"  name="generate21_03" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="HER1" id="her1"  col="1">
+            <field name="page21_04_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate21_04"  name="generate21_04" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>
+        <page string="HER2" id="her2"  col="1">
+            <field name="page21_05_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate21_05"  name="generate21_05" icon="tryton-executable" />
+            <field name="geom"/>
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page21_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate21_empty"  name="generate21_empty" icon="tryton-executable" />            
+        </page>
+    </notebook>
+</form>

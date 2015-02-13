@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Préconisation des parcelles">
+    <label name="forest"/> 
+    <field name="forest"/>
+    <label name="plot"/> 
+    <field name="plot"/>
+</form>

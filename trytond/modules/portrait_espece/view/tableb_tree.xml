@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Table B">
+    <field name="cd_insee"/>
+    <field name="nm_sffzn"/>
+    <field name="lb_zn"/>
+</tree>

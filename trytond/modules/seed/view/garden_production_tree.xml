@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Garden production">
+    <field name="garden" />
+    <field name="plot" />
+    <field name="taxinomie" />                    
+    <field name="typo" />
+    <field name="poids" /> 
+    <field name="daterecolte" />                   
+</tree>

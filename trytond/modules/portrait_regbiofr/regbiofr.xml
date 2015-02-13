@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.icon" id="coderegbiofr_icon">
+            <field name="name">tryton-codes</field>
+            <field name="path">icons/applications-system.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="regbiofr_icon">
+            <field name="name">tryton-regbiofr</field>
+            <field name="path">icons/tryton-regbiofr.svg</field>
+        </record>
+
+        <menuitem name="Régions Biogéographiques" parent="ir.menu_administration" id="menu_regbiofr" icon="tryton-regbiofr"/>
+
+        <!-- REGBIOFR -->      
+        <record model="ir.ui.view" id="portrait_regbiofr_view_tree">
+            <field name="model">portrait.regbiofr</field>
+            <field name="type">tree</field>
+            <field name="name">regbiofr_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_regbiofr_view_form">
+            <field name="model">portrait.regbiofr</field>
+            <field name="type">form</field>
+            <field name="name">regbiofr_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_regbiofr_form">
+            <field name="name">REGBIOFR</field>
+            <field name="res_model">portrait.regbiofr</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_regbiofr_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_regbiofr_view_tree"/>
+            <field name="act_window" ref="act_portrait_regbiofr_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_regbiofr_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_regbiofr_view_form"/>
+            <field name="act_window" ref="act_portrait_regbiofr_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_regbiofr_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.regbiofr</field>
+            <field name="report_name">portrait.regbiofr.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_regbiofr_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.regbiofr,-1</field>
+            <field name="action" ref="report_portrait_regbiofr_edit"/>
+        </record> 
+        <menuitem parent="menu_regbiofr" sequence="1" id="menu_portrait_regbiofr_form" icon="tryton-regbiofr" action="act_portrait_regbiofr_form"/>
+
+        <!-- Code REGBIOFR -->      
+        <record model="ir.ui.view" id="portrait_coderegbiofr_view_tree">
+            <field name="model">portrait.coderegbiofr</field>
+            <field name="type">tree</field>
+            <field name="name">coderegbiofr_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_coderegbiofr_view_form">
+            <field name="model">portrait.coderegbiofr</field>
+            <field name="type">form</field>
+            <field name="name">coderegbiofr_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_coderegbiofr_form">
+            <field name="name">Code REGBIOFR</field>
+            <field name="res_model">portrait.coderegbiofr</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_coderegbiofr_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_coderegbiofr_view_tree"/>
+            <field name="act_window" ref="act_portrait_coderegbiofr_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_coderegbiofr_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_coderegbiofr_view_form"/>
+            <field name="act_window" ref="act_portrait_coderegbiofr_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_coderegbiofr_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.coderegbiofr</field>
+            <field name="report_name">portrait.coderegbiofr.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_coderegbiofr_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.coderegbiofr,-1</field>
+            <field name="action" ref="report_portrait_coderegbiofr_edit"/>
+        </record> 
+        <menuitem parent="menu_regbiofr" sequence="1" id="menu_portrait_coderegbiofr_form" icon="tryton-codes" action="act_portrait_coderegbiofr_form"/>
+                
+    </data>
+</tryton>

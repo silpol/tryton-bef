@@ -1,0 +1,2212 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "error:site.site:"
+msgid "The commune is invalid, no commune is defined!"
+msgstr "Cette commune est invalide, pas de commune définie !"
+
+msgctxt "error:site.site:"
+msgid "You cannot set duplicated site ID!"
+msgstr "Vous ne pouvez pas dupliquer cet identifiant !"
+
+msgctxt "field:account.invoice,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:challenge.bfa,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:challenge.bfa,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.bfa,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.bfa,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:challenge.bfa,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:challenge.bfa,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.bfa,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.bfa,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.bfa,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.bfa,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.bfa,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:challenge.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:challenge.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:challenge.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.code,typo:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "field:challenge.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.pv,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.pv,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.pv,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:challenge.pv,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:challenge.pv,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.pv,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.pv,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.pv,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.pv,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.pv,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.revenuforestier,annee:"
+msgid "Année"
+msgstr "Année"
+
+msgctxt "field:challenge.revenuforestier,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.revenuforestier,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.revenuforestier,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "field:challenge.revenuforestier,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.revenuforestier,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:challenge.revenuforestier,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.revenuforestier,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.revenuforestier,totgroup:"
+msgid "Groupe (nb)"
+msgstr "Groupe (nb)"
+
+msgctxt "field:challenge.revenuforestier,totmember:"
+msgid "Membre (nb)"
+msgstr "Membre (nb)"
+
+msgctxt "field:challenge.revenuforestier,typo:"
+msgid "Typologie"
+msgstr "Typologie"
+
+msgctxt "field:challenge.revenuforestier,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.revenuforestier,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:challenge.revenuforestier.open.start,end_date:"
+msgid "End Date"
+msgstr "Date de fin"
+
+msgctxt "field:challenge.revenuforestier.open.start,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:challenge.revenuforestier.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.revenuforestier.open.start,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "field:challenge.revenuforestier.open.start,start_date:"
+msgid "Start Date"
+msgstr "Date de début"
+
+msgctxt "field:challenge.rf,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:challenge.rf,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:challenge.rf,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:challenge.rf,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "field:challenge.rf,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:challenge.rf,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "field:challenge.rf,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.rf,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:challenge.rf,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:challenge.rf,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest_group.group,bfa:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "field:forest_group.group,pv:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "field:forest_group.group,rf:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "field:hunting.bailchasse,bailleur:"
+msgid "Bailleur"
+msgstr "Bailleur"
+
+msgctxt "field:hunting.bailchasse,cofermier:"
+msgid "Co-fermier"
+msgstr "Co-fermier"
+
+msgctxt "field:hunting.bailchasse,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:hunting.bailchasse,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:hunting.bailchasse,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:hunting.bailchasse,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:hunting.bailchasse,locataire:"
+msgid "Locataire"
+msgstr "Locataire"
+
+msgctxt "field:hunting.bailchasse,plot:"
+msgid "Plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "field:hunting.bailchasse,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:hunting.bailchasse,sslocation:"
+msgid "Propriété du bailleur"
+msgstr "Propriété du bailleur"
+
+msgctxt "field:hunting.bailchasse,surface:"
+msgid "Surface"
+msgstr "Surface"
+
+msgctxt "field:hunting.bailchasse,totsurfloc:"
+msgid "Total surface"
+msgstr "Surface totale bailleur"
+
+msgctxt "field:hunting.bailchasse,totsurfnotloc:"
+msgid "Total not surface"
+msgstr "Surface totale non bailleur"
+
+msgctxt "field:hunting.bailchasse,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:hunting.bailchasse,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:hunting.bailchasse.open.start,bailleur:"
+msgid "Bailleur"
+msgstr "Bailleur"
+
+msgctxt "field:hunting.bailchasse.open.start,end_date:"
+msgid "End Date"
+msgstr "Date de fin"
+
+msgctxt "field:hunting.bailchasse.open.start,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:hunting.bailchasse.open.start,locataire:"
+msgid "Locataire"
+msgstr "Locataire"
+
+msgctxt "field:hunting.bailchasse.open.start,start_date:"
+msgid "Start Date"
+msgstr "Date de début"
+
+msgctxt "field:hunting.hunting,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:hunting.hunting,bailleur:"
+msgid "Bailleur"
+msgstr "Bailleur"
+
+msgctxt "field:hunting.hunting,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:hunting.hunting,cofermier:"
+msgid "Co-fermier"
+msgstr "Co-fermier"
+
+msgctxt "field:hunting.hunting,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:hunting.hunting,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:hunting.hunting,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:hunting.hunting,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:hunting.hunting,hunting_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:hunting.hunting,hunting_map:"
+msgid "Hunting map"
+msgstr "Territoire de chasse"
+
+msgctxt "field:hunting.hunting,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:hunting.hunting,locataire:"
+msgid "Locataire"
+msgstr "Locataire"
+
+msgctxt "field:hunting.hunting,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:hunting.hunting,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:hunting.hunting,plot:"
+msgid "Cadastral plots"
+msgstr "Parcelles cadastrales"
+
+msgctxt "field:hunting.hunting,plots:"
+msgid "Plots"
+msgstr "Parcelles cadastrales"
+
+msgctxt "field:hunting.hunting,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:hunting.hunting,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:hunting.hunting,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,hunting:"
+msgid "hunting"
+msgstr "Chasse"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,plot:"
+msgid "Plot"
+msgstr "Parcelle cadastrale"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,sslocation:"
+msgid "Propriété du bailleur"
+msgstr "Propriété du bailleur"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:hunting.hunting-cadastre.parcelle,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:purchase.purchase,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "field:site.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:site.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:site.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:site.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_line,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_line,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_line,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_line,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_line,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_line,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_line,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_line,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_line,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_line,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_point,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_point,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.misc_obj_poly,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:site.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:site.misc_obj_poly,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.misc_obj_poly,site:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "field:site.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site,area:"
+msgid "Area"
+msgstr "Surface"
+
+msgctxt "field:site.site,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:site.site,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site,dead_line_work:"
+msgid "Deadline"
+msgstr "Date de fin de travaux"
+
+msgctxt "field:site.site,direccte:"
+msgid "DIRECCTE"
+msgstr "DIRECCTE"
+
+msgctxt "field:site.site,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:site.site,gps:"
+msgid "GPS"
+msgstr "GPS"
+
+msgctxt "field:site.site,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site,image_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site.site,image_map:"
+msgid "Image map"
+msgstr "Carte locale"
+
+msgctxt "field:site.site,lot:"
+msgid "Lot"
+msgstr "Lot"
+
+msgctxt "field:site.site,misc_obj_line:"
+msgid "Miscellaneous line objects"
+msgstr "Linéaire"
+
+msgctxt "field:site.site,misc_obj_point:"
+msgid "Miscellaneous point objects"
+msgstr "Point"
+
+msgctxt "field:site.site,misc_obj_poly:"
+msgid "Miscellaneous polygon objects"
+msgstr "Zone"
+
+msgctxt "field:site.site,moa:"
+msgid "MOA"
+msgstr "MOA"
+
+msgctxt "field:site.site,moe:"
+msgid "MOE"
+msgstr "MOE"
+
+msgctxt "field:site.site,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site,nature:"
+msgid "Nature"
+msgstr "Nature"
+
+msgctxt "field:site.site,ouvrage:"
+msgid "Ouvrages divers"
+msgstr "Ouvrages divers"
+
+msgctxt "field:site.site,owner:"
+msgid "Owner"
+msgstr "Propriétaire"
+
+msgctxt "field:site.site,pefc:"
+msgid "PEFC"
+msgstr "PEFC"
+
+msgctxt "field:site.site,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site,risque:"
+msgid "Autres risques"
+msgstr "Autres risques"
+
+msgctxt "field:site.site,site_date:"
+msgid "Site date"
+msgstr "Date"
+
+msgctxt "field:site.site,site_supervision:"
+msgid "Site supervision"
+msgstr "Suivi de chantier"
+
+msgctxt "field:site.site,situation_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:site.site,situation_map:"
+msgid "Situation map"
+msgstr "Carte de situation"
+
+msgctxt "field:site.site,taxon:"
+msgid "Taxons"
+msgstr "Essences"
+
+msgctxt "field:site.site,voie:"
+msgid "Voies de circulation"
+msgstr "Voies de circulation"
+
+msgctxt "field:site.site,volume:"
+msgid "Volume"
+msgstr "Volume"
+
+msgctxt "field:site.site,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.nature,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.nature,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.nature,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.nature,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.nature,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.nature,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.nature,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.nature,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.ouvrage,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.ouvrage,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.ouvrage,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.ouvrage,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.ouvrage,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.ouvrage,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.ouvrage,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.ouvrage,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.risque,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.risque,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.risque,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.risque,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.risque,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.risque,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.risque,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.risque,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.taxon,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.taxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.taxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.taxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.taxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.taxon,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.taxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.taxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:site.site-site.voie,code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "field:site.site-site.voie,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:site.site-site.voie,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:site.site-site.voie,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:site.site-site.voie,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:site.site-site.voie,site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "field:site.site-site.voie,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:site.site-site.voie,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:account.invoice,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "help:challenge.bfa,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "help:challenge.bfa,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:challenge.bfa,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "help:challenge.bfa,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.bfa,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:challenge.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "help:challenge.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "help:challenge.code,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "help:challenge.code,typo:"
+msgid "Type de DEFI"
+msgstr "Type de DEFI"
+
+msgctxt "help:challenge.pv,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:challenge.pv,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "help:challenge.pv,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.pv,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:challenge.revenuforestier,annee:"
+msgid "Année"
+msgstr "Année"
+
+msgctxt "help:challenge.revenuforestier,groupe:"
+msgid "Groupe"
+msgstr "Groupement"
+
+msgctxt "help:challenge.revenuforestier,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "help:challenge.revenuforestier,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.revenuforestier,totgroup:"
+msgid "Nombre de parts (Groupement forestier)"
+msgstr "Nombre de parts (Groupement forestier)"
+
+msgctxt "help:challenge.revenuforestier,totmember:"
+msgid "Nombre de parts (Membre)"
+msgstr "Nombre de parts (Membre)"
+
+msgctxt "help:challenge.revenuforestier,typo:"
+msgid "Type de DEFI"
+msgstr "Type de DEFI"
+
+msgctxt "help:challenge.revenuforestier.open.start,end_date:"
+msgid "End Date"
+msgstr "Date de fin"
+
+msgctxt "help:challenge.revenuforestier.open.start,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "help:challenge.revenuforestier.open.start,member:"
+msgid "Member"
+msgstr "Porteur de parts"
+
+msgctxt "help:challenge.revenuforestier.open.start,start_date:"
+msgid "Start date"
+msgstr "Date de début"
+
+msgctxt "help:challenge.rf,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:challenge.rf,group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "help:challenge.rf,montant:"
+msgid "Montant"
+msgstr "Montant"
+
+msgctxt "help:challenge.rf,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:forest_group.group,bfa:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "help:forest_group.group,pv:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "help:forest_group.group,rf:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "help:hunting.bailchasse,bailleur:"
+msgid "Bailleur"
+msgstr "Bailleur"
+
+msgctxt "help:hunting.bailchasse,cofermier:"
+msgid "Co-fermier du bail de chasse"
+msgstr "Co-fermier du bail de chasse"
+
+msgctxt "help:hunting.bailchasse,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:hunting.bailchasse,locataire:"
+msgid "Locataire/Fermier du bail de chasse"
+msgstr "Locataire/Fermier du bail de chasse"
+
+msgctxt "help:hunting.bailchasse,sslocation:"
+msgid "Propriété du bailleur sinon en sous-location si décochée"
+msgstr "Propriété du bailleur sinon en sous-location si décochée"
+
+msgctxt "help:hunting.bailchasse,surface:"
+msgid "Surface de la pacelle"
+msgstr "Surface de la pacelle"
+
+msgctxt "help:hunting.bailchasse,totsurfloc:"
+msgid "Total surface des parcelles appartenant au bailleur"
+msgstr "Total surface des parcelles appartenant au bailleur"
+
+msgctxt "help:hunting.bailchasse,totsurfnotloc:"
+msgid "Total surface des parcelles n'appartenant pas au bailleur"
+msgstr "Total surface des parcelles n'appartenant pas au bailleur"
+
+msgctxt "help:hunting.bailchasse.open.start,bailleur:"
+msgid "Bailleur"
+msgstr "Bailleur"
+
+msgctxt "help:hunting.bailchasse.open.start,end_date:"
+msgid "End Date"
+msgstr "Date de fin"
+
+msgctxt "help:hunting.bailchasse.open.start,locataire:"
+msgid "Locataire/Fermier du bail de chasse"
+msgstr "Locataire/Fermier du bail de chasse"
+
+msgctxt "help:hunting.bailchasse.open.start,start_date:"
+msgid "Start date"
+msgstr "Date de début"
+
+msgctxt "help:hunting.hunting,active:"
+msgid "Installation active"
+msgstr "Installation active"
+
+msgctxt "help:hunting.hunting,bailleur:"
+msgid "Bailleur"
+msgstr "Bailleur"
+
+msgctxt "help:hunting.hunting,code:"
+msgid "Code du bail de chasse"
+msgstr "Code du bail de chasse"
+
+msgctxt "help:hunting.hunting,cofermier:"
+msgid "Co-fermier du bail de chasse"
+msgstr "Co-fermier du bail de chasse"
+
+msgctxt "help:hunting.hunting,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:hunting.hunting,geom:"
+msgid "Geometry point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:hunting.hunting,hunting_map:"
+msgid "Hunting map"
+msgstr "Territoire de chasse"
+
+msgctxt "help:hunting.hunting,locataire:"
+msgid "Locataire/Fermier du bail de chasse"
+msgstr "Locataire/Fermier du bail de chasse"
+
+msgctxt "help:hunting.hunting,name:"
+msgid "Nom du bail de chasse"
+msgstr "Nom du bail de chasse"
+
+msgctxt "help:hunting.hunting,observation:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:hunting.hunting,plot:"
+msgid "Cadastral plots"
+msgstr "Parcelles cadastrales"
+
+msgctxt "help:hunting.hunting,plots:"
+msgid "Plots"
+msgstr "Parcelles cadastrales"
+
+msgctxt "help:hunting.hunting-cadastre.parcelle,sslocation:"
+msgid "Propriété du bailleur sinon en sous-location si décochée"
+msgstr "Propriété du bailleur sinon en sous-location si décochée"
+
+msgctxt "help:purchase.purchase,groupe:"
+msgid "Groupement"
+msgstr "Groupement"
+
+msgctxt "help:site.site,dead_line_work:"
+msgid "Deadline for completion of work"
+msgstr "Date de fin de chantier"
+
+msgctxt "help:site.site,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "model:challenge.bfa,name:"
+msgid "Base Forfaitaire Agricole"
+msgstr "Base Forfaitaire Agricole"
+
+msgctxt "model:challenge.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:challenge.pv,name:"
+msgid "Plus Value"
+msgstr "Plus Value"
+
+msgctxt "model:challenge.revenuforestier,name:"
+msgid "Revenus Forestiers"
+msgstr "Revenus Forestiers"
+
+msgctxt "model:challenge.revenuforestier.open.start,name:"
+msgid "Open revenu forestier"
+msgstr "Ouvrir revenu forestier"
+
+msgctxt "model:challenge.rf,name:"
+msgid "Revenu Foncier"
+msgstr "Revenu Foncier"
+
+msgctxt "model:hunting.bailchasse,name:"
+msgid "Bail de chasse"
+msgstr "Bail de chasse"
+
+msgctxt "model:hunting.bailchasse.open.start,name:"
+msgid "Open Bail de chasse"
+msgstr "Ouvrir le bail de chasse"
+
+msgctxt "model:hunting.hunting,name:"
+msgid "Hunting"
+msgstr "Chasse"
+
+msgctxt "model:hunting.hunting-cadastre.parcelle,name:"
+msgid "Hunting - Plot"
+msgstr "Chasse - Parcelle"
+
+msgctxt "model:ir.action,name:act_bailchasse_form"
+msgid "Bail de Chasse par groupement forestier"
+msgstr "Bail de Chasse par groupement forestier"
+
+msgctxt "model:ir.action,name:act_bailchasse_open"
+msgid "Bail de Chasse par groupement forestier"
+msgstr "Bail de Chasse par groupement forestier"
+
+msgctxt "model:ir.action,name:act_hunting_cadastre_form"
+msgid "Hunting Plot"
+msgstr "Parcelle de chasse"
+
+msgctxt "model:ir.action,name:act_hunting_hunting_form"
+msgid "Hunting"
+msgstr "Chasse"
+
+msgctxt "model:ir.action,name:hunting"
+msgid "Hunting"
+msgstr "Chasse"
+
+msgctxt "model:ir.action,name:report_hunting_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:synthese_bailchasse"
+msgid "Bail de Chasse"
+msgstr "Bail de Chasse"
+
+msgctxt "model:ir.ui.menu,name:menu_bailchasse"
+msgid "Bail de Chasse par groupement forestier"
+msgstr "Bail de Chasse par groupement forestier"
+
+msgctxt "model:ir.ui.menu,name:menu_hunting"
+msgid "Hunting"
+msgstr "Chasse"
+
+msgctxt "model:ir.ui.menu,name:menu_hunting_hunting"
+msgid "Hunting"
+msgstr "Chasse"
+
+msgctxt "model:site.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:site.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr "Linéaire"
+
+msgctxt "model:site.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr "Point"
+
+msgctxt "model:site.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr "Zone"
+
+msgctxt "model:site.site,name:"
+msgid "Site"
+msgstr "Chantier"
+
+msgctxt "model:site.site-site.nature,name:"
+msgid "Site - Nature"
+msgstr "Site - Nature"
+
+msgctxt "model:site.site-site.ouvrage,name:"
+msgid "Site - Ouvrage"
+msgstr "Site - Ouvrage"
+
+msgctxt "model:site.site-site.risque,name:"
+msgid "Site - Risque"
+msgstr "Site - Risque"
+
+msgctxt "model:site.site-site.taxon,name:"
+msgid "Site - Taxon"
+msgstr "Site - Taxon"
+
+msgctxt "model:site.site-site.voie,name:"
+msgid "Site - Voie"
+msgstr "Site - Voie"
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "("
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ")"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ","
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "- €"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "/"
+msgstr "/"
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "00/00/0000"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "00:00:00"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "08/12/2014"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ":"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ""
+"=  bf : Base forfaitaire agricole, rf : Revenus fonciers, pv : Plus-values"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "???"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Associé"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Code postal"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Détail par associé :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Groupement forestier :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Gérant :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Montant (€)"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Nombre de parts au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Nombre de parts au 08/12/14"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Page"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "REVENUS FORESTIERS"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Revenus forestiers au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Synthèse au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Total des parts :"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ""
+"Travaux d'entretien des arbres le long des Routes Départementales / "
+"Programme prévisionnel 2014"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid ""
+"Travaux d'entretien des arbres le long des Routes Départementales / "
+"Programme prévisionnel au"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Type*"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "Ville"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio:///choose"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio:///for"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio:///when"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://choose test=\"\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"g in objects[0].groupe.gerants\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"line in objects\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"p in objects[0].groupe.bfa\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"p in objects[0].groupe.pv\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://for each=\"p in objects[0].groupe.rf\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://g.member.name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.member.parties[0].party.addresses[0].city"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.member.parties[0].party.addresses[0].name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.member.parties[0].party.addresses[0].zip"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.montant"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.totmember"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://line.typo"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://objects[0].groupe.party.full_name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://objects[0].totgroup"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://p.commune.name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://p.montant"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://p.name.name"
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "relatorio://when test=\"p.date == objects[0].annee\""
+msgstr ""
+
+msgctxt "odt:challenge.revenuforestier:"
+msgid "€"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid ","
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "9 années à compter du 1"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "A"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "ARTICLE 2 -DURÉE"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid ""
+"Ainsi, la surface totale concernée par le bail, telle qu'elle est énoncée au "
+"Livre Focnier, est de , dont ha réellement boisés. Le présent bail est signé "
+"sans garantie de surface."
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "BAIL de CHASSE sous SEING PRIVÉ"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "C"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "Conformément"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "Entre les sousignés,"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "Et,"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "I"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "La présente location est faite pour une durée ferme de"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "P"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "RTICLE 1 – SURFACE concernée par le BAIL :"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "S"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "Section"
+msgstr "Section"
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "Surfa"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "arcelle"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "c"
+msgstr "c"
+
+msgctxt "odt:hunting.bailchasse:"
+msgid ""
+"ci-après désigné le locataire, qui loue ce droit exclusif de chasse "
+"conformément aux conditions qui suivent,"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "ci-après désignés le bailleur, propriétaire d'un droit de chasse,"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "des enclaves en sous-location :"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "e totale (ha)"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "er"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "février 2014, venant à échéance le 1"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "février 2022."
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "ha"
+msgstr "ha"
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "l a été convenu ce qui suit :"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "ommune"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "surface"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "surface appartenant au bailleur :"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid "urface (ha)"
+msgstr ""
+
+msgctxt "odt:hunting.bailchasse:"
+msgid ""
+"à la Loi locale, le cahier des charges-type s'applique sur les seuls fonds "
+"enclavés en sous-location pour toutes les clauses qui ne sont pas en "
+"contradiction avec les clauses du présent bail, ou qui ne fugirent pas "
+"dansle présent bail."
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid ","
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "9 années à compter du 1"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "A"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "ARTICLE 2 -DURÉE"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid ""
+"Ainsi, la surface totale concernée par le bail, telle qu'elle est énoncée au "
+"Livre Focnier, est de , dont ha réellement boisés. Le présent bail est signé "
+"sans garantie de surface."
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "BAIL de CHASSE sous SEING PRIVÉ"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "C"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "Conformément"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "Entre les sousignés,"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "Et,"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "I"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "La présente location est faite pour une durée ferme de"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "P"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "RTICLE 1 – SURFACE concernée par le BAIL :"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "S"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "Section"
+msgstr "Section"
+
+msgctxt "odt:hunting.hunting:"
+msgid "arcelle"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid ""
+"ci-après désigné le locataire, qui loue ce droit exclusif de chasse "
+"conformément aux conditions qui suivent,"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "ci-après désignés le bailleur, propriétaire d'un droit de chasse,"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "des enclaves en sous-location :"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "er"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "février 2014, venant à échéance le 1"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "février 2022."
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "ha"
+msgstr "ha"
+
+msgctxt "odt:hunting.hunting:"
+msgid "l a été convenu ce qui suit :"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "ommune"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "surface"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "surface appartenant au bailleur :"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid "urface (ha)"
+msgstr ""
+
+msgctxt "odt:hunting.hunting:"
+msgid ""
+"à la Loi locale, le cahier des charges-type s'applique sur les seuls fonds "
+"enclavés en sous-location pour toutes les clauses qui ne sont pas en "
+"contradiction avec les clauses du présent bail, ou qui ne fugirent pas "
+"dansle présent bail."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "(1 par équipe de moins de 5 jusqu'à décembre 2013)"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "/"
+msgstr "/"
+
+msgctxt "odt:site.site:"
+msgid "Arrêté du 31 mars relatif à la fiche de chantier"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Autres risques :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "C"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "D"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Décret n°2010-1603 du 17 décembre 2010"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Définir les distances de sécurité entre les travailleurs."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Email :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Essence(s) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Extincteur valide sur les engins ou les voitures (Cf. Décret départementaux)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "F"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Fiche de chantier N°"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "L"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Minimum 2 sauveteurs secouristes du travail par équipe."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "N"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Nom du (des) donneur(s) d'ordres (propriétaire ou entreprise) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Nom du propriétaire ou gestionnaire :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "N° de Lot :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Observations :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Ouvrages divers :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Port des EPI pour tous (casque complet, chaussures de sécurité, pantalon de "
+"sécurité, gants)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Pour les bûcherons : 2 fois la longueur des arbres à abattre."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Pour les porteurs et têtes abatteuse : voir conformité des engins (distance "
+"dédié sur les grues)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Pour les skidders : une longueur de câble déroulé."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "R"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Rappeler les consignes de sécurité au nouveau personnel (formation "
+"d'embauche)."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Renseignements généraux"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Règles de sécurité pour les intervenants"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "S"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Si présence, indiquer les consignes à respecter :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Stationner les véhicules dans le sens du départ et laisser la voie d'accès "
+"libre."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Suivi chantier :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid ""
+"Trousse de sécurité sur le chantier et à portée de mains du matériel leur "
+"permettant d'arrêter un saignement abondant."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Tél :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "V"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Voies de circulation :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "Vêtements de couleur vive."
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ate :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ature des travaux :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ax :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ieu-dit :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "olume (m3) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "ommune :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "oordonnées GPS (en général place de dépôt) :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "urface du chantier :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "° PEFC :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "éférence parcellaire ou cadastrale :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "élai de réalisation des travaux :"
+msgstr ""
+
+msgctxt "odt:site.site:"
+msgid "épartement :"
+msgstr ""
+
+msgctxt "selection:challenge.code,typo:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "selection:challenge.code,typo:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "selection:challenge.code,typo:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "selection:challenge.revenuforestier,typo:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "selection:challenge.revenuforestier,typo:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "selection:challenge.revenuforestier,typo:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "view:challenge.bfa:"
+msgid "Base Forfaitaire agricole"
+msgstr "Base Forfaitaire agricole"
+
+msgctxt "view:challenge.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:challenge.pv:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "view:challenge.revenuforestier.open.start:"
+msgid "Revenus forestiers"
+msgstr "Revenus forestiers"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Base forfaitaire agricole (€)"
+msgstr "Base forfaitaire agricole (€)"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Plus-values (€)"
+msgstr "Plus-values (€)"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Revenus fonciers (€)"
+msgstr "Revenus fonciers (€)"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Revenus forestiers"
+msgstr "Revenus forestiers"
+
+msgctxt "view:challenge.revenuforestier:"
+msgid "Revenus forestiers par groupement forestier"
+msgstr "Revenus forestiers par groupement forestier"
+
+msgctxt "view:challenge.rf:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "view:forest_group.group:"
+msgid "Base forfaitaire agricole"
+msgstr "Base forfaitaire agricole"
+
+msgctxt "view:forest_group.group:"
+msgid "Group"
+msgstr "Groupement forestier"
+
+msgctxt "view:forest_group.group:"
+msgid "Plus-values"
+msgstr "Plus-values"
+
+msgctxt "view:forest_group.group:"
+msgid "Revenus fonciers"
+msgstr "Revenus fonciers"
+
+msgctxt "view:hunting.bailchasse.open.start:"
+msgid "Bail de chasse"
+msgstr "Bail de chasse"
+
+msgctxt "view:hunting.bailchasse:"
+msgid "Bail de chasse"
+msgstr "Bail de chasse"
+
+msgctxt "view:hunting.hunting-cadastre.parcelle:"
+msgid "Hunting Plot"
+msgstr "Parcelle de chasse"
+
+msgctxt "view:hunting.hunting:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:hunting.hunting:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:hunting.hunting:"
+msgid "Hunting"
+msgstr "Chasse"
+
+msgctxt "view:hunting.hunting:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:hunting.hunting:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "view:hunting.hunting:"
+msgid "Plots"
+msgstr "Parcelles cadastrales"
+
+msgctxt "view:site.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:site.code:"
+msgid "code"
+msgstr "code"
+
+msgctxt "view:site.misc_obj_line:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_line:"
+msgid "Miscellaneous line object"
+msgstr "Linéaire"
+
+msgctxt "view:site.misc_obj_point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_point:"
+msgid "Miscellaneous point object"
+msgstr "Point"
+
+msgctxt "view:site.misc_obj_poly:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:site.misc_obj_poly:"
+msgid "Miscellaneous polygon object"
+msgstr "Zone"
+
+msgctxt "view:site.site:"
+msgid "Codes"
+msgstr "Codes"
+
+msgctxt "view:site.site:"
+msgid "Edit geometries"
+msgstr "Éditer"
+
+msgctxt "view:site.site:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:site.site:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:site.site:"
+msgid "Image"
+msgstr "Carte de situation"
+
+msgctxt "view:site.site:"
+msgid "Lines"
+msgstr "Linéaires"
+
+msgctxt "view:site.site:"
+msgid "Map"
+msgstr "Carte locale"
+
+msgctxt "view:site.site:"
+msgid "Misc. obj."
+msgstr "Objets divers"
+
+msgctxt "view:site.site:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:site.site:"
+msgid "Polygones"
+msgstr "Zones"
+
+msgctxt "view:site.site:"
+msgid "site"
+msgstr "chantier"
+
+msgctxt "wizard_button:challenge.revenuforestier.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:challenge.revenuforestier.open,start,open_:"
+msgid "Open"
+msgstr "Ouvrir"
+
+msgctxt "wizard_button:hunting.bailchasse.open,start,end:"
+msgid "Cancel"
+msgstr "Annuler"
+
+msgctxt "wizard_button:hunting.bailchasse.open,start,open_:"
+msgid "Open"
+msgstr "Ouvrir"

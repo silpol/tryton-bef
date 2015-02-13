@@ -1,0 +1,272 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstétar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgctxt "field:forest.forest,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.forest,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.forest,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.forest,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.forest,identifiant:"
+msgid "Identifiant national"
+msgstr "Identifiant national"
+
+msgctxt "field:forest.forest,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.forest,image_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.forest,image_map_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:forest.forest,name:"
+msgid "Nom de la forêt"
+msgstr "Nom de la forêt"
+
+msgctxt "field:forest.forest,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.forest,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.forest,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.plot,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.plot,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.plot,forest:"
+msgid "Forest"
+msgstr "Forêts"
+
+msgctxt "field:forest.plot,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.plot,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.plot,identifiant:"
+msgid "Identifiant national"
+msgstr "Identifiant national"
+
+msgctxt "field:forest.plot,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.plot,image_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.plot,image_map_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:forest.plot,name:"
+msgid "Numéro de la parcelle"
+msgstr "Numéro de la parcelle"
+
+msgctxt "field:forest.plot,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.plot,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.plot,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:forest.point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:forest.point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:forest.point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:forest.point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:forest.point,identifiant:"
+msgid "Identifiant"
+msgstr "Identifiant"
+
+msgctxt "field:forest.point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.point,image_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:forest.point,image_map_filename:"
+msgid "Filename"
+msgstr "Nom de fichier"
+
+msgctxt "field:forest.point,name:"
+msgid "Nom de l'emplacement"
+msgstr "Nom de l'emplacement"
+
+msgctxt "field:forest.point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:forest.point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:forest.point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "model:forest.forest,name:"
+msgid "Forests"
+msgstr "Forêts"
+
+msgctxt "model:forest.plot,name:"
+msgid "Plot"
+msgstr "Parcelle"
+
+msgctxt "model:forest.point,name:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:act_forest_forest_form"
+msgid "Forests"
+msgstr "Forêts"
+
+msgctxt "model:ir.action,name:act_forest_plot_form"
+msgid "Plots"
+msgstr "Parcelles"
+
+msgctxt "model:ir.action,name:act_forest_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:report_forest_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_plot_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.action,name:report_point_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir avec QGis..."
+
+msgctxt "model:ir.ui.menu,name:menu_forest"
+msgid "Forêts"
+msgstr "Forêts"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_forest_form"
+msgid "Forests"
+msgstr "Forêts"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_plot_form"
+msgid "Plots"
+msgstr "Parcelles"
+
+msgctxt "model:ir.ui.menu,name:menu_forest_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:forest.forest:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.forest:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:forest.forest:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:forest.forest:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:forest.forest:"
+msgid "forest"
+msgstr "forêt"
+
+msgctxt "view:forest.plot:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.plot:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:forest.plot:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:forest.plot:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:forest.plot:"
+msgid "plot"
+msgstr "parcelle"
+
+msgctxt "view:forest.point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:forest.point:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:forest.point:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:forest.point:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:forest.point:"
+msgid "Point"
+msgstr "Point"

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="forest">
+    <field name="code" />
+    <field name="name" />
+    <field name="rf" />
+    <field name="domanial" />
+</tree>
