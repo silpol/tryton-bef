@@ -1077,7 +1077,7 @@
             <field name="view" ref="page34_view_form"/>
             <field name="act_window" ref="window_page34"/>
         </record>
-        <menuitem sequence="34" name="34-La mosaïque des milieux..." icon="tryton-list"
+        <menuitem sequence="34" name="34-Facteurs d'évolution de la biodiversité en milieux artificialisés..." icon="tryton-list"
             parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page34" action="window_page34"/>
 
         <!-- Page 71 - Espaces naturels remarqués et milieux protégés-->

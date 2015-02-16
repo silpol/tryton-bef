@@ -2158,20 +2158,20 @@ class Page33(Mapable, ModelView, ModelSQL):
             help=u'Carte de la commune sans données'
         )
     page33_01_map = fields.Binary(
-            string=u'Carte RAMSAR et BIOS',
-            help=u'Carte des sites RAMSAR et des Réserves de Biosphère'
+            string=u'Part artificialisée',
+            help=u'Part artificialisée de votre territoire'
         )
     page33_02_map = fields.Binary(
-            string=u'Carte des APB',
-            help=u'Carte des Aires de Protection de Biotope'
+            string=u'Part non artificialisée',
+            help=u'Part non artificialisée de votre territoire'
         )
     page33_03_map = fields.Binary(
-            string=u'Carte des PN',
-            help=u'Carte des Parcs Nationaux'
+            string=u'Données carroyées INSEE',
+            help=u'Données carroyées INSEE à 200m'
         )
     page33_04_map = fields.Binary(
-            string=u'Carte des PNM',
-            help=u'Carte des Parcs Naturels Marins'
+            string=u'Densité communale',
+            help=u'Densité communale sur votre commune'
         )   
 
     def get_map33_empty(self, ids):

@@ -38,7 +38,6 @@ from trytond.model import ModelView, ModelSQL, fields
 
 __all__ = ['Population']
 
-
 class Population(ModelSQL, ModelView):
     'Population des communes'
     __name__ = 'portrait.population'

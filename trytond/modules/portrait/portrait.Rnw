@@ -104,6 +104,9 @@
 %----------------------------------------------------------------------------------------
 
 <<Variables, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+library(ggplot2)
+library(plyr)
+library(reshape2)
 commune <- portrait.pdf$commune
 id <- portrait.pdf$id
 page2 <- portrait.pdf$page2
@@ -131,6 +134,7 @@ page26 <- portrait.pdf$page26
 page28 <- portrait.pdf$page28
 page30 <- portrait.pdf$page30
 page32 <- portrait.pdf$page32
+page33 <- portrait.pdf$page33
 page71 <- portrait.pdf$page71
 @
 
@@ -1360,7 +1364,7 @@ page30_anec <- portrait.page30$page_anec
 
 \chapterimage{chapter_artificiel.png} % Image du chapitre introduction
 
-\chapter{Biodiversité et milieux artificialisés (urbanisation, industrie...)}
+\chapter{Biodiversité et milieux artificialisés \\ (urbanisation, industrie...)}
 
 %----------------------------------------------------------------------------------------
 %  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Mieux connaître les milieux artificialisés...
@@ -1428,11 +1432,34 @@ page32_anec <- portrait.page32$page_anec
 %----------------------------------------------------------------------------------------
 %  Biodiversité et milieux artificialisés (urbanisation, industrie...) - ...sur votre commune
 %----------------------------------------------------------------------------------------
+<<Biodiversite33, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+au <- data.frame(portrait.page33$aireurbaine)
+@
 
 \newpage % Nouvelle page
 \thispagestyle{plain} % Style plain pour cette page
 \section{...sur votre commune}
-\lipsum[1-4] % texte
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Part artificialisée & Part non artificialisée \\
+\hline
+\includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_01_map.png} & \includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_02_map.png} \\
+\hline
+Données carroyées INSEE (200m) & Densité communale \\
+\hline
+\includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_03_map.png} & \includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_04_map.png} \\
+\hline
+\end{tabular}
+\begin{tabular}{|m{14.44cm}|}
+\hline
+\rowcolor{artificiel}{\textbf{Aires urbaines}} \\
+\hline
+Votre commune fait partie de l'aire urbaine : \Sexpr{au[1,1]} \\
+\hline
+\end{tabular}
+\end{figure}
 
 %----------------------------------------------------------------------------------------
 %  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Facteurs d'évolution de la biodiversité en milieux artificialisés...
@@ -1493,7 +1520,23 @@ Petite introduction
 \newpage % Nouvelle page
 \thispagestyle{plain} % Style plain pour cette page
 \section{...sur votre commune}
-\lipsum[1-4] % texte
+<<Population, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.height=5, fig.width=15>>=
+pop<-data.frame(portrait.population[c(12,3,10,6,11,8,5,13)])
+names(pop)[1:8] <- c("Année","Total", "de 0 à 14 ans","de 15 à 29 ans", "de 30 à 44 ans", "de 45 à 59 ans", "de 60 à 74 ans", "75 ans et plus")
+pop <- melt(pop, id.vars=c("Année"))
+qplot(x=Année, y=value, fill=variable, data=pop, geom="bar", stat="identity",
+      position="dodge", main="Évolution de la taille de la population", xlab="Année", ylab="Population (nb)") + theme(legend.position="bottom")
+@
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Tourisme & Pollution lumineuse \\
+\hline
+\includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_01_map.png} & \includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_02_map.png} \\
+\hline
+\end{tabular}
+\end{figure}
 
 %----------------------------------------------------------------------------------------
 %  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Réponses pour la biodiversité en milieux artificialisés...

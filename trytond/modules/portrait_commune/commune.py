@@ -26,8 +26,25 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
+from trytond.pyson import Bool, Eval, Not, Or, And, Equal, In, If, Id
 
 __all__ = ['Commune', 'CommuneQGis']
+
+CLASSEMENT = [
+    ('lac', u'Lac'),
+    ('mer', u'Mer'),
+    ('estuaire', u'Estuaire'),
+    ('none',u'--')
+]
+
+MOTIF = [
+    ('estuaire', u'Commune du décret Estuaire'),
+    ('etang',u'Commune riveraine d\'un étang salé'),
+    ('lac',u'Commune riveraine d\'un lac de plus de 1000 hectares'),
+    ('mer',u'Commune riveraine de la mer ou d\'un océan'),
+    ('ltm',u'Commune sur un estuaire en aval de la limite transversale de la mer (LTM)'),
+    ('none',u'--')
+]
 
 class Commune(Mapable, ModelSQL, ModelView):
     u'Commune Française'
@@ -77,6 +94,44 @@ class Commune(Mapable, ModelSQL, ModelView):
     zmin = fields.Integer(
             string=u'Altitude Min. (m)',
             help=u'Altitude minimale sur la commune',
+        )
+    littoral = fields.Boolean(            
+            string=u'Loi littoral',
+            help=u'Commune classée en Loi littoral',
+        )
+    classement = fields.Selection(
+            CLASSEMENT,
+            string=u'Classement',
+            help=u'Classement en loi littoral',
+            states={'invisible': Not(Bool(Eval('littoral')))},
+        )
+    @staticmethod
+    def default_classement():
+        return 'none'
+
+    motif = fields.Selection(
+            MOTIF,
+            string=u'Motif',
+            help=u'Motif du classement',
+            states={'invisible': Not(Bool(Eval('littoral')))},
+        )
+    @staticmethod
+    def default_motif():
+        return 'none'
+
+    espace = fields.Char(            
+            string=u'Espace',
+            help=u'Espace protégé',
+            states={'invisible': Not(Bool(Eval('littoral')))},
+        )
+    montagne = fields.Boolean(            
+            string=u'Montagne',
+            help=u'Commune classée en zone de Montagne',
+        )
+    datemontagne = fields.Date(            
+            string=u'Date',
+            help=u'Date de classement',
+            states={'invisible': Not(Bool(Eval('montagne')))},
         )
     geom = fields.MultiPolygon(
             string=u'Géométrie',
@@ -136,7 +191,8 @@ class Commune(Mapable, ModelSQL, ModelView):
                 continue                                              
             cls.write([record], {'commune_map': cls.get_map(record, 'map')})
 
-
 class CommuneQGis(QGis):
     __name__ = 'portrait.commune.qgis'
     TITLES = {'portrait.commune': u'Commune'}
+
+
