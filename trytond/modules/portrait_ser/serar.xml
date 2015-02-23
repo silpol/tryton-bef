@@ -38,7 +38,7 @@
             <field name="model">portrait.serar,-1</field>
             <field name="action" ref="report_portrait_serar_edit"/>
         </record> 
-        <menuitem parent="menu_ifn" sequence="1" id="menu_portrait_serar_form" icon="tryton-list" action="act_portrait_serar_form"/>
+        <menuitem parent="menu_ign" sequence="1" id="menu_portrait_serar_form" icon="tryton-list" action="act_portrait_serar_form"/>
 
         <!-- Code SERAR -->      
         <record model="ir.ui.view" id="portrait_codeserar_view_tree">
@@ -76,7 +76,7 @@
             <field name="model">portrait.codeserar,-1</field>
             <field name="action" ref="report_portrait_codeserar_edit"/>
         </record> 
-        <menuitem parent="menu_ifn_codes" sequence="1" id="menu_portrait_codeserar_form" icon="tryton-list" action="act_portrait_codeserar_form"/>
+        <menuitem parent="menu_ign_codes" sequence="1" id="menu_portrait_codeserar_form" icon="tryton-list" action="act_portrait_codeserar_form"/>
                 
     </data>
 </tryton>

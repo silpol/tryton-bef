@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Portrait de la Biodiversité
 % Modèle LaTeX
@@ -104,9 +105,11 @@
 %----------------------------------------------------------------------------------------
 
 <<Variables, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+opts_chunk$set(concordance=T,include=T,tidy=F, warning=F, comment=F, error=F)
 library(ggplot2)
 library(plyr)
 library(reshape2)
+library(gridExtra)
 commune <- portrait.pdf$commune
 id <- portrait.pdf$id
 page2 <- portrait.pdf$page2
@@ -135,6 +138,7 @@ page28 <- portrait.pdf$page28
 page30 <- portrait.pdf$page30
 page32 <- portrait.pdf$page32
 page33 <- portrait.pdf$page33
+page35 <- portrait.pdf$page35
 page71 <- portrait.pdf$page71
 @
 
@@ -1520,12 +1524,24 @@ Petite introduction
 \newpage % Nouvelle page
 \thispagestyle{plain} % Style plain pour cette page
 \section{...sur votre commune}
-<<Population, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.height=5, fig.width=15>>=
-pop<-data.frame(portrait.population[c(12,3,10,6,11,8,5,13)])
-names(pop)[1:8] <- c("Année","Total", "de 0 à 14 ans","de 15 à 29 ans", "de 30 à 44 ans", "de 45 à 59 ans", "de 60 à 74 ans", "75 ans et plus")
-pop <- melt(pop, id.vars=c("Année"))
-qplot(x=Année, y=value, fill=variable, data=pop, geom="bar", stat="identity",
-      position="dodge", main="Évolution de la taille de la population", xlab="Année", ylab="Population (nb)") + theme(legend.position="bottom")
+<<Population, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.height=7, fig.width=15>>=
+top<-data.frame(subset(portrait.population, com==portrait.portrait$commune)[c(12,3)])
+names(top)[1:2] <- c("Année","Total")
+top <- melt(top, id.vars=c("Année"))
+
+bottom<-data.frame(subset(portrait.population, com==portrait.portrait$commune)[c(12,10,6,11,8,5,13)])
+names(bottom)[1:7] <- c("Année", "de 0 à 14 ans","de 15 à 29 ans", "de 30 à 44 ans", "de 45 à 59 ans", "de 60 à 74 ans", "75 ans et plus")
+bottom <- melt(bottom, id.vars=c("Année"))
+names(bottom)[1:2] <- c("Année", "Population")
+
+g.bottom <- ggplot(bottom, aes(x=Année, y=value, fill=Population, ymax=max(value)*1.05)) + geom_bar(stat="identity",
+                  position="dodge", main="Évolution de la taille de la population par classe d'âge", xlab="Année", ylab="Population (nb)") + theme(legend.position="bottom")
+
+g.top <- ggplot(top, aes(x=Année, y=value, group=variable, ymax=max(value)*1.05)) + geom_line(stat="identity",
+                  position="dodge", main="Évolution de la taille de la population", xlab="Année", ylab="Nb") + geom_line(colour = "red", size=2)
+
+## plot graphs and set relative heights
+grid.arrange(g.top,g.bottom, heights = c(2/5, 3/5)) 
 @
 \begin{figure}[H]
 \centering
@@ -1533,10 +1549,28 @@ qplot(x=Année, y=value, fill=variable, data=pop, geom="bar", stat="identity",
 \hline
 Tourisme & Pollution lumineuse \\
 \hline
-\includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_01_map.png} & \includegraphics[scale=0.35]{portrait_page33_\Sexpr{page33}_page33_02_map.png} \\
+\includegraphics[scale=0.35]{portrait_page35_\Sexpr{page35}_page35_01_map.png} & \includegraphics[scale=0.35]{portrait_page35_\Sexpr{page35}_page35_02_map.png} \\
 \hline
 \end{tabular}
 \end{figure}
+<<Atmo, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.height=7, fig.width=15>>=
+atmo<-data.frame(portrait.atmo[c(1,6,4,8,10,12)])
+atmo$j<-365-atmo[1,2]
+names(atmo)[1:7] <- c("Commune", "Indice atmo >= 6", "PM10", "SO2", "O3", "NO2", "Indice atmo < 6")
+right <- melt(atmo[c(1,3,4,5,6)], id.vars=c("Commune"))
+names(right)[2] <- c("Polluants")
+left <- melt(atmo[c(1,2,7)], id.vars=c("Commune"))
+names(left)[2] <- c("Jours")
+
+left <- ggplot(left, aes(x = "", y=value, fill = Jours)) + labs(title="Indice Atmo", x="", y="") + geom_bar(width = 1, stat="identity") + coord_polar("y", start=0) + theme(legend.position="bottom")
+
+right <- ggplot(right, aes(x = "", y=value, fill = Polluants)) + labs(title="Polluants", x="", y="") + geom_bar(width = 1, stat="identity") + coord_polar("y", start=0) + theme(legend.position="bottom")
+
+## plot graphs and set relative heights
+grid.arrange(left, right, heights = c(1/2, 1/2), ncol=2, nrow=1) 
+@
+
+Les données Atmo présentées proviennent de la commune de \Sexpr{portrait.atmo$rec_name} située à \Sexpr{portrait.page35$distance} km de \Sexpr{portrait.portrait$rec_name}.
 
 %----------------------------------------------------------------------------------------
 %  Biodiversité et milieux artificialisés (urbanisation, industrie...) - Réponses pour la biodiversité en milieux artificialisés...

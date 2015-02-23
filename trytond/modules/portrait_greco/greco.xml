@@ -37,7 +37,7 @@
             <field name="model">portrait.greco,-1</field>
             <field name="action" ref="report_portrait_greco_edit"/>
         </record> 
-        <menuitem parent="portrait_ser.menu_ifn" sequence="1" id="menu_portrait_greco_form" icon="tryton-list" action="act_portrait_greco_form"/>
+        <menuitem parent="portrait_ser.menu_ign" sequence="1" id="menu_portrait_greco_form" icon="tryton-list" action="act_portrait_greco_form"/>
 
         <!-- Code GRECO -->      
         <record model="ir.ui.view" id="portrait_codegreco_view_tree">
@@ -75,7 +75,7 @@
             <field name="model">portrait.codegreco,-1</field>
             <field name="action" ref="report_portrait_codegreco_edit"/>
         </record> 
-        <menuitem parent="portrait_ser.menu_ifn_codes" sequence="1" id="menu_portrait_codegreco_form" icon="tryton-list" action="act_portrait_codegreco_form"/>
+        <menuitem parent="portrait_ser.menu_ign_codes" sequence="1" id="menu_portrait_codegreco_form" icon="tryton-list" action="act_portrait_codegreco_form"/>
                 
     </data>
 </tryton>

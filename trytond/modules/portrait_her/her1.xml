@@ -2,7 +2,7 @@
 <tryton>
     <data>
 
-        <record model="ir.ui.icon" id="ifn_codes">
+        <record model="ir.ui.icon" id="ign_codes">
             <field name="name">tryton-codes</field>
             <field name="path">icons/applications-system.svg</field>
         </record>

@@ -1080,6 +1080,69 @@
         <menuitem sequence="34" name="34-Facteurs d'évolution de la biodiversité en milieux artificialisés..." icon="tryton-list"
             parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page34" action="window_page34"/>
 
+        <!-- Page 35 - Facteurs d'évolution de la biodiversité en milieux artificialisés...sur votre commune-->
+        <record model="ir.ui.view" id="page35_view_tree">
+            <field name="model">portrait.page35</field>
+            <field name="type">tree</field>
+            <field name="name">page35_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page35_view_form">
+            <field name="model">portrait.page35</field>
+            <field name="type">form</field>
+            <field name="name">page35_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page35">
+            <field name="name">Portrait - Page 35 - Facteurs d'évolution de la biodiversité en milieux artificialisés...sur votre commune</field>
+            <field name="res_model">portrait.page35</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page35_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page35_view_tree"/>
+            <field name="act_window" ref="window_page35"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page35_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page35_view_form"/>
+            <field name="act_window" ref="window_page35"/>
+        </record>        
+        <record model="ir.action.report" id="report_page35_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page35</field>
+            <field name="report_name">portrait.page35.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page35_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page35,-1</field>
+            <field name="action" ref="report_page35_geo_edit"/>
+        </record>
+        <menuitem sequence="35" name="35-Facteurs d'évolution de la biodiversité en milieux artificialisés...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page35" action="window_page35"/>
+
+        <!-- generate35 all maps -->
+        <record model="ir.action.wizard" id="generate35">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page35</field>
+            <field name="wiz_name">portrait.generate35</field>
+        </record>
+        <record model="ir.action.keyword" id="generate35_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page35,-1</field>
+            <field name="action" ref="generate35"/>
+        </record>
+
+        <!-- generate commune map -->
+        <record model="ir.action.wizard" id="generatecommune35map">
+            <field name="name">Generate Commune map...</field>
+            <field name="model">portrait.page35</field>
+            <field name="wiz_name">portrait.generatecommunemap</field>
+        </record>
+        <record model="ir.action.keyword" id="generatecommune35map_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page35,-1</field>
+            <field name="action" ref="generatecommune35map"/>
+        </record>
+
         <!-- Page 71 - Espaces naturels remarqués et milieux protégés-->
         <record model="ir.ui.view" id="page71_view_tree">
             <field name="model">portrait.page71</field>

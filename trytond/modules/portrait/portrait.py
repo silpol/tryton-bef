@@ -42,6 +42,7 @@ __all__ = ['Page2', 'Page3', 'Page4', 'Page5', 'Portrait', 'PortraitQGis', 'Page
             'Page22', 'Page24', 'Page26', 'Page28', 'Page30', 'Page32', 
             'Page33', 'Page33QGis', 'Generate33',
             'Page34',
+            'Page35', 'Page35QGis', 'Generate35', 'GenerateCommuneMap',
             'Page71', 'Page71Protection', 'Page71QGis', 'Generate71', 'GenerateProtectionMap']
 
 _NIVEAU = [
@@ -357,6 +358,11 @@ class PortraitPdf(ModelSQL, ModelView):
             string=u'Page 34',
             help=u'Page 34 du portrait',
         )
+    page35 = fields.Many2One(
+            'portrait.page35',
+            string=u'Page 35',
+            help=u'Page 35 du portrait',
+        )
     page71 = fields.Many2One(
             'portrait.page71',
             string=u'Page 71',
@@ -401,6 +407,7 @@ class PortraitPdf(ModelSQL, ModelView):
         'p32.id AS page32, '
         'p33.id AS page33, '
         'p34.id AS page34, '
+        'p35.id AS page35, '
         'p71.id AS page71 '
         'FROM portrait_portrait p, portrait_commune c, portrait_page2 p2, '
         'portrait_page3 p3, portrait_page4 p4, portrait_page5 p5, portrait_page6 p6, '
@@ -408,7 +415,7 @@ class PortraitPdf(ModelSQL, ModelView):
         'portrait_page13 p13, portrait_page14 p14, portrait_page16 p16, portrait_page17 p17, portrait_page18 p18, '
         'portrait_page19 p19, portrait_page20 p20, portrait_page21 p21, portrait_page22 p22, portrait_page24 p24, '
         'portrait_page26 p26, portrait_page28 p28, portrait_page30 p30, portrait_page32 p32, portrait_page33 p33, '
-        'portrait_page34 p34, portrait_page71 p71 '
+        'portrait_page34 p34, portrait_page35 p35, portrait_page71 p71 '
         'WHERE %s '
         + and_commune +
         ' AND c.id=p.commune AND p2.portrait = \'1\' AND p3.portrait = \'1\' '
@@ -418,11 +425,13 @@ class PortraitPdf(ModelSQL, ModelView):
         ' AND p18.portrait = \'1\' AND p20.portrait = \'1\' AND p22.portrait = \'1\' '
         ' AND p24.portrait = \'1\' AND p26.portrait = \'1\' AND p28.portrait = \'1\' '
         ' AND p30.portrait = \'1\' AND p32.portrait = \'1\' AND p34.portrait = \'1\' '
-        ' AND p.id=p9.portrait AND p.id=p11.portrait AND p.id=p17.portrait AND p.id=p19.portrait AND p.id=p21.portrait AND p.id=p33.portrait AND p.id=p71.portrait '
+        ' AND p.id=p9.portrait AND p.id=p11.portrait AND p.id=p17.portrait '
+        ' AND p.id=p19.portrait AND p.id=p21.portrait AND p.id=p33.portrait '
+        ' AND p.id=p35.portrait AND p.id=p71.portrait '
         'GROUP BY p.id, c.nom, c.postal, p6.page6_map, p2.page2, p3.page3, '
         'p4.page4_1, p4.page4_2, p5.page5_1, p5.page5_2, p8.id, p9.id, p10.id, p11.id, '        
         'p12.id, p13.id, p14.id, p16.id, p17.id, p18.id, p19.id, p20.id, p21.id, p22.id, '
-        'p24.id, p26.id, p28.id, p30.id, p32.id, p33.id, p34.id, p71.id '
+        'p24.id, p26.id, p28.id, p30.id, p32.id, p33.id, p34.id, p35.id, p71.id '
         'ORDER BY commune', args)
 
 class OpenPortraitPdfStart(ModelView):
@@ -2041,7 +2050,7 @@ class GenerateHer1Map(Wizard):
         portrait = Pool().get('portrait.page21')
         portraits = portrait.browse(Transaction().context.get('active_ids'))        
         for record in portraits:
-            for c in record.her1:          
+            for c in record.her1:       
                c.generate([c])            
         return []
 
@@ -2259,6 +2268,212 @@ class Page33QGis(QGis):
 class Page34(Page):
     u'Page 34 - Facteurs d\'évolution de la biodiversité en milieux artificialisés...'
     __name__ = 'portrait.page34'
+
+class Page35(Mapable, ModelView, ModelSQL):
+    u'Page 35 - Facteurs d\'évolution de la biodiversité en milieux artificialisés...sur votre commune'
+    __name__ = 'portrait.page35'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 35 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Mieux connaître les milieux artificialisés',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    tourisme = fields.Many2One(
+            'portrait.tourisme',
+            string=u'Tourisme',
+            help=u'Données tourisme',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_tourisme(self):
+        if self.portrait is not None:
+            Chs = Pool().get('portrait.tourisme')                                                   
+            cursor = Transaction().cursor                       
+            dom=[]
+            cursor.execute('SELECT DISTINCT a.id '
+                'FROM portrait_tourisme a, portrait_commune c, portrait_portrait p '
+                'WHERE c.id = p.commune AND a.cd_insee = c.id AND p.id = %s ', (str(self.portrait.id),))
+            dom = cursor.fetchone()            
+            if dom:
+                dom=dom[0]
+            else:
+                dom=0
+            return dom
+
+    atmo = fields.Many2One(
+            'portrait.atmo',
+            string=u'Air Atmo',
+            help=u'Données Air Atmo',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_atmo(self):
+        if self.portrait is not None:
+            Atmos = Pool().get('portrait.atmo')                                                   
+            cursor = Transaction().cursor
+            dom=[]
+            cursor.execute('SELECT foo.id, round(cast(min(st_distance(b.geom, foo.geom))/1000 AS numeric),3) as distance '
+                            'FROM portrait_commune b, '
+                            '(SELECT c.geom, a.id '
+                            'FROM portrait_commune c, portrait_atmo a '
+                            'WHERE c.id=a.cd_insee) AS foo '
+                            'WHERE b.id=%s '
+                            'GROUP BY foo.id '
+                            'ORDER BY distance, foo.id LIMIT 1', (str(self.portrait.commune.id),))
+            dom = cursor.fetchone()           
+            if dom:
+                dom=dom[0]
+            else:
+                dom=0
+            return dom
+
+    distance = fields.Float(            
+            string=u'Distance (km)',
+            help=u'Distance de la station Air Atmo la plus proche',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_distance(self):
+        if self.portrait is not None:
+            Atmos = Pool().get('portrait.atmo')                                                   
+            cursor = Transaction().cursor            
+            dom=[]
+            cursor.execute('SELECT round(cast(min(st_distance(b.geom, foo.geom))/1000 AS numeric),3) as distance '
+                            'FROM portrait_commune b, '
+                            '(SELECT c.geom, c.id '
+                            'FROM portrait_commune c, portrait_atmo a '
+                            'WHERE c.id=a.cd_insee) AS foo '
+                            'WHERE b.id=%s ', (str(self.portrait.commune.id),))
+            dom = cursor.fetchone()
+            if dom:
+                dom=dom[0]
+            else:
+                dom=0
+            return dom
+
+
+    @classmethod
+    def __setup__(cls):
+        super(Page35, cls).__setup__()        
+        cls._buttons.update({           
+            'page35_edit': {},
+            'generate35_empty': {},
+            'generate35_01': {},
+            'generate35_02': {},
+        })
+
+    page35_empty_map = fields.Binary(
+            string=u'Carte sans intersection',
+            help=u'Carte de la commune sans données'
+        )
+    page35_01_map = fields.Binary(
+            string=u'Nombre de chambres dans hôtels',
+            help=u'Nombre de chambres dans hôtels'
+        )
+    page35_02_map = fields.Binary(
+            string=u'Pollution lumineuse',
+            help=u'Pollution lumineuse'
+        ) 
+
+    def get_map35_empty(self, ids):
+        return self._get_image('page35_empty_map.qgs', 'carte')
+
+    def get_map35_01(self, ids):
+        return self._get_image('page35_01_map.qgs', 'carte')
+
+    def get_map35_02(self, ids):
+        return self._get_image('page35_02_map.qgs', 'carte')
+ 
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page35_geo_edit')
+    def page35_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate35_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page35_empty_map': cls.get_map35_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate35_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page35_01_map': cls.get_map35_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate35_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page35_02_map': cls.get_map35_02(record, 'map')})
+
+class Generate35(Wizard):
+    __name__ = 'portrait.generate35'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page35')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate35_empty([record])
+            record.generate35_01([record])
+            record.generate35_02([record])
+        return []
+
+class GenerateCommuneMap(Wizard):
+    __name__ = 'portrait.generatecommunemap'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        portrait = Pool().get('portrait.page35')
+        portraits = portrait.browse(Transaction().context.get('active_ids'))
+        for record in portraits:                              
+            record.atmo.cd_insee.generate([record.atmo.cd_insee])            
+        return []
+
+class Page35QGis(QGis):
+    __name__ = 'portrait.page35.qgis'
+    TITLES = {'portrait.page35': u'Page35'}
 
 class Page71(Mapable, ModelView, ModelSQL):
     u'Page 71 - Espaces naturels remarques et milieux proteges'
