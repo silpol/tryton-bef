@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<form string="Production de déchet non dangereux" col="4">
+    <label name="identifiant"/>
+    <field name="identifiant"/>
+    <label name="nom"/>
+    <field name="nom"/>
+    <label name="dechet"/>
+    <field name="dechet"/>
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="code_operation_eliminatio_valorisation"/>
+    <field name="code_operation_eliminatio_valorisation"/>
+    <label name="libelle_operation_eliminatio_valorisation"/>
+    <field name="libelle_operation_eliminatio_valorisation"/>
+    <label name="code_departement"/>
+    <field name="code_departement"/>
+    <label name="pays"/>
+    <field name="pays"/> 
+    <label name="code_dechet"/>
+    <field name="code_dechet"/> 
+    <label name="libelle_dechet"/>
+    <field name="libelle_dechet"/> 
+    <label name="quantite"/>
+    <field name="quantite"/>
+    <label name="unit"/>
+    <field name="unit"/> 
+</form>

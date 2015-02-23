@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Plan de Prévention des Risques Miniers (PPRm) - Commune">
+    <field name="cd_insee"/>
+    <field name="cod_nat_pprm"/>  
+    <field name="lib_pprm"/>
+    <field name="dat_montage"/> 
+    <field name="dat_prescription"/>
+    <field name="dat_mise_a_enquete"/>
+    <field name="dat_approbation"/>
+    <field name="dat_annexion_plu"/>
+    <field name="num_risque"/>
+    <field name="l_bassin_risque"/>
+    <field name="etat_revision"/>
+</tree>

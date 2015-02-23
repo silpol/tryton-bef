@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Risque JO">
+    <field name="num_risque_jo"/>
+    <field name="lib_risque_jo"/>  
+    <field name="lib_risque_abre"/>   
+</tree>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="Plan de Prévention des Risques Technologiques (PPRt) - Commune">
+    <field name="cd_insee"/>
+    <field name="cod_nat_pprt"/>  
+    <field name="dat_clic"/> 
+    <field name="dat_prescription"/>
+    <field name="dat_mise_a_enquete"/>
+    <field name="dat_approbation"/>
+    <field name="dat_conv"/>
+    <field name="num_risque"/>
+    <field name="lib_bassin_risque"/>
+</tree>

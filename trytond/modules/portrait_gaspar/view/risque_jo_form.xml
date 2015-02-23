@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Risque JO" col="4">
+    <label name="num_risque_jo"/>
+    <field name="num_risque_jo"/>
+    <label name="lib_risque_jo"/>
+    <field name="lib_risque_jo"/> 
+    <label name="lib_risque_abre"/>
+    <field name="lib_risque_abre"/>   
+</form>

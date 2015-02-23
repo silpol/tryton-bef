@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Risque" col="4">
+    <label name="num_risque"/>
+    <field name="num_risque"/>
+    <label name="lib_risque_long"/>
+    <field name="lib_risque_long"/> 
+    <label name="lib_risque"/>
+    <field name="lib_risque"/>
+    <label name="num_alea"/>
+    <field name="num_alea"/> 
+    <label name="num_risque_jo"/>
+    <field name="num_risque_jo"/> 
+    <label name="num_risque_gaspar"/>
+    <field name="num_risque_gaspar"/>    
+</form>

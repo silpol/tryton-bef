@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form string="Déclaration de catastrophes naturelles - Commune" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="cod_nat_cat_nat"/>
+    <field name="cod_nat_cat_nat"/>
+    <label name="num_risque_jo"/>
+    <field name="num_risque_jo"/>
+    <label name="dat_deb"/>
+    <field name="dat_deb"/>
+    <label name="dat_fin"/>
+    <field name="dat_fin"/>
+    <label name="dat_pub_arrete"/>
+    <field name="dat_pub_arrete"/>
+    <label name="dat_pub_jo"/>
+    <field name="dat_pub_jo"/>
+    <label name="num_risque"/>
+    <field name="num_risque"/>
+</form>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Air Atmo" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="nbjour"/>
+    <field name="nbjour"/>
+    <label name="so2"/>
+    <field name="so2"/>
+    <label name="no2"/>
+    <field name="no2"/>
+    <label name="o3"/>
+    <field name="o3"/>
+    <label name="pm10"/>
+    <field name="pm10"/>    
+</form>

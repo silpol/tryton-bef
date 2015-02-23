@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<tree string="Risque sismique">
+    <field name="cd_insee"/>
+    <field name="sismicite"/>   
+</tree>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Document d'information Communale sur les Risques Majeurs (DICRIM)" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="cod_nat_dicrim"/>
+    <field name="cod_nat_dicrim"/>
+    <label name="dat_publi_dicrim"/>
+    <field name="dat_publi_dicrim"/>
+    <label name="dat_reception_min"/>
+    <field name="dat_reception_min"/>
+</form>

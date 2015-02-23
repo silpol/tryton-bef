@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tree string="Traitement de déchet dangereux">
+    <field name="identifiant"/>
+    <field name="nom"/>
+    <field name="dechet"/>
+    <field name="annee"/>
+    <field name="code_operation_eliminatio_valorisation"/>
+    <field name="libelle_operation_eliminatio_valorisation"/>
+    <field name="code_departement"/>
+    <field name="pays"/>
+    <field name="code_dechet"/>
+    <field name="libelle_dechet"/>
+    <field name="quantite_admise"/>
+    <field name="quantite_traitee"/>
+    <field name="unite"/>
+</tree>

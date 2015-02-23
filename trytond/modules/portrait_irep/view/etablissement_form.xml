@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<form string="Établissement" col="4">
+    <label name="identifiant"/>
+    <field name="identifiant"/>
+    <label name="nom"/>
+    <field name="nom"/>
+    <label name="siret"/>
+    <field name="siret"/>
+    <label name="adresse"/>
+    <field name="adresse"/>
+    <label name="postal"/>
+    <field name="postal"/>
+    <label name="commune"/>
+    <field name="commune"/>
+    <label name="codeape"/>
+    <field name="codeape"/> 
+    <label name="labelape"/>
+    <field name="labelape"/> 
+    <label name="codeeprtr"/>
+    <field name="codeeprtr"/> 
+    <label name="labeleprtr"/>
+    <field name="labeleprtr"/>
+    <notebook>
+        <page string="Émissions" id="emission">                                        
+            <field name="emission" colspan="4"/>
+        </page>
+        <page string="Prélèvements" id="prelevement">                                        
+            <field name="prelevement" colspan="4"/>
+        </page>
+        <page string="Production de déchets dangereux" id="productiondechetdangereux">                                        
+            <field name="production_dechet_dangereux" colspan="4"/>
+        </page>
+        <page string="Production de déchets non dangereux" id="productiondechetnondangereux">                                        
+            <field name="production_dechet_non_dangereux" colspan="4"/>
+        </page>
+        <page string="Traitement de déchets dangereux" id="traitementdechetdangereux">                                        
+            <field name="traitement_dechet_dangereux" colspan="4"/>
+        </page>
+        <page string="Traitement de déchets non dangereux" id="traitementdechetnondangereux">                                        
+            <field name="traitement_dechet_non_dangereux" colspan="4"/>
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Transmission des informations au maire (TIM)">
+    <field name="cd_insee"/>
+    <field name="cod_nat_tim"/>  
+    <field name="dat_transmission_tim"/> 
+    <field name="dat_reception_min"/>
+</tree>

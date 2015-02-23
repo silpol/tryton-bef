@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form string="Plan de Prévention des Risques Miniers (PPRm) - Commune" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="cod_nat_pprm"/>
+    <field name="cod_nat_pprm"/> 
+    <label name="lib_pprm"/>
+    <field name="lib_pprm"/>
+    <label name="dat_montage"/>
+    <field name="dat_montage"/>
+    <label name="dat_prescription"/>
+    <field name="dat_prescription"/>
+    <label name="dat_mise_a_enquete"/>
+    <field name="dat_mise_a_enquete"/>
+    <label name="dat_approbation"/>
+    <field name="dat_approbation"/>
+    <label name="dat_annexion_plu"/>
+    <field name="dat_annexion_plu"/>
+    <label name="num_risque"/>
+    <field name="num_risque"/>
+    <label name="l_bassin_risque"/>
+    <field name="l_bassin_risque"/>
+    <label name="etat_revision"/>
+    <field name="etat_revision"/>
+</form>

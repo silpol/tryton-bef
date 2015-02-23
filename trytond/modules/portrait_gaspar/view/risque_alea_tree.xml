@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Risque aléa">
+    <field name="num_alea"/>
+    <field name="lib_alea"/>  
+    <field name="num_rn_rt"/>   
+</tree>

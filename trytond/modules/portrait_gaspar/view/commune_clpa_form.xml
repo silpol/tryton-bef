@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Cartographie de localisation des Phénomènes d'Avalanche (CLPA) - Commune" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="pourcent_total"/>
+    <field name="pourcent_total"/> 
+</form>

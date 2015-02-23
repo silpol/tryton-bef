@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Prélèvement">
+    <field name="identifiant"/>
+    <field name="nom"/>
+    <field name="annee"/>
+    <field name="eauxsout"/>
+    <field name="eauxsurf"/>
+    <field name="eauxres"/>
+    <field name="eauxmer"/>
+</tree>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Risque">
+    <field name="num_risque"/>
+    <field name="lib_risque_long"/>  
+    <field name="lib_risque"/> 
+    <field name="num_alea"/> 
+    <field name="num_risque_jo"/> 
+    <field name="num_risque_gaspar"/>   
+</tree>

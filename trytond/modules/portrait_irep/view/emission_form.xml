@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="Établissement" col="4">
+    <label name="identifiant"/>
+    <field name="identifiant"/>
+    <label name="nom"/>
+    <field name="nom"/>
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="milieu"/>
+    <field name="milieu"/>
+    <label name="polluant"/>
+    <field name="polluant"/>
+    <label name="quantite"/>
+    <field name="quantite"/>
+    <label name="unite"/>
+    <field name="unite"/> 
+</form>

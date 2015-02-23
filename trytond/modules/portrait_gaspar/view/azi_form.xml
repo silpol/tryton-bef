@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form string="Atlas de zones inondables" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="cod_nat_azi"/>
+    <field name="cod_nat_azi"/> 
+    <label name="lib_azi"/>
+    <field name="lib_azi"/>
+    <label name="dat_deb"/>
+    <field name="dat_deb"/> 
+    <label name="dat_info_comm"/>
+    <field name="dat_info_comm"/> 
+    <label name="dat_realisation"/>
+    <field name="dat_realisation"/>
+    <label name="dat_diffusion"/>
+    <field name="dat_diffusion"/>
+    <label name="dat_pub_net"/>
+    <field name="dat_pub_net"/>
+    <label name="num_risque"/>
+    <field name="num_risque"/>
+    <label name="lib_bassin_risque"/>
+    <field name="lib_bassin_risque"/>
+    <label name="lib_cours_deau"/>
+    <field name="lib_cours_deau"/>
+</form>

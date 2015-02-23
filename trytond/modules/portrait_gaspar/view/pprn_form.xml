@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Type Plan de Prévention des Risques'" col="4">
+    <label name="typ_pprn"/>
+    <field name="typ_pprn"/>
+    <label name="lib_pprn"/>
+    <field name="lib_pprn"/> 
+</form>

@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>                
+        <record model="ir.ui.icon" id="irep_icon">
+            <field name="name">tryton-irep</field>
+            <field name="path">icons/tryton-irep.svg</field>
+        </record>
+        <menuitem name="iREP" parent="ir.menu_administration" id="menu_irep" icon="tryton-irep"/>        
+
+        <!-- Etablissement -->
+        <record model="ir.ui.view" id="irep_etablissement_view_tree">
+            <field name="model">portrait.irep_etablissement</field>
+            <field name="type">tree</field>
+            <field name="name">etablissement_tree</field>
+        </record>
+        <record model="ir.ui.view" id="irep_etablissement_view_form">
+            <field name="model">portrait.irep_etablissement</field>
+            <field name="type">form</field>
+            <field name="name">etablissement_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_irep_etablissement_form">
+            <field name="name">Établissement</field>
+            <field name="res_model">portrait.irep_etablissement</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_etablissement_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="irep_etablissement_view_tree"/>
+            <field name="act_window" ref="act_irep_etablissement_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_etablissement_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="irep_etablissement_view_form"/>
+            <field name="act_window" ref="act_irep_etablissement_form"/>
+        </record>        
+        <menuitem parent="menu_irep" id="menu_irep_etablissement_form" icon="tryton-list" action="act_irep_etablissement_form"/>
+
+        <!-- Emission -->
+        <record model="ir.ui.view" id="irep_emission_view_tree">
+            <field name="model">portrait.irep_emission</field>
+            <field name="type">tree</field>
+            <field name="name">emission_tree</field>
+        </record>
+        <record model="ir.ui.view" id="irep_emission_view_form">
+            <field name="model">portrait.irep_emission</field>
+            <field name="type">form</field>
+            <field name="name">emission_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_irep_emission_form">
+            <field name="name">Émission</field>
+            <field name="res_model">portrait.irep_emission</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_emission_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="irep_emission_view_tree"/>
+            <field name="act_window" ref="act_irep_emission_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_emission_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="irep_emission_view_form"/>
+            <field name="act_window" ref="act_irep_emission_form"/>
+        </record>        
+        <menuitem parent="menu_irep" id="menu_irep_emission_form" icon="tryton-list" action="act_irep_emission_form"/>
+
+        <!-- Prelevement -->
+        <record model="ir.ui.view" id="irep_prelevement_view_tree">
+            <field name="model">portrait.irep_prelevement</field>
+            <field name="type">tree</field>
+            <field name="name">prelevement_tree</field>
+        </record>
+        <record model="ir.ui.view" id="irep_prelevement_view_form">
+            <field name="model">portrait.irep_prelevement</field>
+            <field name="type">form</field>
+            <field name="name">prelevement_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_irep_prelevement_form">
+            <field name="name">Prélèvement</field>
+            <field name="res_model">portrait.irep_prelevement</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_prelevement_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="irep_prelevement_view_tree"/>
+            <field name="act_window" ref="act_irep_prelevement_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_prelevement_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="irep_prelevement_view_form"/>
+            <field name="act_window" ref="act_irep_prelevement_form"/>
+        </record>        
+        <menuitem parent="menu_irep" id="menu_irep_prelevement_form" icon="tryton-list" action="act_irep_prelevement_form"/>
+
+        <!-- Production de déchet dangereux -->
+        <record model="ir.ui.view" id="irep_production_dechet_dangereux_view_tree">
+            <field name="model">portrait.irep_production_dechet_dangereux</field>
+            <field name="type">tree</field>
+            <field name="name">production_dechet_dangereux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="irep_production_dechet_dangereux_view_form">
+            <field name="model">portrait.irep_production_dechet_dangereux</field>
+            <field name="type">form</field>
+            <field name="name">production_dechet_dangereux_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_irep_production_dechet_dangereux_form">
+            <field name="name">Production de déchet dangereux</field>
+            <field name="res_model">portrait.irep_production_dechet_dangereux</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_production_dechet_dangereux_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="irep_production_dechet_dangereux_view_tree"/>
+            <field name="act_window" ref="act_irep_production_dechet_dangereux_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_production_dechet_dangereux_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="irep_production_dechet_dangereux_view_form"/>
+            <field name="act_window" ref="act_irep_production_dechet_dangereux_form"/>
+        </record>        
+        <menuitem parent="menu_irep" id="menu_irep_production_dechet_dangereux_form" icon="tryton-list" action="act_irep_production_dechet_dangereux_form"/>
+
+        <!-- Production de déchet non dangereux -->
+        <record model="ir.ui.view" id="irep_production_dechet_non_dangereux_view_tree">
+            <field name="model">portrait.irep_production_dechet_non_dangereux</field>
+            <field name="type">tree</field>
+            <field name="name">production_dechet_non_dangereux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="irep_production_dechet_non_dangereux_view_form">
+            <field name="model">portrait.irep_production_dechet_non_dangereux</field>
+            <field name="type">form</field>
+            <field name="name">production_dechet_non_dangereux_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_irep_production_dechet_non_dangereux_form">
+            <field name="name">Production de déchet non dangereux</field>
+            <field name="res_model">portrait.irep_production_dechet_non_dangereux</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_production_dechet_non_dangereux_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="irep_production_dechet_non_dangereux_view_tree"/>
+            <field name="act_window" ref="act_irep_production_dechet_non_dangereux_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_production_dechet_non_dangereux_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="irep_production_dechet_non_dangereux_view_form"/>
+            <field name="act_window" ref="act_irep_production_dechet_non_dangereux_form"/>
+        </record>        
+        <menuitem parent="menu_irep" id="menu_irep_production_dechet_non_dangereux_form" icon="tryton-list" action="act_irep_production_dechet_non_dangereux_form"/>
+
+        <!-- Traitement de déchet dangereux -->
+        <record model="ir.ui.view" id="irep_traitement_dechet_dangereux_view_tree">
+            <field name="model">portrait.irep_traitement_dechet_dangereux</field>
+            <field name="type">tree</field>
+            <field name="name">traitement_dechet_dangereux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="irep_traitement_dechet_dangereux_view_form">
+            <field name="model">portrait.irep_traitement_dechet_dangereux</field>
+            <field name="type">form</field>
+            <field name="name">traitement_dechet_dangereux_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_irep_traitement_dechet_dangereux_form">
+            <field name="name">Traitement de déchet dangereux</field>
+            <field name="res_model">portrait.irep_traitement_dechet_dangereux</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_traitement_dechet_dangereux_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="irep_traitement_dechet_dangereux_view_tree"/>
+            <field name="act_window" ref="act_irep_traitement_dechet_dangereux_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_traitement_dechet_dangereux_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="irep_traitement_dechet_dangereux_view_form"/>
+            <field name="act_window" ref="act_irep_traitement_dechet_dangereux_form"/>
+        </record>        
+        <menuitem parent="menu_irep" id="menu_irep_traitement_dechet_dangereux_form" icon="tryton-list" action="act_irep_traitement_dechet_dangereux_form"/>
+
+        <!-- Traitement de déchet non dangereux -->
+        <record model="ir.ui.view" id="irep_traitement_dechet_non_dangereux_view_tree">
+            <field name="model">portrait.irep_traitement_dechet_non_dangereux</field>
+            <field name="type">tree</field>
+            <field name="name">traitement_dechet_non_dangereux_tree</field>
+        </record>
+        <record model="ir.ui.view" id="irep_traitement_dechet_non_dangereux_view_form">
+            <field name="model">portrait.irep_traitement_dechet_non_dangereux</field>
+            <field name="type">form</field>
+            <field name="name">traitement_dechet_non_dangereux_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_irep_traitement_dechet_non_dangereux_form">
+            <field name="name">Traitement de déchet non dangereux</field>
+            <field name="res_model">portrait.irep_traitement_dechet_non_dangereux</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_traitement_dechet_non_dangereux_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="irep_traitement_dechet_non_dangereux_view_tree"/>
+            <field name="act_window" ref="act_irep_traitement_dechet_non_dangereux_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_irep_traitement_dechet_non_dangereux_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="irep_traitement_dechet_non_dangereux_view_form"/>
+            <field name="act_window" ref="act_irep_traitement_dechet_non_dangereux_form"/>
+        </record>        
+        <menuitem parent="menu_irep" id="menu_irep_traitement_dechet_non_dangereux_form" icon="tryton-list" action="act_irep_traitement_dechet_non_dangereux_form"/>
+
+    </data>
+</tryton>

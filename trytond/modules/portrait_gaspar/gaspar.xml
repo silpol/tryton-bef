@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="gaspar_icon">
+            <field name="name">tryton-gaspar</field>
+            <field name="path">icons/tryton-gaspar.svg</field>
+        </record>
+
+        <menuitem name="GASPAR" parent="ir.menu_administration" id="menu_gaspar" icon="tryton-gaspar"/>
+
+        <!-- Risques naturelles et technologiques -->
+        <record model="ir.ui.view" id="gaspar_risque_rn_rt_view_tree">
+            <field name="model">portrait.gaspar_risque_rn_rt</field>
+            <field name="type">tree</field>
+            <field name="name">risque_rn_rt_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_risque_rn_rt_view_form">
+            <field name="model">portrait.gaspar_risque_rn_rt</field>
+            <field name="type">form</field>
+            <field name="name">risque_rn_rt_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_risque_rn_rt_form">
+            <field name="name">Risques naturelles et technologiques</field>
+            <field name="res_model">portrait.gaspar_risque_rn_rt</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_rn_rt_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_risque_rn_rt_view_tree"/>
+            <field name="act_window" ref="act_gaspar_risque_rn_rt_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_rn_rt_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_risque_rn_rt_view_form"/>
+            <field name="act_window" ref="act_gaspar_risque_rn_rt_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_risque_rn_rt_form" icon="tryton-list" action="act_gaspar_risque_rn_rt_form"/>
+
+        <!-- Risque aléa -->
+        <record model="ir.ui.view" id="gaspar_risque_alea_view_tree">
+            <field name="model">portrait.gaspar_risque_alea</field>
+            <field name="type">tree</field>
+            <field name="name">risque_alea_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_risque_alea_view_form">
+            <field name="model">portrait.gaspar_risque_alea</field>
+            <field name="type">form</field>
+            <field name="name">risque_alea_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_risque_alea_form">
+            <field name="name">Risque aléa</field>
+            <field name="res_model">portrait.gaspar_risque_alea</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_alea_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_risque_alea_view_tree"/>
+            <field name="act_window" ref="act_gaspar_risque_alea_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_alea_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_risque_alea_view_form"/>
+            <field name="act_window" ref="act_gaspar_risque_alea_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_risque_alea_form" icon="tryton-list" action="act_gaspar_risque_alea_form"/>
+
+        <!-- Risque JO -->
+        <record model="ir.ui.view" id="gaspar_risque_jo_view_tree">
+            <field name="model">portrait.gaspar_risque_jo</field>
+            <field name="type">tree</field>
+            <field name="name">risque_jo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_risque_jo_view_form">
+            <field name="model">portrait.gaspar_risque_jo</field>
+            <field name="type">form</field>
+            <field name="name">risque_jo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_risque_jo_form">
+            <field name="name">Risque JO</field>
+            <field name="res_model">portrait.gaspar_risque_jo</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_jo_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_risque_jo_view_tree"/>
+            <field name="act_window" ref="act_gaspar_risque_jo_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_jo_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_risque_jo_view_form"/>
+            <field name="act_window" ref="act_gaspar_risque_jo_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_risque_jo_form" icon="tryton-list" action="act_gaspar_risque_jo_form"/>
+
+        <!-- Risque -->
+        <record model="ir.ui.view" id="gaspar_risque_view_tree">
+            <field name="model">portrait.gaspar_risque</field>
+            <field name="type">tree</field>
+            <field name="name">risque_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_risque_view_form">
+            <field name="model">portrait.gaspar_risque</field>
+            <field name="type">form</field>
+            <field name="name">risque_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_risque_form">
+            <field name="name">Risque</field>
+            <field name="res_model">portrait.gaspar_risque</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_risque_view_tree"/>
+            <field name="act_window" ref="act_gaspar_risque_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_risque_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_risque_view_form"/>
+            <field name="act_window" ref="act_gaspar_risque_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_risque_form" icon="tryton-list" action="act_gaspar_risque_form"/>
+
+        <!-- Commune Risque -->
+        <record model="ir.ui.view" id="gaspar_commune_risque_view_tree">
+            <field name="model">portrait.gaspar_commune_risque</field>
+            <field name="type">tree</field>
+            <field name="name">commune_risque_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_risque_view_form">
+            <field name="model">portrait.gaspar_commune_risque</field>
+            <field name="type">form</field>
+            <field name="name">commune_risque_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_risque_form">
+            <field name="name">Commune Risque</field>
+            <field name="res_model">portrait.gaspar_commune_risque</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_risque_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_risque_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_risque_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_risque_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_risque_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_risque_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_risque_form" icon="tryton-list" action="act_gaspar_commune_risque_form"/>
+
+        <!-- Commune DICRIM -->
+        <record model="ir.ui.view" id="gaspar_commune_dicrim_view_tree">
+            <field name="model">portrait.gaspar_commune_dicrim</field>
+            <field name="type">tree</field>
+            <field name="name">commune_dicrim_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_dicrim_view_form">
+            <field name="model">portrait.gaspar_commune_dicrim</field>
+            <field name="type">form</field>
+            <field name="name">commune_dicrim_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_dicrim_form">
+            <field name="name">Commune DICRIM</field>
+            <field name="res_model">portrait.gaspar_commune_dicrim</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_dicrim_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_dicrim_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_dicrim_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_dicrim_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_dicrim_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_dicrim_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_dicrim_form" icon="tryton-list" action="act_gaspar_commune_dicrim_form"/>
+
+        <!-- AZI -->
+        <record model="ir.ui.view" id="gaspar_azi_view_tree">
+            <field name="model">portrait.gaspar_azi</field>
+            <field name="type">tree</field>
+            <field name="name">azi_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_azi_view_form">
+            <field name="model">portrait.gaspar_azi</field>
+            <field name="type">form</field>
+            <field name="name">azi_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_azi_form">
+            <field name="name">Atlas de zones inondables (AZI)</field>
+            <field name="res_model">portrait.gaspar_azi</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_azi_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_azi_view_tree"/>
+            <field name="act_window" ref="act_gaspar_azi_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_azi_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_azi_view_form"/>
+            <field name="act_window" ref="act_gaspar_azi_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_azi_form" icon="tryton-list" action="act_gaspar_azi_form"/>
+
+        <!-- PPRN type -->
+        <record model="ir.ui.view" id="gaspar_pprn_view_tree">
+            <field name="model">portrait.gaspar_ppr_type</field>
+            <field name="type">tree</field>
+            <field name="name">pprn_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_pprn_view_form">
+            <field name="model">portrait.gaspar_ppr_type</field>
+            <field name="type">form</field>
+            <field name="name">pprn_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_pprn_form">
+            <field name="name">Type de Plan de Prévention des Risques (PPR)</field>
+            <field name="res_model">portrait.gaspar_ppr_type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_pprn_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_pprn_view_tree"/>
+            <field name="act_window" ref="act_gaspar_pprn_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_pprn_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_pprn_view_form"/>
+            <field name="act_window" ref="act_gaspar_pprn_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_pprn_form" icon="tryton-list" action="act_gaspar_pprn_form"/>
+
+        <!-- TRI -->
+        <record model="ir.ui.view" id="gaspar_tri_view_tree">
+            <field name="model">portrait.gaspar_tri</field>
+            <field name="type">tree</field>
+            <field name="name">tri_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_tri_view_form">
+            <field name="model">portrait.gaspar_tri</field>
+            <field name="type">form</field>
+            <field name="name">tri_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_tri_form">
+            <field name="name">Territoire à risque important d'inondation (TRI)</field>
+            <field name="res_model">portrait.gaspar_tri</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_tri_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_tri_view_tree"/>
+            <field name="act_window" ref="act_gaspar_tri_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_tri_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_tri_view_form"/>
+            <field name="act_window" ref="act_gaspar_tri_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_tri_form" icon="tryton-list" action="act_gaspar_tri_form"/>
+
+        <!-- TIM -->
+        <record model="ir.ui.view" id="gaspar_tim_view_tree">
+            <field name="model">portrait.gaspar_tim</field>
+            <field name="type">tree</field>
+            <field name="name">tim_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_tim_view_form">
+            <field name="model">portrait.gaspar_tim</field>
+            <field name="type">form</field>
+            <field name="name">tim_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_tim_form">
+            <field name="name">Transmission des informations au maire (TIM)</field>
+            <field name="res_model">portrait.gaspar_tim</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_tim_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_tim_view_tree"/>
+            <field name="act_window" ref="act_gaspar_tim_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_tim_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_tim_view_form"/>
+            <field name="act_window" ref="act_gaspar_tim_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_tim_form" icon="tryton-list" action="act_gaspar_tim_form"/>
+
+        <!-- SISMICITE -->
+        <record model="ir.ui.view" id="gaspar_sismicite_view_tree">
+            <field name="model">portrait.gaspar_sismicite</field>
+            <field name="type">tree</field>
+            <field name="name">sismicite_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_sismicite_view_form">
+            <field name="model">portrait.gaspar_sismicite</field>
+            <field name="type">form</field>
+            <field name="name">sismicite_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_sismicite_form">
+            <field name="name">Zone de sismicité</field>
+            <field name="res_model">portrait.gaspar_sismicite</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_sismicite_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_sismicite_view_tree"/>
+            <field name="act_window" ref="act_gaspar_sismicite_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_sismicite_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_sismicite_view_form"/>
+            <field name="act_window" ref="act_gaspar_sismicite_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_sismicite_form" icon="tryton-list" action="act_gaspar_sismicite_form"/>
+
+        <!-- Commune PPRt -->
+        <record model="ir.ui.view" id="gaspar_commune_pprt_view_tree">
+            <field name="model">portrait.gaspar_commune_pprt</field>
+            <field name="type">tree</field>
+            <field name="name">commune_pprt_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_pprt_view_form">
+            <field name="model">portrait.gaspar_commune_pprt</field>
+            <field name="type">form</field>
+            <field name="name">commune_pprt_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_pprt_form">
+            <field name="name">Commune Plan de Prévention des Risques Technologiques (PPRt)</field>
+            <field name="res_model">portrait.gaspar_commune_pprt</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pprt_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_pprt_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_pprt_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pprt_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_pprt_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_pprt_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_pprt_form" icon="tryton-list" action="act_gaspar_commune_pprt_form"/>
+
+        <!-- Commune PPRn -->
+        <record model="ir.ui.view" id="gaspar_commune_pprn_view_tree">
+            <field name="model">portrait.gaspar_commune_pprn</field>
+            <field name="type">tree</field>
+            <field name="name">commune_pprn_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_pprn_view_form">
+            <field name="model">portrait.gaspar_commune_pprn</field>
+            <field name="type">form</field>
+            <field name="name">commune_pprn_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_pprn_form">
+            <field name="name">Commune Plan de Prévention des Risques Naturels (PPRn)</field>
+            <field name="res_model">portrait.gaspar_commune_pprn</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pprn_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_pprn_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_pprn_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pprn_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_pprn_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_pprn_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_pprn_form" icon="tryton-list" action="act_gaspar_commune_pprn_form"/>
+
+        <!-- Commune PPRm -->
+        <record model="ir.ui.view" id="gaspar_commune_pprm_view_tree">
+            <field name="model">portrait.gaspar_commune_pprm</field>
+            <field name="type">tree</field>
+            <field name="name">commune_pprm_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_pprm_view_form">
+            <field name="model">portrait.gaspar_commune_pprm</field>
+            <field name="type">form</field>
+            <field name="name">commune_pprm_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_pprm_form">
+            <field name="name">Commune Plan de Prévention des Risques Miniers (PPRm)</field>
+            <field name="res_model">portrait.gaspar_commune_pprm</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pprm_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_pprm_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_pprm_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pprm_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_pprm_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_pprm_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_pprm_form" icon="tryton-list" action="act_gaspar_commune_pprm_form"/>
+
+        <!-- Commune PCS -->
+        <record model="ir.ui.view" id="gaspar_commune_pcs_view_tree">
+            <field name="model">portrait.gaspar_commune_pcs</field>
+            <field name="type">tree</field>
+            <field name="name">commune_pcs_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_pcs_view_form">
+            <field name="model">portrait.gaspar_commune_pcs</field>
+            <field name="type">form</field>
+            <field name="name">commune_pcs_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_pcs_form">
+            <field name="name">Commune Plan Communal de Sauvegarde (PCS)</field>
+            <field name="res_model">portrait.gaspar_commune_pcs</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pcs_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_pcs_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_pcs_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_pcs_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_pcs_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_pcs_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_pcs_form" icon="tryton-list" action="act_gaspar_commune_pcs_form"/>
+
+        <!-- Commune PAPI -->
+        <record model="ir.ui.view" id="gaspar_commune_papi_view_tree">
+            <field name="model">portrait.gaspar_commune_papi</field>
+            <field name="type">tree</field>
+            <field name="name">commune_papi_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_papi_view_form">
+            <field name="model">portrait.gaspar_commune_papi</field>
+            <field name="type">form</field>
+            <field name="name">commune_papi_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_papi_form">
+            <field name="name">Commune Programmes d'actions de prévention contre les inondations (PAPI)</field>
+            <field name="res_model">portrait.gaspar_commune_papi</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_papi_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_papi_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_papi_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_papi_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_papi_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_papi_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_papi_form" icon="tryton-list" action="act_gaspar_commune_papi_form"/>
+
+        <!-- Commune CLPA -->
+        <record model="ir.ui.view" id="gaspar_commune_clpa_view_tree">
+            <field name="model">portrait.gaspar_commune_clpa</field>
+            <field name="type">tree</field>
+            <field name="name">commune_clpa_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_clpa_view_form">
+            <field name="model">portrait.gaspar_commune_clpa</field>
+            <field name="type">form</field>
+            <field name="name">commune_clpa_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_clpa_form">
+            <field name="name">Commune Cartographie de localisation des Phénomènes d'Avalanche (CLPA)</field>
+            <field name="res_model">portrait.gaspar_commune_clpa</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_clpa_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_clpa_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_clpa_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_clpa_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_clpa_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_clpa_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_clpa_form" icon="tryton-list" action="act_gaspar_commune_clpa_form"/>
+
+        <!-- Commune CATastrophes NATurelles -->
+        <record model="ir.ui.view" id="gaspar_commune_cat_nat_view_tree">
+            <field name="model">portrait.gaspar_commune_cat_nat</field>
+            <field name="type">tree</field>
+            <field name="name">commune_cat_nat_tree</field>
+        </record>
+        <record model="ir.ui.view" id="gaspar_commune_cat_nat_view_form">
+            <field name="model">portrait.gaspar_commune_cat_nat</field>
+            <field name="type">form</field>
+            <field name="name">commune_cat_nat_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_gaspar_commune_cat_nat_form">
+            <field name="name">Commune Déclaration de catastrophes naturelles</field>
+            <field name="res_model">portrait.gaspar_commune_cat_nat</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_cat_nat_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="gaspar_commune_cat_nat_view_tree"/>
+            <field name="act_window" ref="act_gaspar_commune_cat_nat_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_gaspar_commune_cat_nat_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="gaspar_commune_cat_nat_view_form"/>
+            <field name="act_window" ref="act_gaspar_commune_cat_nat_form"/>
+        </record>        
+        <menuitem parent="menu_gaspar" id="menu_gaspar_commune_cat_nat_form" icon="tryton-list" action="act_gaspar_commune_cat_nat_form"/>
+
+    </data>
+</tryton>

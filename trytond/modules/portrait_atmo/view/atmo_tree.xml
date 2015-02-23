@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Air Atmo">
+    <field name="cd_insee"/>
+    <field name="nbjour"/>
+    <field name="so2"/>
+    <field name="no2"/>
+    <field name="o3"/>
+    <field name="pm10"/>    
+</tree>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Risque sismique" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="sismicite"/>
+    <field name="sismicite"/>   
+</form>

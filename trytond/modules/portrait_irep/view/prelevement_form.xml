@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="Prélèvement" col="4">
+    <label name="identifiant"/>
+    <field name="identifiant"/>
+    <label name="nom"/>
+    <field name="nom"/>
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="eauxsout"/>
+    <field name="eauxsout"/>
+    <label name="eauxsurf"/>
+    <field name="eauxsurf"/>
+    <label name="eauxres"/>
+    <field name="eauxres"/>
+    <label name="eauxmer"/>
+    <field name="eauxmer"/> 
+</form>

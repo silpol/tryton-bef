@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Territoire à risque important d'inondation (TRI)">
+    <field name="cd_insee"/>
+    <field name="cod_nat_tri"/>  
+    <field name="lib_tri"/> 
+    <field name="dat_arrete_pcb_tri"/>
+    <field name="dat_arrete_pcb_loc"/>
+    <field name="dat_arrete_part"/> 
+    <field name="dat_arrete_approb"/>
+    <field name="dat_arrete_nat"/> 
+    <field name="cours_deau"/> 
+    <field name="num_risque"/> 
+</tree>

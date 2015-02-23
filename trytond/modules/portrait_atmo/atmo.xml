@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="atmo_icon">
+            <field name="name">tryton-atmo</field>
+            <field name="path">icons/tryton-atmo.svg</field>
+        </record>
+
+        <menuitem name="ATMO" parent="ir.menu_administration" id="menu_atmo" icon="tryton-atmo"/>        
+
+        <!-- Air Atmo -->
+        <record model="ir.ui.view" id="atmo_view_tree">
+            <field name="model">portrait.atmo</field>
+            <field name="type">tree</field>
+            <field name="name">atmo_tree</field>
+        </record>
+        <record model="ir.ui.view" id="atmo_view_form">
+            <field name="model">portrait.atmo</field>
+            <field name="type">form</field>
+            <field name="name">atmo_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_atmo_form">
+            <field name="name">Air Atmo</field>
+            <field name="res_model">portrait.atmo</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_atmo_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="atmo_view_tree"/>
+            <field name="act_window" ref="act_atmo_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_atmo_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="atmo_view_form"/>
+            <field name="act_window" ref="act_atmo_form"/>
+        </record>        
+        <menuitem parent="menu_atmo" id="menu_atmo_form" icon="tryton-list" action="act_atmo_form"/>        
+
+    </data>
+</tryton>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Émission">
+    <field name="identifiant"/>
+    <field name="nom"/>
+    <field name="annee"/>
+    <field name="milieu"/>
+    <field name="polluant"/>
+    <field name="quantite"/>
+    <field name="unite"/>
+</tree>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="sismique_icon">
+            <field name="name">tryton-sismique</field>
+            <field name="path">icons/tryton-sismique.svg</field>
+        </record>
+
+        <menuitem name="BRGM Sismique" parent="ir.menu_administration" id="menu_sismique" icon="tryton-sismique"/>        
+
+        <!-- Sismique -->
+        <record model="ir.ui.view" id="sismique_view_tree">
+            <field name="model">portrait.sismique</field>
+            <field name="type">tree</field>
+            <field name="name">sismique_tree</field>
+        </record>
+        <record model="ir.ui.view" id="sismique_view_form">
+            <field name="model">portrait.sismique</field>
+            <field name="type">form</field>
+            <field name="name">sismique_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_sismique_form">
+            <field name="name">Risque sismique</field>
+            <field name="res_model">portrait.sismique</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_sismique_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="sismique_view_tree"/>
+            <field name="act_window" ref="act_sismique_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_sismique_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="sismique_view_form"/>
+            <field name="act_window" ref="act_sismique_form"/>
+        </record>        
+        <menuitem parent="menu_sismique" id="menu_sismique_form" icon="tryton-list" action="act_sismique_form"/>        
+
+    </data>
+</tryton>

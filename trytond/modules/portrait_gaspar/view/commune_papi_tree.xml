@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="Programmes d'actions de prévention contre les inondations (PAPI) - Commune">
+    <field name="cd_insee"/>
+    <field name="cod_nat_papi"/>  
+    <field name="lib_papi"/>
+    <field name="cours_deau"/>
+    <field name="dat_signature"/>
+    <field name="dat_label"/>
+    <field name="dat_fin"/>
+    <field name="num_risque"/>
+    <field name="l_bassin_risque"/>
+</tree>

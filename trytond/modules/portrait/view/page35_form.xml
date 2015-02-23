@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<form string="Facteurs d'évolution de la biodiversité en milieux artificialisés...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>
+    <notebook>        
+        <page string="Tourisme" id="tourisme" col="2">
+            <label name="tourisme"/>
+            <field name="tourisme"/>
+            <field name="page35_01_map" widget="image" img_width="640" img_height="480" colspan="2"/>
+            <button string="Generate35_01"  name="generate35_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Pollutions lumineuses et atmosphériques" id="pollution" col="2">
+            <label name="atmo"/>
+            <field name="atmo"/>
+            <label name="distance"/>
+            <field name="distance"/>
+            <field name="page35_02_map" widget="image" img_width="640" img_height="480"  colspan="2"/>
+            <button string="Generate35_02"  name="generate35_02" icon="tryton-executable"  colspan="2"/>
+            <field name="geom"/>
+        </page>             
+        <page string="VIDE" id="vide" col="1">
+            <field name="page35_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate35_empty"  name="generate35_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

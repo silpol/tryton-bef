@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="Déclaration de catastrophes naturelles - Commune">
+    <field name="cd_insee"/>
+    <field name="cod_nat_cat_nat"/>
+    <field name="num_risque_jo"/>
+    <field name="dat_deb"/>
+    <field name="dat_fin"/>
+    <field name="dat_fin"/>
+    <field name="dat_pub_arrete"/>
+    <field name="dat_pub_jo"/>
+    <field name="num_risque"/>
+</tree>

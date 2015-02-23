@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Risques naturelles et technologiques">
+    <field name="code"/>
+    <field name="name"/>  
+    <field name="lib_long"/>   
+</tree>

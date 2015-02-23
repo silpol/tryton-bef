@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Plan Communal de Sauvegarde (PCS) - Commune" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="cod_nat_pcs"/>
+    <field name="cod_nat_pcs"/> 
+    <label name="dat_notification_pcs"/>
+    <field name="dat_notification_pcs"/>
+</form>

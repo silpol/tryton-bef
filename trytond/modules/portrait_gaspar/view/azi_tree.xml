@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Atlas de zones inondables">
+    <field name="cd_insee"/>
+    <field name="cod_nat_azi"/>  
+    <field name="lib_azi"/> 
+    <field name="dat_deb"/> 
+    <field name="dat_info_comm"/> 
+    <field name="dat_realisation"/>
+    <field name="dat_diffusion"/> 
+    <field name="dat_pub_net"/> 
+    <field name="num_risque"/> 
+    <field name="lib_bassin_risque"/>
+    <field name="lib_cours_deau"/>
+</tree>

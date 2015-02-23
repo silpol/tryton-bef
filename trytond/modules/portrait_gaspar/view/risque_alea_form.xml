@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Risque aléa" col="4">
+    <label name="num_alea"/>
+    <field name="num_alea"/>
+    <label name="lib_alea"/>
+    <field name="lib_alea"/> 
+    <label name="num_rn_rt"/>
+    <field name="num_rn_rt"/>   
+</form>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree string="Établissement">
+    <field name="identifiant"/>
+    <field name="nom"/>
+    <field name="siret"/>
+    <field name="adresse"/>
+    <field name="postal"/>
+    <field name="commune"/>
+    <field name="codeape"/> 
+    <field name="labelape"/> 
+    <field name="codeeprtr"/> 
+    <field name="labeleprtr"/> 
+</tree>

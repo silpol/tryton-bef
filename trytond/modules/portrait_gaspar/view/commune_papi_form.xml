@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="Programmes d'actions de prévention contre les inondations (PAPI) - Commune" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="cod_nat_papi"/>
+    <field name="cod_nat_papi"/> 
+    <label name="lib_papi"/>
+    <field name="lib_papi"/>
+    <label name="cours_deau"/>
+    <field name="cours_deau"/>
+    <label name="dat_signature"/>
+    <field name="dat_signature"/>
+    <label name="dat_label"/>
+    <field name="dat_label"/>
+    <label name="dat_fin"/>
+    <field name="dat_fin"/>
+    <label name="num_risque"/>
+    <field name="num_risque"/>
+    <label name="l_bassin_risque"/>
+    <field name="l_bassin_risque"/>
+</form>

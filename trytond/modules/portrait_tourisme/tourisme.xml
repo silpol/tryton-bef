@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <!-- TOURISME -->
+        <record model="ir.ui.view" id="tourisme_view_tree">
+            <field name="model">portrait.tourisme</field>
+            <field name="type">tree</field>
+            <field name="name">tourisme_tree</field>
+        </record>
+        <record model="ir.ui.view" id="tourisme_view_form">
+            <field name="model">portrait.tourisme</field>
+            <field name="type">form</field>
+            <field name="name">tourisme_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_tourisme_form">
+            <field name="name">Tourisme</field>
+            <field name="res_model">portrait.tourisme</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tourisme_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tourisme_view_tree"/>
+            <field name="act_window" ref="act_tourisme_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tourisme_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tourisme_view_form"/>
+            <field name="act_window" ref="act_tourisme_form"/>
+        </record>        
+        <menuitem parent="portrait_insee.menu_insee" id="menu_tourisme_form" icon="tryton-list" action="act_tourisme_form"/>        
+
+    </data>
+</tryton>
