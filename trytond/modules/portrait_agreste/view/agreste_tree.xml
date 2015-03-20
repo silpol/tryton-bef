@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree string="AGRESTE">
+    <field name="cd_insee" />
+    <field name="metrique" />
+    <field name="orientation" />
+    <field name="annee" />
+    <field name="valeur" />
+</tree>

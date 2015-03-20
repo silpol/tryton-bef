@@ -29,6 +29,7 @@ from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
 
 __all__ = ['Page2', 'Page3', 'Page4', 'Page5', 'Portrait', 'PortraitQGis', 'Page6', 'Page6QGis', 'PortraitPdf', 'OpenPortraitPdfStart', 'OpenPortraitPdf',
+            'Page7', 'Page7QGis', 'Generate7',
             'Page8', 'Page10',
             'Page9', 'Page9Foret', 'Page9QGis', 'Generate9', 'GenerateForetMap', 
             'Page11', 'Page11SousSecteur', 'Page11QGis', 'Generate11', 'Page11CoursEau', 'GenerateSousSecteurMap',
@@ -43,6 +44,32 @@ __all__ = ['Page2', 'Page3', 'Page4', 'Page5', 'Portrait', 'PortraitQGis', 'Page
             'Page33', 'Page33QGis', 'Generate33',
             'Page34',
             'Page35', 'Page35QGis', 'Generate35', 'GenerateCommuneMap',
+            'Page36',
+            'Page37', 'Page37QGis', 'Generate37', 'Page37Risque', 'Page37Catnat', 'Page37Pprt', 'Page37Pprn', 'Page37Pprm',
+            'Page38', 'Page40',
+            'Page41', 'Page41QGis', 'Generate41', 'Page41Agreste',
+            'Page42',
+            'Page43', 'Page43QGis', 'Generate43',
+            'Page44',
+            'Page45', 'Page45QGis', 'Generate45',
+            'Page46', 'Page48',
+            'Page49', 'Page49QGis', 'Generate49',
+            'Page50',
+            'Page51', 'Page51QGis', 'Generate51', 'Page51Stoc', 'Page51Espar',
+            'Page52',
+            'Page53', 'Page53QGis', 'Generate53', 'Page53Promethee',
+            'Page54',
+            'Page56',
+            'Page57', 'Page57QGis', 'Generate57', 'Page57CoursEau', 'GenerateCoursEauMap',
+            'Page58',
+            'Page59', 'Page59QGis', 'Generate59',
+            'Page60',
+            'Page62',
+            'Pageo64', 'Pageo65', 'Pageo66', 'Pageo67', 'Pageo68', 'Pageo69', 'Pageo70',
+            'Pageo72', 'Pageo73', 'Pageo74', 'Pageo75', 'Pageo76', 'Pageo77', 'Pageo78',
+            'Page80', 'Page81', 'Page82', 'Page83', 'Page84', 'Page85', 'Page86',
+            'Page88', 'Page89', 'Page90', 'Page91', 'Page92', 'Page93', 'Page94',
+            'Page96', 'Page97', 'Page98', 'Page99', 'Page100', 'Page101', 'Page102', 'Page103', 'Page104', 'Page105', 'Page106', 'Page107', 'Page108','Page109', 'Page110',
             'Page71', 'Page71Protection', 'Page71QGis', 'Generate71', 'GenerateProtectionMap']
 
 _NIVEAU = [
@@ -98,6 +125,14 @@ class Page(ModelView, ModelSQL):
     page_anec = fields.Text(
             string=u'Anecdote',
             help=u'Texte anecdote de la page du portrait',
+        )
+    page_icono1 = fields.Text(
+            string=u'Icono1',
+            help=u'Texte de l\'image',
+        )
+    page_icono2 = fields.Text(
+            string=u'Icono2',
+            help=u'Texte du dessin',
         )
     page_photo_map = fields.Binary(
             string=u'Photo',
@@ -253,6 +288,11 @@ class PortraitPdf(ModelSQL, ModelView):
             help=u'Carte des communes bénéficiant du Portrait',
             readonly=True,
         )
+    page7 = fields.Many2One(
+            'portrait.page7',
+            string=u'Page 7',
+            help=u'Page 7 du portrait',
+        )
     page8 = fields.Many2One(
             'portrait.page8',
             string=u'Page 8',
@@ -363,6 +403,121 @@ class PortraitPdf(ModelSQL, ModelView):
             string=u'Page 35',
             help=u'Page 35 du portrait',
         )
+    page36 = fields.Many2One(
+            'portrait.page36',
+            string=u'Page 36',
+            help=u'Page 36 du portrait',
+        )
+    page37 = fields.Many2One(
+            'portrait.page37',
+            string=u'Page 37',
+            help=u'Page 37 du portrait',
+        )
+    page38 = fields.Many2One(
+            'portrait.page38',
+            string=u'Page 38',
+            help=u'Page 38 du portrait',
+        )
+    page40 = fields.Many2One(
+            'portrait.page40',
+            string=u'Page 40',
+            help=u'Page 40 du portrait',
+        )
+    page41 = fields.Many2One(
+            'portrait.page41',
+            string=u'Page 41',
+            help=u'Page 41 du portrait',
+        )
+    page42 = fields.Many2One(
+            'portrait.page42',
+            string=u'Page 42',
+            help=u'Page 42 du portrait',
+        )
+    page43 = fields.Many2One(
+            'portrait.page43',
+            string=u'Page 43',
+            help=u'Page 43 du portrait',
+        )
+    page44 = fields.Many2One(
+            'portrait.page44',
+            string=u'Page 44',
+            help=u'Page 44 du portrait',
+        )
+    page45 = fields.Many2One(
+            'portrait.page45',
+            string=u'Page 45',
+            help=u'Page 45 du portrait',
+        )
+    page46 = fields.Many2One(
+            'portrait.page46',
+            string=u'Page 46',
+            help=u'Page 46 du portrait',
+        )
+    page48 = fields.Many2One(
+            'portrait.page48',
+            string=u'Page 48',
+            help=u'Page 48 du portrait',
+        )
+    page49 = fields.Many2One(
+            'portrait.page49',
+            string=u'Page 49',
+            help=u'Page 49 du portrait',
+        )
+    page50 = fields.Many2One(
+            'portrait.page50',
+            string=u'Page 50',
+            help=u'Page 50 du portrait',
+        )
+    page51 = fields.Many2One(
+            'portrait.page51',
+            string=u'Page 51',
+            help=u'Page 51 du portrait',
+        )
+    page52 = fields.Many2One(
+            'portrait.page52',
+            string=u'Page 52',
+            help=u'Page 52 du portrait',
+        )
+    page53 = fields.Many2One(
+            'portrait.page53',
+            string=u'Page 53',
+            help=u'Page 53 du portrait',
+        )
+    page54 = fields.Many2One(
+            'portrait.page54',
+            string=u'Page 54',
+            help=u'Page 54 du portrait',
+        )
+    page56 = fields.Many2One(
+            'portrait.page56',
+            string=u'Page 56',
+            help=u'Page 56 du portrait',
+        )
+    page57 = fields.Many2One(
+            'portrait.page57',
+            string=u'Page 57',
+            help=u'Page 57 du portrait',
+        )
+    page58 = fields.Many2One(
+            'portrait.page58',
+            string=u'Page 58',
+            help=u'Page 58 du portrait',
+        )
+    page59 = fields.Many2One(
+            'portrait.page59',
+            string=u'Page 59',
+            help=u'Page 59 du portrait',
+        )
+    page60 = fields.Many2One(
+            'portrait.page60',
+            string=u'Page 60',
+            help=u'Page 60 du portrait',
+        )
+    page62 = fields.Many2One(
+            'portrait.page62',
+            string=u'Page 62',
+            help=u'Page 62 du portrait',
+        )
     page71 = fields.Many2One(
             'portrait.page71',
             string=u'Page 71',
@@ -386,6 +541,7 @@ class PortraitPdf(ModelSQL, ModelView):
         'p4.page4_1 AS page4_1, p4.page4_2 AS page4_2, '
         'p5.page5_1 AS page5_1, p5.page5_2 AS page5_2, '
         'p6.page6_map AS page6_map, '
+        'p7.id AS page7, '
         'p8.id AS page8, '
         'p9.id AS page9, '        
         'p10.id AS page10, '
@@ -408,14 +564,42 @@ class PortraitPdf(ModelSQL, ModelView):
         'p33.id AS page33, '
         'p34.id AS page34, '
         'p35.id AS page35, '
+        'p36.id AS page36, '
+        'p37.id AS page37, '
+        'p38.id AS page38, '
+        'p40.id AS page40, '
+        'p41.id AS page41, '
+        'p42.id AS page42, '
+        'p43.id AS page43, '
+        'p44.id AS page44, '
+        'p45.id AS page45, '
+        'p46.id AS page46, '
+        'p48.id AS page48, '
+        'p49.id AS page49, '
+        'p50.id AS page50, '
+        'p51.id AS page51, '
+        'p52.id AS page52, '
+        'p53.id AS page53, '
+        'p54.id AS page54, '
+        'p56.id AS page56, '
+        'p57.id AS page57, '
+        'p58.id AS page58, '
+        'p59.id AS page59, '
+        'p60.id AS page60, '
+        'p62.id AS page62, '
         'p71.id AS page71 '
         'FROM portrait_portrait p, portrait_commune c, portrait_page2 p2, '
-        'portrait_page3 p3, portrait_page4 p4, portrait_page5 p5, portrait_page6 p6, '
+        'portrait_page3 p3, portrait_page4 p4, portrait_page5 p5, portrait_page6 p6, portrait_page7 p7, '
         'portrait_page8 p8, portrait_page9 p9, portrait_page10 p10, portrait_page11 p11, portrait_page12 p12, '
         'portrait_page13 p13, portrait_page14 p14, portrait_page16 p16, portrait_page17 p17, portrait_page18 p18, '
         'portrait_page19 p19, portrait_page20 p20, portrait_page21 p21, portrait_page22 p22, portrait_page24 p24, '
         'portrait_page26 p26, portrait_page28 p28, portrait_page30 p30, portrait_page32 p32, portrait_page33 p33, '
-        'portrait_page34 p34, portrait_page35 p35, portrait_page71 p71 '
+        'portrait_page34 p34, portrait_page35 p35, portrait_page36 p36, portrait_page37 p37, portrait_page38 p38, '
+        'portrait_page40 p40, portrait_page41 p41, portrait_page42 p42, portrait_page43 p43, portrait_page44 p44, '
+        'portrait_page45 p45, portrait_page46 p46, portrait_page48 p48, portrait_page49 p49, portrait_page50 p50, '
+        'portrait_page51 p51, portrait_page52 p52, portrait_page53 p53, portrait_page54 p54, portrait_page56 p56, '
+        'portrait_page57 p57, portrait_page58 p58, portrait_page59 p59, portrait_page60 p60, portrait_page62 p62, '
+        'portrait_page71 p71 '
         'WHERE %s '
         + and_commune +
         ' AND c.id=p.commune AND p2.portrait = \'1\' AND p3.portrait = \'1\' '
@@ -425,13 +609,27 @@ class PortraitPdf(ModelSQL, ModelView):
         ' AND p18.portrait = \'1\' AND p20.portrait = \'1\' AND p22.portrait = \'1\' '
         ' AND p24.portrait = \'1\' AND p26.portrait = \'1\' AND p28.portrait = \'1\' '
         ' AND p30.portrait = \'1\' AND p32.portrait = \'1\' AND p34.portrait = \'1\' '
+        ' AND p36.portrait = \'1\' AND p38.portrait = \'1\' AND p40.portrait = \'1\' '
+        ' AND p42.portrait = \'1\' AND p44.portrait = \'1\' AND p46.portrait = \'1\' '
+        ' AND p48.portrait = \'1\' AND p50.portrait = \'1\' AND p52.portrait = \'1\' '
+        ' AND p54.portrait = \'1\' AND p56.portrait = \'1\' AND p58.portrait = \'1\' '
+        ' AND p60.portrait = \'1\' AND p62.portrait = \'1\' '
+        ' AND p.id=p7.portrait '
         ' AND p.id=p9.portrait AND p.id=p11.portrait AND p.id=p17.portrait '
         ' AND p.id=p19.portrait AND p.id=p21.portrait AND p.id=p33.portrait '
-        ' AND p.id=p35.portrait AND p.id=p71.portrait '
-        'GROUP BY p.id, c.nom, c.postal, p6.page6_map, p2.page2, p3.page3, '
-        'p4.page4_1, p4.page4_2, p5.page5_1, p5.page5_2, p8.id, p9.id, p10.id, p11.id, '        
+        ' AND p.id=p35.portrait AND p.id=p37.portrait AND p.id=p41.portrait '
+        ' AND p.id=p43.portrait AND p.id=p45.portrait AND p.id=p49.portrait '
+        ' AND p.id=p51.portrait AND p.id=p53.portrait AND p.id=p57.portrait '
+        ' AND p.id=p59.portrait '
+        ' AND p.id=p71.portrait '
+        'GROUP BY p.id, c.nom, c.postal, p6.page6_map, p2.page2, p3.page3, p4.page4_1, '
+        'p4.page4_2, p5.page5_1, p5.page5_2, p7.id, p8.id, p9.id, p10.id, p11.id, '        
         'p12.id, p13.id, p14.id, p16.id, p17.id, p18.id, p19.id, p20.id, p21.id, p22.id, '
-        'p24.id, p26.id, p28.id, p30.id, p32.id, p33.id, p34.id, p35.id, p71.id '
+        'p24.id, p26.id, p28.id, p30.id, p32.id, p33.id, p34.id, p35.id, p36.id, p37.id, '
+        'p38.id, p40.id, p41.id, p42.id, p43.id, p44.id, p45.id, p46.id, p48.id, p49.id, '
+        'p50.id, p51.id, p52.id, p53.id, p54.id, p56.id, p57.id, p58.id, p59.id, p60.id, '
+        'p62.id, '
+        'p71.id '
         'ORDER BY commune', args)
 
 class OpenPortraitPdfStart(ModelView):
@@ -611,6 +809,111 @@ class Page6(Mapable, ModelView, ModelSQL):
 class Page6QGis(QGis):
     __name__ = 'portrait.page6.qgis'
     TITLES = {'portrait.page6': u'Page6'}
+
+class Page7(Mapable, ModelView, ModelSQL):
+    u'Page 7 - La biodiversité sur votre territoire'
+    __name__ = 'portrait.page7'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 7 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - La mosaïque des milieux présents sur votre territoire',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result   
+    
+    @classmethod
+    def __setup__(cls):
+        super(Page7, cls).__setup__()        
+        cls._buttons.update({           
+            'page7_edit': {},
+            'generate7_01': {},
+            'generate7_empty': {},
+        })
+
+    page7_empty_map = fields.Binary(
+            string=u'Carte sans intersection',
+            help=u'Carte de la commune sans données'
+        )
+    page7_01_map = fields.Binary(
+            string=u'Carte de la commune',
+            help=u'Carte de la commune'
+        )   
+
+    def get_map7_empty(self, ids):
+        return self._get_image('page7_empty_map.qgs', 'carte')
+
+    def get_map7_01(self, ids):
+        return self._get_image('page7_01_map.qgs', 'carte')
+
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page7_geo_edit')
+    def page7_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate7_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page7_empty_map': cls.get_map7_empty(record, 'map')})
+        
+    @classmethod
+    @ModelView.button
+    def generate7_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page7_01_map': cls.get_map7_01(record, 'map')})        
+
+class Generate7(Wizard):
+    __name__ = 'portrait.generate7'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page7')
+        records = model.browse(Transaction().context.get('active_ids'))
+        #records = model.search([])
+        for record in records:            
+            record.generate7_empty([record])
+            record.generate7_01([record])
+        return []
+
+class Page7QGis(QGis):
+    __name__ = 'portrait.page7.qgis'
+    TITLES = {'portrait.page7': u'Page7'}
 
 class Page8(Page):
     u'Page 8 - La biodiversite et ses multiples facettes'
@@ -1063,8 +1366,6 @@ class GenerateSousSecteurMap(Wizard):
     def execute(cls, session, data, state_name):
         portrait = Pool().get('portrait.page11')
         portraits = portrait.browse(Transaction().context.get('active_ids'))
-        #eau = Pool().get('carthage.courseau')
-        #ss = Pool().get('carthage.soussecteur')
         for record in portraits:
             for s in record.ssecteur:          
                s.generate([s])
@@ -2475,6 +2776,1960 @@ class Page35QGis(QGis):
     __name__ = 'portrait.page35.qgis'
     TITLES = {'portrait.page35': u'Page35'}
 
+class Page36(Page):
+    u'Page 36 - Réponses pour la biodiversité en milieux artificialisés...'
+    __name__ = 'portrait.page36'
+
+class Page37(Mapable, ModelView, ModelSQL):
+    u'Page 37 - Réponses pour la biodiversité en milieux artificialisés...sur votre commune'
+    __name__ = 'portrait.page37'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 37 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Mieux connaître les milieux artificialisés',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    risque = fields.Many2Many(
+            'portrait.page37-portrait.gaspar_commune_risque',
+            'page37',
+            'risque',
+            string=u'Risques',
+            help=u'Risques sur la commune',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_risque(self):
+        if self.portrait is not None:
+            Risques = Pool().get('portrait.gaspar_commune_risque')                                                   
+            cursor = Transaction().cursor            
+            risque=[]            
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_risque g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))                                            
+            for gg in cursor.fetchall():                
+                ggs = Risques.browse(gg)
+                for g in ggs:
+                    try:
+                        risque.append(g.id)                        
+                    except Exception, e:
+                        raise
+            return risque
+
+    sismicite = fields.Many2One(
+            'portrait.gaspar_sismicite',
+            string=u'Sismicité',
+            help=u'Niveau de risque sismique',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_sismicite(self):
+        if self.portrait is not None:
+            Sismis = Pool().get('portrait.gaspar_sismicite')                                                   
+            cursor = Transaction().cursor
+            dom=[]
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_sismicite g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))
+            dom = cursor.fetchone()           
+            if dom:
+                dom=dom[0]
+            else:
+                dom=None
+            return dom
+
+    dicrim = fields.Many2One(
+            'portrait.gaspar_commune_dicrim',
+            string=u'DICRIM',
+            help=u'Document d\'information Communale sur les Risques Majeurs (DICRIM)',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_dicrim(self):
+        if self.portrait is not None:
+            Sismis = Pool().get('portrait.gaspar_commune_dicrim')                                                   
+            cursor = Transaction().cursor
+            dom=[]
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_dicrim g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))
+            dom = cursor.fetchone()           
+            if dom:
+                dom=dom[0]
+            else:
+                dom=None
+            return dom
+
+    tim = fields.Many2One(
+            'portrait.gaspar_tim',
+            string=u'TIM',
+            help=u'Transmission des informations au maire (TIM)',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_tim(self):
+        if self.portrait is not None:
+            Tims = Pool().get('portrait.gaspar_tim')                                                   
+            cursor = Transaction().cursor
+            dom=[]
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_tim g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))
+            dom = cursor.fetchone()           
+            if dom:
+                dom=dom[0]
+            else:
+                dom=None
+            return dom
+
+    pprt = fields.Many2Many(
+            'portrait.page37-portrait.gaspar_commune_pprt',
+            'page37',
+            'pprt',
+            string=u'PPRt',
+            help=u'Plan de Prévention des Risques Technologiques (PPRt)',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_pprt(self):
+        if self.portrait is not None:
+            Pprts = Pool().get('portrait.gaspar_commune_pprt')                                                   
+            cursor = Transaction().cursor            
+            pprt=[]            
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_pprt g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))                                            
+            for gg in cursor.fetchall():                
+                ggs = Pprts.browse(gg)
+                for g in ggs:
+                    try:
+                        pprt.append(g.id)                        
+                    except Exception, e:
+                        raise
+            return pprt
+
+    pprn = fields.Many2Many(
+            'portrait.page37-portrait.gaspar_commune_pprn',
+            'page37',
+            'pprn',
+            string=u'PPRn',
+            help=u'Plan de Prévention des Risques Naturels (PPRn)',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_pprn(self):
+        if self.portrait is not None:
+            Pprns = Pool().get('portrait.gaspar_commune_pprn')                                                   
+            cursor = Transaction().cursor            
+            pprn=[]            
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_pprn g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))                                            
+            for gg in cursor.fetchall():                
+                ggs = Pprns.browse(gg)
+                for g in ggs:
+                    try:
+                        pprn.append(g.id)                        
+                    except Exception, e:
+                        raise
+            return pprn
+
+    pprm = fields.Many2Many(
+            'portrait.page37-portrait.gaspar_commune_pprm',
+            'page37',
+            'pprm',
+            string=u'PPRm',
+            help=u'Plan de Prévention des Risques Miniers (PPRm)',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_pprm(self):
+        if self.portrait is not None:
+            Pprms = Pool().get('portrait.gaspar_commune_pprm')                                                   
+            cursor = Transaction().cursor            
+            pprm=[]            
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_pprm g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))                                            
+            for gg in cursor.fetchall():                
+                ggs = Pprms.browse(gg)
+                for g in ggs:
+                    try:
+                        pprm.append(g.id)                        
+                    except Exception, e:
+                        raise
+            return pprm
+
+    pcs = fields.Many2One(
+            'portrait.gaspar_commune_pcs',
+            string=u'PCS',
+            help=u'Plan Communal de Sauvegarde (PCS)',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_pcs(self):
+        if self.portrait is not None:
+            Pcs = Pool().get('portrait.gaspar_commune_pcs')                                                   
+            cursor = Transaction().cursor
+            dom=[]
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_pcs g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))
+            dom = cursor.fetchone()           
+            if dom:
+                dom=dom[0]
+            else:
+                dom=None
+            return dom
+
+    papi = fields.Many2One(
+            'portrait.gaspar_commune_papi',
+            string=u'PAPI',
+            help=u'Programmes d\'actions de prévention contre les inondations (PAPI)',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_papi(self):
+        if self.portrait is not None:
+            Papis = Pool().get('portrait.gaspar_commune_papi')                                                   
+            cursor = Transaction().cursor
+            dom=[]
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_papi g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))
+            dom = cursor.fetchone()           
+            if dom:
+                dom=dom[0]
+            else:
+                dom=None
+            return dom
+
+    clpa = fields.Many2One(
+            'portrait.gaspar_commune_clpa',
+            string=u'CLPA',
+            help=u'Cartographie de localisation des Phénomènes d\'Avalanche (CLPA)',
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_clpa(self):
+        if self.portrait is not None:
+            Clpas = Pool().get('portrait.gaspar_commune_clpa')                                                   
+            cursor = Transaction().cursor
+            dom=[]
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_clpa g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))
+            dom = cursor.fetchone()           
+            if dom:
+                dom=dom[0]
+            else:
+                dom=None
+            return dom
+
+    catnat = fields.Many2Many(
+            'portrait.page37-portrait.gaspar_commune_cat_nat',
+            'page37',
+            'catnat',
+            string=u'CATNAT',
+            help=u'Déclaration de catastrophes naturelles',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_catnat(self):
+        if self.portrait is not None:
+            Catnats = Pool().get('portrait.gaspar_commune_cat_nat')                                                   
+            cursor = Transaction().cursor            
+            catnat=[]            
+            cursor.execute('SELECT g.id '
+                'FROM portrait_commune c, portrait_portrait p, portrait_gaspar_commune_cat_nat g '
+                'WHERE c.id = p.commune AND g.cd_insee=c.id AND p.id = %s ', (str(self.portrait.id),))                                            
+            for gg in cursor.fetchall():                
+                ggs = Catnats.browse(gg)
+                for g in ggs:
+                    try:
+                        catnat.append(g.id)                        
+                    except Exception, e:
+                        raise
+            return catnat
+
+    @classmethod
+    def __setup__(cls):
+        super(Page37, cls).__setup__()        
+        cls._buttons.update({           
+            'page37_edit': {},
+            'generate37_empty': {},
+            'generate37_01': {},
+            'generate37_02': {},
+        })
+
+    page37_empty_map = fields.Binary(
+            string=u'Carte sans intersection',
+            help=u'Carte de la commune sans données'
+        )
+    page37_01_map = fields.Binary(
+            string=u'Registre français des émissions polluantes',
+            help=u'Registre français des émissions polluantes'
+        )
+    page37_02_map = fields.Binary(
+            string=u'Risques naturels et technologiques',
+            help=u'Risques naturels et technologiques'
+        ) 
+
+    def get_map37_empty(self, ids):
+        return self._get_image('page37_empty_map.qgs', 'carte')
+
+    def get_map37_01(self, ids):
+        return self._get_image('page37_01_map.qgs', 'carte')
+
+    def get_map37_02(self, ids):
+        return self._get_image('page37_02_map.qgs', 'carte')
+ 
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page37_geo_edit')
+    def page37_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate37_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page37_empty_map': cls.get_map37_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate37_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page37_01_map': cls.get_map37_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate37_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page37_02_map': cls.get_map37_02(record, 'map')})
+
+class Page37QGis(QGis):
+    __name__ = 'portrait.page37.qgis'
+    TITLES = {'portrait.page37': u'Page37'}
+
+class Page37Risque(ModelSQL):
+    'Page37 - Risque'
+    __name__ = 'portrait.page37-portrait.gaspar_commune_risque'
+    _table = 'page37_risque_rel'
+
+    page37 = fields.Many2One(
+            'portrait.page37',
+            'page37',
+            ondelete='CASCADE',
+            required=True
+        )
+    risque = fields.Many2One(
+            'portrait.gaspar_commune_risque',
+            'Risque',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page37Catnat(ModelSQL):
+    'Page37 - Cat Nat'
+    __name__ = 'portrait.page37-portrait.gaspar_commune_cat_nat'
+    _table = 'page37_catnat_rel'
+
+    page37 = fields.Many2One(
+            'portrait.page37',
+            'page37',
+            ondelete='CASCADE',
+            required=True
+        )
+    catnat = fields.Many2One(
+            'portrait.gaspar_commune_cat_nat',
+            'Catnat',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page37Pprt(ModelSQL):
+    'Page37 - PPRt'
+    __name__ = 'portrait.page37-portrait.gaspar_commune_pprt'
+    _table = 'page37_pprt_rel'
+
+    page37 = fields.Many2One(
+            'portrait.page37',
+            'page37',
+            ondelete='CASCADE',
+            required=True
+        )
+    pprt = fields.Many2One(
+            'portrait.gaspar_commune_pprt',
+            'PPRt',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page37Pprn(ModelSQL):
+    'Page37 - PPRn'
+    __name__ = 'portrait.page37-portrait.gaspar_commune_pprn'
+    _table = 'page37_pprn_rel'
+
+    page37 = fields.Many2One(
+            'portrait.page37',
+            'page37',
+            ondelete='CASCADE',
+            required=True
+        )
+    pprn = fields.Many2One(
+            'portrait.gaspar_commune_pprn',
+            'PPRn',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page37Pprm(ModelSQL):
+    'Page37 - PPRm'
+    __name__ = 'portrait.page37-portrait.gaspar_commune_pprm'
+    _table = 'page37_pprm_rel'
+
+    page37 = fields.Many2One(
+            'portrait.page37',
+            'page37',
+            ondelete='CASCADE',
+            required=True
+        )
+    pprm = fields.Many2One(
+            'portrait.gaspar_commune_pprm',
+            'PPRm',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Generate37(Wizard):
+    __name__ = 'portrait.generate37'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page37')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate37_empty([record])
+            record.generate37_01([record])
+            record.generate37_02([record])
+        return []
+
+class Page38(Page):
+    u'Page 38 - Clefs de lecture...'
+    __name__ = 'portrait.page38'
+
+class Page40(Page):
+    u'Page 40 - Mieux connaître les milieux agricoles...'
+    __name__ = 'portrait.page40'
+
+class Page41(Mapable, ModelView, ModelSQL):
+    u'Page 41 - Mieux connaître les milieux agricoles...sur votre commune'
+    __name__ = 'portrait.page41'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 41 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Mieux connaître les milieux agricoles...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    agreste = fields.Many2Many(
+            'portrait.page41-portrait.agreste',
+            'page41',
+            'agreste',
+            string=u'AGRESTE',
+            help=u'Données AGRESTE',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_agreste(self):
+        if self.portrait is not None:
+            Agrestes = Pool().get('portrait.agreste')                                                   
+            cursor = Transaction().cursor            
+            agr=[]            
+            cursor.execute('SELECT a.id '
+                    'FROM portrait_commune c, portrait_portrait p, portrait_agreste a '
+                    'WHERE c.id = p.commune AND a.cd_insee = c.id AND p.id = %s ', (str(self.portrait.id),))                                            
+            for agrid in cursor.fetchall():                
+                agrs = Agrestes.browse(agrid)
+                for p in agrs:
+                    try:
+                        agr.append(p.id)                        
+                    except Exception, e:
+                        raise
+            return agr
+
+    @classmethod
+    def __setup__(cls):
+        super(Page41, cls).__setup__()        
+        cls._buttons.update({           
+            'page41_edit': {},
+            'generate41_empty': {},
+            'generate41_01': {},
+        })
+
+    page41_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide (RPG)'
+        )
+    page41_01_map = fields.Binary(
+            string=u'Carte du RPG',
+            help=u'Carte du registre parcellaire graphique (RPG)'
+        )
+
+    def get_map41_empty(self, ids):
+        return self._get_image('page41_empty_map.qgs', 'carte')
+
+    def get_map41_01(self, ids):
+        return self._get_image('page41_01_map.qgs', 'carte') 
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page41_geo_edit')
+    def page41_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate41_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page41_empty_map': cls.get_map41_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate41_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page41_01_map': cls.get_map41_01(record, 'map')})
+
+class Generate41(Wizard):
+    __name__ = 'portrait.generate41'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page41')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate41_empty([record])
+            record.generate41_01([record])
+        return []
+
+class Page41QGis(QGis):
+    __name__ = 'portrait.page41.qgis'
+    TITLES = {'portrait.page41': u'Page41'}
+
+class Page41Agreste(ModelSQL):
+    'Page41 - Agreste'
+    __name__ = 'portrait.page41-portrait.agreste'
+    _table = 'page41_agreste_rel'
+    page41 = fields.Many2One(
+            'portrait.page41',
+            'page41',
+            ondelete='CASCADE',
+            required=True
+        )
+    agreste = fields.Many2One(
+            'portrait.agreste',
+            'agreste',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page42(Page):
+    u'Page 42 - Facteurs d\'évolution de la biodiversité en milieux agricoles...'
+    __name__ = 'portrait.page42'
+
+class Page43(Mapable, ModelView, ModelSQL):
+    u'Page 43 - Facteurs d\'évolution de la biodiversité en milieux agricoles...sur votre commune'
+    __name__ = 'portrait.page43'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 43 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Mieux connaître les milieux agricoles...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+    
+    @classmethod
+    def __setup__(cls):
+        super(Page43, cls).__setup__()        
+        cls._buttons.update({           
+            'page43_edit': {},
+            'generate43_empty': {},
+            'generate43_01': {},
+            'generate43_02': {}, 
+            'generate43_03': {}, 
+            'generate43_04': {},                
+        })
+
+    page43_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide (RPG)'
+        )
+    page43_01_map = fields.Binary(
+            string=u'Carte du RPG',
+            help=u'Carte du registre parcellaire graphique (RPG)'
+        )
+    page43_02_map = fields.Binary(
+            string=u'Carte du RPG',
+            help=u'Carte du registre parcellaire graphique (RPG)'
+        )
+    page43_03_map = fields.Binary(
+            string=u'Carte du RPG',
+            help=u'Carte du registre parcellaire graphique (RPG)'
+        )
+    page43_04_map = fields.Binary(
+            string=u'Carte du RPG',
+            help=u'Carte du registre parcellaire graphique (RPG)'
+        )
+
+    def get_map43_empty(self, ids):
+        return self._get_image('page43_empty_map.qgs', 'carte')
+
+    def get_map43_01(self, ids):
+        return self._get_image('page43_01_map.qgs', 'carte') 
+
+    def get_map43_02(self, ids):
+        return self._get_image('page43_02_map.qgs', 'carte') 
+
+    def get_map43_03(self, ids):
+        return self._get_image('page43_03_map.qgs', 'carte') 
+
+    def get_map43_04(self, ids):
+        return self._get_image('page43_04_map.qgs', 'carte') 
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page43_geo_edit')
+    def page43_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate43_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page43_empty_map': cls.get_map43_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate43_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page43_01_map': cls.get_map43_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate43_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page43_02_map': cls.get_map43_02(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate43_03(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page43_03_map': cls.get_map43_03(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate43_04(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page43_04_map': cls.get_map43_04(record, 'map')})
+
+class Generate43(Wizard):
+    __name__ = 'portrait.generate43'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page43')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate43_empty([record])
+            record.generate43_01([record])
+            record.generate43_02([record])
+            record.generate43_03([record])
+            record.generate43_04([record])
+        return []
+
+class Page43QGis(QGis):
+    __name__ = 'portrait.page43.qgis'
+    TITLES = {'portrait.page43': u'Page43'}
+
+class Page44(Page):
+    u'Page 44 - Réponses pour la biodiversité en milieux agricoles...'
+    __name__ = 'portrait.page44'
+
+class Page45(Mapable, ModelView, ModelSQL):
+    u'Page 45 - Réponses pour la biodiversité en milieux agricoles...sur votre commune'
+    __name__ = 'portrait.page45'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 45 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Réponses pour la biodiversité en milieux agricoles...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+    
+    @classmethod
+    def __setup__(cls):
+        super(Page45, cls).__setup__()        
+        cls._buttons.update({           
+            'page45_edit': {},
+            'generate45_empty': {},
+            'generate45_01': {},
+            'generate45_02': {}, 
+            'generate45_03': {}, 
+            'generate45_04': {},                
+        })
+
+    page45_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide (BIO)'
+        )
+    page45_01_map = fields.Binary(
+            string=u'Carte générale',
+            help=u'Carte générale (BIO)'
+        )
+    page45_02_map = fields.Binary(
+            string=u'Carte des opérateurs',
+            help=u'Carte des opérateurs (BIO)'
+        )
+    page45_03_map = fields.Binary(
+            string=u'Carte des surfaces',
+            help=u'Carte des surfaces (BIO)'
+        )
+    page45_04_map = fields.Binary(
+            string=u'Carte des cheptels',
+            help=u'Carte des cheptels (BIO)'
+        )
+
+    def get_map45_empty(self, ids):
+        return self._get_image('page45_empty_map.qgs', 'carte')
+
+    def get_map45_01(self, ids):
+        return self._get_image('page45_01_map.qgs', 'carte') 
+
+    def get_map45_02(self, ids):
+        return self._get_image('page45_02_map.qgs', 'carte') 
+
+    def get_map45_03(self, ids):
+        return self._get_image('page45_03_map.qgs', 'carte') 
+
+    def get_map45_04(self, ids):
+        return self._get_image('page45_04_map.qgs', 'carte') 
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page45_geo_edit')
+    def page45_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate45_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page45_empty_map': cls.get_map45_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate45_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page45_01_map': cls.get_map45_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate45_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page45_02_map': cls.get_map45_02(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate45_03(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page45_03_map': cls.get_map45_03(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate45_04(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page45_04_map': cls.get_map45_04(record, 'map')})
+
+class Generate45(Wizard):
+    __name__ = 'portrait.generate45'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page45')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate45_empty([record])
+            record.generate45_01([record])
+            record.generate45_02([record])
+            record.generate45_03([record])
+            record.generate45_04([record])
+        return []
+
+class Page45QGis(QGis):
+    __name__ = 'portrait.page45.qgis'
+    TITLES = {'portrait.page45': u'Page45'}
+
+class Page46(Page):
+    u'Page 46 - Clefs de lecture...'
+    __name__ = 'portrait.page46'
+
+class Page48(Page):
+    u'Page 48 - Mieux connaître les milieux forestiers...'
+    __name__ = 'portrait.page48'
+
+class Page49(Mapable, ModelView, ModelSQL):
+    u'Page 49 - Mieux connaître les milieux forestiers...sur votre commune'
+    __name__ = 'portrait.page49'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 49 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Mieux connaître les milieux forestiers...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    @classmethod
+    def __setup__(cls):
+        super(Page49, cls).__setup__()        
+        cls._buttons.update({           
+            'page49_edit': {},
+            'generate49_empty': {},
+            'generate49_01': {},
+            'generate49_02': {},
+            'generate49_03': {},
+            'generate49_04': {},
+        })
+
+    page49_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide',
+        )
+    page49_01_map = fields.Binary(
+            string=u'Carte des forêts (CLC)',
+            help=u'Carte des milieux forestiers (Corine Land Cover)'
+        )
+    page49_02_map = fields.Binary(
+            string=u'Carte des formations forestières',
+            help=u'Carte des formations forestières'
+        )
+    page49_03_map = fields.Binary(
+            string=u'Carte des SER',
+            help=u'Carte des Sylvo-Eco-Régions (SER)'
+        )
+    page49_04_map = fields.Binary(
+            string=u'Carte des GRECO',
+            help=u'Carte GRECO'
+        )
+
+
+    def get_map49_empty(self, ids):
+        return self._get_image('page49_empty_map.qgs', 'carte')
+
+    def get_map49_01(self, ids):
+        return self._get_image('page49_01_map.qgs', 'carte') 
+
+    def get_map49_02(self, ids):
+        return self._get_image('page49_02_map.qgs', 'carte') 
+
+    def get_map49_03(self, ids):
+        return self._get_image('page49_03_map.qgs', 'carte') 
+
+    def get_map49_04(self, ids):
+        return self._get_image('page49_04_map.qgs', 'carte') 
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page49_geo_edit')
+    def page49_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate49_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page49_empty_map': cls.get_map49_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate49_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page49_01_map': cls.get_map49_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate49_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page49_02_map': cls.get_map49_02(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate49_03(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page49_03_map': cls.get_map49_03(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate49_04(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page49_04_map': cls.get_map49_04(record, 'map')})
+
+class Generate49(Wizard):
+    __name__ = 'portrait.generate49'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page49')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate49_empty([record])
+            record.generate49_01([record])
+            record.generate49_02([record])
+            record.generate49_03([record])
+            record.generate49_04([record])
+        return []
+
+class Page49QGis(QGis):
+    __name__ = 'portrait.page49.qgis'
+    TITLES = {'portrait.page49': u'Page49'}
+
+class Page50(Page):
+    u'Page 50 - Facteurs d\'évolution de la biodiversité en milieu forestier...'
+    __name__ = 'portrait.page50'
+
+class Page51(Mapable, ModelView, ModelSQL):
+    u'Page 51 - Facteurs d\'évolution de la biodiversité en milieu forestier...sur votre commune'
+    __name__ = 'portrait.page51'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 51 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Mieux connaître les milieux forestiers...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    stocfrt = fields.Many2Many(
+            'portrait.page51-portrait.stoc',
+            'page51',
+            'stoc',
+            string=u'STOC',
+            help=u'Données forêts STOC',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_stocfrt(self):
+        if self.portrait is not None:
+            Stocs = Pool().get('portrait.stoc')                                                   
+            cursor = Transaction().cursor            
+            stoc=[]            
+            cursor.execute('SELECT s.id '
+                    'FROM portrait_stoc s '
+                    'WHERE s.species like \'frt\'')
+            for stocid in cursor.fetchall():                
+                stocs = Stocs.browse(stocid)
+                for p in stocs:
+                    try:
+                        stoc.append(p.id)                        
+                    except Exception, e:
+                        raise
+            return stoc
+
+    espar = fields.Many2Many(
+            'portrait.page51-ifn.espar',
+            'page51',
+            'espar',
+            string=u'Espèce',
+            help=u'Données espèce IFN/SER',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_espar(self):
+        if self.portrait is not None:
+            Espars = Pool().get('ifn.espar')                                                   
+            cursor = Transaction().cursor            
+            spe=[]            
+            cursor.execute('SELECT f.id FROM (SELECT DISTINCT e.id, sum(a.v) OVER (PARTITION BY e.id) as volume '
+                'FROM ifn_noeud n, ifn_espar e, ifn_arbre a, '
+                '(SELECT s.id, s.geom '
+                'FROM portrait_commune c, portrait_portrait p, portrait_ser s '
+                'WHERE c.id = p.commune AND st_dwithin(c.geom, s.geom,0) AND p.id = %s) foo '
+                'WHERE a.idp=n.id AND e.id=a.espar AND st_dwithin(foo.geom,n.geom,0) '
+                'ORDER BY volume DESC) f', (str(self.portrait.id),))                                            
+            for speid in cursor.fetchall():                
+                spes = Espars.browse(speid)
+                for p in spes:
+                    try:
+                        spe.append(p.id)                        
+                    except Exception, e:
+                        raise
+            return spe
+
+    @classmethod
+    def __setup__(cls):
+        super(Page51, cls).__setup__()        
+        cls._buttons.update({           
+            'page51_edit': {},
+            'generate51_empty': {},
+            'generate51_01': {},
+            'generate51_02': {},
+        })
+
+    page51_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide',
+        )
+    page51_01_map = fields.Binary(
+            string=u'Carte Volume Arbres viants',
+            help=u'Carte du volume arbres vivants'
+        )
+    page51_02_map = fields.Binary(
+            string=u'Carte Volume Arbres morts',
+            help=u'Carte du volume arbres morts'
+        )
+
+    def get_map51_empty(self, ids):
+        return self._get_image('page51_empty_map.qgs', 'carte')
+
+    def get_map51_01(self, ids):
+        return self._get_image('page51_01_map.qgs', 'carte') 
+
+    def get_map51_02(self, ids):
+        return self._get_image('page51_02_map.qgs', 'carte')
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page51_geo_edit')
+    def page51_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate51_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page51_empty_map': cls.get_map51_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate51_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page51_01_map': cls.get_map51_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate51_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page51_02_map': cls.get_map51_02(record, 'map')})
+
+class Generate51(Wizard):
+    __name__ = 'portrait.generate51'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page51')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate51_empty([record])
+            record.generate51_01([record])
+            record.generate51_02([record])
+        return []
+
+class Page51QGis(QGis):
+    __name__ = 'portrait.page51.qgis'
+    TITLES = {'portrait.page51': u'Page51'}
+
+class Page51Stoc(ModelSQL):
+    'Page51 - STOC'
+    __name__ = 'portrait.page51-portrait.stoc'
+    _table = 'page51_stoc_rel'
+    page51 = fields.Many2One(
+            'portrait.page51',
+            'page51',
+            ondelete='CASCADE',
+            required=True
+        )
+    stoc = fields.Many2One(
+            'portrait.stoc',
+            'stoc',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page51Espar(ModelSQL):
+    'Page51 - ifn Espar'
+    __name__ = 'portrait.page51-ifn.espar'
+    _table = 'page51_ifn_espar_rel'
+    page51 = fields.Many2One(
+            'portrait.page51',
+            'page51',
+            ondelete='CASCADE',
+            required=True
+        )
+    espar = fields.Many2One(
+            'ifn.espar',
+            'espar',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page52(Page):
+    u'Page 52 - Réponses pour la biodiversité en milieu forestier...'
+    __name__ = 'portrait.page52'
+
+class Page53(Mapable, ModelView, ModelSQL):
+    u'Page 53 - Réponses pour la biodiversité en milieu forestier...sur votre commune'
+    __name__ = 'portrait.page53'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 53 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Réponses pour la biodiversité en milieu forestier...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    promethee = fields.Many2Many(
+            'portrait.page53-portrait.promethee',
+            'page53',
+            'promethee',
+            string=u'Prométhée',
+            help=u'Données incendies forêts',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_promethee(self):
+        if self.portrait is not None:
+            Promethees = Pool().get('portrait.promethee')                                                   
+            cursor = Transaction().cursor            
+            pro=[]            
+            cursor.execute('SELECT a.id '
+                    'FROM portrait_commune c, portrait_portrait p, portrait_promethee a '
+                    'WHERE c.id = p.commune AND a.cd_insee = c.id AND p.id = %s ', (str(self.portrait.id),))
+            for proid in cursor.fetchall():                
+                pross = Promethees.browse(proid)
+                for p in pross:
+                    try:
+                        pro.append(p.id)                        
+                    except Exception, e:
+                        raise
+            return pro
+
+    @classmethod
+    def __setup__(cls):
+        super(Page53, cls).__setup__()        
+        cls._buttons.update({           
+            'page53_edit': {},
+            'generate53_empty': {},
+            'generate53_01': {},
+            'generate53_02': {},
+            'generate53_03': {},
+            'generate53_04': {},
+        })
+
+    page53_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide',
+        )
+    page53_01_map = fields.Binary(
+            string=u'Carte des forêts publics',
+            help=u'Carte des forêts publics'
+        )
+    page53_02_map = fields.Binary(
+            string=u'Carte des forêts (CLC)',
+            help=u'Carte des forêts (CLC)'
+        )
+    page53_03_map = fields.Binary(
+            string=u'Carte des espaces naturels fragmentés',
+            help=u'Carte des espaces naturels fragmentés'
+        )
+    page53_04_map = fields.Binary(
+            string=u'Carte des réserves biologiques',
+            help=u'Carte des réserves biologiques'
+        )
+
+    def get_map53_empty(self, ids):
+        return self._get_image('page53_empty_map.qgs', 'carte')
+
+    def get_map53_01(self, ids):
+        return self._get_image('page53_01_map.qgs', 'carte') 
+
+    def get_map53_02(self, ids):
+        return self._get_image('page53_02_map.qgs', 'carte')
+
+    def get_map53_03(self, ids):
+        return self._get_image('page53_03_map.qgs', 'carte')
+
+    def get_map53_04(self, ids):
+        return self._get_image('page53_04_map.qgs', 'carte')
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page53_geo_edit')
+    def page53_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate53_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page53_empty_map': cls.get_map53_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate53_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page53_01_map': cls.get_map53_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate53_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page53_02_map': cls.get_map53_02(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate53_03(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page53_03_map': cls.get_map53_03(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate53_04(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page53_04_map': cls.get_map53_04(record, 'map')})
+
+class Generate53(Wizard):
+    __name__ = 'portrait.generate53'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page53')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate53_empty([record])
+            record.generate53_01([record])
+            record.generate53_02([record])
+            record.generate53_03([record])
+            record.generate53_04([record])
+        return []
+
+class Page53QGis(QGis):
+    __name__ = 'portrait.page53.qgis'
+    TITLES = {'portrait.page53': u'Page53'}
+
+class Page53Promethee(ModelSQL):
+    'Page53 - Promethee'
+    __name__ = 'portrait.page53-portrait.promethee'
+    _table = 'page53_promethee_rel'
+    page53 = fields.Many2One(
+            'portrait.page53',
+            'page53',
+            ondelete='CASCADE',
+            required=True
+        )
+    promethee = fields.Many2One(
+            'portrait.promethee',
+            'promethee',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class Page54(Page):
+    u'Page 54 - Clefs de lecture...'
+    __name__ = 'portrait.page54'
+
+class Page56(Page):
+    u'Page 56 - Mieux connaître les milieux humides et aquatiques continentaux...'
+    __name__ = 'portrait.page56'
+
+class Page57(Mapable, ModelView, ModelSQL):
+    u'Page 57 - Mieux connaître les milieux humides et aquatiques continentaux...sur votre commune'
+    __name__ = 'portrait.page57'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 57 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Mieux connaître les milieux humides et aquatiques continentaux...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    courseau = fields.Many2Many(
+            'portrait.page57-carthage.courseau',
+            'page57',
+            'courseau',
+            string=u'Cours d\'eau',
+            help=u'Cours d\'eau carthage sur la commune',
+            on_change_with=['portrait']
+        )
+
+    def on_change_with_courseau(self):
+        if self.portrait is not None:
+            Cours = Pool().get('carthage.courseau')                                                   
+            cursor = Transaction().cursor            
+            ceau=[]            
+            cursor.execute('SELECT e.id '
+                'FROM portrait_commune c, portrait_portrait p, carthage_courseau e '
+                'WHERE c.id = p.commune AND st_dwithin(c.geom, e.geom,0) AND p.id = %s ', (str(self.portrait.id),))                                            
+            for eau in cursor.fetchall():                
+                eaux = Cours.browse(eau)
+                for x in eaux:
+                    try:
+                        ceau.append(x.id)                        
+                    except Exception, e:
+                        raise
+            return ceau
+
+    @classmethod
+    def __setup__(cls):
+        super(Page57, cls).__setup__()        
+        cls._buttons.update({           
+            'page57_edit': {},
+            'generate57_empty': {},
+            'generate57_01': {},
+            'generate57_02': {},
+        })
+
+    page57_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide',
+        )
+    page57_01_map = fields.Binary(
+            string=u'Carte des catégories piscicoles',
+            help=u'Carte des catégories piscicoles'
+        )
+    page57_02_map = fields.Binary(
+            string=u'Carte des états piscicoles',
+            help=u'Carte des états piscicoles'
+        )
+
+    def get_map57_empty(self, ids):
+        return self._get_image('page57_empty_map.qgs', 'carte')
+
+    def get_map57_01(self, ids):
+        return self._get_image('page57_01_map.qgs', 'carte') 
+
+    def get_map57_02(self, ids):
+        return self._get_image('page57_02_map.qgs', 'carte')
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page57_geo_edit')
+    def page57_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate57_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page57_empty_map': cls.get_map57_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate57_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page57_01_map': cls.get_map57_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate57_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page57_02_map': cls.get_map57_02(record, 'map')})
+
+class Page57CoursEau(ModelSQL):
+    'Page57 - SousSecteur'
+    __name__ = 'portrait.page57-carthage.courseau'
+    _table = 'page57_courseau_rel'
+    page57 = fields.Many2One(
+            'portrait.page57',
+            'page57',
+            ondelete='CASCADE',
+            required=True
+        )
+    courseau = fields.Many2One(
+            'carthage.courseau',
+            'code',
+            ondelete='CASCADE',
+            required=True
+        )
+
+class GenerateCoursEauMap(Wizard):
+    __name__ = 'portrait.generatecourseaumap'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        portrait = Pool().get('portrait.page57')
+        portraits = portrait.browse(Transaction().context.get('active_ids'))
+        for record in portraits:            
+            for e in record.courseau:          
+               e.generate([e])
+        return []
+
+class Generate57(Wizard):
+    __name__ = 'portrait.generate57'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page57')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate57_empty([record])
+            record.generate57_01([record])
+            record.generate57_02([record])
+        return []
+
+class Page57QGis(QGis):
+    __name__ = 'portrait.page57.qgis'
+    TITLES = {'portrait.page57': u'Page57'}
+
+class Page58(Page):
+    u'Page 58 - Facteurs d\'évolution de la biodiversité en milieu aquatique continental ou humide...'
+    __name__ = 'portrait.page58'
+
+class Page59(Mapable, ModelView, ModelSQL):
+    u'Page 59 - Facteurs d\'évolution de la biodiversité en milieu aquatique continental ou humide...sur votre commune'
+    __name__ = 'portrait.page59'
+    _rec_name = 'portrait'
+
+    def get_rec_name(self, code):
+        return 'Page 59 - %s' % (self.portrait.commune.name)
+
+    portrait = fields.Many2One(
+            'portrait.portrait',
+            string=u'Commune',
+            help=u'Commune - Facteurs d\'évolution de la biodiversité en milieu aquatique continental ou humide...sur votre commune',
+            required=True,
+        )
+    geom = fields.MultiPolygon(
+            string=u'MultiPolygon (geom)',
+            srid=2154,
+            on_change_with=['portrait'],
+        )
+
+    def on_change_with_geom(self):
+        if self.portrait is not None:                                        
+            cursor = Transaction().cursor
+            def get_geom_commune(portrait_id):
+                cursor.execute('SELECT c.geom '
+                    'FROM portrait_commune c, portrait_portrait p '
+                    'WHERE c.id = p.commune AND p.id = %s ', (str(portrait_id),))                    
+                try:
+                    geom = cursor.fetchone()[0]                                    
+                except:
+                    geom = {}                    
+                return geom
+            result = {}
+            # Donne l'ID du portrait de la commune
+            portrait_id = self.portrait.id
+            if portrait_id:                
+                result = get_geom_commune(portrait_id)                           
+            return result
+
+    @classmethod
+    def __setup__(cls):
+        super(Page59, cls).__setup__()        
+        cls._buttons.update({           
+            'page59_edit': {},
+            'generate59_empty': {},
+            'generate59_01': {},
+            'generate59_02': {},
+        })
+
+    page59_empty_map = fields.Binary(
+            string=u'Carte vide',
+            help=u'Carte vide',
+        )
+    page59_01_map = fields.Binary(
+            string=u'Carte des entités hydrogéologiques',
+            help=u'Carte des entités hydrogéologiques'
+        )
+    page59_02_map = fields.Binary(
+            string=u'Carte des affleurements de surface',
+            help=u'Carte des affleurements de surfaces'
+        )
+
+    def get_map59_empty(self, ids):
+        return self._get_image('page59_empty_map.qgs', 'carte')
+
+    def get_map59_01(self, ids):
+        return self._get_image('page59_01_map.qgs', 'carte') 
+
+    def get_map59_02(self, ids):
+        return self._get_image('page59_02_map.qgs', 'carte')
+
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)     
+               
+    @classmethod
+    @ModelView.button_action('portrait.report_page59_geo_edit')
+    def page59_edit(cls, ids):
+        pass
+
+    @classmethod
+    @ModelView.button
+    def generate59_empty(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page59_empty_map': cls.get_map59_empty(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate59_01(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page59_01_map': cls.get_map59_01(record, 'map')})
+
+    @classmethod
+    @ModelView.button
+    def generate59_02(cls, records):
+        for record in records:
+            if record.geom is None:
+                continue                                              
+            cls.write([record], {'page59_02_map': cls.get_map59_02(record, 'map')})
+
+
+class Generate59(Wizard):
+    __name__ = 'portrait.generate59'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('portrait.page59')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate59_empty([record])
+            record.generate59_01([record])
+            record.generate59_02([record])
+        return []
+
+class Page59QGis(QGis):
+    __name__ = 'portrait.page59.qgis'
+    TITLES = {'portrait.page59': u'Page59'}
+
+
+class Page60(Page):
+    u'Page 58 - Réponses pour la biodiversité en milieu aquatique ou humide...'
+    __name__ = 'portrait.page60'
+
+class Page62(Page):
+    u'Page 62 - Clefs de lecture...'
+    __name__ = 'portrait.page62'
+
+class Pageo64(Page):
+    u'Page option 64 - Mieux connaître les milieux marins, littoraux et côtiers...'
+    __name__ = 'portrait.pageo64'
+
+class Pageo65(Page):
+    u'Page option 65 - Mieux connaître les milieux marins, littoraux et côtiers...sur votre commune'
+    __name__ = 'portrait.pageo65'
+
+class Pageo66(Page):
+    u'Page option 66 - Facteurs d\'évolution de la biodiversité en milieux marins, littoraux et côtiers...'
+    __name__ = 'portrait.pageo66'
+
+class Pageo67(Page):
+    u'Page option 67 - Facteurs d\'évolution de la biodiversité en milieux marins, littoraux et côtiers...sur votre commune'
+    __name__ = 'portrait.pageo67'
+
+class Pageo68(Page):
+    u'Page option 68 - Réponses pour la biodiversité en milieux marins, littoraux et côtiers...'
+    __name__ = 'portrait.pageo68'
+
+class Pageo69(Page):
+    u'Page option 69 - Réponses pour la biodiversité en milieux marins, littoraux et côtiers...sur votre commune'
+    __name__ = 'portrait.pageo69'
+
+class Pageo70(Page):
+    u'Page option 70 - Clefs de lecture...'
+    __name__ = 'portrait.pageo70'
+
+class Pageo72(Page):
+    u'Page option 72 - Mieux connaître les milieux montagnards...'
+    __name__ = 'portrait.pageo72'
+
+class Pageo73(Page):
+    u'Page option 73 - Mieux connaître les milieux montagnards...sur votre commune'
+    __name__ = 'portrait.pageo73'
+
+class Pageo74(Page):
+    u'Page option 74 - Facteurs d\'évolution de la biodiversité en milieux montagnards...'
+    __name__ = 'portrait.pageo74'
+
+class Pageo75(Page):
+    u'Page option 75 - Facteurs d\'évolution de la biodiversité en milieux montagnards...sur votre commune'
+    __name__ = 'portrait.pageo75'
+
+class Pageo76(Page):
+    u'Page option 76 - Réponses pour la biodiversité en milieux montagnards...'
+    __name__ = 'portrait.pageo76'
+
+class Pageo77(Page):
+    u'Page option 77 - Réponses pour la biodiversité en milieux montagnards...sur votre commune'
+    __name__ = 'portrait.pageo77'
+
+class Pageo78(Page):
+    u'Page option 78 - Clefs de lecture...'
+    __name__ = 'portrait.pageo78'
+
+class Page80(Page):
+    u'Page 80 - Mieux connaître les milieux particuliers...'
+    __name__ = 'portrait.page80'
+
+class Page81(Page):
+    u'Page 81 - Mieux connaître les milieux particuliers...sur votre commune'
+    __name__ = 'portrait.page81'
+
+class Page82(Page):
+    u'Page 82 - Facteurs d\'évolution de la biodiversité en milieux particuliers...'
+    __name__ = 'portrait.page82'
+
+class Page83(Page):
+    u'Page 83 - Facteurs d\'évolution de la biodiversité en milieux particuliers...sur votre commune'
+    __name__ = 'portrait.page83'
+
+class Page84(Page):
+    u'Page 84 - Réponses pour la biodiversité en milieux particuliers...'
+    __name__ = 'portrait.page84'
+
+class Page85(Page):
+    u'Page 85 - Réponses pour la biodiversité en milieux particuliers...sur votre commune'
+    __name__ = 'portrait.page85'
+
+class Page86(Page):
+    u'Page 86 - Clefs de lecture...'
+    __name__ = 'portrait.page86'
+
+class Page88(Page):
+    u'Page 88 - Mieux connaître les espaces naturels remarqués...'
+    __name__ = 'portrait.page88'
+
+class Page89(Page):
+    u'Page 89 - Mieux connaître les espaces naturels remarqués...sur votre commune'
+    __name__ = 'portrait.page89'
+
+class Page90(Page):
+    u'Page 90 - Facteurs d\'évolution de la biodiversité pour les milieux protégés...'
+    __name__ = 'portrait.page90'
+
+class Page91(Page):
+    u'Page 91 - Facteurs d\'évolution de la biodiversité pour les milieux protégés...sur votre commune'
+    __name__ = 'portrait.page91'
+
+class Page92(Page):
+    u'Page 92 - Réponses pour les milieux protégés...'
+    __name__ = 'portrait.page92'
+
+class Page93(Page):
+    u'Page 93 - Réponses pour les milieux protégés...sur votre commune'
+    __name__ = 'portrait.page93'
+
+class Page94(Page):
+    u'Page 94 - Clefs de lecture...'
+    __name__ = 'portrait.page94'
+
 class Page71(Mapable, ModelView, ModelSQL):
     u'Page 71 - Espaces naturels remarques et milieux proteges'
     __name__ = 'portrait.page71'
@@ -3262,7 +5517,6 @@ class Page71Protection(ModelSQL):
             required=True
         )
 
-
 class Generate71(Wizard):
     __name__ = 'portrait.generate71'
 
@@ -3309,6 +5563,65 @@ class Page71QGis(QGis):
     __name__ = 'portrait.page71.qgis'
     TITLES = {'portrait.page71': u'Page71'}
 
+class Page96(Page):
+    u'Page 96 - Parlons de la connaissance...'
+    __name__ = 'portrait.page96'
+
+class Page97(Page):
+    u'Page 97 - Parlons de la connaissance...sur votre commune'
+    __name__ = 'portrait.page97'
+
+class Page98(Page):
+    u'Page 98 - Parlons des espèces...'
+    __name__ = 'portrait.page98'
+
+class Page99(Page):
+    u'Page 99 - Parlons des espèces...sur votre commune'
+    __name__ = 'portrait.page99'
+
+class Page100(Page):
+    u'Page 100 - Volet faune - Les mammifères \& oiseaux...'
+    __name__ = 'portrait.page100'
+
+class Page101(Page):
+    u'Page 101 - Volet faune - Les mammifères \& oiseaux...sur votre commune'
+    __name__ = 'portrait.page101'
+
+class Page102(Page):
+    u'Page 102 - Volet faune - Les reptiles et amphibiens \& Poissons...'
+    __name__ = 'portrait.page102'
+
+class Page103(Page):
+    u'Page 103 - Volet faune - Les reptiles et amphibiens \& Poissons...sur votre commune'
+    __name__ = 'portrait.page103'
+
+class Page104(Page):
+    u'Page 104 - Volet faune - Les arthropodes \& mollusques...'
+    __name__ = 'portrait.page104'
+
+class Page105(Page):
+    u'Page 105 - Volet faune - Les arthropodes \& mollusques...sur votre commune'
+    __name__ = 'portrait.page105'
+
+class Page106(Page):
+    u'Page 106 - Volet flore \& fonge - Les champignons, les fougères, lichens, algues et mousse...'
+    __name__ = 'portrait.page106'
+
+class Page107(Page):
+    u'Page 107 - Volet flore \& fonge - Les champignons, les fougères, lichens, algues et mousse...sur votre commune'
+    __name__ = 'portrait.page107'
+
+class Page108(Page):
+    u'Page 108 - Volet flore - Les plantes à graines...'
+    __name__ = 'portrait.page108'
+
+class Page109(Page):
+    u'Page 109 - Volet flore - Les plantes à graines...sur votre commune'
+    __name__ = 'portrait.page109'
+
+class Page110(Page):
+    u'Page 110 - Clefs de lecture...'
+    __name__ = 'portrait.page110'
 
 
 

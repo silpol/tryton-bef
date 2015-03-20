@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Nombre d'animaux (ou ruches) engagées (Hors aquaculture)">
+    <field name="annee"/>
+    <field name="groupe_espece"/>
+    <field name="nb"/> 
+    <field name="cheptelab"/> 
+    <field name="cheptelconversion"/> 
+    <field name="cd_insee"/>  
+</tree>

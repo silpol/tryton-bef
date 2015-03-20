@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="agencebio_icon">
+            <field name="name">tryton-agencebio</field>
+            <field name="path">icons/tryton-agencebio.svg</field>
+        </record>
+
+        <menuitem name="Agence Bio" parent="ir.menu_administration" id="menu_bio" icon="tryton-agencebio"/>        
+
+        <!-- BioSurface -->
+        <record model="ir.ui.view" id="biosurface_view_tree">
+            <field name="model">portrait.biosurface</field>
+            <field name="type">tree</field>
+            <field name="name">biosurface_tree</field>
+        </record>
+        <record model="ir.ui.view" id="biosurface_view_form">
+            <field name="model">portrait.biosurface</field>
+            <field name="type">form</field>
+            <field name="name">biosurface_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_biosurface_form">
+            <field name="name">Surfaces certifiées bio ou en conversion</field>
+            <field name="res_model">portrait.biosurface</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biosurface_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="biosurface_view_tree"/>
+            <field name="act_window" ref="act_biosurface_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biosurface_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="biosurface_view_form"/>
+            <field name="act_window" ref="act_biosurface_form"/>
+        </record>        
+        <menuitem parent="menu_bio" id="menu_biosurface_form" icon="tryton-list" action="act_biosurface_form"/>
+
+        <!-- BioCheptel -->
+        <record model="ir.ui.view" id="biocheptel_view_tree">
+            <field name="model">portrait.biocheptel</field>
+            <field name="type">tree</field>
+            <field name="name">biocheptel_tree</field>
+        </record>
+        <record model="ir.ui.view" id="biocheptel_view_form">
+            <field name="model">portrait.biocheptel</field>
+            <field name="type">form</field>
+            <field name="name">biocheptel_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_biocheptel_form">
+            <field name="name">Nombre d'animaux (ou ruches) engagées (Hors aquaculture)</field>
+            <field name="res_model">portrait.biocheptel</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biocheptel_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="biocheptel_view_tree"/>
+            <field name="act_window" ref="act_biocheptel_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biocheptel_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="biocheptel_view_form"/>
+            <field name="act_window" ref="act_biocheptel_form"/>
+        </record>        
+        <menuitem parent="menu_bio" id="menu_biocheptel_form" icon="tryton-list" action="act_biocheptel_form"/>
+
+        <!-- Operateur -->
+        <record model="ir.ui.view" id="biooperateur_view_tree">
+            <field name="model">portrait.biooperateur</field>
+            <field name="type">tree</field>
+            <field name="name">biooperateur_tree</field>
+        </record>
+        <record model="ir.ui.view" id="biooperateur_view_form">
+            <field name="model">portrait.biooperateur</field>
+            <field name="type">form</field>
+            <field name="name">biooperateur_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_biooperateur_form">
+            <field name="name">Nombre d'opérateurs par commune</field>
+            <field name="res_model">portrait.biooperateur</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biooperateur_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="biooperateur_view_tree"/>
+            <field name="act_window" ref="act_biooperateur_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biooperateur_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="biooperateur_view_form"/>
+            <field name="act_window" ref="act_biooperateur_form"/>
+        </record>        
+        <menuitem parent="menu_bio" id="menu_biooperateur_form" icon="tryton-list" action="act_biooperateur_form"/>
+
+    </data>
+</tryton>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.icon" id="rpg_icon">
+            <field name="name">tryton-rpg</field>
+            <field name="path">icons/tryton-rpg.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="rpg_codes">
+            <field name="name">tryton-codes</field>
+            <field name="path">icons/applications-system.svg</field>
+        </record>   
+
+        <menuitem name="Registre Parcellaire Graphique (RPG)" parent="ir.menu_administration" id="menu_rpg" icon="tryton-rpg"/>
+        <menuitem parent="menu_rpg" sequence="1" id="menu_rpg_codes" name="Codes" icon="tryton-codes" />      
+
+        <!-- RPG -->      
+        <record model="ir.ui.view" id="portrait_rpg_view_tree">
+            <field name="model">portrait.rpg</field>
+            <field name="type">tree</field>
+            <field name="name">rpg_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_rpg_view_form">
+            <field name="model">portrait.rpg</field>
+            <field name="type">form</field>
+            <field name="name">rpg_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_rpg_form">
+            <field name="name">Référentiel Parcellaire Graphique (RPG)</field>
+            <field name="res_model">portrait.rpg</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_rpg_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_rpg_view_tree"/>
+            <field name="act_window" ref="act_portrait_rpg_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_rpg_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_rpg_view_form"/>
+            <field name="act_window" ref="act_portrait_rpg_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_rpg_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.rpg</field>
+            <field name="report_name">portrait.rpg.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_rpg_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.rpg,-1</field>
+            <field name="action" ref="report_portrait_rpg_edit"/>
+        </record> 
+        <menuitem parent="menu_rpg" sequence="1" id="menu_portrait_rpg_form" icon="tryton-list" action="act_portrait_rpg_form"/>
+
+        <!-- Code RPG -->      
+        <record model="ir.ui.view" id="portrait_coderpg_view_tree">
+            <field name="model">portrait.coderpg</field>
+            <field name="type">tree</field>
+            <field name="name">coderpg_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_coderpg_view_form">
+            <field name="model">portrait.coderpg</field>
+            <field name="type">form</field>
+            <field name="name">coderpg_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_coderpg_form">
+            <field name="name">Code RPG</field>
+            <field name="res_model">portrait.coderpg</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_coderpg_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_coderpg_view_tree"/>
+            <field name="act_window" ref="act_portrait_coderpg_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_coderpg_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_coderpg_view_form"/>
+            <field name="act_window" ref="act_portrait_coderpg_form"/>
+        </record>
+        <record model="ir.action.report" id="report_portrait_coderpg_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.coderpg</field>
+            <field name="report_name">portrait.coderpg.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_portrait_coderpg_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.coderpg,-1</field>
+            <field name="action" ref="report_portrait_coderpg_edit"/>
+        </record> 
+        <menuitem parent="menu_rpg_codes" sequence="1" id="menu_portrait_coderpg_form" icon="tryton-list" action="act_portrait_coderpg_form"/>
+                
+    </data>
+</tryton>

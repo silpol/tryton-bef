@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Nombre d'animaux (ou ruches) engagées (Hors aquaculture)" col="4">
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="groupe_espece"/>
+    <field name="groupe_espece"/> 
+    <label name="nb"/>
+    <field name="nb"/>  
+    <label name="cheptelab"/>
+    <field name="cheptelab"/>  
+    <label name="cheptelconversion"/>
+    <field name="cheptelconversion"/>  
+    <label name="cd_insee"/> 
+    <field name="cd_insee"/>    
+</form>

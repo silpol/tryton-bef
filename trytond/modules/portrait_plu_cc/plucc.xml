@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="plucc_icon">
+            <field name="name">tryton-plucc</field>
+            <field name="path">icons/tryton-plucc.svg</field>
+        </record>
+
+        <menuitem name="POS, PLU et CC" parent="ir.menu_administration" id="menu_plucc" icon="tryton-plucc"/>        
+
+        <!-- Air plucc -->
+        <record model="ir.ui.view" id="plucc_view_tree">
+            <field name="model">portrait.plucc</field>
+            <field name="type">tree</field>
+            <field name="name">plucc_tree</field>
+        </record>
+        <record model="ir.ui.view" id="plucc_view_form">
+            <field name="model">portrait.plucc</field>
+            <field name="type">form</field>
+            <field name="name">plucc_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_plucc_form">
+            <field name="name">État par commune des POS, PLU et cartes communales</field>
+            <field name="res_model">portrait.plucc</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_plucc_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="plucc_view_tree"/>
+            <field name="act_window" ref="act_plucc_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_plucc_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="plucc_view_form"/>
+            <field name="act_window" ref="act_plucc_form"/>
+        </record>        
+        <menuitem parent="menu_plucc" id="menu_plucc_form" icon="tryton-list" action="act_plucc_form"/>        
+
+    </data>
+</tryton>

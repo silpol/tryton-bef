@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<form string="MasseEau" col="2">
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="cdmassedea" />
+            <field name="cdmassedea" />
+            <label name="cdeumassed" />
+            <field name="cdeumassed" />
+            <label name="name" />
+            <field name="name" /> 
+            <label name="cdcategori" />
+            <field name="cdcategori" /> 
+            <label name="datecreati" />
+            <field name="datecreati" /> 
+            <label name="datemajmas" />
+            <field name="datemajmas" /> 
+            <label name="stmassedea" />
+            <field name="stmassedea" /> 
+            <label name="cdnaturema" />
+            <field name="cdnaturema" /> 
+            <label name="appartjeud" />
+            <field name="appartjeud" /> 
+            <label name="echdefmass" />
+            <field name="echdefmass" /> 
+            <label name="typemassed" />
+            <field name="typemassed" /> 
+            <label name="typologiea" />
+            <field name="typologiea" /> 
+            <label name="categorieg" />
+            <field name="categorieg" /> 
+            <label name="typologied" />
+            <field name="typologied" /> 
+            <label name="critdecoup" />
+            <field name="critdecoup" /> 
+            <label name="longeurtot" />
+            <field name="longeurtot" /> 
+            <label name="rangstrahl" />
+            <field name="rangstrahl" /> 
+            <label name="rangstra0" />
+            <field name="rangstra0" /> 
+            <label name="taillefcts" />
+            <field name="taillefcts" /> 
+            <label name="cdecoregio" />
+            <field name="cdecoregio" /> 
+            <label name="cdhydroeco" />
+            <field name="cdhydroeco" />  
+            <label name="cdhydroe0" />
+            <field name="cdhydroe0" />
+            <label name="cdctxpisci" />
+            <field name="cdctxpisci" />
+            <label name="cdbassindc" />
+            <field name="cdbassindc" />
+            <label name="cdeussbass" />
+            <field name="cdeussbass" />
+            <label name="version" />
+            <field name="version" />   
+        </page>                                    
+        <page string="Map" id="map" col="2">                                                                        
+            <field name="masseeau_image" colspan="1" widget="image" img_width="640" img_height="480"/>                                 
+            <field name="masseeau_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="masseeau_edit" icon="tryton-executable" />                           
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

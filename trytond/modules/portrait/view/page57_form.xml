@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<form string="Mieux connaître les milieux humides et aquatiques continentaux...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>    
+    <notebook>
+        <page string="Cours d'Eau" id="courseau" col="1">
+            <field name="courseau" />
+        </page>
+        <page string="Carte des catégories piscicoles" id="catpis" col="2">            
+            <field name="page57_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate57_01"  name="generate57_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des états piscicoles" id="clc" col="2">            
+            <field name="page57_02_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate57_02"  name="generate57_02" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>              
+        <page string="VIDE" id="vide" col="1">
+            <field name="page57_empty_map" widget="image" img_width="1280" img_height="480" />
+            <button string="Generate57_empty"  name="generate57_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

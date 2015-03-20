@@ -35,6 +35,10 @@
             <field name="name">tryton-datagouvfr</field>
             <field name="path">icons/tryton-datagouvfr.svg</field>
         </record>
+        <record model="ir.ui.icon" id="tryton_eau">
+            <field name="name">tryton-eau</field>
+            <field name="path">icons/tryton-eau.svg</field>
+        </record>
 
         <!-- Top level -->
         <menuitem parent="ir.menu_administration"
@@ -90,6 +94,13 @@
             name="CORINE LAND COVER (http://www.statistiques.developpement-durable.gouv.fr/)" 
             id="menu_download_shape_data_datagouvfr"
             icon="tryton-datagouvfr"/>
+
+        <!-- EAU -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="6"
+            name="EAU (http://www.geocatalogue.fr/)" 
+            id="menu_download_shape_data_eau"
+            icon="tryton-eau"/>
        
 
         <!-- Data -->
@@ -209,5 +220,13 @@
                 id="menu_download_shape_data_regbiofr"
                 icon="tryton-list"
                 action="act_download_shape_regbiofr"/>
+        <menuitem  parent="menu_download_shape_data_eau"
+                id="menu_download_shape_meau"
+                icon="tryton-list"
+                action="act_download_shape_meau"/>
+        <menuitem  parent="menu_download_shape_data_sandre"
+                id="menu_download_shape_data_roe"
+                icon="tryton-list"
+                action="act_download_shape_roe"/>
     </data>
 </tryton>

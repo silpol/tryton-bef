@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<tree string="État par commune des POS, PLU et cartes communales">
+    <field name="cd_insee"/>
+    <field name="etat"/>    
+</tree>

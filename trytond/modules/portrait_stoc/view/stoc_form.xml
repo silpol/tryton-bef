@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Suivi Temporel des Oiseaux Communs (STOC)" col="4">
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="species"/>
+    <field name="species"/> 
+    <label name="value"/>
+    <field name="value"/>    
+</form>

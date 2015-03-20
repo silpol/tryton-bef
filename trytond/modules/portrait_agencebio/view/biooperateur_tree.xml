@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Nombre d'opérateurs par commune">
+    <field name="annee"/>
+    <field name="type_operateur"/>
+    <field name="nb"/> 
+    <field name="cd_insee"/>  
+</tree>

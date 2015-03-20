@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.icon" id="eau_icon">
+            <field name="name">tryton-eau</field>
+            <field name="path">icons/tryton-eau.svg</field>
+        </record>
+
+        <menuitem name="Eau" parent="ir.menu_administration" id="menu_eau" icon="tryton-eau"/>    
+
+        <!-- MasseEau -->      
+        <record model="ir.ui.view" id="eau_masseeau_view_tree">
+            <field name="model">eau.masseeau</field>
+            <field name="type">tree</field>
+            <field name="name">masseeau_tree</field>
+        </record>
+        <record model="ir.ui.view" id="eau_masseeau_view_form">
+            <field name="model">eau.masseeau</field>
+            <field name="type">form</field>
+            <field name="name">masseeau_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_eau_masseeau_form">
+            <field name="name">Masse d'Eau</field>
+            <field name="res_model">eau.masseeau</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_eau_masseeau_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="eau_masseeau_view_tree"/>
+            <field name="act_window" ref="act_eau_masseeau_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_eau_masseeau_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="eau_masseeau_view_form"/>
+            <field name="act_window" ref="act_eau_masseeau_form"/>
+        </record>
+        <record model="ir.action.report" id="report_eau_masseeau_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">eau.masseeau</field>
+            <field name="report_name">eau.masseeau.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_eau_masseeau_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">eau.masseeau,-1</field>
+            <field name="action" ref="report_eau_masseeau_edit"/>
+        </record> 
+        <menuitem parent="menu_eau" sequence="1" id="menu_eau_masseeau_form" icon="tryton-eau" action="act_eau_masseeau_form"/>
+
+        <!-- Etat écologique des Masses d'Eau -->      
+        <record model="ir.ui.view" id="eau_etatecomasseau_view_tree">
+            <field name="model">eau.etatecomasseau</field>
+            <field name="type">tree</field>
+            <field name="name">etatecomasseau_tree</field>
+        </record>
+        <record model="ir.ui.view" id="eau_etatecomasseau_view_form">
+            <field name="model">eau.etatecomasseau</field>
+            <field name="type">form</field>
+            <field name="name">etatecomasseau_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_eau_etatecomasseau_form">
+            <field name="name">État écologique des Masses d'Eau</field>
+            <field name="res_model">eau.etatecomasseau</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_eau_etatecomasseau_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="eau_etatecomasseau_view_tree"/>
+            <field name="act_window" ref="act_eau_etatecomasseau_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_eau_etatecomasseau_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="eau_etatecomasseau_view_form"/>
+            <field name="act_window" ref="act_eau_etatecomasseau_form"/>
+        </record> 
+        <menuitem parent="menu_eau" sequence="1" id="menu_eau_etatecomasseau_form" icon="tryton-eau" action="act_eau_etatecomasseau_form"/>
+                       
+    </data>
+</tryton>

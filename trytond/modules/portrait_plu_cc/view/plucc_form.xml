@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="État par commune des POS, PLU et cartes communales" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="etat"/>
+    <field name="etat"/>    
+</form>

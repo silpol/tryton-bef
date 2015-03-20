@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree string="Prométhée">
+    <field name="cd_insee"/>
+    <field name="annee"/>
+    <field name="num"/>
+    <field name="typo"/>
+    <field name="lieudit"/>
+    <field name="carreau"/>  
+    <field name="alerte"/>
+    <field name="origine"/>
+    <field name="surface"/>  
+</tree>

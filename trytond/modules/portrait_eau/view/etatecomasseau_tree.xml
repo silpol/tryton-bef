@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="État écologique des Masses d'Eau">
+    <field name="cdmassedea" />
+    <field name="etat" />
+    <field name="annee" />
+</tree>

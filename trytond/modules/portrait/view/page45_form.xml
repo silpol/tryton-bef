@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form string="Réponses pour la biodiversité en milieux agricoles...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>    
+    <notebook>      
+        <page string="Carte générale" id="generale" col="2">            
+            <field name="page45_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate45_01"  name="generate45_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des opérateurs" id="operateurs" col="2">            
+            <field name="page45_02_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate45_02"  name="generate45_02" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des surfaces" id="surfaces" col="2">            
+            <field name="page45_03_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate45_03"  name="generate45_03" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des cheptels" id="cheptels" col="2">            
+            <field name="page45_04_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate45_04"  name="generate45_04" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>                 
+        <page string="VIDE" id="vide" col="1">
+            <field name="page45_empty_map" widget="image" img_width="1280" img_height="480" />
+            <button string="Generate45_empty"  name="generate45_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

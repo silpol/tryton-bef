@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <menuitem name="ROE" parent="portrait_carthage.menu_carthage" id="menu_roe"/>    
+
+        <!-- ROE -->      
+        <record model="ir.ui.view" id="roe_roe_view_tree">
+            <field name="model">roe.roe</field>
+            <field name="type">tree</field>
+            <field name="name">roe_tree</field>
+        </record>
+        <record model="ir.ui.view" id="roe_roe_view_form">
+            <field name="model">roe.roe</field>
+            <field name="type">form</field>
+            <field name="name">roe_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_roe_roe_form">
+            <field name="name">Référentiel des Obstacles à l'Écoulement (ROE)</field>
+            <field name="res_model">roe.roe</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_roe_roe_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="roe_roe_view_tree"/>
+            <field name="act_window" ref="act_roe_roe_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_roe_roe_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="roe_roe_view_form"/>
+            <field name="act_window" ref="act_roe_roe_form"/>
+        </record>
+        <record model="ir.action.report" id="report_roe_roe_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">roe.roe</field>
+            <field name="report_name">roe.roe.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_roe_roe_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">roe.roe,-1</field>
+            <field name="action" ref="report_roe_roe_edit"/>
+        </record> 
+        <menuitem parent="menu_roe" sequence="1" id="menu_roe_roe_form" action="act_roe_roe_form"/>
+
+        <!-- Code -->      
+        <record model="ir.ui.view" id="roe_code_view_tree">
+            <field name="model">roe.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="roe_code_view_form">
+            <field name="model">roe.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_roe_code_form">
+            <field name="name">Code ROE</field>
+            <field name="res_model">roe.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_roe_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="roe_code_view_tree"/>
+            <field name="act_window" ref="act_roe_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_roe_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="roe_code_view_form"/>
+            <field name="act_window" ref="act_roe_code_form"/>
+        </record> 
+        <menuitem parent="menu_roe" sequence="1" id="menu_roe_code_form" action="act_roe_code_form"/>
+                       
+    </data>
+</tryton>

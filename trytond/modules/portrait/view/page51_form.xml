@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<form string="Facteurs d'évolution de la biodiversité en milieu forestier...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>    
+    <notebook>
+        <page string="STOC" id="stoc" col="1">
+            <field name="stocfrt"/>            
+        </page>
+        <page string="Essences SER" id="essence" col="1">
+            <field name="espar"/>            
+        </page>  
+        <page string="Carte Volume arbres vivants" id="arbrev" col="2">            
+            <field name="page51_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate51_01"  name="generate51_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des points IFN" id="arbrem" col="2">            
+            <field name="page51_02_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate51_02"  name="generate51_02" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>                 
+        <page string="VIDE" id="vide" col="1">
+            <field name="page51_empty_map" widget="image" img_width="1280" img_height="480" />
+            <button string="Generate51_empty"  name="generate51_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

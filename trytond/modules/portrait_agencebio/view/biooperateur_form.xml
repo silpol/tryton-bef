@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Nombre d'opérateurs par commune" col="4">
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="type_operateur"/>
+    <field name="type_operateur"/> 
+    <label name="nb"/>
+    <field name="nb"/>
+    <label name="cd_insee"/>  
+    <field name="cd_insee"/>    
+</form>

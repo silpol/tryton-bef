@@ -23,7 +23,7 @@
 
 from trytond.pool import Pool
 
-from commune import Commune, CommuneQGis
+from commune import Commune, CommuneQGis, Generate
 from population import Population
 
 def register():
@@ -40,6 +40,7 @@ def register():
     )
 
     Pool.register(
+        Generate,
         module='portrait_commune',
         type_='wizard'
     )

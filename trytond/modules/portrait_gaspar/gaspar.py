@@ -140,6 +140,7 @@ class commune_risque(ModelSQL, ModelView):
 class commune_dicrim(ModelSQL, ModelView):
     u'Document d\'information Communale sur les Risques Majeurs (DICRIM)'
     __name__ = 'portrait.gaspar_commune_dicrim'
+    _rec_name = 'cod_nat_dicrim'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -164,6 +165,7 @@ class commune_dicrim(ModelSQL, ModelView):
 class azi(ModelSQL, ModelView):
     u'Atlas de zones inondables'
     __name__ = 'portrait.gaspar_azi'
+    _rec_name = 'cod_nat_azi'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -285,6 +287,7 @@ class tri(ModelSQL, ModelView):
 class tim(ModelSQL, ModelView):
     u'Transmission des informations au maire (TIM)'
     __name__ = 'portrait.gaspar_tim'
+    _rec_name = 'cod_nat_tim'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -309,6 +312,7 @@ class tim(ModelSQL, ModelView):
 class sismicite(ModelSQL, ModelView):
     u'Sismicité'
     __name__ = 'portrait.gaspar_sismicite'
+    _rec_name = 'sismicite_new'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -325,6 +329,7 @@ class sismicite(ModelSQL, ModelView):
 class commune_pprt(ModelSQL, ModelView):
     u'Plan de Prévention des Risques Technologiques (PPRt)'
     __name__ = 'portrait.gaspar_commune_pprt'
+    _rec_name = 'cod_nat_pprt'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -372,6 +377,7 @@ class commune_pprt(ModelSQL, ModelView):
 class commune_pprn(ModelSQL, ModelView):
     u'Plan de Prévention des Risques Naturels (PPRn)'
     __name__ = 'portrait.gaspar_commune_pprn'
+    _rec_name = 'cod_nat_pprn'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -455,6 +461,7 @@ class commune_pprn(ModelSQL, ModelView):
 class commune_pprm(ModelSQL, ModelView):
     u'Plan de Prévention des Risques Miniers (PPRm)'
     __name__ = 'portrait.gaspar_commune_pprm'
+    _rec_name ='cod_nat_pprm'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -510,6 +517,7 @@ class commune_pprm(ModelSQL, ModelView):
 class commune_pcs(ModelSQL, ModelView):
     u'Plan Communal de Sauvegarde (PCS)'
     __name__ = 'portrait.gaspar_commune_pcs'
+    _rec_name = 'cod_nat_pcs'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -530,6 +538,7 @@ class commune_pcs(ModelSQL, ModelView):
 class commune_papi(ModelSQL, ModelView):
     u'Programmes d\'actions de prévention contre les inondations (PAPI)'
     __name__ = 'portrait.gaspar_commune_papi'
+    _rec_name = 'cod_nat_papi'
 
     cd_insee = fields.Many2One(
             'portrait.commune',
@@ -577,6 +586,10 @@ class commune_papi(ModelSQL, ModelView):
 class commune_clpa(ModelSQL, ModelView):
     u'Cartographie de localisation des Phénomènes d\'Avalanche (CLPA)'
     __name__ = 'portrait.gaspar_commune_clpa'
+    _rec_name = 'cd_insee'
+
+    def get_rec_name(self, code):
+        return '%s - (%s)' % (self.cd_insee, self.pourcent_total)
 
     cd_insee = fields.Many2One(
             'portrait.commune',

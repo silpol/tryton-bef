@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="stoc_icon">
+            <field name="name">tryton-stoc</field>
+            <field name="path">icons/tryton-stoc.svg</field>
+        </record>
+
+        <menuitem name="STOC" parent="ir.menu_administration" id="menu_stoc" icon="tryton-stoc"/>        
+
+        <!-- STOC -->
+        <record model="ir.ui.view" id="stoc_view_tree">
+            <field name="model">portrait.stoc</field>
+            <field name="type">tree</field>
+            <field name="name">stoc_tree</field>
+        </record>
+        <record model="ir.ui.view" id="stoc_view_form">
+            <field name="model">portrait.stoc</field>
+            <field name="type">form</field>
+            <field name="name">stoc_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_stoc_form">
+            <field name="name">Suivi Temporel des Oiseaux Communs (STOC)</field>
+            <field name="res_model">portrait.stoc</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stoc_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="stoc_view_tree"/>
+            <field name="act_window" ref="act_stoc_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_stoc_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="stoc_view_form"/>
+            <field name="act_window" ref="act_stoc_form"/>
+        </record>        
+        <menuitem parent="menu_stoc" id="menu_stoc_form" icon="tryton-list" action="act_stoc_form"/>       
+
+    </data>
+</tryton>

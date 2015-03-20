@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form string="Surfaces certifiées bio ou en conversion" col="4">
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="groupe_culture"/>
+    <field name="groupe_culture"/> 
+    <label name="nb"/>
+    <field name="nb"/>  
+    <label name="surfab"/>
+    <field name="surfab"/>  
+    <label name="surfc1"/>
+    <field name="surfc1"/>  
+    <label name="surfc2"/>
+    <field name="surfc2"/>  
+    <label name="surfc3"/>
+    <field name="surfc3"/>  
+    <label name="surfc123"/>
+    <field name="surfc123"/>  
+    <label name="surbio"/>
+    <field name="surbio"/>
+    <label name="cd_insee"/> 
+    <field name="cd_insee"/>    
+</form>

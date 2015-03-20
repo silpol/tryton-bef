@@ -248,7 +248,7 @@ class Espar(SimpleFeature):
         domain=[('classe', '=', 'Equisetopsida'), ('regne', '=', 'Plantae')])
 
 
-class EsparTaxon(SimpleFeature):
+class EsparTaxon(ModelSQL, ModelView):
     'Taxon species'
     __name__ = 'ifn.espar_taxon'
     _rec_name = 'taxon'

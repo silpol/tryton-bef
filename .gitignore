@@ -1,4 +1,5 @@
 *~
 *.pyc
 *.tex
-trytond/modules/rapport_environnemental/
+etc/trytond.conf
+etc/qgis_server.conf
