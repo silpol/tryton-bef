@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="scot_icon">
+            <field name="name">tryton-scot</field>
+            <field name="path">icons/tryton-scot.svg</field>
+        </record>
+
+        <menuitem name="Schéma de Cohérence Territoriale (SCoT)" parent="ir.menu_administration" id="menu_scot" icon="tryton-scot"/>        
+
+        <!-- Scot -->
+        <record model="ir.ui.view" id="scot_view_tree">
+            <field name="model">portrait.scot</field>
+            <field name="type">tree</field>
+            <field name="name">scot_tree</field>
+        </record>
+        <record model="ir.ui.view" id="scot_view_form">
+            <field name="model">portrait.scot</field>
+            <field name="type">form</field>
+            <field name="name">scot_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_scot_form">
+            <field name="name">Schéma de Cohérence Territoriale (SCoT)</field>
+            <field name="res_model">portrait.scot</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_scot_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="scot_view_tree"/>
+            <field name="act_window" ref="act_scot_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_scot_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="scot_view_form"/>
+            <field name="act_window" ref="act_scot_form"/>
+        </record>        
+        <menuitem parent="menu_scot" id="menu_scot_form" icon="tryton-list" action="act_scot_form"/>
+
+        <!-- Commune -->
+        <record model="ir.ui.view" id="scot_commune_view_form">
+            <field name="model">portrait.commune</field>
+            <field name="inherit" ref="portrait_commune.commune_view_form" />       
+            <field name="name">commune_form</field>
+        </record>
+        <record model="ir.ui.view" id="scot_commune_view_tree">
+            <field name="model">portrait.commune</field>
+            <field name="inherit" ref="portrait_commune.commune_view_tree" />       
+            <field name="name">commune_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_scot_commune_form">
+            <field name="name">Commune</field>
+            <field name="res_model">portrait.commune</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_scot_commune_tree_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="scot_commune_view_tree"/>
+            <field name="act_window" ref="act_scot_commune_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_scot_commune_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="scot_commune_view_form"/>
+            <field name="act_window" ref="act_scot_commune_form"/>
+        </record>
+
+    </data>
+</tryton>

@@ -23,9 +23,13 @@
             <label name="page_anec"/>
             <field name="page_anec"/>
         </page>
-        <page string="Photo et Dessin" id="photodessin">
-            <field name="page_photo_map" widget="image" img_width="400" img_height="200"/>
-            <field name="page_dessin_map" widget="image" img_width="200" img_height="200"/>                                                                
+        <page string="Photo et Dessin" id="photodessin" col="4">
+            <label name="page_icono1"/>
+            <field name="page_icono1"/>
+            <label name="page_icono2"/>
+            <field name="page_icono2"/>
+            <field name="page_photo_map" widget="image" img_width="400" img_height="200" colspan="2"/>
+            <field name="page_dessin_map" widget="image" img_width="200" img_height="200" colspan="2"/>                                                                
         </page>
     </notebook>
 </form>

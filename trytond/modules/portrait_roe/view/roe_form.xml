@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<form string="ROE" col="2">
+    <notebook colspan="6">
+        <page string="General" id="general" col="2">
+            <label name="id_roe"/>
+            <field name="id_roe"/>
+            <label name="statut_nom"/>
+            <field name="statut_nom" widget="selection"/>
+            <label name="etat_code"/>
+            <field name="etat_code" widget="selection"/> 
+            <label name="name"/>
+            <field name="name"/> 
+            <label name="nom_sec"/>
+            <field name="nom_sec"/> 
+            <label name="type_code"/>
+            <field name="type_code" widget="selection"/> 
+            <label name="stype_code"/>
+            <field name="stype_code" widget="selection"/>                                     
+            <label name="ht_terrain"/>
+            <field name="ht_terrain"/> 
+            <label name="chute_et"/>
+            <field name="chute_et"/>  
+            <label name="grenelle"/>
+            <field name="grenelle"/> 
+            <label name="source"/>
+            <field name="source" widget="selection"/> 
+            <label name="version"/>
+            <field name="version"/>   
+        </page>
+        <page string="FPI" id="fpi">                    
+            <field name="fpi_code"/>
+        </page>
+        <page string="EMO" id="emo">                    
+            <field name="emo_code"/> 
+        </page>
+        <page string="FNT" id="fnt">                    
+            <field name="fnt_code"/>  
+        </page>
+        <page string="USA" id="usa">                    
+            <field name="usa_code"/> 
+        </page>  
+        <page string="Ouvrages liés" id="ouvlies">                    
+            <field name="ouv_lies"/> 
+        </page>                                 
+        <page string="Map" id="map" col="2">                                                                        
+            <field name="roe_image" colspan="1" widget="image" img_width="640" img_height="480"/>                                 
+            <field name="roe_map" colspan="1" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="roe_edit" icon="tryton-executable" />                           
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form string="Mieux connaître les milieux agricoles...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>    
+    <notebook>
+        <page string="Données AGRESTE" id="agreste" col="1">
+            <field name="agreste"/>
+        </page>       
+        <page string="Registre Parcellaire Graphique" id="rpg" col="2">            
+            <field name="page41_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate41_01"  name="generate41_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>                    
+        <page string="VIDE" id="vide" col="1">
+            <field name="page41_empty_map" widget="image" img_width="1280" img_height="480" />
+            <button string="Generate41_empty"  name="generate41_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

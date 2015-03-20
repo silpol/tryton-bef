@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<form string="Schéma de Cohérence Territoriale (SCoT)" col="4">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="code"/>
+    <field name="code"/> 
+    <label name="etat"/>
+    <field name="etat"/>  
+    <label name="date_arret_perimetre_scot"/>
+    <field name="date_arret_perimetre_scot"/>  
+    <label name="date_engagement_proc_scot"/>
+    <field name="date_engagement_proc_scot"/>  
+    <label name="date_arret_projet_scot"/>
+    <field name="date_arret_projet_scot"/>  
+    <label name="date_approbation_scot"/>
+    <field name="date_approbation_scot"/>  
+    <label name="nature"/>
+    <field name="nature"/>  
+    <label name="date_creation_epci_scot"/>
+    <field name="date_creation_epci_scot"/>  
+    <label name="date_maj_perimetre_epci_scot"/>
+    <field name="date_maj_perimetre_epci_scot"/>  
+    <field name="cd_insee" colspan="4"/>    
+</form>

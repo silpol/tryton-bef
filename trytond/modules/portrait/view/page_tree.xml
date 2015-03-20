@@ -9,4 +9,6 @@
     <field name="page_geste" />
     <field name="page_chiffre" />
     <field name="page_anec" />
+    <field name="page_icono1" />
+    <field name="page_icono2" />
 </tree>

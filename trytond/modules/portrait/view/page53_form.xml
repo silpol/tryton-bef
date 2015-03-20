@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<form string="Réponses pour la biodiversité en milieu forestier...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>    
+    <notebook>
+        <page string="Prométhée" id="promethee" col="1">
+            <field name="promethee"/>
+        </page>
+        <page string="Carte des forêts publics" id="regime" col="2">            
+            <field name="page53_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate53_01"  name="generate53_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des forêts (CLC)" id="clc" col="2">            
+            <field name="page53_02_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate53_02"  name="generate53_02" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>  
+        <page string="Carte des espaces naturels fragmentés" id="frag" col="2">            
+            <field name="page53_03_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate53_03"  name="generate53_03" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>   
+        <page string="Carte des réserves biologiques" id="frag" col="2">            
+            <field name="page53_04_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate53_04"  name="generate53_04" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>             
+        <page string="VIDE" id="vide" col="1">
+            <field name="page53_empty_map" widget="image" img_width="1280" img_height="480" />
+            <button string="Generate53_empty"  name="generate53_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

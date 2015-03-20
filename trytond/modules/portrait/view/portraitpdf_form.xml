@@ -4,6 +4,8 @@
     <field name="commune"/>
     <notebook>                
         <page string="Pages du portrait" id="pages">
+            <label name="page7"/>
+            <field name="page7"/>
             <label name="page9"/>
             <field name="page9"/>
             <label name="page11"/>
@@ -16,6 +18,26 @@
             <field name="page21"/>
             <label name="page33"/>
             <field name="page33"/>
+            <label name="page35"/>
+            <field name="page35"/>
+            <label name="page37"/>
+            <field name="page37"/>
+            <label name="page41"/>
+            <field name="page41"/>
+            <label name="page43"/>
+            <field name="page43"/>
+            <label name="page45"/>
+            <field name="page45"/>
+            <label name="page49"/>
+            <field name="page49"/>
+            <label name="page51"/>
+            <field name="page51"/>
+            <label name="page53"/>
+            <field name="page53"/>
+            <label name="page57"/>
+            <field name="page57"/>
+            <label name="page59"/>
+            <field name="page59"/>
             <label name="page71"/>
             <field name="page71"/>
         </page>

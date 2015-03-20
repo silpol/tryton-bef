@@ -258,6 +258,57 @@
         <menuitem sequence="6" name="6-Communes bénéficiant du portrait actuellement" parent="portrait.menu_portrait"
             id="menu_communes_benef_page6" icon="tryton-list" action="window_page6"/>
 
+        <!-- Page 7 - La biodiversité sur votre territoire -->
+        <record model="ir.ui.view" id="page7_view_tree">
+            <field name="model">portrait.page7</field>
+            <field name="type">tree</field>
+            <field name="name">page7_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page7_view_form">
+            <field name="model">portrait.page7</field>
+            <field name="type">form</field>
+            <field name="name">page7_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page7">
+            <field name="name">Portrait - Page 7 - La biodiversité sur votre territoire</field>
+            <field name="res_model">portrait.page7</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page7_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page7_view_tree"/>
+            <field name="act_window" ref="window_page7"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page7_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page7_view_form"/>
+            <field name="act_window" ref="window_page7"/>
+        </record>        
+        <record model="ir.action.report" id="report_page7_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page7</field>
+            <field name="report_name">portrait.page7.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page7_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page7,-1</field>
+            <field name="action" ref="report_page7_geo_edit"/>
+        </record>
+        <menuitem sequence="7" name="7-La biodiversité sur votre territoire"
+            parent="portrait.menu_portrait_biodiversite" icon="tryton-list" id="menu_biodiversite_page7" action="window_page7"/>
+
+        <!-- generate7 all maps -->
+        <record model="ir.action.wizard" id="generate7">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page7</field>
+            <field name="wiz_name">portrait.generate7</field>
+        </record>
+        <record model="ir.action.keyword" id="generate7_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page7,-1</field>
+            <field name="action" ref="generate7"/>
+        </record>
+
         <!-- Page 8 - La biodiversite et ses multiples facettes -->        
         <record model="ir.ui.view" id="page8_view_tree">
             <field name="model">portrait.page8</field>
@@ -1143,6 +1194,1653 @@
             <field name="action" ref="generatecommune35map"/>
         </record>
 
+        <!-- Page 36 - Réponses pour la biodiversité en milieux artificialisés... -->        
+        <record model="ir.ui.view" id="page36_view_tree">
+            <field name="model">portrait.page36</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page36_view_form">
+            <field name="model">portrait.page36</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page36">
+            <field name="name">Portrait - Page 36 - Réponses pour la biodiversité en milieux artificialisés...</field>
+            <field name="res_model">portrait.page36</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page36_tree">
+            <field name="sequence" eval="12"/>
+            <field name="view" ref="page36_view_tree"/>
+            <field name="act_window" ref="window_page36"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page36_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page36_view_form"/>
+            <field name="act_window" ref="window_page36"/>
+        </record>
+        <menuitem sequence="36" name="36-Réponses pour la biodiversité en milieux artificialisés..." icon="tryton-list"
+            parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page36" action="window_page36"/>
+
+        <!-- Page 37 - Réponses pour la biodiversité en milieux artificialisés...sur votre commune-->
+        <record model="ir.ui.view" id="page37_view_tree">
+            <field name="model">portrait.page37</field>
+            <field name="type">tree</field>
+            <field name="name">page37_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page37_view_form">
+            <field name="model">portrait.page37</field>
+            <field name="type">form</field>
+            <field name="name">page37_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page37">
+            <field name="name">Portrait - Page 37 - Réponses pour la biodiversité en milieux artificialisés...sur votre commune</field>
+            <field name="res_model">portrait.page37</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page37_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page37_view_tree"/>
+            <field name="act_window" ref="window_page37"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page37_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page37_view_form"/>
+            <field name="act_window" ref="window_page37"/>
+        </record>        
+        <record model="ir.action.report" id="report_page37_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page37</field>
+            <field name="report_name">portrait.page37.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page37_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page37,-1</field>
+            <field name="action" ref="report_page37_geo_edit"/>
+        </record>
+        <menuitem sequence="37" name="37-Réponses pour la biodiversité en milieux artificialisés...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page37" action="window_page37"/>
+
+        <!-- generate37 all maps -->
+        <record model="ir.action.wizard" id="generate37">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page37</field>
+            <field name="wiz_name">portrait.generate37</field>
+        </record>
+        <record model="ir.action.keyword" id="generate37_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page37,-1</field>
+            <field name="action" ref="generate37"/>
+        </record>
+
+        <!-- Page 38 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page38_view_tree">
+            <field name="model">portrait.page38</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page38_view_form">
+            <field name="model">portrait.page38</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page38">
+            <field name="name">Portrait - Page 38 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page38</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page38_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page38_view_tree"/>
+            <field name="act_window" ref="window_page38"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page38_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page38_view_form"/>
+            <field name="act_window" ref="window_page38"/>
+        </record>
+        <menuitem sequence="38" name="38-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_artificiel" id="menu_biodiversite_page38" action="window_page38"/>
+
+        <!-- Page 40 - Mieux connaître les milieux agricoles... -->        
+        <record model="ir.ui.view" id="page40_view_tree">
+            <field name="model">portrait.page40</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page40_view_form">
+            <field name="model">portrait.page40</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page40">
+            <field name="name">Portrait - Page 40 - Mieux connaître les milieux agricoles...</field>
+            <field name="res_model">portrait.page40</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page40_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page40_view_tree"/>
+            <field name="act_window" ref="window_page40"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page40_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page40_view_form"/>
+            <field name="act_window" ref="window_page40"/>
+        </record>
+        <menuitem sequence="40" name="40-Mieux connaître les milieux agricoles..." icon="tryton-list"
+            parent="portrait.menu_portrait_agricole" id="menu_biodiversite_page40" action="window_page40"/>
+
+        <!-- Page 41 - Mieux connaître les milieux agricoles...sur votre commune -->
+        <record model="ir.ui.view" id="page41_view_tree">
+            <field name="model">portrait.page41</field>
+            <field name="type">tree</field>
+            <field name="name">page41_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page41_view_form">
+            <field name="model">portrait.page41</field>
+            <field name="type">form</field>
+            <field name="name">page41_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page41">
+            <field name="name">Portrait - Page 41 - Mieux connaître les milieux agricoles...sur votre commune</field>
+            <field name="res_model">portrait.page41</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page41_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page41_view_tree"/>
+            <field name="act_window" ref="window_page41"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page41_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page41_view_form"/>
+            <field name="act_window" ref="window_page41"/>
+        </record>        
+        <record model="ir.action.report" id="report_page41_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page41</field>
+            <field name="report_name">portrait.page41.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page41_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page41,-1</field>
+            <field name="action" ref="report_page41_geo_edit"/>
+        </record>
+        <menuitem sequence="41" name="41-Mieux connaître les milieux agricoles...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_agricole" id="menu_biodiversite_page41" action="window_page41"/>
+
+        <!-- generate41 all maps -->
+        <record model="ir.action.wizard" id="generate41">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page41</field>
+            <field name="wiz_name">portrait.generate41</field>
+        </record>
+        <record model="ir.action.keyword" id="generate41_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page41,-1</field>
+            <field name="action" ref="generate41"/>
+        </record>
+
+        <!-- Page 42 - Facteurs d'évolution de la biodiversité en milieux agricoles... -->        
+        <record model="ir.ui.view" id="page42_view_tree">
+            <field name="model">portrait.page42</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page42_view_form">
+            <field name="model">portrait.page42</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page42">
+            <field name="name">Portrait - Page 42 - Facteurs d'évolution de la biodiversité en milieux agricoles...</field>
+            <field name="res_model">portrait.page42</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page42_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page42_view_tree"/>
+            <field name="act_window" ref="window_page42"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page42_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page42_view_form"/>
+            <field name="act_window" ref="window_page42"/>
+        </record>
+        <menuitem sequence="42" name="42-Facteurs d'évolution de la biodiversité en milieux agricoles..." icon="tryton-list"
+            parent="portrait.menu_portrait_agricole" id="menu_biodiversite_page42" action="window_page42"/>
+
+        <!-- Page 43 - Facteurs d'évolution de la biodiversité en milieux agricoles...sur votre commune -->
+        <record model="ir.ui.view" id="page43_view_tree">
+            <field name="model">portrait.page43</field>
+            <field name="type">tree</field>
+            <field name="name">page43_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page43_view_form">
+            <field name="model">portrait.page43</field>
+            <field name="type">form</field>
+            <field name="name">page43_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page43">
+            <field name="name">Portrait - Page 43 - Facteurs d'évolution de la biodiversité en milieux agricoles...sur votre commune</field>
+            <field name="res_model">portrait.page43</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page43_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page43_view_tree"/>
+            <field name="act_window" ref="window_page43"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page43_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page43_view_form"/>
+            <field name="act_window" ref="window_page43"/>
+        </record>        
+        <record model="ir.action.report" id="report_page43_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page43</field>
+            <field name="report_name">portrait.page43.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page43_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page43,-1</field>
+            <field name="action" ref="report_page43_geo_edit"/>
+        </record>
+        <menuitem sequence="43" name="43-Facteurs d'évolution de la biodiversité en milieux agricoles...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_agricole" id="menu_biodiversite_page43" action="window_page43"/>
+
+        <!-- generate43 all maps -->
+        <record model="ir.action.wizard" id="generate43">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page43</field>
+            <field name="wiz_name">portrait.generate43</field>
+        </record>
+        <record model="ir.action.keyword" id="generate43_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page43,-1</field>
+            <field name="action" ref="generate43"/>
+        </record>
+
+        <!-- Page 44 - Réponses pour la biodiversité en milieux agricoles... -->        
+        <record model="ir.ui.view" id="page44_view_tree">
+            <field name="model">portrait.page44</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page44_view_form">
+            <field name="model">portrait.page44</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page44">
+            <field name="name">Portrait - Page 44 - Réponses pour la biodiversité en milieux agricoles...</field>
+            <field name="res_model">portrait.page44</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page44_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page44_view_tree"/>
+            <field name="act_window" ref="window_page44"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page44_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page44_view_form"/>
+            <field name="act_window" ref="window_page44"/>
+        </record>
+        <menuitem sequence="44" name="44-Réponses pour la biodiversité en milieux agricoles..." icon="tryton-list"
+            parent="portrait.menu_portrait_agricole" id="menu_biodiversite_page44" action="window_page44"/>
+
+        <!-- Page 45 - Réponses pour la biodiversité en milieux agricoles...sur votre commune -->
+        <record model="ir.ui.view" id="page45_view_tree">
+            <field name="model">portrait.page45</field>
+            <field name="type">tree</field>
+            <field name="name">page45_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page45_view_form">
+            <field name="model">portrait.page45</field>
+            <field name="type">form</field>
+            <field name="name">page45_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page45">
+            <field name="name">Portrait - Page 45 - Réponses pour la biodiversité en milieux agricoles...sur votre commune</field>
+            <field name="res_model">portrait.page45</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page45_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page45_view_tree"/>
+            <field name="act_window" ref="window_page45"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page45_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page45_view_form"/>
+            <field name="act_window" ref="window_page45"/>
+        </record>        
+        <record model="ir.action.report" id="report_page45_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page45</field>
+            <field name="report_name">portrait.page45.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page45_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page45,-1</field>
+            <field name="action" ref="report_page45_geo_edit"/>
+        </record>
+        <menuitem sequence="45" name="45-Réponses pour la biodiversité en milieux agricoles...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_agricole" id="menu_biodiversite_page45" action="window_page45"/>
+
+        <!-- generate45 all maps -->
+        <record model="ir.action.wizard" id="generate45">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page45</field>
+            <field name="wiz_name">portrait.generate45</field>
+        </record>
+        <record model="ir.action.keyword" id="generate45_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page45,-1</field>
+            <field name="action" ref="generate45"/>
+        </record>
+
+        <!-- Page 46 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page46_view_tree">
+            <field name="model">portrait.page46</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page46_view_form">
+            <field name="model">portrait.page46</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page46">
+            <field name="name">Portrait - Page 46 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page46</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page46_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page46_view_tree"/>
+            <field name="act_window" ref="window_page46"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page46_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page46_view_form"/>
+            <field name="act_window" ref="window_page46"/>
+        </record>
+        <menuitem sequence="46" name="46-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_agricole" id="menu_biodiversite_page46" action="window_page46"/>
+
+        <!-- Page 48 - Mieux connaître les milieux forestiers... -->        
+        <record model="ir.ui.view" id="page48_view_tree">
+            <field name="model">portrait.page48</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page48_view_form">
+            <field name="model">portrait.page48</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page48">
+            <field name="name">Portrait - Page 48 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page48</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page48_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page48_view_tree"/>
+            <field name="act_window" ref="window_page48"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page48_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page48_view_form"/>
+            <field name="act_window" ref="window_page48"/>
+        </record>
+        <menuitem sequence="48" name="48-Mieux connaître les milieux forestiers..." icon="tryton-list"
+            parent="portrait.menu_portrait_forestier" id="menu_biodiversite_page48" action="window_page48"/>
+
+        <!-- Page 49 - Mieux connaître les milieux forestiers...sur votre commune -->
+        <record model="ir.ui.view" id="page49_view_tree">
+            <field name="model">portrait.page49</field>
+            <field name="type">tree</field>
+            <field name="name">page49_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page49_view_form">
+            <field name="model">portrait.page49</field>
+            <field name="type">form</field>
+            <field name="name">page49_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page49">
+            <field name="name">Portrait - Page 49 - Mieux connaître les milieux forestiers...sur votre commune</field>
+            <field name="res_model">portrait.page49</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page49_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page49_view_tree"/>
+            <field name="act_window" ref="window_page49"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page49_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page49_view_form"/>
+            <field name="act_window" ref="window_page49"/>
+        </record>        
+        <record model="ir.action.report" id="report_page49_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page49</field>
+            <field name="report_name">portrait.page49.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page49_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page49,-1</field>
+            <field name="action" ref="report_page49_geo_edit"/>
+        </record>
+        <menuitem sequence="49" name="49-Mieux connaître les milieux forestiers...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_forestier" id="menu_biodiversite_page49" action="window_page49"/>
+
+        <!-- generate49 all maps -->
+        <record model="ir.action.wizard" id="generate49">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page49</field>
+            <field name="wiz_name">portrait.generate49</field>
+        </record>
+        <record model="ir.action.keyword" id="generate49_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page49,-1</field>
+            <field name="action" ref="generate49"/>
+        </record>
+
+        <!-- Page 50 - Facteurs d'évolution de la biodiversité en milieu forestier... -->        
+        <record model="ir.ui.view" id="page50_view_tree">
+            <field name="model">portrait.page50</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page50_view_form">
+            <field name="model">portrait.page50</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page50">
+            <field name="name">Portrait - Page 50 - Facteurs d'évolution de la biodiversité en milieu forestier...</field>
+            <field name="res_model">portrait.page50</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page50_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page50_view_tree"/>
+            <field name="act_window" ref="window_page50"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page50_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page50_view_form"/>
+            <field name="act_window" ref="window_page50"/>
+        </record>
+        <menuitem sequence="50" name="50-Facteurs d'évolution de la biodiversité en milieu forestier..." icon="tryton-list"
+            parent="portrait.menu_portrait_forestier" id="menu_biodiversite_page50" action="window_page50"/>
+
+        <!-- Page 51 - Facteurs d'évolution de la biodiversité en milieu forestier...sur votre commune -->
+        <record model="ir.ui.view" id="page51_view_tree">
+            <field name="model">portrait.page51</field>
+            <field name="type">tree</field>
+            <field name="name">page51_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page51_view_form">
+            <field name="model">portrait.page51</field>
+            <field name="type">form</field>
+            <field name="name">page51_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page51">
+            <field name="name">Portrait - Page 51 - Facteurs d'évolution de la biodiversité en milieu forestier...sur votre commune</field>
+            <field name="res_model">portrait.page51</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page51_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page51_view_tree"/>
+            <field name="act_window" ref="window_page51"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page51_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page51_view_form"/>
+            <field name="act_window" ref="window_page51"/>
+        </record>        
+        <record model="ir.action.report" id="report_page51_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page51</field>
+            <field name="report_name">portrait.page51.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page51_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page51,-1</field>
+            <field name="action" ref="report_page51_geo_edit"/>
+        </record>
+        <menuitem sequence="51" name="51-Facteurs d'évolution de la biodiversité en milieu forestier...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_forestier" id="menu_biodiversite_page51" action="window_page51"/>
+
+        <!-- generate51 all maps -->
+        <record model="ir.action.wizard" id="generate51">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page51</field>
+            <field name="wiz_name">portrait.generate51</field>
+        </record>
+        <record model="ir.action.keyword" id="generate51_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page51,-1</field>
+            <field name="action" ref="generate51"/>
+        </record>
+
+        <!-- Page 52 - Réponses pour la biodiversité en milieu forestier... -->        
+        <record model="ir.ui.view" id="page52_view_tree">
+            <field name="model">portrait.page52</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page52_view_form">
+            <field name="model">portrait.page52</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page52">
+            <field name="name">Portrait - Page 52 - Réponses pour la biodiversité en milieu forestier...</field>
+            <field name="res_model">portrait.page52</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page52_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page52_view_tree"/>
+            <field name="act_window" ref="window_page52"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page52_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page52_view_form"/>
+            <field name="act_window" ref="window_page52"/>
+        </record>
+        <menuitem sequence="52" name="52-Réponses pour la biodiversité en milieu forestier..." icon="tryton-list"
+            parent="portrait.menu_portrait_forestier" id="menu_biodiversite_page52" action="window_page52"/>
+
+        <!-- Page 53 - Réponses pour la biodiversité en milieu forestier...sur votre commune -->
+        <record model="ir.ui.view" id="page53_view_tree">
+            <field name="model">portrait.page53</field>
+            <field name="type">tree</field>
+            <field name="name">page53_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page53_view_form">
+            <field name="model">portrait.page53</field>
+            <field name="type">form</field>
+            <field name="name">page53_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page53">
+            <field name="name">Portrait - Page 53 - Réponses pour la biodiversité en milieu forestier...sur votre commune</field>
+            <field name="res_model">portrait.page53</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page53_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page53_view_tree"/>
+            <field name="act_window" ref="window_page53"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page53_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page53_view_form"/>
+            <field name="act_window" ref="window_page53"/>
+        </record>        
+        <record model="ir.action.report" id="report_page53_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page53</field>
+            <field name="report_name">portrait.page53.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page53_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page53,-1</field>
+            <field name="action" ref="report_page53_geo_edit"/>
+        </record>
+        <menuitem sequence="53" name="53-Réponses pour la biodiversité en milieu forestier...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_forestier" id="menu_biodiversite_page53" action="window_page53"/>
+
+        <!-- generate53 all maps -->
+        <record model="ir.action.wizard" id="generate53">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page53</field>
+            <field name="wiz_name">portrait.generate53</field>
+        </record>
+        <record model="ir.action.keyword" id="generate53_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page53,-1</field>
+            <field name="action" ref="generate53"/>
+        </record>
+
+        <!-- Page 54 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page54_view_tree">
+            <field name="model">portrait.page54</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page54_view_form">
+            <field name="model">portrait.page54</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page54">
+            <field name="name">Portrait - Page 54 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page54</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page54_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page54_view_tree"/>
+            <field name="act_window" ref="window_page54"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page54_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page54_view_form"/>
+            <field name="act_window" ref="window_page54"/>
+        </record>
+        <menuitem sequence="54" name="54-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_forestier" id="menu_biodiversite_page54" action="window_page54"/>
+
+        <!-- Page 56 - Mieux connaître les milieux humides et aquatiques continentaux... -->        
+        <record model="ir.ui.view" id="page56_view_tree">
+            <field name="model">portrait.page56</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page56_view_form">
+            <field name="model">portrait.page56</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page56">
+            <field name="name">Portrait - Page 56 - Mieux connaître les milieux humides et aquatiques continentaux...</field>
+            <field name="res_model">portrait.page56</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page56_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page56_view_tree"/>
+            <field name="act_window" ref="window_page56"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page56_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page56_view_form"/>
+            <field name="act_window" ref="window_page56"/>
+        </record>
+        <menuitem sequence="56" name="56-Mieux connaître les milieux humides et aquatiques..." icon="tryton-list"
+            parent="portrait.menu_portrait_aquatique" id="menu_biodiversite_page56" action="window_page56"/>
+
+        <!-- Page 57 - Mieux connaître les milieux humides et aquatiques continentaux...sur votre commune -->
+        <record model="ir.ui.view" id="page57_view_tree">
+            <field name="model">portrait.page57</field>
+            <field name="type">tree</field>
+            <field name="name">page57_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page57_view_form">
+            <field name="model">portrait.page57</field>
+            <field name="type">form</field>
+            <field name="name">page57_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page57">
+            <field name="name">Portrait - Page 57 - Mieux connaître les milieux humides et aquatiques continentaux...sur votre commune</field>
+            <field name="res_model">portrait.page57</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page57_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page57_view_tree"/>
+            <field name="act_window" ref="window_page57"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page57_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page57_view_form"/>
+            <field name="act_window" ref="window_page57"/>
+        </record>        
+        <record model="ir.action.report" id="report_page57_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page57</field>
+            <field name="report_name">portrait.page57.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page57_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page57,-1</field>
+            <field name="action" ref="report_page57_geo_edit"/>
+        </record>
+        <menuitem sequence="57" name="57-Mieux connaître les milieux humides et aquatiques continentaux...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_aquatique" id="menu_biodiversite_page57" action="window_page57"/>
+
+        <!-- generate57 all maps -->
+        <record model="ir.action.wizard" id="generate57">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page57</field>
+            <field name="wiz_name">portrait.generate57</field>
+        </record>
+        <record model="ir.action.keyword" id="generate57_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page57,-1</field>
+            <field name="action" ref="generate57"/>
+        </record>
+
+        <!-- generate courseau maps -->
+        <record model="ir.action.wizard" id="generateall57map">
+            <field name="name">Generate all cours eau maps...</field>
+            <field name="model">portrait.page57</field>
+            <field name="wiz_name">portrait.generatecourseaumap</field>
+        </record>
+        <record model="ir.action.keyword" id="generateall57map_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page57,-1</field>
+            <field name="action" ref="generateall57map"/>
+        </record>
+
+        <!-- Page 58 - Facteurs d'évolution de la biodiversité en milieu aquatique continental ou humide... -->        
+        <record model="ir.ui.view" id="page58_view_tree">
+            <field name="model">portrait.page58</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page58_view_form">
+            <field name="model">portrait.page58</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page58">
+            <field name="name">Portrait - Page 58 - Facteurs d'évolution de la biodiversité en milieu aquatique continental ou humide...</field>
+            <field name="res_model">portrait.page58</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page58_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page58_view_tree"/>
+            <field name="act_window" ref="window_page58"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page58_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page58_view_form"/>
+            <field name="act_window" ref="window_page58"/>
+        </record>
+        <menuitem sequence="58" name="58-Facteurs d'évolution de la biodiversité en milieu aquatique continental ou humide..." icon="tryton-list"
+            parent="portrait.menu_portrait_aquatique" id="menu_biodiversite_page58" action="window_page58"/>
+
+        <!-- Page 59 - Facteurs d'évolution de la biodiversité en milieu aquatique continental ou humide...sur votre commune -->
+        <record model="ir.ui.view" id="page59_view_tree">
+            <field name="model">portrait.page59</field>
+            <field name="type">tree</field>
+            <field name="name">page59_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page59_view_form">
+            <field name="model">portrait.page59</field>
+            <field name="type">form</field>
+            <field name="name">page59_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page59">
+            <field name="name">Portrait - Page 59 - Facteurs d'évolution de la biodiversité en milieu aquatique continental ou humide...sur votre commune</field>
+            <field name="res_model">portrait.page59</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page59_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page59_view_tree"/>
+            <field name="act_window" ref="window_page59"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page59_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page59_view_form"/>
+            <field name="act_window" ref="window_page59"/>
+        </record>        
+        <record model="ir.action.report" id="report_page59_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page59</field>
+            <field name="report_name">portrait.page59.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page59_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page59,-1</field>
+            <field name="action" ref="report_page59_geo_edit"/>
+        </record>
+        <menuitem sequence="59" name="59-Facteurs d'évolution de la biodiversité en milieu aquatique continental ou humide...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_aquatique" id="menu_biodiversite_page59" action="window_page59"/>
+
+        <!-- generate59 all maps -->
+        <record model="ir.action.wizard" id="generate59">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page59</field>
+            <field name="wiz_name">portrait.generate59</field>
+        </record>
+        <record model="ir.action.keyword" id="generate59_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page59,-1</field>
+            <field name="action" ref="generate59"/>
+        </record>
+
+        <!-- Page 60 - Réponses pour la biodiversité en milieu aquatique continental ou humide... -->        
+        <record model="ir.ui.view" id="page60_view_tree">
+            <field name="model">portrait.page60</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page60_view_form">
+            <field name="model">portrait.page60</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page60">
+            <field name="name">Portrait - Page 60 - Réponses pour la biodiversité en milieu aquatique ou humide...</field>
+            <field name="res_model">portrait.page60</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page60_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page60_view_tree"/>
+            <field name="act_window" ref="window_page60"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page60_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page60_view_form"/>
+            <field name="act_window" ref="window_page60"/>
+        </record>
+        <menuitem sequence="60" name="60-Réponses pour la biodiversité en milieu aquatique ou humide..." icon="tryton-list"
+            parent="portrait.menu_portrait_aquatique" id="menu_biodiversite_page60" action="window_page60"/>
+
+        <!-- Page 62 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page62_view_tree">
+            <field name="model">portrait.page62</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page62_view_form">
+            <field name="model">portrait.page62</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page62">
+            <field name="name">Portrait - Page 62 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page62</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page62_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page62_view_tree"/>
+            <field name="act_window" ref="window_page62"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page62_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page62_view_form"/>
+            <field name="act_window" ref="window_page62"/>
+        </record>
+        <menuitem sequence="62" name="62-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_aquatique" id="menu_biodiversite_page62" action="window_page62"/>
+
+        <!-- Pageo 64 - Mieux connaître les milieux marins, littoraux et côtiers... -->        
+        <record model="ir.ui.view" id="pageo64_view_tree">
+            <field name="model">portrait.pageo64</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo64_view_form">
+            <field name="model">portrait.pageo64</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo64">
+            <field name="name">Portrait - Page option 64 - Mieux connaître les milieux marins, littoraux et côtiers...</field>
+            <field name="res_model">portrait.pageo64</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo64_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo64_view_tree"/>
+            <field name="act_window" ref="window_pageo64"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo64_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo64_view_form"/>
+            <field name="act_window" ref="window_pageo64"/>
+        </record>
+        <menuitem sequence="64" name="o64-Mieux connaître les milieux marins, littoraux et côtiers..." icon="tryton-list"
+            parent="portrait.menu_portrait_mer" id="menu_biodiversite_pageo64" action="window_pageo64"/>
+
+        <!-- Pageo 65 - Mieux connaître les milieux marins, littoraux et côtiers...sur votre commune -->        
+        <record model="ir.ui.view" id="pageo65_view_tree">
+            <field name="model">portrait.pageo65</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo65_view_form">
+            <field name="model">portrait.pageo65</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo65">
+            <field name="name">Portrait - Page option 65 - Mieux connaître les milieux marins, littoraux et côtiers...sur votre commune</field>
+            <field name="res_model">portrait.pageo65</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo65_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo65_view_tree"/>
+            <field name="act_window" ref="window_pageo65"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo65_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo65_view_form"/>
+            <field name="act_window" ref="window_pageo65"/>
+        </record>
+        <menuitem sequence="65" name="o65-Mieux connaître les milieux marins, littoraux et côtiers...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_mer" id="menu_biodiversite_pageo65" action="window_pageo65"/>
+
+        <!-- Pageo 66 - Facteurs d'évolution de la biodiversité en milieux marins, littoraux et côtiers... -->        
+        <record model="ir.ui.view" id="pageo66_view_tree">
+            <field name="model">portrait.pageo66</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo66_view_form">
+            <field name="model">portrait.pageo66</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo66">
+            <field name="name">Portrait - Page option 66 - Facteurs d'évolution de la biodiversité en milieux marins, littoraux et côtiers...</field>
+            <field name="res_model">portrait.pageo66</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo66_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo66_view_tree"/>
+            <field name="act_window" ref="window_pageo66"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo66_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo66_view_form"/>
+            <field name="act_window" ref="window_pageo66"/>
+        </record>
+        <menuitem sequence="66" name="o66-Facteurs d'évolution de la biodiversité en milieux marins, littoraux et côtiers..." icon="tryton-list"
+            parent="portrait.menu_portrait_mer" id="menu_biodiversite_pageo66" action="window_pageo66"/>
+
+        <!-- Pageo 67 - Facteurs d'évolution de la biodiversité en milieux marins, littoraux et côtiers...sur votre commune -->        
+        <record model="ir.ui.view" id="pageo67_view_tree">
+            <field name="model">portrait.pageo67</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo67_view_form">
+            <field name="model">portrait.pageo67</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo67">
+            <field name="name">Portrait - Page option 67 - Facteurs d'évolution de la biodiversité en milieux marins, littoraux et côtiers...sur votre commune</field>
+            <field name="res_model">portrait.pageo67</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo67_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo67_view_tree"/>
+            <field name="act_window" ref="window_pageo67"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo67_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo67_view_form"/>
+            <field name="act_window" ref="window_pageo67"/>
+        </record>
+        <menuitem sequence="67" name="o67-Facteurs d'évolution de la biodiversité en milieux marins, littoraux et côtiers...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_mer" id="menu_biodiversite_pageo67" action="window_pageo67"/>
+
+        <!-- Pageo 68 - Réponses pour la biodiversité en milieux marins, littoraux et côtiers... -->        
+        <record model="ir.ui.view" id="pageo68_view_tree">
+            <field name="model">portrait.pageo68</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo68_view_form">
+            <field name="model">portrait.pageo68</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo68">
+            <field name="name">Portrait - Page option 68 - Réponses pour la biodiversité en milieux marins, littoraux et côtiers...</field>
+            <field name="res_model">portrait.pageo68</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo68_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo68_view_tree"/>
+            <field name="act_window" ref="window_pageo68"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo68_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo68_view_form"/>
+            <field name="act_window" ref="window_pageo68"/>
+        </record>
+        <menuitem sequence="68" name="o68-Réponses pour la biodiversité en milieux marins, littoraux et côtiers..." icon="tryton-list"
+            parent="portrait.menu_portrait_mer" id="menu_biodiversite_pageo68" action="window_pageo68"/>
+
+        <!-- Pageo 69 - Réponses pour la biodiversité en milieux marins, littoraux et côtiers...sur votre commune -->        
+        <record model="ir.ui.view" id="pageo69_view_tree">
+            <field name="model">portrait.pageo69</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo69_view_form">
+            <field name="model">portrait.pageo69</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo69">
+            <field name="name">Portrait - Page option 69 - Réponses pour la biodiversité en milieux marins, littoraux et côtiers...sur votre commune</field>
+            <field name="res_model">portrait.pageo69</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo69_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo69_view_tree"/>
+            <field name="act_window" ref="window_pageo69"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo69_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo69_view_form"/>
+            <field name="act_window" ref="window_pageo69"/>
+        </record>
+        <menuitem sequence="69" name="o69-Réponses pour la biodiversité en milieux marins, littoraux et côtiers...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_mer" id="menu_biodiversite_pageo69" action="window_pageo69"/>
+
+        <!-- Page 70 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="pageo70_view_tree">
+            <field name="model">portrait.pageo70</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo70_view_form">
+            <field name="model">portrait.pageo70</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo70">
+            <field name="name">Portrait - Page option 70 - Clefs de lecture...</field>
+            <field name="res_model">portrait.pageo70</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo70_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo70_view_tree"/>
+            <field name="act_window" ref="window_pageo70"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo70_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo70_view_form"/>
+            <field name="act_window" ref="window_pageo70"/>
+        </record>
+        <menuitem sequence="70" name="o70-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_mer" id="menu_biodiversite_pageo70" action="window_pageo70"/>
+
+        <!-- Page 72 - Mieux connaître les milieux montagnards... -->        
+        <record model="ir.ui.view" id="pageo72_view_tree">
+            <field name="model">portrait.pageo72</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo72_view_form">
+            <field name="model">portrait.pageo72</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo72">
+            <field name="name">Portrait - Page option 70 - Mieux connaître les milieux montagnards...</field>
+            <field name="res_model">portrait.pageo72</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo72_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo72_view_tree"/>
+            <field name="act_window" ref="window_pageo72"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo72_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo72_view_form"/>
+            <field name="act_window" ref="window_pageo72"/>
+        </record>
+        <menuitem sequence="72" name="o72-Mieux connaître les milieux montagnards..." icon="tryton-list"
+            parent="portrait.menu_portrait_montagne" id="menu_biodiversite_pageo72" action="window_pageo72"/>
+
+        <!-- Page 73 - Mieux connaître les milieux montagnards...sur votre commune -->        
+        <record model="ir.ui.view" id="pageo73_view_tree">
+            <field name="model">portrait.pageo73</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo73_view_form">
+            <field name="model">portrait.pageo73</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo73">
+            <field name="name">Portrait - Page option 73 - Mieux connaître les milieux montagnards...sur votre commune</field>
+            <field name="res_model">portrait.pageo73</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo73_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo73_view_tree"/>
+            <field name="act_window" ref="window_pageo73"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo73_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo73_view_form"/>
+            <field name="act_window" ref="window_pageo73"/>
+        </record>
+        <menuitem sequence="73" name="o73-Mieux connaître les milieux montagnards...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_montagne" id="menu_biodiversite_pageo73" action="window_pageo73"/>
+
+        <!-- Page 74 - Facteurs d'évolution de la biodiversité en milieux montagnards... -->        
+        <record model="ir.ui.view" id="pageo74_view_tree">
+            <field name="model">portrait.pageo74</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo74_view_form">
+            <field name="model">portrait.pageo74</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo74">
+            <field name="name">Portrait - Page option 74 - Facteurs d'évolution de la biodiversité en milieux montagnards...</field>
+            <field name="res_model">portrait.pageo74</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo74_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo74_view_tree"/>
+            <field name="act_window" ref="window_pageo74"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo74_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo74_view_form"/>
+            <field name="act_window" ref="window_pageo74"/>
+        </record>
+        <menuitem sequence="74" name="o74-Facteurs d'évolution de la biodiversité en milieux montagnards..." icon="tryton-list"
+            parent="portrait.menu_portrait_montagne" id="menu_biodiversite_pageo74" action="window_pageo74"/>
+
+        <!-- Page 75 - Facteurs d'évolution de la biodiversité en milieux montagnards...sur votre commune -->        
+        <record model="ir.ui.view" id="pageo75_view_tree">
+            <field name="model">portrait.pageo75</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo75_view_form">
+            <field name="model">portrait.pageo75</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo75">
+            <field name="name">Portrait - Page option 75 - Facteurs d'évolution de la biodiversité en milieux montagnards...sur votre commune</field>
+            <field name="res_model">portrait.pageo75</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo75_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo75_view_tree"/>
+            <field name="act_window" ref="window_pageo75"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo75_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo75_view_form"/>
+            <field name="act_window" ref="window_pageo75"/>
+        </record>
+        <menuitem sequence="75" name="o75-Facteurs d'évolution de la biodiversité en milieux montagnards...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_montagne" id="menu_biodiversite_pageo75" action="window_pageo75"/>
+
+        <!-- Page 76 - Réponses pour la biodiversité en milieux montagnards... -->        
+        <record model="ir.ui.view" id="pageo76_view_tree">
+            <field name="model">portrait.pageo76</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo76_view_form">
+            <field name="model">portrait.pageo76</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo76">
+            <field name="name">Portrait - Page option 76 - Réponses pour la biodiversité en milieux montagnards...</field>
+            <field name="res_model">portrait.pageo76</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo76_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo76_view_tree"/>
+            <field name="act_window" ref="window_pageo76"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo76_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo76_view_form"/>
+            <field name="act_window" ref="window_pageo76"/>
+        </record>
+        <menuitem sequence="76" name="o76-Réponses pour la biodiversité en milieux montagnards..." icon="tryton-list"
+            parent="portrait.menu_portrait_montagne" id="menu_biodiversite_pageo76" action="window_pageo76"/>
+
+        <!-- Page 77 - Réponses pour la biodiversité en milieux montagnards...sur votre commune -->        
+        <record model="ir.ui.view" id="pageo77_view_tree">
+            <field name="model">portrait.pageo77</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo77_view_form">
+            <field name="model">portrait.pageo77</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo77">
+            <field name="name">Portrait - Page option 77 - Réponses pour la biodiversité en milieux montagnards...sur votre commune</field>
+            <field name="res_model">portrait.pageo77</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo77_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo77_view_tree"/>
+            <field name="act_window" ref="window_pageo77"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo77_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo77_view_form"/>
+            <field name="act_window" ref="window_pageo77"/>
+        </record>
+        <menuitem sequence="77" name="o77-Réponses pour la biodiversité en milieux montagnards...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_montagne" id="menu_biodiversite_pageo77" action="window_pageo77"/>
+
+        <!-- Page 78 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="pageo78_view_tree">
+            <field name="model">portrait.pageo78</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="pageo78_view_form">
+            <field name="model">portrait.pageo78</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_pageo78">
+            <field name="name">Portrait - Page option 78 - Clefs de lecture...</field>
+            <field name="res_model">portrait.pageo78</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo78_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo78_view_tree"/>
+            <field name="act_window" ref="window_pageo78"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_pageo78_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="pageo78_view_form"/>
+            <field name="act_window" ref="window_pageo78"/>
+        </record>
+        <menuitem sequence="78" name="o78-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_montagne" id="menu_biodiversite_pageo78" action="window_pageo78"/>
+
+        <!-- Page 80 - Mieux connaître les milieux particuliers... -->        
+        <record model="ir.ui.view" id="page80_view_tree">
+            <field name="model">portrait.page80</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page80_view_form">
+            <field name="model">portrait.page80</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page80">
+            <field name="name">Portrait - Page 80 - Mieux connaître les milieux particuliers...</field>
+            <field name="res_model">portrait.page80</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page80_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page80_view_tree"/>
+            <field name="act_window" ref="window_page80"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page80_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page80_view_form"/>
+            <field name="act_window" ref="window_page80"/>
+        </record>
+        <menuitem sequence="80" name="80-Mieux connaître les milieux particuliers..." icon="tryton-list"
+            parent="portrait.menu_portrait_particulier" id="menu_biodiversite_page80" action="window_page80"/>
+
+        <!-- Page 81 - Mieux connaître les milieux particuliers...sur votre commune -->        
+        <record model="ir.ui.view" id="page81_view_tree">
+            <field name="model">portrait.page81</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page81_view_form">
+            <field name="model">portrait.page81</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page81">
+            <field name="name">Portrait - Page 81 - Mieux connaître les milieux particuliers...sur votre commune</field>
+            <field name="res_model">portrait.page81</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page81_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page81_view_tree"/>
+            <field name="act_window" ref="window_page81"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page81_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page81_view_form"/>
+            <field name="act_window" ref="window_page81"/>
+        </record>
+        <menuitem sequence="81" name="81-Mieux connaître les milieux particuliers...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_particulier" id="menu_biodiversite_page81" action="window_page81"/>
+
+        <!-- Page 82 - Facteurs d'évolution de la biodiversité en milieux particuliers... -->        
+        <record model="ir.ui.view" id="page82_view_tree">
+            <field name="model">portrait.page82</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page82_view_form">
+            <field name="model">portrait.page82</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page82">
+            <field name="name">Portrait - Page 82 - Facteurs d'évolution de la biodiversité en milieux particuliers...</field>
+            <field name="res_model">portrait.page82</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page82_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page82_view_tree"/>
+            <field name="act_window" ref="window_page82"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page82_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page82_view_form"/>
+            <field name="act_window" ref="window_page82"/>
+        </record>
+        <menuitem sequence="82" name="82-Facteurs d'évolution de la biodiversité en milieux particuliers..." icon="tryton-list"
+            parent="portrait.menu_portrait_particulier" id="menu_biodiversite_page82" action="window_page82"/>
+
+        <!-- Page 83 - Facteurs d'évolution de la biodiversité en milieux particuliers...sur votre commune -->        
+        <record model="ir.ui.view" id="page83_view_tree">
+            <field name="model">portrait.page83</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page83_view_form">
+            <field name="model">portrait.page83</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page83">
+            <field name="name">Portrait - Page 83 - Facteurs d'évolution de la biodiversité en milieux particuliers...sur votre commune</field>
+            <field name="res_model">portrait.page83</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page83_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page83_view_tree"/>
+            <field name="act_window" ref="window_page83"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page83_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page83_view_form"/>
+            <field name="act_window" ref="window_page83"/>
+        </record>
+        <menuitem sequence="83" name="83-Facteurs d'évolution de la biodiversité en milieux particuliers...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_particulier" id="menu_biodiversite_page83" action="window_page83"/>
+
+        <!-- Page 84 - Réponses pour la biodiversité en milieux particuliers... -->        
+        <record model="ir.ui.view" id="page84_view_tree">
+            <field name="model">portrait.page84</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page84_view_form">
+            <field name="model">portrait.page84</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page84">
+            <field name="name">Portrait - Page 84 - Réponses pour la biodiversité en milieux particuliers...</field>
+            <field name="res_model">portrait.page84</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page84_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page84_view_tree"/>
+            <field name="act_window" ref="window_page84"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page84_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page84_view_form"/>
+            <field name="act_window" ref="window_page84"/>
+        </record>
+        <menuitem sequence="84" name="84-Réponses pour la biodiversité en milieux particuliers..." icon="tryton-list"
+            parent="portrait.menu_portrait_particulier" id="menu_biodiversite_page84" action="window_page84"/>
+
+        <!-- Page 85 - Réponses pour la biodiversité en milieux particuliers...sur votre commune -->        
+        <record model="ir.ui.view" id="page85_view_tree">
+            <field name="model">portrait.page85</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page85_view_form">
+            <field name="model">portrait.page85</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page85">
+            <field name="name">Portrait - Page 85 - Réponses pour la biodiversité en milieux particuliers...sur votre commune</field>
+            <field name="res_model">portrait.page85</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page85_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page85_view_tree"/>
+            <field name="act_window" ref="window_page85"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page85_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page85_view_form"/>
+            <field name="act_window" ref="window_page85"/>
+        </record>
+        <menuitem sequence="85" name="85-Réponses pour la biodiversité en milieux particuliers...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_particulier" id="menu_biodiversite_page85" action="window_page85"/>
+
+        <!-- Page 86 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page86_view_tree">
+            <field name="model">portrait.page86</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page86_view_form">
+            <field name="model">portrait.page86</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page86">
+            <field name="name">Portrait - Page 86 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page86</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page86_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page86_view_tree"/>
+            <field name="act_window" ref="window_page86"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page86_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page86_view_form"/>
+            <field name="act_window" ref="window_page86"/>
+        </record>
+        <menuitem sequence="86" name="86-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_particulier" id="menu_biodiversite_page86" action="window_page86"/>
+
+        <!-- Page 88 - Mieux connaître les espaces naturels remarqués... -->        
+        <record model="ir.ui.view" id="page88_view_tree">
+            <field name="model">portrait.page88</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page88_view_form">
+            <field name="model">portrait.page88</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page88">
+            <field name="name">Portrait - Page 88 - Mieux connaître les espaces naturels remarqués...</field>
+            <field name="res_model">portrait.page88</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page88_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page88_view_tree"/>
+            <field name="act_window" ref="window_page88"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page88_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page88_view_form"/>
+            <field name="act_window" ref="window_page88"/>
+        </record>
+        <menuitem sequence="88" name="88-Mieux connaître les espaces naturels remarqués..." icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_biodiversite_page88" action="window_page88"/>
+
+        <!-- Page 89 - Mieux connaître les espaces naturels remarqués...sur votre commune -->        
+        <record model="ir.ui.view" id="page89_view_tree">
+            <field name="model">portrait.page89</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page89_view_form">
+            <field name="model">portrait.page89</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page89">
+            <field name="name">Portrait - Page 89 - Mieux connaître les espaces naturels remarqués...sur votre commune</field>
+            <field name="res_model">portrait.page89</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page89_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page89_view_tree"/>
+            <field name="act_window" ref="window_page89"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page89_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page89_view_form"/>
+            <field name="act_window" ref="window_page89"/>
+        </record>
+        <menuitem sequence="89" name="89-Mieux connaître les espaces naturels remarqués...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_biodiversite_page89" action="window_page89"/>
+
+        <!-- Page 90 - Facteurs d'évolution de la biodiversité pour les milieux protégés... -->        
+        <record model="ir.ui.view" id="page90_view_tree">
+            <field name="model">portrait.page90</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page90_view_form">
+            <field name="model">portrait.page90</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page90">
+            <field name="name">Portrait - Page 90 - Facteurs d'évolution de la biodiversité pour les milieux protégés...</field>
+            <field name="res_model">portrait.page90</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page90_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page90_view_tree"/>
+            <field name="act_window" ref="window_page90"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page90_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page90_view_form"/>
+            <field name="act_window" ref="window_page90"/>
+        </record>
+        <menuitem sequence="90" name="90-Facteurs d'évolution de la biodiversité pour les milieux protégés..." icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_biodiversite_page90" action="window_page90"/>
+
+        <!-- Page 91 - Facteurs d'évolution de la biodiversité pour les milieux protégés...sur votre commune -->        
+        <record model="ir.ui.view" id="page91_view_tree">
+            <field name="model">portrait.page91</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page91_view_form">
+            <field name="model">portrait.page91</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page91">
+            <field name="name">Portrait - Page 91 - Facteurs d'évolution de la biodiversité pour les milieux protégés...sur votre commune</field>
+            <field name="res_model">portrait.page91</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page91_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page91_view_tree"/>
+            <field name="act_window" ref="window_page91"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page91_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page91_view_form"/>
+            <field name="act_window" ref="window_page91"/>
+        </record>
+        <menuitem sequence="91" name="91-Facteurs d'évolution de la biodiversité pour les milieux protégés...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_biodiversite_page91" action="window_page91"/>
+
+        <!-- Page 92 - Réponses pour les milieux protégés... -->        
+        <record model="ir.ui.view" id="page92_view_tree">
+            <field name="model">portrait.page92</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page92_view_form">
+            <field name="model">portrait.page92</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page92">
+            <field name="name">Portrait - Page 92 - Réponses pour les milieux protégés...</field>
+            <field name="res_model">portrait.page92</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page92_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page92_view_tree"/>
+            <field name="act_window" ref="window_page92"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page92_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page92_view_form"/>
+            <field name="act_window" ref="window_page92"/>
+        </record>
+        <menuitem sequence="92" name="92-Réponses pour les milieux protégés..." icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_biodiversite_page92" action="window_page92"/>
+
+        <!-- Page 93 - Réponses pour les milieux protégés...sur votre commune -->        
+        <record model="ir.ui.view" id="page93_view_tree">
+            <field name="model">portrait.page93</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page93_view_form">
+            <field name="model">portrait.page93</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page93">
+            <field name="name">Portrait - Page 93 - Réponses pour les milieux protégés...sur votre commune</field>
+            <field name="res_model">portrait.page93</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page93_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page93_view_tree"/>
+            <field name="act_window" ref="window_page93"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page93_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page93_view_form"/>
+            <field name="act_window" ref="window_page93"/>
+        </record>
+        <menuitem sequence="93" name="93-Réponses pour les milieux protégés...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_biodiversite_page93" action="window_page93"/>
+
+        <!-- Page 94 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page94_view_tree">
+            <field name="model">portrait.page94</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page94_view_form">
+            <field name="model">portrait.page94</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page94">
+            <field name="name">Portrait - Page 94 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page94</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page94_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page94_view_tree"/>
+            <field name="act_window" ref="window_page94"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page94_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page94_view_form"/>
+            <field name="act_window" ref="window_page94"/>
+        </record>
+        <menuitem sequence="94" name="94-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_biodiversite_page94" action="window_page94"/>
+
         <!-- Page 71 - Espaces naturels remarqués et milieux protégés-->
         <record model="ir.ui.view" id="page71_view_tree">
             <field name="model">portrait.page71</field>
@@ -1205,6 +2903,426 @@
             <field name="model">portrait.page71,-1</field>
             <field name="action" ref="generateallmap"/>
         </record>
+
+        <!-- Page 96 - Parlons de la connaissance... -->        
+        <record model="ir.ui.view" id="page96_view_tree">
+            <field name="model">portrait.page96</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page96_view_form">
+            <field name="model">portrait.page96</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page96">
+            <field name="name">Portrait - Page 96 - Parlons de la connaissance...</field>
+            <field name="res_model">portrait.page96</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page96_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page96_view_tree"/>
+            <field name="act_window" ref="window_page96"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page96_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page96_view_form"/>
+            <field name="act_window" ref="window_page96"/>
+        </record>
+        <menuitem sequence="96" name="96-Parlons de la connaissance..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page96" action="window_page96"/>
+
+        <!-- Page 97 - Parlons de la connaissance...sur votre commune -->        
+        <record model="ir.ui.view" id="page97_view_tree">
+            <field name="model">portrait.page97</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page97_view_form">
+            <field name="model">portrait.page97</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page97">
+            <field name="name">Portrait - Page 97 - Parlons de la connaissance...sur votre commune</field>
+            <field name="res_model">portrait.page97</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page97_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page97_view_tree"/>
+            <field name="act_window" ref="window_page97"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page97_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page97_view_form"/>
+            <field name="act_window" ref="window_page97"/>
+        </record>
+        <menuitem sequence="97" name="97-Parlons de la connaissance...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page97" action="window_page97"/>
+
+        <!-- Page 98 - Parlons des espèces... -->        
+        <record model="ir.ui.view" id="page98_view_tree">
+            <field name="model">portrait.page98</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page98_view_form">
+            <field name="model">portrait.page98</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page98">
+            <field name="name">Portrait - Page 98 - Parlons des espèces...</field>
+            <field name="res_model">portrait.page98</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page98_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page98_view_tree"/>
+            <field name="act_window" ref="window_page98"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page98_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page98_view_form"/>
+            <field name="act_window" ref="window_page98"/>
+        </record>
+        <menuitem sequence="98" name="98-Parlons des espèces..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page98" action="window_page98"/>
+
+        <!-- Page 99 - Parlons des espèces...sur votre commune -->        
+        <record model="ir.ui.view" id="page99_view_tree">
+            <field name="model">portrait.page99</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page99_view_form">
+            <field name="model">portrait.page99</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page99">
+            <field name="name">Portrait - Page 99 - Parlons des espèces...sur votre commune</field>
+            <field name="res_model">portrait.page99</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page99_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page99_view_tree"/>
+            <field name="act_window" ref="window_page99"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page99_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page99_view_form"/>
+            <field name="act_window" ref="window_page99"/>
+        </record>
+        <menuitem sequence="99" name="99-Parlons des espèces...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page99" action="window_page99"/>
+
+        <!-- Page 100 - Volet faune - Les mammifères & oiseaux... -->        
+        <record model="ir.ui.view" id="page100_view_tree">
+            <field name="model">portrait.page100</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page100_view_form">
+            <field name="model">portrait.page100</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page100">
+            <field name="name">Portrait - Page 100 - Volet faune - Les mammifères &amp; oiseaux...</field>
+            <field name="res_model">portrait.page100</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page100_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page100_view_tree"/>
+            <field name="act_window" ref="window_page100"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page100_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page100_view_form"/>
+            <field name="act_window" ref="window_page100"/>
+        </record>
+        <menuitem sequence="100" name="100-Volet faune - Les mammifères &amp; oiseaux..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page100" action="window_page100"/>
+
+        <!-- Page 101 - Volet faune - Les mammifères & oiseaux...sur votre commune -->        
+        <record model="ir.ui.view" id="page101_view_tree">
+            <field name="model">portrait.page101</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page101_view_form">
+            <field name="model">portrait.page101</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page101">
+            <field name="name">Portrait - Page 101 - Volet faune - Les mammifères &amp; oiseaux...sur votre commune</field>
+            <field name="res_model">portrait.page101</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page101_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page101_view_tree"/>
+            <field name="act_window" ref="window_page101"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page101_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page101_view_form"/>
+            <field name="act_window" ref="window_page101"/>
+        </record>
+        <menuitem sequence="101" name="101-Volet faune - Les mammifères &amp; oiseaux...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page101" action="window_page101"/>
+
+        <!-- Page 102 - Volet faune - Les reptiles et amphibiens & Poissons... -->        
+        <record model="ir.ui.view" id="page102_view_tree">
+            <field name="model">portrait.page102</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page102_view_form">
+            <field name="model">portrait.page102</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page102">
+            <field name="name">Portrait - Page 102 - Volet faune - Les reptiles et amphibiens &amp; Poissons...</field>
+            <field name="res_model">portrait.page102</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page102_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page102_view_tree"/>
+            <field name="act_window" ref="window_page102"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page102_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page102_view_form"/>
+            <field name="act_window" ref="window_page102"/>
+        </record>
+        <menuitem sequence="102" name="102-Volet faune - Les reptiles et amphibiens &amp; Poissons..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page102" action="window_page102"/>
+
+        <!-- Page 103 - Volet faune - Les reptiles et amphibiens & Poissons...sur votre commune -->        
+        <record model="ir.ui.view" id="page103_view_tree">
+            <field name="model">portrait.page103</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page103_view_form">
+            <field name="model">portrait.page103</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page103">
+            <field name="name">Portrait - Page 103 - Volet faune - Les reptiles et amphibiens &amp; Poissons...sur votre commune</field>
+            <field name="res_model">portrait.page103</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page103_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page103_view_tree"/>
+            <field name="act_window" ref="window_page103"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page103_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page103_view_form"/>
+            <field name="act_window" ref="window_page103"/>
+        </record>
+        <menuitem sequence="103" name="103-Volet faune - Les reptiles et amphibiens &amp; Poissons...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page103" action="window_page103"/>
+
+        <!-- Page 104 - Volet faune - Les arthropodes &amp; mollusques... -->        
+        <record model="ir.ui.view" id="page104_view_tree">
+            <field name="model">portrait.page104</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page104_view_form">
+            <field name="model">portrait.page104</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page104">
+            <field name="name">Portrait - Page 104 - Volet faune - Les arthropodes &amp; mollusques...</field>
+            <field name="res_model">portrait.page104</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page104_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page104_view_tree"/>
+            <field name="act_window" ref="window_page104"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page104_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page104_view_form"/>
+            <field name="act_window" ref="window_page104"/>
+        </record>
+        <menuitem sequence="104" name="104-Volet faune - Les arthropodes &amp; mollusques..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page104" action="window_page104"/>
+
+        <!-- Page 105 - Volet faune - Les arthropodes & mollusques...sur votre commune -->        
+        <record model="ir.ui.view" id="page105_view_tree">
+            <field name="model">portrait.page105</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page105_view_form">
+            <field name="model">portrait.page105</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page105">
+            <field name="name">Portrait - Page 105 - Volet faune - Les arthropodes &amp; mollusques...sur votre commune</field>
+            <field name="res_model">portrait.page105</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page105_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page105_view_tree"/>
+            <field name="act_window" ref="window_page105"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page105_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page105_view_form"/>
+            <field name="act_window" ref="window_page105"/>
+        </record>
+        <menuitem sequence="105" name="105-Volet faune - Les arthropodes &amp; mollusques...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page105" action="window_page105"/>
+
+        <!-- Page 106 - Volet flore & fonge - Les champignons, les fougères, lichens, algues et mousse... -->        
+        <record model="ir.ui.view" id="page106_view_tree">
+            <field name="model">portrait.page106</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page106_view_form">
+            <field name="model">portrait.page106</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page106">
+            <field name="name">Portrait - Page 106 - Volet flore &amp; fonge - Les champignons, les fougères, lichens, algues et mousse...</field>
+            <field name="res_model">portrait.page106</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page106_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page106_view_tree"/>
+            <field name="act_window" ref="window_page106"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page106_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page106_view_form"/>
+            <field name="act_window" ref="window_page106"/>
+        </record>
+        <menuitem sequence="106" name="106-Volet flore &amp; fonge - Les champignons, les fougères, lichens, algues et mousse..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page106" action="window_page106"/>
+
+        <!-- Page 107 - Volet flore & fonge - Les champignons, les fougères, lichens, algues et mousse...sur votre commune -->        
+        <record model="ir.ui.view" id="page107_view_tree">
+            <field name="model">portrait.page107</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page107_view_form">
+            <field name="model">portrait.page107</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page107">
+            <field name="name">Portrait - Page 107 - Volet flore &amp; fonge - Les champignons, les fougères, lichens, algues et mousse...sur votre commune</field>
+            <field name="res_model">portrait.page107</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page107_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page107_view_tree"/>
+            <field name="act_window" ref="window_page107"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page107_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page107_view_form"/>
+            <field name="act_window" ref="window_page107"/>
+        </record>
+        <menuitem sequence="107" name="107-Volet flore &amp; fonge - Les champignons, les fougères, lichens, algues et mousse...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page107" action="window_page107"/>
+
+        <!-- Page 108 - Volet flore - Les plantes à graines... -->        
+        <record model="ir.ui.view" id="page108_view_tree">
+            <field name="model">portrait.page108</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page108_view_form">
+            <field name="model">portrait.page108</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page108">
+            <field name="name">Portrait - Page 108 - Volet flore - Les plantes à graines...</field>
+            <field name="res_model">portrait.page108</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page108_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page108_view_tree"/>
+            <field name="act_window" ref="window_page108"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page108_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page108_view_form"/>
+            <field name="act_window" ref="window_page108"/>
+        </record>
+        <menuitem sequence="108" name="108-Volet flore - Les plantes à graines..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page108" action="window_page108"/>
+
+        <!-- Page 109 - Volet flore - Les plantes à graines...sur votre commune -->        
+        <record model="ir.ui.view" id="page109_view_tree">
+            <field name="model">portrait.page109</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page109_view_form">
+            <field name="model">portrait.page109</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page109">
+            <field name="name">Portrait - Page 109 - Volet flore - Les plantes à graines...sur votre commune</field>
+            <field name="res_model">portrait.page109</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page109_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page109_view_tree"/>
+            <field name="act_window" ref="window_page109"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page109_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page109_view_form"/>
+            <field name="act_window" ref="window_page109"/>
+        </record>
+        <menuitem sequence="109" name="109-Volet flore - Les plantes à graines...sur votre commune" icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page109" action="window_page109"/>
+
+        <!-- Page 110 - Clefs de lecture... -->        
+        <record model="ir.ui.view" id="page110_view_tree">
+            <field name="model">portrait.page110</field>
+            <field name="type">tree</field>
+            <field name="name">page_tree</field>
+        </record>
+        <record model="ir.ui.view" id="page110_view_form">
+            <field name="model">portrait.page110</field>
+            <field name="type">form</field>
+            <field name="name">page_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page110">
+            <field name="name">Portrait - Page 110 - Clefs de lecture...</field>
+            <field name="res_model">portrait.page110</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page110_tree">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page110_view_tree"/>
+            <field name="act_window" ref="window_page110"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page110_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page110_view_form"/>
+            <field name="act_window" ref="window_page110"/>
+        </record>
+        <menuitem sequence="110" name="110-Clefs de lecture..." icon="tryton-list"
+            parent="portrait.menu_portrait_species" id="menu_biodiversite_page110" action="window_page110"/>
 
     </data>
 </tryton>

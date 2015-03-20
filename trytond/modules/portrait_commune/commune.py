@@ -27,8 +27,11 @@ from trytond.modules.geotools.tools import bbox_aspect
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
 from trytond.pyson import Bool, Eval, Not, Or, And, Equal, In, If, Id
+from trytond.wizard import Wizard
+from trytond.pool import  Pool
+from trytond.transaction import Transaction
 
-__all__ = ['Commune', 'CommuneQGis']
+__all__ = ['Commune', 'CommuneQGis', 'Generate']
 
 CLASSEMENT = [
     ('lac', u'Lac'),
@@ -195,4 +198,14 @@ class CommuneQGis(QGis):
     __name__ = 'portrait.commune.qgis'
     TITLES = {'portrait.commune': u'Commune'}
 
+class Generate(Wizard):
+    __name__ = 'portrait.commune_generate'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        commune = Pool().get('portrait.commune')
+        communes = commune.browse(Transaction().context.get('active_ids'))        
+        for record in communes:
+            record.generate([record])
+        return []
 

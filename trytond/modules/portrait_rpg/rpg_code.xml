@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="portrait.coderpg" id="200">
+            <field name="code">0</field>
+            <field name="name">PAS D'INFORMATION</field>
+            <field name="r">255</field>
+            <field name="v">255</field>
+            <field name="b">255</field>
+        </record>
+        <record model="portrait.coderpg" id="201">
+            <field name="code">1</field>
+            <field name="name">BLE TENDRE</field>
+            <field name="r">255</field>
+            <field name="v">255</field>
+            <field name="b">144</field>
+        </record>
+        <record model="portrait.coderpg" id="202">
+            <field name="code">2</field>
+            <field name="name">MAIS GRAIN ET ENSILAGE</field>
+            <field name="r">0</field>
+            <field name="v">255</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="203">
+            <field name="code">3</field>
+            <field name="name">ORGE</field>
+            <field name="r">240</field>
+            <field name="v">255</field>
+            <field name="b">112</field>
+        </record>
+        <record model="portrait.coderpg" id="204">
+            <field name="code">4</field>
+            <field name="name">AUTRES CEREALES</field>
+            <field name="r">218</field>
+            <field name="v">235</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="205">
+            <field name="code">5</field>
+            <field name="name">COLZA</field>
+            <field name="r">255</field>
+            <field name="v">236</field>
+            <field name="b">176</field>
+        </record>
+        <record model="portrait.coderpg" id="206">
+            <field name="code">6</field>
+            <field name="name">TOURNESOL</field>
+            <field name="r">255</field>
+            <field name="v">255</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="207">
+            <field name="code">7</field>
+            <field name="name">AUTRES OLEAGINEUX</field>
+            <field name="r">255</field>
+            <field name="v">192</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="208">
+            <field name="code">8</field>
+            <field name="name">PROTEAGINEUX</field>
+            <field name="r">240</field>
+            <field name="v">180</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="209">
+            <field name="code">9</field>
+            <field name="name">PLANTES A FIBRES</field>
+            <field name="r">192</field>
+            <field name="v">144</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="210">
+            <field name="code">10</field>
+            <field name="name">SEMENCES</field>
+            <field name="r">96</field>
+            <field name="v">72</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="211">
+            <field name="code">11</field>
+            <field name="name">GEL (SURFACES GELEES SANS PRODUCTION)</field>
+            <field name="r">240</field>
+            <field name="v">240</field>
+            <field name="b">240</field>
+        </record>
+        <record model="portrait.coderpg" id="212">
+            <field name="code">12</field>
+            <field name="name">GEL INDUSTRIEL</field>
+            <field name="r">176</field>
+            <field name="v">176</field>
+            <field name="b">176</field>
+        </record>
+        <record model="portrait.coderpg" id="213">
+            <field name="code">13</field>
+            <field name="name">AUTRES GELS</field>
+            <field name="r">208</field>
+            <field name="v">208</field>
+            <field name="b">208</field>
+        </record>
+        <record model="portrait.coderpg" id="214">
+            <field name="code">14</field>
+            <field name="name">RIZ</field>
+            <field name="r">144</field>
+            <field name="v">181</field>
+            <field name="b">255</field>
+        </record>
+        <record model="portrait.coderpg" id="215">
+            <field name="code">15</field>
+            <field name="name">LEGUMINEUSES A GRAINS</field>
+            <field name="r">255</field>
+            <field name="v">160</field>
+            <field name="b">128</field>
+        </record>
+        <record model="portrait.coderpg" id="216">
+            <field name="code">16</field>
+            <field name="name">FOURRAGE</field>
+            <field name="r">159</field>
+            <field name="v">199</field>
+            <field name="b">93</field>
+        </record>
+        <record model="portrait.coderpg" id="217">
+            <field name="code">17</field>
+            <field name="name">ESTIVES LANDES</field>
+            <field name="r">181</field>
+            <field name="v">230</field>
+            <field name="b">107</field>
+        </record>
+        <record model="portrait.coderpg" id="218">
+            <field name="code">18</field>
+            <field name="name">PRAIRIES PERMANENTES</field>
+            <field name="r">192</field>
+            <field name="v">255</field>
+            <field name="b">96</field>
+        </record>
+        <record model="portrait.coderpg" id="219">
+            <field name="code">19</field>
+            <field name="name">PRAIRIES TEMPORAIRES</field>
+            <field name="r">224</field>
+            <field name="v">255</field>
+            <field name="b">176</field>
+        </record>
+        <record model="portrait.coderpg" id="220">
+            <field name="code">20</field>
+            <field name="name">VERGERS</field>
+            <field name="r">255</field>
+            <field name="v">0</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="221">
+            <field name="code">21</field>
+            <field name="name">VIGNES</field>
+            <field name="r">224</field>
+            <field name="v">0</field>
+            <field name="b">224</field>
+        </record>
+        <record model="portrait.coderpg" id="222">
+            <field name="code">22</field>
+            <field name="name">FRUITS A COQUE</field>
+            <field name="r">0</field>
+            <field name="v">128</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="223">
+            <field name="code">23</field>
+            <field name="name">OLIVIERS</field>
+            <field name="r">162</field>
+            <field name="v">162</field>
+            <field name="b">0</field>
+        </record>
+        <record model="portrait.coderpg" id="224">
+            <field name="code">24</field>
+            <field name="name">AUTRES CULTURES INDUSTRIELLES</field>
+            <field name="r">0</field>
+            <field name="v">128</field>
+            <field name="b">128</field>
+        </record>
+        <record model="portrait.coderpg" id="225">
+            <field name="code">25</field>
+            <field name="name">LEGUMES-FLEURS</field>
+            <field name="r">255</field>
+            <field name="v">160</field>
+            <field name="b">208</field>
+        </record>
+        <record model="portrait.coderpg" id="226">
+            <field name="code">26</field>
+            <field name="name">CANNE A SUCRE</field>
+            <field name="r">0</field>
+            <field name="v">0</field>
+            <field name="b">255</field>
+        </record>
+        <record model="portrait.coderpg" id="227">
+            <field name="code">27</field>
+            <field name="name">ARBORICULTURE</field>
+            <field name="r">0</field>
+            <field name="v">176</field>
+            <field name="b">88</field>
+        </record>
+        <record model="portrait.coderpg" id="228">
+            <field name="code">28</field>
+            <field name="name">DIVERS</field>
+            <field name="r">128</field>
+            <field name="v">0</field>
+            <field name="b">128</field>
+        </record>
+    </data>
+</tryton>

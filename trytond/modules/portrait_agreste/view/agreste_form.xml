@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="AGRESTE" col="2">
+    <label name="cd_insee" />
+    <field name="cd_insee" />
+    <label name="metrique" />
+    <field name="metrique" />
+    <label name="orientation" />
+    <field name="orientation" />
+    <label name="annee" />
+    <field name="annee" /> 
+    <label name="valeur" />
+    <field name="valeur" />               
+</form>

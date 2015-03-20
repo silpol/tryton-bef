@@ -271,5 +271,37 @@
             <field name="name">regbiofr_done</field>
         </record>
 
+        <!-- EAU -->
+        <record model="ir.action.wizard" id="act_download_shape_meau">
+          <field name="name">Import des Masses d'Eau</field>
+          <field name="wiz_name">download_shape.meau</field>
+        </record>
+        <record model="ir.ui.view" id="meau_file_view_form">
+            <field name="model">download_shape.meau.file</field>
+            <field name="type">form</field>
+            <field name="name">meau_file</field>
+        </record>
+        <record model="ir.ui.view" id="meau_done_view_form">
+            <field name="model">download_shape.meau.done</field>
+            <field name="type">form</field>
+            <field name="name">meau_done</field>
+        </record>
+
+        <!-- ROE -->
+        <record model="ir.action.wizard" id="act_download_shape_roe">
+          <field name="name">Import du Référentiel des Obstacles à l'Écoulement (ROE)</field>
+          <field name="wiz_name">download_shape.roe</field>
+        </record>
+        <record model="ir.ui.view" id="roe_file_view_form">
+            <field name="model">download_shape.roe.file</field>
+            <field name="type">form</field>
+            <field name="name">roe_file</field>
+        </record>
+        <record model="ir.ui.view" id="roe_done_view_form">
+            <field name="model">download_shape.roe.done</field>
+            <field name="type">form</field>
+            <field name="name">roe_done</field>
+        </record>
+
     </data>
 </tryton>

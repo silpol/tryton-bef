@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<form string="Réponses pour la biodiversité en milieux artificialisés...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>
+    <notebook>
+        <page string="GASPAR" id="gaspar" col="4">
+            <label name="sismicite"/>
+            <field name="sismicite"/>
+            <label name="dicrim"/>
+            <field name="dicrim"/>
+            <label name="tim"/>
+            <field name="tim"/>
+            <label name="pcs"/>
+            <field name="pcs"/>
+            <label name="papi"/>
+            <field name="papi"/>
+            <label name="clpa"/>
+            <field name="clpa"/>
+            <field name="pprn" colspan="4"/>
+            <field name="pprm" colspan="4"/>
+            <field name="pprt" colspan="4"/>
+            <field name="risque" colspan="4"/>
+            <field name="catnat" colspan="4"/>
+        </page>
+        <page string="Registre français des émissions polluantes" id="polluante" col="2">
+            <field name="page37_01_map" widget="image" img_width="640" img_height="480" colspan="2"/>
+            <button string="Generate37_01"  name="generate37_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Risques sismiques" id="sismique" col="2">
+            <field name="page37_02_map" widget="image" img_width="640" img_height="480"  colspan="2"/>
+            <button string="Generate37_02"  name="generate37_02" icon="tryton-executable"  colspan="2"/>
+            <field name="geom"/>
+        </page>             
+        <page string="VIDE" id="vide" col="1">
+            <field name="page37_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate37_empty"  name="generate37_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

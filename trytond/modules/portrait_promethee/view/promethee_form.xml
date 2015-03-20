@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="Prométhée" col="4">
+    <label name="cd_insee"/>
+    <field name="cd_insee"/>
+    <label name="annee"/>
+    <field name="annee"/>
+    <label name="num"/>
+    <field name="num"/>
+    <label name="typo"/>
+    <field name="typo"/>
+    <label name="lieudit"/>
+    <field name="lieudit"/>
+    <label name="carreau"/>
+    <field name="carreau"/>  
+    <label name="alerte"/>
+    <field name="alerte"/>
+    <label name="origine"/>
+    <field name="origine"/>
+    <label name="surface"/>
+    <field name="surface"/>  
+</form>

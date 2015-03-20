@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form string="Facteurs d'évolution de la biodiversité en milieux agricoles...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>    
+    <notebook>      
+        <page string="Zones en cultures pérennes" id="perenne" col="2">            
+            <field name="page43_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate43_01"  name="generate43_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Zones en jachères" id="jacheres" col="2">            
+            <field name="page43_02_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate43_02"  name="generate43_02" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Zones en prairies" id="prairies" col="2">            
+            <field name="page43_03_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate43_03"  name="generate43_03" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Zones en céréales" id="cereales" col="2">            
+            <field name="page43_04_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate43_04"  name="generate43_04" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>                 
+        <page string="VIDE" id="vide" col="1">
+            <field name="page43_empty_map" widget="image" img_width="1280" img_height="480" />
+            <button string="Generate43_empty"  name="generate43_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

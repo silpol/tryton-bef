@@ -34,6 +34,8 @@ from her1 import HER1, HER1Done, HER1File, WizardHER1File
 from her2 import HER2, HER2Done, HER2File, WizardHER2File
 from insee import INSEE, INSEEDone, INSEEFile, WizardINSEEFile
 from regbiofr import REGBIOFR, REGBIOFRDone, REGBIOFRFile, WizardREGBIOFRFile
+from eau import MasseEauFile, MasseEauDone, WizardMasseEauFile
+from roe import ROEFile, ROEDone, WizardROEFile
 
 def register():
     Pool.register(
@@ -61,6 +63,10 @@ def register():
         INSEEDone,
         REGBIOFRFile,
         REGBIOFRDone,
+        MasseEauFile,
+        MasseEauDone,
+        ROEFile,
+        ROEDone,
         module='download_shape',
         type_='model'
     )
@@ -95,6 +101,8 @@ def register():
         WizardHER1File,
         WizardHER2File,
         WizardINSEEFile,
+        WizardMasseEauFile,
+        WizardROEFile,
         module='download_shape',
         type_='wizard'
     )

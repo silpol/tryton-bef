@@ -4,6 +4,7 @@
 
         <menuitem name="Portrait" parent="ir.menu_administration" id="menu_portrait_admin"/>
 
+        <!-- Communes -->
         <record model="ir.ui.view" id="commune_view_tree">
             <field name="model">portrait.commune</field>
             <field name="type">tree</field>
@@ -40,6 +41,18 @@
             <field name="keyword">form_action</field>
             <field name="model">portrait.commune,-1</field>
             <field name="action" ref="report_commune_edit"/>
+        </record>
+
+        <!-- generate all maps -->
+        <record model="ir.action.wizard" id="generate">
+            <field name="name">Generate maps...</field>
+            <field name="model">portrait.commune</field>
+            <field name="wiz_name">portrait.commune_generate</field>
+        </record>
+        <record model="ir.action.keyword" id="generate_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.commune,-1</field>
+            <field name="action" ref="generate"/>
         </record>
     </data>
 </tryton>

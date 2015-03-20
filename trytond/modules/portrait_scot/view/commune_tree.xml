@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/tree/field[@name='postal']" position="after">    
+        <field name="scot" />
+    </xpath>
+</data>

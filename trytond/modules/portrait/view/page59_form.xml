@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="Facteurs d'évolution de la biodiversité en milieu aquatique continental ou humide...sur votre commune" col="4">
+    <label name="portrait" />
+    <field name="portrait" colspan="3"/>    
+    <notebook>
+        <page string="Carte des entités hydrogéologiques" id="catpis" col="2">            
+            <field name="page59_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate59_01"  name="generate59_01" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des affleurements de surface" id="clc" col="2">            
+            <field name="page59_02_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <button string="Generate59_02"  name="generate59_02" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>              
+        <page string="VIDE" id="vide" col="1">
+            <field name="page59_empty_map" widget="image" img_width="1280" img_height="480" />
+            <button string="Generate59_empty"  name="generate59_empty" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

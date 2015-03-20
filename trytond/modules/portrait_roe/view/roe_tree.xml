@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tree string="ROE">
+    <field name="id_roe" />
+    <field name="statut_nom" />
+    <field name="etat_code" />
+    <field name="name" />
+    <field name="nom_sec" />
+    <field name="type_code" />
+    <field name="stype_code" />
+    <field name="fpi_code" />
+    <field name="emo_code" />
+    <field name="fnt_code" />
+    <field name="usa_code" />
+    <field name="ht_terrain" />
+    <field name="chute_et" />
+    <field name="ouv_lies" />
+    <field name="grenelle" />
+    <field name="source" />
+    <field name="version" />
+</tree>
