@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<form string="La biodiversité des sols" col="4">
+    <label name="portrait" xalign="0"/>
+    <field name="portrait" xalign="20" colspan="3"/>
+    <notebook>        
+        <page string="Carte lithologique simplifiée" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page27_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate27_01"  name="generate27_01" icon="tryton-executable" />            
+        </page>
+        <page string="Carte géologique 1/50 000 harmonisée" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page27_02_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate27_02"  name="generate27_02" icon="tryton-executable" />            
+        </page>
+        <page string="Carte des référentiels points d'eau BSS EAU" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page27_03_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate27_03"  name="generate27_03" icon="tryton-executable" />            
+        </page>
+        <page string="Carte géologique" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page27_04_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate27_04"  name="generate27_04" icon="tryton-executable" />            
+        </page>
+        <page string="Carte campagne aéro-magnétiques" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page27_05_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate27_05"  name="generate27_05" icon="tryton-executable" />            
+        </page>
+        <page string="Carte Indice de Développement et de Persistance des Réseaux" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page27_06_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate27_06"  name="generate27_06" icon="tryton-executable" />            
+        </page>
+        <page string="VIDE" id="vide" col="1">
+            <field name="page27_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate27_empty"  name="generate27_empty" icon="tryton-executable" />            
+        </page>
+    </notebook>
+</form>

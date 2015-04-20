@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="PRA" col="2">
+    <label name="cd_insee" />
+    <field name="cd_insee" />
+    <label name="ra" />
+    <field name="ra" />
+    <label name="pra" />
+    <field name="pra" />
+    <label name="name" />
+    <field name="name" />              
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="PRA">
+    <field name="cd_insee" />
+    <field name="ra" />
+    <field name="pra" />
+    <field name="name" />
+</tree>

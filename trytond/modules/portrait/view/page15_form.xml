@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form string="La biodiversité sur votre territoire" col="4">
+    <label name="portrait" xalign="0"/>
+    <field name="portrait" xalign="20" colspan="3"/>
+    <notebook>        
+        <page string="GÉNÉRAL" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page15_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate15_01"  name="generate15_01" icon="tryton-executable" />            
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page15_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate15_empty"  name="generate15_empty" icon="tryton-executable" />            
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.icon" id="pra_icon">
+            <field name="name">tryton-pra</field>
+            <field name="path">icons/tryton-pra.svg</field>
+        </record>       
+
+        <menuitem name="Sol" parent="ir.menu_administration" id="menu_sol" icon="tryton-pra"/>
+
+        <!-- PRA -->      
+        <record model="ir.ui.view" id="portrait_pra_view_tree">
+            <field name="model">portrait.pra</field>
+            <field name="type">tree</field>
+            <field name="name">pra_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_pra_view_form">
+            <field name="model">portrait.pra</field>
+            <field name="type">form</field>
+            <field name="name">pra_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_pra_form">
+            <field name="name">Communes - Petites régions agricoles (PRA)</field>
+            <field name="res_model">portrait.pra</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_pra_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_pra_view_tree"/>
+            <field name="act_window" ref="act_portrait_pra_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_pra_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_pra_view_form"/>
+            <field name="act_window" ref="act_portrait_pra_form"/>
+        </record>
+        <menuitem parent="menu_sol" sequence="1" id="menu_portrait_pra_form" icon="tryton-pra" action="act_portrait_pra_form"/>
+        
+        <!-- alea érosion -->      
+        <record model="ir.ui.view" id="portrait_aleaerosion_view_tree">
+            <field name="model">portrait.aleaerosion</field>
+            <field name="type">tree</field>
+            <field name="name">aleaerosion_tree</field>
+        </record>
+        <record model="ir.ui.view" id="portrait_aleaerosion_view_form">
+            <field name="model">portrait.aleaerosion</field>
+            <field name="type">form</field>
+            <field name="name">aleaerosion_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_portrait_aleaerosion_form">
+            <field name="name">Communes - Aléa d'érosion des sols</field>
+            <field name="res_model">portrait.aleaerosion</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_aleaerosion_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="portrait_aleaerosion_view_tree"/>
+            <field name="act_window" ref="act_portrait_aleaerosion_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_portrait_aleaerosion_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="portrait_aleaerosion_view_form"/>
+            <field name="act_window" ref="act_portrait_aleaerosion_form"/>
+        </record>
+        <menuitem parent="menu_sol" sequence="2" id="menu_portrait_aleaerosion_form" icon="tryton-pra" action="act_portrait_aleaerosion_form"/>
+        
+    </data>
+</tryton>

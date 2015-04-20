@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="ALEA EROSION">
+    <field name="cd_insee" />
+    <field name="pra" />
+    <field name="aprintemps" />
+    <field name="aete" />
+    <field name="aautomne" />
+    <field name="ahiver" />
+    <field name="aannuel" />
+</tree>

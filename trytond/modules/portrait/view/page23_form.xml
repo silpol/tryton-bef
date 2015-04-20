@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form string="La biodiversité des sols" col="4">
+    <label name="portrait" xalign="0"/>
+    <field name="portrait" xalign="20" colspan="3"/>
+    <notebook>        
+        <page string="GÉNÉRAL" id="general" col="1">
+            <field name="geom"/>          
+            <field name="page23_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate23_01"  name="generate23_01" icon="tryton-executable" />            
+        </page>        
+        <page string="VIDE" id="vide" col="1">
+            <field name="page23_empty_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate23_empty"  name="generate23_empty" icon="tryton-executable" />            
+        </page>
+    </notebook>
+</form>

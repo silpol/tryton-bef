@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="ALEA EROSION" col="2">
+    <label name="pra" />
+    <field name="pra" />
+    <label name="cd_insee" />
+    <field name="cd_insee" />
+    <label name="aprintemps" />
+    <field name="aprintemps" />
+    <label name="aete" />
+    <field name="aete" />
+    <label name="aautomne" />
+    <field name="aautomne" />  
+    <label name="ahiver" />
+    <field name="ahiver" />
+    <label name="aannuel" />
+    <field name="aannuel" />            
+</form>
