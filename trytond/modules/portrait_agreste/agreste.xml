@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-agreste.svg</field>
         </record>
 
-        <menuitem name="AGRESTE" parent="ir.menu_administration" id="menu_agreste" icon="tryton-agreste"/>
+        <menuitem name="AGRESTE"  sequence="2" parent="ir.menu_administration" id="menu_agreste" icon="tryton-agreste"/>
 
         <!-- AGRESTE -->      
         <record model="ir.ui.view" id="portrait_agreste_view_tree">

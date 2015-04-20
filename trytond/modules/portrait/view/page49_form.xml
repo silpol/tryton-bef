@@ -4,17 +4,27 @@
     <field name="portrait" colspan="3"/>    
     <notebook>      
         <page string="Carte des forêts (CLC)" id="clcfrt" col="2">            
-            <field name="page49_01_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <field name="page49_01_map" widget="image" img_width="480" img_height="480" colspan="2"/>
             <button string="Generate49_01"  name="generate49_01" icon="tryton-executable" colspan="2" />
             <field name="geom"/>
         </page>
         <page string="Carte des formations forestières" id="formfrt" col="2">            
-            <field name="page49_02_map" widget="image" img_width="1280" img_height="480" colspan="2"/>
+            <field name="page49_02_map" widget="image" img_width="480" img_height="480" colspan="2"/>
             <button string="Generate49_02"  name="generate49_02" icon="tryton-executable" colspan="2" />
             <field name="geom"/>
-        </page>                 
+        </page>
+        <page string="Carte des sylvoécorégions" id="formser" col="2">            
+            <field name="page49_03_map" widget="image" img_width="480" img_height="480" colspan="2"/>
+            <button string="Generate49_03"  name="generate49_03" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
+        <page string="Carte des grandes régions écologiques" id="formgreco" col="2">            
+            <field name="page49_04_map" widget="image" img_width="480" img_height="480" colspan="2"/>
+            <button string="Generate49_04"  name="generate49_04" icon="tryton-executable" colspan="2" />
+            <field name="geom"/>
+        </page>
         <page string="VIDE" id="vide" col="1">
-            <field name="page49_empty_map" widget="image" img_width="1280" img_height="480" />
+            <field name="page49_empty_map" widget="image" img_width="480" img_height="480" />
             <button string="Generate49_empty"  name="generate49_empty" icon="tryton-executable" />
         </page>
     </notebook>

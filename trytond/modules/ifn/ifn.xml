@@ -30,7 +30,7 @@ Copyright (c) 2012-2013 Pierre-Louis Bonicoli
         <field name="path">icons/applications-system.svg</field>
     </record>
 
-    <menuitem name="IFN" parent="ir.menu_administration" id="menu_ifn" icon="tryton-ifn"/>
+    <menuitem name="IFN" sequence="9" parent="ir.menu_administration" id="menu_ifn" icon="tryton-ifn"/>
     <menuitem parent="menu_ifn" sequence="1" id="menu_ifn_codes" name="Codes" icon="tryton-codes" />
 
     <!-- ifn.placette is readonly: ifn.forest or ifn.poplar_plantation

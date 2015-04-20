@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<tree string="Commune">
-    <field name="name" />
+<tree string="Commune">    
+    <field name="region" />
     <field name="departement" />
+    <field name="name" />
     <field name="postal" />
 </tree>

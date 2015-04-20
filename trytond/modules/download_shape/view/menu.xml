@@ -39,6 +39,10 @@
             <field name="name">tryton-eau</field>
             <field name="path">icons/tryton-eau.svg</field>
         </record>
+        <record model="ir.ui.icon" id="france_icon">
+            <field name="name">tryton-france</field>
+            <field name="path">icons/tryton-france.svg</field>
+        </record>
 
         <!-- Top level -->
         <menuitem parent="ir.menu_administration"
@@ -97,11 +101,17 @@
 
         <!-- EAU -->
         <menuitem parent="menu_download_shape_data"
-            sequence="6"
+            sequence="8"
             name="EAU (http://www.geocatalogue.fr/)" 
             id="menu_download_shape_data_eau"
             icon="tryton-eau"/>
-       
+            
+        <!-- FRANCE -->
+        <menuitem parent="menu_download_shape_data"
+            sequence="9"
+            name="FRANCE (http://www.data.gouv.fr/)" 
+            id="menu_download_shape_data_france"
+            icon="tryton-france"/>       
 
         <!-- Data -->
         <menuitem  parent="menu_download_shape_data_inpn"
@@ -169,6 +179,14 @@
                 icon="tryton-list"
                 action="act_download_shape_protection_znieff2"/>
         <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_znieff1_mer"
+                icon="tryton-list"
+                action="act_download_shape_protection_znieff1_mer"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
+                id="menu_download_shape_data_znieff2_mer"
+                icon="tryton-list"
+                action="act_download_shape_protection_znieff2_mer"/>
+        <menuitem  parent="menu_download_shape_data_inpn"
                 id="menu_download_shape_data_resbio"
                 icon="tryton-list"
                 action="act_download_shape_protection_resbio"/>
@@ -228,5 +246,13 @@
                 id="menu_download_shape_data_roe"
                 icon="tryton-list"
                 action="act_download_shape_roe"/>
+        <menuitem  parent="menu_download_shape_data_france"
+                id="menu_download_shape_data_region"
+                icon="tryton-list"
+                action="act_download_shape_region"/>
+        <menuitem  parent="menu_download_shape_data_france"
+                id="menu_download_shape_data_departement"
+                icon="tryton-list"
+                action="act_download_shape_departement"/>
     </data>
 </tryton>

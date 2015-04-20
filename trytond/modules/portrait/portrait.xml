@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <tryton>
     <data>        
-        <menuitem name="Portrait Biodiversité" id="menu_portrait"/>
-        <menuitem parent="portrait.menu_portrait" name="La biodiversité sur votre territoire" id="menu_portrait_biodiversite"/>
-        <menuitem parent="portrait.menu_portrait" name="La mosaïque des milieux présents sur votre territoire" id="menu_portrait_mosaique"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité et sols" id="menu_portrait_sol"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux artificialisés (urbanisation, industrie…)" id="menu_portrait_artificiel"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux agricoles" id="menu_portrait_agricole"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux forestiers" id="menu_portrait_forestier"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux humides et aquatiques" id="menu_portrait_aquatique"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité, mer, littoral et milieux côtiers" id="menu_portrait_mer"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux montagnards" id="menu_portrait_montagne"/>
-        <menuitem parent="portrait.menu_portrait" name="Biodiversité et milieux particuliers" id="menu_portrait_particulier"/>
-        <menuitem parent="portrait.menu_portrait" name="Espaces naturels remarqués et milieux protégés" id="menu_portrait_ens"/>
-        <menuitem parent="portrait.menu_portrait" name="Des espèces sur votre commune" id="menu_portrait_species"/>
-        <menuitem parent="portrait.menu_portrait" name="GLOSSAIRE/SIGLES" id="menu_portrait_glossaire"/>
-        <menuitem parent="portrait.menu_portrait" name="CONCLUSION" id="menu_portrait_conclusion"/>
+        <menuitem name="Portrait Biodiversité Communale (PBC)" id="menu_portrait"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité sur votre territoire" id="menu_portrait_biodiversite"/>
+        <menuitem parent="portrait.menu_portrait" name="La Mosaïque des milieux présents sur votre territoire" id="menu_portrait_mosaique"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité des sols" id="menu_portrait_sol"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité dans les milieux urbanisés" id="menu_portrait_artificiel"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité dans les milieux agricoles" id="menu_portrait_agricole"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité dans les milieux forestiers" id="menu_portrait_forestier"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité dans les milieux humides et aquatiques" id="menu_portrait_aquatique"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité dans les milieux marins et littoraux" id="menu_portrait_mer"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité dans les milieux montagnards" id="menu_portrait_montagne"/>
+        <menuitem parent="portrait.menu_portrait" name="La Biodiversité dans les milieux particuliers" id="menu_portrait_particulier"/>
+        <menuitem parent="portrait.menu_portrait" name="Les Espaces naturels remarqués et milieux protégés" id="menu_portrait_ens"/>
+        <menuitem parent="portrait.menu_portrait" name="Des Espèces sur votre commune" id="menu_portrait_species"/>
+        <menuitem parent="portrait.menu_portrait" name="Glossaire/Sigles" id="menu_portrait_glossaire"/>
+        <menuitem parent="portrait.menu_portrait" name="Conclusion" id="menu_portrait_conclusion"/>
 
         <!-- Portrait -->        
         <record model="ir.ui.view" id="portrait_view_tree">
@@ -258,7 +258,7 @@
         <menuitem sequence="6" name="6-Communes bénéficiant du portrait actuellement" parent="portrait.menu_portrait"
             id="menu_communes_benef_page6" icon="tryton-list" action="window_page6"/>
 
-        <!-- Page 7 - La biodiversité sur votre territoire -->
+        <!-- Page 7 - La Biodiversité sur votre territoire -->
         <record model="ir.ui.view" id="page7_view_tree">
             <field name="model">portrait.page7</field>
             <field name="type">tree</field>
@@ -270,7 +270,7 @@
             <field name="name">page7_form</field>
         </record>
         <record model="ir.action.act_window" id="window_page7">
-            <field name="name">Portrait - Page 7 - La biodiversité sur votre territoire</field>
+            <field name="name">Portrait - Page 7 - La Biodiversité sur votre territoire</field>
             <field name="res_model">portrait.page7</field>
         </record>
         <record model="ir.action.act_window.view" id="view_portrait_page7_tree">
@@ -294,7 +294,7 @@
             <field name="model">portrait.page7,-1</field>
             <field name="action" ref="report_page7_geo_edit"/>
         </record>
-        <menuitem sequence="7" name="7-La biodiversité sur votre territoire"
+        <menuitem sequence="7" name="7-La Biodiversité sur votre territoire"
             parent="portrait.menu_portrait_biodiversite" icon="tryton-list" id="menu_biodiversite_page7" action="window_page7"/>
 
         <!-- generate7 all maps -->
@@ -574,6 +574,57 @@
         </record>
         <menuitem sequence="14" name="14-Clefs de lecture..." icon="tryton-list"
             parent="portrait.menu_portrait_biodiversite" id="menu_biodiversite_page14" action="window_page14"/>
+            
+        <!-- Page 15 - La mosaïque des milieux présents sur votre territoire -->
+        <record model="ir.ui.view" id="page15_view_tree">
+            <field name="model">portrait.page15</field>
+            <field name="type">tree</field>
+            <field name="name">page15_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page15_view_form">
+            <field name="model">portrait.page15</field>
+            <field name="type">form</field>
+            <field name="name">page15_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page15">
+            <field name="name">Portrait - Page 15 - La mosaïque des milieux présents sur votre territoire</field>
+            <field name="res_model">portrait.page15</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page15_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page15_view_tree"/>
+            <field name="act_window" ref="window_page15"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page15_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page15_view_form"/>
+            <field name="act_window" ref="window_page15"/>
+        </record>        
+        <record model="ir.action.report" id="report_page15_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page15</field>
+            <field name="report_name">portrait.page15.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page15_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page15,-1</field>
+            <field name="action" ref="report_page15_geo_edit"/>
+        </record>
+        <menuitem sequence="15" name="15-La mosaïque des milieux présents sur votre territoire"
+            parent="portrait.menu_portrait_mosaique" icon="tryton-list" id="menu_biodiversite_page15" action="window_page15"/>
+
+        <!-- generate15 all maps -->
+        <record model="ir.action.wizard" id="generate15">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page15</field>
+            <field name="wiz_name">portrait.generate15</field>
+        </record>
+        <record model="ir.action.keyword" id="generate15_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page15,-1</field>
+            <field name="action" ref="generate15"/>
+        </record>
 
         <!-- Page 16 - La mosaïque des milieux... -->        
         <record model="ir.ui.view" id="page16_view_tree">
@@ -911,6 +962,57 @@
         </record>
         <menuitem sequence="22" name="22-Clefs de lecture..." icon="tryton-list"
             parent="portrait.menu_portrait_mosaique" id="menu_biodiversite_page22" action="window_page22"/>
+            
+        <!-- Page 23 - La biodiversité des sols -->
+        <record model="ir.ui.view" id="page23_view_tree">
+            <field name="model">portrait.page23</field>
+            <field name="type">tree</field>
+            <field name="name">page23_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page23_view_form">
+            <field name="model">portrait.page23</field>
+            <field name="type">form</field>
+            <field name="name">page23_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page23">
+            <field name="name">Portrait - Page 23 - La biodiversité des sols</field>
+            <field name="res_model">portrait.page23</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page23_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page23_view_tree"/>
+            <field name="act_window" ref="window_page23"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page23_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page23_view_form"/>
+            <field name="act_window" ref="window_page23"/>
+        </record>        
+        <record model="ir.action.report" id="report_page23_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page23</field>
+            <field name="report_name">portrait.page23.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page23_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page23,-1</field>
+            <field name="action" ref="report_page23_geo_edit"/>
+        </record>
+        <menuitem sequence="23" name="23-La biodiversité des sols"
+            parent="portrait.menu_portrait_sol" icon="tryton-list" id="menu_biodiversite_page23" action="window_page23"/>
+
+        <!-- generate23 all maps -->
+        <record model="ir.action.wizard" id="generate23">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page23</field>
+            <field name="wiz_name">portrait.generate23</field>
+        </record>
+        <record model="ir.action.keyword" id="generate23_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page23,-1</field>
+            <field name="action" ref="generate23"/>
+        </record>
 
         <!-- Page 24 - Mieux connaître les sols... -->        
         <record model="ir.ui.view" id="page24_view_tree">
@@ -939,6 +1041,57 @@
         </record>
         <menuitem sequence="24" name="24-Mieux connaître les sols..." icon="tryton-list"
             parent="portrait.menu_portrait_sol" id="menu_biodiversite_page24" action="window_page24"/>
+                         
+        <!-- Page 25 - La biodiversité des sols -->
+        <record model="ir.ui.view" id="page25_view_tree">
+            <field name="model">portrait.page25</field>
+            <field name="type">tree</field>
+            <field name="name">page25_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page25_view_form">
+            <field name="model">portrait.page25</field>
+            <field name="type">form</field>
+            <field name="name">page25_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page25">
+            <field name="name">Portrait - Page 25 - La biodiversité des sols</field>
+            <field name="res_model">portrait.page25</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page25_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page25_view_tree"/>
+            <field name="act_window" ref="window_page25"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page25_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page25_view_form"/>
+            <field name="act_window" ref="window_page25"/>
+        </record>        
+        <record model="ir.action.report" id="report_page25_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page25</field>
+            <field name="report_name">portrait.page25.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page25_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page25,-1</field>
+            <field name="action" ref="report_page25_geo_edit"/>
+        </record>
+        <menuitem sequence="25" name="25-La biodiversité des sols"
+            parent="portrait.menu_portrait_sol" icon="tryton-list" id="menu_biodiversite_page25" action="window_page25"/>
+
+        <!-- generate25 all maps -->
+        <record model="ir.action.wizard" id="generate25">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page25</field>
+            <field name="wiz_name">portrait.generate25</field>
+        </record>
+        <record model="ir.action.keyword" id="generate25_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page25,-1</field>
+            <field name="action" ref="generate25"/>
+        </record>
 
         <!-- Page 26 - Facteurs d'évolution de la biodiversité des sols... -->        
         <record model="ir.ui.view" id="page26_view_tree">
@@ -967,6 +1120,57 @@
         </record>
         <menuitem sequence="26" name="26-Facteurs d'évolution de la biodiversité des sols..." icon="tryton-list"
             parent="portrait.menu_portrait_sol" id="menu_biodiversite_page26" action="window_page26"/>
+            
+        <!-- Page 27 - La biodiversité des sols -->
+        <record model="ir.ui.view" id="page27_view_tree">
+            <field name="model">portrait.page27</field>
+            <field name="type">tree</field>
+            <field name="name">page27_tree</field>
+        </record>        
+        <record model="ir.ui.view" id="page27_view_form">
+            <field name="model">portrait.page27</field>
+            <field name="type">form</field>
+            <field name="name">page27_form</field>
+        </record>
+        <record model="ir.action.act_window" id="window_page27">
+            <field name="name">Portrait - Page 27 - La biodiversité des sols</field>
+            <field name="res_model">portrait.page27</field>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page27_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="page27_view_tree"/>
+            <field name="act_window" ref="window_page27"/>
+        </record>
+        <record model="ir.action.act_window.view" id="view_portrait_page27_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="page27_view_form"/>
+            <field name="act_window" ref="window_page27"/>
+        </record>        
+        <record model="ir.action.report" id="report_page27_geo_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">portrait.page27</field>
+            <field name="report_name">portrait.page27.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_page27_geo_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page27,-1</field>
+            <field name="action" ref="report_page27_geo_edit"/>
+        </record>
+        <menuitem sequence="27" name="27-La biodiversité des sols"
+            parent="portrait.menu_portrait_sol" icon="tryton-list" id="menu_biodiversite_page27" action="window_page27"/>
+
+        <!-- generate27 all maps -->
+        <record model="ir.action.wizard" id="generate27">
+            <field name="name">Generate all maps...</field>
+            <field name="model">portrait.page27</field>
+            <field name="wiz_name">portrait.generate27</field>
+        </record>
+        <record model="ir.action.keyword" id="generate27_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">portrait.page27,-1</field>
+            <field name="action" ref="generate27"/>
+        </record>
 
         <!-- Page 28 - Réponses pour la biodiversité des sols... -->        
         <record model="ir.ui.view" id="page28_view_tree">
@@ -2841,66 +3045,66 @@
         <menuitem sequence="94" name="94-Clefs de lecture..." icon="tryton-list"
             parent="portrait.menu_portrait_ens" id="menu_biodiversite_page94" action="window_page94"/>
 
-        <!-- Page 71 - Espaces naturels remarqués et milieux protégés-->
-        <record model="ir.ui.view" id="page71_view_tree">
-            <field name="model">portrait.page71</field>
+        <!-- Page 87 - Espaces naturels remarqués et milieux protégés-->
+        <record model="ir.ui.view" id="page87_view_tree">
+            <field name="model">portrait.page87</field>
             <field name="type">tree</field>
-            <field name="name">page71_tree</field>
+            <field name="name">page87_tree</field>
         </record>        
-        <record model="ir.ui.view" id="page71_view_form">
-            <field name="model">portrait.page71</field>
+        <record model="ir.ui.view" id="page87_view_form">
+            <field name="model">portrait.page87</field>
             <field name="type">form</field>
-            <field name="name">page71_form</field>
+            <field name="name">page87_form</field>
         </record>
-        <record model="ir.action.act_window" id="window_page71">
-            <field name="name">Portrait - Page 71 - Espaces naturels remarqués et milieux protégés</field>
-            <field name="res_model">portrait.page71</field>
+        <record model="ir.action.act_window" id="window_page87">
+            <field name="name">Portrait - Page 87 - Espaces naturels remarqués et milieux protégés</field>
+            <field name="res_model">portrait.page87</field>
         </record>
-        <record model="ir.action.act_window.view" id="view_portrait_page71_tree">
+        <record model="ir.action.act_window.view" id="view_portrait_page87_tree">
             <field name="sequence" eval="10"/>
-            <field name="view" ref="page71_view_tree"/>
-            <field name="act_window" ref="window_page71"/>
+            <field name="view" ref="page87_view_tree"/>
+            <field name="act_window" ref="window_page87"/>
         </record>
-        <record model="ir.action.act_window.view" id="view_portrait_page71_form">
+        <record model="ir.action.act_window.view" id="view_portrait_page87_form">
             <field name="sequence" eval="20"/>
-            <field name="view" ref="page71_view_form"/>
-            <field name="act_window" ref="window_page71"/>
+            <field name="view" ref="page87_view_form"/>
+            <field name="act_window" ref="window_page87"/>
         </record>        
-        <record model="ir.action.report" id="report_page71_geo_edit">
+        <record model="ir.action.report" id="report_page87_geo_edit">
             <field name="name">Open in QGis...</field>
-            <field name="model">portrait.page71</field>
-            <field name="report_name">portrait.page71.qgis</field>
+            <field name="model">portrait.page87</field>
+            <field name="report_name">portrait.page87.qgis</field>
             <field name="report">qgis/qgis.qgs</field>
         </record>
-        <record model="ir.action.keyword" id="report_page71_geo_edit_kwd">
+        <record model="ir.action.keyword" id="report_page87_geo_edit_kwd">
             <field name="keyword">form_action</field>
-            <field name="model">portrait.page71,-1</field>
-            <field name="action" ref="report_page71_geo_edit"/>
+            <field name="model">portrait.page87,-1</field>
+            <field name="action" ref="report_page87_geo_edit"/>
         </record>
-        <menuitem sequence="71" name="71-Espaces naturels remarqués et milieux protégés" icon="tryton-list"
-            parent="portrait.menu_portrait_ens" id="menu_communes_benef_page71" action="window_page71"/>
+        <menuitem sequence="87" name="87-Espaces naturels remarqués et milieux protégés" icon="tryton-list"
+            parent="portrait.menu_portrait_ens" id="menu_communes_benef_page87" action="window_page87"/>
 
-        <!-- generate71 all maps -->
-        <record model="ir.action.wizard" id="generate71">
+        <!-- generate87 all maps -->
+        <record model="ir.action.wizard" id="generate87">
             <field name="name">Generate all maps...</field>
-            <field name="model">portrait.page71</field>
-            <field name="wiz_name">portrait.generate71</field>
+            <field name="model">portrait.page87</field>
+            <field name="wiz_name">portrait.generate87</field>
         </record>
-        <record model="ir.action.keyword" id="generate71_all_kwd">
+        <record model="ir.action.keyword" id="generate87_all_kwd">
             <field name="keyword">form_action</field>
-            <field name="model">portrait.page71,-1</field>
-            <field name="action" ref="generate71"/>
+            <field name="model">portrait.page87,-1</field>
+            <field name="action" ref="generate87"/>
         </record>
 
         <!-- generate protection maps -->
         <record model="ir.action.wizard" id="generateallmap">
             <field name="name">Generate all protection maps...</field>
-            <field name="model">portrait.page71</field>
+            <field name="model">portrait.page87</field>
             <field name="wiz_name">portrait.generateprotectionmap</field>
         </record>
         <record model="ir.action.keyword" id="generateallmap_all_kwd">
             <field name="keyword">form_action</field>
-            <field name="model">portrait.page71,-1</field>
+            <field name="model">portrait.page87,-1</field>
             <field name="action" ref="generateallmap"/>
         </record>
 

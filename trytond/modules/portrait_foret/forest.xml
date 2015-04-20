@@ -6,7 +6,7 @@
             <field name="path">icons/tryton-forest.svg</field>
         </record>
 
-        <menuitem name="Forêts" parent="ir.menu_administration" id="menu_forest" icon="tryton-forest"/>    
+        <menuitem name="Forêts" sequence="7" parent="ir.menu_administration" id="menu_forest" icon="tryton-forest"/>    
 
         <!-- Forêts -->      
         <record model="ir.ui.view" id="forest_forest_view_tree">

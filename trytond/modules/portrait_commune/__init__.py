@@ -22,25 +22,32 @@
 ##############################################################################
 
 from trytond.pool import Pool
-
-from commune import Commune, CommuneQGis, Generate
+from departement import Departement, DepartementQGis, GenerateD
+from commune import Commune, CommuneQGis, GenerateC
+from region import Region, RegionQGis, GenerateR
 from population import Population
 
 def register():
     Pool.register(
+        Region,
+        Departement,
         Commune,
         Population,
         module='portrait_commune',
         type_='model')
 
     Pool.register(
+        RegionQGis,
+        DepartementQGis,
         CommuneQGis,
         module='portrait_commune',
         type_='report'
     )
 
     Pool.register(
-        Generate,
+        GenerateD,
+        GenerateC,
+        GenerateR,
         module='portrait_commune',
         type_='wizard'
     )

@@ -71,11 +71,11 @@
         </record>
         <record model="protection.type" id="18">
             <field name="code">ZNIEFF 1</field>
-            <field name="name">Zone naturelle d'intérêt écologique faunistique et floristique de type 1</field>
+            <field name="name">Zone naturelle d'intérêt écologique faunistique et floristique de type 1 (continentale)</field>
         </record>
         <record model="protection.type" id="19">
             <field name="code">ZNIEFF 2</field>
-            <field name="name">Zone naturelle d'intérêt écologique faunistique et floristique de type 2</field>
+            <field name="name">Zone naturelle d'intérêt écologique faunistique et floristique de type 2 (continentale)</field>
         </record>        
         <record model="protection.type" id="20">
             <field name="code">RB</field>
@@ -84,6 +84,14 @@
         <record model="protection.type" id="21">
             <field name="code">ZICO</field>
             <field name="name">Zone d'intérêt communautaire pour les oiseaux</field>
-        </record>        
+        </record>
+	<record model="protection.type" id="22">
+            <field name="code">ZNIEFF 1 mer</field>
+            <field name="name">Zone naturelle d'intérêt écologique faunistique et floristique de type 1 (mer)</field>
+        </record>
+        <record model="protection.type" id="23">
+            <field name="code">ZNIEFF 2 mer</field>
+            <field name="name">Zone naturelle d'intérêt écologique faunistique et floristique de type 2 (mer)</field>
+        </record>
     </data>
 </tryton>

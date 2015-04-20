@@ -12,7 +12,7 @@
             <field name="path">icons/applications-system.svg</field>
         </record>
 
-        <menuitem name="IGN" parent="ir.menu_administration" id="menu_ign" icon="tryton-ign"/>
+        <menuitem name="IGN" sequence="10" parent="ir.menu_administration" id="menu_ign" icon="tryton-ign"/>
         <menuitem parent="menu_ign" sequence="1" id="menu_ign_codes" name="Codes" icon="tryton-codes" />   
 
         <!-- SER -->      

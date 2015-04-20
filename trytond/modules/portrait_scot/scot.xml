@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-scot.svg</field>
         </record>
 
-        <menuitem name="Schéma de Cohérence Territoriale (SCoT)" parent="ir.menu_administration" id="menu_scot" icon="tryton-scot"/>        
+        <menuitem name="Schéma de Cohérence Territoriale (SCoT)" sequence="19" parent="ir.menu_administration" id="menu_scot" icon="tryton-scot"/>        
 
         <!-- Scot -->
         <record model="ir.ui.view" id="scot_view_tree">

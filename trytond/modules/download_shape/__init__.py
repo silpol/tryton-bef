@@ -23,6 +23,7 @@ from protection import ProtectionFile, ProtectionDone, RamsarFile, BiotopeFile
 from protection import ParcNatFile, ParcMarinFile, ParcRegFile, ResRegFile
 from protection import ResNatFile, ResCorseFile, ResNatCFFile, SicFile, ZpsFile
 from protection import BioFile, LittoralFile, CenFile, Znieff1File, Znieff2File
+from protection import Znieff1MerFile, Znieff2MerFile
 from protection import ResBioFile, ZicoFile, ImportProtection
 from clc import ClcFile, ClcDone, CorineFile
 from foret import ForetFile, ForetDone, WizardForetFile
@@ -36,6 +37,8 @@ from insee import INSEE, INSEEDone, INSEEFile, WizardINSEEFile
 from regbiofr import REGBIOFR, REGBIOFRDone, REGBIOFRFile, WizardREGBIOFRFile
 from eau import MasseEauFile, MasseEauDone, WizardMasseEauFile
 from roe import ROEFile, ROEDone, WizardROEFile
+from region import RegionFile, RegionDone, WizardRegionFile
+from departement import DepartementFile, DepartementDone, WizardDepartementFile
 
 def register():
     Pool.register(
@@ -67,6 +70,10 @@ def register():
         MasseEauDone,
         ROEFile,
         ROEDone,
+        RegionFile,
+        RegionDone,
+        DepartementFile,
+        DepartementDone,
         module='download_shape',
         type_='model'
     )
@@ -88,6 +95,8 @@ def register():
         CenFile,
         Znieff1File,
         Znieff2File,
+        Znieff1MerFile,
+        Znieff2MerFile,
         ResBioFile,
         ZicoFile,
         CorineFile,
@@ -102,6 +111,8 @@ def register():
         WizardHER2File,
         WizardINSEEFile,
         WizardMasseEauFile,
+        WizardRegionFile,
+        WizardDepartementFile,
         WizardROEFile,
         module='download_shape',
         type_='wizard'

@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-atmo.svg</field>
         </record>
 
-        <menuitem name="ATMO" parent="ir.menu_administration" id="menu_atmo" icon="tryton-atmo"/>        
+        <menuitem name="ATMO"  sequence="3" parent="ir.menu_administration" id="menu_atmo" icon="tryton-atmo"/>        
 
         <!-- Air Atmo -->
         <record model="ir.ui.view" id="atmo_view_tree">

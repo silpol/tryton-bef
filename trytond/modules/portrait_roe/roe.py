@@ -18,7 +18,7 @@ from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
 
-__all__ = ['ROE', 'ROEQGis', 'code', 'roeCode', 'roeRoe']
+__all__ = ['ROE', 'ROEQGis', 'code', 'roeCodeFpi', 'roeCodeFnt', 'roeCodeEmo', 'roeCodeUsa', 'roeRoe']
 
 class code(ModelSQL, ModelView):
     u'Code'
@@ -89,7 +89,7 @@ class ROE(Mapable, ModelSQL, ModelView):
             domain=[('code', '=', 'STYPE')]
         )
     fpi_code = fields.Many2Many(
-            'roe.roe-roe.code',
+            'roe.roe-roe.codefpi',
             'roe',
             'code',
             string=u'Fpi code',
@@ -97,26 +97,26 @@ class ROE(Mapable, ModelSQL, ModelView):
             domain=[('code', '=', 'FPI')]
         )
     emo_code = fields.Many2Many(
-            'roe.roe-roe.code',
+            'roe.roe-roe.codeemo',
             'roe',
             'code',
-            string=u'Fpi code',
+            string=u'Emo code',
             help=u'Code du sous-type d\'élément mobile',
             domain=[('code', '=', 'EMO')]
         )
     fnt_code = fields.Many2Many(
-            'roe.roe-roe.code',
+            'roe.roe-roe.codefnt',
             'roe',
             'code',
-            string=u'Fpi code',
+            string=u'Fnt code',
             help=u'Code du type d\'organe de franchissement de navigation',
             domain=[('code', '=', 'FNT')]
         )
     usa_code = fields.Many2Many(
-            'roe.roe-roe.code',
+            'roe.roe-roe.codeusa',
             'roe',
             'code',
-            string=u'Fpi code',
+            string=u'Usa code',
             help=u'Code de l\'usage de l\'ouvrage',
             domain=[('code', '=', 'USA')]
         )
@@ -196,14 +196,65 @@ class ROE(Mapable, ModelSQL, ModelView):
     @ModelView.button
     def generate(cls, records):
         for record in records:
-            if record.name is None:
+            if record.id_roe is None:
                 continue                                               
             cls.write([record], {'roe_map': cls.get_map(record, 'map')})
 
-class roeCode(ModelSQL):
-    'roe - code'
-    __name__ = 'roe.roe-roe.code'
-    _table = 'roe_code_rel'
+class roeCodeFpi(ModelSQL):
+    'roe - code FPI'
+    __name__ = 'roe.roe-roe.codefpi'
+    _table = 'roe_codefpi_rel'
+    roe = fields.Many2One(
+            'roe.roe',
+            'roe',
+            ondelete='CASCADE',
+            required=True
+        )
+    code = fields.Many2One(
+            'roe.code',
+            'code',
+            ondelete='CASCADE',
+            required=True
+        )
+        
+class roeCodeEmo(ModelSQL):
+    'roe - code EMO'
+    __name__ = 'roe.roe-roe.codeemo'
+    _table = 'roe_codeemo_rel'
+    roe = fields.Many2One(
+            'roe.roe',
+            'roe',
+            ondelete='CASCADE',
+            required=True
+        )
+    code = fields.Many2One(
+            'roe.code',
+            'code',
+            ondelete='CASCADE',
+            required=True
+        )
+        
+class roeCodeFnt(ModelSQL):
+    'roe - code FNT'
+    __name__ = 'roe.roe-roe.codefnt'
+    _table = 'roe_codefnt_rel'
+    roe = fields.Many2One(
+            'roe.roe',
+            'roe',
+            ondelete='CASCADE',
+            required=True
+        )
+    code = fields.Many2One(
+            'roe.code',
+            'code',
+            ondelete='CASCADE',
+            required=True
+        )
+        
+class roeCodeUsa(ModelSQL):
+    'roe - code USA'
+    __name__ = 'roe.roe-roe.codeusa'
+    _table = 'roe_codeusa_rel'
     roe = fields.Many2One(
             'roe.roe',
             'roe',

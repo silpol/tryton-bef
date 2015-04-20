@@ -7,7 +7,7 @@
         <field name="path">icons/tryton-clc.svg</field>
     </record>
 
-    <menuitem name="Corine Land Cover" parent="ir.menu_administration" id="menu_corine_land_cover" icon="tryton-clc"/>
+    <menuitem name="Corine Land Cover"  sequence="6" parent="ir.menu_administration" id="menu_corine_land_cover" icon="tryton-clc"/>
     <menuitem parent="menu_corine_land_cover" sequence="0" name="Configuration" id="menu_corine_land_cover_configuration" icon="tryton-preferences"/>
 
     <record model="ir.ui.view" id="corine_land_cover_clc_view_form">

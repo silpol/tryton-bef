@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-sismique.svg</field>
         </record>
 
-        <menuitem name="BRGM Sismique" parent="ir.menu_administration" id="menu_sismique" icon="tryton-sismique"/>        
+        <menuitem name="BRGM Sismique"  sequence="4" parent="ir.menu_administration" id="menu_sismique" icon="tryton-sismique"/>        
 
         <!-- Sismique -->
         <record model="ir.ui.view" id="sismique_view_tree">

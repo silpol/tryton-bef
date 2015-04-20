@@ -247,7 +247,30 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="model">site_site.point,-1</field>
         <field name="action" ref="report_point_edit"/>
     </record>
+    <record model="ir.action.report" id="report_point">
+        <field name="name">Monitoring</field>
+        <field name="model">site_site.point</field>
+        <field name="report_name">site_site.point</field>
+        <field name="report">site_site/site_point.odt</field>            
+    </record>
+    <record model="ir.action.keyword" id="report_site_point_kwd">
+        <field name="keyword">form_print</field>
+        <field name="model">site_site.point,-1</field>
+        <field name="action" ref="report_point"/>
+    </record>
     <menuitem parent="menu_site" sequence="1" id="menu_point_form" icon="tryton-pt" action="act_point_form"/>
+    
+    <!-- generate all points -->
+    <record model="ir.action.wizard" id="generatepoint">
+        <field name="name">Generate all points...</field>
+        <field name="model">site_site.point</field>
+        <field name="wiz_name">site_site.generatepoint</field>
+    </record>
+    <record model="ir.action.keyword" id="generatepoint_all_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">site_site.point,-1</field>
+        <field name="action" ref="generatepoint"/>
+    </record>    
 
     <!-- Zone -->
     <record model="ir.ui.view" id="site_zone_view_tree">

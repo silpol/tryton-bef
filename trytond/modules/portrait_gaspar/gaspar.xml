@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-gaspar.svg</field>
         </record>
 
-        <menuitem name="GASPAR" parent="ir.menu_administration" id="menu_gaspar" icon="tryton-gaspar"/>
+        <menuitem name="GASPAR"  sequence="8" parent="ir.menu_administration" id="menu_gaspar" icon="tryton-gaspar"/>
 
         <!-- Risques naturelles et technologiques -->
         <record model="ir.ui.view" id="gaspar_risque_rn_rt_view_tree">

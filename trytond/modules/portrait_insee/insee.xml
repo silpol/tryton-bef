@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-insee.svg</field>
         </record>
 
-        <menuitem name="INSEE" parent="ir.menu_administration" id="menu_insee" icon="tryton-insee"/>
+        <menuitem name="INSEE" sequence="11" parent="ir.menu_administration" id="menu_insee" icon="tryton-insee"/>
 
         <!-- INSEE -->      
         <record model="ir.ui.view" id="portrait_insee_view_tree">

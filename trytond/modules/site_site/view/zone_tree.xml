@@ -5,4 +5,5 @@
     <field name="name" />
     <field name="comment" />
     <field name="precaution" />
+    <field name="active" />
 </tree>

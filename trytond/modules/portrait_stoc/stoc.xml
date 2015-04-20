@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-stoc.svg</field>
         </record>
 
-        <menuitem name="STOC" parent="ir.menu_administration" id="menu_stoc" icon="tryton-stoc"/>        
+        <menuitem name="STOC" sequence="20" parent="ir.menu_administration" id="menu_stoc" icon="tryton-stoc"/>        
 
         <!-- STOC -->
         <record model="ir.ui.view" id="stoc_view_tree">

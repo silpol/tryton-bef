@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-plucc.svg</field>
         </record>
 
-        <menuitem name="POS, PLU et CC" parent="ir.menu_administration" id="menu_plucc" icon="tryton-plucc"/>        
+        <menuitem name="POS, PLU et CC" sequence="14" parent="ir.menu_administration" id="menu_plucc" icon="tryton-plucc"/>        
 
         <!-- Air plucc -->
         <record model="ir.ui.view" id="plucc_view_tree">

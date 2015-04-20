@@ -37,7 +37,7 @@ from trytond.modules.qgis.mapable import Mapable
 
 __all__ = ['Code', 'Configuration', 'Site', 'SiteQGis', 'Track', 'TrackQGis', 'Zone', 'ZoneQGis', 'Point', 'PointQGis', 'SiteParcelle', 'Lrs', 
             'LrsQGis', 'Poi', 'PoiQGis', 'surface_site_clc' ,'Opensurface_clc_siteStart', 'Opensurface_statut_bufferStart', 'Opensurface_statut_buffer', 
-            'surface_statut_buffer', 'Opensurface_clc_site', 'Opensurface_clc_siteStart']
+            'surface_statut_buffer', 'Opensurface_clc_site', 'Opensurface_clc_siteStart', 'GeneratePoint']
 
 class Code(ModelSQL, ModelView):
     u'Code'
@@ -344,9 +344,20 @@ class Point(Mapable, ModelSQL, ModelView):
     @ModelView.button
     def generate(cls, records):
         for record in records:
-            if record.name is None:
+            if record.code is None:
                 continue
             cls.write([record], {'point_map': cls.get_map(record, 'map')})
+            
+class GeneratePoint(Wizard):
+    __name__ = 'site_site.generatepoint'
+
+    @classmethod
+    def execute(cls, session, data, state_name):
+        model = Pool().get('site_site.point')
+        records = model.browse(Transaction().context.get('active_ids'))
+        for record in records:            
+            record.generate([record])
+        return []               
 
 class PointQGis(QGis):
     'PointQGis'
@@ -494,23 +505,13 @@ class Site(Mapable, ModelSQL, ModelView):
     def default_active():
         return True
 
-    site_image = fields.Function(
-                fields.Binary(
-                    string=u'Image'
-                ),
-            'get_image'
-        )
-
     site_map = fields.Binary(
                 string=u'Image map',
         )    
 
     site_situation = fields.Binary(
                 string=u'Situation map',
-        )   
-
-    def get_image(self, ids):
-        return self._get_image( 'site_image.qgs', 'carte' )
+        )
 
     def get_map(self, ids):
         return self._get_image( 'site_map.qgs', 'carte' )
@@ -725,7 +726,7 @@ class Poi(Mapable, ModelSQL, ModelView):
         for record in records:
             if record.name is None:
                 continue
-            cls.write([record], {'poi_map': cls.get_map(record, 'map')})     
+            cls.write([record], {'poi_map': cls.get_map(record, 'map')})                    
 
 class PoiQGis(QGis):
     'PoiQGis'

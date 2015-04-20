@@ -75,7 +75,7 @@ class Protection:
     def _getTypo(cls, code):
         if code == "SIC" or code == "ZPS":
             return "Natura 2000"
-        elif code == "ZICO" or code == "ZNIEFF 1" or code == "ZNIEFF 2":
+        elif code == "ZICO" or code == "ZNIEFF 1" or code == "ZNIEFF 2" or code == "ZNIEFF 1 mer" or code == "ZNIEFF 2 mer":
             return "ZNIEFF / ZICO"
         else:
             return "Espaces protégés"
@@ -787,6 +787,56 @@ class Znieff2File(Wizard):
         finally:
             shapefile.destroy()
         return 'done'
+              
+class Znieff1MerFile(Wizard):
+    u"Importer un fichier ZNIEFF type 1 (mer)"
+    __name__ = 'download_shape.protection.znieff1'
+    type = fields.Char(string=u'Type de donnée',
+                       help=u'Nom de la couche de protection',
+                       required=True)
+
+    start = StateView('download_shape.protection.file',
+        'download_shape.shapefile_file_view_form', [
+            Button('Annuler', 'end', 'tryton-cancel'),
+            Button('Importer', 'import_znieff1', 'tryton-ok', default=True),
+            ])
+    done = StateView('download_shape.protection.done', 'download_shape.protection_done_view_form',
+            [Button('Ok', 'end', 'tryton-ok', default=True)])
+    import_znieff1 = StateTransition()
+
+    def transition_import_znieff1(self):
+        shapefile = ShapeUnzip.getShapefile(self.start.shapefile)
+        debug("unzipped")
+        try :
+            Protection.createGeometries(shapefile.filename, "Zone naturelle d'intérêt écologique faunistique et floristique de type 1 (mer)", "ZNIEFF 1 mer", version = self.start.version)
+        finally:
+            shapefile.destroy()
+        return 'done'
+
+class Znieff2MerFile(Wizard):
+    u"Importer un fichier ZNIEFF type 2 (mer)"
+    __name__ = 'download_shape.protection.znieff2'
+    type = fields.Char(string=u'Type de donnée',
+                       help=u'Nom de la couche de protection',
+                       required=True)
+
+    start = StateView('download_shape.protection.file',
+        'download_shape.shapefile_file_view_form', [
+            Button('Annuler', 'end', 'tryton-cancel'),
+            Button('Importer', 'import_znieff2', 'tryton-ok', default=True),
+            ])
+    done = StateView('download_shape.protection.done', 'download_shape.protection_done_view_form',
+            [Button('Ok', 'end', 'tryton-ok', default=True)])
+    import_znieff2 = StateTransition()
+
+    def transition_import_znieff2(self):
+        shapefile = ShapeUnzip.getShapefile(self.start.shapefile)
+        debug("unzipped")
+        try :
+            Protection.createGeometries(shapefile.filename, "Zone naturelle d'intérêt écologique faunistique et floristique de type 2 (mer)", "ZNIEFF 2 mer", version = self.start.version)
+        finally:
+            shapefile.destroy()
+        return 'done'        
 
 class ResBioFile(Wizard):
     u"Importer un fichier réserves biologiques"
@@ -863,6 +913,8 @@ class ImportProtection(ModelView, ModelSQL):
             'importerCEN': RPC(readonly=False),
             'importerZNIEFF1': RPC(readonly=False),
             'importerZNIEFF2': RPC(readonly=False),
+            'importerZNIEFF1Mer': RPC(readonly=False),
+            'importerZNIEFF2Mer': RPC(readonly=False),
             'importerRB': RPC(readonly=False),
             'importerZICO': RPC(readonly=False),
         })
@@ -1088,6 +1140,34 @@ class ImportProtection(ModelView, ModelSQL):
             Protection.createGeometries(shapefile.filename,
                                         "Zone naturelle d'intérêt écologique faunistique et floristique de type 2",
                                         "ZNIEFF 2", version = version)
+            ret = True
+        finally:
+            shapefile.destroy()
+        return ret
+        
+    @classmethod
+    def importerZNIEFF1Mer(cls, data, version):
+        binData = base64.decodestring(data)
+        shapefile = ShapeUnzip.getShapefile(binData)
+        ret = False
+        try :
+            Protection.createGeometries(shapefile.filename,
+                                        "Zone naturelle d'intérêt écologique faunistique et floristique de type 1 (mer)",
+                                        "ZNIEFF 1 mer", version = version)
+            ret = True
+        finally:
+            shapefile.destroy()
+        return ret
+
+    @classmethod
+    def importerZNIEFF2Mer(cls, data, version):
+        binData = base64.decodestring(data)
+        shapefile = ShapeUnzip.getShapefile(binData)
+        ret = False
+        try :
+            Protection.createGeometries(shapefile.filename,
+                                        "Zone naturelle d'intérêt écologique faunistique et floristique de type 2 (mer)",
+                                        "ZNIEFF 2 mer", version = version)
             ret = True
         finally:
             shapefile.destroy()

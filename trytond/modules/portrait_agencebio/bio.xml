@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-agencebio.svg</field>
         </record>
 
-        <menuitem name="Agence Bio" parent="ir.menu_administration" id="menu_bio" icon="tryton-agencebio"/>        
+        <menuitem name="Agence Bio" sequence="1" parent="ir.menu_administration" id="menu_bio" icon="tryton-agencebio"/>        
 
         <!-- BioSurface -->
         <record model="ir.ui.view" id="biosurface_view_tree">

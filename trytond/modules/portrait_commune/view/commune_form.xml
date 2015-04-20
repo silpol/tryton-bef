@@ -2,16 +2,20 @@
 <form string="Commune">
     <label name="name"/>
     <field name="name"/>
+    <label name="region"/>
+    <field name="region" widget="selection"/>
     <label name="departement"/>
-    <field name="departement"/>
+    <field name="departement" widget="selection"/>
     <label name="insee"/>
     <field name="insee"/>
     <label name="postal"/>
     <field name="postal"/>
-    <label name="zmax"/>
-    <field name="zmax"/>
     <label name="zmin"/>
     <field name="zmin"/>
+    <label name="zmoy"/>
+    <field name="zmoy"/>
+    <label name="zmax"/>
+    <field name="zmax"/>
     <label name="littoral"/>
     <field name="littoral"/>
     <label name="montagne"/>
@@ -20,7 +24,7 @@
         <page string="Map" id="map" col="4">
             <field name="commune_map" widget="image" img_width="640" img_height="480" colspan="4"/>
             <newline/>    
-            <button string="Generate"  name="generate" icon="tryton-executable" colspan="4"/>
+            <button string="Generate" name="generate" icon="tryton-executable" colspan="4"/>
         </page>
         <page string="Population" id="population" col="4">
             <field name="population" colspan="4"/>

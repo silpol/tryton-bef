@@ -10,6 +10,8 @@
             <field name="page9"/>
             <label name="page11"/>
             <field name="page11"/>
+            <label name="page15"/>
+            <field name="page15"/>
             <label name="page17"/>
             <field name="page17"/>
             <label name="page19"/>
@@ -38,8 +40,8 @@
             <field name="page57"/>
             <label name="page59"/>
             <field name="page59"/>
-            <label name="page71"/>
-            <field name="page71"/>
+            <label name="page87"/>
+            <field name="page87"/>
         </page>
     </notebook>
 </form>

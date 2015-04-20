@@ -66,6 +66,14 @@
           <field name="name">Import des ZNIEFF type 2</field>
           <field name="wiz_name">download_shape.protection.znieff2</field>
         </record>
+        <record model="ir.action.wizard" id="act_download_shape_protection_znieff1_mer">
+          <field name="name">Import des ZNIEFF type 1 (mer)</field>
+          <field name="wiz_name">download_shape.protection.znieff1</field>
+        </record>
+        <record model="ir.action.wizard" id="act_download_shape_protection_znieff2_mer">
+          <field name="name">Import des ZNIEFF type 2 (mer)</field>
+          <field name="wiz_name">download_shape.protection.znieff2</field>
+        </record>
         <record model="ir.action.wizard" id="act_download_shape_protection_resbio">
           <field name="name">Import des réserves biologiques</field>
           <field name="wiz_name">download_shape.protection.resbio</field>
@@ -301,6 +309,38 @@
             <field name="model">download_shape.roe.done</field>
             <field name="type">form</field>
             <field name="name">roe_done</field>
+        </record>
+        
+        <!-- REGION -->
+        <record model="ir.action.wizard" id="act_download_shape_region">
+          <field name="name">Import des Régions françaises</field>
+          <field name="wiz_name">download_shape.region</field>
+        </record>
+        <record model="ir.ui.view" id="region_file_view_form">
+            <field name="model">download_shape.region.file</field>
+            <field name="type">form</field>
+            <field name="name">region_file</field>
+        </record>
+        <record model="ir.ui.view" id="region_done_view_form">
+            <field name="model">download_shape.region.done</field>
+            <field name="type">form</field>
+            <field name="name">region_done</field>
+        </record>
+        
+        <!-- DEPARTEMENT -->
+        <record model="ir.action.wizard" id="act_download_shape_departement">
+          <field name="name">Import des Départements français</field>
+          <field name="wiz_name">download_shape.departement</field>
+        </record>
+        <record model="ir.ui.view" id="departement_file_view_form">
+            <field name="model">download_shape.departement.file</field>
+            <field name="type">form</field>
+            <field name="name">departement_file</field>
+        </record>
+        <record model="ir.ui.view" id="departement_done_view_form">
+            <field name="model">download_shape.departement.done</field>
+            <field name="type">form</field>
+            <field name="name">departement_done</field>
         </record>
 
     </data>

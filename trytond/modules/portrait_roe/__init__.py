@@ -10,7 +10,10 @@ def register():
     Pool.register(
         code,
         ROE,
-        roeCode,
+        roeCodeFpi,
+        roeCodeEmo,
+        roeCodeFnt,
+        roeCodeUsa,
         roeRoe,
         module='portrait_roe', type_='model')
 

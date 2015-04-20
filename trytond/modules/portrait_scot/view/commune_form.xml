@@ -3,7 +3,8 @@
     <xpath
         expr="/form/notebook/page[@id=&quot;montagne&quot;]"
             position="before" >
-            <page string="SCoT" id="scot" col="1">                
+            <page string="SCoT" id="scot" col="1">
+                <label name="scot"/>
                 <field name="scot"/>
             </page>             
      </xpath>                   

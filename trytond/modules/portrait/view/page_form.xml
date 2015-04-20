@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <form string="Page" col="1">
     <notebook>
-        <page string="Page" id="page">
+        <page string="Chapeau" id="chapeau" col="2">
             <label name="portrait"/>
-            <field name="portrait" colspan="3"/>
+            <field name="portrait"/>
             <label name="page_chapo"/>
-            <field name="page_chapo" colspan="3"/>
+            <field name="page_chapo"/>
+        </page>
+        <page string="Messages" id="message" col="2">
             <label name="page_msg1"/>
             <field name="page_msg1"/>
             <label name="page_msg2"/>
@@ -14,6 +16,8 @@
             <field name="page_msg3"/>
             <label name="page_msg4"/>
             <field name="page_msg4"/>
+        </page>
+        <page string="Page" id="page" col="2">
             <label name="page_loin"/>
             <field name="page_loin"/>
             <label name="page_geste"/>

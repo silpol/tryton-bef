@@ -11,7 +11,7 @@
             <field name="path">icons/applications-system.svg</field>
         </record>   
 
-        <menuitem name="Registre Parcellaire Graphique (RPG)" parent="ir.menu_administration" id="menu_rpg" icon="tryton-rpg"/>
+        <menuitem name="Registre Parcellaire Graphique (RPG)" sequence="18" parent="ir.menu_administration" id="menu_rpg" icon="tryton-rpg"/>
         <menuitem parent="menu_rpg" sequence="1" id="menu_rpg_codes" name="Codes" icon="tryton-codes" />      
 
         <!-- RPG -->      

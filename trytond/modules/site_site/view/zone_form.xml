@@ -8,11 +8,13 @@
             <field name="name"/>
             <label name="site"/>
             <field name="site"/>
+            <label name="active"/>
+            <field name="active"/>
             <newline/>
             <label name="comment" />
             <field name="comment" colspan="4"/>
             <label name="precaution" />
-            <field name="precaution" colspan="4"/>            
+            <field name="precaution" colspan="4"/>
         </page>
         <page string="Map" id="map" col="2">                            
             <field name="zone_image" colspan="1" widget="image" img_width="640" img_height="480"/>

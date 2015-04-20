@@ -5,7 +5,7 @@
             <field name="name">tryton-irep</field>
             <field name="path">icons/tryton-irep.svg</field>
         </record>
-        <menuitem name="iREP" parent="ir.menu_administration" id="menu_irep" icon="tryton-irep"/>        
+        <menuitem name="iREP" sequence="12" parent="ir.menu_administration" id="menu_irep" icon="tryton-irep"/>        
 
         <!-- Etablissement -->
         <record model="ir.ui.view" id="irep_etablissement_view_tree">

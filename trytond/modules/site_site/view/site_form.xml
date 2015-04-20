@@ -36,7 +36,7 @@
         </page>
         <page string="Image Map" col="1" id="map">                        
             <field name="site_map" widget="image" img_width="1280" img_height="960" />
-            <button string="Generate image" name="site_image_gen" icon="tryton-executable" />
+            <button string="Generate image" name="site_map_gen" icon="tryton-executable" />
         </page>
         <page string="Photo" col="1" id="photo">                        
             <field name="photo" widget="image" img_width="1280" img_height="960" />            

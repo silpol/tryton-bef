@@ -1,8 +1,12 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="ir.ui.icon" id="portrait_icon">
+            <field name="name">tryton-portrait</field>
+            <field name="path">icons/tryton-portrait.svg</field>
+        </record>
 
-        <menuitem name="Portrait" parent="ir.menu_administration" id="menu_portrait_admin"/>
+        <menuitem name="Portrait" sequence="13" parent="ir.menu_administration" id="menu_portrait_admin" icon="tryton-portrait"/>
 
         <!-- Communes -->
         <record model="ir.ui.view" id="commune_view_tree">
@@ -29,7 +33,7 @@
             <field name="view" ref="commune_view_form"/>
             <field name="act_window" ref="act_commune_form"/>
         </record>        
-        <menuitem parent="menu_portrait_admin" id="menu_commune_form" icon="tryton-list" action="act_commune_form"/>
+        <menuitem parent="menu_portrait_admin" sequence="3" id="menu_commune_form" icon="tryton-list" action="act_commune_form"/>
 
         <record model="ir.action.report" id="report_commune_edit">
             <field name="name">Open in QGis...</field>
@@ -44,15 +48,15 @@
         </record>
 
         <!-- generate all maps -->
-        <record model="ir.action.wizard" id="generate">
+        <record model="ir.action.wizard" id="generateC">
             <field name="name">Generate maps...</field>
             <field name="model">portrait.commune</field>
             <field name="wiz_name">portrait.commune_generate</field>
         </record>
-        <record model="ir.action.keyword" id="generate_all_kwd">
+        <record model="ir.action.keyword" id="generate_all_kwd_C">
             <field name="keyword">form_action</field>
             <field name="model">portrait.commune,-1</field>
-            <field name="action" ref="generate"/>
+            <field name="action" ref="generateC"/>
         </record>
     </data>
 </tryton>

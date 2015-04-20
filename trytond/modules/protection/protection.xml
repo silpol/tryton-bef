@@ -5,7 +5,9 @@
         <field name="name">tryton-protection</field>
         <field name="path">icons/software-update-urgent.svg</field>
     </record>
-    <menuitem name="Protections" parent="ir.menu_administration" id="menu_protection" icon="tryton-protection"/>
+    
+    <menuitem name="Protections" sequence="16" parent="ir.menu_administration" id="menu_protection" icon="tryton-protection"/>
+    
     <record model="ir.ui.view" id="area_view_tree">
         <field name="model">protection.area</field>
         <field name="type">tree</field>
@@ -345,7 +347,7 @@
         <field name="type">form</field>
         <field name="name">znieff_form</field>
     </record>
-    <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I -->
+    <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I (continentale)-->
     <record model="ir.action.act_window" id="window_site_znieffi">
         <field name="name">Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I</field>
         <field name="res_model">protection.area</field>
@@ -364,7 +366,7 @@
     </record>
     <menuitem parent="menu_protection" sequence="1" id="menu_site_znieffi" icon="tryton-list" action="window_site_znieffi"/>      
 
-    <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II -->
+    <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II (continentale)-->
     <record model="ir.action.act_window" id="window_site_znieffii">
         <field name="name">Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II</field>
         <field name="res_model">protection.area</field>
@@ -381,7 +383,45 @@
         <field name="view" ref="area_view_form"/>
         <field name="act_window" ref="window_site_znieffii"/>
     </record>
-    <menuitem parent="menu_protection" sequence="1" id="menu_site_znieffii" icon="tryton-list" action="window_site_znieffii"/>  
+    <menuitem parent="menu_protection" sequence="1" id="menu_site_znieffii" icon="tryton-list" action="window_site_znieffii"/>
+
+    <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I (mer)-->
+    <record model="ir.action.act_window" id="window_site_znieffi_mer">
+        <field name="name">Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I (mer)</field>
+        <field name="res_model">protection.area</field>
+        <field name="domain">[('espace.code', '=', 'ZNIEFF 1 mer')]</field>
+        <field name="context">{'espace': 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type I (mer)'}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="view_site_znieffi_mer_tree">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="area_view_tree"/>
+        <field name="act_window" ref="window_site_znieffi_mer"/>
+    </record>
+    <record model="ir.action.act_window.view" id="view_site_znieffi_mer_form">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="area_view_form"/>
+        <field name="act_window" ref="window_site_znieffi_mer"/>
+    </record>
+    <menuitem parent="menu_protection" sequence="1" id="menu_site_znieffi_mer" icon="tryton-list" action="window_site_znieffi_mer"/>      
+
+    <!-- Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II (mer)-->
+    <record model="ir.action.act_window" id="window_site_znieffii_mer">
+        <field name="name">Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II (mer)</field>
+        <field name="res_model">protection.area</field>
+        <field name="domain">[('espace.code', '=', 'ZNIEFF 2 mer')]</field>
+        <field name="context">{'espace': 'Zone Naturelle d’Intérêt Écologique Faunistique et Floristique de type II (mer)'}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="view_site_znieffii_mer_tree">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="area_view_tree"/>
+        <field name="act_window" ref="window_site_znieffii_mer"/>
+    </record>
+    <record model="ir.action.act_window.view" id="view_site_znieffii_mer_form">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="area_view_form"/>
+        <field name="act_window" ref="window_site_znieffii_mer"/>
+    </record>
+    <menuitem parent="menu_protection" sequence="1" id="menu_site_znieffii_mer" icon="tryton-list" action="window_site_znieffii_mer"/>
 
     <!-- Réserve biologique -->
     <record model="ir.ui.view" id="reserve_biologique_view_tree">

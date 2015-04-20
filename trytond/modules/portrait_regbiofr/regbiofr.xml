@@ -10,7 +10,7 @@
             <field name="path">icons/tryton-regbiofr.svg</field>
         </record>
 
-        <menuitem name="Régions Biogéographiques" parent="ir.menu_administration" id="menu_regbiofr" icon="tryton-regbiofr"/>
+        <menuitem name="Régions Biogéographiques" sequence="17" parent="ir.menu_administration" id="menu_regbiofr" icon="tryton-regbiofr"/>
 
         <!-- REGBIOFR -->      
         <record model="ir.ui.view" id="portrait_regbiofr_view_tree">

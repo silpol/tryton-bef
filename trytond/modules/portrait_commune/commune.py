@@ -31,7 +31,10 @@ from trytond.wizard import Wizard
 from trytond.pool import  Pool
 from trytond.transaction import Transaction
 
-__all__ = ['Commune', 'CommuneQGis', 'Generate']
+__all__ = ['Commune', 'CommuneQGis', 'GenerateC']
+
+COLOR = (1, 0.1, 0.1, 1)
+BGCOLOR = (1, 0.1, 0.1, 0.4) 
 
 CLASSEMENT = [
     ('lac', u'Lac'),
@@ -53,7 +56,7 @@ class Commune(Mapable, ModelSQL, ModelView):
     u'Commune Française'
     __name__ = 'portrait.commune'
 
-    _order = [('name', 'ASC'), ('postal_code', 'ASC')]
+    _order = [('name', 'ASC'), ('postal', 'ASC')]
 
     name = fields.Function(
             fields.Char(
@@ -61,12 +64,25 @@ class Commune(Mapable, ModelSQL, ModelView):
                 readonly=True),
             'get_name'
         )
+        
+    def get_name(self, ids):
+        u'Displayed name in the form: name (postal code)'
+        return '%s (%s)' % (self.nom, self.postal)
+        
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        towns = cls.search([('postal',) + clause[1:]], order=[])
+        if towns:
+            return [('id', 'in', [town.id for town in towns])]
+        return [('nom',) + clause[1:]]
+
+                
     nom = fields.Char(
             string='Nom',
             help='Nom de la commune',
             required=True,
             select=True
-        )     
+        )
     insee = fields.Char(
             string='INSEE',
             help='Code insee de la commune',
@@ -78,10 +94,16 @@ class Commune(Mapable, ModelSQL, ModelView):
             help='Code postal de la commune',
             select=True
         )
-    departement = fields.Char(            
+    region = fields.Many2One(
+            'portrait.region',
+            string=u'Région',
+            help=u'Région de la commune',
+            select=True
+        )
+    departement = fields.Many2One(
+            'portrait.departement',            
             string=u'Département',
             help=u'Département de la commune',
-            required=True,
             select=True
         )
     population = fields.One2Many(
@@ -98,6 +120,10 @@ class Commune(Mapable, ModelSQL, ModelView):
             string=u'Altitude Min. (m)',
             help=u'Altitude minimale sur la commune',
         )
+    zmoy = fields.Integer(
+            string=u'Altitude Moy. (m)',
+            help=u'Altitude moyenne sur la commune',
+        )
     littoral = fields.Boolean(            
             string=u'Loi littoral',
             help=u'Commune classée en Loi littoral',
@@ -106,6 +132,7 @@ class Commune(Mapable, ModelSQL, ModelView):
             CLASSEMENT,
             string=u'Classement',
             help=u'Classement en loi littoral',
+            select=1,
             states={'invisible': Not(Bool(Eval('littoral')))},
         )
     @staticmethod
@@ -116,6 +143,7 @@ class Commune(Mapable, ModelSQL, ModelView):
             MOTIF,
             string=u'Motif',
             help=u'Motif du classement',
+            select=1,
             states={'invisible': Not(Bool(Eval('littoral')))},
         )
     @staticmethod
@@ -138,8 +166,20 @@ class Commune(Mapable, ModelSQL, ModelView):
         )
     geom = fields.MultiPolygon(
             string=u'Géométrie',
-            srid=2154,
+            srid=4326,
             select=True
+        )
+    boundingBoxX1 = fields.Float(
+            string=u'Bounding box x1'
+        )
+    boundingBoxY1 = fields.Float(
+            string=u'Bounding box y1'
+        )
+    boundingBoxX2 = fields.Float(
+            string=u'Bounding box x2'
+        )
+    boundingBoxY2 = fields.Float(
+            string=u'Bounding box y2'
         )
     commune_image = fields.Function(
              fields.Binary(
@@ -152,26 +192,11 @@ class Commune(Mapable, ModelSQL, ModelView):
             help=u'Communes'
         )
 
-    def get_name(self, ids):
-        """Displayed name in the form: name (postal code)"""
-        return '%s (%s)' % (self.nom, self.postal)
-
-    @classmethod
-    def search_rec_name(cls, name, clause):
-        towns = cls.search([('postal',) + clause[1:]], order=[])
-        if towns:
-            return [('id', 'in', [town.id for town in towns])]
-        return [('nom',) + clause[1:]]
-
     def get_image(self, ids):
         return self._get_image('commune_image.qgs', 'carte')
 
     def get_map(self, ids):
-        return self._get_image('commune_map.qgs', 'carte')
-
-    COLOR = (1, 0.1, 0.1, 1)
-    BGCOLOR = (1, 0.1, 0.1, 0.4) 
-    
+        return self._get_image('commune_map.qgs', 'carte')   
 
     @classmethod
     def __setup__(cls):
@@ -190,7 +215,7 @@ class Commune(Mapable, ModelSQL, ModelView):
     @ModelView.button
     def generate(cls, records):
         for record in records:
-            if record.name is None:
+            if record.nom is None:
                 continue                                              
             cls.write([record], {'commune_map': cls.get_map(record, 'map')})
 
@@ -198,7 +223,7 @@ class CommuneQGis(QGis):
     __name__ = 'portrait.commune.qgis'
     TITLES = {'portrait.commune': u'Commune'}
 
-class Generate(Wizard):
+class GenerateC(Wizard):
     __name__ = 'portrait.commune_generate'
 
     @classmethod

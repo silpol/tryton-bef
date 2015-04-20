@@ -427,7 +427,6 @@ class GenerateAll(Wizard):
     def execute(cls, session, data, state_name):
         model = Pool().get('protection.area')
         records = model.browse(Transaction().context.get('active_ids'))
-        #records = model.search([])
         for record in records:
             print record
             record.generate([record])

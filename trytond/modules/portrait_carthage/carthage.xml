@@ -10,7 +10,7 @@
             <field name="path">icons/tryton-eau.svg</field>
         </record>
 
-        <menuitem name="Carthage" parent="ir.menu_administration" id="menu_carthage" icon="tryton-carthage"/>    
+        <menuitem name="Carthage"  sequence="5" parent="ir.menu_administration" id="menu_carthage" icon="tryton-carthage"/>    
 
         <!-- SousSecteur -->      
         <record model="ir.ui.view" id="carthage_soussecteur_view_tree">

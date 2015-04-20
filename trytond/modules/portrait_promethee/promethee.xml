@@ -7,7 +7,7 @@
             <field name="path">icons/tryton-promethee.svg</field>
         </record>
 
-        <menuitem name="Prométhée" parent="ir.menu_administration" id="menu_promethee" icon="tryton-promethee"/>        
+        <menuitem name="Prométhée" sequence="15" parent="ir.menu_administration" id="menu_promethee" icon="tryton-promethee"/>        
 
         <!-- Promethee incendie -->
         <record model="ir.ui.view" id="promethee_view_tree">

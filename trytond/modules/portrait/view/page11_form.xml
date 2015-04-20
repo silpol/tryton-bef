@@ -11,8 +11,8 @@
             <field name="geom"/>
         </page>
         <page string="GÉNÉRAL" id="general" col="1">            
-            <field name="page11_all_map" widget="image" img_width="640" img_height="480" />
-            <button string="Generate11_all"  name="generate11_all" icon="tryton-executable" />            
+            <field name="page11_01_map" widget="image" img_width="640" img_height="480" />
+            <button string="Generate11_01"  name="generate11_01" icon="tryton-executable" />            
         </page>        
         <page string="VIDE" id="vide" col="1">
             <field name="page11_empty_map" widget="image" img_width="640" img_height="480" />

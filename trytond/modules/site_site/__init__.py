@@ -57,4 +57,5 @@ def register():
     Pool.register(        
         Opensurface_clc_site,
         Opensurface_statut_buffer,
+        GeneratePoint,
         module='site_site', type_='wizard')

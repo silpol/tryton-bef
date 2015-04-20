@@ -10,7 +10,7 @@
             <field name="path">icons/tryton-codes.svg</field>
         </record>
 
-        <menuitem name="Taxinomie" parent="ir.menu_administration" id="menu_taxinomie" icon="tryton-taxinomie"/>
+        <menuitem name="Taxinomie" sequence="21" parent="ir.menu_administration" id="menu_taxinomie" icon="tryton-taxinomie"/>
         <menuitem parent="menu_taxinomie" name="Codes"  sequence="1" id="menu_taxinomie_codes" icon="tryton-codes"/>
         
         <!-- Rang -->
