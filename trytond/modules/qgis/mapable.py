@@ -185,8 +185,14 @@ class Mapable(Model):
         if ext:
             for name, mex in map_extends.iteritems():
 		ext = ext.replace('BOX(', '').replace(')', '').replace(' ',',')
+		
+		# ajout Pascal Obstetar pour EPSG:4326
+		if srid==4326:
+		    minlat, minlong, maxlat, maxlong = ext.split(',')
+		    ext = ','.join([minlong,minlat,maxlong,maxlat])
+		    
 		mex['ext'] =  ','.join([str(i) for i in bbox_aspect(
-		    [float(i) for i in ext.split(',')], mex['w'], mex['h'], mex['margin'])])
+		    [float(i) for i in ext.split(',')], mex['w'], mex['h'], mex['margin'])])				
 
         # render image
         url = 'http://localhost/cgi-bin/qgis_mapserv.fcgi?'+'&'.join([

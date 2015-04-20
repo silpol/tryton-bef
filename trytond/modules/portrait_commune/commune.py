@@ -33,9 +33,6 @@ from trytond.transaction import Transaction
 
 __all__ = ['Commune', 'CommuneQGis', 'GenerateC']
 
-COLOR = (1, 0.1, 0.1, 1)
-BGCOLOR = (1, 0.1, 0.1, 0.4) 
-
 CLASSEMENT = [
     ('lac', u'Lac'),
     ('mer', u'Mer'),
@@ -191,6 +188,9 @@ class Commune(Mapable, ModelSQL, ModelView):
             string=u'Carte',
             help=u'Communes'
         )
+        
+    COLOR = (1, 0.1, 0.1, 1)
+    BGCOLOR = (1, 0.1, 0.1, 0.4)
 
     def get_image(self, ids):
         return self._get_image('commune_image.qgs', 'carte')
