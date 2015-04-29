@@ -166,18 +166,6 @@ class Commune(Mapable, ModelSQL, ModelView):
             srid=4326,
             select=True
         )
-    boundingBoxX1 = fields.Float(
-            string=u'Bounding box x1'
-        )
-    boundingBoxY1 = fields.Float(
-            string=u'Bounding box y1'
-        )
-    boundingBoxX2 = fields.Float(
-            string=u'Bounding box x2'
-        )
-    boundingBoxY2 = fields.Float(
-            string=u'Bounding box y2'
-        )
     commune_image = fields.Function(
              fields.Binary(
                     'Image'
