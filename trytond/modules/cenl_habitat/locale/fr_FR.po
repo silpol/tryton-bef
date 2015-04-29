@@ -1,0 +1,615 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:habitat.corine_biotope:"
+msgid "CORINE code must be unique by parent!"
+msgstr "Un code CORINE identique existe déjà!"
+
+msgctxt "error:habitat.corine_biotope:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer un code récursif!"
+
+msgctxt "error:habitat.corine_biotope:"
+msgid "You can not use \" / \" in code field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans code!"
+
+msgctxt "error:habitat.eunis:"
+msgid "EUNIS code must be unique by parent!"
+msgstr "Un code EUNIS identique existe déjà!"
+
+msgctxt "error:habitat.eunis:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer un code récursif!"
+
+msgctxt "error:habitat.eunis:"
+msgid "You can not use \" / \" in code field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans code!"
+
+msgctxt "error:habitat.natura2000:"
+msgid "Natura 2000 code must be unique by parent!"
+msgstr "Un code Natura 2000 identique existe déjà!"
+
+msgctxt "error:habitat.natura2000:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer un code récursif!"
+
+msgctxt "error:habitat.natura2000:"
+msgid "You can not use \" / \" in code field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans code!"
+
+msgctxt "error:habitat.physis:"
+msgid "Physis code must be unique by parent!"
+msgstr "Un code Physis identique existe déjà!"
+
+msgctxt "error:habitat.physis:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer un code récursif!"
+
+msgctxt "error:habitat.physis:"
+msgid "You can not use \" / \" in code field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans code!"
+
+msgctxt "error:habitat.prodrome:"
+msgid "prodrome code must be unique by parent!"
+msgstr "Un code prodrome identique existe déjà!"
+
+msgctxt "error:habitat.prodrome:"
+msgid "You can not create recursive code!"
+msgstr "Vous ne pouvez pas créer un code récursif!"
+
+msgctxt "error:habitat.prodrome:"
+msgid "You can not use \" / \" in code field!"
+msgstr "Vous ne pouvez pas utiliser \" / \" dans code!"
+
+msgctxt "field:habitat.corine_biotope,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:habitat.corine_biotope,biblio:"
+msgid "Bibliography"
+msgstr "Bibliographie"
+
+msgctxt "field:habitat.corine_biotope,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:habitat.corine_biotope,code:"
+msgid "Code"
+msgstr ""
+
+msgctxt "field:habitat.corine_biotope,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:habitat.corine_biotope,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:habitat.corine_biotope,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:habitat.corine_biotope,france:"
+msgid "France"
+msgstr ""
+
+msgctxt "field:habitat.corine_biotope,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:habitat.corine_biotope,observation:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "field:habitat.corine_biotope,parent:"
+msgid "Parent"
+msgstr ""
+
+msgctxt "field:habitat.corine_biotope,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:habitat.corine_biotope,title:"
+msgid "title"
+msgstr "intitulé"
+
+msgctxt "field:habitat.corine_biotope,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:habitat.corine_biotope,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:habitat.eunis,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:habitat.eunis,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:habitat.eunis,code:"
+msgid "Code"
+msgstr ""
+
+msgctxt "field:habitat.eunis,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:habitat.eunis,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:habitat.eunis,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:habitat.eunis,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:habitat.eunis,observation:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "field:habitat.eunis,parent:"
+msgid "Parent"
+msgstr ""
+
+msgctxt "field:habitat.eunis,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:habitat.eunis,title:"
+msgid "Title"
+msgstr "Intitulé"
+
+msgctxt "field:habitat.eunis,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:habitat.eunis,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:habitat.natura2000,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:habitat.natura2000,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:habitat.natura2000,code:"
+msgid "Code"
+msgstr ""
+
+msgctxt "field:habitat.natura2000,corine:"
+msgid "CORINE Code"
+msgstr ""
+
+msgctxt "field:habitat.natura2000,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:habitat.natura2000,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:habitat.natura2000,france:"
+msgid "France"
+msgstr ""
+
+msgctxt "field:habitat.natura2000,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:habitat.natura2000,observation:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "field:habitat.natura2000,parent:"
+msgid "Parent"
+msgstr ""
+
+msgctxt "field:habitat.natura2000,priority:"
+msgid "Priority"
+msgstr "Prioritaire"
+
+msgctxt "field:habitat.natura2000,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:habitat.natura2000,title:"
+msgid "title"
+msgstr "intitulé"
+
+msgctxt "field:habitat.natura2000,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:habitat.natura2000,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt ""
+"field:habitat.natura2000-habitat.corine_biotope,corine_biotopes_many:"
+msgid "habitat.corine_biotope"
+msgstr ""
+
+msgctxt "field:habitat.natura2000-habitat.corine_biotope,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:habitat.natura2000-habitat.corine_biotope,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:habitat.natura2000-habitat.corine_biotope,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:habitat.natura2000-habitat.corine_biotope,natura2000_many:"
+msgid "habitat.natura2000"
+msgstr ""
+
+msgctxt "field:habitat.natura2000-habitat.corine_biotope,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:habitat.natura2000-habitat.corine_biotope,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:habitat.natura2000-habitat.corine_biotope,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:habitat.physis,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:habitat.physis,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:habitat.physis,code:"
+msgid "Code"
+msgstr ""
+
+msgctxt "field:habitat.physis,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:habitat.physis,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:habitat.physis,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:habitat.physis,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:habitat.physis,observation:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "field:habitat.physis,parent:"
+msgid "Parent"
+msgstr ""
+
+msgctxt "field:habitat.physis,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:habitat.physis,title:"
+msgid "Title"
+msgstr "Intitulé"
+
+msgctxt "field:habitat.physis,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:habitat.physis,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:habitat.prodrome,active:"
+msgid "Active"
+msgstr "Actif"
+
+msgctxt "field:habitat.prodrome,childs:"
+msgid "Children"
+msgstr "Enfants"
+
+msgctxt "field:habitat.prodrome,code:"
+msgid "Code"
+msgstr ""
+
+msgctxt "field:habitat.prodrome,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:habitat.prodrome,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:habitat.prodrome,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:habitat.prodrome,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:habitat.prodrome,observation:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "field:habitat.prodrome,parent:"
+msgid "Parent"
+msgstr ""
+
+msgctxt "field:habitat.prodrome,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:habitat.prodrome,title:"
+msgid "Title"
+msgstr "Intitulé"
+
+msgctxt "field:habitat.prodrome,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:habitat.prodrome,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:habitat.corine_biotope,biblio:"
+msgid "References"
+msgstr ""
+"Références bibliographiques de l'habitat selon la version en français de "
+"1997 ou reprises de la version de 1991 pour les codes présents en France "
+"mais non retenus en 1997. Dans ce dernier cas le mot \"and\" a été remplacé "
+"par \"et\" par homogénéité avec la version de 1997"
+
+msgctxt "help:habitat.corine_biotope,code:"
+msgid "1 or 2 numbers followed by at most 6 decimal numbers"
+msgstr " 1 ou 2 chiffres suivis au maximum de 6 décimales"
+
+msgctxt "help:habitat.corine_biotope,france:"
+msgid "Presence in France"
+msgstr "Présence en France"
+
+msgctxt "help:habitat.corine_biotope,observation:"
+msgid "Comments on the presence in France"
+msgstr "Commentaires éventuels sur la présence en France de l'habitat"
+
+msgctxt "help:habitat.corine_biotope,title:"
+msgid "French version of 1997 or a newer translation"
+msgstr ""
+"Intitulé de l'habitat selon la version en français de 1997 ou traduction "
+"nouvelle dans le cas de codes non retenus dans cette version mais présents "
+"en France"
+
+msgctxt "help:habitat.eunis,code:"
+msgid "Field \"EUNIS Hab\" in source database"
+msgstr ""
+"1 lettre suivie d'1 chiffre (sauf pour le premier niveau limité à 1 lettre) "
+"et au maximum de 6 décimales, champ intitulé \"EUNIS Hab\" dans la base "
+"EUNIS"
+
+msgctxt "help:habitat.eunis,description:"
+msgid "Field \"Textdescr\" in source database"
+msgstr ""
+"Descriptif de l'habitat, champ intitulé \"Textdescr\" dans la base EUNIS "
+"originelle"
+
+msgctxt "help:habitat.eunis,observation:"
+msgid "Field \"Owntext\" in source database"
+msgstr ""
+"Note additionnelle concernant la description ou la source de l'habitat "
+"EUNIS, champ intitulé \"Owntext\" dans la base EUNIS"
+
+msgctxt "help:habitat.eunis,title:"
+msgid "Field \"Scientific name\" in source database"
+msgstr ""
+"Intitulé en anglais de l'habitat, champ intitulé \"Scientific name\" dans la"
+" base EUNIS"
+
+msgctxt "help:habitat.natura2000,code:"
+msgid "1 or 4 characters"
+msgstr ""
+"Code UE (= code Natura 2000) de l'habitat, à 1 ou 4 caractères. Code à 1 "
+"caractère (de 1 à 9) pour les habitats du niveau 1, codes à 2 chiffres "
+"suivis de 00 pour le niveau 2, codes à 2 chiffres, puis 1 chiffre ou 1 "
+"lettre, puis 0 (ou A exceptionnellement) pour le niveau 3. Remarques : dans "
+"le manuel d'interprétation, il n'existe pas de niveau intermédiaire entre le"
+" grand type de milieux 4 \"Landes et fourrés tempérés\" et les habitats "
+"d'intérêt communautaire qu'il comporte (4010, 4020, etc.). Par homogénéité "
+"avec le reste de la table, un code 4000 a été créé avec le même intitulé que"
+" le code 4. Par ailleurs, il n'existe pas d'habitat codé 6290, d'où un "
+"passage direct de 6280 à 62A0."
+
+msgctxt "help:habitat.natura2000,france:"
+msgid "Presence in France"
+msgstr ""
+"Présence en France d'un habitat d'intérêt communautaire ou des grands types "
+"de milieux. Celle-ci a été officialisée par publication au JORF, à "
+"l'exception de l'habitat 1180 pour lequel la procédure est en cours"
+
+msgctxt "help:habitat.natura2000,priority:"
+msgid "Priority"
+msgstr ""
+"Indication du caractère prioritaire de l'habitat au sens de la directive "
+"Habitats (ce caractère peut être soumis à condition). TRUE = habitat "
+"prioritaire, FALSE = habitat non-prioritaire"
+
+msgctxt "help:habitat.natura2000,title:"
+msgid "French title"
+msgstr ""
+"Intitulé final en français après correction éventuelle de l'intitulé "
+"original"
+
+msgctxt "help:habitat.physis,code:"
+msgid ""
+"1 or 2 numbers and at most 6 decimal numbers. Field \"Habcode\" in source "
+"database"
+msgstr ""
+"Code paléarctique, à 1 ou 2 chiffres suivis au maximum de 6 décimales. Champ"
+" intitulé \"Habcode\" dans la base Physis"
+
+msgctxt "help:habitat.physis,description:"
+msgid "Field \"TXT\" in source database"
+msgstr "Descriptif de l'habitat, champ intitulé \"TXT\" dans la base Physis"
+
+msgctxt "help:habitat.physis,title:"
+msgid "Field \"NAME\" in source database"
+msgstr "Intitulé anglais, champ intitulé \"NAME\" dans la base Physis"
+
+msgctxt "help:habitat.prodrome,code:"
+msgid "Hierarchical code assigned to each syntaxon"
+msgstr ""
+"Code hiérarchique attribué à chaque nom de syntaxon retenu dans le prodrome."
+" \"Ce code est constitué d'une succession de un à six numéros séparés par un"
+" point. Le premier numéro est celui de la classe, le second de la sous-"
+"classe dans la classe, le troisième de l'ordre dans la classe [...], le "
+"quatrième du sous-ordre dans l'ordre, le cinquième de l'alliance dans "
+"l'ordre (ou le sous-ordre éventuellement), le sixième de la sous-alliance "
+"dans l'alliance. En cas d'absence de rang supplémentaire, le code \"0\" est "
+"utilisé pour les sous-ordres et les sous-classes.\" (Bardat et al., 2004). "
+"En l'absence d'autre alliance dans l'ordre, le code 70.0.2.0.2 (Thero-"
+"Suaedion splendentis) a été corrigé en 70.0.2.0.1. Les classes sont "
+"présentées et numérotées selon leur ordre alphabétique, les syntaxons de "
+"rang inférieur selon une logique écologique et de cohérence dans "
+"l'enchaînement des textes des diagnoses."
+
+msgctxt "help:habitat.prodrome,description:"
+msgid "Diagnosis"
+msgstr "Diagnose"
+
+msgctxt "help:habitat.prodrome,observation:"
+msgid "Observation"
+msgstr ""
+
+msgctxt "help:habitat.prodrome,title:"
+msgid "Latin name"
+msgstr "Nom latin du syntaxon retenu dans le prodrome"
+
+msgctxt "model:habitat.corine_biotope,name:"
+msgid "Corine Biotope"
+msgstr ""
+
+msgctxt "model:habitat.eunis,name:"
+msgid "Eunis"
+msgstr ""
+
+msgctxt "model:habitat.natura2000,name:"
+msgid "Natura 2000"
+msgstr ""
+
+msgctxt "model:habitat.natura2000-habitat.corine_biotope,name:"
+msgid "Habitat Natura 2000 - Habitat Corine_biotope"
+msgstr ""
+
+msgctxt "model:habitat.physis,name:"
+msgid "Physis"
+msgstr "Physis"
+
+msgctxt "model:habitat.prodrome,name:"
+msgid "Prodrome"
+msgstr "Prodrome"
+
+msgctxt "model:ir.action,name:act_habitat_corine_biotope_list"
+msgid "Corine Biotopes"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_habitat_corine_biotope_tree"
+msgid "Corine Biotopes"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_habitat_eunis_list"
+msgid "Eunis"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_habitat_eunis_tree"
+msgid "Eunis"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_habitat_natura2000_list"
+msgid "Natura 2000"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_habitat_natura2000_tree"
+msgid "Natura 2000"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_habitat_prodrome_list"
+msgid "Prodrome"
+msgstr "Prodrome"
+
+msgctxt "model:ir.action,name:act_habitat_prodrome_tree"
+msgid "prodrome"
+msgstr "prodrome"
+
+msgctxt "model:ir.ui.menu,name:menu_habitat"
+msgid "Habitats"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_corine_biotope_list"
+msgid "Corine Biotopes"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_corine_biotope_tree"
+msgid "Corine Biotopes"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_eunis_list"
+msgid "Eunis"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_eunis_tree"
+msgid "Eunis"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_natura2000_list"
+msgid "Natura 2000"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_natura2000_tree"
+msgid "Natura 2000"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_prodrome_list"
+msgid "Prodrome"
+msgstr "Prodrome"
+
+msgctxt "model:ir.ui.menu,name:menu_habitat_prodrome_tree"
+msgid "Prodrome"
+msgstr "Prodrome"
+
+msgctxt "view:habitat.corine_biotope:"
+msgid "corine_biotope"
+msgstr ""
+
+msgctxt "view:habitat.eunis:"
+msgid "eunis"
+msgstr ""
+
+msgctxt "view:habitat.natura2000:"
+msgid "natura2000"
+msgstr ""
+
+msgctxt "view:habitat.physis:"
+msgid "physis"
+msgstr "physis"
+
+msgctxt "view:habitat.prodrome:"
+msgid "prodrome"
+msgstr "prodrome"
