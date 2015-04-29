@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<!--
+     This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2012-2013 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2012-2013 Pascal Obstetar
+-->
+<tryton>
+    <data>
+
+    <record model="ir.ui.icon" id="tryton_0">
+        <field name="name">tryton-0</field>
+        <field name="path">icons/tryton-0.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_25">
+        <field name="name">tryton-25</field>
+        <field name="path">icons/tryton-25.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_50">
+        <field name="name">tryton-50</field>
+        <field name="path">icons/tryton-50.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_75">
+        <field name="name">tryton-75</field>
+        <field name="path">icons/tryton-75.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton_100">
+        <field name="name">tryton-100</field>
+        <field name="path">icons/tryton-100.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="inventory_icon">
+        <field name="name">tryton-inventory</field>
+        <field name="path">icons/tryton-inventory.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="track_icon">
+        <field name="name">tryton-track</field>
+        <field name="path">icons/tryton-track.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="zone_icon">
+        <field name="name">tryton-zone</field>
+        <field name="path">icons/tryton-zone.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="pt_icon">
+        <field name="name">tryton-pt</field>
+        <field name="path">icons/tryton-pt.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="lrs_icon">
+        <field name="name">tryton-lrs</field>
+        <field name="path">icons/tryton-lrs.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="poi_icon">
+        <field name="name">tryton-poi</field>
+        <field name="path">icons/tryton-poi.svg</field>
+    </record>
+
+    <menuitem name="Inventory" sequence="0" id="menu_inventory" icon="tryton-inventory"/>
+    <menuitem parent="menu_inventory" sequence="1" name="Configuration" icon="tryton-preferences" id="menu_configuration"/>
+    <menuitem parent="menu_inventory" name="Rapports" id="menu_rapport"/>
+
+    <!-- Configuration -->
+   <record model="ir.ui.view" id="configuration_view_tree">
+        <field name="model">inventory.configuration</field>
+        <field name="type">tree</field>
+        <field name="name">conf_tree</field>
+    </record>
+    <record model="ir.ui.view" id="configuration_view_form">
+        <field name="model">inventory.configuration</field>
+        <field name="type">form</field>
+        <field name="name">conf_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_configuration_form">
+        <field name="name">Configuration</field>
+        <field name="res_model">inventory.configuration</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_configuration_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="configuration_view_tree"/>
+        <field name="act_window" ref="act_configuration_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_configuration_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="configuration_view_form"/>
+        <field name="act_window" ref="act_configuration_form"/>
+    </record>        
+    <menuitem parent="menu_configuration" id="menu_configuration_form" icon="tryton-list" action="act_configuration_form"/>
+
+    <!-- Code -->
+    <record model="ir.ui.view" id="inventory_code_view_tree">
+        <field name="model">inventory.code</field>
+        <field name="type">tree</field>
+        <field name="name">code_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_code_view_form">
+        <field name="model">inventory.code</field>
+        <field name="type">form</field>
+        <field name="name">code_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_code_form">
+        <field name="name">Code</field>
+        <field name="res_model">inventory.code</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_code_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_code_view_tree"/>
+        <field name="act_window" ref="act_code_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_code_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_code_view_form"/>
+        <field name="act_window" ref="act_code_form"/>
+    </record>    
+    <menuitem parent="menu_configuration" id="menu_code_form" icon="tryton-list" action="act_code_form"/>
+
+    <!-- Zone de prospection -->
+    <record model="ir.ui.view" id="inventory_view_tree">
+        <field name="model">inventory.area</field>
+        <field name="type">tree</field>
+        <field name="name">area_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_view_form">
+        <field name="model">inventory.area</field>
+        <field name="type">form</field>
+        <field name="name">area_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_inventory_form">
+        <field name="name">Zones de prospection</field>
+        <field name="res_model">inventory.area</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_view_tree"/>
+        <field name="act_window" ref="act_inventory_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_view_form"/>
+        <field name="act_window" ref="act_inventory_form"/>
+    </record>   
+    <record model="ir.action.report" id="report_inventory_edit">
+        <field name="name">Open inventory in QGis...</field>
+        <field name="model">inventory.area</field>
+        <field name="report_name">inventory.area.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_inventory_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.area,-1</field>
+        <field name="action" ref="report_inventory_edit"/>
+    </record>
+    <menuitem parent="menu_inventory" sequence="1" id="menu_inventory_area_form" icon="tryton-inventory" action="act_inventory_form"/> 
+
+    <!-- Track -->
+    <record model="ir.ui.view" id="inventory_track_view_tree">
+        <field name="model">inventory.track</field>
+        <field name="type">tree</field>
+        <field name="name">track_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_view_form">
+        <field name="model">inventory.track</field>
+        <field name="type">form</field>
+        <field name="name">track_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_track_form">
+        <field name="name">Tracks</field>
+        <field name="res_model">inventory.track</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_track_view_tree"/>
+        <field name="act_window" ref="act_track_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_track_view_form"/>
+        <field name="act_window" ref="act_track_form"/>
+    </record>
+    <record model="ir.action.report" id="report_track_edit">
+        <field name="name">Open Track in QGis...</field>
+        <field name="model">inventory.track</field>
+        <field name="report_name">inventory.track.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_track_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.track,-1</field>
+        <field name="action" ref="report_track_edit"/>
+    </record>
+    <menuitem parent="menu_inventory_area_form" sequence="1" id="menu_track_form" icon="tryton-track" action="act_track_form"/>
+
+    <!-- Point -->
+    <record model="ir.ui.view" id="inventory_point_view_tree">
+        <field name="model">inventory.point</field>
+        <field name="type">tree</field>
+        <field name="name">pt_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_view_form">
+        <field name="model">inventory.point</field>
+        <field name="type">form</field>
+        <field name="name">pt_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_point_form">
+        <field name="name">Points</field>
+        <field name="res_model">inventory.point</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_point_view_tree"/>
+        <field name="act_window" ref="act_point_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_point_view_form"/>
+        <field name="act_window" ref="act_point_form"/>
+    </record>
+    <record model="ir.action.report" id="report_point_edit">
+        <field name="name">Open Point in QGis...</field>
+        <field name="model">inventory.point</field>
+        <field name="report_name">inventory.point.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_point_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.point,-1</field>
+        <field name="action" ref="report_point_edit"/>
+    </record>
+    <record model="ir.action.report" id="report_point">
+        <field name="name">Monitoring</field>
+        <field name="model">inventory.point</field>
+        <field name="report_name">inventory.point</field>
+        <field name="report">inventory/inventory_point.odt</field>            
+    </record>
+    <record model="ir.action.keyword" id="report_inventory_point_kwd">
+        <field name="keyword">form_print</field>
+        <field name="model">inventory.point,-1</field>
+        <field name="action" ref="report_point"/>
+    </record>
+    <menuitem parent="menu_inventory_area_form" sequence="1" id="menu_point_form" icon="tryton-pt" action="act_point_form"/>
+    
+    <!-- generate all points -->
+    <record model="ir.action.wizard" id="generatepoint">
+        <field name="name">Generate all points...</field>
+        <field name="model">inventory.point</field>
+        <field name="wiz_name">inventory.generatepoint</field>
+    </record>
+    <record model="ir.action.keyword" id="generatepoint_all_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.point,-1</field>
+        <field name="action" ref="generatepoint"/>
+    </record>    
+
+    <!-- Zone -->
+    <record model="ir.ui.view" id="inventory_zone_view_tree">
+        <field name="model">inventory.zone</field>
+        <field name="type">tree</field>
+        <field name="name">zone_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_zone_view_form">
+        <field name="model">inventory.zone</field>
+        <field name="type">form</field>
+        <field name="name">zone_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_zone_form">
+        <field name="name">Zones</field>
+        <field name="res_model">inventory.zone</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_zone_view_tree"/>
+        <field name="act_window" ref="act_zone_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_zone_view_form"/>
+        <field name="act_window" ref="act_zone_form"/>
+    </record>
+    <record model="ir.action.report" id="report_zone_edit">
+        <field name="name">Open Zone in QGis...</field>
+        <field name="model">inventory.zone</field>
+        <field name="report_name">inventory.zone.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_zone_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.zone,-1</field>
+        <field name="action" ref="report_zone_edit"/>
+    </record>
+    <menuitem parent="menu_inventory_area_form" sequence="2" id="menu_zone_form" icon="tryton-zone" action="act_zone_form"/>   
+
+    <!-- LRS -->
+    <record model="ir.ui.view" id="inventory_lrs_view_tree">
+        <field name="model">inventory.lrs</field>
+        <field name="type">tree</field>
+        <field name="name">lrs_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_lrs_view_form">
+        <field name="model">inventory.lrs</field>
+        <field name="type">form</field>
+        <field name="name">lrs_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_lrs_form">
+        <field name="name">LRS</field>
+        <field name="res_model">inventory.lrs</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_lrs_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_lrs_view_tree"/>
+        <field name="act_window" ref="act_lrs_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_lrs_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_lrs_view_form"/>
+        <field name="act_window" ref="act_lrs_form"/>
+    </record>
+    <record model="ir.action.report" id="report_lrs_edit">
+        <field name="name">Open lrs in QGis...</field>
+        <field name="model">inventory.lrs</field>
+        <field name="report_name">inventory.lrs.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_lrs_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.lrs,-1</field>
+        <field name="action" ref="report_lrs_edit"/>
+    </record>
+    <menuitem parent="menu_inventory" sequence="3" id="menu_lrs_form" icon="tryton-lrs" action="act_lrs_form"/>
+
+    <!-- POI -->
+    <record model="ir.ui.view" id="inventory_poi_view_tree">
+        <field name="model">inventory.poi</field>
+        <field name="type">tree</field>
+        <field name="name">poi_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_poi_view_form">
+        <field name="model">inventory.poi</field>
+        <field name="type">form</field>
+        <field name="name">poi_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_poi_form">
+        <field name="name">POI</field>
+        <field name="res_model">inventory.poi</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_poi_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_poi_view_tree"/>
+        <field name="act_window" ref="act_poi_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_poi_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_poi_view_form"/>
+        <field name="act_window" ref="act_poi_form"/>
+    </record>
+    <record model="ir.action.report" id="report_poi_edit">
+        <field name="name">Open POI in QGis...</field>
+        <field name="model">inventory.poi</field>
+        <field name="report_name">inventory.poi.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_poi_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.poi,-1</field>
+        <field name="action" ref="report_poi_edit"/>
+    </record>
+    <menuitem parent="menu_inventory" sequence="4" id="menu_poi_form" icon="tryton-poi" action="act_poi_form"/>
+        
+    </data>
+</tryton>

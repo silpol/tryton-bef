@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<tree string="Site CENL">
+    <field name="name"/>
+    <field name="cd_interne"/>    
+    <field name="sig_remarq"/> 
+    <field name="pg"/> 
+    <field name="cm"/> 
+    <field name="dept"/> 
+    <field name="communes"/> 
+    <field name="type_prot"/> 
+    <field name="prot_regle"/> 
+    <field name="type_milie"/> 
+    <field name="type_gener"/> 
+    <field name="milieu_hum"/> 
+    <field name="valo_on"/>
+    <field name="n2000"/> 
+    <field name="pnr"/> 
+    <field name="id_spn"/>  
+</tree>

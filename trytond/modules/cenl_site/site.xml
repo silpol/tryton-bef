@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+        
+        <record model="ir.ui.icon" id="cenl_icon">
+            <field name="name">tryton-cenl</field>
+            <field name="path">icons/tryton-cenl.svg</field>
+        </record>
+
+        <menuitem name="Site" sequence="14" parent="ir.menu_administration" id="menu_site" icon="tryton-cenl"/>        
+        <menuitem parent="menu_site" sequence="0" name="Configuration" id="menu_cenl_configuration" icon="tryton-preferences"/>
+        
+        <!-- Code -->
+        <record model="ir.ui.view" id="cenl_code_view_tree">
+            <field name="model">cenl.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cenl_code_view_form">
+            <field name="model">cenl.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cenl_code_form">
+            <field name="name">Code</field>
+            <field name="res_model">cenl.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cenl_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cenl_code_view_tree"/>
+            <field name="act_window" ref="act_cenl_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cenl_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cenl_code_view_form"/>
+            <field name="act_window" ref="act_cenl_code_form"/>
+        </record>
+        
+        <menuitem parent="menu_cenl_configuration" id="menu_cenl_code_form" icon="tryton-list" action="act_cenl_code_form"/>      
+
+        <!-- Site -->
+        <record model="ir.ui.view" id="site_view_tree">
+            <field name="model">cenl.site</field>
+            <field name="type">tree</field>
+            <field name="name">site_tree</field>
+        </record>
+        <record model="ir.ui.view" id="site_view_form">
+            <field name="model">cenl.site</field>
+            <field name="type">form</field>
+            <field name="name">site_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_site_form">
+            <field name="name">Sites CENL</field>
+            <field name="res_model">cenl.site</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_site_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="site_view_tree"/>
+            <field name="act_window" ref="act_site_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_site_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="site_view_form"/>
+            <field name="act_window" ref="act_site_form"/>
+        </record>        
+        <menuitem parent="menu_site" id="menu_site_form" icon="tryton-list" action="act_site_form"/>
+        
+        <record model="ir.action.report" id="report_site_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cenl.site</field>
+            <field name="report_name">cenl.site.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_site_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cenl.site,-1</field>
+            <field name="action" ref="report_site_edit"/>
+        </record>
+        
+        <!-- generate all maps -->
+        <record model="ir.action.wizard" id="generate">
+            <field name="name">Generate maps...</field>
+            <field name="model">cenl.site</field>
+            <field name="wiz_name">cenl.site_generate</field>
+        </record>
+        <record model="ir.action.keyword" id="generate_all_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cenl.site,-1</field>
+            <field name="action" ref="generate"/>
+        </record>            
+
+    </data>
+</tryton>

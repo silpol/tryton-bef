@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="track" />
+    <field name="name" />
+    <field name="start" />
+    <field name="end" />
+    <field name="comment" />
+</tree>

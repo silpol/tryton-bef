@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+    
+        <record model="ir.ui.icon" id="tryton_inpn">
+            <field name="name">tryton-inpn</field>
+            <field name="path">icons/tryton-inpn.svg</field>
+        </record>
+        <menuitem name="Grille 5km" parent="ir.menu_administration" id="menu_grille" icon="tryton-inpn"/>
+        
+        <!-- Grille 5km -->      
+        <record model="ir.ui.view" id="cenl_grille5_view_tree">
+            <field name="model">cenl.grille5</field>
+            <field name="type">tree</field>
+            <field name="name">grille5_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cenl_grille5_view_form">
+            <field name="model">cenl.grille5</field>
+            <field name="type">form</field>
+            <field name="name">grille5_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cenl_grille5_form">
+            <field name="name">Grille 5km</field>
+            <field name="res_model">cenl.grille5</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cenl_grille5_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cenl_grille5_view_tree"/>
+            <field name="act_window" ref="act_cenl_grille5_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cenl_grille5_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cenl_grille5_view_form"/>
+            <field name="act_window" ref="act_cenl_grille5_form"/>
+        </record>
+        <record model="ir.action.report" id="report_cenl_grille5_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cenl.grille5</field>
+            <field name="report_name">cenl.grille5.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_cenl_grille5_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cenl.grille5,-1</field>
+            <field name="action" ref="report_cenl_grille5_edit"/>
+        </record> 
+        <menuitem parent="menu_grille" sequence="1" id="menu_cenl_grille5_form" icon="tryton-list" action="act_cenl_grille5_form"/>       
+    </data>
+</tryton>

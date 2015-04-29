@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<form string="POI" col="4">
+     <notebook colspan="2">
+        <page string="General" id="general">
+            <label name="name" xalign="0"/>
+            <field name="name" colspan="4"/>           
+            <label name="start" xalign="0"/>
+            <field name="start" colspan="4"/>
+            <label name="end" xalign="0"/>
+            <field name="end" colspan="4"/>
+            <label name="track" xalign="0"/>
+            <field name="track" colspan="4"/>
+            <label name="comment" xalign="0"/>
+            <field name="comment" colspan="4"/>
+        </page>        
+        <page string="Map" col="2" id="map">                        
+            <field name="image" widget="image" img_width="640" img_height="480"/>
+            <field name="image_map" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="lrs_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>
+        <page string="Photo" col="1" id="photo">                        
+            <field name="photo" widget="image" img_width="1280" img_height="960" />            
+        </page>
+    </notebook>
+</form>

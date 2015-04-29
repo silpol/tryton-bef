@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form string="Grille 5km" col="2">
+    <notebook colspan="6">
+        <page string="General" id="general">
+            <label name="cd_sig" />
+            <field name="cd_sig" />
+            <label name="code5km" />
+            <field name="code5km" />
+            <label name="version" />
+            <field name="version" />   
+            <notebook colspan="6">                        
+                <page string="Map" id="map" col="1">                                
+                    <field name="grille5_map" colspan="1" widget="image" img_width="640" img_height="480"/>                                              
+                    <button string="Generate" name="generate" icon="tryton-executable" />
+                </page>
+            </notebook>
+        </page>
+    </notebook>
+</form>

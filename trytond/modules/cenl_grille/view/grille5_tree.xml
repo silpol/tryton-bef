@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Grille 5km">
+    <field name="cd_sig" />
+    <field name="code5km" />
+    <field name="version" />
+</tree>

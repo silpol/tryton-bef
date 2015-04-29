@@ -17,16 +17,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from trytond.pool import Pool
-from habitat import (CorineBiotope, Eunis,
-    HabitatNatura2000HabitatCorine_biotope, Natura2000, Physis, Prodrome)
+from habitat import (CorineBiotope)
 
 
 def register():
     Pool.register(
-        CorineBiotope,
-        Eunis,
-        Natura2000,
-        Physis,
-        Prodrome,
-        HabitatNatura2000HabitatCorine_biotope,
-        module='habitat', type_='model')
+        CorineBiotope,        
+        module='cenl_habitat', type_='model')

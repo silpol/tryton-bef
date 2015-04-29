@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<form string="Site CENL" col="4">
+    <notebook>
+        <page string="Général" id="general" col="4">
+            <label name="name"/>
+            <field name="name"/>
+            <label name="cd_interne"/>
+            <field name="cd_interne"/>
+            <label name="sig_remarq"/>
+            <field name="sig_remarq"/>
+            <label name="pg"/>
+            <field name="pg"/>
+            <label name="cm"/>
+            <field name="cm"/>
+            <label name="dept"/>
+            <field name="dept"/>
+            <label name="communes"/>
+            <field name="communes" colspan="3"/>
+            <field name="type_prot" colspan="4"/>
+            <label name="prot_regle"/>
+            <field name="prot_regle" widget="selection"/>
+            <label name="type_milie"/>
+            <field name="type_milie"/>
+            <label name="type_gener"/>
+            <field name="type_gener"/>
+            <label name="milieu_hum"/>
+            <field name="milieu_hum"/>
+            <label name="valo_on"/>
+            <field name="valo_on"/>
+            <label name="n2000"/>
+            <field name="n2000"/>
+            <label name="pnr"/>
+            <field name="pnr"/>
+            <label name="id_spn"/>
+            <field name="id_spn"/>
+        </page>
+        <page string="Map" id="map" col="4">
+            <field name="site_map" widget="image" img_width="640" img_height="480" colspan="4"/>               
+            <button string="Generate" name="generate" icon="tryton-executable" colspan="4"/>
+        </page>
+    </notebook>
+</form>
