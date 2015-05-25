@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<form string="Écriture - Attribut" col="2">
+    <label name="fon"/>
+    <field name="fon"/>
+    <label name="hei"/>
+    <field name="hei"/>
+    <label name="tyu"/>
+    <field name="tyu"/>
+    <label name="cef"/>
+    <field name="cef"/>  
+    <label name="csp"/>
+    <field name="csp"/>  
+    <label name="di1"/>
+    <field name="di1"/>  
+    <label name="di2"/>
+    <field name="di2"/>  
+    <label name="di3"/>
+    <field name="di3"/>  
+    <label name="di4"/>
+    <field name="di4"/>  
+    <label name="tpa"/>
+    <field name="tpa"/>  
+    <label name="hta"/>
+    <field name="hta"/>  
+    <label name="vta"/>
+    <field name="vta"/>
+    <label name="atr"/>
+    <field name="atr"/>
+</form>

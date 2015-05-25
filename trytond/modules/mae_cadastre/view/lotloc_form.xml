@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form string="Lot" col="6">
+    <label name="codlot" />
+    <field name="codlot" />
+    <label name="invloc" />
+    <field name="invloc" />
+    <label name="pdl" />
+    <field name="pdl" />
+    <label name="codparc" />
+    <field name="codparc"/>
+    <label name="ndupdl" />
+    <field name="ndupdl" />
+    <label name="dnulot" />
+    <field name="dnulot" />
+    <label name="dnumql" />
+    <field name="dnumql" />
+    <label name="ddenql" />
+    <field name="ddenql" />   
+</form>

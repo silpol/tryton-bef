@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<tree string="Lot">
+    <field name="codlot" />
+    <field name="invloc" />
+    <field name="pdl" />
+    <field name="codparc" />
+    <field name="ndupdl" />
+    <field name="dnulot" />
+    <field name="dnumql" />
+    <field name="ddenql" />
+</tree>

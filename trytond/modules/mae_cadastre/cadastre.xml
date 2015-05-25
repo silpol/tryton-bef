@@ -1,0 +1,1011 @@
+<?xml version="1.0"?>
+
+<tryton>
+	<data>
+
+        <record model="ir.ui.icon" id="cadastre_cadastre">
+            <field name="name">tryton-cadastre</field>
+            <field name="path">icons/tryton-cadastre.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="cadastre_point">
+            <field name="name">tryton-point</field>
+            <field name="path">icons/tryton-point.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="cadastre_polygon">
+            <field name="name">tryton-polygon</field>
+            <field name="path">icons/tryton-polygon.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="cadastre_line">
+            <field name="name">tryton-line</field>
+            <field name="path">icons/tryton-line.svg</field>
+        </record>
+
+		<menuitem name="Cadastre" id="menu_cadastre" icon="tryton-cadastre"/>
+        <menuitem parent="menu_cadastre" sequence="1" name="Configuration" icon="tryton-preferences" id="menu_cadastre_configuration"/>
+        <menuitem parent="menu_cadastre" sequence="2" name="Géométries" icon="tryton-polygon" id="menu_cadastre_geometry"/>
+
+        <!-- Code EDI -->
+        <record model="ir.ui.view" id="cadastre_code_view_tree">
+            <field name="model">cadastre.code</field>
+            <field name="type">tree</field>
+            <field name="name">code_tree</field>
+        </record>
+        <record model="ir.ui.view" id="cadastre_code_view_form">
+            <field name="model">cadastre.code</field>
+            <field name="type">form</field>
+            <field name="name">code_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_cadastre_code_form">
+            <field name="name">Code EDI</field>
+            <field name="res_model">cadastre.code</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cadastre_code_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_code_view_tree"/>
+            <field name="act_window" ref="act_cadastre_code_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_cadastre_code_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_code_view_form"/>
+            <field name="act_window" ref="act_cadastre_code_form"/>
+        </record>
+        
+        <menuitem parent="menu_cadastre_configuration" id="menu_cadastre_code_form" icon="tryton-list" action="act_cadastre_code_form"/>
+
+        <!-- Commune plots -->
+        <record model="ir.ui.view" id="cadastre_commune_view_tree">
+            <field name="model">cadastre.commune</field>
+            <field name="type">tree</field>
+            <field name="name">commune_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_commune_view_form">
+            <field name="model">cadastre.commune</field>
+            <field name="type">form</field>
+            <field name="name">commune_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_commune_form">
+            <field name="name">Communes</field>
+            <field name="res_model">cadastre.commune</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_commune_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_commune_view_tree"/>
+            <field name="act_window" ref="act_cadastre_commune_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_commune_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_commune_view_form"/>
+            <field name="act_window" ref="act_cadastre_commune_form"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="2" id="menu_cadastre_commune_form" icon="tryton-polygon" action="act_cadastre_commune_form"/>
+
+        <!-- Section plots -->
+        <record model="ir.ui.view" id="cadastre_section_view_tree">
+            <field name="model">cadastre.section</field>
+            <field name="type">tree</field>
+            <field name="name">section_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_section_view_form">
+            <field name="model">cadastre.section</field>
+            <field name="type">form</field>
+            <field name="name">section_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_section_form">
+            <field name="name">Sections</field>
+            <field name="res_model">cadastre.section</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_section_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_section_view_tree"/>
+            <field name="act_window" ref="act_cadastre_section_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_section_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_section_view_form"/>
+            <field name="act_window" ref="act_cadastre_section_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_section_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.section</field>
+            <field name="report_name">cadastre.section.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_section_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.section,-1</field>
+            <field name="action" ref="report_section_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="3" id="menu_cadastre_section_form" icon="tryton-polygon" action="act_cadastre_section_form"/>
+
+        <!-- Subdivision Section plots -->
+        <record model="ir.ui.view" id="cadastre_subdsect_view_tree">
+            <field name="model">cadastre.subdsect</field>
+            <field name="type">tree</field>
+            <field name="name">subdsect_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_subdsect_view_form">
+            <field name="model">cadastre.subdsect</field>
+            <field name="type">form</field>
+            <field name="name">subdsect_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_subdsect_form">
+            <field name="name">Subdivivions Sections</field>
+            <field name="res_model">cadastre.subdsect</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_subdsect_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_subdsect_view_tree"/>
+            <field name="act_window" ref="act_cadastre_subdsect_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_subdsect_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_subdsect_view_form"/>
+            <field name="act_window" ref="act_cadastre_subdsect_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_subdsect_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.subdsect</field>
+            <field name="report_name">cadastre.subdsect.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_subdsect_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.subdsect,-1</field>
+            <field name="action" ref="report_subdsect_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="4" id="menu_cadastre_subdsect_form" icon="tryton-polygon" action="act_cadastre_subdsect_form"/>
+
+        <!-- Parcelle plots -->
+        <record model="ir.ui.view" id="cadastre_parcelle_view_tree">
+            <field name="model">cadastre.parcelle</field>
+            <field name="type">tree</field>
+            <field name="name">parcelle_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_parcelle_view_form">
+            <field name="model">cadastre.parcelle</field>
+            <field name="type">form</field>
+            <field name="name">parcelle_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_parcelle_form">
+            <field name="name">Parcelles</field>
+            <field name="res_model">cadastre.parcelle</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_parcelle_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_parcelle_view_tree"/>
+            <field name="act_window" ref="act_cadastre_parcelle_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_parcelle_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_parcelle_view_form"/>
+            <field name="act_window" ref="act_cadastre_parcelle_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_parcelle_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.parcelle</field>
+            <field name="report_name">cadastre.parcelle.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_parcelle_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.parcelle,-1</field>
+            <field name="action" ref="report_parcelle_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="5" id="menu_cadastre_parcelle_form" icon="tryton-polygon" action="act_cadastre_parcelle_form"/>
+
+        <!-- Subdivision fiscale plots -->
+        <record model="ir.ui.view" id="cadastre_subdfisc_view_tree">
+            <field name="model">cadastre.subdfisc</field>
+            <field name="type">tree</field>
+            <field name="name">subdfisc_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_subdfisc_view_form">
+            <field name="model">cadastre.subdfisc</field>
+            <field name="type">form</field>
+            <field name="name">subdfisc_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_subdfisc_form">
+            <field name="name">Subdivisions Fiscales</field>
+            <field name="res_model">cadastre.subdfisc</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_subdfisc_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_subdfisc_view_tree"/>
+            <field name="act_window" ref="act_cadastre_subdfisc_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_subdfisc_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_subdfisc_view_form"/>
+            <field name="act_window" ref="act_cadastre_subdfisc_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_subdfisc_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.subdfisc</field>
+            <field name="report_name">cadastre.subdfisc.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_subdfisc_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.subdfisc,-1</field>
+            <field name="action" ref="report_subdfisc_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="6" id="menu_cadastre_subdfisc_form" icon="tryton-polygon" action="act_cadastre_subdfisc_form"/>
+
+        <!-- Charge -->
+        <record model="ir.ui.view" id="cadastre_charge_view_tree">
+            <field name="model">cadastre.charge</field>
+            <field name="type">tree</field>
+            <field name="name">charge_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_charge_view_form">
+            <field name="model">cadastre.charge</field>
+            <field name="type">form</field>
+            <field name="name">charge_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_charge_form">
+            <field name="name">Charges</field>
+            <field name="res_model">cadastre.charge</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_charge_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_charge_view_tree"/>
+            <field name="act_window" ref="act_cadastre_charge_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_charge_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_charge_view_form"/>
+            <field name="act_window" ref="act_cadastre_charge_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_charge_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.charge</field>
+            <field name="report_name">cadastre.charge.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_charge_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.charge,-1</field>
+            <field name="action" ref="report_charge_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="7" id="menu_cadastre_charge_form" icon="tryton-polygon" action="act_cadastre_charge_form"/>
+
+        <!-- Ensemble Immobilier -->
+        <record model="ir.ui.view" id="cadastre_voeip_view_tree">
+            <field name="model">cadastre.voeip</field>
+            <field name="type">tree</field>
+            <field name="name">voeip_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_voeip_view_form">
+            <field name="model">cadastre.voeip</field>
+            <field name="type">form</field>
+            <field name="name">voeip_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_voeip_form">
+            <field name="name">Ensembles immobiliers</field>
+            <field name="res_model">cadastre.voeip</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_voeip_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_voeip_view_tree"/>
+            <field name="act_window" ref="act_cadastre_voeip_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_voeip_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_voeip_view_form"/>
+            <field name="act_window" ref="act_cadastre_voeip_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_voeip_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.voeip</field>
+            <field name="report_name">cadastre.voeip.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_voeip_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.voeip,-1</field>
+            <field name="action" ref="report_voeip_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="8" id="menu_cadastre_voeip_form" icon="tryton-point" action="act_cadastre_voeip_form"/>
+
+        <!-- Numéro voirie -->
+        <record model="ir.ui.view" id="cadastre_numvoie_view_tree">
+            <field name="model">cadastre.numvoie</field>
+            <field name="type">tree</field>
+            <field name="name">numvoie_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_numvoie_view_form">
+            <field name="model">cadastre.numvoie</field>
+            <field name="type">form</field>
+            <field name="name">numvoie_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_numvoie_form">
+            <field name="name">Numéros voirie</field>
+            <field name="res_model">cadastre.numvoie</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_numvoie_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_numvoie_view_tree"/>
+            <field name="act_window" ref="act_cadastre_numvoie_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_numvoie_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_numvoie_view_form"/>
+            <field name="act_window" ref="act_cadastre_numvoie_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_numvoie_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.numvoie</field>
+            <field name="report_name">cadastre.numvoie.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_numvoie_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.numvoie,-1</field>
+            <field name="action" ref="report_numvoie_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="9" id="menu_cadastre_numvoie_form" icon="tryton-point" action="act_cadastre_numvoie_form"/>
+
+        <!-- Lieu-Dit -->
+        <record model="ir.ui.view" id="cadastre_lieudit_view_tree">
+            <field name="model">cadastre.lieudit</field>
+            <field name="type">tree</field>
+            <field name="name">lieudit_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_lieudit_view_form">
+            <field name="model">cadastre.lieudit</field>
+            <field name="type">form</field>
+            <field name="name">lieudit_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_lieudit_form">
+            <field name="name">Lieu-Dit</field>
+            <field name="res_model">cadastre.lieudit</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_lieudit_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_lieudit_view_tree"/>
+            <field name="act_window" ref="act_cadastre_lieudit_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_lieudit_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_lieudit_view_form"/>
+            <field name="act_window" ref="act_cadastre_lieudit_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_lieudit_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.lieudit</field>
+            <field name="report_name">cadastre.lieudit.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_lieudit_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.lieudit,-1</field>
+            <field name="action" ref="report_lieudit_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="10" id="menu_cadastre_lieudit_form" icon="tryton-polygon" action="act_cadastre_lieudit_form"/>
+
+        <!-- Batiment -->
+        <record model="ir.ui.view" id="cadastre_batiment_view_tree">
+            <field name="model">cadastre.batiment</field>
+            <field name="type">tree</field>
+            <field name="name">batiment_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_batiment_view_form">
+            <field name="model">cadastre.batiment</field>
+            <field name="type">form</field>
+            <field name="name">batiment_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_batiment_form">
+            <field name="name">Bâtiment</field>
+            <field name="res_model">cadastre.batiment</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_batiment_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_batiment_view_tree"/>
+            <field name="act_window" ref="act_cadastre_batiment_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_batiment_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_batiment_view_form"/>
+            <field name="act_window" ref="act_cadastre_batiment_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_batiment_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.batiment</field>
+            <field name="report_name">cadastre.batiment.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_batiment_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.batiment,-1</field>
+            <field name="action" ref="report_batiment_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="11" id="menu_cadastre_batiment_form" icon="tryton-polygon" action="act_cadastre_batiment_form"/>
+
+        <!-- Tronçon de route -->
+        <record model="ir.ui.view" id="cadastre_tronroute_view_tree">
+            <field name="model">cadastre.tronroute</field>
+            <field name="type">tree</field>
+            <field name="name">tronroute_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_tronroute_view_form">
+            <field name="model">cadastre.tronroute</field>
+            <field name="type">form</field>
+            <field name="name">tronroute_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_tronroute_form">
+            <field name="name">Tronçon de route</field>
+            <field name="res_model">cadastre.tronroute</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tronroute_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_tronroute_view_tree"/>
+            <field name="act_window" ref="act_cadastre_tronroute_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tronroute_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_tronroute_view_form"/>
+            <field name="act_window" ref="act_cadastre_tronroute_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_tronroute_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.tronroute</field>
+            <field name="report_name">cadastre.tronroute.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_tronroute_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.tronroute,-1</field>
+            <field name="action" ref="report_tronroute_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="12" id="menu_cadastre_tronroute_form" icon="tryton-polygon" action="act_cadastre_tronroute_form"/>
+
+        <!-- Zone de communication -->
+        <record model="ir.ui.view" id="cadastre_zoncommuni_view_tree">
+            <field name="model">cadastre.zoncommuni</field>
+            <field name="type">tree</field>
+            <field name="name">zoncommuni_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_zoncommuni_view_form">
+            <field name="model">cadastre.zoncommuni</field>
+            <field name="type">form</field>
+            <field name="name">zoncommuni_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_zoncommuni_form">
+            <field name="name">Zone de communication</field>
+            <field name="res_model">cadastre.zoncommuni</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_zoncommuni_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_zoncommuni_view_tree"/>
+            <field name="act_window" ref="act_cadastre_zoncommuni_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_zoncommuni_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_zoncommuni_view_form"/>
+            <field name="act_window" ref="act_cadastre_zoncommuni_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_zoncommuni_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.zoncommuni</field>
+            <field name="report_name">cadastre.zoncommuni.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_zoncommuni_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.zoncommuni,-1</field>
+            <field name="action" ref="report_zoncommuni_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="13" id="menu_cadastre_zoncommuni_form" icon="tryton-polygon" action="act_cadastre_zoncommuni_form"/>
+
+        <!-- Tronçon de cours d'eau -->
+        <record model="ir.ui.view" id="cadastre_tronfluv_view_tree">
+            <field name="model">cadastre.tronfluv</field>
+            <field name="type">tree</field>
+            <field name="name">tronfluv_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_tronfluv_view_form">
+            <field name="model">cadastre.tronfluv</field>
+            <field name="type">form</field>
+            <field name="name">tronfluv_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_tronfluv_form">
+            <field name="name">Tronçon de cours d'eau</field>
+            <field name="res_model">cadastre.tronfluv</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tronfluv_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_tronfluv_view_tree"/>
+            <field name="act_window" ref="act_cadastre_tronfluv_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tronfluv_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_tronfluv_view_form"/>
+            <field name="act_window" ref="act_cadastre_tronfluv_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_tronfluv_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.tronfluv</field>
+            <field name="report_name">cadastre.tronfluv.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_tronfluv_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.tronfluv,-1</field>
+            <field name="action" ref="report_tronfluv_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="14" id="menu_cadastre_tronfluv_form" icon="tryton-polygon" action="act_cadastre_tronfluv_form"/>
+
+        <!-- Point de canevas -->
+        <record model="ir.ui.view" id="cadastre_ptcanv_view_tree">
+            <field name="model">cadastre.ptcanv</field>
+            <field name="type">tree</field>
+            <field name="name">ptcanv_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_ptcanv_view_form">
+            <field name="model">cadastre.ptcanv</field>
+            <field name="type">form</field>
+            <field name="name">ptcanv_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_ptcanv_form">
+            <field name="name">Point de canevas</field>
+            <field name="res_model">cadastre.ptcanv</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_ptcanv_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_ptcanv_view_tree"/>
+            <field name="act_window" ref="act_cadastre_ptcanv_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_ptcanv_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_ptcanv_view_form"/>
+            <field name="act_window" ref="act_cadastre_ptcanv_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_ptcanv_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.ptcanv</field>
+            <field name="report_name">cadastre.ptcanv.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_ptcanv_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.ptcanv,-1</field>
+            <field name="action" ref="report_ptcanv_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="15" id="menu_cadastre_ptcanv_form" icon="tryton-point" action="act_cadastre_ptcanv_form"/>
+
+        <!-- Borne -->
+        <record model="ir.ui.view" id="cadastre_borne_view_tree">
+            <field name="model">cadastre.borne</field>
+            <field name="type">tree</field>
+            <field name="name">borne_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_borne_view_form">
+            <field name="model">cadastre.borne</field>
+            <field name="type">form</field>
+            <field name="name">borne_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_borne_form">
+            <field name="name">Bornes</field>
+            <field name="res_model">cadastre.borne</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_borne_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_borne_view_tree"/>
+            <field name="act_window" ref="act_cadastre_borne_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_borne_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_borne_view_form"/>
+            <field name="act_window" ref="act_cadastre_borne_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_borne_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.borne</field>
+            <field name="report_name">cadastre.borne.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_borne_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.borne,-1</field>
+            <field name="action" ref="report_borne_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="16" id="menu_cadastre_borne_form" icon="tryton-point" action="act_cadastre_borne_form"/>
+
+        <!-- Boulon -->
+        <record model="ir.ui.view" id="cadastre_boulon_view_tree">
+            <field name="model">cadastre.boulon</field>
+            <field name="type">tree</field>
+            <field name="name">boulon_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_boulon_view_form">
+            <field name="model">cadastre.boulon</field>
+            <field name="type">form</field>
+            <field name="name">boulon_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_boulon_form">
+            <field name="name">Boulons</field>
+            <field name="res_model">cadastre.boulon</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_boulon_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_boulon_view_tree"/>
+            <field name="act_window" ref="act_cadastre_boulon_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_boulon_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_boulon_view_form"/>
+            <field name="act_window" ref="act_cadastre_boulon_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_boulon_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.boulon</field>
+            <field name="report_name">cadastre.boulon.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_boulon_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.boulon,-1</field>
+            <field name="action" ref="report_boulon_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="17" id="menu_cadastre_boulon_form" icon="tryton-point" action="act_cadastre_boulon_form"/>
+
+        <!-- Croix -->
+        <record model="ir.ui.view" id="cadastre_croix_view_tree">
+            <field name="model">cadastre.croix</field>
+            <field name="type">tree</field>
+            <field name="name">croix_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_croix_view_form">
+            <field name="model">cadastre.croix</field>
+            <field name="type">form</field>
+            <field name="name">croix_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_croix_form">
+            <field name="name">Croix</field>
+            <field name="res_model">cadastre.croix</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_croix_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_croix_view_tree"/>
+            <field name="act_window" ref="act_cadastre_croix_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_croix_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_croix_view_form"/>
+            <field name="act_window" ref="act_cadastre_croix_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_croix_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.croix</field>
+            <field name="report_name">cadastre.croix.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_croix_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.croix,-1</field>
+            <field name="action" ref="report_croix_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="18" id="menu_cadastre_croix_form" icon="tryton-point" action="act_cadastre_croix_form"/>
+
+        <!-- Symbole de mitoyenneté -->
+        <record model="ir.ui.view" id="cadastre_symblim_view_tree">
+            <field name="model">cadastre.symblim</field>
+            <field name="type">tree</field>
+            <field name="name">symblim_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_symblim_view_form">
+            <field name="model">cadastre.symblim</field>
+            <field name="type">form</field>
+            <field name="name">symblim_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_symblim_form">
+            <field name="name">Symbole de mitoyenneté</field>
+            <field name="res_model">cadastre.symblim</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_symblim_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_symblim_view_tree"/>
+            <field name="act_window" ref="act_cadastre_symblim_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_symblim_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_symblim_view_form"/>
+            <field name="act_window" ref="act_cadastre_symblim_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_symblim_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.symblim</field>
+            <field name="report_name">cadastre.symblim.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_symblim_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.symblim,-1</field>
+            <field name="action" ref="report_symblim_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="19" id="menu_cadastre_symblim_form" icon="tryton-point" action="act_cadastre_symblim_form"/>
+
+        <!-- Objet ponctuel divers -->
+        <record model="ir.ui.view" id="cadastre_tpoint_view_tree">
+            <field name="model">cadastre.tpoint</field>
+            <field name="type">tree</field>
+            <field name="name">tpoint_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_tpoint_view_form">
+            <field name="model">cadastre.tpoint</field>
+            <field name="type">form</field>
+            <field name="name">tpoint_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_tpoint_form">
+            <field name="name">Objets ponctuels divers</field>
+            <field name="res_model">cadastre.tpoint</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tpoint_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_tpoint_view_tree"/>
+            <field name="act_window" ref="act_cadastre_tpoint_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tpoint_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_tpoint_view_form"/>
+            <field name="act_window" ref="act_cadastre_tpoint_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_tpoint_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.tpoint</field>
+            <field name="report_name">cadastre.tpoint.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_tpoint_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.tpoint,-1</field>
+            <field name="action" ref="report_tpoint_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="20" id="menu_cadastre_tpoint_form" icon="tryton-point" action="act_cadastre_tpoint_form"/>
+
+        <!-- Objet linéaire divers -->
+        <record model="ir.ui.view" id="cadastre_tline_view_tree">
+            <field name="model">cadastre.tline</field>
+            <field name="type">tree</field>
+            <field name="name">tline_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_tline_view_form">
+            <field name="model">cadastre.tline</field>
+            <field name="type">form</field>
+            <field name="name">tline_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_tline_form">
+            <field name="name">Objets linéaires divers</field>
+            <field name="res_model">cadastre.tline</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tline_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_tline_view_tree"/>
+            <field name="act_window" ref="act_cadastre_tline_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tline_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_tline_view_form"/>
+            <field name="act_window" ref="act_cadastre_tline_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_tline_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.tline</field>
+            <field name="report_name">cadastre.tline.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_tline_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.tline,-1</field>
+            <field name="action" ref="report_tline_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="21" id="menu_cadastre_tline_form" icon="tryton-line" action="act_cadastre_tline_form"/>
+
+        <!-- Objet surfacique divers -->
+        <record model="ir.ui.view" id="cadastre_tsurf_view_tree">
+            <field name="model">cadastre.tsurf</field>
+            <field name="type">tree</field>
+            <field name="name">tsurf_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_tsurf_view_form">
+            <field name="model">cadastre.tsurf</field>
+            <field name="type">form</field>
+            <field name="name">tsurf_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_tsurf_form">
+            <field name="name">Objets surfaciques divers</field>
+            <field name="res_model">cadastre.tsurf</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tsurf_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_tsurf_view_tree"/>
+            <field name="act_window" ref="act_cadastre_tsurf_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_tsurf_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_tsurf_view_form"/>
+            <field name="act_window" ref="act_cadastre_tsurf_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_tsurf_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.tsurf</field>
+            <field name="report_name">cadastre.tsurf.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_tsurf_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.tsurf,-1</field>
+            <field name="action" ref="report_tsurf_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_geometry" sequence="22" id="menu_cadastre_tsurf_form" icon="tryton-polygon" action="act_cadastre_tsurf_form"/>
+
+        <!-- Écriture attribut -->
+        <record model="ir.ui.view" id="cadastre_ecritatt_view_tree">
+            <field name="model">cadastre.ecritatt</field>
+            <field name="type">tree</field>
+            <field name="name">ecritatt_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="cadastre_ecritatt_view_form">
+            <field name="model">cadastre.ecritatt</field>
+            <field name="type">form</field>
+            <field name="name">ecritatt_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_cadastre_ecritatt_form">
+            <field name="name">Écriture attribut</field>
+            <field name="res_model">cadastre.ecritatt</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_ecritatt_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="cadastre_ecritatt_view_tree"/>
+            <field name="act_window" ref="act_cadastre_ecritatt_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_cadastre_ecritatt_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="cadastre_ecritatt_view_form"/>
+            <field name="act_window" ref="act_cadastre_ecritatt_form"/>
+        </record>
+
+        <record model="ir.action.report" id="report_ecritatt_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">cadastre.ecritatt</field>
+            <field name="report_name">cadastre.ecritatt.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_ecritatt_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">cadastre.ecritatt,-1</field>
+            <field name="action" ref="report_ecritatt_edit"/>
+        </record>
+
+        <menuitem parent="menu_cadastre_configuration" sequence="22" id="menu_cadastre_ecritatt_form" icon="tryton-list" action="act_cadastre_ecritatt_form"/>
+	</data>
+</tryton>

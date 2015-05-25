@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<form string="Taxation unité foncière" col="6">
+    <label name="codlot" />
+    <field name="codlot" />
+    <label name="suf" />
+    <field name="suf" />
+    <label name="codparc" />
+    <field name="codparc" />
+    <label name="ccosub" />
+    <field name="ccosub"/>
+    <label name="majposa" />
+    <field name="majposa" />
+    <label name="bisufad" />
+    <field name="bisufad" />
+    <label name="majposadep" />
+    <field name="majposadep" />
+    <label name="bisufaddep" />
+    <field name="bisufaddep" />
+    <label name="majposareg" />
+    <field name="majposareg" />
+    <label name="bisufadreg" />
+    <field name="bisufadreg" />
+    <label name="majposagcom" />
+    <field name="majposagcom" />
+    <label name="bisufadgcom" />
+    <field name="bisufadgcom" />
+    <label name="cenr" />
+    <field name="cenr" />
+</form>

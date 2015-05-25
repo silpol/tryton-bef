@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form string="Point de canevas" col="2">
+    <label name="commune" />
+    <field name="commune" />
+    <label name="idu" />
+    <field name="idu" />
+    <label name="ori" />
+    <field name="ori" />
+    <label name="can" />
+    <field name="can" widget="selection"/>
+    <label name="ppln" />
+    <field name="ppln" widget="selection"/>
+    <label name="palt" />
+    <field name="palt" widget="selection"/>
+    <label name="map" />
+    <field name="map" widget="selection"/>
+    <label name="sym" />
+    <field name="sym" widget="selection"/>
+    <notebook colspan="2">
+        <page string="MAP" col="1" id="map" >
+            <field name="image" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="ptcanv_edit" icon="tryton-executable" />
+        </page>
+    </notebook>
+</form>

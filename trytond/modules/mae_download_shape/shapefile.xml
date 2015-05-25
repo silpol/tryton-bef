@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- Protection -->
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_ramsar">
+            <field name="name">Import des sites RAMSAR</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.ramsar</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_biotope">
+            <field name="name">Import des arrêtés de protection de biotope</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.biotope</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_parcnat">
+            <field name="name">Import des parcs nationaux</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.parcnat</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_parcmarin">
+            <field name="name">Import des parcs naturels marins</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.parcmarin</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_parcreg">
+            <field name="name">Import des parcs naturels régionaux</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.parcreg</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_resreg">
+            <field name="name">Import des réserves naturelles régionales</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.resreg</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_resnat">
+            <field name="name">Import des réserves naturelles nationales</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.resnat</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_rescorse">
+            <field name="name">Import des réserves naturelles de Corse</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.rescorse</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_resnatcf">
+            <field name="name">Import des réserves nationales de chasse et faune sauvage</field>
+            <field name="wiz_name">mae_download_shape.mae_protection.resnatcf</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_sic">
+          <field name="name">Import des sites d'importance communautaire</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.sic</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_zps">
+          <field name="name">Import des zones de protection spéciale</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.zps</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_bio">
+          <field name="name">Import des réserves de biosphère</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.bio</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_littoral">
+          <field name="name">Import des terrains des conservatoires du littoral</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.littoral</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_cen">
+          <field name="name">Import des terrains des conservatoires d'espaces naturels</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.cen</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_znieff1">
+          <field name="name">Import des ZNIEFF type 1</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.znieff1</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_znieff2">
+          <field name="name">Import des ZNIEFF type 2</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.znieff2</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_znieff1_mer">
+          <field name="name">Import des ZNIEFF type 1 (mer)</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.znieff1Mer</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_znieff2_mer">
+          <field name="name">Import des ZNIEFF type 2 (mer)</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.znieff2Mer</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_resbio">
+          <field name="name">Import des réserves biologiques</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.resbio</field>
+        </record>
+        <record model="ir.action.wizard" id="act_mae_download_shape_mae_protection_zico">
+          <field name="name">Import des ZICO</field>
+          <field name="wiz_name">mae_download_shape.mae_protection.zico</field>
+        </record>        
+        <record model="ir.ui.view" id="mae_protection_done_view_form">
+            <field name="model">mae_download_shape.mae_protection.done</field>
+            <field name="type">form</field>
+            <field name="name">protection_done</field>
+        </record>
+        <record model="ir.ui.view" id="mae_protection_file_view_form">
+            <field name="model">mae_download_shape.mae_protection.file</field>
+            <field name="type">form</field>
+            <field name="name">protection_file</field>
+        </record>
+        <record model="ir.ui.view" id="shapefile_file_view_form">
+            <field name="model">mae_download_shape.shapefile.file</field>
+            <field name="type">form</field>
+            <field name="name">shapefile_file</field>
+        </record>
+        <record model="ir.ui.view" id="shapefile_done_view_form">
+            <field name="model">mae_download_shape.shapefile.done</field>
+            <field name="type">form</field>
+            <field name="name">shapefile_done</field>
+        </record>        
+        
+        <!-- REGION -->
+        <record model="ir.action.wizard" id="act_mae_download_shape_region">
+          <field name="name">Import des Régions françaises</field>
+          <field name="wiz_name">mae_download_shape.region</field>
+        </record>
+        <record model="ir.ui.view" id="region_file_view_form">
+            <field name="model">mae_download_shape.region.file</field>
+            <field name="type">form</field>
+            <field name="name">region_file</field>
+        </record>
+        <record model="ir.ui.view" id="region_done_view_form">
+            <field name="model">mae_download_shape.region.done</field>
+            <field name="type">form</field>
+            <field name="name">region_done</field>
+        </record>
+        
+        <!-- DEPARTEMENT -->
+        <record model="ir.action.wizard" id="act_mae_download_shape_departement">
+          <field name="name">Import des Départements français</field>
+          <field name="wiz_name">mae_download_shape.departement</field>
+        </record>
+        <record model="ir.ui.view" id="departement_file_view_form">
+            <field name="model">mae_download_shape.departement.file</field>
+            <field name="type">form</field>
+            <field name="name">departement_file</field>
+        </record>
+        <record model="ir.ui.view" id="departement_done_view_form">
+            <field name="model">mae_download_shape.departement.done</field>
+            <field name="type">form</field>
+            <field name="name">departement_done</field>
+        </record>
+        
+        <!-- COMMUNE -->
+        <record model="ir.action.wizard" id="act_mae_download_shape_commune">
+          <field name="name">Import des Communes françaises</field>
+          <field name="wiz_name">mae_download_shape.commune</field>
+        </record>
+        <record model="ir.ui.view" id="commune_file_view_form">
+            <field name="model">mae_download_shape.commune.file</field>
+            <field name="type">form</field>
+            <field name="name">commune_file</field>
+        </record>
+        <record model="ir.ui.view" id="commune_done_view_form">
+            <field name="model">mae_download_shape.commune.done</field>
+            <field name="type">form</field>
+            <field name="name">commune_done</field>
+        </record>
+        
+        <!-- CANTON -->
+        <record model="ir.action.wizard" id="act_mae_download_shape_canton">
+          <field name="name">Import des Cantons français</field>
+          <field name="wiz_name">mae_download_shape.canton</field>
+        </record>
+        <record model="ir.ui.view" id="canton_file_view_form">
+            <field name="model">mae_download_shape.canton.file</field>
+            <field name="type">form</field>
+            <field name="name">canton_file</field>
+        </record>
+        <record model="ir.ui.view" id="canton_done_view_form">
+            <field name="model">mae_download_shape.canton.done</field>
+            <field name="type">form</field>
+            <field name="name">canton_done</field>
+        </record>                
+
+    </data>
+</tryton>

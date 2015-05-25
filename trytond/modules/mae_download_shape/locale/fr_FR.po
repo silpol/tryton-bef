@@ -1,0 +1,474 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "field:download_shape.clc.done,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:download_shape.clc.file,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:download_shape.clc.file,shapefile:"
+msgid "Données à importer"
+msgstr "Données à importer"
+
+msgctxt "field:download_shape.clc.file,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "field:download_shape.protection.done,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:download_shape.protection.file,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:download_shape.protection.file,shapefile:"
+msgid "Données à importer"
+msgstr "Données à importer"
+
+msgctxt "field:download_shape.protection.file,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "model:download_shape.clc.done,name:"
+msgid "Import Done"
+msgstr "Import réalisé"
+
+msgctxt "model:download_shape.clc.file,name:"
+msgid "Import File"
+msgstr "Importer le fichier"
+
+msgctxt "model:download_shape.protection.done,name:"
+msgid "Import Done"
+msgstr "Import réalisé"
+
+msgctxt "model:download_shape.protection.file,name:"
+msgid "Import File"
+msgstr "Importer le fichier"
+
+msgctxt "model:ir.action,name:act_download_shape_clc"
+msgid "Import de CLC"
+msgstr "Import Corine Land Cover"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_bio"
+msgid "Import des réserves de biosphère"
+msgstr "Import des réserves de biosphère"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_biotope"
+msgid "Import des arrêtés de protection de biotope"
+msgstr "Import des arrêtés de protection de biotope"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_cen"
+msgid "Import des terrains des conservatoires d'espaces naturels"
+msgstr "Import des terrains des conservatoires d'espaces naturels"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_littoral"
+msgid "Import des terrains des conservatoires du littoral"
+msgstr "Import des terrains des conservatoires du littoral"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_parcmarin"
+msgid "Import des parcs naturels marins"
+msgstr "Import des parcs naturels marins"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_parcnat"
+msgid "Import des parcs nationaux"
+msgstr "Import des parcs nationaux"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_parcreg"
+msgid "Import des parcs naturels régionaux"
+msgstr "Import des parcs naturels régionaux"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_ramsar"
+msgid "Import des sites RAMSAR"
+msgstr "Import des sites RAMSAR"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_resbio"
+msgid "Import des réserves biologiques"
+msgstr "Import des réserves biologiques"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_rescorse"
+msgid "Import des réserves naturelles de Corse"
+msgstr "Import des réserves naturelles de Corse"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_resnat"
+msgid "Import des réserves naturelles nationales"
+msgstr "Import des réserves naturelles nationales"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_resnatcf"
+msgid "Import des réserves nationales de chasse et faune sauvage"
+msgstr "Import des réserves nationales de chasse et faune sauvage"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_resreg"
+msgid "Import des réserves naturelles régionales"
+msgstr "Import des réserves naturelles régionales"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_sic"
+msgid "Import des sites d'importance communautaire"
+msgstr "Import des sites d'importance communautaire"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_zico"
+msgid "Import des ZICO"
+msgstr "Import des ZICO"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_znieff1"
+msgid "Import des ZNIEFF type 1"
+msgstr "Import des ZNIEFF type 1"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_znieff2"
+msgid "Import des ZNIEFF type 2"
+msgstr "Import des ZNIEFF type 2"
+
+msgctxt "model:ir.action,name:act_download_shape_protection_zps"
+msgid "Import des zones de protection spéciale"
+msgstr "Import des zones de protection spéciale"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data"
+msgid "Data"
+msgstr "Données"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_bio"
+msgid "Import des réserves de biosphère"
+msgstr "Import des réserves de biosphère"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_biotope"
+msgid "Import des arrêtés de protection de biotope"
+msgstr "Import des arrêtés de protection de biotope"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_cen"
+msgid "Import des terrains des conservatoires d'espaces naturels"
+msgstr "Import des terrains des conservatoires d'espaces naturels"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_clc"
+msgid "Import de CLC"
+msgstr "Import Corine Land Cover"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_littoral"
+msgid "Import des terrains des conservatoires du littoral"
+msgstr "Import des terrains des conservatoires du littoral"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_parcmarin"
+msgid "Import des parcs naturels marins"
+msgstr "Import des parcs naturels marins"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_parcnat"
+msgid "Import des parcs nationaux"
+msgstr "Import des parcs nationaux"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_parcreg"
+msgid "Import des parcs naturels régionaux"
+msgstr "Import des parcs naturels régionaux"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_ramsar"
+msgid "Import des sites RAMSAR"
+msgstr "Import des sites RAMSAR"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_resbio"
+msgid "Import des réserves biologiques"
+msgstr "Import des réserves biologiques"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_rescorse"
+msgid "Import des réserves naturelles de Corse"
+msgstr "Import des réserves naturelles de Corse"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_resnat"
+msgid "Import des réserves naturelles nationales"
+msgstr "Import des réserves naturelles nationales"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_resnatcf"
+msgid "Import des réserves nationales de chasse et faune sauvage"
+msgstr "Import des réserves nationales de chasse et faune sauvage"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_resreg"
+msgid "Import des réserves naturelles régionales"
+msgstr "Import des réserves naturelles régionales"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_sic"
+msgid "Import des sites d'importance communautaire"
+msgstr "Import des sites d'importance communautaire"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_zico"
+msgid "Import des ZICO"
+msgstr "Import des ZICO"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_znieff1"
+msgid "Import des ZNIEFF type 1"
+msgstr "Import des ZNIEFF type 1"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_znieff2"
+msgid "Import des ZNIEFF type 2"
+msgstr "Import des ZNIEFF type 2"
+
+msgctxt "model:ir.ui.menu,name:menu_download_shape_data_zps"
+msgid "Import des zones de protection spéciale"
+msgstr "Import des zones de protection spéciale"
+
+msgctxt "view:download_shape.clc.done:"
+msgid "Import terminé"
+msgstr "Import terminé"
+
+msgctxt "view:download_shape.clc.done:"
+msgid "Les données ont été importées."
+msgstr "Les données ont été importées."
+
+msgctxt "view:download_shape.clc.file:"
+msgid "Sélection des données à importer"
+msgstr "Sélection des données à importer"
+
+msgctxt "view:download_shape.protection.done:"
+msgid "Import terminé"
+msgstr "Import terminé"
+
+msgctxt "view:download_shape.protection.done:"
+msgid "Les données ont été importées."
+msgstr "Les données ont été importées."
+
+msgctxt "view:download_shape.protection.file:"
+msgid "Sélection des données à importer"
+msgstr "Sélection des données à importer"
+
+msgctxt "wizard_button:download_shape.clc,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.clc,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.clc,start,import_clc:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.bio,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.bio,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.bio,start,import_bio:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.biotope,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.biotope,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.biotope,start,import_biotope:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.cen,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.cen,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.cen,start,import_cen:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.littoral,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.littoral,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt ""
+"wizard_button:download_shape.protection.littoral,start,import_littoral:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.parcmarin,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.parcmarin,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt ""
+"wizard_button:download_shape.protection.parcmarin,start,import_parcmarin:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.parcnat,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.parcnat,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.parcnat,start,import_parcnat:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.parcreg,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.parcreg,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.parcreg,start,import_parcreg:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.ramsar,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.ramsar,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.ramsar,start,import_ramsar:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.resbio,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.resbio,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.resbio,start,import_resbio:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.rescorse,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.rescorse,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt ""
+"wizard_button:download_shape.protection.rescorse,start,import_rescorse:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.resnat,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.resnat,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.resnat,start,import_resnat:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.resnatcf,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.resnatcf,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt ""
+"wizard_button:download_shape.protection.resnatcf,start,import_resnatcf:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.resreg,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.resreg,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.resreg,start,import_resreg:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.sic,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.sic,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.sic,start,import_sic:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.zico,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.zico,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.zico,start,import_zico:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.znieff1,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.znieff1,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.znieff1,start,import_znieff1:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.znieff2,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.znieff2,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.znieff2,start,import_znieff2:"
+msgid "Importer"
+msgstr "Importer"
+
+msgctxt "wizard_button:download_shape.protection.zps,done,end:"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "wizard_button:download_shape.protection.zps,start,end:"
+msgid "Annuler"
+msgstr "Annuler"
+
+msgctxt "wizard_button:download_shape.protection.zps,start,import_zps:"
+msgid "Importer"
+msgstr "Importer"

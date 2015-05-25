@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<tree string="Invariant">
+    <field name="codlot" />
+    <field name="invar" />
+    <field name="codparc" />
+    <field name="codcomm" />
+    <field name="dnubat" />
+    <field name="ndesc" />
+    <field name="dniv" />
+    <field name="dpor" />
+    <field name="ccoriv" />
+    <field name="ccovoi" />
+    <field name="dnvoiri" />
+    <field name="dindic" />
+    <field name="ccocif" />
+    <field name="dvoilib" />
+    <field name="voie" />
+    <field name="cenr" />
+</tree>

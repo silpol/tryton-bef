@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<tree string="Dépendance de pev">
+    <field name="codlot" />
+    <field name="invar" />
+    <field name="dnupev" />
+    <field name="pev" />
+    <field name="dnudes" />
+    <field name="dsudep" />
+    <field name="cconad" />
+    <field name="asitet" />
+    <field name="dmatgm" />
+    <field name="dmatto" />
+    <field name="detent" />
+    <field name="geaulc" />
+    <field name="gelecl" />
+    <field name="gchclc" />
+    <field name="dnbbai" />
+    <field name="dnbdou" />
+    <field name="dnblav" />
+    <field name="dnbwc" />
+    <field name="deqtlc" />
+    <field name="dcimlc" />
+    <field name="dcetde" />
+    <field name="dcspde" />
+    <field name="cenr" />
+</tree>

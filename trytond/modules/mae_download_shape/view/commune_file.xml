@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<form string="Sélection des données à importer" col="2">
+    <label name="shapefile" />
+    <field name="shapefile" />
+</form>

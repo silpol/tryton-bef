@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!-- This file describes the menu tree. -->
+<tryton>
+    <data>
+        <!-- icône -->
+        <record model="ir.ui.icon" id="mae_download_shape_data">
+            <field name="name">tryton-data</field>
+            <field name="path">icons/tryton-data.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_inpn">
+            <field name="name">tryton-inpn</field>
+            <field name="path">icons/tryton-inpn.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_brgm">
+            <field name="name">tryton-brgm</field>
+            <field name="path">icons/tryton-brgm.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_sandre">
+            <field name="name">tryton-sandre</field>
+            <field name="path">icons/tryton-sandre.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_ifn">
+            <field name="name">tryton-ifn</field>
+            <field name="path">icons/tryton-ifn.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_irstea">
+            <field name="name">tryton-irstea</field>
+            <field name="path">icons/tryton-irstea.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_insee">
+            <field name="name">tryton-insee</field>
+            <field name="path">icons/tryton-insee.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_datagouvfr">
+            <field name="name">tryton-datagouvfr</field>
+            <field name="path">icons/tryton-datagouvfr.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tryton_eau">
+            <field name="name">tryton-eau</field>
+            <field name="path">icons/tryton-eau.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="france_icon">
+            <field name="name">tryton-france</field>
+            <field name="path">icons/tryton-france.svg</field>
+        </record>
+
+        <!-- Top level -->
+        <menuitem parent="ir.menu_administration"
+            sequence="1"
+            name="Data" id="menu_mae_download_shape_data"
+            icon="tryton-data"/>
+
+        <!-- INPN -->
+        <menuitem parent="menu_mae_download_shape_data"
+            sequence="1"
+            name="INPN (http://inpn.mnhn.fr/)" 
+            id="menu_mae_download_shape_data_inpn"
+            icon="tryton-inpn"/>        
+            
+        <!-- FRANCE -->
+        <menuitem parent="menu_mae_download_shape_data"
+            sequence="10"
+            name="FRANCE (http://www.data.gouv.fr/)" 
+            id="menu_mae_download_shape_data_france"
+            icon="tryton-france"/>                       
+
+        <!-- Data -->
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_ramsar"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_ramsar"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_biotope"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_biotope"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_parcnat"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_parcnat"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_parcmarin"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_parcmarin"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_parcreg"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_parcreg"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_resreg"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_resreg"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_resnat"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_resnat"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_rescorse"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_rescorse"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_resnatcf"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_resnatcf"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_sic"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_sic"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_zps"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_zps"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_bio"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_bio"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_littoral"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_littoral"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_cen"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_cen"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_znieff1"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_znieff1"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_znieff2"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_znieff2"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_znieff1_mer"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_znieff1_mer"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_znieff2_mer"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_znieff2_mer"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_resbio"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_resbio"/>
+        <menuitem  parent="menu_mae_download_shape_data_inpn"
+                id="menu_mae_download_shape_data_zico"
+                icon="tryton-list"
+                action="act_mae_download_shape_mae_protection_zico"/>
+        
+                        
+        <menuitem  parent="menu_mae_download_shape_data_france"
+                id="menu_mae_download_shape_data_region"
+                icon="tryton-list"
+                action="act_mae_download_shape_region"/>
+        <menuitem  parent="menu_mae_download_shape_data_france"
+                id="menu_mae_download_shape_data_departement"
+                icon="tryton-list"
+                action="act_mae_download_shape_departement"/>
+        <menuitem  parent="menu_mae_download_shape_data_france"
+                id="menu_mae_download_shape_data_commune"
+                icon="tryton-list"
+                action="act_mae_download_shape_commune"/>
+        <menuitem  parent="menu_mae_download_shape_data_france"
+                id="menu_mae_download_shape_data_canton"
+                icon="tryton-list"
+                action="act_mae_download_shape_canton"/>
+                        
+    </data>
+</tryton>

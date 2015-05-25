@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form string="Propriétaire" col="6">
+    <label name="codlot" />
+    <field name="codlot" />
+    <label name="pdl" />
+    <field name="pdl" />
+    <label name="codparc" />
+    <field name="codparc" />
+    <label name="codparca" />
+    <field name="codparca"/>
+    <label name="dnupdl" />
+    <field name="dnupdl" />
+    <label name="ccoprea" />
+    <field name="ccoprea" />
+    <label name="ccoseca" />
+    <field name="ccoseca" />
+    <label name="dnuplaa" />
+    <field name="dnuplaa" />
+    <label name="ccocif" />
+    <field name="ccocif" />
+    <label name="cenr" />
+    <field name="cenr" />
+</form>
