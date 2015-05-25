@@ -37,8 +37,7 @@ __all__ = ['Region', 'RegionQGis', 'GenerateR']
 class Region(Mapable, ModelSQL, ModelView):
     u'Région Française'
     __name__ = 'portrait.region'
-
-    _order = [('name', 'ASC')]
+    _rec_name ='nom'
 
     name = fields.Function(
             fields.Char(
@@ -49,7 +48,14 @@ class Region(Mapable, ModelSQL, ModelView):
         
     def get_name(self, ids):
         u'Displayed name in the form: name (region code)'
-        return '%s (%s)' % (self.nom, self.code)
+        return '%s (%s)' % (self.nom, self.code)       
+        
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        regions = cls.search([('code',) + clause[1:]], order=[])
+        if regions:
+            return [('id', 'in', [region.id for region in regions])]
+        return [('nom',) + clause[1:]]        
                 
     nom = fields.Char(
             string=u'Région',
@@ -68,7 +74,7 @@ class Region(Mapable, ModelSQL, ModelView):
         )
     geom = fields.MultiPolygon(
             string=u'Géométrie',
-            srid=4326,
+            srid=2154,
             select=True
         )
     region_image = fields.Function(
@@ -81,16 +87,16 @@ class Region(Mapable, ModelSQL, ModelView):
             string=u'Carte',
             help=u'Régions'
         )
+    active = fields.Boolean(
+            'Active'
+        )
         
+    @staticmethod
+    def default_active():
+        return True
+            
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.4)
-
-    @classmethod
-    def search_rec_name(cls, name, clause):
-        regions = cls.search([('code',) + clause[1:]], order=[])
-        if regions:
-            return [('id', 'in', [region.id for region in regions])]
-        return [('nom',) + clause[1:]]
 
     def get_image(self, ids):
         return self._get_image('region_image.qgs', 'carte')

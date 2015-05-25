@@ -52,9 +52,8 @@ MOTIF = [
 class Commune(Mapable, ModelSQL, ModelView):
     u'Commune Française'
     __name__ = 'portrait.commune'
-
-    _order = [('name', 'ASC'), ('postal', 'ASC')]
-
+    _rec_name ='nom'
+    
     name = fields.Function(
             fields.Char(
                 'Name',
@@ -66,13 +65,16 @@ class Commune(Mapable, ModelSQL, ModelView):
         u'Displayed name in the form: name (postal code)'
         return '%s (%s)' % (self.nom, self.postal)
         
+    def get_rec_name(self, ids):
+        u'Displayed name in the form: name (postal code)'
+        return '%s (%s)' % (self.nom, self.postal)
+        
     @classmethod
     def search_rec_name(cls, name, clause):
         towns = cls.search([('postal',) + clause[1:]], order=[])
         if towns:
             return [('id', 'in', [town.id for town in towns])]
         return [('nom',) + clause[1:]]
-
                 
     nom = fields.Char(
             string='Nom',
@@ -102,6 +104,12 @@ class Commune(Mapable, ModelSQL, ModelView):
             string=u'Département',
             help=u'Département de la commune',
             select=True
+        )
+    canton = fields.One2Many(
+            'portrait.canton',
+            'commune',
+            string='Canton',
+            help='Nom du canton',
         )
     population = fields.One2Many(
             'portrait.population',
@@ -161,9 +169,13 @@ class Commune(Mapable, ModelSQL, ModelView):
             help=u'Date de classement',
             states={'invisible': Not(Bool(Eval('montagne')))},
         )
+    version = fields.Date(
+            string=u'Date de version',
+            help=u'Date de version',
+        )
     geom = fields.MultiPolygon(
             string=u'Géométrie',
-            srid=4326,
+            srid=2154,
             select=True
         )
     commune_image = fields.Function(
@@ -175,7 +187,14 @@ class Commune(Mapable, ModelSQL, ModelView):
     commune_map = fields.Binary(
             string=u'Carte',
             help=u'Communes'
+        )        
+    active = fields.Boolean(
+            'Active'
         )
+        
+    @staticmethod
+    def default_active():
+        return True
         
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.4)
@@ -189,10 +208,11 @@ class Commune(Mapable, ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(Commune, cls).__setup__()
+        cls._order.insert(0, ('nom', 'ASC'))
         cls._buttons.update({           
             'commune_edit': {},
             'generate': {},
-        })
+        })        
                
     @classmethod
     @ModelView.button_action('portrait.report_commune_edit')
@@ -204,7 +224,7 @@ class Commune(Mapable, ModelSQL, ModelView):
     def generate(cls, records):
         for record in records:
             if record.nom is None:
-                continue                                              
+                continue                                                  
             cls.write([record], {'commune_map': cls.get_map(record, 'map')})
 
 class CommuneQGis(QGis):

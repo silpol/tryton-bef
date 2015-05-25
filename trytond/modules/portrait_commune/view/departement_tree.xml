@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
-<tree string="Département">    
+<tree string="Département">
+    <field name="region"/>
     <field name="name"/>
     <field name="code"/>
     <field name="version"/>
+    <field name="active"/>
 </tree>

@@ -49,32 +49,49 @@ class Population(ModelSQL, ModelView):
         cls._error_messages.update({'write_population':
                 u'Vous ne pouvez pas modifier la commune d\'une population !'})
 
-    annee = fields.Char(u'Année', help=u'Les chiffres de population '
+    annee = fields.Char(
+            string=u'Année',
+            help=u'Les chiffres de population '
             u'présentés correspondent à l ensemble des personnes dont la '
-            u'résidence habituelle se situe sur le territoire considéré')
-
-    total = fields.Float('Population totale', help=u'Population totale de '
-            'la commune')
-
-    pop_0014 = fields.Float(u'0 à 14 ans', help=u'Population de '
-            u'0 à 14 ans de la commune')
-
-    pop_1529 = fields.Float(u'15 à 29 ans',
-            help=u'Population de 15 à 29 ans de la commune')
-
-    pop_3044 = fields.Float(u'30 à 44 ans',
-            help=u'Population de 30 à 44 ans de la commune')
-
-    pop_4559 = fields.Float(u'45 à 59 ans', help=u'Population '
-            u'de 45 à 59 ans de la commune')
-
-    pop_6074 = fields.Float(u'60 à 74 ans',
-            help=u'Population de 60 à 74 ans de la commune')
-
-    pop_75p = fields.Float(u'75 ans et plus',
-            help=u'Population de 75 ans et plus de la commune')
-
-    com = fields.Many2One('portrait.commune', ondelete='CASCADE',
-            string='com', select=True)
+            u'résidence habituelle se situe sur le territoire considéré'
+        )
+    total = fields.Float(
+            string=u'Population totale',
+            help=u'Population totale de la commune',
+        )
+    pop_0014 = fields.Float(
+            string=u'0 à 14 ans',
+            help=u'Population de 0 à 14 ans de la commune'
+        )
+    pop_1529 = fields.Float(
+            string=u'15 à 29 ans',
+            help=u'Population de 15 à 29 ans de la commune'
+        )
+    pop_3044 = fields.Float(
+            string=u'30 à 44 ans',
+            help=u'Population de 30 à 44 ans de la commune'
+        )
+    pop_4559 = fields.Float(
+            string=u'45 à 59 ans',
+            help=u'Population de 45 à 59 ans de la commune'
+        )
+    pop_6074 = fields.Float(
+            string=u'60 à 74 ans',
+            help=u'Population de 60 à 74 ans de la commune'
+        )
+    pop_75p = fields.Float(
+            string=u'75 ans et plus',
+            help=u'Population de 75 ans et plus de la commune'
+        )
+    com = fields.Many2One(
+            'portrait.commune',
+            ondelete='CASCADE',
+            string='com',
+            select=True
+        )            
+    version = fields.Date(
+            string=u'Date de version',
+            help=u'Date de version',
+        )
 
 

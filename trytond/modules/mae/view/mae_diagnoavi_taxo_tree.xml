@@ -7,5 +7,6 @@
     <field name="effectif"/>
     <field name="statut"/>
     <field name="ethologie"/>
+    <field name="userid" tree_invisible="1"/>
 </tree>
 

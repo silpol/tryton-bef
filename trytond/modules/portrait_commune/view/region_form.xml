@@ -5,7 +5,9 @@
     <label name="code"/>
     <field name="code"/>
     <label name="version"/>
-    <field name="version"/> 
+    <field name="version"/>
+    <label name="active"/>
+    <field name="active"/> 
     <notebook>
         <page string="Map" id="map" col="4">
             <field name="region_map" widget="image" img_width="640" img_height="480" colspan="4"/>

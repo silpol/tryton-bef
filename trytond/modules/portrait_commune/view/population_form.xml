@@ -15,5 +15,7 @@
     <label name="pop_6074"/>
     <field name="pop_6074"/>  
     <label name="pop_75p"/>
-    <field name="pop_75p"/>    
+    <field name="pop_75p"/>
+    <label name="version"/>
+    <field name="version"/>
 </form>

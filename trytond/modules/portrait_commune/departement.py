@@ -37,20 +37,32 @@ __all__ = ['Departement', 'DepartementQGis', 'GenerateD']
 class Departement(Mapable, ModelSQL, ModelView):
     u'Département Française'
     __name__ = 'portrait.departement'
-
-    _order = [('name', 'ASC')]
+    _rec_name ='nom'
+    
+    region = fields.Many2One(
+            'portrait.region',
+            string=u'Région',
+            help=u'région',
+        )
 
     name = fields.Function(
             fields.Char(
                 'Name',
                 readonly=True),
             'get_name'
-        )
+        )             
         
     def get_name(self, ids):
         u'Displayed name in the form: name (departement code)'
         return '%s (%s)' % (self.nom, self.code)
-                
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        departements = cls.search([('code',) + clause[1:]], order=[])
+        if departements:
+            return [('id', 'in', [departement.id for departement in departements])]
+        return [('nom',) + clause[1:]]
+                        
     nom = fields.Char(
             string=u'Département',
             help=u'Département français',
@@ -68,7 +80,7 @@ class Departement(Mapable, ModelSQL, ModelView):
         )
     geom = fields.MultiPolygon(
             string=u'Géométrie',
-            srid=4326,
+            srid=2154,
             select=True
         )
     departement_image = fields.Function(
@@ -81,16 +93,16 @@ class Departement(Mapable, ModelSQL, ModelView):
             string=u'Carte',
             help=u'Départements'
         )
+    active = fields.Boolean(
+            'Active'
+        )
         
+    @staticmethod
+    def default_active():
+        return True
+            
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 0.4)
-
-    @classmethod
-    def search_rec_name(cls, name, clause):
-        departements = cls.search([('code',) + clause[1:]], order=[])
-        if departements:
-            return [('id', 'in', [departement.id for departement in departements])]
-        return [('nom',) + clause[1:]]
 
     def get_image(self, ids):
         return self._get_image('departement_image.qgs', 'carte')

@@ -2,11 +2,11 @@
 <tryton>
     <data>
         <record model="ir.ui.icon" id="portrait_icon">
-            <field name="name">tryton-portrait</field>
-            <field name="path">icons/tryton-portrait.svg</field>
+            <field name="name">tryton-commune</field>
+            <field name="path">icons/tryton-commune.svg</field>
         </record>
 
-        <menuitem name="Portrait" sequence="13" parent="ir.menu_administration" id="menu_portrait_admin" icon="tryton-portrait"/>
+        <menuitem name="France" sequence="13" parent="ir.menu_administration" id="menu_portrait_admin" icon="tryton-commune"/>
 
         <!-- Communes -->
         <record model="ir.ui.view" id="commune_view_tree">

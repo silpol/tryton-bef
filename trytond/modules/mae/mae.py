@@ -121,8 +121,8 @@ class diagno(ModelSQL, ModelView):
             return datetime(self.date.year+5,5,15)
 
     territoire = fields.Char(
-            string=u'Territoire',
-            help=u'Nom du territoire'
+            string=u'Nom du marais',
+            help=u'Nom du territoire/Nom du marais'
         )      
     owner = fields.Many2One(
             'party.party',
@@ -1384,6 +1384,19 @@ class diagnoArbreIsole(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
 
 class diagnoEnvahissante(ModelSQL, ModelView):
     u'diagno - Envahissante'
@@ -1413,11 +1426,234 @@ class diagnoEnvahissante(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
 
 class diagnoOdo(ModelSQL, ModelView):
     u'diagno - Odonate'
     __name__ = 'mae.diagnoodonate-taxinomie.taxinomie'
     _table = 'diagno_odonate_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 6), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
+
+class diagnoSaute(ModelSQL, ModelView):
+    u'diagno - Sauterelle - Criquets'
+    __name__ = 'mae.diagnosauterelle-taxinomie.taxinomie'
+    _table = 'diagno_saute_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 7), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
+
+class diagnoColeo(ModelSQL, ModelView):
+    u'diagno - Coléoptères'
+    __name__ = 'mae.diagnocoleo-taxinomie.taxinomie'
+    _table = 'diagno_coleo_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 8), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
+
+class diagnoGuepe(ModelSQL, ModelView):
+    u'diagno - Guêpes'
+    __name__ = 'mae.diagnoguepe-taxinomie.taxinomie'
+    _table = 'diagno_guepe_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 9), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
+
+class diagnoLepido(ModelSQL, ModelView):
+    u'diagno - Lépidoptères'
+    __name__ = 'mae.diagnolepido-taxinomie.taxinomie'
+    _table = 'diagno_lepido_rel'
+
+    diagno = fields.Many2One(
+            'mae.diagno',
+            string=u'Diagnostic',
+            help=u'Diagnostic',
+            ondelete='CASCADE',
+            required=True
+        )
+    taxinomie = fields.Many2One(
+            'taxinomie.taxinomie',
+            string=u'Taxon',
+            help=u'Taxon',
+            ondelete='CASCADE',
+            required=True,
+            domain=[('code', '=', 10), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+        )
+    liste = fields.Boolean(
+            string=u'Liste personnelle',
+            help=u'liste restreinte à l\'utlisateur connectée'
+        )
+    photo = fields.Binary(
+            string=u'Photo',
+            help=u'Photo',
+        )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
+
+class diagnoAraignee(ModelSQL, ModelView):
+    u'diagno - Araignées'
+    __name__ = 'mae.diagnoaraignee-taxinomie.taxinomie'
+    _table = 'diagno_araignee_rel'
 
     diagno = fields.Many2One(
             'mae.diagno',
@@ -1442,11 +1678,24 @@ class diagnoOdo(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
 
-class diagnoSaute(ModelSQL, ModelView):
-    u'diagno - Sauterelle - Criquets'
-    __name__ = 'mae.diagnosauterelle-taxinomie.taxinomie'
-    _table = 'diagno_saute_rel'
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
+
+class diagnoAquatique(ModelSQL, ModelView):
+    u'diagno - Insectes aquatiques'
+    __name__ = 'mae.diagnoaquatique-taxinomie.taxinomie'
+    _table = 'diagno_aquatique_rel'
 
     diagno = fields.Many2One(
             'mae.diagno',
@@ -1471,151 +1720,19 @@ class diagnoSaute(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
-
-class diagnoColeo(ModelSQL, ModelView):
-    u'diagno - Coléoptères'
-    __name__ = 'mae.diagnocoleo-taxinomie.taxinomie'
-    _table = 'diagno_coleo_rel'
-
-    diagno = fields.Many2One(
-            'mae.diagno',
-            string=u'Diagnostic',
-            help=u'Diagnostic',
-            ondelete='CASCADE',
-            required=True
-        )
-    taxinomie = fields.Many2One(
-            'taxinomie.taxinomie',
-            string=u'Taxon',
-            help=u'Taxon',
-            ondelete='CASCADE',
-            required=True,
-            domain=[('code', '=', 13), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
-        )
-    liste = fields.Boolean(
-            string=u'Liste personnelle',
-            help=u'liste restreinte à l\'utlisateur connectée'
-        )
-    photo = fields.Binary(
-            string=u'Photo',
-            help=u'Photo',
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
         )
 
-class diagnoGuepe(ModelSQL, ModelView):
-    u'diagno - Guêpes'
-    __name__ = 'mae.diagnoguepe-taxinomie.taxinomie'
-    _table = 'diagno_guepe_rel'
-
-    diagno = fields.Many2One(
-            'mae.diagno',
-            string=u'Diagnostic',
-            help=u'Diagnostic',
-            ondelete='CASCADE',
-            required=True
-        )
-    taxinomie = fields.Many2One(
-            'taxinomie.taxinomie',
-            string=u'Taxon',
-            help=u'Taxon',
-            ondelete='CASCADE',
-            required=True,
-            domain=[('code', '=', 14), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
-        )
-    liste = fields.Boolean(
-            string=u'Liste personnelle',
-            help=u'liste restreinte à l\'utlisateur connectée'
-        )
-    photo = fields.Binary(
-            string=u'Photo',
-            help=u'Photo',
-        )
-
-class diagnoLepido(ModelSQL, ModelView):
-    u'diagno - Lépidoptères'
-    __name__ = 'mae.diagnolepido-taxinomie.taxinomie'
-    _table = 'diagno_lepido_rel'
-
-    diagno = fields.Many2One(
-            'mae.diagno',
-            string=u'Diagnostic',
-            help=u'Diagnostic',
-            ondelete='CASCADE',
-            required=True
-        )
-    taxinomie = fields.Many2One(
-            'taxinomie.taxinomie',
-            string=u'Taxon',
-            help=u'Taxon',
-            ondelete='CASCADE',
-            required=True,
-            domain=[('code', '=', 15), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
-        )
-    liste = fields.Boolean(
-            string=u'Liste personnelle',
-            help=u'liste restreinte à l\'utlisateur connectée'
-        )
-    photo = fields.Binary(
-            string=u'Photo',
-            help=u'Photo',
-        )
-
-class diagnoAraignee(ModelSQL, ModelView):
-    u'diagno - Araignées'
-    __name__ = 'mae.diagnoaraignee-taxinomie.taxinomie'
-    _table = 'diagno_araignee_rel'
-
-    diagno = fields.Many2One(
-            'mae.diagno',
-            string=u'Diagnostic',
-            help=u'Diagnostic',
-            ondelete='CASCADE',
-            required=True
-        )
-    taxinomie = fields.Many2One(
-            'taxinomie.taxinomie',
-            string=u'Taxon',
-            help=u'Taxon',
-            ondelete='CASCADE',
-            required=True,
-            domain=[('code', '=', 16), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
-        )
-    liste = fields.Boolean(
-            string=u'Liste personnelle',
-            help=u'liste restreinte à l\'utlisateur connectée'
-        )
-    photo = fields.Binary(
-            string=u'Photo',
-            help=u'Photo',
-        )
-
-class diagnoAquatique(ModelSQL, ModelView):
-    u'diagno - Insectes aquatiques'
-    __name__ = 'mae.diagnoaquatique-taxinomie.taxinomie'
-    _table = 'diagno_aquatique_rel'
-
-    diagno = fields.Many2One(
-            'mae.diagno',
-            string=u'Diagnostic',
-            help=u'Diagnostic',
-            ondelete='CASCADE',
-            required=True
-        )
-    taxinomie = fields.Many2One(
-            'taxinomie.taxinomie',
-            string=u'Taxon',
-            help=u'Taxon',
-            ondelete='CASCADE',
-            required=True,
-            domain=[('code', '=', 17), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
-        )
-    liste = fields.Boolean(
-            string=u'Liste personnelle',
-            help=u'liste restreinte à l\'utlisateur connectée'
-        )
-    photo = fields.Binary(
-            string=u'Photo',
-            help=u'Photo',
-        )
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
 
 class diagnoFlorePat(ModelSQL, ModelView):
     u'diagno - Flore patrimoniale'
@@ -1635,7 +1752,7 @@ class diagnoFlorePat(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 6), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+            domain=[('code', '=', 1), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
         )
     liste = fields.Boolean(
             string=u'Liste personnelle',
@@ -1661,6 +1778,19 @@ class diagnoFlorePat(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
 
 class diagnoNatureOcc(ModelSQL, ModelView):
     u'diagno - nature occupation des sols'
@@ -1703,7 +1833,7 @@ class diagnoAutre(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 7), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+            domain=[('code', '=', 2), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
         )
     liste = fields.Boolean(
             string=u'Liste personnelle',
@@ -1729,6 +1859,19 @@ class diagnoAutre(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
 
 class diagnoAvifaune(ModelSQL, ModelView):
     u'diagno - Avifaune'
@@ -1748,7 +1891,7 @@ class diagnoAvifaune(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 8), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+            domain=[('code', '=', 3), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
         )
     liste = fields.Boolean(
             string=u'Liste personnelle',
@@ -1831,6 +1974,19 @@ class diagnoAvifaune(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
 
 class diagnomamPresence(ModelSQL, ModelView):
     'diagnomam - code presence'
@@ -1868,7 +2024,7 @@ class diagnoMammi(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 9), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))]
+            domain=[('code', '=', 4), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))]
         )
     liste = fields.Boolean(
             string=u'Liste personnelle',
@@ -1932,7 +2088,7 @@ class diagnoBatracien(ModelSQL, ModelView):
             help=u'Taxon',
             ondelete='CASCADE',
             required=True,
-            domain=[('code', '=', 10), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
+            domain=[('code', '=', 5), ('users_id', If(Eval('liste', True), '=', '>='), If(Eval('liste', True), Eval('userid'), Eval(1)))],
         )
     liste = fields.Boolean(
             string=u'Liste personnelle',
@@ -1969,6 +2125,19 @@ class diagnoBatracien(ModelSQL, ModelView):
             string=u'Photo',
             help=u'Photo',
         )
+    userid = fields.Many2One(
+            'res.user',
+            string=u'ID User',
+            help=u'ID user',
+            readonly=True,
+        )
+
+    @staticmethod
+    def default_userid():
+        cursor = Transaction().cursor
+        User = Pool().get('res.user')
+        use = User(Transaction().user)
+        return int(use.id)
 
 class diagnoParcelle(ModelSQL):
     'diagno - Parcelle'
@@ -1981,11 +2150,11 @@ class diagnoParcelle(ModelSQL):
 
 class maeProtection(ModelSQL):
     'mae - protectionArea'
-    __name__ = 'mae.diagno-protection.area'
+    __name__ = 'mae.diagno-mae_protection.area'
     _table = 'mae_protection_area_rel'
     mae = fields.Many2One('mae.mae', 'mae', ondelete='CASCADE',
             required=True)
-    status = fields.Many2One('protection.area', 'status',
+    status = fields.Many2One('mae_protection.area', 'status',
         ondelete='CASCADE', required=True)
 
 class mae(Mapable, ModelSQL, ModelView):
@@ -2003,7 +2172,7 @@ class mae(Mapable, ModelSQL, ModelView):
     def create(cls, vlist):
         Sequence = Pool().get('ir.sequence')
         Configuration = Pool().get('mae.configuration')
-        Commune = Pool().get('commune.commune')
+        Commune = Pool().get('mae.commune')
         Party = Pool().get('party.party')     
         seq = Sequence.get_id(Configuration(1).mae_sequence.id)
 
@@ -2030,7 +2199,7 @@ class mae(Mapable, ModelSQL, ModelView):
             domain=[('code', '=', 'TYPO')]
         )           
     commune = fields.Many2One(
-            'commune.commune',
+            'mae.commune',
             string='Commune',
             help='Commune',
             required=True,
@@ -2047,7 +2216,7 @@ class mae(Mapable, ModelSQL, ModelView):
             help='Surface (ha)',
         )
     status = fields.Many2Many(
-            'mae.diagno-protection.area',
+            'mae.diagno-mae_protection.area',
             'mae',
             'status',
             string='Protection status',

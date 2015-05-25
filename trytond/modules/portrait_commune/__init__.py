@@ -25,6 +25,7 @@ from trytond.pool import Pool
 from departement import Departement, DepartementQGis, GenerateD
 from commune import Commune, CommuneQGis, GenerateC
 from region import Region, RegionQGis, GenerateR
+from canton import Canton, CantonQGis, GenerateCa
 from population import Population
 
 def register():
@@ -32,6 +33,7 @@ def register():
         Region,
         Departement,
         Commune,
+        Canton,        
         Population,
         module='portrait_commune',
         type_='model')
@@ -39,6 +41,7 @@ def register():
     Pool.register(
         RegionQGis,
         DepartementQGis,
+        CantonQGis,
         CommuneQGis,
         module='portrait_commune',
         type_='report'
@@ -47,6 +50,7 @@ def register():
     Pool.register(
         GenerateD,
         GenerateC,
+        GenerateCa,
         GenerateR,
         module='portrait_commune',
         type_='wizard'

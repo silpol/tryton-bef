@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <tree string="Diagnostic - Taxinomie odonates">
     <field name="taxinomie"/>
+    <field name="userid" tree_invisible="1"/>
 </tree>
 

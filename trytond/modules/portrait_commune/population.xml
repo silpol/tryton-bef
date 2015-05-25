@@ -25,6 +25,6 @@
             <field name="view" ref="population_view_form"/>
             <field name="act_window" ref="act_population_form"/>        
         </record>
-        <menuitem parent="menu_portrait_admin" id="menu_population_form" icon="tryton-list" action="act_population_form"/>
+        <menuitem parent="menu_portrait_admin" sequence="6" id="menu_population_form" icon="tryton-list" action="act_population_form"/>
     </data>
 </tryton>

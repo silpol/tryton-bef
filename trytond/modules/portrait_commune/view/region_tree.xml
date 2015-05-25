@@ -3,4 +3,5 @@
     <field name="name"/>
     <field name="code"/>
     <field name="version"/>
+    <field name="active"/>
 </tree>

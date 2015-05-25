@@ -78,7 +78,9 @@ class statut(ModelSQL, ModelView):
 class taxinomie(ModelSQL, ModelView):
     u'Taxinomie'
     __name__ = 'taxinomie.taxinomie'
+    _rec_name = 'lb_nom'
 
+    #MNHN
     regne = fields.Char(
             string = u'Règne',
             help = u'Règne auquel le taxon appartient (champ calculé à partir du CD_TAXSUP)',
@@ -167,6 +169,14 @@ class taxinomie(ModelSQL, ModelView):
             string = u'URL',
             help = u'URL',
         )
+    protection = fields.Many2Many(
+            'taxinomie.taxinomie-taxinomie.espece_type',
+            'taxon',
+            'espece_type',
+            string=u'Protection',
+            help=u'Protection juridique des espèces',                       
+        )
+     
 
 class statut_pays_taxon(ModelSQL, ModelView):
     u'Statut Taxons'

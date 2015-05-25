@@ -5,6 +5,7 @@ GPLv3
 
 from trytond.pool import Pool
 from taxinomie import *
+from espece_type import *
 
 def register():
     Pool.register(
@@ -13,4 +14,6 @@ def register():
         statut,
         taxinomie,
         statut_pays_taxon,
+        EspeceType,
+        TaxonEspeceType,
         module='taxinomie', type_='model')
