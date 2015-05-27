@@ -100,11 +100,12 @@ class QGisConf(ModelSingleton, ModelSQL, ModelView):
         ('2.6.1', 'QGis 2.6.1'),
         ('2.8.0', 'QGis 2.8.0'),
         ('2.8.1', 'QGis 2.8.1'),
+        ('2.8.2', 'QGis 2.8.2'),
     ], 'Version', required=True)
 
     @staticmethod
     def default_version():
-        return '2.8.1'
+        return '2.8.2'
 
 
 class QGis(Report):
