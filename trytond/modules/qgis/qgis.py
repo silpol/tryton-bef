@@ -42,7 +42,7 @@ from trytond.pool import Pool
 from trytond.report import Report, ReportFactory, TranslateFactory
 from trytond.transaction import Transaction
 
-__all__ = ['QGis', 'QGisConf']
+__all__ = ['QGis', 'QGisConf', 'Version']
 
 
 TRYTON_TO_QGIS = {
@@ -87,26 +87,40 @@ def get_wfs_id_filter(ids):
     _filter = 'FILTER=' + quote_plus(xml)
     return _filter
 
+class Version(ModelSQL, ModelView):
+    u'Version de QGIS'
+    __name__ = 'qgis.version'
+    _rec_name = 'name'
+
+    code = fields.Char(
+            string = u'Version de QGIS',
+            required = True,
+        )
+    name = fields.Char(
+            string = u'Libellé de la version de QGIS',
+            required = True,
+        ) 
+
 
 class QGisConf(ModelSingleton, ModelSQL, ModelView):
     'QGis'
-    __name__ = 'qgis.conf'
+    __name__ = 'qgis.conf'    
 
-    version = fields.Selection([
-        ('2.3.0-Dev', 'QGis 2.3.0'),
-        ('2.4.0', 'QGis 2.4.0'),
-        ('2.5.0-Dev', 'QGis 2.5.0'),
-        ('2.6.0', 'QGis 2.6.0'),
-        ('2.6.1', 'QGis 2.6.1'),
-        ('2.8.0', 'QGis 2.8.0'),
-        ('2.8.1', 'QGis 2.8.1'),
-        ('2.8.2', 'QGis 2.8.2'),
-    ], 'Version', required=True)
-
-    @staticmethod
-    def default_version():
-        return '2.8.2'
-
+    version = fields.Char(            
+                string=u'Version utilisée de QGIS',
+                required=True,
+                on_change_with=['vv']
+            )
+            
+    vv = fields.Many2One(
+                'qgis.version',
+                string=u'Versions proposées de QGIS',
+                required=True
+            )
+            
+    def on_change_with_version(self):
+        if self.vv is not None:            
+            return str(self.vv.code)       
 
 class QGis(Report):
     __name__ = 'qgis.qgis'

@@ -123,22 +123,11 @@ class Place(Mapable, ModelView, ModelSQL):
             'lol_edit': {},
             'generate': {},
         })
-        cls._error_messages = {'invalid_address': 'The address is invalid, no city is defined!'}
     
     @staticmethod
     def default_active():
         return True            
 
-    @classmethod
-    def validate(cls, records):
-        """Check the address validity:
-        the city field is required as it is used in maps titles
-        and the my_city field is required as it provide th city's geometry
-        """
-        for record in records:
-            for field in ['my_city', 'city']:
-                if getattr(record.address, field) is None:
-                    cls.raise_user_error('invalid_address')
 
     @classmethod
     @ModelView.button_action('place.report_lol_edit')

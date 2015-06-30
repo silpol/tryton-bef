@@ -12,56 +12,20 @@
     <record model="ir.ui.view" id="habitat_corine_biotope_view_form">
         <field name="model">habitat.corine_biotope</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="corine_biotope" col="2">
-                <label name="code" />
-                <field name="code" />
-                <label name="title" />
-                <field name="title" />
-                <label name="description" />
-                <field name="description" />
-                <label name="biblio" />
-                <field name="biblio" />
-                <label name="observation" />
-                <field name="observation" />
-                <label name="france" />
-                <field name="france" />
-                <label name="active"/>
-                <field name="active"/>
-                <label name="parent"/>
-                <field name="parent"/>
-            </form>
-            ]]>
-        </field>
+        <field name="name">corine_biotope_form</field>
     </record>
 
 	<record model="ir.ui.view" id="habitat_corine_biotope_view_tree">
 		<field name="model">habitat.corine_biotope</field>
 		<field name="type">tree</field>
         <field name="field_childs">childs</field>
-		<field name="arch" type="xml">
-            <![CDATA[
-            <tree string="corine_biotope">
-                <field name="code" />
-                <field name="title" expand="1" />
-                <field name="parent" tree_invisible="1" />
-                <field name="childs" tree_invisible="1" />
-            </tree>
-            ]]>
-        </field>
+		<field name="name">corine_biotope_tree</field>
     </record>
     <record model="ir.ui.view" id="habitat_corine_biotope_view_list">
         <field name="model">habitat.corine_biotope</field>
         <field name="type">tree</field>
         <field name="priority" eval="10"/>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="corine_biotope">
-                <field name="rec_name" expand="1"/>
-            </tree>
-            ]]>
-        </field>
+        <field name="name">corine_biotope_list</field>
     </record>
     <record model="ir.action.act_window" id="act_habitat_corine_biotope_tree">
         <field name="name">Corine Biotopes</field>
@@ -102,56 +66,20 @@
     <record model="ir.ui.view" id="habitat_natura2000_view_form">
         <field name="model">habitat.natura2000</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="natura2000" col="2">
-                <label name="code" />
-                <field name="code" />
-                <label name="title" />
-                <field name="title" />
-                <label name="france" />
-                <field name="france" />
-                <label name="priority" />
-                <field name="priority" />
-                <label name="observation" />
-                <field name="observation" />		
-                <label name="active"/>
-                <field name="active"/>
-                <label name="parent"/>
-                <field name="parent"/>
-                <label name="corine"/>
-                <field name="corine"/>
-            </form>
-            ]]>
-        </field>
+        <field name="arch">natura2000_form</field>
     </record>
 
 	<record model="ir.ui.view" id="habitat_natura2000_view_tree">
 		<field name="model">habitat.natura2000</field>
 		<field name="type">tree</field>
         <field name="field_childs">childs</field>
-		<field name="arch" type="xml">
-            <![CDATA[
-            <tree string="natura2000">
-                <field name="code" />
-                <field name="title" expand="1" />
-                <field name="parent" tree_invisible="1"/>
-                <field name="childs" tree_invisible="1"/>
-            </tree>
-            ]]>
-        </field>
+		<field name="name">natura2000_tree</field>
     </record>
     <record model="ir.ui.view" id="habitat_natura2000_view_list">
         <field name="model">habitat.natura2000</field>
         <field name="type">tree</field>
         <field name="priority" eval="10"/>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="natura2000">
-                <field name="rec_name" expand="1" />
-            </tree>
-            ]]>
-        </field>
+        <field name="name">natura2000_list</field>
     </record>
     <record model="ir.action.act_window" id="act_habitat_natura2000_tree">
         <field name="name">Natura 2000</field>
@@ -192,52 +120,20 @@
     <record model="ir.ui.view" id="habitat_eunis_view_form">
         <field name="model">habitat.eunis</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="eunis" col="2">
-                <label name="code" />
-                <field name="code" />
-                <label name="title" />
-                <field name="title" />
-                <label name="description" />
-                <field name="description" />
-                <label name="observation" />
-                <field name="observation" />
-                <label name="active"/>
-                <field name="active"/>
-                <label name="parent"/>
-                <field name="parent"/>
-            </form>
-            ]]>
-        </field>
+        <field name="name">eunis_form</field>
     </record>
 
 	<record model="ir.ui.view" id="habitat_eunis_view_tree">
 		<field name="model">habitat.eunis</field>
 		<field name="type">tree</field>
         <field name="field_childs">childs</field>
-		<field name="arch" type="xml">
-            <![CDATA[
-            <tree string="eunis">
-                <field name="code" />
-                <field name="title" expand="1" />
-                <field name="parent" tree_invisible="1"/>
-                <field name="childs" tree_invisible="1"/>
-            </tree>
-            ]]>
-        </field>
+		<field name="name">eunis_tree</field>
     </record>
     <record model="ir.ui.view" id="habitat_eunis_view_list">
         <field name="model">habitat.eunis</field>
         <field name="type">tree</field>
         <field name="priority" eval="10"/>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="eunis">
-                <field name="rec_name" expand="1" />
-            </tree>
-            ]]>
-        </field>
+        <field name="name">eunis_list</field>
     </record>
     <record model="ir.action.act_window" id="act_habitat_eunis_tree">
         <field name="name">Eunis</field>
@@ -278,52 +174,20 @@
     <record model="ir.ui.view" id="habitat_physis_view_form">
         <field name="model">habitat.physis</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="physis" col="2">
-                <label name="code" />
-                <field name="code" />
-                <label name="title" />
-                <field name="title" />
-                <label name="description" />
-                <field name="description" />
-                <label name="observation" />
-                <field name="observation" />
-                <label name="active"/>
-                <field name="active"/>
-                <label name="parent"/>
-                <field name="parent"/>
-            </form>
-            ]]>
-        </field>
+        <field name="name">physis_form</field>
     </record>
 
 	<record model="ir.ui.view" id="habitat_physis_view_tree">
 		<field name="model">habitat.physis</field>
 		<field name="type">tree</field>
         <field name="field_childs">childs</field>
-		<field name="arch" type="xml">
-            <![CDATA[
-            <tree string="physis">
-                <field name="code" />
-                <field name="title" expand="1" />
-                <field name="parent" tree_invisible="1"/>
-                <field name="childs" tree_invisible="1"/>
-            </tree>
-            ]]>
-        </field>
+		<field name="name">physis_tree</field>
     </record>
     <record model="ir.ui.view" id="habitat_physis_view_list">
         <field name="model">habitat.physis</field>
         <field name="type">tree</field>
         <field name="priority" eval="10"/>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="physis">
-                <field name="rec_name" expand="1"/>
-            </tree>
-            ]]>
-        </field>
+        <field name="name">physis_list</field>
     </record>
     <record model="ir.action.act_window" id="act_habitat_physis_tree">
         <field name="name">Physis</field>
@@ -364,52 +228,20 @@
      <record model="ir.ui.view" id="habitat_phytosociological_view_form">
         <field name="model">habitat.prodrome</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="prodrome" col="2">
-                <label name="code" />
-                <field name="code" />
-                <label name="title" />
-                <field name="title" />
-                <label name="description" />
-                <field name="description" />
-                <label name="observation" />
-                <field name="observation" />
-                <label name="active"/>
-                <field name="active"/>
-                <label name="parent"/>
-                <field name="parent"/>
-            </form>
-            ]]>
-        </field>
+        <field name="name">prodrome_form</field>
     </record>
 
 	<record model="ir.ui.view" id="habitat_phytosociological_view_tree">
 		<field name="model">habitat.prodrome</field>
 		<field name="type">tree</field>
         <field name="field_childs">childs</field>
-		<field name="arch" type="xml">
-            <![CDATA[
-            <tree string="prodrome">
-                <field name="code" />
-                <field name="title" expand="1" />
-                <field name="parent" tree_invisible="1"/>
-                <field name="childs" tree_invisible="1"/>
-            </tree>
-            ]]>
-        </field>
+		<field name="name">prodrome_tree</field>
     </record>
     <record model="ir.ui.view" id="habitat_phytosociological_view_list">
         <field name="model">habitat.prodrome</field>
         <field name="type">tree</field>
         <field name="priority" eval="10"/>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="prodrome">
-                <field name="rec_name" expand="1" />
-            </tree>
-            ]]>
-        </field>
+        <field name="name">prodorme_list</field>
     </record>
     <record model="ir.action.act_window" id="act_habitat_phytosociological_tree">
         <field name="name">Prodrome</field>

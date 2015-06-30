@@ -15,7 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Copyright (c) 2013 Bio Eco Forests <contact@bioecoforests.com>
-Copyright (c) 2013 Laurent Defert
+Copyright (c) 2015 Pascal Obstétar
 
 """
 
@@ -32,7 +32,7 @@ STATES = {
 
 class Address:
     __name__ = 'party.address'
-    my_city = fields.Many2One('town_fr.town_fr', 'City',
+    my_city = fields.Many2One('fr.commune', 'City',
                               states=STATES,
                               depends=['active'],
                               on_change=['my_city', 'city', 'zip', 'country'])
@@ -48,9 +48,6 @@ class Address:
         if 'my_city' not in cls.country.depends:
             cls.country.depends += ['my_city', 'zip']
 
-        if 'my_city' not in cls.subdivision.depends:
-            cls.subdivision.depends += ['my_city', 'zip']
-
         if 'my_city' not in cls.city.depends:
             cls.city.depends += ['my_city', 'zip']
 
@@ -61,8 +58,8 @@ class Address:
         return france.id
 
     def on_change_zip(self):
-        TownFr = Pool().get('town_fr.town_fr')
-        cities = TownFr.search([('postal_code', '=', self.zip)])
+        TownFr = Pool().get('fr.commune')
+        cities = TownFr.search([('postal', '=', self.zip)])
         if len(cities) < 1:
             return {}
         self.my_city = cities[0]
@@ -73,9 +70,8 @@ class Address:
             return {}
 
         return {
-            'city': self.my_city.subdivision.name,
-            'subdivision': self.my_city.subdivision.parent.id,
-            'zip': self.my_city.postal_code,
-            'country': self.my_city.subdivision.country.id,
+            'city': self.my_city.name,
+            'zip': self.my_city.postal,
+            'country': 76,
             'my_city': self.my_city.id,
         }
