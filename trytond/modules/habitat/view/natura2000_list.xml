@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<tree string="natura2000">
+    <field name="rec_name" expand="1" />
+</tree>

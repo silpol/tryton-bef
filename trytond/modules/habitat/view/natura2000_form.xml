@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form string="natura2000" col="2">
+    <label name="code" />
+    <field name="code" />
+    <label name="title" />
+    <field name="title" />
+    <label name="france" />
+    <field name="france" />
+    <label name="priority" />
+    <field name="priority" />
+    <label name="observation" />
+    <field name="observation" />		
+    <label name="active"/>
+    <field name="active"/>
+    <label name="parent"/>
+    <field name="parent"/>
+    <label name="corine"/>
+    <field name="corine"/>
+</form>

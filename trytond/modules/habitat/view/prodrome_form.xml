@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="prodrome" col="2">
+    <label name="code" />
+    <field name="code" />
+    <label name="title" />
+    <field name="title" />
+    <label name="description" />
+    <field name="description" />
+    <label name="observation" />
+    <field name="observation" />
+    <label name="active"/>
+    <field name="active"/>
+    <label name="parent"/>
+    <field name="parent"/>
+</form>

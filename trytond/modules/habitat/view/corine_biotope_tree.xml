@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="corine_biotope">
+    <field name="code" />
+    <field name="title" expand="1" />
+    <field name="parent" tree_invisible="1" />
+    <field name="childs" tree_invisible="1" />
+</tree>
