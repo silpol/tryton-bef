@@ -4,13 +4,16 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 import logging
 
+import dateutil.tz
+
 from trytond.model import fields
 from trytond.tools import get_smtp_server
 from trytond.transaction import Transaction
 from trytond.pool import Pool, PoolMeta
 
-__all__ = ['Event', 'Attendee', 'EventAttendee']
+__all__ = ['Event', 'EventAttendee']
 __metaclass__ = PoolMeta
+tzlocal = dateutil.tz.tzlocal()
 
 
 class Event:
@@ -67,10 +70,10 @@ class Event:
         for key in ('status', 'agent'):
             field = 'organizer_schedule_' + key
             param = 'SCHEDULE-' + key.upper()
+            selection = dict(getattr(cls, field).selection)
             if (param in vevent.organizer.params
-                    and vevent.organizer[param] in dict(getattr(cls,
-                            field).selection)):
-                res[field] = vevent.organizer[param]
+                    and vevent.organizer.params[param][0] in selection):
+                res[field] = vevent.organizer.params[param][0]
 
         return res
 
@@ -95,6 +98,9 @@ class Event:
                 (self.organizer_schedule_status,)
 
         if Transaction().context.get('skip_schedule_agent'):
+            if (hasattr(vevent, 'organizer')
+                    and hasattr(vevent.organizer, 'schedule_agent_param')):
+                del vevent.organizer.schedule_agent_param
             return ical
 
         if self.organizer_schedule_agent:
@@ -122,18 +128,28 @@ class Event:
                 summary = self.raise_user_error('no_subject',
                         raise_exception=False)
 
-        date = Lang.strftime(self.dtstart, lang.code, lang.date)
+        if self.timezone:
+            tzevent = dateutil.tz.gettz(self.timezone)
+        else:
+            tzevent = tzlocal
+        dtstart = self.dtstart.replace(tzinfo=tzlocal).astimezone(tzevent)
+        if self.dtend:
+            dtend = self.dtend.replace(tzinfo=tzlocal).astimezone(tzevent)
+        else:
+            dtend = None
+
+        date = Lang.strftime(dtstart, lang.code, lang.date)
         if not self.all_day:
-            date += ' ' + Lang.strftime(self.dtstart, lang.code, '%H:%M')
+            date += ' ' + Lang.strftime(dtstart, lang.code, '%H:%M')
             if self.dtend:
                 date += ' -'
                 if self.dtstart.date() != self.dtend.date():
-                    date += ' ' + Lang.strftime(self.dtend, lang.code,
+                    date += ' ' + Lang.strftime(dtend, lang.code,
                         lang.date)
-                date += ' ' + Lang.strftime(self.dtend, lang.code, '%H:%M')
+                date += ' ' + Lang.strftime(dtend, lang.code, '%H:%M')
         else:
             if self.dtend and self.dtstart.date() != self.dtend.date():
-                date += ' - ' + Lang.strftime(self.dtend, lang.code, lang.date)
+                date += ' - ' + Lang.strftime(dtend, lang.code, lang.date)
         if self.timezone:
             date += ' ' + self.timezone
 
@@ -199,11 +215,9 @@ class Event:
         msg_body.set_payload(body.encode('UTF-8'), 'UTF-8')
         inner.attach(msg_body)
 
-        attachment = MIMEBase('text', 'calendar')
-        attachment.set_payload(ical.serialize())
-        attachment.add_header('Content-Transfer-Encoding', 'quoted-printable',
-                charset='UTF-8',
-                method=ical.method.value.lower())
+        attachment = MIMEBase('text', 'calendar',
+            method=ical.method.value)
+        attachment.set_payload(ical.serialize(), 'UTF-8')
         inner.attach(attachment)
 
         msg.attach(inner)
@@ -470,8 +484,7 @@ class Event:
             event.send_msg(owner_email, attendee_emails, msg, 'cancel')
 
 
-class Attendee:
-    __name__ = 'calendar.attendee'
+class AttendeeMixin:
     schedule_status = fields.Selection([
             ('', ''),
             ('1.0', '1.0'),
@@ -496,7 +509,11 @@ class Attendee:
 
     @classmethod
     def attendee2values(cls, attendee):
-        values = super(Attendee, cls).attendee2values(attendee)
+        # Those params don't need to be stored
+        for param in ['received_dtstamp_param', 'received_sequence_param']:
+            if hasattr(attendee, param):
+                delattr(attendee, param)
+        values = super(AttendeeMixin, cls).attendee2values(attendee)
         if hasattr(attendee, 'schedule_status'):
             if attendee.schedule_status in dict(
                     cls.schedule_status.selection):
@@ -507,7 +524,7 @@ class Attendee:
         return values
 
     def attendee2attendee(self):
-        attendee = super(Attendee, self).attendee2attendee()
+        attendee = super(AttendeeMixin, self).attendee2attendee()
 
         if self.schedule_status:
             if hasattr(attendee, 'schedule_status_param'):
@@ -522,6 +539,8 @@ class Attendee:
                 del attendee.schedule_status_param
 
         if Transaction().context.get('skip_schedule_agent'):
+            if hasattr(attendee, 'schedule_agent_param'):
+                del attendee.schedule_agent_param
             return attendee
 
         if self.schedule_agent:
@@ -539,7 +558,8 @@ class Attendee:
         return attendee
 
 
-class EventAttendee:
+class EventAttendee(AttendeeMixin, object):
+    __metaclass__ = PoolMeta
     __name__ = 'calendar.event.attendee'
 
     @classmethod
@@ -577,18 +597,28 @@ class EventAttendee:
                 summary = self.raise_user_error('no_subject',
                         raise_exception=False)
 
-        date = Lang.strftime(event.dtstart, lang.code, lang.date)
+        if event.timezone:
+            tzevent = dateutil.tz.gettz(event.timezone)
+        else:
+            tzevent = tzlocal
+        dtstart = event.dtstart.replace(tzinfo=tzlocal).astimezone(tzevent)
+        if event.dtend:
+            dtend = event.dtend.replace(tzinfo=tzlocal).astimezone(tzevent)
+        else:
+            dtend = None
+
+        date = Lang.strftime(dtstart, lang.code, lang.date)
         if not event.all_day:
-            date += ' ' + Lang.strftime(event.dtstart, lang.code, '%H:%M')
+            date += ' ' + Lang.strftime(dtstart, lang.code, '%H:%M')
             if event.dtend:
                 date += ' -'
                 if event.dtstart.date() != event.dtend.date():
-                    date += ' ' + Lang.strftime(event.dtend, lang.code,
+                    date += ' ' + Lang.strftime(dtend, lang.code,
                         lang.date)
-                date += ' ' + Lang.strftime(event.dtend, lang.code, '%H:%M')
+                date += ' ' + Lang.strftime(dtend, lang.code, '%H:%M')
         else:
             if event.dtend and event.dtstart.date() != event.dtend.date():
-                date += ' - ' + Lang.strftime(event.dtend, lang.code,
+                date += ' - ' + Lang.strftime(dtend, lang.code,
                     lang.date)
         if event.timezone:
             date += ' ' + event.timezone
@@ -670,11 +700,9 @@ class EventAttendee:
         msg_body.set_payload(body.encode('UTF-8'), 'UTF-8')
         inner.attach(msg_body)
 
-        attachment = MIMEBase('text', 'calendar')
-        attachment.set_payload(ical.serialize())
-        attachment.add_header('Content-Transfer-Encoding', 'quoted-printable',
-                charset='UTF-8',
-                method=ical.method.value.lower())
+        attachment = MIMEBase('text', 'calendar',
+            method=ical.method.value)
+        attachment.set_payload(ical.serialize(), 'UTF-8')
         inner.attach(attachment)
 
         msg.attach(inner)
@@ -752,6 +780,8 @@ class EventAttendee:
 
             with Transaction().set_context(skip_schedule_agent=True):
                 ical = attendee.event.event2ical()
+                # Only the current attendee is needed
+                ical.vevent.attendee_list = [attendee.attendee2attendee()]
             if not hasattr(ical, 'method'):
                 ical.add('method')
             ical.method.value = 'REPLY'
@@ -787,6 +817,8 @@ class EventAttendee:
 
             with Transaction().set_context(skip_schedule_agent=True):
                 ical = attendee.event.event2ical()
+                # Only the current attendee is needed
+                ical.vevent.attendee_list = [attendee.attendee2attendee()]
             if not hasattr(ical, 'method'):
                 ical.add('method')
             ical.method.value = 'REPLY'
@@ -826,6 +858,8 @@ class EventAttendee:
 
             with Transaction().set_context(skip_schedule_agent=True):
                 ical = attendee.event.event2ical()
+                # Only the current attendee is needed
+                ical.vevent.attendee_list = [attendee.attendee2attendee()]
             if not hasattr(ical, 'method'):
                 ical.add('method')
             ical.method.value = 'REPLY'

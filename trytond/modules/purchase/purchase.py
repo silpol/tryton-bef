@@ -1158,10 +1158,12 @@ class PurchaseLine(ModelSQL, ModelView):
             if old_invoice_line.id not in skip_ids:
                 quantity -= Uom.compute_qty(old_invoice_line.unit,
                         old_invoice_line.quantity, self.unit)
-        invoice_line.quantity = quantity
 
-        if invoice_line.quantity <= 0.0:
+        rounding = self.unit.rounding if self.unit else 0.01
+        invoice_line.quantity = Uom.round(quantity, rounding)
+        if invoice_line.quantity <= 0:
             return []
+
         invoice_line.unit = self.unit
         invoice_line.product = self.product
         invoice_line.unit_price = self.unit_price
@@ -1171,7 +1173,7 @@ class PurchaseLine(ModelSQL, ModelView):
             if not invoice_line.account:
                 self.raise_user_error('missing_account_expense', {
                         'product': invoice_line.product.rec_name,
-                        'purchase': invoice_line.purchase.rec_name,
+                        'purchase': self.purchase.rec_name,
                         })
         else:
             for model in ('product.template', 'product.category'):
@@ -1180,7 +1182,7 @@ class PurchaseLine(ModelSQL, ModelView):
                     break
             if not invoice_line.account:
                 self.raise_user_error('missing_account_expense_property',
-                    (invoice_line.purchase.rec_name,))
+                    {'purchase': self.purchase.rec_name})
         return [invoice_line]
 
     @classmethod
@@ -1214,8 +1216,11 @@ class PurchaseLine(ModelSQL, ModelView):
             if move not in skip:
                 quantity -= Uom.compute_qty(move.uom, move.quantity,
                     self.unit)
-        if quantity <= 0.0:
+
+        quantity = Uom.round(quantity, self.unit.rounding)
+        if quantity <= 0:
             return
+
         if not self.purchase.party.supplier_location:
             self.raise_user_error('supplier_location_required', {
                     'purchase': self.purchase.rec_name,
@@ -1879,7 +1884,7 @@ class HandleShipmentException(Wizard):
                 if move.state == 'cancel' and move not in skip:
                     moves.append(move.id)
         return {
-            'to_recreate': moves,
+            'recreate_moves': moves,
             'domain_moves': moves,
             }
 
@@ -1949,7 +1954,7 @@ class HandleInvoiceException(Wizard):
             if invoice.state == 'cancel' and invoice not in skip:
                 invoices.append(invoice.id)
         return {
-            'to_recreate': invoices,
+            'recreate_invoices': invoices,
             'domain_invoices': invoices,
             }
 

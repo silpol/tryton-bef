@@ -144,6 +144,11 @@ class Move(ModelSQL, ModelView):
     def on_change_with_date(self):
         Line = Pool().get('account.move.line')
         date = self.date
+        if date:
+            if self.period and not (
+                    self.period.start_date <= date <= self.period.end_date):
+                date = self.period.start_date
+            return date
         lines = Line.search([
                 ('journal', '=', self.journal),
                 ('period', '=', self.period),
@@ -200,7 +205,9 @@ class Move(ModelSQL, ModelView):
     def check_date(self):
         if (self.date < self.period.start_date
                 or self.date > self.period.end_date):
-            self.raise_user_error('date_outside_period', (self.rec_name,))
+            self.raise_user_error('date_outside_period', {
+                        'move': self.rec_name,
+                        })
 
     @classmethod
     def check_modify(cls, moves):
@@ -320,7 +327,7 @@ class Move(ModelSQL, ModelView):
                 'FROM "' + MoveLine._table + '" '
                 'WHERE ' + red_sql + ' AND state = %s '
                 'ORDER BY move', red_ids + ['draft'])
-            move2draft_lines.update(dict((k, (j[1] for j in g))
+            move2draft_lines.update(dict((k, [j[1] for j in g])
                     for k, g in groupby(cursor.fetchall(), itemgetter(0))))
 
         valid_moves = []
@@ -332,8 +339,7 @@ class Move(ModelSQL, ModelView):
             # SQLite uses float for SUM
             if not isinstance(amount, Decimal):
                 amount = Decimal(amount)
-            draft_lines = MoveLine.browse(
-                list(move2draft_lines.get(move.id, [])))
+            draft_lines = MoveLine.browse(move2draft_lines.get(move.id, []))
             if not company.currency.is_zero(amount):
                 if not move.journal.centralised:
                     draft_moves.append(move.id)
@@ -1401,7 +1407,7 @@ class Line(ModelSQL, ModelView):
                 cls.raise_user_error('already_reconciled',
                         error_args=(line.move.number, line.id,))
 
-        lines = lines[:]
+        lines = list(lines)
         if journal and account:
             if not date:
                 date = Date.today()

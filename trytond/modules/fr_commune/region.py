@@ -50,9 +50,9 @@ class Region(Mapable, ModelSQL, ModelView):
         u'Displayed name in the form: name (region code)'
         return '%s (%s)' % (self.nom, self.code)    
         
-    def get_rec_name(self, ids):
+    """def get_rec_name(self, ids):
         u'Displayed name in the form: name (region code)'
-        return '%s (%s)' % (self.nom, self.code)
+        return '%s (%s)' % (self.nom, self.code)"""
         
     @classmethod
     def search_rec_name(cls, name, clause):
@@ -111,6 +111,7 @@ class Region(Mapable, ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(Region, cls).__setup__()
+        cls._order.insert(0, ('nom', 'ASC'))
         cls._buttons.update({           
             'region_edit': {},
             'generate': {},

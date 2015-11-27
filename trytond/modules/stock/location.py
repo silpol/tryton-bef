@@ -202,7 +202,9 @@ class Location(ModelSQL, ModelView):
             return dict((l.id, None) for l in locations)
         cost_values, context = {}, {}
         if 'stock_date_end' in trans_context:
-            context['_datetime'] = trans_context['stock_date_end']
+            # Use the last cost_price of the day
+            context['_datetime'] = datetime.datetime.combine(
+                trans_context['stock_date_end'], datetime.time.max)
         with Transaction().set_context(context):
             product = Product(product_id)
             for location in locations:
@@ -309,8 +311,9 @@ class Location(ModelSQL, ModelView):
                     default=default)
                 warehouse_locations = Transaction().context.get(
                     'cp_warehouse_locations') or {}
-                cp_warehouse = cls(Transaction().context['cp_warehouse_id'])
                 if location.id in warehouse_locations.values():
+                    cp_warehouse = cls(
+                        Transaction().context['cp_warehouse_id'])
                     for field, loc_id in warehouse_locations.iteritems():
                         if loc_id == location.id:
                             cls.write([cp_warehouse], {

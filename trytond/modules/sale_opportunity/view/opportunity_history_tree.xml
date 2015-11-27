@@ -10,5 +10,4 @@ this repository contains the full copyright notices and license terms. -->
     <field name="party"/>
     <field name="state"/>
     <field name="probability"/>
-    <field name="comment"/>
 </tree>

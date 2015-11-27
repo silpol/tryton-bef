@@ -119,24 +119,6 @@ class Calendar(ModelSQL, ModelView):
             ical.vevent_list.extend(ical2.vevent_list)
         return ical
 
-    @property
-    def _fbtype(self):
-        '''
-        Return the freebusy type for give transparent and status
-        '''
-        if self.transp == 'opaque':
-            if not self.status or self.status == 'confirmed':
-                fbtype = 'BUSY'
-            elif self.status == 'cancelled':
-                fbtype = 'FREE'
-            elif self.status == 'tentative':
-                fbtype = 'BUSY-TENTATIVE'
-            else:
-                fbtype = 'BUSY'
-        else:
-            fbtype = 'FREE'
-        return fbtype
-
     @classmethod
     def freebusy(cls, calendar_id, dtstart, dtend):
         '''
@@ -544,6 +526,24 @@ class Event(ModelSQL, ModelView):
     def search_calendar_field(cls, name, clause):
         return [('calendar.' + name[9:],) + tuple(clause[1:])]
 
+    @property
+    def _fbtype(self):
+        '''
+        Return the freebusy type for give transparent and status
+        '''
+        if self.transp == 'opaque':
+            if not self.status or self.status == 'confirmed':
+                fbtype = 'BUSY'
+            elif self.status == 'cancelled':
+                fbtype = 'FREE'
+            elif self.status == 'tentative':
+                fbtype = 'BUSY-TENTATIVE'
+            else:
+                fbtype = 'BUSY'
+        else:
+            fbtype = 'FREE'
+        return fbtype
+
     @classmethod
     def validate(cls, events):
         super(Event, cls).validate(events)
@@ -629,14 +629,14 @@ class Event(ModelSQL, ModelView):
             'location': self.location.id if self.location else None,
             'status': self.status,
             'organizer': self.organizer,
-            'rdates': [('delete_all',)] + ('create', [rdate._date2update()
-                for rdate in self.rdates]),
-            'exdates': [('delete_all',)] + ('create', [exdate._date2update()
-                for exdate in self.exdates]),
-            'rrules': [('delete_all',)] + ('create', [rrule._date2update()
-                for rrule in self.rrules]),
-            'exrules': [('delete_all',)] + ('create', [exrule._date2update()
-                for exrule in self.exrules]),
+            'rdates': [('delete_all',)] + [('create', [rdate._date2update()
+                        for rdate in self.rdates])],
+            'exdates': [('delete_all',)] + [('create', [exdate._date2update()
+                        for exdate in self.exdates])],
+            'rrules': [('delete_all',)] + [('create', [rrule._date2update()
+                        for rrule in self.rrules])],
+            'exrules': [('delete_all',)] + [('create', [exrule._date2update()
+                        for exrule in self.exrules])],
             }
 
     @classmethod
@@ -802,7 +802,7 @@ class Event(ModelSQL, ModelView):
         Alarm = pool.get('calendar.event.alarm')
         Rdate = pool.get('calendar.event.rdate')
         Exdate = pool.get('calendar.event.exdate')
-        Rrule = pool.get('calendar.rrule')
+        Rrule = pool.get('calendar.event.rrule')
         Exrule = pool.get('calendar.event.exrule')
 
         vevents = []
@@ -1325,7 +1325,7 @@ class AttendeeMixin:
         res = None
         if self.attendee:
             res = vobject.base.textLineToContentLine(
-                    str(self.attendee).replace('\r\n ', ''))
+                    str(self.attendee).decode('utf-8').replace('\r\n ', ''))
         else:
             res = vobject.base.ContentLine('ATTENDEE', [], '')
 
@@ -1379,7 +1379,7 @@ class EventAttendee(AttendeeMixin, ModelSQL, ModelView):
                 to_write.append(values['event'])
 
         if to_write:
-            Event.write([Event.browse(to_write)], {})
+            Event.write(Event.browse(to_write), {})
         event_attendees = super(EventAttendee, cls).create(vlist)
         for event_attendee in event_attendees:
             event = event_attendee.event
@@ -1647,6 +1647,7 @@ class RRuleMixin(Model):
     bymonth = fields.Char('By Month')
     bysetpos = fields.Char('By Position')
     wkst = fields.Selection([
+        (None, ''),
         ('su', 'Sunday'),
         ('mo', 'Monday'),
         ('tu', 'Tuesday'),

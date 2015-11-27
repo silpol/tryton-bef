@@ -1,4 +1,5 @@
 PyWebDAV >= 0.9.8
+python-dateutil
 trytond_calendar >= 2.8, < 2.9
 trytond >= 2.8, < 2.9
 

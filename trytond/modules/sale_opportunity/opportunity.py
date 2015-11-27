@@ -37,7 +37,6 @@ class SaleOpportunity(Workflow, ModelSQL, ModelView):
     __name__ = "sale.opportunity"
     _history = True
     _rec_name = 'description'
-
     party = fields.Many2One('party.party', 'Party', required=True, select=True,
         on_change=['party'], states=_STATES_STOP, depends=_DEPENDS_STOP)
     address = fields.Many2One('party.address', 'Address',
@@ -92,24 +91,6 @@ class SaleOpportunity(Workflow, ModelSQL, ModelView):
             'invisible': Eval('state') != 'converted',
             }, depends=['state'])
 
-    icon = fields.Char('icon', on_change_with=['probability', 'party'])
-
-    def get_rec_name(self, code):
-        return '%s - %s' % (self.party.name, self.description)
-
-    def on_change_with_icon(self):
-        if self.probability is None:
-            return ''
-        if self.probability <= 25:
-            return 'tryton-showers'
-        if self.probability > 25 and self.probability <= 50:
-            return 'tryton-overcast'
-        if self.probability > 50 and self.probability <= 75:
-            return 'tryton-clouds'
-        if self.probability > 75:
-            return 'tryton-sun'
-        return self.probability
-
     @classmethod
     def __setup__(cls):
         super(SaleOpportunity, cls).__setup__()
@@ -158,10 +139,6 @@ class SaleOpportunity(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_state():
         return 'lead'
-
-	@staticmethod
-	def default_icon():
-		 return 'tryton-clouds'
 
     @staticmethod
     def default_start_date():

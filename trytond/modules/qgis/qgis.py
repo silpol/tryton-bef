@@ -93,7 +93,7 @@ class Version(ModelSQL, ModelView):
     _rec_name = 'name'
 
     code = fields.Char(
-            string = u'Version de QGIS',
+            string = u'Version de QGIS disponible',
             required = True,
         )
     name = fields.Char(
@@ -114,7 +114,7 @@ class QGisConf(ModelSingleton, ModelSQL, ModelView):
             
     vv = fields.Many2One(
                 'qgis.version',
-                string=u'Versions proposées de QGIS',
+                string=u'Version proposée de QGIS',
                 required=True
             )
             

@@ -80,7 +80,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="keyword">form_print</field>
             <field name="model">party.party,-1</field>
             <field name="action" ref="report_label"/>
-        </record>		
+        </record>
 
         <record model="ir.sequence.type" id="sequence_type_party">
             <field name="name">Party</field>

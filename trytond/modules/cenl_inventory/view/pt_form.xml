@@ -1,18 +1,59 @@
 <?xml version="1.0"?>
-<form string="Point" col="4">
+<form string="Dispositif (Point)" col="2">
     <notebook colspan="2">
-        <page string="General" id="general">            
-            <label name="code"/>
-            <field name="code"/>
-            <label name="name"/>
-            <field name="name"/>
-            <label name="area"/>
-            <field name="area"/>
-            <newline/>
-            <label name="comment" />
-            <field name="comment" colspan="4"/>
-            <label name="precaution" />
-            <field name="precaution" colspan="4"/>        
+        <page string="General" id="general">
+            <group id="group_dispositif" col="6" colspan="4">
+                <label name="exit_typinv"/>
+                <field name="exit_typinv"/>
+                <label name="exit_typ"/>
+                <field name="exit_typ"/>
+                <label name="exit"/>
+                <field name="exit"/>
+            </group>          
+            <group string="Dispositif" id="group_dispositif" col="6" colspan="4">
+                <label name="code"/>
+                <field name="code"/>
+                <label name="name"/>
+                <field name="name"/>                        
+                <label name="station"/>
+                <field name="station"/>
+                <label name="lieudit"/>
+                <field name="lieudit"/>
+                <label name="facteur"/>
+                <field name="facteur"/>
+                <label name="pente"/>
+                <field name="pente"/>
+                <label name="exposition"/>
+                <field name="exposition" widget="selection"/>
+                <label name="altitude"/>
+                <field name="altitude"/>
+                <label name="topographie"/>
+                <field name="topographie" widget="selection"/>
+                <label name="ombrage"/>
+                <field name="ombrage" widget="selection"/>
+                <label name="lisiere"/>
+                <field name="lisiere"/>
+                <label name="etatcons"/>
+                <field name="etatcons" widget="selection"/>
+                <label name="typopieceeau"/>
+                <field name="typopieceeau" widget="selection"/>
+            </group>
+            <group string="Dimensions" id="group_dimension" col="8" colspan="4" states="{'invisible': Not(In(Eval('exit_typinv', 0), [91,92,93,94,96]))}">
+                <label name="hauteur"/>
+                <field name="hauteur"/>
+                <label name="largeur"/>
+                <field name="largeur"/>
+                <label name="longueur"/>
+                <field name="longueur"/>
+                <label name="surface"/>
+                <field name="surface"/>                               
+            </group>
+        </page>
+        <page string="Sessions" col="1" id="sessions">    
+            <field name="pointsession"/>     
+        </page>
+        <page string="Comment" col="1" id="comment">                        
+            <field name="comment"/>           
         </page>
         <page string="Map" id="map" col="2">                            
             <field name="point_image" colspan="1" widget="image" img_width="640" img_height="480"/>
@@ -24,4 +65,6 @@
             <field name="photo" widget="image" img_width="1280" img_height="960" />            
         </page>
     </notebook>
+    <label name="active"/>
+    <field name="active"/>
 </form>

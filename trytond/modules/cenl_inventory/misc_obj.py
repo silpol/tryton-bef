@@ -22,7 +22,6 @@ Copyright (c) 2013 Laurent Defert
 from trytond.model import fields, ModelSQL, ModelView
 from trytond.pool import Pool
 
-from trytond.modules.geotools.tools import get_as_epsg4326, bbox_aspect, envelope_union
 from trytond.modules.map.map_render import MapRender
 from trytond.modules.qgis.qgis import QGis
 from trytond.modules.qgis.mapable import Mapable
@@ -32,10 +31,10 @@ class MiscObjRenderer(ModelSQL, ModelView):
     COLOR = (1, 0.1, 0.1, 1)
     BGCOLOR = (1, 0.1, 0.1, 1)
 
-    area = fields.Many2One(
-                'inventory.area',
-                string=u'Zone de prospection',
-                help=u'Zone de prospection',
+    campaign = fields.Many2One(
+                'inventory.campaign',
+                string=u'Campagne de prospection',
+                help=u'Campagne de prospection',
                 required=True
             )
     name = fields.Char(
@@ -47,6 +46,14 @@ class MiscObjRenderer(ModelSQL, ModelView):
                 string=u'Commentaire',
                 help=u'Commentaire',
             )
+    active = fields.Boolean(
+            string=u'Active',
+            help=u'Active'
+        )
+    
+    @staticmethod
+    def default_active():
+        return True
 
 class MiscObjPoly(Mapable, MiscObjRenderer):
     'Miscellaneous polygon object'

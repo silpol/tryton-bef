@@ -350,7 +350,7 @@ class DispositifsPrixRege(ModelSQL, ModelView):
             ondelete='CASCADE',
             required=True,
             select=1
-        )
+        )              
 
 class DispositifsDispositifs(ModelSQL, ModelView):
     'DispositifsDispositifs'

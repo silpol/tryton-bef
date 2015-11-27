@@ -75,7 +75,8 @@ class SaleLine:
         if (self.type != 'line'
                 or not self.product
                 or self.quantity <= 0
-                or not self.product.purchasable):
+                or not self.product.purchasable
+                or any(m.state != 'cancel' for m in self.moves)):
             return False
         return self.product.supply_on_sale
 
@@ -113,7 +114,7 @@ class SaleLine:
                 purchase_date=purchase_date,
                 supply_date=self.delivery_date,
                 company=self.sale.company,
-                warehouse=self.sale.warehouse,
+                warehouse=self.warehouse,
                 origin=self.sale,
                 )
 

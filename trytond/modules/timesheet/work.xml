@@ -182,25 +182,5 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule_group" ref="rule_group_work_admin"/>
             <field name="group" ref="group_timesheet_admin"/>
         </record>
-
-        <record model="ir.ui.view" id="work_line_view_form">
-            <field name="model">timesheet.workline</field>
-            <field name="type">form</field>
-            <field name="name">work_line_form</field>
-        </record>
-
-        <record model="ir.ui.view" id="work_line_view_tree">
-            <field name="model">timesheet.workline</field>
-            <field name="type">tree</field>
-            <field name="priority" eval="10"/>
-            <field name="name">work_line_tree</field>
-        </record>
-
-        <record model="ir.ui.view" id="work_line_view_tree_sequence">
-            <field name="model">timesheet.workline</field>
-            <field name="type">tree</field>
-            <field name="priority" eval="20"/>
-            <field name="name">work_line_tree_sequence</field>
-        </record>
     </data>
 </tryton>

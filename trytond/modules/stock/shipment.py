@@ -234,10 +234,10 @@ class ShipmentIn(Workflow, ModelSQL, ModelView):
         return Transaction().context.get('company')
 
     def on_change_supplier(self):
-        if not self.supplier:
-            return {'contact_address': None}
-        address = self.supplier.address_get()
-        return {'contact_address': address.id}
+        address = None
+        if self.supplier:
+            address = self.supplier.address_get()
+        return {'contact_address': address.id if address else None}
 
     def on_change_with_supplier_location(self, name=None):
         if self.supplier:
@@ -939,10 +939,10 @@ class ShipmentOut(Workflow, ModelSQL, ModelView):
         return Transaction().context.get('company')
 
     def on_change_customer(self):
-        if not self.customer:
-            return {'delivery_address': None}
-        address = self.customer.address_get(type='delivery')
-        return {'delivery_address': address.id}
+        address = None
+        if self.customer:
+            address = self.customer.address_get(type='delivery')
+        return {'delivery_address': address.id if address else None}
 
     def on_change_with_customer_location(self, name=None):
         if self.customer:
@@ -1089,6 +1089,8 @@ class ShipmentOut(Workflow, ModelSQL, ModelView):
                 else:
                     out_quantity = move.quantity
 
+                if not out_quantity:
+                    continue
                 unit_price = Uom.compute_price(move.product.default_uom,
                         move.product.list_price, move.uom)
                 to_create.append({
@@ -1346,7 +1348,7 @@ class ShipmentOutReturn(Workflow, ModelSQL, ModelView):
         cls._transitions |= set((
                 ('draft', 'received'),
                 ('received', 'done'),
-                ('received', 'draf'),
+                ('received', 'draft'),
                 ('draft', 'cancel'),
                 ('received', 'cancel'),
                 ('cancel', 'draft'),
@@ -1428,11 +1430,11 @@ class ShipmentOutReturn(Workflow, ModelSQL, ModelView):
         return Transaction().context.get('company')
 
     def on_change_customer(self):
-        if not self.customer:
-            return {'delivery_address': None}
-        address = self.customer.address_get(type='delivery')
+        address = None
+        if self.customer:
+            address = self.customer.address_get(type='delivery')
         return {
-            'delivery_address': address.id,
+            'delivery_address': address.id if address else None,
             }
 
     def on_change_with_customer_location(self, name=None):
@@ -1718,7 +1720,8 @@ class ShipmentInternal(Workflow, ModelSQL, ModelView):
                 | ~Eval('from_location') | ~Eval('to_location')),
             },
         domain=[
-            ('from_location', '=', Eval('from_location')),
+            ('from_location', 'child_of', [Eval('from_location', -1)],
+                'parent'),
             ('to_location', '=', Eval('to_location')),
             ('company', '=', Eval('company')),
             ],
@@ -2140,8 +2143,8 @@ class PickingList(CompanyReport):
                 from_location_ids.add(move.from_location.id)
                 to_location_ids.add(move.to_location.id)
 
-        from_locations = Location.search(list(from_location_ids))
-        to_locations = Location.search(list(to_location_ids))
+        from_locations = Location.browse(list(from_location_ids))
+        to_locations = Location.browse(list(to_location_ids))
 
         return {
             'from_location_ids': [l.id for l in from_locations],
@@ -2187,8 +2190,8 @@ class SupplierRestockingList(CompanyReport):
                 from_location_ids.add(move.from_location.id)
                 to_location_ids.add(move.to_location.id)
 
-        from_locations = Location.search(list(from_location_ids))
-        to_locations = Location.search(list(to_location_ids))
+        from_locations = Location.browse(list(from_location_ids))
+        to_locations = Location.browse(list(to_location_ids))
 
         return {
             'from_location_ids': [l.id for l in from_locations],
@@ -2234,8 +2237,8 @@ class CustomerReturnRestockingList(CompanyReport):
                 from_location_ids.add(move.from_location.id)
                 to_location_ids.add(move.to_location.id)
 
-        from_locations = Location.search(list(from_location_ids))
-        to_locations = Location.search(list(to_location_ids))
+        from_locations = Location.browse(list(from_location_ids))
+        to_locations = Location.browse(list(to_location_ids))
 
         return {
             'from_location_ids': [l.id for l in from_locations],
@@ -2281,8 +2284,8 @@ class InteralShipmentReport(CompanyReport):
                 from_location_ids.add(move.from_location.id)
                 to_location_ids.add(move.to_location.id)
 
-        from_locations = Location.search(list(from_location_ids))
-        to_locations = Location.search(list(to_location_ids))
+        from_locations = Location.browse(list(from_location_ids))
+        to_locations = Location.browse(list(to_location_ids))
 
         return {
             'from_location_ids': [l.id for l in from_locations],

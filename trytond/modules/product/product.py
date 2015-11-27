@@ -152,12 +152,12 @@ class Product(ModelSQL, ModelView):
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        ids = map(int, cls.search([('code',) + clause[1:]], order=[]))
+        ids = map(int, cls.search([('code',) + tuple(clause[1:])], order=[]))
         if ids:
-            ids += map(int, cls.search([('template.name',) + clause[1:]],
-                    order=[]))
+            ids += map(int,
+                cls.search([('template.name',) + tuple(clause[1:])], order=[]))
             return [('id', 'in', ids)]
-        return [('template.name',) + clause[1:]]
+        return [('template.name',) + tuple(clause[1:])]
 
     def get_default_uom(self, name):
         return self.template.default_uom.id
@@ -209,7 +209,9 @@ class Product(ModelSQL, ModelView):
                     field = arg[0].split('.', 1)[0]
                     if not getattr(cls, field, None):
                         field = 'template.' + arg[0]
-                    result.append((field,) + tuple(arg[1:]))
+                        result.append((field,) + tuple(arg[1:]))
+                    else:
+                        result.append(arg)
                 elif isinstance(arg, list):
                     # sub-domain
                     result.append(convert_domain(arg))

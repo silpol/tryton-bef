@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="area" />
-    <field name="code" />
-    <field name="name" />
-    <field name="comment" />
-    <field name="precaution" />
-    <field name="active" />
+    <field name="exit"/>
+    <field name="code"/>
+    <field name="name"/>
+    <field name="comment"/>
+    <field name="exit_typinv" tree_invisible="1"/>
+    <field name="exit_typ" tree_invisible="1"/>
 </tree>

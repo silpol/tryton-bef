@@ -13,7 +13,6 @@ this repository contains the full copyright notices and license terms. -->
     </group>
     <label name="probability"/>
     <field name="probability"/>
-    <newline/>
     <label name="description"/>
     <field name="description" colspan="3"/>
     <notebook colspan="4">

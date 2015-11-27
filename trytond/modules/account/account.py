@@ -498,7 +498,7 @@ class AccountTemplate(ModelSQL, ModelView):
             if self.taxes:
                 Account.write([Account(template2account[self.id])], {
                         'taxes': [
-                            ('add', template2tax[x.id]) for x in self.taxes],
+                            ('add', [template2tax[x.id] for x in self.taxes])],
                         })
             template_done.append(self.id)
 
@@ -842,6 +842,7 @@ class Account(ModelSQL, ModelView):
             default = {}
         default['left'] = 0
         default['right'] = 0
+        default.setdefault('template')
         default.setdefault('deferrals', [])
         new_accounts = super(Account, cls).copy(accounts, default=default)
         cls._rebuild_tree('parent', None, 0)
@@ -899,7 +900,7 @@ class Account(ModelSQL, ModelView):
             current_type = self.type.id if self.type else None
             template_type = (template2type.get(self.template.type.id)
                 if self.template.type else None)
-            if current_type != template2type:
+            if current_type != template_type:
                 vals['type'] = template_type
             if vals:
                 self.write([self], vals)
@@ -1153,7 +1154,7 @@ class GeneralLedger(Report):
                     ('fiscalyear', '=', data['fiscalyear']),
                     ('end_date', '<=', start_period.start_date),
                     ])
-            start_period_ids = [p.id for p in start_periods]
+            start_period_ids += [p.id for p in start_periods]
 
         with Transaction().set_context(
                 fiscalyear=data['fiscalyear'],

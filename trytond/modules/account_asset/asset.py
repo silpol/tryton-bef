@@ -7,7 +7,7 @@ from dateutil import relativedelta
 from dateutil import rrule
 
 from trytond.model import Workflow, ModelSQL, ModelView, fields
-from trytond.pyson import Eval, Bool
+from trytond.pyson import Eval, Bool, If
 from trytond.pool import Pool
 from trytond.transaction import Transaction
 from trytond.wizard import Wizard, StateView, StateTransition, Button
@@ -38,7 +38,10 @@ class Asset(Workflow, ModelSQL, ModelView):
     supplier_invoice_line = fields.Many2One('account.invoice.line',
         'Supplier Invoice Line',
         domain=[
-            ('product', '=', Eval('product', -1)),
+            If(Eval('product', None) == None,
+                ('product', '=', -1),
+                ('product', '=', Eval('product', -1)),
+                ),
             ('invoice.type', '=', 'in_invoice'),
             ],
         states={
@@ -232,17 +235,18 @@ class Asset(Workflow, ModelSQL, ModelView):
         if invoice.company.currency != invoice.currency:
             with Transaction().set_context(date=invoice.currency_date):
                 new_values['value'] = Currency.compute(
-                    invoice.company.currency, invoice_line.amount,
-                    invoice.currency)
+                    invoice.currency, invoice_line.amount,
+                    invoice.company.currency)
         else:
             new_values['value'] = invoice_line.amount
-        new_values['purchase_date'] = invoice.invoice_date
-        new_values['start_date'] = invoice.invoice_date
-        if invoice_line.product.depreciation_duration:
-            duration = relativedelta.relativedelta(
-                months=int(invoice_line.product.depreciation_duration),
-                days=-1)
-            new_values['end_date'] = new_values['start_date'] + duration
+        if invoice.invoice_date:
+            new_values['purchase_date'] = invoice.invoice_date
+            new_values['start_date'] = invoice.invoice_date
+            if invoice_line.product.depreciation_duration:
+                duration = relativedelta.relativedelta(
+                    months=int(invoice_line.product.depreciation_duration),
+                    days=-1)
+                new_values['end_date'] = new_values['start_date'] + duration
 
         if not self.unit:
             new_values['quantity'] = invoice_line.quantity
@@ -296,7 +300,7 @@ class Asset(Workflow, ModelSQL, ModelView):
         # dateutil >= 2.0 has replace __nonzero__ by __bool__ which doesn't
         # work in Python < 3
         if delta == relativedelta.relativedelta():
-            return []
+            return [self.end_date]
         if self.frequency == 'monthly':
             rule = rrule.rrule(rrule.MONTHLY, dtstart=self.start_date,
                 bymonthday=-1)
@@ -320,7 +324,10 @@ class Asset(Workflow, ModelSQL, ModelView):
                     - relativedelta.relativedelta(days=1)]
                 + [l.date for l in self.lines])
             first_delta = dates[0] - start_date
-            last_delta = dates[-1] - dates[-2]
+            if len(dates) > 1:
+                last_delta = dates[-1] - dates[-2]
+            else:
+                last_delta = first_delta
             if self.frequency == 'monthly':
                 _, first_ndays = calendar.monthrange(
                     dates[0].year, dates[0].month)

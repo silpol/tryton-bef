@@ -68,7 +68,7 @@
             <field name="name">Rapport du dispositif (pdf)</field>
             <field name="model">dispositif.dispositif</field>
             <field name="report_name">rtryton.pdfreport</field>
-            <field name="report">dispositif/dispositif.Rnw</field>
+            <field name="report">dispositif/Dispositif.Rnw</field>
         </record>
         <record model="ir.action.keyword" id="report_dispositif_kwd_pdf">
             <field name="keyword">form_print</field>

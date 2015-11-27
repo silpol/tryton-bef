@@ -160,8 +160,10 @@ class Product:
         cost_values = {}
         context = {}
         trans_context = Transaction().context
-        if 'stock_date_end' in context:
-            context['_datetime'] = trans_context['stock_date_end']
+        if trans_context.get('stock_date_end'):
+            # Use the last cost_price of the day
+            context['_datetime'] = datetime.datetime.combine(
+                trans_context['stock_date_end'], datetime.time.max)
         with Transaction().set_context(context):
             for product in products:
                 # The date could be before the product creation
@@ -551,6 +553,8 @@ class Product:
                     res[(location_id, product_id)] = 0.0
 
         if wh_to_add:
+            if product_ids is None:
+                product_ids = set((p for s, p in res))
             for wh, storage in wh_to_add.iteritems():
                 for product in product_ids:
                     if (storage, product) in res:

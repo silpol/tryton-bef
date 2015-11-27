@@ -30,6 +30,9 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
     (major_version, minor_version, major_version, minor_version + 1))
 
+tests_require = ['proteus >= %s.%s, < %s.%s' %
+    (major_version, minor_version, major_version, minor_version + 1)]
+
 setup(name='trytond_purchase',
     version=info.get('version', '0.0.1'),
     description='Tryton module for purchase',
@@ -45,7 +48,8 @@ setup(name='trytond_purchase',
         ],
     package_data={
         'trytond.modules.purchase': (info.get('xml', [])
-            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', 'purchase.odt']),
+            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', 'tests/*.rst',
+                'purchase.odt']),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -79,4 +83,5 @@ setup(name='trytond_purchase',
     """,
     test_suite='tests',
     test_loader='trytond.test_loader:Loader',
+    tests_require=tests_require,
     )

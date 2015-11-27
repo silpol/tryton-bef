@@ -191,7 +191,7 @@ class Todo(ModelSQL, ModelView):
 
     @classmethod
     def validate(cls, todos):
-        super(todos, cls).validate(todos)
+        super(Todo, cls).validate(todos)
         for todo in todos:
             todo.check_recurrence()
 
@@ -489,7 +489,7 @@ class Todo(ModelSQL, ModelView):
         if hasattr(vtodo, 'percent_complete'):
             res['percent_complete'] = int(vtodo.percent_complete.value)
         else:
-            res['percent_complete'] = None
+            res['percent_complete'] = 0
 
         if hasattr(vtodo, 'completed'):
             if not isinstance(vtodo.completed.value, datetime.datetime):
@@ -809,7 +809,7 @@ class Todo(ModelSQL, ModelView):
             vtodo.add('class')
             getattr(vtodo, 'class').value = self.classification.upper()
         elif getattr(vtodo, 'class').value.lower() in \
-                dict(self.classification.selection):
+                dict(self.__class__.classification.selection):
             getattr(vtodo, 'class').value = self.classification.upper()
         if self.location:
             if not hasattr(vtodo, 'location'):

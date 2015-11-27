@@ -298,7 +298,7 @@ def do_POST(self):
         except DAV_Error, exception:
             ec, _ = exception
             return self.send_status(ec)
-        self.send_body_chunks(DATA, '200', 'OK', 'OK')
+        self.send_body(DATA, 200, 'OK', 'OK')
         return
     return _prev_do_POST(self)
 

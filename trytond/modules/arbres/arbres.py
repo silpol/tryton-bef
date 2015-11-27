@@ -194,7 +194,12 @@ class Arbres(ModelSQL, ModelView):
             domain=[('cycle.cyc_dispositif', '=', Eval('dispositif'))]
         )
     dispositif = fields.Function(
-            fields.Many2One('dispositif.dispositif', 'Dispositif'), 'get_dispositif', searcher='search_dispositif'
+            fields.Many2One(
+                'dispositif.dispositif',
+                'Dispositif'
+            ),
+            getter='get_dispositif',
+            searcher='search_dispositif'
         )
 
     def get_dispositif(self, name):

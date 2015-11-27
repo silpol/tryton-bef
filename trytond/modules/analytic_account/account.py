@@ -151,6 +151,9 @@ class Account(ModelSQL, ModelView):
         id2currency = {}
         for account_id, sum, currency_id in cursor.fetchall():
             account_sum.setdefault(account_id, Decimal('0.0'))
+            # SQLite uses float for SUM
+            if not isinstance(sum, Decimal):
+                sum = Decimal(str(sum))
             if currency_id != id2account[account_id].currency.id:
                 currency = None
                 if currency_id in id2currency:
@@ -219,6 +222,9 @@ class Account(ModelSQL, ModelView):
 
         id2currency = {}
         for account_id, sum, currency_id in cursor.fetchall():
+            # SQLite uses float for SUM
+            if not isinstance(sum, Decimal):
+                sum = Decimal(str(sum))
             if currency_id != id2account[account_id].currency.id:
                 currency = None
                 if currency_id in id2currency:
@@ -240,11 +246,11 @@ class Account(ModelSQL, ModelView):
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        accounts = cls.search([('code',) + clause[1:]], limit=1)
+        accounts = cls.search([('code',) + tuple(clause[1:])], limit=1)
         if accounts:
-            return [('code',) + clause[1:]]
+            return [('code',) + tuple(clause[1:])]
         else:
-            return [(cls._rec_name,) + clause[1:]]
+            return [(cls._rec_name,) + tuple(clause[1:])]
 
     @classmethod
     def convert_view(cls, tree):

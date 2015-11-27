@@ -63,10 +63,20 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="name">tryton-poi</field>
         <field name="path">icons/tryton-poi.svg</field>
     </record>
+    <record model="ir.ui.icon" id="tryton-inventaire">
+        <field name="name">tryton-inventaire</field>
+        <field name="path">icons/tryton-inventaire.svg</field>
+    </record>
+    <record model="ir.ui.icon" id="tryton-protocole">
+        <field name="name">tryton-protocole</field>
+        <field name="path">icons/tryton-protocole.svg</field>
+    </record>
 
-    <menuitem name="Inventory" sequence="0" id="menu_inventory" icon="tryton-inventory"/>
-    <menuitem parent="menu_inventory" sequence="1" name="Configuration" icon="tryton-preferences" id="menu_configuration"/>
-    <menuitem parent="menu_inventory" name="Rapports" id="menu_rapport"/>
+    <menuitem name="CENL" sequence="0" id="menu_cenl" icon="tryton-inventory"/>
+    <menuitem parent="menu_cenl" sequence="1" name="Configuration" icon="tryton-preferences" id="menu_configuration"/>
+    <menuitem parent="menu_cenl" name="Rapports" id="menu_rapport"/>
+    <menuitem parent="menu_cenl" name="Inventaires" id="menu_inventaire" icon="tryton-inventaire"/>
+    <menuitem parent="menu_cenl" name="Protocoles" id="menu_protocole" icon="tryton-protocole"/>
 
     <!-- Configuration -->
    <record model="ir.ui.view" id="configuration_view_tree">
@@ -121,21 +131,404 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="act_window" ref="act_code_form"/>
     </record>    
     <menuitem parent="menu_configuration" id="menu_code_form" icon="tryton-list" action="act_code_form"/>
-
-    <!-- Zone de prospection -->
-    <record model="ir.ui.view" id="inventory_view_tree">
-        <field name="model">inventory.area</field>
+   
+    <!-- Auteurs -->
+    <!-- Auteurs Point -->
+    <record model="ir.ui.view" id="inventory_point_listetaxon_party_view_tree">
+        <field name="model">inventory.point-inventory.listetaxon</field>
         <field name="type">tree</field>
-        <field name="name">area_tree</field>
+        <field name="name">pt_listetaxon_party_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_listetaxon_party_view_form">
+        <field name="model">inventory.point-inventory.listetaxon</field>
+        <field name="type">form</field>
+        <field name="name">pt_listetaxon_party_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_inventory_point_listetaxon_party_form">
+        <field name="name">Auteurs</field>
+        <field name="res_model">inventory.point-inventory.listetaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_point_listetaxon_party_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_point_listetaxon_party_view_tree"/>
+        <field name="act_window" ref="act_inventory_point_listetaxon_party_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_point_listetaxon_party_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_point_listetaxon_party_view_form"/>
+        <field name="act_window" ref="act_inventory_point_listetaxon_party_form"/>
+    </record>
+    <!-- Auteurs Track -->
+    <record model="ir.ui.view" id="inventory_track_listetaxon_party_view_tree">
+        <field name="model">inventory.track-inventory.listetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">track_listetaxon_party_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_listetaxon_party_view_form">
+        <field name="model">inventory.track-inventory.listetaxon</field>
+        <field name="type">form</field>
+        <field name="name">track_listetaxon_party_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_inventory_track_listetaxon_party_form">
+        <field name="name">Auteurs</field>
+        <field name="res_model">inventory.track-inventory.listetaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_track_listetaxon_party_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_track_listetaxon_party_view_tree"/>
+        <field name="act_window" ref="act_inventory_track_listetaxon_party_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_track_listetaxon_party_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_track_listetaxon_party_view_form"/>
+        <field name="act_window" ref="act_inventory_track_listetaxon_party_form"/>
+    </record>
+    <!-- Auteurs Zone -->
+    <record model="ir.ui.view" id="inventory_zone_listetaxon_party_view_tree">
+        <field name="model">inventory.zone-inventory.listetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">zone_listetaxon_party_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_zone_listetaxon_party_view_form">
+        <field name="model">inventory.zone-inventory.listetaxon</field>
+        <field name="type">form</field>
+        <field name="name">zone_listetaxon_party_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_inventory_zone_listetaxon_party_form">
+        <field name="name">Auteurs</field>
+        <field name="res_model">inventory.zone-inventory.listetaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_zone_listetaxon_party_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_zone_listetaxon_party_view_tree"/>
+        <field name="act_window" ref="act_inventory_zone_listetaxon_party_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_zone_listetaxon_party_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_zone_listetaxon_party_view_form"/>
+        <field name="act_window" ref="act_inventory_zone_listetaxon_party_form"/>
+    </record>        
+    
+    <!-- Relations vers Liste des taxons-->
+    <record model="ir.action.act_window" id="act_zonesessionlistetaxon_form">
+        <field name="name">Liste des taxons</field>
+        <field name="res_model">inventory.zonelistetaxon</field>
+        <field name="domain">[("zonesessiontaxon", "=", Eval('id'))]</field>
+        <field name="context">{'listesessioncompartiment_typinv': Eval('zonesession_typinv')}</field>
+    </record>
+    <record model="ir.action.keyword" id="act_zonesessionlistetaxon_keyword1">
+        <field name="keyword">form_relate</field>
+        <field name="model">inventory.zone-inventory.listecompartimenttaxon,-1</field>
+        <field name="action" ref="act_zonesessionlistetaxon_form"/>
+    </record>    
+    
+    <!-- Zone Session Liste de Taxons -->
+    <record model="ir.ui.view" id="inventory_zone_session_listetaxon_view_tree">
+        <field name="model">inventory.zonelistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">zone_session_listetaxon_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_zone_session_listetaxon_view_form">
+        <field name="model">inventory.zonelistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">zone_session_listetaxon_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_zone_session_listetaxon_form">
+        <field name="name">Zone - Session - Compartiment</field>
+        <field name="res_model">inventory.zonelistetaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_session_listetaxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_zone_session_listetaxon_view_tree"/>
+        <field name="act_window" ref="act_zone_session_listetaxon_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_session_listetaxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_zone_session_listetaxon_view_form"/>
+        <field name="act_window" ref="act_zone_session_listetaxon_form"/>
+    </record>
+    <record model="ir.action.report" id="report_zonelistetaxon_edit">
+        <field name="name">Open point in QGis...</field>
+        <field name="model">inventory.zonelistetaxon</field>
+        <field name="report_name">inventory.zonelistetaxon.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_zonelistetaxon_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.zonelistetaxon,-1</field>
+        <field name="action" ref="report_zonelistetaxon_edit"/>
+    </record>
+    
+    <!-- Zone Session Liste de Compartiment -->
+    <record model="ir.ui.view" id="inventory_zone_session_listecompartiment_view_tree">
+        <field name="model">inventory.zonelistecompartiment</field>
+        <field name="type">tree</field>
+        <field name="name">zone_session_listecompartiment_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_zone_session_listecompartiment_view_form">
+        <field name="model">inventory.zonelistecompartiment</field>
+        <field name="type">form</field>
+        <field name="name">zone_session_listecompartiment_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_zone_session_listecompartiment_form">
+        <field name="name">Zone - Session - Compartiment</field>
+        <field name="res_model">inventory.zonelistecompartiment</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_session_listecompartiment_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_zone_session_listecompartiment_view_tree"/>
+        <field name="act_window" ref="act_zone_session_listecompartiment_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_session_listecompartiment_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_zone_session_listecompartiment_view_form"/>
+        <field name="act_window" ref="act_zone_session_listecompartiment_form"/>
+    </record>        
+    
+    <!-- Relations vers Liste des taxons-->
+    <record model="ir.action.act_window" id="act_tracksessionlistetaxon_form">
+        <field name="name">Liste des taxons</field>
+        <field name="res_model">inventory.tracklistetaxon</field>
+        <field name="domain">[("tracksessiontaxon", "=", Eval('id'))]</field>
+        <field name="context">{'listesessioncompartiment_typinv': Eval('tracksession_typinv')}</field>
+    </record>
+    <record model="ir.action.keyword" id="act_tracksessionlistetaxon_keyword1">
+        <field name="keyword">form_relate</field>
+        <field name="model">inventory.track-inventory.listecompartimenttaxon,-1</field>
+        <field name="action" ref="act_tracksessionlistetaxon_form"/>
+    </record>    
+    
+    <!-- Track Session Liste de Taxons -->
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_view_tree">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">track_session_listetaxon_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_view_form">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">track_session_listetaxon_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_track_session_listetaxon_form">
+        <field name="name">Track - Session - Compartiment</field>
+        <field name="res_model">inventory.tracklistetaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_session_listetaxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_track_session_listetaxon_view_tree"/>
+        <field name="act_window" ref="act_track_session_listetaxon_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_session_listetaxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_track_session_listetaxon_view_form"/>
+        <field name="act_window" ref="act_track_session_listetaxon_form"/>
+    </record>
+    <record model="ir.action.report" id="report_tracklistetaxon_edit">
+        <field name="name">Open point in QGis...</field>
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="report_name">inventory.tracklistetaxon.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_tracklistetaxon_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.tracklistetaxon,-1</field>
+        <field name="action" ref="report_tracklistetaxon_edit"/>
+    </record>
+    
+    <!-- Track Session Liste de Compartiment -->
+    <record model="ir.ui.view" id="inventory_track_session_listecompartiment_view_tree">
+        <field name="model">inventory.tracklistecompartiment</field>
+        <field name="type">tree</field>
+        <field name="name">track_session_listecompartiment_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_session_listecompartiment_view_form">
+        <field name="model">inventory.tracklistecompartiment</field>
+        <field name="type">form</field>
+        <field name="name">track_session_listecompartiment_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_track_session_listecompartiment_form">
+        <field name="name">Track - Session - Compartiment</field>
+        <field name="res_model">inventory.tracklistecompartiment</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_session_listecompartiment_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_track_session_listecompartiment_view_tree"/>
+        <field name="act_window" ref="act_track_session_listecompartiment_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_session_listecompartiment_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_track_session_listecompartiment_view_form"/>
+        <field name="act_window" ref="act_track_session_listecompartiment_form"/>
+    </record>        
+    
+    <!-- Relations vers Liste des taxons-->
+    <record model="ir.action.act_window" id="act_pointsessionlistetaxon_form">
+        <field name="name">Liste des taxons</field>
+        <field name="res_model">inventory.pointlistetaxon</field>
+        <field name="domain">[("pointsessiontaxon", "=", Eval('id'))]</field>
+        <field name="context">{'listesessioncompartiment_typinv': Eval('pointsession_typinv')}</field>
+    </record>
+    <record model="ir.action.keyword" id="act_pointsessionlistetaxon_keyword1">
+        <field name="keyword">form_relate</field>
+        <field name="model">inventory.point-inventory.listecompartimenttaxon,-1</field>
+        <field name="action" ref="act_pointsessionlistetaxon_form"/>
+    </record>
+    
+    <!-- Point Session Liste de Taxons -->
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">pt_session_listetaxon_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">pt_session_listetaxon_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_point_session_listetaxon_form">
+        <field name="name">Point - Session - Compartiment</field>
+        <field name="res_model">inventory.pointlistetaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_session_listetaxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_point_session_listetaxon_view_tree"/>
+        <field name="act_window" ref="act_point_session_listetaxon_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_session_listetaxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_point_session_listetaxon_view_form"/>
+        <field name="act_window" ref="act_point_session_listetaxon_form"/>
+    </record>
+    <record model="ir.action.report" id="report_pointlistetaxon_edit">
+        <field name="name">Open point in QGis...</field>
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="report_name">inventory.pointlistetaxon.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_pointlistetaxon_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.pointlistetaxon,-1</field>
+        <field name="action" ref="report_pointlistetaxon_edit"/>
+    </record>
+    
+    <!-- Point Session Liste de Compartiment -->
+    <record model="ir.ui.view" id="inventory_point_session_listecompartiment_view_tree">
+        <field name="model">inventory.pointlistecompartiment</field>
+        <field name="type">tree</field>
+        <field name="name">pt_session_listecompartiment_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listecompartiment_view_form">
+        <field name="model">inventory.pointlistecompartiment</field>
+        <field name="type">form</field>
+        <field name="name">pt_session_listecompartiment_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_point_session_listecompartiment_form">
+        <field name="name">Point - Session - Compartiment</field>
+        <field name="res_model">inventory.pointlistecompartiment</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_session_listecompartiment_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_point_session_listecompartiment_view_tree"/>
+        <field name="act_window" ref="act_point_session_listecompartiment_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_session_listecompartiment_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_point_session_listecompartiment_view_form"/>
+        <field name="act_window" ref="act_point_session_listecompartiment_form"/>
+    </record>    
+    
+    <!-- Zone Session -->
+    <record model="ir.ui.view" id="inventory_zone_session_view_tree">
+        <field name="model">inventory.zone-inventory.session</field>
+        <field name="type">tree</field>
+        <field name="name">session_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_zone_session_view_form">
+        <field name="model">inventory.zone-inventory.session</field>
+        <field name="type">form</field>
+        <field name="name">session_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_zone_session_form">
+        <field name="name">Zones Sessions</field>
+        <field name="res_model">inventory.zone-inventory.session</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_session_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_zone_session_view_tree"/>
+        <field name="act_window" ref="act_zone_session_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_session_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_zone_session_view_form"/>
+        <field name="act_window" ref="act_zone_session_form"/>
+    </record>
+    
+    <!-- Track Session -->
+    <record model="ir.ui.view" id="inventory_track_session_view_tree">
+        <field name="model">inventory.track-inventory.session</field>
+        <field name="type">tree</field>
+        <field name="name">session_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_session_view_form">
+        <field name="model">inventory.track-inventory.session</field>
+        <field name="type">form</field>
+        <field name="name">session_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_track_session_form">
+        <field name="name">Tracks Sessions</field>
+        <field name="res_model">inventory.track-inventory.session</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_session_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_track_session_view_tree"/>
+        <field name="act_window" ref="act_track_session_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_session_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_track_session_view_form"/>
+        <field name="act_window" ref="act_track_session_form"/>
+    </record>
+    
+    <!-- Point Session -->
+    <record model="ir.ui.view" id="inventory_point_session_view_tree">
+        <field name="model">inventory.point-inventory.session</field>
+        <field name="type">tree</field>
+        <field name="name">session_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_view_form">
+        <field name="model">inventory.point-inventory.session</field>
+        <field name="type">form</field>
+        <field name="name">session_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_point_session_form">
+        <field name="name">Points Sessions</field>
+        <field name="res_model">inventory.point-inventory.session</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_session_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_point_session_view_tree"/>
+        <field name="act_window" ref="act_point_session_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_session_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_point_session_view_form"/>
+        <field name="act_window" ref="act_point_session_form"/>
+    </record>
+
+    <!-- Campagne de prospection -->
+    <record model="ir.ui.view" id="inventory_view_tree">
+        <field name="model">inventory.campaign</field>
+        <field name="type">tree</field>
+        <field name="name">campaign_tree</field>
     </record>
     <record model="ir.ui.view" id="inventory_view_form">
-        <field name="model">inventory.area</field>
+        <field name="model">inventory.campaign</field>
         <field name="type">form</field>
-        <field name="name">area_form</field>
+        <field name="name">campaign_form</field>
     </record>
     <record model="ir.action.act_window" id="act_inventory_form">
-        <field name="name">Zones de prospection</field>
-        <field name="res_model">inventory.area</field>
+        <field name="name">Campagnes de prospection</field>
+        <field name="res_model">inventory.campaign</field>
     </record>
     <record model="ir.action.act_window.view" id="act_inventory_form_view1">
         <field name="sequence" eval="10"/>
@@ -147,18 +540,140 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="view" ref="inventory_view_form"/>
         <field name="act_window" ref="act_inventory_form"/>
     </record>   
-    <record model="ir.action.report" id="report_inventory_edit">
-        <field name="name">Open inventory in QGis...</field>
-        <field name="model">inventory.area</field>
-        <field name="report_name">inventory.area.qgis</field>
+    <record model="ir.action.report" id="report_campaign_edit">
+        <field name="name">Open campaign in QGis...</field>
+        <field name="model">inventory.campaign</field>
+        <field name="report_name">inventory.campaign.qgis</field>
         <field name="report">qgis/qgis.qgs</field>
     </record>
-    <record model="ir.action.keyword" id="report_inventory_edit_kwd">
+    <record model="ir.action.keyword" id="report_campaign_edit_kwd">
         <field name="keyword">form_action</field>
-        <field name="model">inventory.area,-1</field>
-        <field name="action" ref="report_inventory_edit"/>
+        <field name="model">inventory.campaign,-1</field>
+        <field name="action" ref="report_campaign_edit"/>
     </record>
-    <menuitem parent="menu_inventory" sequence="1" id="menu_inventory_area_form" icon="tryton-inventory" action="act_inventory_form"/> 
+    <menuitem parent="menu_cenl" sequence="1" id="menu_cenl_campaign_form" icon="tryton-inventory" action="act_inventory_form"/>
+    
+    <!-- Sortie de terrain -->
+    <record model="ir.ui.view" id="inventory_exit_view_tree">
+        <field name="model">inventory.exit</field>
+        <field name="type">tree</field>
+        <field name="name">exit_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_exit_view_form">
+        <field name="model">inventory.exit</field>
+        <field name="type">form</field>
+        <field name="name">exit_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_inventory_exit_form">
+        <field name="name">Sorties de terrain</field>
+        <field name="res_model">inventory.exit</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_exit_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_exit_view_tree"/>
+        <field name="act_window" ref="act_inventory_exit_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inventory_exit_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_exit_view_form"/>
+        <field name="act_window" ref="act_inventory_exit_form"/>
+    </record>   
+    <record model="ir.action.report" id="report_exit_edit">
+        <field name="name">Open exit in QGis...</field>
+        <field name="model">inventory.exit</field>
+        <field name="report_name">inventory.exit.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_exit_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">inventory.exit,-1</field>
+        <field name="action" ref="report_exit_edit"/>
+    </record>
+    <menuitem parent="menu_cenl_campaign_form" sequence="1" id="menu_cenl_exit" icon="tryton-inventory" action="act_inventory_exit_form"/>
+    
+    <!-- Sessions -->
+    <menuitem parent="menu_cenl_exit" sequence="99" name="Sessions" id="menu_cenl_session" icon="tryton-inventory"/>
+    
+    <!-- Zone Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="inventory_zone_session_listecompartimentstaxon_view_tree">
+        <field name="model">inventory.zone-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">zone_session_listecompartimenttaxon_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="inventory_zone_session_listecompartimentstaxon_view_form">
+        <field name="model">inventory.zone-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">zone_session_listecompartimenttaxon_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_zone_session_listecompartimentstaxon_form">
+        <field name="name">Session (Zone) - Compartiment - Taxons</field>
+        <field name="res_model">inventory.zone-inventory.listecompartimenttaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_zone_session_listecompartimentstaxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_zone_session_listecompartimentstaxon_view_tree"/>
+        <field name="act_window" ref="act_zone_session_listecompartimentstaxon_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_zone_session_listecompartimentstaxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_zone_session_listecompartimentstaxon_view_form"/>
+        <field name="act_window" ref="act_zone_session_listecompartimentstaxon_form"/>
+    </record>
+    <menuitem parent="menu_cenl_session" id="menu_zonelistecompartimentstaxon_form" icon="tryton-list" action="act_zone_session_listecompartimentstaxon_form"/>    
+    
+    <!-- Track Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="inventory_track_session_listecompartimentstaxon_view_tree">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">track_session_listecompartimenttaxon_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="inventory_track_session_listecompartimentstaxon_view_form">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">track_session_listecompartimenttaxon_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_track_session_listecompartimentstaxon_form">
+        <field name="name">Session (Track) - Compartiment - Taxons</field>
+        <field name="res_model">inventory.track-inventory.listecompartimenttaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_track_session_listecompartimentstaxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_track_session_listecompartimentstaxon_view_tree"/>
+        <field name="act_window" ref="act_track_session_listecompartimentstaxon_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_track_session_listecompartimentstaxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_track_session_listecompartimentstaxon_view_form"/>
+        <field name="act_window" ref="act_track_session_listecompartimentstaxon_form"/>
+    </record>            
+    <menuitem parent="menu_cenl_session" id="menu_tracklistecompartimentstaxon_form" icon="tryton-list" action="act_track_session_listecompartimentstaxon_form"/>    
+    
+    <!-- Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="inventory_point_session_listecompartimentstaxon_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">pt_session_listecompartimenttaxon_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="inventory_point_session_listecompartimentstaxon_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">pt_session_listecompartimenttaxon_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_point_session_listecompartimentstaxon_form">
+        <field name="name">Session (Point) - Compartiment - Taxons</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_point_session_listecompartimentstaxon_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inventory_point_session_listecompartimentstaxon_view_tree"/>
+        <field name="act_window" ref="act_point_session_listecompartimentstaxon_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_point_session_listecompartimentstaxon_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inventory_point_session_listecompartimentstaxon_view_form"/>
+        <field name="act_window" ref="act_point_session_listecompartimentstaxon_form"/>
+    </record>
+    <menuitem parent="menu_cenl_session" id="menu_pointlistecompartimentstaxon_form" icon="tryton-list" action="act_point_session_listecompartimentstaxon_form"/>
 
     <!-- Track -->
     <record model="ir.ui.view" id="inventory_track_view_tree">
@@ -172,7 +687,7 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="name">track_form</field>
     </record>
     <record model="ir.action.act_window" id="act_track_form">
-        <field name="name">Tracks</field>
+        <field name="name">Dispositif (Tracks)</field>
         <field name="res_model">inventory.track</field>
     </record>
     <record model="ir.action.act_window.view" id="act_track_form_view1">
@@ -196,7 +711,7 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="model">inventory.track,-1</field>
         <field name="action" ref="report_track_edit"/>
     </record>
-    <menuitem parent="menu_inventory_area_form" sequence="1" id="menu_track_form" icon="tryton-track" action="act_track_form"/>
+    <menuitem parent="menu_cenl_exit" sequence="1" id="menu_track_form" icon="tryton-track" action="act_track_form"/>
 
     <!-- Point -->
     <record model="ir.ui.view" id="inventory_point_view_tree">
@@ -210,7 +725,7 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="name">pt_form</field>
     </record>
     <record model="ir.action.act_window" id="act_point_form">
-        <field name="name">Points</field>
+        <field name="name">Dispositif (Points)</field>
         <field name="res_model">inventory.point</field>
     </record>
     <record model="ir.action.act_window.view" id="act_point_form_view1">
@@ -238,16 +753,16 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="name">Monitoring</field>
         <field name="model">inventory.point</field>
         <field name="report_name">inventory.point</field>
-        <field name="report">inventory/inventory_point.odt</field>            
+        <field name="report">cenl_inventory/inventory_point.odt</field>            
     </record>
     <record model="ir.action.keyword" id="report_inventory_point_kwd">
         <field name="keyword">form_print</field>
         <field name="model">inventory.point,-1</field>
         <field name="action" ref="report_point"/>
     </record>
-    <menuitem parent="menu_inventory_area_form" sequence="1" id="menu_point_form" icon="tryton-pt" action="act_point_form"/>
+    <menuitem parent="menu_cenl_exit" sequence="1" id="menu_point_form" icon="tryton-pt" action="act_point_form"/>
     
-    <!-- generate all points -->
+    <!-- Generate all points -->
     <record model="ir.action.wizard" id="generatepoint">
         <field name="name">Generate all points...</field>
         <field name="model">inventory.point</field>
@@ -271,7 +786,7 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="name">zone_form</field>
     </record>
     <record model="ir.action.act_window" id="act_zone_form">
-        <field name="name">Zones</field>
+        <field name="name">Dispositif (Zones)</field>
         <field name="res_model">inventory.zone</field>
     </record>
     <record model="ir.action.act_window.view" id="act_zone_form_view1">
@@ -295,7 +810,7 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="model">inventory.zone,-1</field>
         <field name="action" ref="report_zone_edit"/>
     </record>
-    <menuitem parent="menu_inventory_area_form" sequence="2" id="menu_zone_form" icon="tryton-zone" action="act_zone_form"/>   
+    <menuitem parent="menu_cenl_exit" sequence="2" id="menu_zone_form" icon="tryton-zone" action="act_zone_form"/>   
 
     <!-- LRS -->
     <record model="ir.ui.view" id="inventory_lrs_view_tree">
@@ -333,7 +848,7 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="model">inventory.lrs,-1</field>
         <field name="action" ref="report_lrs_edit"/>
     </record>
-    <menuitem parent="menu_inventory" sequence="3" id="menu_lrs_form" icon="tryton-lrs" action="act_lrs_form"/>
+    <menuitem parent="menu_cenl" sequence="3" id="menu_lrs_form" icon="tryton-lrs" action="act_lrs_form"/>
 
     <!-- POI -->
     <record model="ir.ui.view" id="inventory_poi_view_tree">
@@ -371,7 +886,565 @@ Copyright (c) 2012-2013 Pascal Obstetar
         <field name="model">inventory.poi,-1</field>
         <field name="action" ref="report_poi_edit"/>
     </record>
-    <menuitem parent="menu_inventory" sequence="4" id="menu_poi_form" icon="tryton-poi" action="act_poi_form"/>
+    <menuitem parent="menu_cenl" sequence="4" id="menu_poi_form" icon="tryton-poi" action="act_poi_form"/>
+    
+    <!-- Inventaires -->
+    <!-- Inventaires odonates - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="inv_odonate_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">inv_odonate_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="inv_odonate_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">inv_odonate_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_inv_odonate_form">
+        <field name="name">Inventaires odonates</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 85)]</field>
+        <field name="context">{'pointsession_typinv': 85}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_inv_odonate_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="inv_odonate_view_tree"/>
+        <field name="act_window" ref="act_inv_odonate_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_inv_odonate_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="inv_odonate_view_form"/>
+        <field name="act_window" ref="act_inv_odonate_form"/>
+    </record>
+    <menuitem parent="menu_inventaire" id="menu_inv_odonate_form" icon="tryton-list" action="act_inv_odonate_form" sequence='85'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_inv_odonate_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">pt_session_listetaxon_inv_odonate_tree</field>
+    </record>
+    
+    <!-- Protocoles -->
+    <!-- Relevés phytosociologiques, bryocologiques - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="releve_phyto_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">91_releve_phyto_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="releve_phyto_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">91_releve_phyto_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_releve_phyto_form">
+        <field name="name">Relevés phytosociologiques, bryocologiques</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 91)]</field>
+        <field name="context">{'pointsession_typinv': 91}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_releve_phyton_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="releve_phyto_view_tree"/>
+        <field name="act_window" ref="act_releve_phyto_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_releve_phyto_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="releve_phyto_view_form"/>
+        <field name="act_window" ref="act_releve_phyto_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_releve_phyto_form" icon="tryton-list" action="act_releve_phyto_form" sequence='91'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_releve_phyto_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">91_pt_session_listetaxon_releve_phyto_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_releve_phyto_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">91_pt_session_listetaxon_releve_phyto_form</field>
+    </record>
+    <!-- Relevés herbiers aquatiques - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="releve_herbier_aqua_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">92_releve_herbier_aqua_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="releve_herbier_aqua_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">92_releve_herbier_aqua_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_releve_herbier_aqua_form">
+        <field name="name">Relevés herbiers aquatiques</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 92)]</field>
+        <field name="context">{'pointsession_typinv': 92}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_releve_herbier_aqua_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="releve_herbier_aqua_view_tree"/>
+        <field name="act_window" ref="act_releve_herbier_aqua_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_releve_herbier_aqua_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="releve_herbier_aqua_view_form"/>
+        <field name="act_window" ref="act_releve_herbier_aqua_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_releve_herbier_aqua_form" icon="tryton-list" action="act_releve_herbier_aqua_form" sequence='92'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_releve_herbier_aqua_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">92_pt_session_listetaxon_releve_herbier_aqua_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_releve_herbier_aqua_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">92_pt_session_listetaxon_releve_herbier_aqua_form</field>
+    </record>
+    <!-- Placettes orthoptères - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="placette_ortho_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">93_placette_ortho_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="placette_ortho_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">93_placette_ortho_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_placette_ortho_form">
+        <field name="name">Placettes orthoptères</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 93)]</field>
+        <field name="context">{'pointsession_typinv': 93}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_placette_ortho_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="placette_ortho_view_tree"/>
+        <field name="act_window" ref="act_placette_ortho_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_placette_ortho_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="placette_ortho_view_form"/>
+        <field name="act_window" ref="act_placette_ortho_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_placette_ortho_form" icon="tryton-list" action="act_placette_ortho_form" sequence='93'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_placette_ortho_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">93_pt_session_listetaxon_placette_ortho_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_placette_ortho_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">93_pt_session_listetaxon_placette_ortho_form</field>
+    </record>
+    <!-- STELI odonates - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="steli_odonate_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">94_steli_odonate_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="steli_odonate_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">94_steli_odonate_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_steli_odonate_form">
+        <field name="name">STELI odonates</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 94)]</field>
+        <field name="context">{'pointsession_typinv': 94}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_steli_odonate_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="steli_odonate_view_tree"/>
+        <field name="act_window" ref="act_steli_odonate_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_steli_odonate_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="steli_odonate_view_form"/>
+        <field name="act_window" ref="act_steli_odonate_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_steli_odonate_form" icon="tryton-list" action="act_steli_odonate_form" sequence='94'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_steli_odonate_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">94_pt_session_listetaxon_steli_odonate_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_steli_odonate_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">94_pt_session_listetaxon_steli_odonate_form</field>
+    </record>
+    <!-- Chrono-ventaires - Zone Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="chrono_lepdio_view_tree">
+        <field name="model">inventory.zone-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">95_chrono_lepdio_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="chrono_lepdio_view_form">
+        <field name="model">inventory.zone-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">95_chrono_lepdio_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_chrono_lepdio_form">
+        <field name="name">Chrono-ventaires lépidoptères</field>
+        <field name="res_model">inventory.zone-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('zonesession_typinv', '=', 95)]</field>
+        <field name="context">{'zonesession_typinv': 95}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_chrono_lepdio_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="chrono_lepdio_view_tree"/>
+        <field name="act_window" ref="act_chrono_lepdio_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_chrono_lepdio_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="chrono_lepdio_view_form"/>
+        <field name="act_window" ref="act_chrono_lepdio_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_chrono_lepdio_form" icon="tryton-list" action="act_chrono_lepdio_form" sequence='95'/>    
+    <record model="ir.ui.view" id="inventory_zone_session_listetaxon_chrono_lepdio_view_tree">
+        <field name="model">inventory.zonelistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">95_zone_session_listetaxon_chrono_lepdio_tree</field>
+    </record> 
+    <record model="ir.ui.view" id="inventory_zone_session_listetaxon_chrono_lepdio_view_form">
+        <field name="model">inventory.zonelistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">95_zone_session_listetaxon_chrono_lepdio_form</field>
+    </record>        
+    <!-- Transects lépidoptères - Track Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="transect_lepdio_view_tree">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">96_transect_lepdio_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="transect_lepdio_view_form">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">96_transect_lepdio_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_transect_lepdio_form">
+        <field name="name">Transects lépidoptères</field>
+        <field name="res_model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('tracksession_typinv', '=', 96)]</field>
+        <field name="context">{'tracksession_typinv': 96}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_transect_lepdio_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="transect_lepdio_view_tree"/>
+        <field name="act_window" ref="act_transect_lepdio_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_transect_lepdio_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="transect_lepdio_view_form"/>
+        <field name="act_window" ref="act_transect_lepdio_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_transect_lepdio_form" icon="tryton-list" action="act_transect_lepdio_form" sequence='96'/>    
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_transect_lepdio_view_tree">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">96_track_session_listetaxon_transect_lepdio_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_transect_lepdio_view_form">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">96_track_session_listetaxon_transect_lepdio_form</field>
+    </record>    
+    <!-- Transects tourbières acides - Track Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="transect_tourbiere_acide_view_tree">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">97_transect_tourbiere_acide_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="transect_tourbiere_acide_view_form">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">97_transect_tourbiere_acide_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_transect_tourbiere_acide_form">
+        <field name="name">Transects tourbières acides</field>
+        <field name="res_model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('tracksession_typinv', '=', 97)]</field>
+        <field name="context">{'tracksession_typinv': 97}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_transect_tourbiere_acide_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="transect_tourbiere_acide_view_tree"/>
+        <field name="act_window" ref="act_transect_tourbiere_acide_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_transect_tourbiere_acide_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="transect_tourbiere_acide_view_form"/>
+        <field name="act_window" ref="act_transect_tourbiere_acide_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_transect_tourbiere_acide_form" icon="tryton-list" action="act_transect_tourbiere_acide_form" sequence='97'/>    
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_transect_tourbiere_acide_view_tree">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">97_track_session_listetaxon_transect_tourbiere_acide_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_transect_tourbiere_acide_view_form">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">97_track_session_listetaxon_transect_tourbiere_acide_form</field>
+    </record>
+    <!-- Transects odonates tourbières - Track Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="transect_odonate_tourbiere_view_tree">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">100_transect_odonate_tourbiere_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="transect_odonate_tourbiere_view_form">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">100_transect_odonate_tourbiere_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_transect_odonate_tourbiere_form">
+        <field name="name">Transects - odonates - tourbières</field>
+        <field name="res_model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('tracksession_typinv', '=', 100)]</field>
+        <field name="context">{'tracksession_typinv': 100}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_transect_odonate_tourbiere_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="transect_odonate_tourbiere_view_tree"/>
+        <field name="act_window" ref="act_transect_odonate_tourbiere_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_transect_odonate_tourbiere_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="transect_odonate_tourbiere_view_form"/>
+        <field name="act_window" ref="act_transect_odonate_tourbiere_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_transect_odonate_tourbiere_form" icon="tryton-list" action="act_transect_odonate_tourbiere_form" sequence='100'/>    
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_transect_odonate_tourbiere_view_tree">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">100_track_session_listetaxon_transect_odonate_tourbiere_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_transect_odonate_tourbiere_view_form">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">100_track_session_listetaxon_transect_odonate_tourbiere_form</field>
+    </record>
+    <!-- Parcours ornitho - Track Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="parcours_ornitho_view_tree">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">102_parcours_ornitho_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="parcours_ornitho_view_form">
+        <field name="model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">102_parcours_ornitho_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_parcours_ornitho_form">
+        <field name="name">Parcours ornitho</field>
+        <field name="res_model">inventory.track-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('tracksession_typinv', '=', 102)]</field>
+        <field name="context">{'tracksession_typinv': 102}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_parcours_ornitho_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="parcours_ornitho_view_tree"/>
+        <field name="act_window" ref="act_parcours_ornitho_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_parcours_ornitho_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="parcours_ornitho_view_form"/>
+        <field name="act_window" ref="act_parcours_ornitho_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_parcours_ornitho_form" icon="tryton-list" action="act_parcours_ornitho_form" sequence='102'/>    
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_parcours_ornitho_view_tree">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">102_track_session_listetaxon_parcours_ornitho_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_track_session_listetaxon_parcours_ornitho_view_form">
+        <field name="model">inventory.tracklistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">102_track_session_listetaxon_parcours_ornitho_form</field>
+    </record>
+    <!-- Méthode indiciaire IPA - ornitho - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="mi_ipa_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">103_mi_ipa_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="mi_ipa_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">103_mi_ipa_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_mi_ipa_form">
+        <field name="name">Méthode indiciaire IPA - ornitho</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 103)]</field>
+        <field name="context">{'pointsession_typinv': 103}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_mi_ipa_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="mi_ipa_view_tree"/>
+        <field name="act_window" ref="act_mi_ipa_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_mi_ipa_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="mi_ipa_view_form"/>
+        <field name="act_window" ref="act_mi_ipa_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_mi_ipa_form" icon="tryton-list" action="act_mi_ipa_form" sequence='103'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_mi_ipa_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">103_pt_session_listetaxon_mi_ipa_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_mi_ipa_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">103_pt_session_listetaxon_mi_ipa_form</field>
+    </record>
+    <!-- Méthode indiciaire EFP - ornitho - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="mi_efp_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">104_mi_efp_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="mi_efp_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">104_mi_efp_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_mi_efp_form">
+        <field name="name">Méthode indiciaire EFP - ornitho</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 104)]</field>
+        <field name="context">{'pointsession_typinv': 104}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_mi_efp_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="mi_efp_view_tree"/>
+        <field name="act_window" ref="act_mi_efp_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_mi_efp_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="mi_efp_view_form"/>
+        <field name="act_window" ref="act_mi_efp_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_mi_efp_form" icon="tryton-list" action="act_mi_efp_form" sequence='104'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_mi_efp_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">104_pt_session_listetaxon_mi_efp_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_mi_efp_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">104_pt_session_listetaxon_mi_efp_form</field>
+    </record>
+    <!-- Comptage oiseaux d'eau - WetLands - ornitho - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="wetlands_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">105_wetlands_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="wetlands_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">105_wetlands_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_wetlands_form">
+        <field name="name">Comptage oiseaux d'eau - WetLands - ornitho</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 105)]</field>
+        <field name="context">{'pointsession_typinv': 105}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_wetlands_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="wetlands_view_tree"/>
+        <field name="act_window" ref="act_wetlands_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_wetlands_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="wetlands_view_form"/>
+        <field name="act_window" ref="act_wetlands_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_wetlands_form" icon="tryton-list" action="act_wetlands_form" sequence='105'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_wetlands_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">105_pt_session_listetaxon_wetlands_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_wetlands_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">105_pt_session_listetaxon_wetlands_form</field>
+    </record>
+    <!-- Comptage oiseaux d'eau - Hors WetLands - ornitho - Point Session Liste Compartiments Taxons -->
+    <record model="ir.ui.view" id="hors_wetlands_view_tree">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">tree</field>
+        <field name="name">106_hors_wetlands_tree</field>
+    </record>  
+    <record model="ir.ui.view" id="hors_wetlands_view_form">
+        <field name="model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="type">form</field>
+        <field name="name">106_hors_wetlands_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_hors_wetlands_form">
+        <field name="name">Comptage oiseaux d'eau - Hors WetLands - ornitho</field>
+        <field name="res_model">inventory.point-inventory.listecompartimenttaxon</field>
+        <field name="domain">[('pointsession_typinv', '=', 106)]</field>
+        <field name="context">{'pointsession_typinv': 106}</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_hors_wetlands_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="hors_wetlands_view_tree"/>
+        <field name="act_window" ref="act_hors_wetlands_form"/>
+    </record>   
+    <record model="ir.action.act_window.view" id="act_hors_wetlands_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="hors_wetlands_view_form"/>
+        <field name="act_window" ref="act_hors_wetlands_form"/>
+    </record>
+    <menuitem parent="menu_protocole" id="menu_hors_wetlands_form" icon="tryton-list" action="act_hors_wetlands_form" sequence='106'/>    
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_hors_wetlands_view_tree">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">tree</field>
+        <field name="name">106_pt_session_listetaxon_hors_wetlands_tree</field>
+    </record>
+    <record model="ir.ui.view" id="inventory_point_session_listetaxon_hors_wetlands_view_form">
+        <field name="model">inventory.pointlistetaxon</field>
+        <field name="type">form</field>
+        <field name="name">106_pt_session_listetaxon_hors_wetlands_form</field>
+    </record>    
+    
+    <!-- Taxinomie -->        
+    <record model="ir.ui.view" id="cenl_taxinomie_view_form">
+        <field name="model">taxinomie.taxinomie</field>
+        <field name="inherit" ref="taxinomie.taxinomie_view_form" />       
+        <field name="name">cenl_taxinomie_form</field>
+    </record>
+    <record model="ir.ui.view" id="cenl_taxinomie_view_tree">
+        <field name="model">taxinomie.taxinomie</field>
+        <field name="inherit" ref="taxinomie.taxinomie_view_tree" />
+        <field name="name">cenl_taxinomie_tree</field>
+    </record>
+    <record model="ir.action.act_window" id="act_cenl_taxinomie_form">
+        <field name="name">Taxinomie</field>
+        <field name="res_model">taxinomie.taxinomie</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_cenl_taxinomie_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="cenl_taxinomie_view_tree"/>
+        <field name="act_window" ref="act_cenl_taxinomie_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_cenl_taxinomie_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="cenl_taxinomie_view_form"/>
+        <field name="act_window" ref="act_cenl_taxinomie_form"/>
+    </record>
         
+         
     </data>
 </tryton>

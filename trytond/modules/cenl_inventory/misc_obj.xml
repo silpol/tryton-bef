@@ -18,7 +18,7 @@ Copyright (c) 2013 Laurent Defert
 -->
 <tryton>
     <data>
-    <menuitem parent="menu_inventory_area_form" sequence="3" id="menu_inventory_misc_obj" name="Objects divers" icon="tryton-list"/>
+    <menuitem parent="menu_cenl_campaign_form" sequence="3" id="menu_cenl_misc_obj" name="Objects divers" icon="tryton-list"/>
 
     <!-- inventory misc polygone objects -->
     <record model="ir.ui.view" id="inventory_misc_obj_poly_view_tree">
@@ -45,7 +45,7 @@ Copyright (c) 2013 Laurent Defert
         <field name="view" ref="inventory_misc_obj_poly_view_form"/>
         <field name="act_window" ref="act_inventory_misc_obj_poly_form"/>
     </record>
-    <menuitem parent="menu_inventory_misc_obj" sequence="1" id="menu_inventory_misc_obj_poly_form" icon="tryton-list" action="act_inventory_misc_obj_poly_form"/>
+    <menuitem parent="menu_cenl_misc_obj" sequence="1" id="menu_cenl_misc_obj_poly_form" icon="tryton-list" action="act_inventory_misc_obj_poly_form"/>
 
     <!-- inventory misc lines objects -->
     <record model="ir.ui.view" id="inventory_misc_obj_line_view_tree">
@@ -72,7 +72,7 @@ Copyright (c) 2013 Laurent Defert
         <field name="view" ref="inventory_misc_obj_line_view_form"/>
         <field name="act_window" ref="act_inventory_misc_obj_line_form"/>
     </record>
-    <menuitem parent="menu_inventory_misc_obj" sequence="2" id="menu_inventory_misc_obj_line_form" icon="tryton-list" action="act_inventory_misc_obj_line_form"/>    
+    <menuitem parent="menu_cenl_misc_obj" sequence="2" id="menu_cenl_misc_obj_line_form" icon="tryton-list" action="act_inventory_misc_obj_line_form"/>    
 
     <!-- inventory misc points objects -->
     <record model="ir.ui.view" id="inventory_misc_obj_point_view_tree">
@@ -99,7 +99,7 @@ Copyright (c) 2013 Laurent Defert
         <field name="view" ref="inventory_misc_obj_point_view_form"/>
         <field name="act_window" ref="act_inventory_misc_obj_point_form"/>
     </record>
-    <menuitem parent="menu_inventory_misc_obj" sequence="3" id="menu_inventory_misc_obj_point_form" icon="tryton-list" action="act_inventory_misc_obj_point_form"/>
+    <menuitem parent="menu_cenl_misc_obj" sequence="3" id="menu_cenl_misc_obj_point_form" icon="tryton-list" action="act_inventory_misc_obj_point_form"/>
 
     </data>
 </tryton>

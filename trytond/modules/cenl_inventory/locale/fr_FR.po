@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@bioecoforests.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,977 +13,3900 @@ msgstr ""
 "Language: fr_FR\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-msgctxt "error:site_site.site:"
+msgctxt "error:inventory.campaign:"
 msgid "Avancement must be between 0 and 100."
-msgstr "Le pourcentage d'avancement doit être entre 0 et 100."
+msgstr "Le pourcentage d'avancement doit être compris entre 0 et 100"
 
-msgctxt "error:site_site.site:"
-msgid "You cannot set duplicated site ID!"
-msgstr "Vous en pouvez pas dupliquer l'identifiant du site !"
+msgctxt "error:inventory.campaign:"
+msgid "You cannot set duplicated campaign ID!"
+msgstr "Vous ne pouvez pas dupliquer une campagne avec le même identifiant !"
 
-msgctxt "field:site_site.code,code:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "field:site_site.code,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.code,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.code,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.code,lib_long:"
-msgid "Label of code"
-msgstr "Libellé du code"
-
-msgctxt "field:site_site.code,name:"
-msgid "Name of code"
-msgstr "Nom du code"
-
-msgctxt "field:site_site.code,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.code,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.code,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.configuration,code:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "field:site_site.configuration,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.configuration,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.configuration,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.configuration,lib_long:"
-msgid "Label of code"
-msgstr "Libellé du code"
-
-msgctxt "field:site_site.configuration,name:"
-msgid "Name of code"
-msgstr "Nom du code"
-
-msgctxt "field:site_site.configuration,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.configuration,value:"
-msgid "Value of code"
-msgstr "Valeur du code"
-
-msgctxt "field:site_site.configuration,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.configuration,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.lrs,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.lrs,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.lrs,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:site_site.lrs,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.lrs,lrs_image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.lrs,lrs_map:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.lrs,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.lrs,pk:"
-msgid "PK"
-msgstr "PK"
-
-msgctxt "field:site_site.lrs,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.lrs,track:"
-msgid "Track"
-msgstr "Track"
-
-msgctxt "field:site_site.lrs,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.lrs,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.misc_obj_line,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:site_site.misc_obj_line,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.misc_obj_line,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.misc_obj_line,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:site_site.misc_obj_line,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.misc_obj_line,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.misc_obj_line,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.misc_obj_line,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.misc_obj_line,site:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "field:site_site.misc_obj_line,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.misc_obj_line,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.misc_obj_point,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:site_site.misc_obj_point,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.misc_obj_point,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.misc_obj_point,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:site_site.misc_obj_point,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.misc_obj_point,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.misc_obj_point,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.misc_obj_point,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.misc_obj_point,site:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "field:site_site.misc_obj_point,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.misc_obj_point,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.misc_obj_poly,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:site_site.misc_obj_poly,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.misc_obj_poly,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.misc_obj_poly,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:site_site.misc_obj_poly,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.misc_obj_poly,image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.misc_obj_poly,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.misc_obj_poly,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.misc_obj_poly,site:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "field:site_site.misc_obj_poly,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.misc_obj_poly,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.poi,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:site_site.poi,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.poi,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.poi,end:"
-msgid "PK end"
-msgstr "PK fin"
-
-msgctxt "field:site_site.poi,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:site_site.poi,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.poi,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.poi,photo:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "field:site_site.poi,poi_image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.poi,poi_map:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.poi,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.poi,start:"
-msgid "PK start"
-msgstr "PK début"
-
-msgctxt "field:site_site.poi,track:"
-msgid "Track"
-msgstr "Track"
-
-msgctxt "field:site_site.poi,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.poi,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.point,active:"
+msgctxt "field:inventory.campaign,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "field:site_site.point,code:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "field:site_site.point,comment:"
-msgid "Comment"
-msgstr "Commentaire"
-
-msgctxt "field:site_site.point,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.point,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.point,geom:"
-msgid "Geometry"
-msgstr "Geometry"
-
-msgctxt "field:site_site.point,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.point,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.point,photo:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "field:site_site.point,point_image:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.point,point_map:"
-msgid "Image"
-msgstr "Image"
-
-msgctxt "field:site_site.point,precaution:"
-msgid "Précautions"
-msgstr "Précautions"
-
-msgctxt "field:site_site.point,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.point,site:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "field:site_site.point,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.point,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.site,active:"
-msgid "Active"
-msgstr "Active"
-
-msgctxt "field:site_site.site,avancement:"
+msgctxt "field:inventory.campaign,avancement:"
 msgid "Av.(%)"
 msgstr "Av.(%)"
 
-msgctxt "field:site_site.site,code:"
+msgctxt "field:inventory.campaign,campagne:"
+msgid "Campagne"
+msgstr "Campagne"
+
+msgctxt "field:inventory.campaign,campaign_map:"
+msgid "Image map"
+msgstr "Carte image"
+
+msgctxt "field:inventory.campaign,campaign_situation:"
+msgid "Situation map"
+msgstr "Carte de situation"
+
+msgctxt "field:inventory.campaign,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:site_site.site,create_date:"
+msgctxt "field:inventory.campaign,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.campaign,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:site_site.site,create_uid:"
+msgctxt "field:inventory.campaign,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:site_site.site,datedeb:"
+msgctxt "field:inventory.campaign,datedeb:"
 msgid "Début"
 msgstr "Début"
 
-msgctxt "field:site_site.site,datefin:"
+msgctxt "field:inventory.campaign,datefin:"
 msgid "Fin"
 msgstr "Fin"
 
-msgctxt "field:site_site.site,geom:"
-msgid "Geometry"
-msgstr "Geometry"
+msgctxt "field:inventory.campaign,exits:"
+msgid "Sortie de terrain"
+msgstr "Sortie de terrain"
 
-msgctxt "field:site_site.site,icon:"
+msgctxt "field:inventory.campaign,geom:"
+msgid "Géométrie"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.campaign,icon:"
 msgid "icon"
 msgstr "icône"
 
-msgctxt "field:site_site.site,id:"
+msgctxt "field:inventory.campaign,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:site_site.site,misc_obj_line:"
-msgid "Miscellaneous line objects"
-msgstr "Objet géométrique ligne"
+msgctxt "field:inventory.campaign,misc_obj_line:"
+msgid "Divers objets linéaire"
+msgstr "Divers objets linéaire"
 
-msgctxt "field:site_site.site,misc_obj_point:"
-msgid "Miscellaneous point objects"
-msgstr "Objet géométrique point"
+msgctxt "field:inventory.campaign,misc_obj_point:"
+msgid "Divers objets point"
+msgstr "Divers objets point"
 
-msgctxt "field:site_site.site,misc_obj_poly:"
-msgid "Miscellaneous polygon objects"
-msgstr "Objet géométrique polygone"
+msgctxt "field:inventory.campaign,misc_obj_poly:"
+msgid "Divers objets polygone"
+msgstr "Divers objets polygone"
 
-msgctxt "field:site_site.site,moa:"
-msgid "MOA"
-msgstr "MOA"
-
-msgctxt "field:site_site.site,moe:"
-msgid "MOE"
-msgstr "MOE"
-
-msgctxt "field:site_site.site,name:"
+msgctxt "field:inventory.campaign,name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:site_site.site,parcelle:"
-msgid "Parcelle"
-msgstr "Parcelle"
-
-msgctxt "field:site_site.site,photo:"
+msgctxt "field:inventory.campaign,photo:"
 msgid "Photo"
 msgstr "Photo"
 
-msgctxt "field:site_site.site,points:"
-msgid "Points"
-msgstr "Points"
-
-msgctxt "field:site_site.site,rec_name:"
+msgctxt "field:inventory.campaign,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:site_site.site,site_image:"
-msgid "Image"
-msgstr "Carte précise du site"
+msgctxt "field:inventory.campaign,suivi:"
+msgid "Responsable"
+msgstr "Responsable"
 
-msgctxt "field:site_site.site,site_map:"
-msgid "Image map"
-msgstr "Carte"
-
-msgctxt "field:site_site.site,site_situation:"
-msgid "Situation map"
-msgstr "Carte de situation du site"
-
-msgctxt "field:site_site.site,suivi:"
-msgid "Intervenant"
-msgstr "Intervenant"
-
-msgctxt "field:site_site.site,tracks:"
-msgid "Tracks"
-msgstr "Tracks"
-
-msgctxt "field:site_site.site,typo:"
-msgid "Type"
-msgstr "Type"
-
-msgctxt "field:site_site.site,write_date:"
+msgctxt "field:inventory.campaign,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:site_site.site,write_uid:"
+msgctxt "field:inventory.campaign,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:site_site.site,zones:"
-msgid "Zones"
-msgstr "Zones"
-
-msgctxt "field:site_site.site-cadastre.parcelle,create_date:"
-msgid "Create Date"
-msgstr "Date de création"
-
-msgctxt "field:site_site.site-cadastre.parcelle,create_uid:"
-msgid "Create User"
-msgstr "Créé par"
-
-msgctxt "field:site_site.site-cadastre.parcelle,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.site-cadastre.parcelle,parcelle:"
-msgid "Parcelle"
-msgstr "Parcelle"
-
-msgctxt "field:site_site.site-cadastre.parcelle,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:site_site.site-cadastre.parcelle,site:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "field:site_site.site-cadastre.parcelle,write_date:"
-msgid "Write Date"
-msgstr "Date de mise à jour"
-
-msgctxt "field:site_site.site-cadastre.parcelle,write_uid:"
-msgid "Write User"
-msgstr "Mis à jour par"
-
-msgctxt "field:site_site.surface_clc_site.open.start,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.surface_clc_site.open.start,site:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "field:site_site.surface_site_clc,actions:"
-msgid "Actions"
-msgstr "Actions"
-
-msgctxt "field:site_site.surface_site_clc,canton:"
-msgid "Canton"
-msgstr "Canton"
-
-msgctxt "field:site_site.surface_site_clc,clc:"
-msgid "CLC"
-msgstr "CLC"
-
-msgctxt "field:site_site.surface_site_clc,code:"
+msgctxt "field:inventory.code,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:site_site.surface_site_clc,commune:"
-msgid "Commune"
-msgstr "Commune"
-
-msgctxt "field:site_site.surface_site_clc,create_date:"
+msgctxt "field:inventory.code,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:site_site.surface_site_clc,create_uid:"
+msgctxt "field:inventory.code,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:site_site.surface_site_clc,id:"
+msgctxt "field:inventory.code,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:site_site.surface_site_clc,rec_name:"
+msgctxt "field:inventory.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:inventory.code,name:"
+msgid "Short name of code"
+msgstr "Nom court du code"
+
+msgctxt "field:inventory.code,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:site_site.surface_site_clc,site:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "field:site_site.surface_site_clc,surface:"
-msgid "Surface (ha)"
-msgstr "Surface (ha)"
-
-msgctxt "field:site_site.surface_site_clc,write_date:"
+msgctxt "field:inventory.code,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:site_site.surface_site_clc,write_uid:"
+msgctxt "field:inventory.code,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:site_site.surface_statut_buffer,create_date:"
+msgctxt "field:inventory.configuration,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:inventory.configuration,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:site_site.surface_statut_buffer,create_uid:"
+msgctxt "field:inventory.configuration,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:site_site.surface_statut_buffer,distance:"
-msgid "Distance (km)"
-msgstr "Distance (km)"
-
-msgctxt "field:site_site.surface_statut_buffer,id:"
+msgctxt "field:inventory.configuration,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:site_site.surface_statut_buffer,nom:"
+msgctxt "field:inventory.configuration,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:inventory.configuration,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "field:inventory.configuration,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.configuration,value:"
+msgid "Value of code"
+msgstr "Valeur du code"
+
+msgctxt "field:inventory.configuration,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.configuration,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.exit,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.exit,campagne:"
+msgid "Campagne"
+msgstr "Campagne"
+
+msgctxt "field:inventory.exit,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:inventory.exit,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.exit,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.exit,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.exit,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:inventory.exit,dispositif:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "field:inventory.exit,effort:"
+msgid "Effort"
+msgstr "Effort"
+
+msgctxt "field:inventory.exit,exit_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.exit,exit_map:"
+msgid "Image map"
+msgstr "Carte image"
+
+msgctxt "field:inventory.exit,geom:"
+msgid "Géométrie"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.exit,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.exit,methode:"
+msgid "Méthode"
+msgstr "Méthode"
+
+msgctxt "field:inventory.exit,methode_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.exit,name:"
 msgid "Nom"
 msgstr "Nom"
 
-msgctxt "field:site_site.surface_statut_buffer,rec_name:"
+msgctxt "field:inventory.exit,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:inventory.exit,points:"
+msgid "Dispositif (Points)"
+msgstr "Dispositif (Points)"
+
+msgctxt "field:inventory.exit,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:site_site.surface_statut_buffer,statut:"
-msgid "Statut"
-msgstr "Statut"
+msgctxt "field:inventory.exit,tracks:"
+msgid "Dispositif (Tracks)"
+msgstr "Dispositif (Tracks)"
 
-msgctxt "field:site_site.surface_statut_buffer,surface:"
-msgid "Surface (ha)"
-msgstr "Surface (ha)"
+msgctxt "field:inventory.exit,typeinv:"
+msgid "Type"
+msgstr "Type d'inventaire"
 
-msgctxt "field:site_site.surface_statut_buffer,typo:"
+msgctxt "field:inventory.exit,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.exit,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.exit,zones:"
+msgid "Dispositif (Zones)"
+msgstr "Dispositif (Zones)"
+
+msgctxt "field:inventory.lrs,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.lrs,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.lrs,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.lrs,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.lrs,lrs_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.lrs,lrs_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.lrs,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.lrs,pk:"
+msgid "PK"
+msgstr "PK"
+
+msgctxt "field:inventory.lrs,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.lrs,track:"
+msgid "Track"
+msgstr "Trace"
+
+msgctxt "field:inventory.lrs,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.lrs,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.misc_obj_line,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.misc_obj_line,campaign:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
+
+msgctxt "field:inventory.misc_obj_line,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.misc_obj_line,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.misc_obj_line,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.misc_obj_line,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.misc_obj_line,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.misc_obj_line,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.misc_obj_line,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:inventory.misc_obj_line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.misc_obj_line,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.misc_obj_line,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.misc_obj_point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.misc_obj_point,campaign:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
+
+msgctxt "field:inventory.misc_obj_point,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.misc_obj_point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.misc_obj_point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.misc_obj_point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.misc_obj_point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.misc_obj_point,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:inventory.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.misc_obj_poly,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.misc_obj_poly,campaign:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
+
+msgctxt "field:inventory.misc_obj_poly,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.misc_obj_poly,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:inventory.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.poi,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.poi,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.poi,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.poi,end:"
+msgid "PK end"
+msgstr "PK fin"
+
+msgctxt "field:inventory.poi,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.poi,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.poi,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.poi,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:inventory.poi,poi_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.poi,poi_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.poi,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.poi,start:"
+msgid "PK start"
+msgstr "PK début"
+
+msgctxt "field:inventory.poi,track:"
+msgid "Track"
+msgstr "Trace"
+
+msgctxt "field:inventory.poi,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.poi,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.point,altitude:"
+msgid "Altitude"
+msgstr "Altitude"
+
+msgctxt "field:inventory.point,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:inventory.point,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.point,exit:"
+msgid "Sortie"
+msgstr "Sortie"
+
+msgctxt "field:inventory.point,exit_typ:"
+msgid "Exit Typ"
+msgstr "Sortie - Dispositif"
+
+msgctxt "field:inventory.point,exit_typinv:"
+msgid "Exit Typeinv"
+msgstr "Sortie - Type d'inventaire / Type de protocole"
+
+msgctxt "field:inventory.point,exposition:"
+msgid "Exposition"
+msgstr "Exposition"
+
+msgctxt "field:inventory.point,facteur:"
+msgid "Facteur"
+msgstr "Facteur"
+
+msgctxt "field:inventory.point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.point,hauteur:"
+msgid "Hauteur (m)"
+msgstr "Hauteur (m)"
+
+msgctxt "field:inventory.point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.point,largeur:"
+msgid "Largeur (m)"
+msgstr "Largeur (m)"
+
+msgctxt "field:inventory.point,lieudit:"
+msgid "Lieu-dit"
+msgstr "Lieu-dit"
+
+msgctxt "field:inventory.point,lisiere:"
+msgid "Lisière"
+msgstr "Lisière"
+
+msgctxt "field:inventory.point,longueur:"
+msgid "Longueur (m)"
+msgstr "Longueur (m)"
+
+msgctxt "field:inventory.point,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.point,ombrage:"
+msgid "Ombrage"
+msgstr "Ombrage"
+
+msgctxt "field:inventory.point,pente:"
+msgid "Pente"
+msgstr "Pente"
+
+msgctxt "field:inventory.point,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:inventory.point,point_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.point,point_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.point,pointsession:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt "field:inventory.point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.point,station:"
+msgid "Station"
+msgstr "Station"
+
+msgctxt "field:inventory.point,surface:"
+msgid "Surface (m2)"
+msgstr "Surface (m2)"
+
+msgctxt "field:inventory.point,topographie:"
+msgid "Topographie"
+msgstr "Topographie"
+
+msgctxt "field:inventory.point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.point-inventory.listecompartimenttaxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.point-inventory.listecompartimenttaxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.point-inventory.listecompartimenttaxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:inventory.point-inventory.listecompartimenttaxon,"
+"pointlistecompartiment:"
+msgid "Compartiments"
+msgstr "Compartiments"
+
+msgctxt ""
+"field:inventory.point-inventory.listecompartimenttaxon,pointlistetaxon:"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "field:inventory.point-inventory.listecompartimenttaxon,pointsession:"
+msgid "Session"
+msgstr "Session"
+
+msgctxt ""
+"field:inventory.point-inventory.listecompartimenttaxon,pointsession_typinv:"
+msgid "PointSessionCompartimentTaxon Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.point-inventory.listecompartimenttaxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.point-inventory.listecompartimenttaxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.point-inventory.listecompartimenttaxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.point-inventory.session,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:inventory.point-inventory.session,activite:"
+msgid "Activité"
+msgstr "Activité"
+
+msgctxt "field:inventory.point-inventory.session,beaufort:"
+msgid "Vent"
+msgstr "Vent"
+
+msgctxt "field:inventory.point-inventory.session,borne:"
+msgid "Bornes"
+msgstr "Bornes"
+
+msgctxt "field:inventory.point-inventory.session,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:inventory.point-inventory.session,confiance:"
+msgid "Confiance"
+msgstr "Confiance"
+
+msgctxt "field:inventory.point-inventory.session,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.point-inventory.session,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.point-inventory.session,debut:"
+msgid "Heure de début"
+msgstr "Heure de début"
+
+msgctxt "field:inventory.point-inventory.session,determinationespeceadulte:"
+msgid "Détermination esp. ad."
+msgstr "Détermination esp. ad."
+
+msgctxt "field:inventory.point-inventory.session,dispoflorale:"
+msgid "Disposition florale"
+msgstr "Disposition florale"
+
+msgctxt "field:inventory.point-inventory.session,distanceborne:"
+msgid "Distance borne (cm)"
+msgstr "Distance borne (cm)"
+
+msgctxt "field:inventory.point-inventory.session,duree:"
+msgid "Durée (min)"
+msgstr "Durée (min)"
+
+msgctxt "field:inventory.point-inventory.session,ecartpoint:"
+msgid "Écart points (cm)"
+msgstr "Écart points (cm)"
+
+msgctxt "field:inventory.point-inventory.session,etatcons:"
+msgid "État de cons."
+msgstr "État de cons."
+
+msgctxt "field:inventory.point-inventory.session,fin:"
+msgid "Heure de fin"
+msgstr "Heure de fin"
+
+msgctxt "field:inventory.point-inventory.session,floraison:"
+msgid "Floraison (%)"
+msgstr "Floraison (%)"
+
+msgctxt "field:inventory.point-inventory.session,gestion:"
+msgid "Gestion"
+msgstr "Gestion"
+
+msgctxt "field:inventory.point-inventory.session,gestionpg:"
+msgid "Gestion du PG"
+msgstr "Gestion du PG"
+
+msgctxt "field:inventory.point-inventory.session,groupeschronoventaire:"
+msgid "Groupe chronoventaire"
+msgstr "Groupe chronoventaire"
+
+msgctxt "field:inventory.point-inventory.session,habitatppal:"
+msgid "Habitat principal"
+msgstr "Habitat principal"
+
+msgctxt "field:inventory.point-inventory.session,habitatseco:"
+msgid "Habitat secondaire"
+msgstr "Habitat secondaire"
+
+msgctxt "field:inventory.point-inventory.session,hauteurdevase:"
+msgid "Hauteur de vase (m)"
+msgstr "Hauteur de vase (m)"
+
+msgctxt "field:inventory.point-inventory.session,hauteureau:"
+msgid "Hauteur d'eau (m)"
+msgstr "Hauteur d'eau (m)"
+
+msgctxt "field:inventory.point-inventory.session,hauteurmoy:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "field:inventory.point-inventory.session,hauteurmoyenne:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "field:inventory.point-inventory.session,hydromorphie:"
+msgid "Hydromorphie"
+msgstr "Hydromorphie"
+
+msgctxt "field:inventory.point-inventory.session,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.point-inventory.session,interpretation:"
+msgid "Interprétation"
+msgstr "Interprétation"
+
+msgctxt "field:inventory.point-inventory.session,labelquadrat:"
+msgid "Libellé"
+msgstr "Libellé"
+
+msgctxt "field:inventory.point-inventory.session,menace:"
+msgid "Menace/dégradation"
+msgstr "Menace/dégradation"
+
+msgctxt "field:inventory.point-inventory.session,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:inventory.point-inventory.session,nebulosite:"
+msgid "Nébulosité"
+msgstr "Nébulosité"
+
+msgctxt "field:inventory.point-inventory.session,niveauhydrique:"
+msgid "Niveau hydrique"
+msgstr "Niveau hydrique"
+
+msgctxt "field:inventory.point-inventory.session,numordre:"
+msgid "Numéro ordre"
+msgstr "Numéro ordre"
+
+msgctxt "field:inventory.point-inventory.session,pasdetemps:"
+msgid "Pas de temps (min.)"
+msgstr "Pas de temps (min.)"
+
+msgctxt "field:inventory.point-inventory.session,point:"
+msgid "Point"
+msgstr "Point"
+
+msgctxt "field:inventory.point-inventory.session,pointhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt ""
+"field:inventory.point-inventory.session,pointlistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "field:inventory.point-inventory.session,rangobservation:"
+msgid "Rang observation"
+msgstr "Rang observation"
+
+msgctxt "field:inventory.point-inventory.session,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.point-inventory.session,remarque:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "field:inventory.point-inventory.session,senslecture:"
+msgid "Sens de lecture"
+msgstr "Sens de lecture"
+
+msgctxt "field:inventory.point-inventory.session,statutborne:"
+msgid "Statut bornes"
+msgstr "Statut bornes"
+
+msgctxt "field:inventory.point-inventory.session,temperature:"
+msgid "Température (°C)"
+msgstr "Température (°C)"
+
+msgctxt "field:inventory.point-inventory.session,trackhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt ""
+"field:inventory.point-inventory.session,tracklistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "field:inventory.point-inventory.session,typ:"
+msgid "Session Typ"
+msgstr "Session - Dispositif"
+
+msgctxt "field:inventory.point-inventory.session,typeinv:"
+msgid "Session Type"
+msgstr "Session - Type d'inventaire / Type de protocole"
+
+msgctxt "field:inventory.point-inventory.session,typopieceeau:"
+msgid "Typo pièce d'eau"
+msgstr "Typo pièce d'eau"
+
+msgctxt "field:inventory.point-inventory.session,typosol:"
+msgid "Type de sol"
+msgstr "Type de sol"
+
+msgctxt "field:inventory.point-inventory.session,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.point-inventory.session,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.point-inventory.session,zonehabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "field:inventory.point-inventory.session,zonelistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt ""
+"field:inventory.point-inventory.session-habitat.corine_biotope,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt ""
+"field:inventory.point-inventory.session-habitat.corine_biotope,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt ""
+"field:inventory.point-inventory.session-habitat.corine_biotope,habitat:"
+msgid "Habitat"
+msgstr "Habitat"
+
+msgctxt "field:inventory.point-inventory.session-habitat.corine_biotope,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:inventory.point-inventory.session-habitat.corine_biotope,pointsession:"
+msgid "Point session"
+msgstr "Point session"
+
+msgctxt ""
+"field:inventory.point-inventory.session-habitat.corine_biotope,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt ""
+"field:inventory.point-inventory.session-habitat.corine_biotope,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt ""
+"field:inventory.point-inventory.session-habitat.corine_biotope,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.pointlistecompartiment,compartiment:"
+msgid "Compartiment"
+msgstr "Compartiment"
+
+msgctxt "field:inventory.pointlistecompartiment,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.pointlistecompartiment,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.pointlistecompartiment,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:inventory.pointlistecompartiment,listesessioncompartiment_typinv:"
+msgid "ListeCompartiment Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.pointlistecompartiment,pointsessioncompartiment:"
+msgid "Point Session"
+msgstr "Point Session"
+
+msgctxt "field:inventory.pointlistecompartiment,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.pointlistecompartiment,valeur:"
+msgid "Valeur"
+msgstr "Valeur"
+
+msgctxt "field:inventory.pointlistecompartiment,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.pointlistecompartiment,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.pointlistetaxon,biorythme:"
+msgid "Biorythme"
+msgstr "Biorythme"
+
+msgctxt "field:inventory.pointlistetaxon,classabond:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "field:inventory.pointlistetaxon,classabondbota:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "field:inventory.pointlistetaxon,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.pointlistetaxon,comportement:"
+msgid "Comportement"
+msgstr "Comportement"
+
+msgctxt "field:inventory.pointlistetaxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.pointlistetaxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.pointlistetaxon,etatsante:"
+msgid "État santé"
+msgstr "État santé"
+
+msgctxt "field:inventory.pointlistetaxon,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.pointlistetaxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.pointlistetaxon,indicepresence:"
+msgid "Indice présence"
+msgstr "Indice présence"
+
+msgctxt "field:inventory.pointlistetaxon,listesessiontaxon_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,listetaxon_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.pointlistetaxon,listetaxon_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.pointlistetaxon,nombre:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,parties:"
+msgid "Auteurs"
+msgstr "Auteurs"
+
+msgctxt "field:inventory.pointlistetaxon,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:inventory.pointlistetaxon,plantehote:"
+msgid "Plante hôte"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,pointsessiontaxon:"
+msgid "Point Session"
+msgstr "Point Session"
+
+msgctxt "field:inventory.pointlistetaxon,presence:"
+msgid "Présence/Absence"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.pointlistetaxon,recouvrementbota:"
+msgid "Recouvrement (%)"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,statutreprod:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,statutreprodornitho:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,substrat:"
+msgid "Substrat"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,superficie:"
+msgid "Superficie (m2)"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,taxon:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:inventory.pointlistetaxon,typeffectif:"
+msgid "Type d'effectif"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,typesexe:"
+msgid "Type/Sexe"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,validite:"
+msgid "Validité"
+msgstr ""
+
+msgctxt "field:inventory.pointlistetaxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.pointlistetaxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.taxon-party.party,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.taxon-party.party,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.taxon-party.party,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.taxon-party.party,party:"
+msgid "Party"
+msgstr "Tiers"
+
+msgctxt "field:inventory.taxon-party.party,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.taxon-party.party,refcollection:"
+msgid "Référence"
+msgstr ""
+
+msgctxt "field:inventory.taxon-party.party,rolecontrib:"
+msgid "Rôle"
+msgstr "Rôle"
+
+msgctxt "field:inventory.taxon-party.party,rolecontrib_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.taxon-party.party,taxon:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:inventory.taxon-party.party,typocontrib:"
 msgid "Type"
 msgstr "Type"
 
-msgctxt "field:site_site.surface_statut_buffer,write_date:"
+msgctxt "field:inventory.taxon-party.party,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:site_site.surface_statut_buffer,write_uid:"
+msgctxt "field:inventory.taxon-party.party,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:site_site.surface_statut_buffer,zone:"
-msgid "Zone"
-msgstr "Zone"
-
-msgctxt "field:site_site.surface_statut_buffer.open.start,id:"
-msgid "ID"
-msgstr "Identifiant"
-
-msgctxt "field:site_site.surface_statut_buffer.open.start,zone:"
-msgid "Zone"
-msgstr "Zone"
-
-msgctxt "field:site_site.track,active:"
+msgctxt "field:inventory.track,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "field:site_site.track,code:"
+msgctxt "field:inventory.track,altitude:"
+msgid "Altitude"
+msgstr "Altitude"
+
+msgctxt "field:inventory.track,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:site_site.track,comment:"
+msgctxt "field:inventory.track,comment:"
 msgid "Comment"
 msgstr "Commentaire"
 
-msgctxt "field:site_site.track,create_date:"
+msgctxt "field:inventory.track,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:site_site.track,create_uid:"
+msgctxt "field:inventory.track,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:site_site.track,geom:"
-msgid "Geometry"
-msgstr "Geometry"
+msgctxt "field:inventory.track,exit:"
+msgid "Sortie"
+msgstr "Sortie"
 
-msgctxt "field:site_site.track,id:"
+msgctxt "field:inventory.track,exit_typ:"
+msgid "Exit Typ"
+msgstr "Sortie - Dispositif"
+
+msgctxt "field:inventory.track,exit_typinv:"
+msgid "Exit Typeinv"
+msgstr "Sortie - Type d'inventaire / Type de protocole"
+
+msgctxt "field:inventory.track,exposition:"
+msgid "Exposition"
+msgstr "Exposition"
+
+msgctxt "field:inventory.track,facteur:"
+msgid "Facteur"
+msgstr "Facteur"
+
+msgctxt "field:inventory.track,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.track,hauteur:"
+msgid "Hauteur (m)"
+msgstr "Hauteur (m)"
+
+msgctxt "field:inventory.track,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:site_site.track,name:"
+msgctxt "field:inventory.track,largeur:"
+msgid "Largeur (m)"
+msgstr "Largeur (m)"
+
+msgctxt "field:inventory.track,lieudit:"
+msgid "Lieu-dit"
+msgstr "Lieu-dit"
+
+msgctxt "field:inventory.track,lisiere:"
+msgid "Lisière"
+msgstr "Lisière"
+
+msgctxt "field:inventory.track,longueur:"
+msgid "Longueur (m)"
+msgstr "Longueur (m)"
+
+msgctxt "field:inventory.track,name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:site_site.track,photo:"
+msgctxt "field:inventory.track,ombrage:"
+msgid "Ombrage"
+msgstr "Ombrage"
+
+msgctxt "field:inventory.track,pente:"
+msgid "Pente"
+msgstr "Pente"
+
+msgctxt "field:inventory.track,photo:"
 msgid "Photo"
 msgstr "Photo"
 
-msgctxt "field:site_site.track,precaution:"
-msgid "Précautions"
-msgstr "Précautions"
-
-msgctxt "field:site_site.track,rec_name:"
+msgctxt "field:inventory.track,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:site_site.track,site:"
-msgid "Site"
-msgstr "Site"
+msgctxt "field:inventory.track,station:"
+msgid "Station"
+msgstr "Station"
 
-msgctxt "field:site_site.track,track_image:"
+msgctxt "field:inventory.track,surface:"
+msgid "Surface (m2)"
+msgstr "Surface (m2)"
+
+msgctxt "field:inventory.track,topographie:"
+msgid "Topographie"
+msgstr "Topographie"
+
+msgctxt "field:inventory.track,track_image:"
 msgid "Image"
 msgstr "Image"
 
-msgctxt "field:site_site.track,track_map:"
+msgctxt "field:inventory.track,track_map:"
 msgid "Image"
 msgstr "Image"
 
-msgctxt "field:site_site.track,write_date:"
+msgctxt "field:inventory.track,tracksession:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt "field:inventory.track,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:site_site.track,write_uid:"
+msgctxt "field:inventory.track,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:site_site.zone,active:"
+msgctxt "field:inventory.track-inventory.listecompartimenttaxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.track-inventory.listecompartimenttaxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.track-inventory.listecompartimenttaxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.track-inventory.listecompartimenttaxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt ""
+"field:inventory.track-inventory.listecompartimenttaxon,"
+"tracklistecompartiment:"
+msgid "Compartiments"
+msgstr "Compartiments"
+
+msgctxt ""
+"field:inventory.track-inventory.listecompartimenttaxon,tracklistetaxon:"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "field:inventory.track-inventory.listecompartimenttaxon,tracksession:"
+msgid "Session"
+msgstr "Session"
+
+msgctxt ""
+"field:inventory.track-inventory.listecompartimenttaxon,tracksession_typinv:"
+msgid "TrackSessionCompartimentTaxon Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.track-inventory.listecompartimenttaxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.track-inventory.listecompartimenttaxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.track-inventory.session,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "field:site_site.zone,code:"
+msgctxt "field:inventory.track-inventory.session,activite:"
+msgid "Activité"
+msgstr "Activité"
+
+msgctxt "field:inventory.track-inventory.session,beaufort:"
+msgid "Vent"
+msgstr "Vent"
+
+msgctxt "field:inventory.track-inventory.session,borne:"
+msgid "Bornes"
+msgstr "Bornes"
+
+msgctxt "field:inventory.track-inventory.session,code:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "field:site_site.zone,comment:"
-msgid "Comment"
-msgstr "Commentaire"
+msgctxt "field:inventory.track-inventory.session,confiance:"
+msgid "Confiance"
+msgstr "Confiance"
 
-msgctxt "field:site_site.zone,create_date:"
+msgctxt "field:inventory.track-inventory.session,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-msgctxt "field:site_site.zone,create_uid:"
+msgctxt "field:inventory.track-inventory.session,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:site_site.zone,geom:"
-msgid "Geometry"
-msgstr "Geometry"
+msgctxt "field:inventory.track-inventory.session,debut:"
+msgid "Heure de début"
+msgstr "Heure de début"
 
-msgctxt "field:site_site.zone,id:"
+msgctxt "field:inventory.track-inventory.session,determinationespeceadulte:"
+msgid "Détermination esp. ad."
+msgstr "Détermination esp. ad."
+
+msgctxt "field:inventory.track-inventory.session,dispoflorale:"
+msgid "Disposition florale"
+msgstr "Disposition florale"
+
+msgctxt "field:inventory.track-inventory.session,distanceborne:"
+msgid "Distance borne (cm)"
+msgstr "Distance borne (cm)"
+
+msgctxt "field:inventory.track-inventory.session,duree:"
+msgid "Durée (min)"
+msgstr "Durée (min)"
+
+msgctxt "field:inventory.track-inventory.session,ecartpoint:"
+msgid "Écart points (cm)"
+msgstr "Écart points (cm)"
+
+msgctxt "field:inventory.track-inventory.session,etatcons:"
+msgid "État de cons."
+msgstr "État de cons."
+
+msgctxt "field:inventory.track-inventory.session,fin:"
+msgid "Heure de fin"
+msgstr "Heure de fin"
+
+msgctxt "field:inventory.track-inventory.session,floraison:"
+msgid "Floraison (%)"
+msgstr "Floraison (%)"
+
+msgctxt "field:inventory.track-inventory.session,gestion:"
+msgid "Gestion"
+msgstr "Gestion"
+
+msgctxt "field:inventory.track-inventory.session,gestionpg:"
+msgid "Gestion du PG"
+msgstr "Gestion du PG"
+
+msgctxt "field:inventory.track-inventory.session,groupeschronoventaire:"
+msgid "Groupe chronoventaire"
+msgstr "Groupe chronoventaire"
+
+msgctxt "field:inventory.track-inventory.session,habitatppal:"
+msgid "Habitat principal"
+msgstr "Habitat principal"
+
+msgctxt "field:inventory.track-inventory.session,habitatseco:"
+msgid "Habitat secondaire"
+msgstr "Habitat secondaire"
+
+msgctxt "field:inventory.track-inventory.session,hauteurdevase:"
+msgid "Hauteur de vase (m)"
+msgstr "Hauteur de vase (m)"
+
+msgctxt "field:inventory.track-inventory.session,hauteureau:"
+msgid "Hauteur d'eau (m)"
+msgstr "Hauteur d'eau (m)"
+
+msgctxt "field:inventory.track-inventory.session,hauteurmoy:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "field:inventory.track-inventory.session,hauteurmoyenne:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "field:inventory.track-inventory.session,hydromorphie:"
+msgid "Hydromorphie"
+msgstr "Hydromorphie"
+
+msgctxt "field:inventory.track-inventory.session,id:"
 msgid "ID"
 msgstr "Identifiant"
 
-msgctxt "field:site_site.zone,name:"
+msgctxt "field:inventory.track-inventory.session,interpretation:"
+msgid "Interprétation"
+msgstr "Interprétation"
+
+msgctxt "field:inventory.track-inventory.session,labelquadrat:"
+msgid "Libellé"
+msgstr "Libellé"
+
+msgctxt "field:inventory.track-inventory.session,menace:"
+msgid "Menace/dégradation"
+msgstr "Menace/dégradation"
+
+msgctxt "field:inventory.track-inventory.session,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:inventory.track-inventory.session,nebulosite:"
+msgid "Nébulosité"
+msgstr "Nébulosité"
+
+msgctxt "field:inventory.track-inventory.session,niveauhydrique:"
+msgid "Niveau hydrique"
+msgstr "Niveau hydrique"
+
+msgctxt "field:inventory.track-inventory.session,numordre:"
+msgid "Numéro ordre"
+msgstr "Numéro ordre"
+
+msgctxt "field:inventory.track-inventory.session,pasdetemps:"
+msgid "Pas de temps (min.)"
+msgstr "Pas de temps (min.)"
+
+msgctxt "field:inventory.track-inventory.session,pointhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt ""
+"field:inventory.track-inventory.session,pointlistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "field:inventory.track-inventory.session,rangobservation:"
+msgid "Rang observation"
+msgstr "Rang observation"
+
+msgctxt "field:inventory.track-inventory.session,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:site_site.zone,photo:"
-msgid "Photo"
-msgstr "Photo"
+msgctxt "field:inventory.track-inventory.session,remarque:"
+msgid "Remarque"
+msgstr "Remarque"
 
-msgctxt "field:site_site.zone,precaution:"
-msgid "Précautions"
-msgstr "Précautions"
+msgctxt "field:inventory.track-inventory.session,senslecture:"
+msgid "Sens de lecture"
+msgstr "Sens de lecture"
 
-msgctxt "field:site_site.zone,rec_name:"
-msgid "Name"
-msgstr "Nom"
+msgctxt "field:inventory.track-inventory.session,statutborne:"
+msgid "Statut bornes"
+msgstr "Statut bornes"
 
-msgctxt "field:site_site.zone,site:"
-msgid "Site"
-msgstr "Site"
+msgctxt "field:inventory.track-inventory.session,temperature:"
+msgid "Température (°C)"
+msgstr "Température (°C)"
 
-msgctxt "field:site_site.zone,write_date:"
+msgctxt "field:inventory.track-inventory.session,track:"
+msgid "Track"
+msgstr "Trace"
+
+msgctxt "field:inventory.track-inventory.session,trackhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt ""
+"field:inventory.track-inventory.session,tracklistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "field:inventory.track-inventory.session,typ:"
+msgid "Session Typ"
+msgstr "Session - Dispositif"
+
+msgctxt "field:inventory.track-inventory.session,typeinv:"
+msgid "Session Type"
+msgstr "Session - Type d'inventaire / Type de protocole"
+
+msgctxt "field:inventory.track-inventory.session,typopieceeau:"
+msgid "Typo pièce d'eau"
+msgstr "Typo pièce d'eau"
+
+msgctxt "field:inventory.track-inventory.session,typosol:"
+msgid "Type de sol"
+msgstr "Type de sol"
+
+msgctxt "field:inventory.track-inventory.session,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-msgctxt "field:site_site.zone,write_uid:"
+msgctxt "field:inventory.track-inventory.session,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:site_site.zone,zone_image:"
+msgctxt "field:inventory.track-inventory.session,zonehabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "field:inventory.track-inventory.session,zonelistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt ""
+"field:inventory.track-inventory.session-habitat.corine_biotope,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt ""
+"field:inventory.track-inventory.session-habitat.corine_biotope,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt ""
+"field:inventory.track-inventory.session-habitat.corine_biotope,habitat:"
+msgid "Habitat"
+msgstr "Habitat"
+
+msgctxt "field:inventory.track-inventory.session-habitat.corine_biotope,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:inventory.track-inventory.session-habitat.corine_biotope,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt ""
+"field:inventory.track-inventory.session-habitat.corine_biotope,tracksession:"
+msgid "Track session"
+msgstr "Track session"
+
+msgctxt ""
+"field:inventory.track-inventory.session-habitat.corine_biotope,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt ""
+"field:inventory.track-inventory.session-habitat.corine_biotope,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.tracklistecompartiment,compartiment:"
+msgid "Compartiment"
+msgstr "Compartiment"
+
+msgctxt "field:inventory.tracklistecompartiment,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.tracklistecompartiment,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.tracklistecompartiment,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:inventory.tracklistecompartiment,listesessioncompartiment_typinv:"
+msgid "ListeCompartiment Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.tracklistecompartiment,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.tracklistecompartiment,tracksessioncompartiment:"
+msgid "Track Session"
+msgstr "Session trace"
+
+msgctxt "field:inventory.tracklistecompartiment,valeur:"
+msgid "Valeur"
+msgstr "Valeur"
+
+msgctxt "field:inventory.tracklistecompartiment,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.tracklistecompartiment,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.tracklistetaxon,biorythme:"
+msgid "Biorythme"
+msgstr "Biorythme"
+
+msgctxt "field:inventory.tracklistetaxon,classabond:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "field:inventory.tracklistetaxon,classabondbota:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "field:inventory.tracklistetaxon,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.tracklistetaxon,comportement:"
+msgid "Comportement"
+msgstr "Comportement"
+
+msgctxt "field:inventory.tracklistetaxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.tracklistetaxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.tracklistetaxon,etatsante:"
+msgid "État santé"
+msgstr "État santé"
+
+msgctxt "field:inventory.tracklistetaxon,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.tracklistetaxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.tracklistetaxon,indicepresence:"
+msgid "Indice présence"
+msgstr "Indice présence"
+
+msgctxt "field:inventory.tracklistetaxon,listesessiontaxon_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.tracklistetaxon,listetaxon_image:"
 msgid "Image"
 msgstr "Image"
 
-msgctxt "field:site_site.zone,zone_map:"
+msgctxt "field:inventory.tracklistetaxon,listetaxon_map:"
 msgid "Image"
 msgstr "Image"
 
-msgctxt "help:site_site.lrs,geom:"
-msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgctxt "field:inventory.tracklistetaxon,nombre:"
+msgid "Nombre"
+msgstr ""
 
-msgctxt "help:site_site.lrs,name:"
-msgid "Name of lrs"
-msgstr "Nom du LRS (Système de Référence Linéaire)"
+msgctxt "field:inventory.tracklistetaxon,parties:"
+msgid "Auteurs"
+msgstr "Auteurs"
 
-msgctxt "help:site_site.lrs,pk:"
-msgid "Pk of track"
-msgstr "PK du track"
+msgctxt "field:inventory.tracklistetaxon,photo:"
+msgid "Photo"
+msgstr "Photo"
 
-msgctxt "help:site_site.lrs,track:"
-msgid "Track"
-msgstr "Track"
+msgctxt "field:inventory.tracklistetaxon,plantehote:"
+msgid "Plante hôte"
+msgstr ""
 
-msgctxt "help:site_site.poi,comment:"
-msgid "Comment of POI"
-msgstr "Commentaire du POI (Point d'intérêt)"
+msgctxt "field:inventory.tracklistetaxon,presence:"
+msgid "Présence/Absence"
+msgstr ""
 
-msgctxt "help:site_site.poi,end:"
-msgid "PK end of POI"
-msgstr "PK fin du POI"
+msgctxt "field:inventory.tracklistetaxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
 
-msgctxt "help:site_site.poi,geom:"
-msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgctxt "field:inventory.tracklistetaxon,recouvrementbota:"
+msgid "Recouvrement (%)"
+msgstr ""
 
-msgctxt "help:site_site.poi,name:"
-msgid "Name of POI"
-msgstr "Nom du POI"
+msgctxt "field:inventory.tracklistetaxon,statutreprod:"
+msgid "Statut de reproduction"
+msgstr ""
 
-msgctxt "help:site_site.poi,photo:"
-msgid "Photo of point"
-msgstr "Photo du POI"
+msgctxt "field:inventory.tracklistetaxon,statutreprodornitho:"
+msgid "Statut de reproduction"
+msgstr ""
 
-msgctxt "help:site_site.poi,start:"
-msgid "PK start of POI"
-msgstr "PK début du POI"
+msgctxt "field:inventory.tracklistetaxon,substrat:"
+msgid "Substrat"
+msgstr ""
 
-msgctxt "help:site_site.poi,track:"
-msgid "Track"
-msgstr "Track"
+msgctxt "field:inventory.tracklistetaxon,superficie:"
+msgid "Superficie (m2)"
+msgstr ""
 
-msgctxt "help:site_site.point,active:"
+msgctxt "field:inventory.tracklistetaxon,taxon:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:inventory.tracklistetaxon,tracksessiontaxon:"
+msgid "Track Session"
+msgstr "Session Trace"
+
+msgctxt "field:inventory.tracklistetaxon,typeffectif:"
+msgid "Type d'effectif"
+msgstr ""
+
+msgctxt "field:inventory.tracklistetaxon,typesexe:"
+msgid "Type/Sexe"
+msgstr ""
+
+msgctxt "field:inventory.tracklistetaxon,validite:"
+msgid "Validité"
+msgstr ""
+
+msgctxt "field:inventory.tracklistetaxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.tracklistetaxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.zone,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "help:site_site.point,code:"
-msgid "Code of point"
-msgstr "Code du point d'intérêt"
+msgctxt "field:inventory.zone,altitude:"
+msgid "Altitude"
+msgstr "Altitude"
 
-msgctxt "help:site_site.point,comment:"
-msgid "Comment of point"
-msgstr "Commentaire du point d'intérêt"
+msgctxt "field:inventory.zone,code:"
+msgid "Code"
+msgstr "Code"
 
-msgctxt "help:site_site.point,geom:"
-msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiLigne (EPSG=2154, RGF93/Lambert 93)"
+msgctxt "field:inventory.zone,comment:"
+msgid "Comment"
+msgstr "Commentaire"
 
-msgctxt "help:site_site.point,name:"
-msgid "Name of point"
-msgstr "Nom du point d'intérêt"
+msgctxt "field:inventory.zone,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
 
-msgctxt "help:site_site.point,photo:"
-msgid "Photo of point"
-msgstr "Photo du point"
+msgctxt "field:inventory.zone,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
 
-msgctxt "help:site_site.point,precaution:"
-msgid "Précautions à prendre"
-msgstr "Précautions à prendre"
+msgctxt "field:inventory.zone,exit:"
+msgid "Sortie"
+msgstr "Sortie"
 
-msgctxt "help:site_site.point,site:"
-msgid "Site"
-msgstr "Site"
+msgctxt "field:inventory.zone,exit_typ:"
+msgid "Exit Typ"
+msgstr "Sortie - Dispositif"
 
-msgctxt "help:site_site.site,active:"
+msgctxt "field:inventory.zone,exit_typinv:"
+msgid "Exit Typeinv"
+msgstr "Sortie - Type d'inventaire / Type de protocole"
+
+msgctxt "field:inventory.zone,exposition:"
+msgid "Exposition"
+msgstr "Exposition"
+
+msgctxt "field:inventory.zone,facteur:"
+msgid "Facteur"
+msgstr "Facteur"
+
+msgctxt "field:inventory.zone,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.zone,hauteur:"
+msgid "Hauteur (m)"
+msgstr "Hauteur (m)"
+
+msgctxt "field:inventory.zone,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.zone,largeur:"
+msgid "Largeur (m)"
+msgstr "Largeur (m)"
+
+msgctxt "field:inventory.zone,lieudit:"
+msgid "Lieu-dit"
+msgstr "Lieu-dit"
+
+msgctxt "field:inventory.zone,lisiere:"
+msgid "Lisière"
+msgstr "Lisière"
+
+msgctxt "field:inventory.zone,longueur:"
+msgid "Longueur (m)"
+msgstr "Longueur (m)"
+
+msgctxt "field:inventory.zone,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.zone,ombrage:"
+msgid "Ombrage"
+msgstr "Ombrage"
+
+msgctxt "field:inventory.zone,pente:"
+msgid "Pente"
+msgstr "Pente"
+
+msgctxt "field:inventory.zone,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:inventory.zone,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.zone,station:"
+msgid "Station"
+msgstr "Station"
+
+msgctxt "field:inventory.zone,surface:"
+msgid "Surface (m2)"
+msgstr "Surface (m2)"
+
+msgctxt "field:inventory.zone,topographie:"
+msgid "Topographie"
+msgstr "Topographie"
+
+msgctxt "field:inventory.zone,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.zone,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.zone,zone_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.zone,zone_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.zone,zonesession:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt ""
+"field:inventory.zone-inventory.listecompartimenttaxon,zonelistecompartiment:"
+msgid "Compartiments"
+msgstr "Compartiments"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,zonelistetaxon:"
+msgid "Taxons"
+msgstr "Taxons"
+
+msgctxt "field:inventory.zone-inventory.listecompartimenttaxon,zonesession:"
+msgid "Session"
+msgstr "Session"
+
+msgctxt ""
+"field:inventory.zone-inventory.listecompartimenttaxon,zonesession_typinv:"
+msgid "ZoneSessionCompartimentTaxon Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.zone-inventory.session,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "help:site_site.site,avancement:"
+msgctxt "field:inventory.zone-inventory.session,activite:"
+msgid "Activité"
+msgstr "Activité"
+
+msgctxt "field:inventory.zone-inventory.session,beaufort:"
+msgid "Vent"
+msgstr "Vent"
+
+msgctxt "field:inventory.zone-inventory.session,borne:"
+msgid "Bornes"
+msgstr "Bornes"
+
+msgctxt "field:inventory.zone-inventory.session,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:inventory.zone-inventory.session,confiance:"
+msgid "Confiance"
+msgstr "Confiance"
+
+msgctxt "field:inventory.zone-inventory.session,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.zone-inventory.session,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.zone-inventory.session,debut:"
+msgid "Heure de début"
+msgstr "Heure de début"
+
+msgctxt "field:inventory.zone-inventory.session,determinationespeceadulte:"
+msgid "Détermination esp. ad."
+msgstr "Détermination esp. ad."
+
+msgctxt "field:inventory.zone-inventory.session,dispoflorale:"
+msgid "Disposition florale"
+msgstr "Disposition florale"
+
+msgctxt "field:inventory.zone-inventory.session,distanceborne:"
+msgid "Distance borne (cm)"
+msgstr "Distance borne (cm)"
+
+msgctxt "field:inventory.zone-inventory.session,duree:"
+msgid "Durée (min)"
+msgstr "Durée (min)"
+
+msgctxt "field:inventory.zone-inventory.session,ecartpoint:"
+msgid "Écart points (cm)"
+msgstr "Écart points (cm)"
+
+msgctxt "field:inventory.zone-inventory.session,etatcons:"
+msgid "État de cons."
+msgstr "État de cons."
+
+msgctxt "field:inventory.zone-inventory.session,fin:"
+msgid "Heure de fin"
+msgstr "Heure de fin"
+
+msgctxt "field:inventory.zone-inventory.session,floraison:"
+msgid "Floraison (%)"
+msgstr "Floraison (%)"
+
+msgctxt "field:inventory.zone-inventory.session,gestion:"
+msgid "Gestion"
+msgstr "Gestion"
+
+msgctxt "field:inventory.zone-inventory.session,gestionpg:"
+msgid "Gestion du PG"
+msgstr "Gestion du PG"
+
+msgctxt "field:inventory.zone-inventory.session,groupeschronoventaire:"
+msgid "Groupe chronoventaire"
+msgstr "Groupe chronoventaire"
+
+msgctxt "field:inventory.zone-inventory.session,habitatppal:"
+msgid "Habitat principal"
+msgstr "Habitat principal"
+
+msgctxt "field:inventory.zone-inventory.session,habitatseco:"
+msgid "Habitat secondaire"
+msgstr "Habitat secondaire"
+
+msgctxt "field:inventory.zone-inventory.session,hauteurdevase:"
+msgid "Hauteur de vase (m)"
+msgstr "Hauteur de vase (m)"
+
+msgctxt "field:inventory.zone-inventory.session,hauteureau:"
+msgid "Hauteur d'eau (m)"
+msgstr "Hauteur d'eau (m)"
+
+msgctxt "field:inventory.zone-inventory.session,hauteurmoy:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "field:inventory.zone-inventory.session,hauteurmoyenne:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "field:inventory.zone-inventory.session,hydromorphie:"
+msgid "Hydromorphie"
+msgstr "Hydromorphie"
+
+msgctxt "field:inventory.zone-inventory.session,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.zone-inventory.session,interpretation:"
+msgid "Interprétation"
+msgstr "Interprétation"
+
+msgctxt "field:inventory.zone-inventory.session,labelquadrat:"
+msgid "Libellé"
+msgstr "Libellé"
+
+msgctxt "field:inventory.zone-inventory.session,menace:"
+msgid "Menace/dégradation"
+msgstr "Menace/dégradation"
+
+msgctxt "field:inventory.zone-inventory.session,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:inventory.zone-inventory.session,nebulosite:"
+msgid "Nébulosité"
+msgstr "Nébulosité"
+
+msgctxt "field:inventory.zone-inventory.session,niveauhydrique:"
+msgid "Niveau hydrique"
+msgstr "Niveau hydrique"
+
+msgctxt "field:inventory.zone-inventory.session,numordre:"
+msgid "Numéro ordre"
+msgstr "Numéro ordre"
+
+msgctxt "field:inventory.zone-inventory.session,pasdetemps:"
+msgid "Pas de temps (min.)"
+msgstr "Pas de temps (min.)"
+
+msgctxt "field:inventory.zone-inventory.session,pointhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "field:inventory.zone-inventory.session,pointlistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "field:inventory.zone-inventory.session,rangobservation:"
+msgid "Rang observation"
+msgstr "Rang observation"
+
+msgctxt "field:inventory.zone-inventory.session,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.zone-inventory.session,remarque:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "field:inventory.zone-inventory.session,senslecture:"
+msgid "Sens de lecture"
+msgstr "Sens de lecture"
+
+msgctxt "field:inventory.zone-inventory.session,statutborne:"
+msgid "Statut bornes"
+msgstr "Statut bornes"
+
+msgctxt "field:inventory.zone-inventory.session,temperature:"
+msgid "Température (°C)"
+msgstr "Température (°C)"
+
+msgctxt "field:inventory.zone-inventory.session,trackhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "field:inventory.zone-inventory.session,tracklistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "field:inventory.zone-inventory.session,typ:"
+msgid "Session Typ"
+msgstr "Session - Dispositif"
+
+msgctxt "field:inventory.zone-inventory.session,typeinv:"
+msgid "Session Type"
+msgstr "Session - Type d'inventaire / Type de protocole"
+
+msgctxt "field:inventory.zone-inventory.session,typopieceeau:"
+msgid "Typo pièce d'eau"
+msgstr "Typo pièce d'eau"
+
+msgctxt "field:inventory.zone-inventory.session,typosol:"
+msgid "Type de sol"
+msgstr "Type de sol"
+
+msgctxt "field:inventory.zone-inventory.session,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.zone-inventory.session,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.zone-inventory.session,zone:"
+msgid "Zone"
+msgstr "Zone"
+
+msgctxt "field:inventory.zone-inventory.session,zonehabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "field:inventory.zone-inventory.session,zonelistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt ""
+"field:inventory.zone-inventory.session-habitat.corine_biotope,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt ""
+"field:inventory.zone-inventory.session-habitat.corine_biotope,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt ""
+"field:inventory.zone-inventory.session-habitat.corine_biotope,habitat:"
+msgid "Habitat"
+msgstr "Habitat"
+
+msgctxt "field:inventory.zone-inventory.session-habitat.corine_biotope,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:inventory.zone-inventory.session-habitat.corine_biotope,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt ""
+"field:inventory.zone-inventory.session-habitat.corine_biotope,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt ""
+"field:inventory.zone-inventory.session-habitat.corine_biotope,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt ""
+"field:inventory.zone-inventory.session-habitat.corine_biotope,zonesession:"
+msgid "Zone session"
+msgstr "Zone session"
+
+msgctxt "field:inventory.zonelistecompartiment,compartiment:"
+msgid "Compartiment"
+msgstr "Compartiment"
+
+msgctxt "field:inventory.zonelistecompartiment,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.zonelistecompartiment,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.zonelistecompartiment,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt ""
+"field:inventory.zonelistecompartiment,listesessioncompartiment_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.zonelistecompartiment,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.zonelistecompartiment,valeur:"
+msgid "Valeur"
+msgstr "Valeur"
+
+msgctxt "field:inventory.zonelistecompartiment,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.zonelistecompartiment,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.zonelistecompartiment,zonesessioncompartiment:"
+msgid "Zone Session"
+msgstr "Zone Session"
+
+msgctxt "field:inventory.zonelistetaxon,biorythme:"
+msgid "Biorythme"
+msgstr "Biorythme"
+
+msgctxt "field:inventory.zonelistetaxon,classabond:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "field:inventory.zonelistetaxon,classabondbota:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "field:inventory.zonelistetaxon,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:inventory.zonelistetaxon,comportement:"
+msgid "Comportement"
+msgstr "Comportement"
+
+msgctxt "field:inventory.zonelistetaxon,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:inventory.zonelistetaxon,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:inventory.zonelistetaxon,etatsante:"
+msgid "État santé"
+msgstr "État santé"
+
+msgctxt "field:inventory.zonelistetaxon,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:inventory.zonelistetaxon,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:inventory.zonelistetaxon,indicepresence:"
+msgid "Indice présence"
+msgstr "Indice présence"
+
+msgctxt "field:inventory.zonelistetaxon,listesessiontaxon_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,listetaxon_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.zonelistetaxon,listetaxon_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:inventory.zonelistetaxon,nombre:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,parties:"
+msgid "Auteurs"
+msgstr "Auteurs"
+
+msgctxt "field:inventory.zonelistetaxon,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "field:inventory.zonelistetaxon,plantehote:"
+msgid "Plante hôte"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,presence:"
+msgid "Présence/Absence"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:inventory.zonelistetaxon,recouvrementbota:"
+msgid "Recouvrement (%)"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,statutreprod:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,statutreprodornitho:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,substrat:"
+msgid "Substrat"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,superficie:"
+msgid "Superficie (m2)"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,taxon:"
+msgid "Taxon"
+msgstr "Taxon"
+
+msgctxt "field:inventory.zonelistetaxon,typeffectif:"
+msgid "Type d'effectif"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,typesexe:"
+msgid "Type/Sexe"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,validite:"
+msgid "Validité"
+msgstr ""
+
+msgctxt "field:inventory.zonelistetaxon,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:inventory.zonelistetaxon,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:inventory.zonelistetaxon,zonesessiontaxon:"
+msgid "Zone Session"
+msgstr "Zone Session"
+
+msgctxt "field:taxinomie.taxinomie,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:taxinomie.taxinomie,cd_f_bleue:"
+msgid "ID CENL Flore"
+msgstr ""
+
+msgctxt "field:taxinomie.taxinomie,cd_nom_cenl:"
+msgid "ID CENL"
+msgstr ""
+
+msgctxt "field:taxinomie.taxinomie,classe_cenl:"
+msgid "Classe"
+msgstr ""
+
+msgctxt "field:taxinomie.taxinomie,nom_vern_cenl:"
+msgid "Vern. CENL"
+msgstr ""
+
+msgctxt "help:inventory.campaign,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.campaign,avancement:"
 msgid "Pourcentage de réalisation entre 0 et 100"
 msgstr "Pourcentage de réalisation entre 0 et 100"
 
-msgctxt "help:site_site.site,code:"
-msgid "Code of site"
-msgstr "Code du site"
+msgctxt "help:inventory.campaign,campagne:"
+msgid "Année de campagne"
+msgstr "Année de campagne"
 
-msgctxt "help:site_site.site,datedeb:"
-msgid "Date de début de chantier"
-msgstr "Date de début de chantier"
+msgctxt "help:inventory.campaign,code:"
+msgid "Code de la zone de campagne de prospection"
+msgstr "Code de la zone de campagne de prospection"
 
-msgctxt "help:site_site.site,datefin:"
-msgid "Date de fin de chantier"
-msgstr "Date de fin de chantier"
+msgctxt "help:inventory.campaign,comment:"
+msgid "Comment of Campaign"
+msgstr "Commentaire de la zone de campagne"
 
-msgctxt "help:site_site.site,geom:"
+msgctxt "help:inventory.campaign,datedeb:"
+msgid "Date de début de campagne de prospection"
+msgstr "Date de début de campagne de prospection"
+
+msgctxt "help:inventory.campaign,datefin:"
+msgid "Date de fin de campagne de prospection"
+msgstr "Date de fin de campagne de prospection"
+
+msgctxt "help:inventory.campaign,exits:"
+msgid "Sortie de terrain"
+msgstr "Sortie de terrain"
+
+msgctxt "help:inventory.campaign,geom:"
 msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
 msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
 
-msgctxt "help:site_site.site,moa:"
-msgid "Maîtrise d'ouvrage"
-msgstr "Maîtrise d'ouvrage"
+msgctxt "help:inventory.campaign,name:"
+msgid "Nom de la zone de campagne de prospection"
+msgstr "Nom de la zone de campagne de prospection"
 
-msgctxt "help:site_site.site,moe:"
-msgid "Maîtrise d'oeuvre"
-msgstr "Maîtrise d'oeuvre"
-
-msgctxt "help:site_site.site,name:"
-msgid "Name of site"
-msgstr "Nom du site"
-
-msgctxt "help:site_site.site,parcelle:"
-msgid "Parcelle(s) concernée(s)"
-msgstr "Parcelle(s) concernée(s)"
-
-msgctxt "help:site_site.site,photo:"
+msgctxt "help:inventory.campaign,photo:"
 msgid "Photo"
 msgstr "Photo"
 
-msgctxt "help:site_site.site,suivi:"
-msgid "Intervenant TSR"
-msgstr "Intervenant TSR"
+msgctxt "help:inventory.campaign,suivi:"
+msgid "Responsable du suivi de la campagne de prospection"
+msgstr "Responsable du suivi de la campagne de prospection"
 
-msgctxt "help:site_site.site,typo:"
-msgid "Type de site"
-msgstr "Type de site"
+msgctxt "help:inventory.code,code:"
+msgid "Code"
+msgstr "Code"
 
-msgctxt "help:site_site.track,active:"
+msgctxt "help:inventory.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "help:inventory.code,name:"
+msgid "Short name of code"
+msgstr "Nom court du code"
+
+msgctxt "help:inventory.configuration,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "help:inventory.configuration,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "help:inventory.configuration,name:"
+msgid "Name of code"
+msgstr "Nom du code"
+
+msgctxt "help:inventory.configuration,value:"
+msgid "Value of code"
+msgstr "Valeur du code"
+
+msgctxt "help:inventory.exit,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "help:site_site.track,code:"
-msgid "Code of track"
-msgstr "Code du track"
+msgctxt "help:inventory.exit,campagne:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
 
-msgctxt "help:site_site.track,comment:"
-msgid "Comment of track"
-msgstr "Commentaire sur le track"
+msgctxt "help:inventory.exit,code:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
 
-msgctxt "help:site_site.track,geom:"
-msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiLigne (EPSG=2154, RGF93/Lambert 93)"
+msgctxt "help:inventory.exit,comment:"
+msgid "Comment of exit"
+msgstr "Commentaire de la sortie"
 
-msgctxt "help:site_site.track,name:"
-msgid "Name of track"
-msgstr "Nom du track"
+msgctxt "help:inventory.exit,date:"
+msgid "Date de la sortie"
+msgstr "Date de la sortie"
 
-msgctxt "help:site_site.track,photo:"
-msgid "Photo of track"
-msgstr "Photo du track"
+msgctxt "help:inventory.exit,dispositif:"
+msgid "Type de dispositif"
+msgstr "Type de dispositif"
 
-msgctxt "help:site_site.track,precaution:"
-msgid "Précautions à prendre"
-msgstr "Précautions à prendre"
+msgctxt "help:inventory.exit,effort:"
+msgid "Effort de prospection"
+msgstr "Effort de prospection"
 
-msgctxt "help:site_site.track,site:"
-msgid "Site"
-msgstr "Site"
+msgctxt "help:inventory.exit,geom:"
+msgid "Géométrie Polygone (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie polygon (EPSG=2154, RGF93/Lambert 93)"
 
-msgctxt "help:site_site.zone,active:"
+msgctxt "help:inventory.exit,methode:"
+msgid "Méthode de prospection"
+msgstr "Méthode de prospection"
+
+msgctxt "help:inventory.exit,methode_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:inventory.exit,name:"
+msgid "Nom de la sortie"
+msgstr "Nom de la sortie"
+
+msgctxt "help:inventory.exit,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:inventory.exit,typeinv:"
+msgid "Type d'inventaire / Type de protocole"
+msgstr "Type d'inventaire / Type de protocole"
+
+msgctxt "help:inventory.lrs,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie multipoint (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.lrs,name:"
+msgid "Name of lrs"
+msgstr "Nom du LRS"
+
+msgctxt "help:inventory.lrs,pk:"
+msgid "Pk of track"
+msgstr "Pk de la trace"
+
+msgctxt "help:inventory.lrs,track:"
+msgid "Track"
+msgstr "Trace"
+
+msgctxt "help:inventory.misc_obj_line,active:"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "help:site_site.zone,code:"
-msgid "Code of zone"
-msgstr "Code de la zone"
+msgctxt "help:inventory.misc_obj_line,campaign:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
 
-msgctxt "help:site_site.zone,comment:"
+msgctxt "help:inventory.misc_obj_line,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "help:inventory.misc_obj_line,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "help:inventory.misc_obj_point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.misc_obj_point,campaign:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
+
+msgctxt "help:inventory.misc_obj_point,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "help:inventory.misc_obj_point,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "help:inventory.misc_obj_poly,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.misc_obj_poly,campaign:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
+
+msgctxt "help:inventory.misc_obj_poly,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "help:inventory.misc_obj_poly,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "help:inventory.poi,comment:"
+msgid "Comment of POI"
+msgstr "Commentaire du POI"
+
+msgctxt "help:inventory.poi,end:"
+msgid "PK end of POI"
+msgstr "Pk du POI"
+
+msgctxt "help:inventory.poi,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.poi,name:"
+msgid "Name of POI"
+msgstr "Nom du POI"
+
+msgctxt "help:inventory.poi,photo:"
+msgid "Photo of point"
+msgstr "Phot du point"
+
+msgctxt "help:inventory.poi,start:"
+msgid "PK start of POI"
+msgstr "PK du début du POI"
+
+msgctxt "help:inventory.poi,track:"
+msgid "Track"
+msgstr "Trace"
+
+msgctxt "help:inventory.point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.point,altitude:"
+msgid "Altitude en mètre (m)"
+msgstr "Altitude en mètre (m)"
+
+msgctxt "help:inventory.point,code:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.point,comment:"
 msgid "Comment"
 msgstr "Commentaire"
 
-msgctxt "help:site_site.zone,geom:"
+msgctxt "help:inventory.point,exit:"
+msgid "Sortie de terrain"
+msgstr "Sortie de terrain"
+
+msgctxt "help:inventory.point,exit_typ:"
+msgid "Exit Typ"
+msgstr "Sortie - Dispositif"
+
+msgctxt "help:inventory.point,exit_typinv:"
+msgid "Exit Typeinv"
+msgstr "Sortie - Type d'inventaire / Type de protocole"
+
+msgctxt "help:inventory.point,exposition:"
+msgid "Exposition of dispositif"
+msgstr "Exposition du dispositif"
+
+msgctxt "help:inventory.point,facteur:"
+msgid "Facteur de forme"
+msgstr "Facteur de forme"
+
+msgctxt "help:inventory.point,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.point,hauteur:"
+msgid "Hauteur en mètre (m)"
+msgstr ""
+
+msgctxt "help:inventory.point,largeur:"
+msgid "Largeur en mètre (m)"
+msgstr ""
+
+msgctxt "help:inventory.point,lieudit:"
+msgid "Lieu-dit"
+msgstr "Lieu-dit"
+
+msgctxt "help:inventory.point,lisiere:"
+msgid "Proximité de la lisère en mètre (m)"
+msgstr "Proximité de la lisère en mètre (m)"
+
+msgctxt "help:inventory.point,longueur:"
+msgid "Longueur en mètre (m)"
+msgstr ""
+
+msgctxt "help:inventory.point,name:"
+msgid "Label of dispositif"
+msgstr "Libellé du dispositif"
+
+msgctxt "help:inventory.point,ombrage:"
+msgid "Ombrage of dispositif"
+msgstr "Ombrage of dispositif"
+
+msgctxt "help:inventory.point,pente:"
+msgid "Pente en degré"
+msgstr "Pente en degré"
+
+msgctxt "help:inventory.point,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:inventory.point,pointsession:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt "help:inventory.point,station:"
+msgid "Station of dispositif"
+msgstr "Station du dispositif"
+
+msgctxt "help:inventory.point,surface:"
+msgid "Surface en mètre (m2)"
+msgstr ""
+
+msgctxt "help:inventory.point,topographie:"
+msgid "Topographie of dispositif"
+msgstr "Topographie du dispositif"
+
+msgctxt ""
+"help:inventory.point-inventory.listecompartimenttaxon,pointsession_typinv:"
+msgid "PointSessionCompartimentTaxon Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.point-inventory.session,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.point-inventory.session,activite:"
+msgid "Activité constatée"
+msgstr "Activité constatée"
+
+msgctxt "help:inventory.point-inventory.session,beaufort:"
+msgid "Vent sur échelle de Beaufort"
+msgstr "Vent sur échelle de Beaufort"
+
+msgctxt "help:inventory.point-inventory.session,borne:"
+msgid "Bornes"
+msgstr "Bornes"
+
+msgctxt "help:inventory.point-inventory.session,code:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.point-inventory.session,confiance:"
+msgid "Indice de confiance"
+msgstr "Indice de confiance"
+
+msgctxt "help:inventory.point-inventory.session,debut:"
+msgid "Heure de début"
+msgstr "Heure de début"
+
+msgctxt "help:inventory.point-inventory.session,determinationespeceadulte:"
+msgid "Détermination espèce adulte"
+msgstr "Détermination espèce adulte"
+
+msgctxt "help:inventory.point-inventory.session,dispoflorale:"
+msgid "Disposition florale"
+msgstr "Disposition florale"
+
+msgctxt "help:inventory.point-inventory.session,distanceborne:"
+msgid "Distance à la borne en centimètre (cm)"
+msgstr "Distance à la borne en centimètre (cm)"
+
+msgctxt "help:inventory.point-inventory.session,duree:"
+msgid "Durée en minutes"
+msgstr "Durée en minutes"
+
+msgctxt "help:inventory.point-inventory.session,ecartpoint:"
+msgid "Écart entre deux points en centimètre (cm)"
+msgstr "Écart entre deux points en centimètre (cm)"
+
+msgctxt "help:inventory.point-inventory.session,etatcons:"
+msgid "État de conservation"
+msgstr "État de conservation"
+
+msgctxt "help:inventory.point-inventory.session,fin:"
+msgid "Heure de fin : par défaut est égale à heure de début plus la durée"
+msgstr "Heure de fin : par défaut est égale à heure de début plus la durée"
+
+msgctxt "help:inventory.point-inventory.session,floraison:"
+msgid "Floraison en pourcentage"
+msgstr "Floraison en pourcentage"
+
+msgctxt "help:inventory.point-inventory.session,gestion:"
+msgid "Gestion constatée in situ"
+msgstr "Gestion constatée in situ"
+
+msgctxt "help:inventory.point-inventory.session,gestionpg:"
+msgid "Gestion du PG"
+msgstr "Gestion du PG"
+
+msgctxt "help:inventory.point-inventory.session,groupeschronoventaire:"
+msgid "Groupe chronoventaire"
+msgstr "Groupe chronoventaire"
+
+msgctxt "help:inventory.point-inventory.session,habitatppal:"
+msgid "Habitat principal constaté in situ"
+msgstr "Habitat principal constaté in situ"
+
+msgctxt "help:inventory.point-inventory.session,habitatseco:"
+msgid "Habitat secondaire constaté in situ"
+msgstr "Habitat secondaire constaté in situ"
+
+msgctxt "help:inventory.point-inventory.session,hauteurdevase:"
+msgid "Hauteur de vase en mètre (m)"
+msgstr "Hauteur de vase en mètre (m)"
+
+msgctxt "help:inventory.point-inventory.session,hauteureau:"
+msgid "Hauteur d'eau en mètre (m)"
+msgstr "Hauteur d'eau en mètre (m)"
+
+msgctxt "help:inventory.point-inventory.session,hauteurmoy:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "help:inventory.point-inventory.session,hauteurmoyenne:"
+msgid "Hauteur moyenne en centimètre (cm)"
+msgstr "Hauteur moyenne en centimètre (cm)"
+
+msgctxt "help:inventory.point-inventory.session,hydromorphie:"
+msgid "Hydromorphie"
+msgstr "Hydromorphie"
+
+msgctxt "help:inventory.point-inventory.session,interpretation:"
+msgid "Interprétation phyto constatée in situ"
+msgstr "Interprétation phyto constatée in situ"
+
+msgctxt "help:inventory.point-inventory.session,labelquadrat:"
+msgid "Libellé du quadrat"
+msgstr "Libellé du quadrat"
+
+msgctxt "help:inventory.point-inventory.session,menace:"
+msgid "Menace ou dégradation"
+msgstr "Menace ou dégradation"
+
+msgctxt "help:inventory.point-inventory.session,name:"
+msgid "Nom de la session"
+msgstr ""
+
+msgctxt "help:inventory.point-inventory.session,nebulosite:"
+msgid "Nébulosité"
+msgstr "Nébulosité"
+
+msgctxt "help:inventory.point-inventory.session,niveauhydrique:"
+msgid "Niveau hydrique de l'habitat principal"
+msgstr "Niveau hydrique de l'habitat principal"
+
+msgctxt "help:inventory.point-inventory.session,numordre:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.point-inventory.session,pasdetemps:"
+msgid "Pas de temps en minute"
+msgstr "Pas de temps en minute"
+
+msgctxt "help:inventory.point-inventory.session,pointhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.point-inventory.session,pointlistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "help:inventory.point-inventory.session,rangobservation:"
+msgid "Rang observation"
+msgstr "Rang observation"
+
+msgctxt "help:inventory.point-inventory.session,remarque:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "help:inventory.point-inventory.session,senslecture:"
+msgid "Sens de lecture"
+msgstr "Sens de lecture"
+
+msgctxt "help:inventory.point-inventory.session,statutborne:"
+msgid "Statut bornes"
+msgstr "Statut bornes"
+
+msgctxt "help:inventory.point-inventory.session,temperature:"
+msgid "Température en degré Celsius (°C)"
+msgstr "Température en degré Celsius (°C)"
+
+msgctxt "help:inventory.point-inventory.session,trackhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.point-inventory.session,tracklistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "help:inventory.point-inventory.session,typ:"
+msgid "Session Typ"
+msgstr "Session - Dispositif"
+
+msgctxt "help:inventory.point-inventory.session,typeinv:"
+msgid "Session Type"
+msgstr "Session - Type d'inventaire / Type de protocole"
+
+msgctxt "help:inventory.point-inventory.session,typopieceeau:"
+msgid "Typologie de la pièce d'eau"
+msgstr "Typologie de la pièce d'eau"
+
+msgctxt "help:inventory.point-inventory.session,typosol:"
+msgid "Type de sol"
+msgstr "Type de sol"
+
+msgctxt "help:inventory.point-inventory.session,zonehabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.point-inventory.session,zonelistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt ""
+"help:inventory.pointlistecompartiment,listesessioncompartiment_typinv:"
+msgid "ListeCompartiment Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.pointlistecompartiment,valeur:"
+msgid "Valeur du compartiment"
+msgstr "Valeur du compartiment"
+
+msgctxt "help:inventory.pointlistetaxon,biorythme:"
+msgid "Biorythme"
+msgstr "Biorythme"
+
+msgctxt "help:inventory.pointlistetaxon,classabond:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "help:inventory.pointlistetaxon,classabondbota:"
+msgid "Classe d'abondance botanique"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,comment:"
+msgid "Comment of taxon"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,comportement:"
+msgid "Comportement"
+msgstr "Comportement"
+
+msgctxt "help:inventory.pointlistetaxon,etatsante:"
+msgid "État de santé"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.pointlistetaxon,indicepresence:"
+msgid "Indice de présence"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,listesessiontaxon_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,nombre:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,parties:"
+msgid "Auteurs/Contributeurs"
+msgstr "Auteurs/Contributeurs"
+
+msgctxt "help:inventory.pointlistetaxon,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:inventory.pointlistetaxon,plantehote:"
+msgid "Plante hôte"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,presence:"
+msgid "Coché = présent, décoché = absent"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,recouvrementbota:"
+msgid "Recouvrement en pourcentage (%)"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,statutreprod:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,statutreprodornitho:"
+msgid "Statut de reproduction ornithologique"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,superficie:"
+msgid "Superficie du groupement en mètre carré (m2)"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,typeffectif:"
+msgid "Type d'effectif"
+msgstr ""
+
+msgctxt "help:inventory.pointlistetaxon,typesexe:"
+msgid "Type/Sexe"
+msgstr ""
+
+msgctxt "help:inventory.taxon-party.party,refcollection:"
+msgid "Référence de la collection"
+msgstr ""
+
+msgctxt "help:inventory.taxon-party.party,rolecontrib:"
+msgid "Rôle de la contribution"
+msgstr "Rôle de la contribution"
+
+msgctxt "help:inventory.taxon-party.party,rolecontrib_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:inventory.taxon-party.party,typocontrib:"
+msgid "Type de contribution"
+msgstr "Type de contribution"
+
+msgctxt "help:inventory.track,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.track,altitude:"
+msgid "Altitude en mètre (m)"
+msgstr "Altitude en mètre (m)"
+
+msgctxt "help:inventory.track,code:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.track,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "help:inventory.track,exit:"
+msgid "Sortie de terrain"
+msgstr "Sortie de terrain"
+
+msgctxt "help:inventory.track,exit_typ:"
+msgid "Exit Typ"
+msgstr "Sortie - Dispositif"
+
+msgctxt "help:inventory.track,exit_typinv:"
+msgid "Exit Typeinv"
+msgstr "Sortie - Type d'inventaire / Type de protocole"
+
+msgctxt "help:inventory.track,exposition:"
+msgid "Exposition of dispositif"
+msgstr "Exposition du dispositif"
+
+msgctxt "help:inventory.track,facteur:"
+msgid "Facteur de forme"
+msgstr "Facteur de forme"
+
+msgctxt "help:inventory.track,geom:"
+msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiLine (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.track,hauteur:"
+msgid "Hauteur en mètre (m)"
+msgstr ""
+
+msgctxt "help:inventory.track,largeur:"
+msgid "Largeur en mètre (m)"
+msgstr ""
+
+msgctxt "help:inventory.track,lieudit:"
+msgid "Lieu-dit"
+msgstr "Lieu-dit"
+
+msgctxt "help:inventory.track,lisiere:"
+msgid "Proximité de la lisère en mètre (m)"
+msgstr "Proximité de la lisère en mètre (m)"
+
+msgctxt "help:inventory.track,longueur:"
+msgid "Longueur en mètre (m)"
+msgstr ""
+
+msgctxt "help:inventory.track,name:"
+msgid "Label of dispositif"
+msgstr "Libellé du dispositif"
+
+msgctxt "help:inventory.track,ombrage:"
+msgid "Ombrage of dispositif"
+msgstr "Ombrage of dispositif"
+
+msgctxt "help:inventory.track,pente:"
+msgid "Pente en degré"
+msgstr "Pente en degré"
+
+msgctxt "help:inventory.track,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:inventory.track,station:"
+msgid "Station of dispositif"
+msgstr "Station du dispositif"
+
+msgctxt "help:inventory.track,surface:"
+msgid "Surface en mètre (m2)"
+msgstr ""
+
+msgctxt "help:inventory.track,topographie:"
+msgid "Topographie of dispositif"
+msgstr "Topographie du dispositif"
+
+msgctxt "help:inventory.track,tracksession:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt ""
+"help:inventory.track-inventory.listecompartimenttaxon,tracksession_typinv:"
+msgid "TrackSessionCompartimentTaxon Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.track-inventory.session,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.track-inventory.session,activite:"
+msgid "Activité constatée"
+msgstr "Activité constatée"
+
+msgctxt "help:inventory.track-inventory.session,beaufort:"
+msgid "Vent sur échelle de Beaufort"
+msgstr "Vent sur échelle de Beaufort"
+
+msgctxt "help:inventory.track-inventory.session,borne:"
+msgid "Bornes"
+msgstr "Bornes"
+
+msgctxt "help:inventory.track-inventory.session,code:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.track-inventory.session,confiance:"
+msgid "Indice de confiance"
+msgstr "Indice de confiance"
+
+msgctxt "help:inventory.track-inventory.session,debut:"
+msgid "Heure de début"
+msgstr "Heure de début"
+
+msgctxt "help:inventory.track-inventory.session,determinationespeceadulte:"
+msgid "Détermination espèce adulte"
+msgstr "Détermination espèce adulte"
+
+msgctxt "help:inventory.track-inventory.session,dispoflorale:"
+msgid "Disposition florale"
+msgstr "Disposition florale"
+
+msgctxt "help:inventory.track-inventory.session,distanceborne:"
+msgid "Distance à la borne en centimètre (cm)"
+msgstr "Distance à la borne en centimètre (cm)"
+
+msgctxt "help:inventory.track-inventory.session,duree:"
+msgid "Durée en minutes"
+msgstr "Durée en minutes"
+
+msgctxt "help:inventory.track-inventory.session,ecartpoint:"
+msgid "Écart entre deux points en centimètre (cm)"
+msgstr "Écart entre deux points en centimètre (cm)"
+
+msgctxt "help:inventory.track-inventory.session,etatcons:"
+msgid "État de conservation"
+msgstr "État de conservation"
+
+msgctxt "help:inventory.track-inventory.session,fin:"
+msgid "Heure de fin : par défaut est égale à heure de début plus la durée"
+msgstr "Heure de fin : par défaut est égale à heure de début plus la durée"
+
+msgctxt "help:inventory.track-inventory.session,floraison:"
+msgid "Floraison en pourcentage"
+msgstr "Floraison en pourcentage"
+
+msgctxt "help:inventory.track-inventory.session,gestion:"
+msgid "Gestion constatée in situ"
+msgstr "Gestion constatée in situ"
+
+msgctxt "help:inventory.track-inventory.session,gestionpg:"
+msgid "Gestion du PG"
+msgstr "Gestion du PG"
+
+msgctxt "help:inventory.track-inventory.session,groupeschronoventaire:"
+msgid "Groupe chronoventaire"
+msgstr "Groupe chronoventaire"
+
+msgctxt "help:inventory.track-inventory.session,habitatppal:"
+msgid "Habitat principal constaté in situ"
+msgstr "Habitat principal constaté in situ"
+
+msgctxt "help:inventory.track-inventory.session,habitatseco:"
+msgid "Habitat secondaire constaté in situ"
+msgstr "Habitat secondaire constaté in situ"
+
+msgctxt "help:inventory.track-inventory.session,hauteurdevase:"
+msgid "Hauteur de vase en mètre (m)"
+msgstr "Hauteur de vase en mètre (m)"
+
+msgctxt "help:inventory.track-inventory.session,hauteureau:"
+msgid "Hauteur d'eau en mètre (m)"
+msgstr "Hauteur d'eau en mètre (m)"
+
+msgctxt "help:inventory.track-inventory.session,hauteurmoy:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur de vase en mètre (m)"
+
+msgctxt "help:inventory.track-inventory.session,hauteurmoyenne:"
+msgid "Hauteur moyenne en centimètre (cm)"
+msgstr "Hauteur moyenne en centimètre (cm)"
+
+msgctxt "help:inventory.track-inventory.session,hydromorphie:"
+msgid "Hydromorphie"
+msgstr "Hydromorphie"
+
+msgctxt "help:inventory.track-inventory.session,interpretation:"
+msgid "Interprétation phyto constatée in situ"
+msgstr "Interprétation phyto constatée in situ"
+
+msgctxt "help:inventory.track-inventory.session,labelquadrat:"
+msgid "Libellé du quadrat"
+msgstr "Libellé du quadrat"
+
+msgctxt "help:inventory.track-inventory.session,menace:"
+msgid "Menace ou dégradation"
+msgstr "Menace ou dégradation"
+
+msgctxt "help:inventory.track-inventory.session,name:"
+msgid "Nom de la session"
+msgstr ""
+
+msgctxt "help:inventory.track-inventory.session,nebulosite:"
+msgid "Nébulosité"
+msgstr "Nébulosité"
+
+msgctxt "help:inventory.track-inventory.session,niveauhydrique:"
+msgid "Niveau hydrique de l'habitat principal"
+msgstr "Niveau hydrique de l'habitat principal"
+
+msgctxt "help:inventory.track-inventory.session,numordre:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.track-inventory.session,pasdetemps:"
+msgid "Pas de temps en minute"
+msgstr "Pas de temps en minute"
+
+msgctxt "help:inventory.track-inventory.session,pointhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.track-inventory.session,pointlistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "help:inventory.track-inventory.session,rangobservation:"
+msgid "Rang observation"
+msgstr "Rang observation"
+
+msgctxt "help:inventory.track-inventory.session,remarque:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "help:inventory.track-inventory.session,senslecture:"
+msgid "Sens de lecture"
+msgstr "Sens de lecture"
+
+msgctxt "help:inventory.track-inventory.session,statutborne:"
+msgid "Statut bornes"
+msgstr "Statut bornes"
+
+msgctxt "help:inventory.track-inventory.session,temperature:"
+msgid "Température en degré Celsius (°C)"
+msgstr "Température en degré Celsius (°C)"
+
+msgctxt "help:inventory.track-inventory.session,trackhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.track-inventory.session,tracklistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "help:inventory.track-inventory.session,typ:"
+msgid "Session Typ"
+msgstr "Session - Dispositif"
+
+msgctxt "help:inventory.track-inventory.session,typeinv:"
+msgid "Session Type"
+msgstr "Session - Type d'inventaire / Type de protocole"
+
+msgctxt "help:inventory.track-inventory.session,typopieceeau:"
+msgid "Typologie de la pièce d'eau"
+msgstr "Typologie de la pièce d'eau"
+
+msgctxt "help:inventory.track-inventory.session,typosol:"
+msgid "Type de sol"
+msgstr "Type de sol"
+
+msgctxt "help:inventory.track-inventory.session,zonehabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.track-inventory.session,zonelistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt ""
+"help:inventory.tracklistecompartiment,listesessioncompartiment_typinv:"
+msgid "ListeCompartiment Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.tracklistecompartiment,valeur:"
+msgid "Valeur du compartiment"
+msgstr "Valeur du compartiment"
+
+msgctxt "help:inventory.tracklistetaxon,biorythme:"
+msgid "Biorythme"
+msgstr "Biorythme"
+
+msgctxt "help:inventory.tracklistetaxon,classabond:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "help:inventory.tracklistetaxon,classabondbota:"
+msgid "Classe d'abondance botanique"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,comment:"
+msgid "Comment of taxon"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,comportement:"
+msgid "Comportement"
+msgstr "Comportement"
+
+msgctxt "help:inventory.tracklistetaxon,etatsante:"
+msgid "État de santé"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.tracklistetaxon,indicepresence:"
+msgid "Indice de présence"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,listesessiontaxon_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,nombre:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,parties:"
+msgid "Auteurs/Contributeurs"
+msgstr "Auteurs/Contributeurs"
+
+msgctxt "help:inventory.tracklistetaxon,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:inventory.tracklistetaxon,plantehote:"
+msgid "Plante hôte"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,presence:"
+msgid "Coché = présent, décoché = absent"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,recouvrementbota:"
+msgid "Recouvrement en pourcentage (%)"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,statutreprod:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,statutreprodornitho:"
+msgid "Statut de reproduction ornithologique"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,superficie:"
+msgid "Superficie du groupement en mètre carré (m2)"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,typeffectif:"
+msgid "Type d'effectif"
+msgstr ""
+
+msgctxt "help:inventory.tracklistetaxon,typesexe:"
+msgid "Type/Sexe"
+msgstr ""
+
+msgctxt "help:inventory.zone,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.zone,altitude:"
+msgid "Altitude en mètre (m)"
+msgstr "Altitude en mètre (m)"
+
+msgctxt "help:inventory.zone,code:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.zone,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "help:inventory.zone,exit:"
+msgid "Sortie de terrain"
+msgstr "Sortie de terrain"
+
+msgctxt "help:inventory.zone,exit_typ:"
+msgid "Exit Typ"
+msgstr "Sortie - Dispositif"
+
+msgctxt "help:inventory.zone,exit_typinv:"
+msgid "Exit Typeinv"
+msgstr "Sortie - Type d'inventaire / Type de protocole"
+
+msgctxt "help:inventory.zone,exposition:"
+msgid "Exposition of dispositif"
+msgstr "Exposition du dispositif"
+
+msgctxt "help:inventory.zone,facteur:"
+msgid "Facteur de forme"
+msgstr "Facteur de forme"
+
+msgctxt "help:inventory.zone,geom:"
 msgid "Geometry MultiPolygon (EPSG=2154, RGF93/Lambert 93)"
-msgstr "Géométrie MultiPolygone (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiPolygon (EPSG=2154, RGF93/Lambert 93)"
 
-msgctxt "help:site_site.zone,name:"
-msgid "Name of zone"
-msgstr "Nom de la zone"
+msgctxt "help:inventory.zone,hauteur:"
+msgid "Hauteur en mètre (m)"
+msgstr ""
 
-msgctxt "help:site_site.zone,photo:"
-msgid "Photo of zone"
-msgstr "Photo de la zone"
+msgctxt "help:inventory.zone,largeur:"
+msgid "Largeur en mètre (m)"
+msgstr ""
 
-msgctxt "help:site_site.zone,precaution:"
-msgid "Précautions à prendre"
-msgstr "Précautions à prendre"
+msgctxt "help:inventory.zone,lieudit:"
+msgid "Lieu-dit"
+msgstr "Lieu-dit"
 
-msgctxt "help:site_site.zone,site:"
-msgid "Site"
-msgstr "Site"
+msgctxt "help:inventory.zone,lisiere:"
+msgid "Proximité de la lisère en mètre (m)"
+msgstr "Proximité de la lisère en mètre (m)"
+
+msgctxt "help:inventory.zone,longueur:"
+msgid "Longueur en mètre (m)"
+msgstr ""
+
+msgctxt "help:inventory.zone,name:"
+msgid "Label of dispositif"
+msgstr "Libellé du dispositif"
+
+msgctxt "help:inventory.zone,ombrage:"
+msgid "Ombrage of dispositif"
+msgstr "Ombrage du dispositif"
+
+msgctxt "help:inventory.zone,pente:"
+msgid "Pente en degré"
+msgstr "Pente en degré"
+
+msgctxt "help:inventory.zone,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:inventory.zone,station:"
+msgid "Station of dispositif"
+msgstr "Station du dispositif"
+
+msgctxt "help:inventory.zone,surface:"
+msgid "Surface en mètre (m2)"
+msgstr ""
+
+msgctxt "help:inventory.zone,topographie:"
+msgid "Topographie of dispositif"
+msgstr "Topographie du dispositif"
+
+msgctxt "help:inventory.zone,zonesession:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt ""
+"help:inventory.zone-inventory.listecompartimenttaxon,zonesession_typinv:"
+msgid "ZoneSessionCompartimentTaxon Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.zone-inventory.session,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:inventory.zone-inventory.session,activite:"
+msgid "Activité constatée"
+msgstr "Activité constatée"
+
+msgctxt "help:inventory.zone-inventory.session,beaufort:"
+msgid "Vent sur échelle de Beaufort"
+msgstr "Vent sur échelle de Beaufort"
+
+msgctxt "help:inventory.zone-inventory.session,borne:"
+msgid "Bornes"
+msgstr "Bornes"
+
+msgctxt "help:inventory.zone-inventory.session,code:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.zone-inventory.session,confiance:"
+msgid "Indice de confiance"
+msgstr "Indice de confiance"
+
+msgctxt "help:inventory.zone-inventory.session,debut:"
+msgid "Heure de début"
+msgstr "Heure de début"
+
+msgctxt "help:inventory.zone-inventory.session,determinationespeceadulte:"
+msgid "Détermination espèce adulte"
+msgstr "Détermination espèce adulte"
+
+msgctxt "help:inventory.zone-inventory.session,dispoflorale:"
+msgid "Disposition florale"
+msgstr "Disposition florale"
+
+msgctxt "help:inventory.zone-inventory.session,distanceborne:"
+msgid "Distance à la borne en centimètre (cm)"
+msgstr "Distance à la borne en centimètre (cm)"
+
+msgctxt "help:inventory.zone-inventory.session,duree:"
+msgid "Durée en minutes"
+msgstr "Durée en minutes"
+
+msgctxt "help:inventory.zone-inventory.session,ecartpoint:"
+msgid "Écart entre deux points en centimètre (cm)"
+msgstr "Écart entre deux points en centimètre (cm)"
+
+msgctxt "help:inventory.zone-inventory.session,etatcons:"
+msgid "État de conservation"
+msgstr "État de conservation"
+
+msgctxt "help:inventory.zone-inventory.session,fin:"
+msgid "Heure de fin : par défaut est égale à heure de début plus la durée"
+msgstr "Heure de fin : par défaut est égale à heure de début plus la durée"
+
+msgctxt "help:inventory.zone-inventory.session,floraison:"
+msgid "Floraison en pourcentage"
+msgstr "Floraison en pourcentage"
+
+msgctxt "help:inventory.zone-inventory.session,gestion:"
+msgid "Gestion constatée in situ"
+msgstr "Gestion constatée in situ"
+
+msgctxt "help:inventory.zone-inventory.session,gestionpg:"
+msgid "Gestion du PG"
+msgstr "Gestion du PG"
+
+msgctxt "help:inventory.zone-inventory.session,groupeschronoventaire:"
+msgid "Groupe chronoventaire"
+msgstr "Groupe chronoventaire"
+
+msgctxt "help:inventory.zone-inventory.session,habitatppal:"
+msgid "Habitat principal constaté in situ"
+msgstr "Habitat principal constaté in situ"
+
+msgctxt "help:inventory.zone-inventory.session,habitatseco:"
+msgid "Habitat secondaire constaté in situ"
+msgstr "Habitat secondaire constaté in situ"
+
+msgctxt "help:inventory.zone-inventory.session,hauteurdevase:"
+msgid "Hauteur de vase en mètre (m)"
+msgstr "Hauteur de vase en mètre (m)"
+
+msgctxt "help:inventory.zone-inventory.session,hauteureau:"
+msgid "Hauteur d'eau en mètre (m)"
+msgstr "Hauteur d'eau en mètre (m)"
+
+msgctxt "help:inventory.zone-inventory.session,hauteurmoy:"
+msgid "Hauteur moyenne (cm)"
+msgstr "Hauteur moyenne (cm)"
+
+msgctxt "help:inventory.zone-inventory.session,hauteurmoyenne:"
+msgid "Hauteur moyenne en centimètre (cm)"
+msgstr "Hauteur moyenne en centimètre (cm)"
+
+msgctxt "help:inventory.zone-inventory.session,hydromorphie:"
+msgid "Hydromorphie"
+msgstr "Hydromorphie"
+
+msgctxt "help:inventory.zone-inventory.session,interpretation:"
+msgid "Interprétation phyto constatée in situ"
+msgstr "Interprétation phyto constatée in situ"
+
+msgctxt "help:inventory.zone-inventory.session,labelquadrat:"
+msgid "Libellé du quadrat"
+msgstr "Libellé du quadrat"
+
+msgctxt "help:inventory.zone-inventory.session,menace:"
+msgid "Menace ou dégradation"
+msgstr "Menace ou dégradation"
+
+msgctxt "help:inventory.zone-inventory.session,name:"
+msgid "Nom de la session"
+msgstr ""
+
+msgctxt "help:inventory.zone-inventory.session,nebulosite:"
+msgid "Nébulosité"
+msgstr "Nébulosité"
+
+msgctxt "help:inventory.zone-inventory.session,niveauhydrique:"
+msgid "Niveau hydrique de l'habitat principal"
+msgstr "Niveau hydrique de l'habitat principal"
+
+msgctxt "help:inventory.zone-inventory.session,numordre:"
+msgid "Numéro d'ordre"
+msgstr "Numéro d'ordre"
+
+msgctxt "help:inventory.zone-inventory.session,pasdetemps:"
+msgid "Pas de temps en minute"
+msgstr "Pas de temps en minute"
+
+msgctxt "help:inventory.zone-inventory.session,pointhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.zone-inventory.session,pointlistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "help:inventory.zone-inventory.session,rangobservation:"
+msgid "Rang observation"
+msgstr "Rang observation"
+
+msgctxt "help:inventory.zone-inventory.session,remarque:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "help:inventory.zone-inventory.session,senslecture:"
+msgid "Sens de lecture"
+msgstr "Référence"
+
+msgctxt "help:inventory.zone-inventory.session,statutborne:"
+msgid "Statut bornes"
+msgstr "Statut bornes"
+
+msgctxt "help:inventory.zone-inventory.session,temperature:"
+msgid "Température en degré Celsius (°C)"
+msgstr "Température en degré Celsius (°C)"
+
+msgctxt "help:inventory.zone-inventory.session,trackhabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.zone-inventory.session,tracklistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "help:inventory.zone-inventory.session,typ:"
+msgid "Session Typ"
+msgstr "Session - Dispositif"
+
+msgctxt "help:inventory.zone-inventory.session,typeinv:"
+msgid "Session Type"
+msgstr "Session - Type d'inventaire / Type de protocole"
+
+msgctxt "help:inventory.zone-inventory.session,typopieceeau:"
+msgid "Typologie de la pièce d'eau"
+msgstr "Typologie de la pièce d'eau"
+
+msgctxt "help:inventory.zone-inventory.session,typosol:"
+msgid "Type de sol"
+msgstr "Type de sol"
+
+msgctxt "help:inventory.zone-inventory.session,zonehabitatenve:"
+msgid "Habitat enveloppe"
+msgstr "Habitat enveloppe"
+
+msgctxt "help:inventory.zone-inventory.session,zonelistecompartimentstaxons:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "help:inventory.zonelistecompartiment,listesessioncompartiment_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.zonelistecompartiment,valeur:"
+msgid "Valeur du compartiment"
+msgstr "Valeur du compartiment"
+
+msgctxt "help:inventory.zonelistetaxon,biorythme:"
+msgid "Biorythme"
+msgstr "Biorythme"
+
+msgctxt "help:inventory.zonelistetaxon,classabond:"
+msgid "Classe d'abondance"
+msgstr "Classe d'abondance"
+
+msgctxt "help:inventory.zonelistetaxon,classabondbota:"
+msgid "Classe d'abondance botanique"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,comment:"
+msgid "Comment of taxon"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,comportement:"
+msgid "Comportement"
+msgstr "Comportement"
+
+msgctxt "help:inventory.zonelistetaxon,etatsante:"
+msgid "État de santé"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:inventory.zonelistetaxon,indicepresence:"
+msgid "Indice de présence"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,listesessiontaxon_typinv:"
+msgid "ListeTaxon Typeinv"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,nombre:"
+msgid "Nombre"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,parties:"
+msgid "Auteurs/Contributeurs"
+msgstr "Auteurs/Contributeurs"
+
+msgctxt "help:inventory.zonelistetaxon,photo:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "help:inventory.zonelistetaxon,plantehote:"
+msgid "Plante hôte"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,presence:"
+msgid "Coché = présent, décoché = absent"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,recouvrementbota:"
+msgid "Recouvrement en pourcentage (%)"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,statutreprod:"
+msgid "Statut de reproduction"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,statutreprodornitho:"
+msgid "Statut de reproduction ornithologique"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,superficie:"
+msgid "Superficie du groupement en mètre carré (m2)"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,typeffectif:"
+msgid "Type d'effectif"
+msgstr ""
+
+msgctxt "help:inventory.zonelistetaxon,typesexe:"
+msgid "Type/Sexe"
+msgstr ""
+
+msgctxt "help:taxinomie.taxinomie,active:"
+msgid "Disponible dans les listes déroulantes"
+msgstr ""
+
+msgctxt "help:taxinomie.taxinomie,cd_f_bleue:"
+msgid "Identifiant CENL du nom valide Flore bleue Ed 6"
+msgstr ""
+
+msgctxt "help:taxinomie.taxinomie,cd_nom_cenl:"
+msgid "Identifiant CENL"
+msgstr ""
+
+msgctxt "help:taxinomie.taxinomie,classe_cenl:"
+msgid "Classe CENL"
+msgstr ""
+
+msgctxt "help:taxinomie.taxinomie,nom_vern_cenl:"
+msgid "Nom vernaculaire valide CENL"
+msgstr ""
+
+msgctxt "model:inventory.campaign,name:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
+
+msgctxt "model:inventory.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:inventory.configuration,name:"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:inventory.exit,name:"
+msgid "Sortie de terrain"
+msgstr "Sortie de terrain"
+
+msgctxt "model:inventory.lrs,name:"
+msgid "Lrs"
+msgstr "Lrs"
+
+msgctxt "model:inventory.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr "Objet divers ligne"
+
+msgctxt "model:inventory.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr "Objet divers point"
+
+msgctxt "model:inventory.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr "Objet divers polygone"
+
+msgctxt "model:inventory.poi,name:"
+msgid "Poi"
+msgstr "POI"
+
+msgctxt "model:inventory.point,name:"
+msgid "Dispositif Point"
+msgstr "Point"
+
+msgctxt "model:inventory.point-inventory.listecompartimenttaxon,name:"
+msgid "Point - Session - Liste de Compartiment - Liste de Taxon"
+msgstr "Point - Session - Liste de Compartiment - Liste de Taxon"
+
+msgctxt "model:inventory.point-inventory.session,name:"
+msgid "Point - Session"
+msgstr "Point - Session"
+
+msgctxt "model:inventory.point-inventory.session-habitat.corine_biotope,name:"
+msgid "Point - Session - Habitat"
+msgstr "Point - Session - Habitat"
+
+msgctxt "model:inventory.pointlistecompartiment,name:"
+msgid "Liste de Compartiment"
+msgstr "Liste de Compartiment"
+
+msgctxt "model:inventory.pointlistetaxon,name:"
+msgid "Liste de taxon"
+msgstr "Liste de taxon"
+
+msgctxt "model:inventory.taxon-party.party,name:"
+msgid "Taxon - Party"
+msgstr "Taxon - Tiers"
+
+msgctxt "model:inventory.track,name:"
+msgid "Dispositif Track"
+msgstr "Trace"
+
+msgctxt "model:inventory.track-inventory.listecompartimenttaxon,name:"
+msgid "Track - Session - Liste de Compartiment - Liste de Taxon"
+msgstr "Track - Session - Liste de Compartiment - Liste de Taxon"
+
+msgctxt "model:inventory.track-inventory.session,name:"
+msgid "Track - Session"
+msgstr "Trace - Session"
+
+msgctxt "model:inventory.track-inventory.session-habitat.corine_biotope,name:"
+msgid "Track - Session - Habitat"
+msgstr "Track - Session - Habitat"
+
+msgctxt "model:inventory.tracklistecompartiment,name:"
+msgid "Liste de Compartiment"
+msgstr "Liste de Compartiment"
+
+msgctxt "model:inventory.tracklistetaxon,name:"
+msgid "Liste de taxon"
+msgstr "Liste de taxon"
+
+msgctxt "model:inventory.zone,name:"
+msgid "Dispositif Zone"
+msgstr "Zone"
+
+msgctxt "model:inventory.zone-inventory.listecompartimenttaxon,name:"
+msgid "Zone - Session - Liste de Compartiment - Liste de Taxon"
+msgstr "Zone - Session - Liste de Compartiment - Liste de Taxon"
+
+msgctxt "model:inventory.zone-inventory.session,name:"
+msgid "Zone - Session"
+msgstr "Zone - Session"
+
+msgctxt "model:inventory.zone-inventory.session-habitat.corine_biotope,name:"
+msgid "Zone - Session - Habitat"
+msgstr "Track - Session - Habitat"
+
+msgctxt "model:inventory.zonelistecompartiment,name:"
+msgid "Liste de Compartiment"
+msgstr "Liste de Compartiment"
+
+msgctxt "model:inventory.zonelistetaxon,name:"
+msgid "Liste de taxon"
+msgstr "Liste de taxon"
+
+msgctxt "model:ir.action,name:act_cenl_taxinomie_form"
+msgid "Taxinomie"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_chrono_lepdio_form"
+msgid "Chronoventraire lépidoptères"
+msgstr ""
 
 msgctxt "model:ir.action,name:act_code_form"
 msgid "Code"
@@ -993,105 +3916,213 @@ msgctxt "model:ir.action,name:act_configuration_form"
 msgid "Configuration"
 msgstr "Configuration"
 
+msgctxt "model:ir.action,name:act_inv_odonate_form"
+msgid "Inventaires odonates"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_inventory_exit_form"
+msgid "Sorties de terrain"
+msgstr "Sorties de terrain"
+
+msgctxt "model:ir.action,name:act_inventory_form"
+msgid "Campagnes de prospection"
+msgstr "Campagnes de prospection"
+
+msgctxt "model:ir.action,name:act_inventory_misc_obj_line_form"
+msgid "Lignes"
+msgstr "Lignes"
+
+msgctxt "model:ir.action,name:act_inventory_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:act_inventory_misc_obj_poly_form"
+msgid "Polygones"
+msgstr "Polygones"
+
+msgctxt "model:ir.action,name:act_inventory_taxon_party_form"
+msgid "Auteurs"
+msgstr "Auteurs"
+
 msgctxt "model:ir.action,name:act_lrs_form"
 msgid "LRS"
 msgstr "LRS"
+
+msgctxt "model:ir.action,name:act_placette_ortho_form"
+msgid "Placettes orthoptères"
+msgstr ""
 
 msgctxt "model:ir.action,name:act_poi_form"
 msgid "POI"
 msgstr "POI"
 
 msgctxt "model:ir.action,name:act_point_form"
-msgid "Points"
-msgstr "Points"
+msgid "Dispositif (Points)"
+msgstr "Dispositif (Points)"
 
-msgctxt "model:ir.action,name:act_site_form"
-msgid "Sites"
-msgstr "Sites"
+msgctxt "model:ir.action,name:act_point_session_form"
+msgid "Points Sessions"
+msgstr "Points Sessions"
 
-msgctxt "model:ir.action,name:act_site_misc_obj_line_form"
-msgid "Lines"
-msgstr "Lignes"
+msgctxt "model:ir.action,name:act_point_session_listecompartiment_form"
+msgid "Point - Session - Compartiment"
+msgstr "Point - Session - Compartiment"
 
-msgctxt "model:ir.action,name:act_site_misc_obj_point_form"
-msgid "Points"
-msgstr "Points"
+msgctxt "model:ir.action,name:act_point_session_listecompartimentstaxon_form"
+msgid "Point - Session - Compartiment - Taxons"
+msgstr "Point - Session - Compartiment - Taxons"
 
-msgctxt "model:ir.action,name:act_site_misc_obj_poly_form"
-msgid "Polygons"
-msgstr "Polygones"
+msgctxt "model:ir.action,name:act_point_session_listetaxon_form"
+msgid "Point - Session - Compartiment"
+msgstr "Point - Session - Compartiment"
 
-msgctxt "model:ir.action,name:act_surface_site_surface_form"
-msgid "Chantier - Corine Land Cover"
-msgstr "Site - Protection - Buffer (ha/Chantier/Statuts)"
+msgctxt "model:ir.action,name:act_pointsessionlistetaxon_form"
+msgid "Liste des taxons"
+msgstr ""
 
-msgctxt "model:ir.action,name:act_surface_site_surface_open"
-msgid "Chantier - Corine Land Cover"
-msgstr "Site - Statuts de protection"
+msgctxt "model:ir.action,name:act_releve_herbier_aqua_form"
+msgid "Relevés herbiers aquatiques"
+msgstr ""
 
-msgctxt "model:ir.action,name:act_surface_zone_surface_form"
-msgid "Zones - Statuts de protection"
-msgstr "Zones - Statuts de protection"
+msgctxt "model:ir.action,name:act_releve_phyto_form"
+msgid "Relevés phytosociologiques"
+msgstr ""
 
-msgctxt "model:ir.action,name:act_surface_zone_surface_open"
-msgid "Zones - Statuts de protection"
-msgstr "Zones - Statuts de protection"
+msgctxt "model:ir.action,name:act_steli_odonate_form"
+msgid "STELI odonates"
+msgstr ""
 
 msgctxt "model:ir.action,name:act_track_form"
-msgid "Tracks"
-msgstr "Tracks"
+msgid "Dispositif (Tracks)"
+msgstr "Dispositif (Tracks)"
+
+msgctxt "model:ir.action,name:act_track_session_form"
+msgid "Tracks Sessions"
+msgstr "Traces Sessions"
+
+msgctxt "model:ir.action,name:act_track_session_listecompartiment_form"
+msgid "Track - Session - Compartiment"
+msgstr "Trace - Session - Compartiment"
+
+msgctxt "model:ir.action,name:act_track_session_listecompartimentstaxon_form"
+msgid "Track - Session - Compartiment - Taxons"
+msgstr "Trace - Session - Compartiment - Taxons"
+
+msgctxt "model:ir.action,name:act_track_session_listetaxon_form"
+msgid "Track - Session - Compartiment"
+msgstr "Trace - Session - Compartiment"
+
+msgctxt "model:ir.action,name:act_tracksessionlistetaxon_form"
+msgid "Liste des taxons"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_transect_lepdio_form"
+msgid "Transects lépidoptères"
+msgstr ""
 
 msgctxt "model:ir.action,name:act_zone_form"
-msgid "Zones"
-msgstr "Zones"
+msgid "Dispositif (Zones)"
+msgstr "Dispositif (Zones)"
 
-msgctxt "model:ir.action,name:report_buffer"
-msgid "Rapport - Zones et Statuts de protection"
-msgstr "Rapport - Sites et Statuts de protection"
+msgctxt "model:ir.action,name:act_zone_session_form"
+msgid "Zones Sessions"
+msgstr "Zones Sessions"
 
-msgctxt "model:ir.action,name:report_lrs"
-msgid "Site"
-msgstr "Chantier"
+msgctxt "model:ir.action,name:act_zone_session_listecompartiment_form"
+msgid "Zone - Session - Compartiment"
+msgstr "Zone - Session - Compartiment"
+
+msgctxt "model:ir.action,name:act_zone_session_listecompartimentstaxon_form"
+msgid "Zone - Session - Compartiment - Taxons"
+msgstr "Zone - Session - Compartiment - Taxons"
+
+msgctxt "model:ir.action,name:act_zone_session_listetaxon_form"
+msgid "Zone - Session - Compartiment"
+msgstr "Zone - Session - Compartiment"
+
+msgctxt "model:ir.action,name:act_zonesessionlistetaxon_form"
+msgid "Liste des taxons"
+msgstr ""
+
+msgctxt "model:ir.action,name:generatepoint"
+msgid "Generate all points..."
+msgstr "Générer tous les points..."
+
+msgctxt "model:ir.action,name:report_campaign_edit"
+msgid "Open campaign in QGis..."
+msgstr "Ouvrir la campagne dans QGIS..."
+
+msgctxt "model:ir.action,name:report_exit_edit"
+msgid "Open exit in QGis..."
+msgstr "Ouvrir la sortie dans QGIS..."
 
 msgctxt "model:ir.action,name:report_lrs_edit"
 msgid "Open lrs in QGis..."
 msgstr "Ouvrir LRS dans QGis..."
 
-msgctxt "model:ir.action,name:report_misc_obj_line_edit"
-msgid "Open in QGis..."
-msgstr "Ouvrir avec QGis..."
-
-msgctxt "model:ir.action,name:report_misc_obj_point_edit"
-msgid "Open in QGis..."
-msgstr "Ouvrir avec QGis..."
-
-msgctxt "model:ir.action,name:report_misc_obj_poly_edit"
-msgid "Open in QGis..."
-msgstr "Ouvrir avec QGis..."
-
 msgctxt "model:ir.action,name:report_poi_edit"
 msgid "Open POI in QGis..."
 msgstr "Ouvrir POI dans QGis..."
+
+msgctxt "model:ir.action,name:report_point"
+msgid "Monitoring"
+msgstr "Monitoring"
 
 msgctxt "model:ir.action,name:report_point_edit"
 msgid "Open Point in QGis..."
 msgstr "Ouvrir le(s) point(s) dans QGIS..."
 
-msgctxt "model:ir.action,name:report_site_clc"
-msgid "Rapport Site - CLC"
-msgstr "Rapport Site - CLC"
-
-msgctxt "model:ir.action,name:report_site_edit"
-msgid "Open site in QGis..."
-msgstr "Ouvrir le(s) site(s) dans QGis..."
+msgctxt "model:ir.action,name:report_pointlistetaxon_edit"
+msgid "Open point in QGis..."
+msgstr ""
 
 msgctxt "model:ir.action,name:report_track_edit"
 msgid "Open Track in QGis..."
 msgstr "Ouvrir le(s) track(s) dans QGis"
 
+msgctxt "model:ir.action,name:report_tracklistetaxon_edit"
+msgid "Open point in QGis..."
+msgstr ""
+
 msgctxt "model:ir.action,name:report_zone_edit"
 msgid "Open Zone in QGis..."
 msgstr "Ouvrir la (les) zone(s) dans QGIS..."
+
+msgctxt "model:ir.action,name:report_zonelistetaxon_edit"
+msgid "Open point in QGis..."
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_cenl"
+msgid "CENL"
+msgstr "CENL"
+
+msgctxt "model:ir.ui.menu,name:menu_cenl_campaign_form"
+msgid "Campagnes de prospection"
+msgstr "Campagnes de prospection"
+
+msgctxt "model:ir.ui.menu,name:menu_cenl_exit"
+msgid "Sorties de terrain"
+msgstr "Sorties de terrain"
+
+msgctxt "model:ir.ui.menu,name:menu_cenl_misc_obj"
+msgid "Objects divers"
+msgstr "Objets divers"
+
+msgctxt "model:ir.ui.menu,name:menu_cenl_misc_obj_line_form"
+msgid "Lignes"
+msgstr "Lignes"
+
+msgctxt "model:ir.ui.menu,name:menu_cenl_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.ui.menu,name:menu_cenl_misc_obj_poly_form"
+msgid "Polygones"
+msgstr "Polygones"
+
+msgctxt "model:ir.ui.menu,name:menu_chrono_lepdio_form"
+msgid "Chronoventraire lépidoptères"
+msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_code_form"
 msgid "Code"
@@ -1105,554 +4136,747 @@ msgctxt "model:ir.ui.menu,name:menu_configuration_form"
 msgid "Configuration"
 msgstr "Configuration"
 
+msgctxt "model:ir.ui.menu,name:menu_inv_odonate_form"
+msgid "Inventaires odonates"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_inventaire"
+msgid "Inventaires"
+msgstr ""
+
 msgctxt "model:ir.ui.menu,name:menu_lrs_form"
 msgid "LRS"
 msgstr "LRS"
+
+msgctxt "model:ir.ui.menu,name:menu_placette_ortho_form"
+msgid "Placettes orthoptères"
+msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_poi_form"
 msgid "POI"
 msgstr "POI"
 
 msgctxt "model:ir.ui.menu,name:menu_point_form"
-msgid "Points"
-msgstr "Points"
+msgid "Dispositif (Points)"
+msgstr "Dispositif (Points)"
 
-msgctxt "model:ir.ui.menu,name:menu_protection_surface_zone_surface"
-msgid "Zones - Statuts de protection"
-msgstr "Zones - Statuts de protection"
+msgctxt "model:ir.ui.menu,name:menu_pointlistecompartimentstaxon_form"
+msgid "Point - Session - Compartiment - Taxons"
+msgstr "Point - Session - Compartiment - Taxons"
+
+msgctxt "model:ir.ui.menu,name:menu_protocole"
+msgid "Protocoles"
+msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_rapport"
 msgid "Rapports"
 msgstr "Rapports"
 
-msgctxt "model:ir.ui.menu,name:menu_site"
-msgid "Site"
-msgstr "Site"
+msgctxt "model:ir.ui.menu,name:menu_releve_herbier_aqua_form"
+msgid "Relevés herbiers aquatiques"
+msgstr ""
 
-msgctxt "model:ir.ui.menu,name:menu_site_form"
-msgid "Sites"
-msgstr "Sites"
+msgctxt "model:ir.ui.menu,name:menu_releve_phyto_form"
+msgid "Relevés phytosociologiques"
+msgstr ""
 
-msgctxt "model:ir.ui.menu,name:menu_site_misc_obj"
-msgid "Misc objects"
-msgstr "Objets divers"
-
-msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_line_form"
-msgid "Lines"
-msgstr "Lignes"
-
-msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_point_form"
-msgid "Points"
-msgstr "Points"
-
-msgctxt "model:ir.ui.menu,name:menu_site_misc_obj_poly_form"
-msgid "Polygons"
-msgstr "Polygones"
-
-msgctxt "model:ir.ui.menu,name:menu_surface_site_clc"
-msgid "Chantier - Corine Land Cover"
-msgstr "Site - Protection - Buffer (ha/Chantier/Statuts)"
+msgctxt "model:ir.ui.menu,name:menu_steli_odonate_form"
+msgid "STELI odonates"
+msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_track_form"
-msgid "Tracks"
-msgstr "Tracks"
+msgid "Dispositif (Tracks)"
+msgstr "Dispositif (Tracks)"
+
+msgctxt "model:ir.ui.menu,name:menu_tracklistecompartimentstaxon_form"
+msgid "Track - Session - Compartiment - Taxons"
+msgstr "Trace - Session - Compartiment - Taxons"
+
+msgctxt "model:ir.ui.menu,name:menu_transect_lepdio_form"
+msgid "Transects lépidoptères"
+msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_zone_form"
-msgid "Zones"
-msgstr "Zones"
+msgid "Dispositif (Zones)"
+msgstr "Dispositif (Zones)"
 
-msgctxt "model:site_site.code,name:"
+msgctxt "model:ir.ui.menu,name:menu_zonelistecompartimentstaxon_form"
+msgid "Zone - Session - Compartiment - Taxons"
+msgstr "Zone - Session - Compartiment - Taxons"
+
+msgctxt "odt:inventory.point:"
 msgid "Code"
 msgstr "Code"
 
-msgctxt "model:site_site.configuration,name:"
-msgid "Configuration"
-msgstr "Configuration"
+msgctxt "odt:inventory.point:"
+msgid "Data collect every week"
+msgstr "Données collectées chaque semaine"
 
-msgctxt "model:site_site.lrs,name:"
-msgid "Lrs"
-msgstr "LRS"
+msgctxt "odt:inventory.point:"
+msgid "Date  :"
+msgstr "Date  :"
 
-msgctxt "model:site_site.misc_obj_line,name:"
-msgid "Miscellaneous line object"
-msgstr "Objet géométrique ligne"
+msgctxt "odt:inventory.point:"
+msgid "General aspect"
+msgstr "Aspect général"
 
-msgctxt "model:site_site.misc_obj_point,name:"
-msgid "Miscellaneous point object"
-msgstr "Objet géométrique point"
+msgctxt "odt:inventory.point:"
+msgid "Ground cover :"
+msgstr "Couverture du sol :"
 
-msgctxt "model:site_site.misc_obj_poly,name:"
-msgid "Miscellaneous polygon object"
-msgstr "Objet géométrique polygone"
+msgctxt "odt:inventory.point:"
+msgid "Height size"
+msgstr "Hauteur :"
 
-msgctxt "model:site_site.poi,name:"
-msgid "Poi"
-msgstr "POI"
+msgctxt "odt:inventory.point:"
+msgid "Leaf apparence/ Flowers"
+msgstr "Apparence des feuilles/fleurs"
 
-msgctxt "model:site_site.point,name:"
-msgid "Point"
-msgstr "Point"
+msgctxt "odt:inventory.point:"
+msgid "Monitoring of the plant growing"
+msgstr "Monitoring de la croissance des plantes"
 
-msgctxt "model:site_site.site,name:"
-msgid "Site"
-msgstr "Site"
-
-msgctxt "model:site_site.site-cadastre.parcelle,name:"
-msgid "Site - Parcelle"
-msgstr "Site - Parcelle"
-
-msgctxt "model:site_site.surface_clc_site.open.start,name:"
-msgid "Open surface_clc_site"
-msgstr "Ouvrir"
-
-msgctxt "model:site_site.surface_site_clc,name:"
-msgid "Surface (ha/Site/CLC)"
-msgstr "Surface (ha/Site/CLC)"
-
-msgctxt "model:site_site.surface_statut_buffer,name:"
-msgid "Buffer (ha/Zone/Statut)"
-msgstr "Buffer (ha/Zone/Statut)"
-
-msgctxt "model:site_site.surface_statut_buffer.open.start,name:"
-msgid "Open surface_statut_buffer"
-msgstr "Ouvrir"
-
-msgctxt "model:site_site.track,name:"
-msgid "Track"
-msgstr "Track"
-
-msgctxt "model:site_site.zone,name:"
-msgid "Zone"
-msgstr "Zone"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid ":"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Chantier"
-msgstr "Chantier"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Commentaires :"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "D"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Distance"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Localisation d"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Localisation du Statut de protection :"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Nom"
-msgstr "Nom"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Statut"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Surface"
-msgstr "Surface"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Type"
-msgstr "Type"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Type de statut"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "Zone"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "ha"
-msgstr "ha"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "i"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "km"
-msgstr "km"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "s"
-msgstr "s"
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "tance :"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_buffer:"
-msgid "u site"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "-"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "A"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Action sur"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Carte de situation du site Corine Land Cover"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Carte de situation générale"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Carte de situation précise"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Commentaires :"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Commune de"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Fiche"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "Mise à jour"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "ctions à mener :"
-msgstr ""
-
-msgctxt "odt:site_site.rapport_site_clc:"
-msgid "mardi 16 septembre 2014"
-msgstr ""
-
-msgctxt "odt:site_site.site:"
-msgid ":"
-msgstr ""
-
-msgctxt "odt:site_site.site:"
-msgid "Chantier"
-msgstr "Chantier"
-
-msgctxt "odt:site_site.site:"
-msgid "Fiche"
-msgstr ""
-
-msgctxt "odt:site_site.site:"
-msgid "Mise à jour"
-msgstr ""
-
-msgctxt "odt:site_site.site:"
+msgctxt "odt:inventory.point:"
 msgid "Observations :"
-msgstr ""
+msgstr "Observations :"
 
-msgctxt "odt:site_site.site:"
-msgid "Parcelle(s)"
-msgstr ""
+msgctxt "odt:inventory.point:"
+msgid "Overall circumference"
+msgstr "Circonférence totale"
 
-msgctxt "odt:site_site.site:"
-msgid "Zones"
-msgstr ""
+msgctxt "odt:inventory.point:"
+msgid "Plants"
+msgstr "Plantes"
 
-msgctxt "odt:site_site.site:"
-msgid "cadastrale(s)"
-msgstr ""
+msgctxt "odt:inventory.point:"
+msgid "T"
+msgstr "T"
 
-msgctxt "odt:site_site.site:"
-msgid "jeudi 23 octobre 2014"
-msgstr ""
+msgctxt "odt:inventory.point:"
+msgid "Trunk diameter"
+msgstr "Diamètre du tronc"
 
-msgctxt "selection:site_site.site,typo:"
+msgctxt "odt:inventory.point:"
+msgid "echnician :"
+msgstr "Technicien"
+
+msgctxt "odt:inventory.point:"
+msgid "jeudi 26 mars 2015"
+msgstr "jeudi 26 mars 2015"
+
+msgctxt "selection:inventory.exit,dispositif:"
 msgid "Point"
 msgstr "Point"
 
-msgctxt "selection:site_site.site,typo:"
+msgctxt "selection:inventory.exit,dispositif:"
 msgid "Track"
-msgstr "Track"
+msgstr "Trace"
 
-msgctxt "selection:site_site.site,typo:"
+msgctxt "selection:inventory.exit,dispositif:"
 msgid "Zone"
 msgstr "Zone"
 
-msgctxt "view:site_site.code:"
-msgid "Code"
-msgstr "Code"
-
-msgctxt "view:site_site.configuration:"
-msgid "Configuration"
-msgstr "Configuration"
-
-msgctxt "view:site_site.lrs:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:site_site.lrs:"
-msgid "LRS"
-msgstr "LRS"
-
-msgctxt "view:site_site.lrs:"
-msgid "Map"
-msgstr "Carte"
-
-msgctxt "view:site_site.misc_obj_line:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:site_site.misc_obj_line:"
-msgid "Miscellaneous line object"
-msgstr "Objet géométrique ligne"
-
-msgctxt "view:site_site.misc_obj_point:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:site_site.misc_obj_point:"
-msgid "Miscellaneous point object"
-msgstr "Objet géométrique point"
-
-msgctxt "view:site_site.misc_obj_poly:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:site_site.misc_obj_poly:"
-msgid "Miscellaneous polygon object"
-msgstr "Objet géométrique polygone"
-
-msgctxt "view:site_site.poi:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:site_site.poi:"
-msgid "General"
-msgstr "Général"
-
-msgctxt "view:site_site.poi:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:site_site.poi:"
-msgid "Map"
-msgstr "Carte"
-
-msgctxt "view:site_site.poi:"
-msgid "POI"
-msgstr "POI"
-
-msgctxt "view:site_site.poi:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "view:site_site.point:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:site_site.point:"
-msgid "General"
-msgstr "Général"
-
-msgctxt "view:site_site.point:"
-msgid "Generate"
-msgstr "Générer"
-
-msgctxt "view:site_site.point:"
-msgid "Map"
-msgstr "Carte"
-
-msgctxt "view:site_site.point:"
-msgid "Photo"
-msgstr "Photo"
-
-msgctxt "view:site_site.point:"
-msgid "Point"
-msgstr "Point"
-
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "%"
 msgstr "%"
 
-msgctxt "view:site_site.site:"
-msgid "Edit geometries"
-msgstr "Éditer les géométries"
+msgctxt "view:inventory.campaign:"
+msgid "Campagne "
+msgstr "Campagne "
 
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
+msgid "Campagne de prospection"
+msgstr "Campagne de prospection"
+
+msgctxt "view:inventory.campaign:"
+msgid "Campaign Map"
+msgstr "Carte de la campagne"
+
+msgctxt "view:inventory.campaign:"
+msgid "Campaign comment"
+msgstr "Commentaire de la campagne"
+
+msgctxt "view:inventory.campaign:"
 msgid "General"
 msgstr "Général"
 
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "Generate image"
 msgstr "Générer l'image"
 
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "Generate situation"
 msgstr "Générer la carte de situation"
 
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "Image Map"
-msgstr "Carte précise du site"
+msgstr "Carte image"
 
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "Lines"
 msgstr "Lignes"
 
-msgctxt "view:site_site.site:"
-msgid "Misc. obj."
-msgstr "Objets géométriques"
+msgctxt "view:inventory.campaign:"
+msgid "Objets divers"
+msgstr "Objets divers"
 
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "Photo"
 msgstr "Photo"
 
-msgctxt "view:site_site.site:"
-msgid "Plot"
-msgstr "Parcelle"
-
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "Points"
 msgstr "Points"
 
-msgctxt "view:site_site.site:"
+msgctxt "view:inventory.campaign:"
 msgid "Polygones"
 msgstr "Polygones"
 
-msgctxt "view:site_site.site:"
-msgid "Site"
-msgstr "Site"
+msgctxt "view:inventory.code:"
+msgid "Code"
+msgstr "Code"
 
-msgctxt "view:site_site.site:"
-msgid "Situation Map"
-msgstr "Carte de situation du site"
+msgctxt "view:inventory.configuration:"
+msgid "Configuration"
+msgstr "Configuration"
 
-msgctxt "view:site_site.surface_clc_site.open.start:"
-msgid "Rapport Site - CLC"
-msgstr "Rapport Site - CLC"
+msgctxt "view:inventory.exit:"
+msgid "Edit geometries"
+msgstr "Éditer les géométries"
 
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Forêts et milieux semi-naturels"
-msgstr "Forêts et milieux semi-naturels"
+msgctxt "view:inventory.exit:"
+msgid "Exit comment"
+msgstr "Commentaire de la sortie"
 
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Surface CLC Trace"
-msgstr "Surface CLC Trace"
-
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Surface CLC par canton"
-msgstr "Surface CLC par canton"
-
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Surface CLC par commune"
-msgstr "Surface CLC par commune"
-
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Surface en eau"
-msgstr "Surface en eau"
-
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Surface totale (ha)"
-msgstr "Surface totale (ha)"
-
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Territoires agricoles"
-msgstr "Territoires agricoles"
-
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Territoires artificialisés"
-msgstr "Territoires artificialisés"
-
-msgctxt "view:site_site.surface_site_clc:"
-msgid "Zones humides"
-msgstr "Zones humides"
-
-msgctxt "view:site_site.surface_statut_buffer.open.start:"
-msgid "Protection - Surface/Zone/Protection"
-msgstr "Protection - Surface/Zone/Protection"
-
-msgctxt "view:site_site.surface_statut_buffer:"
-msgid "Surface entre Buffer et Zone"
-msgstr "Surface entre Buffer et Zone"
-
-msgctxt "view:site_site.track:"
-msgid "Edit"
-msgstr "Édition"
-
-msgctxt "view:site_site.track:"
+msgctxt "view:inventory.exit:"
 msgid "General"
 msgstr "Général"
 
-msgctxt "view:site_site.track:"
-msgid "Generate"
-msgstr "Générer"
+msgctxt "view:inventory.exit:"
+msgid "Generate image"
+msgstr "Générer l'image"
 
-msgctxt "view:site_site.track:"
-msgid "Map"
-msgstr "Carte"
+msgctxt "view:inventory.exit:"
+msgid "Image Map"
+msgstr "Carte image"
 
-msgctxt "view:site_site.track:"
+msgctxt "view:inventory.exit:"
+msgid "Inventaire/Dispositif"
+msgstr "Inventaire/Dispositif"
+
+msgctxt "view:inventory.exit:"
 msgid "Photo"
 msgstr "Photo"
 
-msgctxt "view:site_site.track:"
-msgid "Track"
-msgstr "Track"
+msgctxt "view:inventory.exit:"
+msgid "Sortie de terrain"
+msgstr "Sortie de terrain"
 
-msgctxt "view:site_site.zone:"
+msgctxt "view:inventory.exit:"
+msgid "Sortie de terrain "
+msgstr "Sortie de terrain "
+
+msgctxt "view:inventory.lrs:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.lrs:"
+msgid "LRS"
+msgstr "LRS"
+
+msgctxt "view:inventory.lrs:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.misc_obj_line:"
 msgid "Edit"
-msgstr "Édition"
+msgstr "Éditer"
 
-msgctxt "view:site_site.zone:"
+msgctxt "view:inventory.misc_obj_line:"
+msgid "Miscellaneous line object"
+msgstr "Objet divers ligne"
+
+msgctxt "view:inventory.misc_obj_point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.misc_obj_point:"
+msgid "Miscellaneous point object"
+msgstr "Objet divers point"
+
+msgctxt "view:inventory.misc_obj_poly:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.misc_obj_poly:"
+msgid "Miscellaneous polygon object"
+msgstr "Objet divers polygone"
+
+msgctxt "view:inventory.poi:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.poi:"
 msgid "General"
 msgstr "Général"
 
-msgctxt "view:site_site.zone:"
+msgctxt "view:inventory.poi:"
 msgid "Generate"
 msgstr "Générer"
 
-msgctxt "view:site_site.zone:"
+msgctxt "view:inventory.poi:"
 msgid "Map"
 msgstr "Carte"
 
-msgctxt "view:site_site.zone:"
+msgctxt "view:inventory.poi:"
+msgid "POI"
+msgstr "POI"
+
+msgctxt "view:inventory.poi:"
 msgid "Photo"
 msgstr "Photo"
 
-msgctxt "view:site_site.zone:"
-msgid "Zone"
-msgstr "Zone"
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid ""
+"Inventaires odonates - Point - Session - Liste de Compartiment - Liste de "
+"Taxons"
+msgstr ""
 
-msgctxt "wizard_button:site_site.surface_clc_site.open,start,end:"
-msgid "Cancel"
-msgstr "Annuler"
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid ""
+"Placettes orthoptères - Point - Session - Liste de Compartiment - Liste de "
+"Taxons"
+msgstr ""
 
-msgctxt "wizard_button:site_site.surface_clc_site.open,start,open_:"
-msgid "Open"
-msgstr "Ouvrir"
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid "Point - Session - Liste de Compartiment - Liste de Taxons"
+msgstr "Point - Session - Liste de Compartiment - Liste de Taxons"
 
-msgctxt "wizard_button:site_site.surface_statut_buffer.open,start,end:"
-msgid "Cancel"
-msgstr "Annuler"
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid ""
+"Relevé Phytosociologique - Point - Session - Liste de Compartiment - Liste "
+"de Taxons"
+msgstr ""
 
-msgctxt "wizard_button:site_site.surface_statut_buffer.open,start,open_:"
-msgid "Open"
-msgstr "Ouvrir"
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid ""
+"Relevé herbiers aquatiques - Point - Session - Liste de Compartiment - Liste "
+"de Taxons"
+msgstr ""
+
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid ""
+"Relevé phytosociologique - Point - Session - Liste de Compartiment - Liste "
+"de Taxons"
+msgstr ""
+
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid ""
+"Relevés herbiers aquatiques - Point - Session - Liste de Compartiment - "
+"Liste de Taxons"
+msgstr ""
+
+msgctxt "view:inventory.point-inventory.listecompartimenttaxon:"
+msgid ""
+"STELI odonates - Point - Session - Liste de Compartiment - Liste de Taxons"
+msgstr ""
+
+msgctxt "view:inventory.point-inventory.session:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "view:inventory.point-inventory.session:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.point-inventory.session:"
+msgid "Milieu d'observation"
+msgstr "Milieu d'observation"
+
+msgctxt "view:inventory.point-inventory.session:"
+msgid "Météo"
+msgstr "Météo"
+
+msgctxt "view:inventory.point-inventory.session:"
+msgid "Quadrat"
+msgstr "Quadrat"
+
+msgctxt "view:inventory.point-inventory.session:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "view:inventory.point-inventory.session:"
+msgid "Session"
+msgstr "Session"
+
+msgctxt "view:inventory.point:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:inventory.point:"
+msgid "Dimensions"
+msgstr ""
+
+msgctxt "view:inventory.point:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "view:inventory.point:"
+msgid "Dispositif (Point)"
+msgstr "Dispositif (Point)"
+
+msgctxt "view:inventory.point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.point:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.point:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.point:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.point:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:inventory.point:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt "view:inventory.pointlistecompartiment:"
+msgid "Point - Session - Liste de Compartiment"
+msgstr "Point - Session - Liste de Compartiment"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "%"
+msgstr "%"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Inventaires odonates - Point - Session - Liste de Taxon"
+msgstr ""
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Parties"
+msgstr "Tiers"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Placettes Orthoptères - Point - Session - Liste de Taxon"
+msgstr ""
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Point - Session - Liste de Taxon"
+msgstr "Point - Session - Liste de Taxon"
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Relevé Herbiers Aquatiques - Point - Session - Liste de Taxon"
+msgstr ""
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "Relevé Phytosociologique - Point - Session - Liste de Taxon"
+msgstr ""
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "STELI odonates - Point - Session - Liste de Taxon"
+msgstr ""
+
+msgctxt "view:inventory.pointlistetaxon:"
+msgid "m2"
+msgstr ""
+
+msgctxt "view:inventory.taxon-party.party:"
+msgid "Auteurs"
+msgstr "Auteurs"
+
+msgctxt "view:inventory.track-inventory.listecompartimenttaxon:"
+msgid ""
+"Chronoventaire lépidoptères - Track - Session - Liste de Compartiment - "
+"Liste de Taxons"
+msgstr ""
+
+msgctxt "view:inventory.track-inventory.listecompartimenttaxon:"
+msgid "Track - Session - Liste de Compartiment - Liste de Taxons"
+msgstr "Trace - Session - Liste de Compartiment - Liste de Taxons"
+
+msgctxt "view:inventory.track-inventory.listecompartimenttaxon:"
+msgid ""
+"Transect lépidoptères - Track - Session - Liste de Compartiment - Liste de "
+"Taxons"
+msgstr ""
+
+msgctxt "view:inventory.track-inventory.session:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "view:inventory.track-inventory.session:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.track-inventory.session:"
+msgid "Milieu d'observation"
+msgstr "Milieu d'observation"
+
+msgctxt "view:inventory.track-inventory.session:"
+msgid "Météo"
+msgstr "Météo"
+
+msgctxt "view:inventory.track-inventory.session:"
+msgid "Quadrat"
+msgstr "Quadrat"
+
+msgctxt "view:inventory.track-inventory.session:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "view:inventory.track-inventory.session:"
+msgid "Session"
+msgstr "Session"
+
+msgctxt "view:inventory.track:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:inventory.track:"
+msgid "Dimensions"
+msgstr ""
+
+msgctxt "view:inventory.track:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "view:inventory.track:"
+msgid "Dispositif (Track)"
+msgstr "Dispositif (Trace)"
+
+msgctxt "view:inventory.track:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.track:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.track:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.track:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.track:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:inventory.track:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt "view:inventory.tracklistecompartiment:"
+msgid "Track - Session - Liste de Compartiment"
+msgstr "Trace- Session - Liste de Compartiment"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "%"
+msgstr "%"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Chronoventaire lépidoptères - Track - Session - Liste de Taxon"
+msgstr ""
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Parties"
+msgstr "Tiers"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Track - Session - Liste de Taxon"
+msgstr "Trace - Session - Liste de Taxon"
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "Transect lépidoptères - Track - Session - Liste de Taxon"
+msgstr ""
+
+msgctxt "view:inventory.tracklistetaxon:"
+msgid "m2"
+msgstr ""
+
+msgctxt "view:inventory.zone-inventory.listecompartimenttaxon:"
+msgid "Zone - Session - Liste de Compartiment - Liste de Taxons"
+msgstr "Zone - Session - Liste de Compartiment - Liste de Taxons"
+
+msgctxt "view:inventory.zone-inventory.session:"
+msgid "Compartiments/Taxons"
+msgstr "Compartiments/Taxons"
+
+msgctxt "view:inventory.zone-inventory.session:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.zone-inventory.session:"
+msgid "Milieu d'observation"
+msgstr "Milieu d'observation"
+
+msgctxt "view:inventory.zone-inventory.session:"
+msgid "Météo"
+msgstr "Météo"
+
+msgctxt "view:inventory.zone-inventory.session:"
+msgid "Quadrat"
+msgstr "Quadrat"
+
+msgctxt "view:inventory.zone-inventory.session:"
+msgid "Remarque"
+msgstr "Remarque"
+
+msgctxt "view:inventory.zone-inventory.session:"
+msgid "Session"
+msgstr "Session"
+
+msgctxt "view:inventory.zone:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:inventory.zone:"
+msgid "Dimensions"
+msgstr ""
+
+msgctxt "view:inventory.zone:"
+msgid "Dispositif"
+msgstr "Dispositif"
+
+msgctxt "view:inventory.zone:"
+msgid "Dispositif (Zone)"
+msgstr "Dispositif (Zone)"
+
+msgctxt "view:inventory.zone:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.zone:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.zone:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.zone:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.zone:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:inventory.zone:"
+msgid "Sessions"
+msgstr "Sessions"
+
+msgctxt "view:inventory.zonelistecompartiment:"
+msgid "Zone - Session - Liste de Compartiment"
+msgstr "Zone - Session - Liste de Compartiment"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "%"
+msgstr "%"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "General"
+msgstr "Général"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "Parties"
+msgstr "Tiers"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "Photo"
+msgstr "Photo"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "Zone - Session - Liste de Taxon"
+msgstr "Zone - Session - Liste de Taxon"
+
+msgctxt "view:inventory.zonelistetaxon:"
+msgid "m2"
+msgstr ""
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "CENL"
+msgstr "CENL"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Général"
+msgstr ""
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Muséum National d'Histoire Naturelle"
+msgstr ""

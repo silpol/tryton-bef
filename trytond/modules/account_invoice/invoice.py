@@ -363,8 +363,9 @@ class Invoice(Workflow, ModelSQL, ModelView):
 
         if self.party:
             invoice_address = self.party.address_get(type='invoice')
-            res['invoice_address'] = invoice_address.id
-            res['invoice_address.rec_name'] = invoice_address.rec_name
+            if invoice_address:
+                res['invoice_address'] = invoice_address.id
+                res['invoice_address.rec_name'] = invoice_address.rec_name
         return res
 
     def on_change_with_currency_digits(self, name=None):
@@ -866,10 +867,10 @@ class Invoice(Workflow, ModelSQL, ModelView):
             term_lines = [(Date.today(), total)]
         for date, amount in term_lines:
             val = self._get_move_line(date, amount)
-            remainder_total_currency -= val['amount_second_currency']
+            remainder_total_currency += val['amount_second_currency']
             move_lines.append(val)
         if not self.currency.is_zero(remainder_total_currency):
-            move_lines[-1]['amount_second_currency'] += \
+            move_lines[-1]['amount_second_currency'] -= \
                 remainder_total_currency
 
         accounting_date = self.accounting_date or self.invoice_date
@@ -1459,7 +1460,7 @@ class InvoiceLine(ModelSQL, ModelView):
         on_change=['product', 'unit', 'quantity', 'description',
             '_parent_invoice.type', '_parent_invoice.party',
             '_parent_invoice.currency', '_parent_invoice.currency_date',
-            'party', 'currency', 'invoice'],
+            'party', 'currency', 'invoice', 'invoice_type'],
         depends=['type'])
     product_uom_category = fields.Function(
         fields.Many2One('product.uom.category', 'Product Uom Category',
@@ -1867,6 +1868,14 @@ class InvoiceLine(ModelSQL, ModelView):
             if invoice.state in ('posted', 'paid', 'cancel'):
                 cls.raise_user_error('create', (invoice.rec_name,))
         return super(InvoiceLine, cls).create(vlist)
+
+    @classmethod
+    def copy(cls, lines, default=None):
+        if default is None:
+            default = {}
+        default = default.copy()
+        default.setdefault('origin', None)
+        return super(InvoiceLine, cls).copy(lines, default=default)
 
     @classmethod
     def validate(cls, lines):
@@ -2361,7 +2370,7 @@ class InvoiceReport(Report):
                 and invoice.type in ('out_invoice', 'out_credit_note')):
             Invoice.write([Invoice(invoice.id)], {
                 'invoice_report_format': res[0],
-                'invoice_report_cache': res[1],
+                'invoice_report_cache': buffer(res[1]),
                 })
         return res
 
@@ -2437,7 +2446,7 @@ class PayInvoiceAsk(ModelView):
     lines = fields.Many2Many('account.move.line', None, None, 'Lines',
         domain=[
             ('id', 'in', Eval('lines_to_pay')),
-            ('reconciliation', '=', False),
+            ('reconciliation', '=', None),
             ],
         states={
             'invisible': Eval('type') != 'writeoff',

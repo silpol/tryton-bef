@@ -3,23 +3,6 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-        <record model="ir.ui.icon" id="sale_opportunity_sun">
-            <field name="name">tryton-sun</field>
-            <field name="path">icons/tryton-sun.svg</field>
-        </record>
-        <record model="ir.ui.icon" id="sale_opportunity_clouds">
-            <field name="name">tryton-clouds</field>
-            <field name="path">icons/tryton-clouds.svg</field>
-        </record>
-        <record model="ir.ui.icon" id="sale_opportunity_overcast">
-            <field name="name">tryton-overcast</field>
-            <field name="path">icons/tryton-overcast.svg</field>
-        </record>
-        <record model="ir.ui.icon" id="sale_opportunity_showers">
-            <field name="name">tryton-showers</field>
-            <field name="path">icons/tryton-showers.svg</field>
-        </record>
-        
         <menuitem name="Reporting" parent="sale.menu_sale"
             id="menu_reporting" sequence="100"/>
 
@@ -41,7 +24,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="model">sale.opportunity</field>
             <field name="type">tree</field>
             <field name="name">opportunity_tree</field>
-        </record>		
+        </record>
 
         <record model="ir.action.act_window" id="act_opportunity_form">
             <field name="name">Leads and Opportunities</field>

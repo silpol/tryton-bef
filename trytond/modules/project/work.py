@@ -163,7 +163,7 @@ class Work(ModelSQL, ModelView):
         return self.work.company.id
 
     @classmethod
-    def search_company(cls, name, clause):
+    def search_comany(cls, name, clause):
         return [('work.company',) + tuple(clause[1:])]
 
     def get_timesheet_available(self, name):

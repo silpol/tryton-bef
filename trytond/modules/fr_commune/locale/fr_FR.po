@@ -1,7 +1,7 @@
-# 
+#
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
@@ -9,223 +9,772 @@ msgstr ""
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
-msgctxt "error:commune.population:"
+msgctxt "error:fr.population:"
 msgid "Vous ne pouvez pas modifier la commune d'une population !"
 msgstr "Vous ne pouvez pas modifier la commune d'une population !"
 
-#, fuzzy
-msgctxt "field:commune.commune,create_date:"
+msgctxt "field:fr.canton,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:fr.canton,canton_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:fr.canton,canton_map:"
+msgid "Carte"
+msgstr "Carte"
+
+msgctxt "field:fr.canton,code:"
+msgid "Code canton"
+msgstr "Code canton"
+
+msgctxt "field:fr.canton,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:fr.canton,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
-msgctxt "field:commune.commune,create_uid:"
+msgctxt "field:fr.canton,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:commune.commune,dep:"
+msgctxt "field:fr.canton,departement:"
 msgid "Département"
 msgstr "Département"
 
-msgctxt "field:commune.commune,geom:"
+msgctxt "field:fr.canton,geom:"
 msgid "Géométrie"
 msgstr "Géométrie"
 
-#, fuzzy
-msgctxt "field:commune.commune,id:"
+msgctxt "field:fr.canton,id:"
 msgid "ID"
-msgstr "ID"
+msgstr "Identifiant"
 
-msgctxt "field:commune.commune,insee:"
-msgid "INSEE"
-msgstr "INSEE"
-
-msgctxt "field:commune.commune,name:"
-msgid "Nom"
-msgstr "Nom"
-
-msgctxt "field:commune.commune,population:"
-msgid "Population"
-msgstr "Population"
-
-#, fuzzy
-msgctxt "field:commune.commune,rec_name:"
+msgctxt "field:fr.canton,name:"
 msgid "Name"
 msgstr "Nom"
 
-#, fuzzy
-msgctxt "field:commune.commune,write_date:"
+msgctxt "field:fr.canton,nom:"
+msgid "Canton"
+msgstr "Canton"
+
+msgctxt "field:fr.canton,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:fr.canton,region:"
+msgid "Région"
+msgstr "Région"
+
+msgctxt "field:fr.canton,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "field:fr.canton,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
-msgctxt "field:commune.commune,write_uid:"
+msgctxt "field:fr.canton,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "field:commune.population,annee:"
-msgid "Année"
-msgstr "Année"
+msgctxt "field:fr.commune,active:"
+msgid "Active"
+msgstr "Active"
 
-msgctxt "field:commune.population,com:"
-msgid "com"
-msgstr "com"
+msgctxt "field:fr.commune,canton:"
+msgid "Cantons"
+msgstr "Cantons"
 
-#, fuzzy
-msgctxt "field:commune.population,create_date:"
+msgctxt "field:fr.commune,classement:"
+msgid "Classement"
+msgstr "Classement"
+
+msgctxt "field:fr.commune,commune_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:fr.commune,commune_map:"
+msgid "Carte"
+msgstr "Carte"
+
+msgctxt "field:fr.commune,create_date:"
 msgid "Create Date"
 msgstr "Date de création"
 
-#, fuzzy
-msgctxt "field:commune.population,create_uid:"
+msgctxt "field:fr.commune,create_uid:"
 msgid "Create User"
 msgstr "Créé par"
 
-msgctxt "field:commune.population,full_population:"
-msgid "Full Population"
-msgstr "Population totale"
+msgctxt "field:fr.commune,datemontagne:"
+msgid "Date"
+msgstr "Date"
 
-#, fuzzy
-msgctxt "field:commune.population,id:"
+msgctxt "field:fr.commune,departement:"
+msgid "Département"
+msgstr "Département"
+
+msgctxt "field:fr.commune,espace:"
+msgid "Espace"
+msgstr "Espace"
+
+msgctxt "field:fr.commune,geom:"
+msgid "Géométrie"
+msgstr "Géométrie"
+
+msgctxt "field:fr.commune,id:"
 msgid "ID"
-msgstr "ID"
+msgstr "Identifiant"
 
-msgctxt "field:commune.population,pop_0014:"
-msgid "0 à 14 ans"
-msgstr "0 à 14 ans"
+msgctxt "field:fr.commune,insee:"
+msgid "INSEE"
+msgstr "INSEE"
 
-msgctxt "field:commune.population,pop_1529:"
-msgid "15 à 29 ans"
-msgstr "15 à 29 ans"
+msgctxt "field:fr.commune,littoral:"
+msgid "Loi littoral"
+msgstr "Loi littoral"
 
-msgctxt "field:commune.population,pop_3044:"
-msgid "30 à 44 ans"
-msgstr "30 à 44 ans"
+msgctxt "field:fr.commune,montagne:"
+msgid "Montagne"
+msgstr "Montagne"
 
-msgctxt "field:commune.population,pop_4559:"
-msgid "45 à 59 ans"
-msgstr "45 à 59 ans"
+msgctxt "field:fr.commune,motif:"
+msgid "Motif"
+msgstr "Motif"
 
-msgctxt "field:commune.population,pop_6074:"
-msgid "60 à 74 ans"
-msgstr "60 à 74 ans"
+msgctxt "field:fr.commune,name:"
+msgid "Nom (Code postal)"
+msgstr "Nom (Code postal)"
 
-msgctxt "field:commune.population,pop_75p:"
-msgid "75 ans et plus"
-msgstr "75 ans et plus"
+msgctxt "field:fr.commune,nom:"
+msgid "Nom"
+msgstr "Nom"
 
-#, fuzzy
-msgctxt "field:commune.population,rec_name:"
+msgctxt "field:fr.commune,population:"
+msgid "Population"
+msgstr "Population"
+
+msgctxt "field:fr.commune,postal:"
+msgid "Code postal"
+msgstr "Code postal"
+
+msgctxt "field:fr.commune,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:commune.population,total:"
-msgid "Population totale"
-msgstr "Population totale"
+msgctxt "field:fr.commune,region:"
+msgid "Région"
+msgstr "Région"
 
-#, fuzzy
-msgctxt "field:commune.population,write_date:"
+msgctxt "field:fr.commune,write_date:"
 msgid "Write Date"
 msgstr "Date de mise à jour"
 
-#, fuzzy
-msgctxt "field:commune.population,write_uid:"
+msgctxt "field:fr.commune,write_uid:"
 msgid "Write User"
 msgstr "Mis à jour par"
 
-msgctxt "help:commune.commune,dep:"
+msgctxt "field:fr.commune,zmax:"
+msgid "Altitude Max. (m)"
+msgstr "Altitude Max. (m)"
+
+msgctxt "field:fr.commune,zmin:"
+msgid "Altitude Min. (m)"
+msgstr "Altitude Min. (m)"
+
+msgctxt "field:fr.commune,zmoy:"
+msgid "Altitude Moy. (m)"
+msgstr "Altitude Moy. (m)"
+
+msgctxt "field:fr.commune-fr.canton,canton:"
+msgid "Canton"
+msgstr "Canton"
+
+msgctxt "field:fr.commune-fr.canton,commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "field:fr.commune-fr.canton,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:fr.commune-fr.canton,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:fr.commune-fr.canton,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:fr.commune-fr.canton,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:fr.commune-fr.canton,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:fr.commune-fr.canton,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:fr.departement,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:fr.departement,code:"
+msgid "Code département"
+msgstr "Code département"
+
+msgctxt "field:fr.departement,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:fr.departement,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:fr.departement,departement_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:fr.departement,departement_map:"
+msgid "Carte"
+msgstr "Carte"
+
+msgctxt "field:fr.departement,geom:"
+msgid "Géométrie"
+msgstr "Géométrie"
+
+msgctxt "field:fr.departement,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:fr.departement,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:fr.departement,nom:"
+msgid "Département"
+msgstr "Département"
+
+msgctxt "field:fr.departement,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:fr.departement,region:"
+msgid "Région"
+msgstr "Région"
+
+msgctxt "field:fr.departement,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "field:fr.departement,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:fr.departement,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:fr.population,annee:"
+msgid "Année"
+msgstr "Année"
+
+msgctxt "field:fr.population,com:"
+msgid "com"
+msgstr "com"
+
+msgctxt "field:fr.population,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:fr.population,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:fr.population,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:fr.population,pop_0014:"
+msgid "0 à 14 ans"
+msgstr "0 à 14 ans"
+
+msgctxt "field:fr.population,pop_1529:"
+msgid "15 à 29 ans"
+msgstr "15 à 29 ans"
+
+msgctxt "field:fr.population,pop_3044:"
+msgid "30 à 44 ans"
+msgstr "30 à 44 ans"
+
+msgctxt "field:fr.population,pop_4559:"
+msgid "45 à 59 ans"
+msgstr "45 à 59 ans"
+
+msgctxt "field:fr.population,pop_6074:"
+msgid "60 à 74 ans"
+msgstr "60 à 74 ans"
+
+msgctxt "field:fr.population,pop_75p:"
+msgid "75 ans et plus"
+msgstr "75 ans et plus"
+
+msgctxt "field:fr.population,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:fr.population,total:"
+msgid "Population totale"
+msgstr "Population totale"
+
+msgctxt "field:fr.population,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:fr.population,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:fr.region,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:fr.region,code:"
+msgid "Code région"
+msgstr "Code région"
+
+msgctxt "field:fr.region,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:fr.region,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:fr.region,geom:"
+msgid "Géométrie"
+msgstr "Géométrie"
+
+msgctxt "field:fr.region,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:fr.region,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:fr.region,nom:"
+msgid "Région"
+msgstr "Région"
+
+msgctxt "field:fr.region,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:fr.region,region_image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:fr.region,region_map:"
+msgid "Carte"
+msgstr "Carte"
+
+msgctxt "field:fr.region,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "field:fr.region,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:fr.region,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:fr.canton,canton_map:"
+msgid "Régions"
+msgstr "Régions"
+
+msgctxt "help:fr.canton,code:"
+msgid "Code du canton"
+msgstr "Code du canton"
+
+msgctxt "help:fr.canton,commune:"
+msgid "Bureau central"
+msgstr "Bureau central"
+
+msgctxt "help:fr.canton,departement:"
+msgid "Département"
+msgstr "Département"
+
+msgctxt "help:fr.canton,nom:"
+msgid "Canton"
+msgstr "Canton"
+
+msgctxt "help:fr.canton,region:"
+msgid "région"
+msgstr "région"
+
+msgctxt "help:fr.canton,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "help:fr.commune,canton:"
+msgid "Nom des canton"
+msgstr "Nom des cantons"
+
+msgctxt "help:fr.commune,classement:"
+msgid "Classement en loi littoral"
+msgstr "Classement en loi littoral"
+
+msgctxt "help:fr.commune,commune_map:"
+msgid "Communes"
+msgstr "Communes"
+
+msgctxt "help:fr.commune,datemontagne:"
+msgid "Date de classement"
+msgstr "Date de classement"
+
+msgctxt "help:fr.commune,departement:"
 msgid "Département de la commune"
 msgstr "Département de la commune"
 
-msgctxt "help:commune.commune,insee:"
+msgctxt "help:fr.commune,espace:"
+msgid "Espace protégé"
+msgstr "Espace protégé"
+
+msgctxt "help:fr.commune,insee:"
 msgid "Code insee de la commune"
 msgstr "Code insee de la commune"
 
-msgctxt "help:commune.commune,name:"
+msgctxt "help:fr.commune,littoral:"
+msgid "Commune classée en Loi littoral"
+msgstr "Commune classée en Loi littoral"
+
+msgctxt "help:fr.commune,montagne:"
+msgid "Commune classée en zone de Montagne"
+msgstr "Commune classée en zone de Montagne"
+
+msgctxt "help:fr.commune,motif:"
+msgid "Motif du classement"
+msgstr "Motif du classement"
+
+msgctxt "help:fr.commune,nom:"
 msgid "Nom de la commune"
 msgstr "Nom de la commune"
 
-msgctxt "help:commune.commune,population:"
+msgctxt "help:fr.commune,population:"
 msgid "Population de la commune"
 msgstr "Population de la commune"
 
-msgctxt "help:commune.population,annee:"
-msgid "Les chiffres de population présentés correspondent à l ensemble des personnes dont la résidence habituelle se situe sur le territoire considéré"
-msgstr "Les chiffres de population présentés correspondent à l ensemble des personnes dont la résidence habituelle se situe sur le territoire considéré"
+msgctxt "help:fr.commune,postal:"
+msgid "Code postal de la commune"
+msgstr "Code postal de la commune"
 
-msgctxt "help:commune.population,pop_0014:"
+msgctxt "help:fr.commune,region:"
+msgid "Région de la commune"
+msgstr "Région de la commune"
+
+msgctxt "help:fr.commune,zmax:"
+msgid "Altitude maximale sur la commune"
+msgstr "Altitude maximale sur la commune"
+
+msgctxt "help:fr.commune,zmin:"
+msgid "Altitude minimale sur la commune"
+msgstr "Altitude minimale sur la commune"
+
+msgctxt "help:fr.commune,zmoy:"
+msgid "Altitude moyenne sur la commune"
+msgstr "Altitude moyenne sur la commune"
+
+msgctxt "help:fr.departement,code:"
+msgid "Code de la département"
+msgstr "Code de la département"
+
+msgctxt "help:fr.departement,departement_map:"
+msgid "Départements"
+msgstr "Départements"
+
+msgctxt "help:fr.departement,nom:"
+msgid "Département français"
+msgstr "Département français"
+
+msgctxt "help:fr.departement,region:"
+msgid "région"
+msgstr "région"
+
+msgctxt "help:fr.departement,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "help:fr.population,annee:"
+msgid ""
+"Les chiffres de population présentés correspondent à l ensemble des "
+"personnes dont la résidence habituelle se situe sur le territoire considéré"
+msgstr ""
+"Les chiffres de population présentés correspondent à l ensemble des "
+"personnes dont la résidence habituelle se situe sur le territoire considéré"
+
+msgctxt "help:fr.population,pop_0014:"
 msgid "Population de 0 à 14 ans de la commune"
 msgstr "Population de 0 à 14 ans de la commune"
 
-msgctxt "help:commune.population,pop_1529:"
+msgctxt "help:fr.population,pop_1529:"
 msgid "Population de 15 à 29 ans de la commune"
 msgstr "Population de 15 à 29 ans de la commune"
 
-msgctxt "help:commune.population,pop_3044:"
+msgctxt "help:fr.population,pop_3044:"
 msgid "Population de 30 à 44 ans de la commune"
 msgstr "Population de 30 à 44 ans de la commune"
 
-msgctxt "help:commune.population,pop_4559:"
+msgctxt "help:fr.population,pop_4559:"
 msgid "Population de 45 à 59 ans de la commune"
 msgstr "Population de 45 à 59 ans de la commune"
 
-msgctxt "help:commune.population,pop_6074:"
+msgctxt "help:fr.population,pop_6074:"
 msgid "Population de 60 à 74 ans de la commune"
 msgstr "Population de 60 à 74 ans de la commune"
 
-msgctxt "help:commune.population,pop_75p:"
+msgctxt "help:fr.population,pop_75p:"
 msgid "Population de 75 ans et plus de la commune"
 msgstr "Population de 75 ans et plus de la commune"
 
-msgctxt "help:commune.population,total:"
+msgctxt "help:fr.population,total:"
 msgid "Population totale de la commune"
 msgstr "Population totale de la commune"
 
-msgctxt "model:commune.commune,name:"
+msgctxt "help:fr.region,code:"
+msgid "Code de la région"
+msgstr "Code de la région"
+
+msgctxt "help:fr.region,nom:"
+msgid "Région française"
+msgstr "Région française"
+
+msgctxt "help:fr.region,region_map:"
+msgid "Régions"
+msgstr "Régions"
+
+msgctxt "help:fr.region,version:"
+msgid "Date de version"
+msgstr "Date de version"
+
+msgctxt "model:fr.canton,name:"
+msgid "Canton Français"
+msgstr "Canton Français"
+
+msgctxt "model:fr.commune,name:"
 msgid "Commune Française"
 msgstr "Commune Française"
 
-msgctxt "model:commune.population,name:"
+msgctxt "model:fr.commune-fr.canton,name:"
+msgid "Commune - Canton"
+msgstr "Commune - Canton"
+
+msgctxt "model:fr.departement,name:"
+msgid "Département Française"
+msgstr "Département Française"
+
+msgctxt "model:fr.population,name:"
 msgid "Population des communes"
 msgstr "Population des communes"
 
-#, fuzzy
+msgctxt "model:fr.region,name:"
+msgid "Région Française"
+msgstr "Région Française"
+
+msgctxt "model:ir.action,name:act_canton_form"
+msgid "Canton"
+msgstr "Canton"
+
 msgctxt "model:ir.action,name:act_commune_form"
 msgid "Commune"
 msgstr "Commune"
+
+msgctxt "model:ir.action,name:act_departement_form"
+msgid "Département"
+msgstr "Département"
 
 msgctxt "model:ir.action,name:act_population_form"
 msgid "Population"
 msgstr "Population"
 
-msgctxt "model:ir.action,name:report_parcelle"
-msgid "Impression des communes"
-msgstr "Impression des communes"
+msgctxt "model:ir.action,name:act_region_form"
+msgid "Région"
+msgstr "Région"
 
-#, fuzzy
-msgctxt "model:ir.ui.menu,name:menu_commune_admin"
-msgid "Commune"
-msgstr "Commune"
+msgctxt "model:ir.action,name:generateC"
+msgid "Generate maps..."
+msgstr "Générer la carte"
 
-#, fuzzy
+msgctxt "model:ir.action,name:generateCa"
+msgid "Generate maps..."
+msgstr "Générer la carte"
+
+msgctxt "model:ir.action,name:generateD"
+msgid "Generate maps..."
+msgstr "Générer la carte"
+
+msgctxt "model:ir.action,name:generateR"
+msgid "Generate maps..."
+msgstr "Générer la carte"
+
+msgctxt "model:ir.action,name:report_canton_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGIS..."
+
+msgctxt "model:ir.action,name:report_commune_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGIS..."
+
+msgctxt "model:ir.action,name:report_departement_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGIS..."
+
+msgctxt "model:ir.action,name:report_region_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGIS..."
+
+msgctxt "model:ir.ui.menu,name:menu_canton_form"
+msgid "Canton"
+msgstr "Canton"
+
 msgctxt "model:ir.ui.menu,name:menu_commune_form"
 msgid "Commune"
 msgstr "Commune"
+
+msgctxt "model:ir.ui.menu,name:menu_departement_form"
+msgid "Département"
+msgstr "Département"
+
+msgctxt "model:ir.ui.menu,name:menu_fr_admin"
+msgid "France"
+msgstr "France"
 
 msgctxt "model:ir.ui.menu,name:menu_population_form"
 msgid "Population"
 msgstr "Population"
 
-msgctxt "view:commune.commune:"
+msgctxt "model:ir.ui.menu,name:menu_region_form"
+msgid "Région"
+msgstr "Région"
+
+msgctxt "selection:fr.commune,classement:"
+msgid "--"
+msgstr "--"
+
+msgctxt "selection:fr.commune,classement:"
+msgid "Estuaire"
+msgstr "Estuaire"
+
+msgctxt "selection:fr.commune,classement:"
+msgid "Lac"
+msgstr "Lac"
+
+msgctxt "selection:fr.commune,classement:"
+msgid "Mer"
+msgstr "Mer"
+
+msgctxt "selection:fr.commune,motif:"
+msgid "--"
+msgstr "--"
+
+msgctxt "selection:fr.commune,motif:"
+msgid "Commune du décret Estuaire"
+msgstr "Commune du décret Estuaire"
+
+msgctxt "selection:fr.commune,motif:"
+msgid "Commune riveraine d'un lac de plus de 1000 hectares"
+msgstr "Commune riveraine d'un lac de plus de 1000 hectares"
+
+msgctxt "selection:fr.commune,motif:"
+msgid "Commune riveraine d'un étang salé"
+msgstr "Commune riveraine d'un étang salé"
+
+msgctxt "selection:fr.commune,motif:"
+msgid "Commune riveraine de la mer ou d'un océan"
+msgstr "Commune riveraine de la mer ou d'un océan"
+
+msgctxt "selection:fr.commune,motif:"
+msgid ""
+"Commune sur un estuaire en aval de la limite transversale de la mer (LTM)"
+msgstr ""
+"Commune sur un estuaire en aval de la limite transversale de la mer (LTM)"
+
+msgctxt "view:fr.canton:"
+msgid "Canton"
+msgstr "Canton"
+
+msgctxt "view:fr.canton:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:fr.canton:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:fr.commune:"
+msgid "Cantons"
+msgstr "Cantons"
+
+msgctxt "view:fr.commune:"
+msgid "Commune"
+msgstr "Commune"
+
+msgctxt "view:fr.commune:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:fr.commune:"
+msgid "Littoral"
+msgstr "Littoral"
+
+msgctxt "view:fr.commune:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:fr.commune:"
+msgid "Montagne"
+msgstr "Montagne"
+
+msgctxt "view:fr.commune:"
 msgid "Population"
 msgstr "Population"
 
-msgctxt "view:commune.commune:"
-msgid "commune"
-msgstr "commune"
+msgctxt "view:fr.departement:"
+msgid "Département"
+msgstr "Département"
 
-msgctxt "view:commune.population:"
+msgctxt "view:fr.departement:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:fr.departement:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:fr.population:"
 msgid "Population"
 msgstr "Population"
 
+msgctxt "view:fr.region:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:fr.region:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:fr.region:"
+msgid "Région"
+msgstr "Région"

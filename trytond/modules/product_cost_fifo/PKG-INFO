@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: trytond_product_cost_fifo
-Version: 2.8.1
+Version: 2.8.3
 Summary: Tryton module to add FIFO cost method
 Home-page: http://www.tryton.org/
 Author: Tryton

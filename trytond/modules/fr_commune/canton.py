@@ -122,6 +122,7 @@ class Canton(Mapable, ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(Canton, cls).__setup__()
+        cls._order.insert(0, ('nom', 'ASC'))
         cls._buttons.update({           
             'canton_edit': {},
             'generate': {},

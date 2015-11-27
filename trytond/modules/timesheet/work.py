@@ -1,11 +1,8 @@
-#coding: utf-8
-"""
-GPLv3
-"""
-
+#This file is part of Tryton.  The COPYRIGHT file at the top level of
+#this repository contains the full copyright notices and license terms.
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.wizard import Wizard, StateView, StateAction, Button
-from trytond.pyson import PYSONEncoder, Not, Bool, Eval, Equal, If
+from trytond.pyson import PYSONEncoder, Not, Bool, Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
@@ -15,38 +12,13 @@ __all__ = ['Work', 'OpenWorkStart', 'OpenWork', 'OpenWork2', 'OpenWorkGraph']
 class Work(ModelSQL, ModelView):
     'Work'
     __name__ = 'timesheet.work'
-    name = fields.Char(
-            string=u'Name',
-            help=u'Name',
-            required=True
-        )
-    active = fields.Boolean(
-            string=u'Active',
-            help=u'Active'
-        )
-    parent = fields.Many2One(
-            'timesheet.work',
-            string=u'Parent',
-            left="left",
-            right="right",
-            select=True,
-            ondelete="RESTRICT"
-        )
-    left = fields.Integer(
-            'Left',
-            required=True,
-            select=True
-        )
-    right = fields.Integer(
-            'Right',
-            required=True,
-            select=True
-        )
-    children = fields.One2Many(
-            'timesheet.work',
-            'parent',
-            'Children'
-        )
+    name = fields.Char('Name', required=True)
+    active = fields.Boolean('Active')
+    parent = fields.Many2One('timesheet.work', 'Parent', left="left",
+            right="right", select=True, ondelete="RESTRICT")
+    left = fields.Integer('Left', required=True, select=True)
+    right = fields.Integer('Right', required=True, select=True)
+    children = fields.One2Many('timesheet.work', 'parent', 'Children')
     hours = fields.Function(fields.Float('Timesheet Hours', digits=(16, 2),
             states={
                 'invisible': ~Eval('timesheet_available'),
@@ -215,6 +187,7 @@ class Work(ModelSQL, ModelView):
             cls.write(childs, {
                     'active': False,
                     })
+
 
 class OpenWorkStart(ModelView):
     'Open Work'

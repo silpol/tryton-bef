@@ -92,7 +92,7 @@ class Move:
             if consumed_qty >= quantity:
                 break
 
-            if type_.startswith('in_'):
+            if type_.endswith('supplier'):
                 with Transaction().set_context(date=move.effective_date):
                     unit_price = Currency.compute(move.currency,
                         move.unit_price, move.company.currency, round=False)
@@ -102,6 +102,7 @@ class Move:
                 cost_price = move.cost_price
 
             yield (move, qty, cost_price)
+            consumed_qty += qty
 
     @classmethod
     def update_anglo_saxon_quantity_product_cost(cls, product, moves,
@@ -129,6 +130,7 @@ class Move:
 
             cost += move_cost_price * Decimal(str(move_qty))
 
+            move_qty = Uom.compute_qty(product.default_uom, move_qty, move.uom)
             with Transaction().set_user(0, set_context=True):
                 cls.write([move], {
                     'anglo_saxon_quantity': ((move.anglo_saxon_quantity or 0.0)

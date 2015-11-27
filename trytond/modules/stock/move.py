@@ -363,7 +363,7 @@ class Move(Workflow, ModelSQL, ModelView):
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        return [('product',) + clause[1:]]
+        return [('product',) + tuple(clause[1:])]
 
     def _update_product_cost_price(self, direction):
         """
@@ -479,22 +479,7 @@ class Move(Workflow, ModelSQL, ModelView):
     @ModelView.button
     @Workflow.transition('cancel')
     def cancel(cls, moves):
-        pool = Pool()
-        Date = pool.get('ir.date')
-
-        today = Date.today()
-        for move in moves:
-            move.effective_date = today
-            if (move.from_location.type in ('supplier', 'production')
-                    and move.to_location.type == 'storage'
-                    and move.product.cost_price_method == 'average'):
-                move._update_product_cost_price('out')
-            elif (move.to_location.type == 'supplier'
-                    and move.from_location.type == 'storage'
-                    and move.product.cost_price_method == 'average'):
-                move._update_product_cost_price('in')
-            move.effective_date = None
-            move.save()
+        pass
 
     @classmethod
     def create(cls, vlist):
@@ -534,7 +519,8 @@ class Move(Workflow, ModelSQL, ModelView):
         for move in moves:
             internal_quantity = cls._get_internal_quantity(move.quantity,
                     move.uom, move.product)
-            if internal_quantity != move.internal_quantity:
+            if (internal_quantity != move.internal_quantity
+                    and internal_quantity != vals.get('internal_quantity')):
                 cls.write([move], {
                         'internal_quantity': internal_quantity,
                         })
@@ -617,18 +603,19 @@ class Move(Workflow, ModelSQL, ModelView):
             for _, qty in to_pick:
                 picked_qties += qty
 
-            if picked_qties < move.quantity:
+            if move.quantity - picked_qties >= move.uom.rounding:
                 success = False
                 first = False
                 cls.write([move], {
-                    'quantity': move.quantity - picked_qties,
+                    'quantity': Uom.round(
+                            move.quantity - picked_qties, move.uom.rounding),
                     })
             else:
                 first = True
             for from_location, qty in to_pick:
                 values = {
                     'from_location': from_location.id,
-                    'quantity': qty,
+                    'quantity': Uom.round(qty, move.uom.rounding),
                     }
                 if first:
                     cls.write([move], values)

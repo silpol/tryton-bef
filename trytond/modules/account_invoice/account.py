@@ -90,7 +90,7 @@ class FiscalYear:
                     ('id', '!=', self.id),
                     ])
             if fiscalyears:
-                self.raise_user_error('different_invoice_sequences', {
+                self.raise_user_error('different_invoice_sequence', {
                         'first': self.rec_name,
                         'second': fiscalyears[0].rec_name,
                         })
@@ -220,7 +220,7 @@ class Period:
                 for period in periods:
                     sequence = getattr(period, sequence_name)
                     if (sequence and
-                            sequence.id != vals[sequence]):
+                            sequence.id != vals[sequence_name]):
                         if Invoice.search([
                                     ('invoice_date', '>=', period.start_date),
                                     ('invoice_date', '<=', period.end_date),
