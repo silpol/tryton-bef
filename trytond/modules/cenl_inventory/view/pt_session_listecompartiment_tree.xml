@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Point - Session - Liste de Compartiment" editable="bottom">
+    <field name="pointsessioncompartiment"/>
+    <field name="listesessioncompartiment_typinv" tree_invisible="1"/>
+    <field name="compartiment" widget="selection"/>
+    <field name="valeur"/>
+</tree>

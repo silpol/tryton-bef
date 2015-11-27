@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Méthode indiciaire IPA - ornitho - Point - Session - Liste de Compartiment - Liste de Taxons">
+    <field name="pointsession"/>
+    <field name="id"/>
+    <field name="pointlistetaxon"/>
+    <field name="pointsession_typinv" tree_invisible="1"/>            
+</tree>

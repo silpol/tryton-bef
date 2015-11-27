@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!--
+     This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2015 Bio Eco Forests <contact@bioecoforests.com>
+Copyright (c) 2015 Pascal Obstétar
+-->
+<tryton>
+    <data>
+    <menuitem parent="shuriken_list.menu_observation" sequence="3" id="menu_observation_misc_obj" name="Objects divers" icon="tryton-list"/>
+
+    <!-- observation misc polygone objects -->
+    <record model="ir.ui.view" id="observation_misc_obj_poly_view_tree">
+        <field name="model">observation.misc_obj_poly</field>
+        <field name="type">tree</field>
+        <field name="name">poly_tree</field>
+    </record>
+    <record model="ir.ui.view" id="observation_misc_obj_poly_view_form">
+        <field name="model">observation.misc_obj_poly</field>
+        <field name="type">form</field>
+        <field name="name">poly_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_observation_misc_obj_poly_form">
+        <field name="name">Polygones</field>
+        <field name="res_model">observation.misc_obj_poly</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_observation_misc_obj_poly_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="observation_misc_obj_poly_view_tree"/>
+        <field name="act_window" ref="act_observation_misc_obj_poly_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_observation_misc_obj_poly_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="observation_misc_obj_poly_view_form"/>
+        <field name="act_window" ref="act_observation_misc_obj_poly_form"/>
+    </record>
+    <menuitem parent="menu_observation_misc_obj" sequence="1" id="menu_observation_misc_obj_poly_form" icon="tryton-list" action="act_observation_misc_obj_poly_form"/>
+    
+    <record model="ir.action.report" id="report_misc_obj_poly_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">observation.misc_obj_poly</field>
+        <field name="report_name">observation.misc_obj_poly.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_misc_obj_poly_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">observation.misc_obj_poly,-1</field>
+        <field name="action" ref="report_misc_obj_poly_edit"/>
+    </record>
+
+    <!-- observation misc lines objects -->
+    <record model="ir.ui.view" id="observation_misc_obj_line_view_tree">
+        <field name="model">observation.misc_obj_line</field>
+        <field name="type">tree</field>
+        <field name="name">line_tree</field>
+    </record>
+    <record model="ir.ui.view" id="observation_misc_obj_line_view_form">
+        <field name="model">observation.misc_obj_line</field>
+        <field name="type">form</field>
+        <field name="name">line_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_observation_misc_obj_line_form">
+        <field name="name">Lignes</field>
+        <field name="res_model">observation.misc_obj_line</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_observation_misc_obj_line_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="observation_misc_obj_line_view_tree"/>
+        <field name="act_window" ref="act_observation_misc_obj_line_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_observation_misc_obj_line_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="observation_misc_obj_line_view_form"/>
+        <field name="act_window" ref="act_observation_misc_obj_line_form"/>
+    </record>
+    <menuitem parent="menu_observation_misc_obj" sequence="2" id="menu_observation_misc_obj_line_form" icon="tryton-list" action="act_observation_misc_obj_line_form"/> 
+    
+    <record model="ir.action.report" id="report_misc_obj_line_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">observation.misc_obj_line</field>
+        <field name="report_name">observation.misc_obj_line.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_misc_obj_line_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">observation.misc_obj_line,-1</field>
+        <field name="action" ref="report_misc_obj_line_edit"/>
+    </record>   
+
+    <!-- observation misc points objects -->
+    <record model="ir.ui.view" id="observation_misc_obj_point_view_tree">
+        <field name="model">observation.misc_obj_point</field>
+        <field name="type">tree</field>
+        <field name="name">point_tree</field>
+    </record>
+    <record model="ir.ui.view" id="observation_misc_obj_point_view_form">
+        <field name="model">observation.misc_obj_point</field>
+        <field name="type">form</field>
+        <field name="name">point_form</field>
+    </record>
+    <record model="ir.action.act_window" id="act_observation_misc_obj_point_form">
+        <field name="name">Points</field>
+        <field name="res_model">observation.misc_obj_point</field>
+    </record>
+    <record model="ir.action.act_window.view" id="act_observation_misc_obj_point_form_view1">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="observation_misc_obj_point_view_tree"/>
+        <field name="act_window" ref="act_observation_misc_obj_point_form"/>
+    </record>
+    <record model="ir.action.act_window.view" id="act_observation_misc_obj_point_form_view2">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="observation_misc_obj_point_view_form"/>
+        <field name="act_window" ref="act_observation_misc_obj_point_form"/>
+    </record>
+    <menuitem parent="menu_observation_misc_obj" sequence="3" id="menu_observation_misc_obj_point_form" icon="tryton-list" action="act_observation_misc_obj_point_form"/>
+    
+    <record model="ir.action.report" id="report_misc_obj_point_edit">
+        <field name="name">Open in QGis...</field>
+        <field name="model">observation.misc_obj_point</field>
+        <field name="report_name">observation.misc_obj_point.qgis</field>
+        <field name="report">qgis/qgis.qgs</field>
+    </record>
+    <record model="ir.action.keyword" id="report_misc_obj_point_edit_kwd">
+        <field name="keyword">form_action</field>
+        <field name="model">observation.misc_obj_point,-1</field>
+        <field name="action" ref="report_misc_obj_point_edit"/>
+    </record>
+
+    </data>
+</tryton>

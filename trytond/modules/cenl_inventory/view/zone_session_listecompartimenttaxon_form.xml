@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Zone - Session - Liste de Compartiment - Liste de Taxons" col="2">
+    <group id="group_session" col="2" colspan="2">
+        <label name="zonesession"/>
+        <field name="zonesession"/>                          
+    </group>   
+    <field name="zonelistecompartiment"/>
+    <field name="zonelistetaxon"/>
+</form>

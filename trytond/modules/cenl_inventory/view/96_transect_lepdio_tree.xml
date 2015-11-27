@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Transect lépidoptères - Track - Session - Liste de Compartiment - Liste de Taxons">
+    <field name="tracksession"/>
+    <field name="id"/>
+    <field name="tracklistetaxon"/>
+    <field name="tracksession_typinv" tree_invisible="1"/>              
+</tree>

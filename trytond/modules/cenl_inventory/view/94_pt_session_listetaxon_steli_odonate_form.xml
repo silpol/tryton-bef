@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<form string="STELI odonates - Point - Session - Liste de Taxon">
+    <label name="taxon"/>
+    <field name="taxon" widget="selection"/>
+    <notebook colspan="4">
+        <page string="General" id="general" col="2">
+            <label name="validite"/>
+            <field name="validite" widget="selection"/>
+            <label name="classabond"/>
+            <field name="classabond" widget="selection"/>            
+            <label name="nombre"/>
+            <field name="nombre"/>
+            <label name="typesexe"/>
+            <field name="typesexe" widget="selection"/>
+            <label name="comportement"/>
+            <field name="comportement" widget="selection"/>
+            <label name="indicepresence"/>
+            <field name="indicepresence" widget="selection"/>            
+        </page>
+        <page string="Parties" col="1" id="parties">            
+            <field name="pointlistetaxonsParties"/>          
+        </page>        
+        <page string="Comment" col="1" id="comment">                        
+            <field name="comment"/>           
+        </page>
+        <page string="Photo" col="1" id="photo">                        
+            <field name="photo" widget="image" img_width="1280" img_height="960" />            
+        </page>
+        <page string="Map" col="2" id="map">            
+            <field colspan="2" name="listetaxon_map" widget="image" img_width="600" img_height="600"/>
+            <button string="Edit" name="pointlistetaxon_edit" icon="tryton-executable"/>
+            <button string="Generate" name="generate" icon="tryton-executable"/>            
+        </page>
+    </notebook>    
+</form>

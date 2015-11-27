@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree string="Parcours ornitho - Track - Session - Liste de Taxon" editable="bottom">
+    <field name="tracksessiontaxon"/>   
+    <field name="taxon" widget="selection"/>
+    <field name="validite" widget="selection"/>
+    <field name="nombre"/>
+    <field name="typesexe" widget="selection"/>
+    <field name="statutreprodornitho" widget="selection"/>
+    <field name="listesessiontaxon_typinv" tree_invisible="1"/>
+</tree>

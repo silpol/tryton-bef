@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="shuriken_inventory.code" id="amphibiens">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Amphibiens</field>
+            <field name="lib_long">Amphibiens</field>
+            <field name="active">TRUE</field>
+        </record>
+        <record model="shuriken_inventory.code" id="angiospermes">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Angiospermes</field>
+            <field name="lib_long">Angiospermes</field>
+            <field name="active">TRUE</field>
+        </record>
+        <record model="shuriken_inventory.code" id="arachnides">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Arachnides</field>
+            <field name="lib_long">Arachnides</field>
+            <field name="active">TRUE</field>
+        </record>
+        <record model="shuriken_inventory.code" id="gymnospermes">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Gymnospermes</field>
+            <field name="lib_long">Gymnospermes</field>
+            <field name="active">TRUE</field>
+        </record>
+        <record model="shuriken_inventory.code" id="insectes">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Insectes</field>
+            <field name="lib_long">Insectes</field>
+            <field name="active">TRUE</field>
+        </record>
+        <record model="shuriken_inventory.code" id="mammiferes">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Mammifères</field>
+            <field name="lib_long">Mammifères</field>
+            <field name="active">TRUE</field>
+        </record>
+        <record model="shuriken_inventory.code" id="oiseaux">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Oiseaux</field>
+            <field name="lib_long">Oiseaux</field>
+            <field name="active">TRUE</field>
+        </record>
+        <record model="shuriken_inventory.code" id="poissons">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Poissons</field>
+            <field name="lib_long">Poissons</field>
+            <field name="active">TRUE</field>
+        </record>        
+        <record model="shuriken_inventory.code" id="reptiles">
+            <field name="code">GROUPTAXA</field>
+            <field name="name">Reptiles</field>
+            <field name="lib_long">Reptiles</field>
+            <field name="active">TRUE</field>
+        </record>
+    </data>
+</tryton>          

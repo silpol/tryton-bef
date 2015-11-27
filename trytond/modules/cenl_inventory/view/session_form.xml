@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<form string="Session">
+    <notebook colspan="2">
+        <page string="General" id="general" col="2">
+            <group id="group_dispositif" col="4" colspan="2">
+                <label name="typeinv"/>
+                <field name="typeinv"/>
+                <label name="typ"/>
+                <field name="typ"/>
+            </group>            
+            <label name="code"/>
+            <field name="code"/>
+            <label name="name"/>
+            <field name="name"/>
+            <label name="confiance"/>
+            <field name="confiance"/>            
+            <label name="rangobservation"/>
+            <field name="rangobservation"/>
+            <label name="pasdetemps"/>
+            <field name="pasdetemps"/>
+            <label name="activite"/>
+            <field name="activite"/>
+            <label name="debut"/>
+            <field name="debut"/>
+            <label name="duree"/>
+            <field name="duree"/>
+            <label name="fin"/>
+            <field name="fin"/>
+            <label name="floraison"/>
+            <field name="floraison"/>
+            <label name="dispoflorale"/>
+            <field name="dispoflorale" widget="selection"/>
+            <label name="groupeschronoventaire"/>
+            <field name="groupeschronoventaire" widget="selection"/>
+            <label name="determinationespeceadulte"/>
+            <field name="determinationespeceadulte" widget="selection"/>
+            <label name="gestion"/>
+            <field name="gestion"/>
+            <label name="gestionpg"/>
+            <field name="gestionpg"/>
+            <label name="habitatppal"/>
+            <field name="habitatppal"/>
+            <label name="habitatseco"/>
+            <field name="habitatseco"/>            
+            <label name="zonehabitatenve"/>
+            <field name="zonehabitatenve"/>
+            <label name="trackhabitatenve"/>
+            <field name="trackhabitatenve"/>
+            <label name="pointhabitatenve"/>
+            <field name="pointhabitatenve"/>
+            <label name="niveauhydrique"/>
+            <field name="niveauhydrique" widget="selection"/>
+            <label name="hauteurdevase"/>
+            <field name="hauteurdevase"/>
+            <label name="hauteureau"/>
+            <field name="hauteureau"/>
+            <label name="hauteurmoy"/>
+            <field name="hauteurmoy"/>
+            <label name="interpretation"/>
+            <field name="interpretation"/>
+            <label name="menace"/>
+            <field name="menace"/>
+            <label name="senslecture"/>
+            <field name="senslecture"/>
+            <label name="ecartpoint"/>
+            <field name="ecartpoint"/>
+            <label name="borne"/>
+            <field name="borne"/>
+            <label name="statutborne"/>
+            <field name="statutborne" widget="selection"/>
+            <label name="nbsortie"/>
+            <field name="nbsortie"/>
+            <label name="tempsmoyparcours"/>
+            <field name="tempsmoyparcours"/>
+            <label name="decompte"/>
+            <field name="decompte" widget="selection"/>
+            <label name="derangement"/>
+            <field name="derangement" widget="selection"/>
+            <label name="remplissage"/>
+            <field name="remplissage" widget="selection"/>
+            <label name="etateau"/>
+            <field name="etateau" widget="selection"/>
+            <label name="surfacegelee"/>
+            <field name="surfacegelee" widget="selection"/>
+            <label name="active"/>
+            <field name="active"/> 
+        </page>
+        <page string="Milieu d'observation" col="2" id="milieu" states="{'invisible': Not(In(Eval('typeinv', 0), [91,93]))}">
+            <label name="hydromorphie"/>
+            <field name="hydromorphie" widget="selection"/>
+            <label name="typosol"/>
+            <field name="typosol" widget="selection"/>            
+        </page>
+        <page string="Quadrat" col="2" id="quadrat" states="{'invisible': Not(In(Eval('typeinv', 0), [97]))}">                        
+            <label name="distanceborne"/>
+            <field name="distanceborne"/>
+            <label name="hauteurmoyenne"/>
+            <field name="hauteurmoyenne"/>
+            <label name="labelquadrat"/>
+            <field name="labelquadrat"/>
+            <label name="numordre"/>
+            <field name="numordre"/>
+        </page>
+        <page string="Météo" col="2" id="meteo" states="{'invisible': Not(In(Eval('typeinv', 0), [91,92,93,94,95,96,100,105,106,107]))}">                        
+            <label name="beaufort"/>
+            <field name="beaufort" widget="selection"/>
+            <label name="nebulosite"/>
+            <field name="nebulosite" widget="selection"/>            
+            <label name="visibilite"/>
+            <field name="visibilite" widget="selection"/>
+            <label name="precipitation"/>
+            <field name="precipitation" widget="selection"/>
+            <label name="temperature"/>
+            <field name="temperature"/>
+        </page>
+        <page string="Remarque" col="1" id="remarque">                        
+            <field name="remarque"/>
+        </page>
+        <page string="Compartiments/Taxons" col="4" id="compartiment">
+            <field name="zonelistecompartimentstaxons" colspan="4"/>
+            <field name="tracklistecompartimentstaxons" colspan="4"/>
+            <field name="pointlistecompartimentstaxons" colspan="4"/>
+        </page>
+    </notebook>           
+</form>

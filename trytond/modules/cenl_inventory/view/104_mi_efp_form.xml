@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form string="Méthode indiciaire EFP - ornitho - Point - Session - Liste de Compartiment - Liste de Taxons" col="2">
+    <group id="group_session" col="2" colspan="2">
+        <label name="pointsession"/>
+        <field name="pointsession"/>
+    </group>    
+    <field name="pointlistetaxon" mode="tree,form" view_ids="cenl_inventory.inventory_point_session_listetaxon_mi_efp_view_tree,cenl_inventory.inventory_point_session_listetaxon_mi_efp_view_form" colspan="2"/>
+</form>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/tree/field[@name='statut']" position="after">    
+        <field name="cd_nom_cenl"/>
+        <field name="nom_vern_cenl"/>
+        <field name="lb_nom"/>
+        <field name="cd_f_bleue"/>
+        <field name="classe_cenl"/>
+        <field name="active"/>
+    </xpath>
+</data>

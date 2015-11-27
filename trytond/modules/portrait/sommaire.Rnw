@@ -1,0 +1,9 @@
+\renewcommand{\contentsname}{Sommaire} % Renomme Table des matières en Sommaire
+\setcounter{tocdepth}{0} % Niveau chapitre pour le sommaire
+\thispagestyle{plain} % Style plain pour cette page
+\chapterimage{chapter_sommaire.pdf} % Image vide du sommaire
+\tableofcontents % Crée le sommaire
+
+\cleardoublepage % Force le sommaire à commencer sur une page de droite
+
+\pagestyle{fancy} % Entête

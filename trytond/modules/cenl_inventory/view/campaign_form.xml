@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<form string="Campagne de prospection" col="2">
+    <notebook colspan="2">
+        <page string="General" id="general" col="6">
+            <group string="Campagne " id="group_campaign" col="10" colspan="6">
+                <label name="campagne"/>
+                <field name="campagne"/>
+                <label name="code"/>
+                <field name="code" widget="selection" colspan="3"/>
+                <label name="name"/>
+                <field name="name" colspan="3"/>
+                <label name="suivi"/>
+                <field name="suivi"/>
+                <label name="datedeb"/>
+                <field name="datedeb"/>
+                <label name="datefin"/>
+                <field name="datefin"/>
+                <label name="avancement"/>
+                <field name="avancement"/>                            
+                <label name="active"/>
+                <field name="active"/>
+            </group>            
+            <field name="exits" colspan="6"/>                                              
+        </page>        
+        <page string="Campaign comment" col="1" id="comment">                        
+            <field name="comment"/>
+        </page>
+        <page string="Campaign Map" col="1" id="prospect_map">                        
+            <field name="campaign_situation" widget="image" img_width="1280" img_height="960" />
+            <button string="Generate situation" name="campaign_situation_gen" icon="tryton-executable" />
+        </page>
+        <page string="Image Map" col="1" id="map">                        
+            <field name="campaign_map" widget="image" img_width="1280" img_height="960" />
+            <button string="Generate image" name="campaign_map_gen" icon="tryton-executable" />
+        </page>
+        <page string="Photo" col="1" id="photo">                        
+            <field name="photo" widget="image" img_width="1280" img_height="960" />            
+        </page>
+        <page string="Objets divers" id="misc_obj">
+            <notebook colspan="1">
+                <page string="Polygones" id="misc_obj_poly">
+                    <field name="misc_obj_poly" />
+                </page>
+                <page string="Lines" id="misc_obj_line">
+                    <field name="misc_obj_line" />
+                </page>
+                <page string="Points" id="misc_obj_point">
+                    <field name="misc_obj_point" />
+                </page>
+            </notebook>
+        </page>
+    </notebook>
+</form>

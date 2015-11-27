@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<tree string="Point - Session - Liste de Taxon" editable="bottom">
+    <field name="pointsessiontaxon"/>
+    <field name="listesessiontaxon_typinv" tree_invisible="1"/>   
+    <field name="taxon" widget="selection"/>
+    <field name="validite" widget="selection"/>
+    <field name="substrat" widget="selection"/>
+    <field name="superficie">
+        <suffix string="m2"/>
+    </field>
+    <field name="classabond" widget="selection"/>
+    <field name="classabondbota" widget="selection"/>
+    <field name="recouvrementbota">    
+        <suffix string="%"/>
+    </field>
+    <field name="nombre"/>
+    <field name="presence"/>
+    <field name="typesexe" widget="selection"/>
+    <field name="typeffectif" widget="selection"/>
+    <field name="comportement" widget="selection"/>
+    <field name="etatsante" widget="selection"/>
+    <field name="indicepresence" widget="selection"/>
+    <field name="plantehote"/>
+    <field name="statutreprod" widget="selection"/>
+    <field name="statutreprodornitho" widget="selection"/>
+    <field name="biorythme" widget="selection"/>
+</tree>

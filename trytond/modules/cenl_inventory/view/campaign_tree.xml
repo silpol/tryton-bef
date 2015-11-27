@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tree colors="If(Less(Eval('avancement',0), 26), 'red', If(Less(Eval('avancement',0), 51), 'orange', If(Less(Eval('avancement',0), 76), 'black', 'green')))">
+    <field name="campagne"/>
+    <field name="code"/>
+    <field name="name"/>  
+    <field name="datedeb"/>
+    <field name="datefin"/>
+    <field name="avancement">
+        <prefix icon='icon'/>
+        <suffix string="%"/>
+    </field>
+    <field name="exits"/>
+</tree>

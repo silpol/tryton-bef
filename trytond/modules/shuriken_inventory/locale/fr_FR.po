@@ -1,0 +1,226 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "error:shuriken_inventory.study:"
+msgid "You cannot set duplicated study ID!"
+msgstr "Vous ne pouvez pas dupliquer une étude avec le même identifiant !"
+
+msgctxt "field:shuriken_inventory.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:shuriken_inventory.code,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:shuriken_inventory.code,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:shuriken_inventory.code,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:shuriken_inventory.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "field:shuriken_inventory.code,name:"
+msgid "Short name of code"
+msgstr "Nom du code"
+
+msgctxt "field:shuriken_inventory.code,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:shuriken_inventory.code,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:shuriken_inventory.code,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:shuriken_inventory.study,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:shuriken_inventory.study,contractnumber:"
+msgid "contractNumber"
+msgstr "Numéro du contrat"
+
+msgctxt "field:shuriken_inventory.study,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:shuriken_inventory.study,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:shuriken_inventory.study,geom:"
+msgid "Géométrie"
+msgstr "Géométrie"
+
+msgctxt "field:shuriken_inventory.study,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:shuriken_inventory.study,name:"
+msgid "Label"
+msgstr "Libellé"
+
+msgctxt "field:shuriken_inventory.study,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:shuriken_inventory.study,study_map:"
+msgid "Image map"
+msgstr "Carte"
+
+msgctxt "field:shuriken_inventory.study,templates:"
+msgid "Lists type"
+msgstr "Relevés type"
+
+msgctxt "field:shuriken_inventory.study,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:shuriken_inventory.study,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:taxinomie.taxinomie,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:shuriken_inventory.code,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "help:shuriken_inventory.code,lib_long:"
+msgid "Label of code"
+msgstr "Libellé du code"
+
+msgctxt "help:shuriken_inventory.code,name:"
+msgid "Short name of code"
+msgstr "Nom du code"
+
+msgctxt "help:shuriken_inventory.study,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:shuriken_inventory.study,contractnumber:"
+msgid "Contract number from ERP"
+msgstr "Numéro de contrat venant de l’ERP"
+
+msgctxt "help:shuriken_inventory.study,geom:"
+msgid "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie point (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:shuriken_inventory.study,name:"
+msgid "Study label"
+msgstr "Libellé de l'étude"
+
+msgctxt "help:shuriken_inventory.study,templates:"
+msgid "Lists type"
+msgstr "Relevés type"
+
+msgctxt "help:taxinomie.taxinomie,active:"
+msgid "Disponible dans les listes déroulantes"
+msgstr "Disponible dans les listes déroulantes"
+
+msgctxt "model:ir.action,name:act_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.action,name:act_shuriken_inventory_form"
+msgid "Study"
+msgstr "Études"
+
+msgctxt "model:ir.action,name:act_shuriken_taxinomie_form"
+msgid "Taxinomie"
+msgstr "Taxinomie"
+
+msgctxt "model:ir.action,name:report_study_edit"
+msgid "Open study in QGis..."
+msgstr "Ouvrir dans QGIS..."
+
+msgctxt "model:ir.ui.menu,name:menu_code_form"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:ir.ui.menu,name:menu_configuration"
+msgid "Configuration"
+msgstr "Configuration"
+
+msgctxt "model:ir.ui.menu,name:menu_rapport"
+msgid "Rapports"
+msgstr "Rapports"
+
+msgctxt "model:ir.ui.menu,name:menu_shuriken"
+msgid "SHURIKEN-NG"
+msgstr "SHURIKEN-NG"
+
+msgctxt "model:ir.ui.menu,name:menu_shuriken_study"
+msgid "Study"
+msgstr "Études"
+
+msgctxt "model:ir.ui.menu,name:menu_study"
+msgid "Study"
+msgstr "Études"
+
+msgctxt "model:shuriken_inventory.code,name:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "model:shuriken_inventory.study,name:"
+msgid "Study"
+msgstr "Études"
+
+msgctxt "view:shuriken_inventory.code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "view:shuriken_inventory.study:"
+msgid "Generate image"
+msgstr "Générer la carte"
+
+msgctxt "view:shuriken_inventory.study:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:shuriken_inventory.study:"
+msgid "Study"
+msgstr "Études"
+
+msgctxt "view:shuriken_inventory.study:"
+msgid "Study "
+msgstr "Études"
+
+msgctxt "view:shuriken_inventory.study:"
+msgid "Templates"
+msgstr "Relevé type"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "BIOTOPE"
+msgstr "BIOTOPE"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Général"
+msgstr "Général"
+
+msgctxt "view:taxinomie.taxinomie:"
+msgid "Muséum National d'Histoire Naturelle"
+msgstr "Muséum National d'Histoire Naturelle"

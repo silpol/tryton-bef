@@ -1,0 +1,16 @@
+\begingroup
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1]{background}}} % Image d'arrière plan (background)
+\par\normalfont\fontsize{40}{45}\sffamily\selectfont
+\noindent\textcolor{NatureFrance}{Commune de}\par % Commune de
+\par\hspace{1.5cm}\textcolor{NatureFrance}{\Sexpr{commune}}\par % Nom de la commune
+\par\hspace{2cm}\textcolor{NatureFrance}{\Sexpr{postal}}\par % Code postal de la commune
+\vspace*{10cm}
+\par\normalfont\fontsize{25}{30}\sffamily\selectfont
+\textcolor{white}{Portrait de la}\par % Portrait de la
+\par\normalfont\fontsize{55}{60}\sffamily\selectfont
+\textcolor{NatureFrance}{Biodiversité}\par % Biodiversité
+\begin{flushright}
+\textcolor{white}{Communale}\par % Communale
+\end{flushright}
+\rfoot{\normalfont\fontsize{20}{10}\sffamily\selectfont\textcolor{white}\today} % Date du jour au format Jour Mois Année
+\endgroup

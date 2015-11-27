@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Auteurs" col="6">
+    <label name="party"/>
+    <field name="party"/>
+    <label name="rolecontrib"/>
+    <field name="rolecontrib" widget="selection"/>
+    <label name="typocontrib"/>
+    <field name="typocontrib" widget="selection"/>
+    <label name="refcollection"/>
+    <field name="refcollection" colspan="5"/>                
+</form>

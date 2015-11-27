@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form string="Inventaires odonates - Point - Session - Liste de Compartiment - Liste de Taxons" col="1">
+    <group id="group_session" col="2" colspan="1">
+        <label name="pointsession"/>
+        <field name="pointsession"/>
+    </group>        
+    <field name="pointlistetaxon" view_ids="cenl_inventory.inventory_point_session_listetaxon_inv_odonate_view_tree" colspan="1"/>
+</form>

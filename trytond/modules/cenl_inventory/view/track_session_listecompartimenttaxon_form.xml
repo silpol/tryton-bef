@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Track - Session - Liste de Compartiment - Liste de Taxons" col="2">
+    <group id="group_session" col="2" colspan="2">
+        <label name="tracksession"/>
+        <field name="tracksession"/>                          
+    </group>
+    <field name="tracklistecompartiment"/>
+    <field name="tracklistetaxon"/>                 
+</form>

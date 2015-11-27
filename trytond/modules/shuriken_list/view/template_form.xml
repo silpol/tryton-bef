@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form string="List" col="6">
+    <group id="group_namestudy" col="6" colspan="6">    
+        <label name="name"/>
+        <field name="name"/>
+        <label name="study"/>
+        <field name="study"/>
+    </group>
+    <label name="grouptaxo"/>
+    <field name="grouptaxo" widget="selection"/>
+    <label name="surveyprotocol"/>
+    <field name="surveyprotocol"/>
+    <label name="active"/>
+    <field name="active"/>
+    <group id="group_button" col="9" colspan="6">
+        <button string="Amphibiens" name="amphibiens" icon="tryton-amphibiens"/>
+        <button string="Angiospermes" name="angiospermes" icon="tryton-angiospermes"/>
+        <button string="Arachnides" name="arachnides" icon="tryton-arachnides"/>
+        <button string="Gymnospermes" name="gymnospermes" icon="tryton-gymnospermes"/>
+        <button string="Insectes" name="insectes" icon="tryton-insectes"/>
+        <button string="Mammiferes" name="mammiferes" icon="tryton-mammiferes"/>
+        <button string="Oiseaux" name="oiseaux" icon="tryton-oiseaux"/>
+        <button string="Poissons" name="poissons" icon="tryton-poissons"/>
+        <button string="Reptiles" name="reptiles" icon="tryton-reptiles"/>
+    </group>    
+    <notebook colspan="10">
+        <page string="Lists" id="list">
+            <field name="lists" mode="tree,form"/>
+        </page>        
+    </notebook> 
+</form>

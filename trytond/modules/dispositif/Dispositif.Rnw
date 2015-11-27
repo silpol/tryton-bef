@@ -1,0 +1,747 @@
+\documentclass[a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor} 
+\usepackage{hyperref} 
+\usepackage{tikz}
+\usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{pgfsys}
+\usepackage{keyval}
+\usepackage{subfig}
+\usepackage{eurosym}
+
+\voffset -2cm
+\hoffset 0cm
+\oddsidemargin 0cm
+\evensidemargin -0.5cm
+\textwidth 17cm
+\topmargin 1cm
+\textheight 24cm
+\parindent 0cm
+\columnsep 0.7cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<OptionsGenerales, include=FALSE>>=
+opts_chunk$set(concordance=T,include=T,tidy=F, warning=F, comment=F, error=F)
+opts_chunk$set(size='normalsize')
+opts_chunk$set(fig.path='Figures/', dev='pdf')
+opts_chunk$set(fig.align='center',fig.show='hold')
+options(width=45)
+opts_knit$set(eval.after = 'fig.cap') # evaluate fig.cap after the chunk
+par(mar=c(0,0,0,0))
+@
+
+<<Librairies, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+library(RPostgreSQL)
+library(DBI)
+library(xtable)
+library(ggplot2)
+library(reshape2)
+library(plyr)
+library(scales)
+library(doBy)
+library(gridExtra)
+library(gdata)
+library(raster)
+@
+
+<<Variables, echo=FALSE, warning=F, error=F, comment=F, message=F >>=
+Choix            <- dispositif.dispositif$id
+NomDisp          <- dispositif.dispositif$name
+ArbresEnTour     <- subset(arbres, NumDisp==Choix)
+PerchesEnTour    <- subset(perches, NumDisp==Choix)
+BMPenTour        <- subset(bmp, NumDisp==Choix)
+DendroEnTour     <- subset(afiDisp, NumDisp==Choix)
+DispCatEnTour    <- subset(afiDispCat, NumDisp==Choix)
+Angle            <- cycles[which(cycles$NumDisp==Choix), "Coefft"]
+
+# ------------- Formats
+MyTheme <-  theme_bw() +
+  theme(axis.text.x  = element_text(size=8), 
+        axis.title.x  = element_text(size=9),
+        axis.title.y  = element_text(size=9), 
+        axis.text.y  = element_text(size=8),
+        plot.margin = unit(c(0.1,0.1,0.1,0.1), "cm"))
+@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{figure}[ht]
+   \includegraphics[width=6cm]{../Images/AFI_logo}
+\end{figure}
+
+ \vspace*{2cm}
+ 
+ \begin{center}
+ {\LARGE Dispositif n°\Sexpr{Choix} : \Sexpr{NomDisp[1]}}
+ \end{center}
+ 
+\begin{center}
+ \begin{figure*}[ht]
+   \includegraphics[width=17cm]{/Users/maxbruciamacchie/Documents/Instance/AFI/Photos/5.jpg}
+ \end{figure*}
+\end{center}
+
+Dispositif installé le \Sexpr{dispositifs$DatInstallation[Choix]}. Il a fait l'objet de \Sexpr{max(cycles$Cycle[which(cycles$NumDisp==Choix)])} mesures.
+
+% \clearpage
+\tableofcontents
+
+
+\chapter{Généralités}
+
+\section{Renseignements administratifs}
+
+<<TabGeneral, echo=FALSE>>=
+posDisp    <- which(dispositifs$NumDisp==Choix)
+posAdmin   <- which(admin$NumDisp==Choix)
+posStation <- which(stations$NumDisp==Choix)
+NomP   <- cle[which(cle$NumDisp==Choix & cle$Changt=="Actuel" & cle$Type=="P"), "Nom"]
+NomG   <- cle[which(cle$NumDisp==Choix & cle$Changt=="Actuel" & cle$Type=="G"), "Nom"]
+posPro   <- which(as.character(adresses$Nom)==NomP)
+posG   <- which(as.character(adresses$Nom)==NomG)
+
+intitule <- c("Nom", "Adresse", " ", "Ville", "Tel :", "Portable :", "Fax :", "E-mail :")
+Proprietaire <- c(as.character(NomP), 
+                  as.character(adresses[posPro,"Adresse1"]), 
+                  as.character(adresses[posPro,"Adresse2"]),
+                  as.character(paste(adresses[posPro,"CPT"],adresses[posPro,"Ville"],adresses[posPro,"Pays"])),
+                  as.character(adresses[posPro,"Tel"]),
+                  as.character(adresses[posPro,"Port"]),
+                  as.character(adresses[posPro,"Fax"]),
+                  as.character(adresses[posPro,"E.Mail"]))
+Gestionnaire <- c(as.character(NomG), 
+                  as.character(adresses[posG,"Adresse1"]), 
+                  as.character(adresses[posG,"Adresse2"]),
+                  as.character(paste(adresses[posG,"CPT"],adresses[posG,"Ville"],adresses[posG,"Pays"])),
+                  as.character(adresses[posG,"Tel"]),
+                  as.character(adresses[posG,"Port"]),
+                  as.character(adresses[posG,"Fax"]),
+                  as.character(adresses[posG,"E.Mail"]))
+tab <- data.frame(Propriétaire=Proprietaire, Gestionnaire=Gestionnaire)
+rownames(tab) <- intitule
+@
+
+{\small
+\begin{tabular}{ll}
+Nom : & \Sexpr{dispositifs[posDisp,"Nom"]} \\ 
+Commune : & \Sexpr{admin[posAdmin, "Commune"]} \\
+Département : & \Sexpr{admin[posAdmin, "Dep"]} \\ 
+Région : & \Sexpr{admin[posAdmin, "Région"]} \\
+Pays : & \Sexpr{admin[posAdmin, "Pays"]} \\
+Parcelle : & \Sexpr{dispositifs[posDisp,"Parcelle"]} \\
+Surface disp.: & \Sexpr{dispositifs[posDisp,"SurfParc"]} \\
+Surface forêt : & \Sexpr{dispositifs[posDisp,"SurfForet"]} \\
+Région naturelle : & \Sexpr{stations[posStation,"NomRégionNaturelle"]} \\
+SylvoEcoRégion : & \Sexpr{stations[posStation,"SylvoEcoReg"]} \\
+\end{tabular}
+}
+
+
+\section{Contacts}
+Coordonnées du propriétaire et du gestionnaire actuel
+<<Contacts, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+print(xtable(tab, caption = "Contacts du propriétaire et du gestionnaire.", 
+      digits=rep(0,3),label = "Contacts", caption.placement = "top"), include.rownames=T,
+      size="\\footnotesize")
+@
+
+Liste des opérateurs de terrain.
+<<Operateurs, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+tab <- subset(cycles, NumDisp==Choix)
+print(xtable(tab[,4:8], caption = "Liste des opérateurs de terrain.", 
+      digits=rep(0,6),label = "Operateurs", caption.placement = "top"), include.rownames=F,
+      size="\\scriptsize")
+@
+
+\newpage
+\section{Milieux}
+
+{\small
+\begin{tabular}{ll}
+Région naturelle : & \Sexpr{stations[posStation,"NomRégionNaturelle"]} \\
+SylvoEcoRégion : & \Sexpr{stations[posStation,"SylvoEcoReg"]} \\
+Roche mère : & \Sexpr{stations[posStation,"TypeRochesMères"]} \\
+Pédologie : & \Sexpr{stations[posStation,"PédologieAssociée"]} \\
+\end{tabular}
+}
+
+\begin{center}
+\begin{figure}[ht]
+   \includegraphics[width=13cm]{/Users/maxbruciamacchie/Documents/Instance/AFI/R_AFI/SIG/Cartes/005.jpg}
+\end{figure}
+\end{center}
+
+
+\newpage
+\section{Localisation}
+
+\subsection{Localisation au 1/200000}
+\begin{center}
+\begin{figure}[ht]
+   \includegraphics[width=15cm]{/Users/maxbruciamacchie/Documents/Instance/AFI/R_AFI/SIG/Cartes/Gergy200.jpg}
+\end{figure}
+\end{center}
+
+\newpage
+\subsection{Localisation au 1/25000}
+\begin{center}
+\begin{figure}[ht]
+   \includegraphics[width=14cm]{/Users/maxbruciamacchie/Documents/Instance/AFI/R_AFI/SIG/Cartes/Gergy25.jpg}
+\end{figure}
+\end{center}
+
+
+\chapter{Bilan patrimonial}
+
+\section{Patrimoine financier}
+\subsection{Etat du capital volume et argent au cours du temps}
+
+
+<<CalculBilan, echo=FALSE>>=
+tab <- DispCatEnTour
+tab$Cat <- reorder(tab$Cat, new.order=c("GB", "BM", "PB")) # necessite la librairie gdata
+tab <- merge(tab, cycles[,c(1,2,4)], by=c("NumDisp","Cycle"))
+tab <- tab[,c(3:11,13)]
+tab <- tab[order(tab$Cat), ]
+tab$Annee <- factor(tab$Année)
+
+t1 <- subset(afiDisp, NumDisp==Choix)
+t1 <- merge(t1, cycles[,c(1,2,4)], by=c("NumDisp","Cycle"))
+t1$CarbHa <- t1$TotalCarbha; 
+t1$TotalCarbha <- NULL
+t1 <- subset(t1, select=c("Cycle","Année","Nha","Gha","Vha","VcHa","VpHa","GainHa","AcctVHa","CarbHa"))
+
+Debut <- cycles$Année[which(cycles$NumDisp==Choix & cycles$Cycle==1)]
+Fin   <- cycles$Année[which(cycles$NumDisp==Choix & cycles$Cycle==max(t1$Cycle))]
+ymax <- floor(max(max(t1$VcHa),max(t1$VpHa))/1000  +1)*1000
+@
+
+
+<<TabPatrimoine, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+print(xtable(t1, caption = "Evolution des principales caratéristiques.", 
+      digits=c(rep(0,4),1,rep(0,4),2,0),label = "TabPatrimoine", caption.placement = "top"), include.rownames=F,
+      size="\\footnotesize")
+@
+
+Le tableau \ref{TabPatrimoine} permet de suivre l'évolution du capital matière et argent au cours du temps. Il est complété par les figures \ref{fig:BilanPatrimonial11} et \ref{fig:BilanPatrimonial12} qui fournissent respectivement le détail de l'évolution du capital argent et matière par grandes catégories de diamètre. \\
+
+<<BilanPatrimonial11, echo=FALSE, size='footnotesize', include=TRUE, fig.pos='h', fig.height=2, fig.cap="Evolution du capital argent.", error=F, comment=F, warning=F, message=F >>=
+p1 <- ggplot(tab, aes(x=Annee, y=VcHa, fill=Cat)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey() + scale_y_continuous(limits = c(0, ymax))
+p2 <- ggplot(tab, aes(x=Annee, y=VpHa, fill=Cat)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey() + scale_y_continuous(limits = c(0, ymax))
+grid.arrange(p1, p2, ncol=2)
+@
+
+Sur la période \Sexpr{Debut}-\Sexpr{Fin}, la valeur de consommation (VcHa) est passée de \Sexpr{round(t1$VcHa[t1$Cycle==1],0)}  à \Sexpr{round(t1$VcHa[t1$Cycle==max(t1$Cycle)],0)} \euro{}/ha, pendant que la valeur potentielle (Vpha) passait de \Sexpr{round(t1$VpHa[t1$Cycle==1],0)}  à \Sexpr{round(t1$VpHa[t1$Cycle==max(t1$Cycle)],0)} \euro{}/ha.
+
+<<BilanPatrimonial12, echo=FALSE, size='footnotesize', include=TRUE, fig.pos='h', fig.height=2, fig.cap="Evolution du capital matière.", error=F, comment=F, warning=F, message=F >>=
+p3 <- ggplot(tab, aes(x=Annee, y=Gha, fill=Cat)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey()
+p4 <- ggplot(tab, aes(x=Annee, y=Vha, fill=Cat)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey()
+grid.arrange(p3, p4, ncol=2)
+@
+
+Sur la période \Sexpr{Debut}-\Sexpr{Fin}, la surface terrière et le volume ont oscillé entre \Sexpr{round(min(t1$Gha),1)} -  \Sexpr{round(max(t1$Gha),1)} m$^2$/ha, et \Sexpr{round(min(t1$Vha),0)} - \Sexpr{round(max(t1$Vha),0)} m$^3$/ha (voir figure \ref{fig:BilanPatrimonial12}).
+
+\subsection{Productivité}
+\subsubsection{Accroissement en valeur et en volume}
+La figure \ref{fig:BilanPatrimonial2} permet de connaître les accroissements en valeur et en volume.
+
+<<BilanPatrimonial2, echo=FALSE, size='footnotesize', include=TRUE, fig.height=2, fig.cap="Accroissement en valeur et en volume.", error=F, comment=F, warning=F, message=F >>=
+p1 <- ggplot(tab, aes(x=Annee, y=GainHa, fill=Cat)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey()
+p2 <- ggplot(tab, aes(x=Annee, y=AcctVHa, fill=Cat)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey()
+grid.arrange(p1, p2, ncol=2)
+@
+
+\subsubsection{Taux d'accroissement et temps de rotation du capital volume et argent}
+Le tableau \ref{Taux} fournit les taux d'accroissement et les temps de passage en volume (TauxV et TempsV) et en argent (TauxA et TempsA). Les taux sont exprimés en \% et les temps de rotation en années.\\
+Dans des peuplements en équilibre, les temps de rotations du volume sont compris entre 35 et 45 ans.
+<<Taux, echo=F, results='asis', fig.pos="h", comment=F >>=
+tab <- subset(afiDisp, NumDisp==Choix)
+tab$TauxA <- tab$GainHa/tab$VcHa*100
+tab$TauxV <- tab$AcctVHa/tab$Vha*100
+tab$TempsV <- 100/tab$TauxV
+tab$TempsA <- 100/tab$TauxA
+print(xtable(tab[,c(2,12:15)], caption = "Taux d'accroissement et temps de rotation du capital volume et argent.", 
+      digits=c(0,0,1,1,0,0),label = "Taux", caption.placement = "top"), include.rownames=F,
+      size="\\footnotesize")
+@
+
+
+\subsection{Histogrammes en nombre et en volume}
+La figure \ref{fig:BilanPatrimonial3} permet de suivre l'évolution des histogrammes en nombre de tiges en distinguant 2 classes de qualité.
+
+<<BilanPatrimonial3, echo=FALSE, size='footnotesize', include=TRUE, fig.height=6, fig.cap="Evolution des histogrammes en nombre de tiges par classe de diamètre.", error=F, comment=F, warning=F, message=F >>=
+tab <- subset(afiDispClasseQual, NumDisp==Choix)
+tab <- merge(tab, qual, by="Qual1", all.x=T)
+tab <- summaryBy(Nha + Vha ~ Cycle + Classe + Qual2, data=tab, FUN=sum, keep.names=T)
+tab$Titre <- paste("Cycle", tab$Cycle)
+ggplot(tab, aes(x=Classe, y=Nha, fill=Qual2)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey() + facet_wrap(~ Titre, ncol=2)
+@
+
+La figure \ref{fig:BilanPatrimonial4} permet de suivre l'évolution des histogrammes en volume.
+
+<<BilanPatrimonial4, echo=FALSE, size='footnotesize', include=TRUE, fig.height=6, fig.cap="Evolution des histogrammes en volume par classe de diamètre.", error=F, comment=F, warning=F, message=F >>=
+ggplot(tab, aes(x=Classe, y=Vha, fill=Qual2)) + geom_bar(stat='identity', position='stack') + 
+      MyTheme + scale_fill_grey() + facet_wrap(~ Titre, ncol=2)
+@
+
+\subsection{Evolution de la structure}
+
+<<Structure, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+tab <- subset(afiDispCat, NumDisp==Choix, select=-12)
+tab$Cat <- reorder(tab$Cat, new.order=c("GB", "BM", "PB")) # necessite la librairie gdata
+tab <- tab[order(tab$Cycle,tab$Cat), ]
+tab$CarbHa <- tab$TotalCarbha
+tab$TotalCarbha <- NULL
+print(xtable(tab[,-1], caption = "Analyse de la structure des peuplements.", 
+      digits=c(rep(0,4),1,rep(0,4),2,0),label = "Structure", caption.placement = "top"), include.rownames=FALSE,
+      size="\\footnotesize")
+@
+
+La figure \ref{fig:StructureHist} est une autre façon de représenter les évolutions de la structure en nombre de tiges et en diamètre déjà abordées par les figures \ref{fig:BilanPatrimonial3} et \ref{fig:BilanPatrimonial4}.
+
+<<StructureHist, echo=FALSE, size='footnotesize', include=TRUE, fig.width=3.2, fig.height=4, fig.cap="Evolution des histogrammes en volume et nombre.", fig.pos="h">>=
+tab <- subset(afiDispClasse, NumDisp==Choix)
+ggplot(tab, aes(x=Classe, y=Nha, group=Cycle, colour=factor(Cycle))) + geom_line() + MyTheme +
+  scale_colour_discrete(name = "Cycle")
+tab <- subset(tab, Cycle==c(min(tab$Cycle),max(tab$Cycle)))
+ggplot(tab, aes(x=Classe, y=Vha, group=Cycle, colour=factor(Cycle))) + geom_line() + MyTheme +
+  scale_colour_discrete(name = "Cycle")
+@
+
+
+\subsection{Importance des gros bois}
+Le tableau \ref{PlaceGB} permet d'analyser la contribution des gros bois pour l'ensemble des variables.
+<<PlaceGB, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+tab <- subset(afiDispCat, NumDisp==Choix & Cat=="GB")
+tab$CarbHa <- tab$TotalCarbha
+tab$TotalCarbha <- NULL
+tab$NbPlacettes <- NULL
+print(xtable(tab[,2:11], caption = "Place des gros bois.", 
+      digits=c(rep(0,4),1,rep(0,4),2,0),label = "PlaceGB", caption.placement = "top"), include.rownames=FALSE,
+      size="\\footnotesize")
+@
+
+
+
+
+\subsection{Composition en essence d'arbres}
+
+La figure \ref{fig:CompoRadar} permet d'analyser la composition relative en essence en nombre de tiges, surface terrière, volume, valeur de consommation et potentielle. Elle permet par exemple de constater que les essences peut valorisantes en valeur ont une forte dynamique en volume, et qu'il n'est pas facile de les maitriser. 
+
+<<CompoRadar, echo=FALSE, size='footnotesize',fig='h', include=TRUE, fig.height=7, fig.cap="Importance relative des différentes essences.", fig.keep='last', fig.pos="htdp">>=
+tab <- subset(afiDispEss, NumDisp==Choix)
+tab <- tab[order(tab$Essence),-c(1,12)]
+tab.m <- melt(tab[,1:7], id=c("Cycle","Essence"))
+ggplot(tab.m, aes(x=variable, y=value, fill=Essence)) + 
+    	geom_bar(stat='identity', position='fill') +  coord_polar(theta = "y") + 
+			scale_x_discrete("") + theme(legend.position="bottom") + MyTheme +
+      theme(axis.title.y=element_blank()) + facet_wrap(~ Cycle, ncol=2)
+@
+
+
+
+
+\section{Patrimoine écologique}
+
+\subsection{Biodiversité}
+
+<<Biodiversite, echo=F>>=
+t1 <- subset(afiDispEss, NumDisp==Choix, select=c("Cycle","Essence","Vha"))
+t2 <- summaryBy(Vha ~ NumDisp + Cycle + Essence, data=Perches, FUN=sum, keep.names=T)
+t2 <- subset(t2, NumDisp==Choix, select=-1)
+t3 <- subset(afiTaillisEss, NumDisp==Choix, select=c("Cycle","Essence","Vha"))
+t4 <- subset(afiRegeEss, NumDisp==Choix, select=c("Cycle","Essence","Classe1Ha","Classe2Ha","Classe3Ha"))
+tab <- merge(t1,t2, by=c("Cycle","Essence"), all=T)
+tab <- merge(tab,t3, by=c("Cycle","Essence"), all=T)
+tab <- merge(tab,t4, by=c("Cycle","Essence"), all=T)
+ListEss     <- tab[order(tab$Essence), ]
+ListEss[is.na(ListEss)] <- 0
+names(ListEss)[3:8] <- c("Arbres","Perches","Taillis","Classe1","Classe2","Classe3")
+Som <- summaryBy(Arbres + Perches + Taillis + Classe1 + Classe2 + Classe3 ~ Cycle, data=ListEss, FUN=sum, keep.names=T)
+ListEss <- merge(ListEss,Som, by="Cycle", all=T)
+ListEss[3:8] <- ListEss[3:8]/ListEss[9:14]
+names(ListEss)[3:8] <- c("Arbres","Perches","Taillis","Classe1","Classe2","Classe3")
+ListEss[is.na(ListEss)] <- 0
+@
+
+Le dispositif possède au total \Sexpr{length(unique(ListEss[,2]))} espèces sous forme de semis, de brins de taillis ou d'arbres de franc-pied. La figure \ref{fig:CompoGlobal} donne une image de l'importance des essences dans chacun des stades de vie de l'arbre. Elle fournit la composition en pourcentage du volume pour les arbres, perches et taillis, du recouvrement pour les semis inférieur à 50 cm de haut, et du nombre de tiges pour les différentes classes (class1, class2, class3) de semis de hauteur supérieure à 50 cm. Lorsqu'une classe de semis est absente, elle n'est pas représentée. \\
+Cette figure \ref{fig:CompoGlobal} est une représentation visuelle de l'indice de biodiversité de Shannon.
+
+<<CompoGlobal, echo=FALSE, size='footnotesize', include=TRUE, fig.width=8, fig.height=9, fig.cap="Importance des essences selon les différents stades de vie de l'arbre.", error=F, comment=F, warning=F, message=F>>=
+if (sum(ListEss$Classe3, na.rm=T)==0) {ListEss$Classe3 <- NULL}
+if (sum(ListEss$Classe2, na.rm=T)==0) {ListEss$Classe2 <- NULL}
+if (sum(ListEss$Classe1, na.rm=T)==0) {ListEss$Classe1 <- NULL}
+ListEss.m <- melt(ListEss[,1:8], id=c("Essence","Cycle"))
+ListEss.m <- ddply(ListEss.m, .(variable), transform, rescale = rescale(value))
+ggplot(ListEss.m, aes(variable, Essence)) + geom_tile(aes(fill = rescale),
+    	colour = "white") + scale_fill_gradient(low = "white", high = "black") + MyTheme + labs(x = NULL, y=NULL) +
+      theme(axis.text.x  = element_text(size=9), axis.text.y  = element_text(size=9)) +
+      facet_wrap(~ Cycle, ncol=2)
+@
+
+
+
+\subsection{Composition et structure}
+<<CompoNG, echo=FALSE, size='footnotesize', include=TRUE, fig.pos='h', fig.width=9, fig.height=9, fig.cap="Composition en essence en nombre de tige et en surface terrière, de manière absolue ou relative.", error=F, comment=F, warning=F, message=F>>=
+tab <- subset(afiDispEssCat, NumDisp==Choix, select=c("Cycle","Essence","Cat","Vha","Nha"))
+
+p1 <- ggplot(tab, aes(Cat, Nha, fill=Essence)) + geom_bar(stat="identity", position="stack") +
+  labs(x = NULL) + guides(fill=FALSE) + MyTheme + facet_wrap(~ Cycle, ncol=1)
+p2 <- ggplot(tab, aes(Cat, Nha, fill=Essence)) + geom_bar(stat="identity", position="fill") +
+  labs(x = NULL) + theme(legend.position = "none") + MyTheme + facet_wrap(~ Cycle, ncol=1)
+
+tab <- tab[order(-tab$Vha),]
+p3 <- ggplot(tab, aes(Cat, Vha, fill=Essence)) + geom_bar(stat="identity", position="stack")+ guides(fill=FALSE) +
+  MyTheme + facet_wrap(~ Cycle, ncol=1)
+p4 <- ggplot(tab, aes(Cat, Vha, fill=Essence)) + geom_bar(stat="identity", position="fill") + 
+  MyTheme + facet_wrap(~ Cycle, ncol=1)
+grid.arrange(p1, p2, p3, p4, ncol=4)
+@
+
+
+\subsection{Bois mort}
+Le tableau fournit par cycle, l'importance en volume du bois mort en distinguant bois vivant et bois mort
+<<BoisMort, echo=FALSE, results='asis', fig.pos='h', comment=F>>=
+t1 <- subset(afiBMP, NumDisp==Choix, select=c("NumDisp","Cycle","Vha"))
+if ( dim(t1)[1] > 0) {
+  t1$Type <- "sur pied"
+} else {
+  t1 <- data.frame(NumDisp=NA, Cycle=NA, Vha=NA, Type=NA)
+}
+t2 <- subset(afiBMS, NumDisp==Choix)
+if ( dim(t2)[1] > 0) {
+  t2$Type <- "au sol"
+} else {
+  t2 <- data.frame(NumDisp=NA, Cycle=NA, Vha=NA, Type=NA)
+}
+tab <- rbind(t1, t2)
+tab <- tab[-which(is.na(tab$Vha)),]
+
+print(xtable(tab[,-1], caption = "Importance et type de bois mort.", 
+      digits=c(0,0,1,0),label = "BoisMort", caption.placement = "top"), include.rownames=FALSE,
+      size="\\footnotesize")
+@
+
+
+\subsection{Importance par dimension et stade de décomposition}
+La figure \ref{fig:BMSline1} fournit l'importance du bois mort au sol, exprimée en volume, tandis que la figure \ref{fig:BMSline2} l'exprime par stade de décomposition.
+<<BMSline1, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.width=3, fig.height=1.7, fig.cap= "Importance du bois mort au sol.", fig.subcap=c("Par classe de diamètre", "Par essence", out.width='.49\\linewidth', out.extra='scale=1')>>=
+# t1 <- summaryBy(Vha ~ Classe, data=BMSlineVClasseEnTour, FUN=sum, keep.names=T)
+# t1$Vha <- t1$Vha/NbPlac
+# if (dim(BMSsup30VClasseEnTour)[1] > 0) {
+#   t2 <- summaryBy(Vha ~ Classe, data=BMSsup30VClasseEnTour, FUN=sum, keep.names=T)
+#   t2$Vha <- t2$Vha/NbPlac
+#   BMSClasse <- rbind(t1,t2)
+# } else {
+#   BMSClasse <- t1
+# }
+# ggplot(BMSClasse, aes(x=Classe, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") + MyTheme
+# 
+# t1 <- summaryBy(Vha ~ code, data=BMSlineVEssEnTour, FUN=sum, keep.names=T)
+# t1$Vha <- t1$Vha/NbPlac
+# if (dim(BMSsup30VEssEnTour)[1] > 0) {
+#   t2 <- summaryBy(Vha ~ code, data=BMSsup30VEssEnTour, FUN=sum, keep.names=T)
+#   t2$Vha <- t2$Vha/NbPlac
+#   tab <- rbind(t1,t2)
+# } else {
+#   tab <- t1
+# }  
+# ggplot(tab, aes(x=code, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") + MyTheme
+@
+
+
+
+
+\subsection{Ratio bois mort sur bois vivant}
+
+\section{Analyse dendrométrique et sylvicole}
+
+\section{Renouvellement}
+
+\subsection{Perches}
+
+\subsection{Semis}
+
+<<Rege1, echo=F, size='footnotesize', include=T, fig.pos='h', fig.height=4, fig.cap= "Régénération par stade de développement.">>=
+tab <- subset(afiRegeEssValor, NumDisp==Choix, select=-c(1,7))
+tab.m <- melt(tab, id=c("Cycle","Essence"))
+ggplot(tab.m, aes(x=variable, y=value, fill=Essence)) + geom_bar(stat = "identity", position='stack') + 
+  MyTheme + facet_wrap(~ Cycle, ncol=2)
+@
+
+% \subsection{Abroutissement}
+% <<Abroutissement, echo=F, size='footnotesize', include=T, fig.pos='h', fig.height=2, fig.width=4, fig.cap= "Abroutissement.">>=
+% t1 <- subset(psdrf_regeneration, plot %in% PlacEnTour$id, 
+%                           select=c("seed_cover","browsing","species","class1"))
+% t1$browsing <- ifelse(t1$browsing=="oui","oui","non")
+% t1 <- summaryBy(seed_cover + class1 ~ browsing, data=t1, FUN=sum, keep.names=T)
+% t1.m <- melt(t1, id="browsing")
+% ggplot(t1.m, aes(x=variable, y=value, fill=browsing)) + geom_bar(stat = "identity", position='fill',colour="black") + 
+%   scale_fill_manual(values=c("white", "black")) + theme_bw()
+% @
+% 
+ 
+
+
+\chapter{Bilan de la gestion passée}
+
+\section{Recettes / Dépenses}
+
+<<Depenses, echo=FALSE>>=
+# tab <- subset(depenses, NumDisp==Choix)
+# tab <- merge(tab, coefactu, by="Année", all.x=T)
+# tab$Cout <- ifelse(tab$Actualisation=="N",tab$TotalHT,tab$TotalHT$tab$CoefActu)
+@
+
+
+
+
+\chapter{Annexes}
+
+\section{Echantillon}
+La figure \ref{fig:DiamDist} permet de détecter d'éventuels arbres limites
+<<DiamDist, echo=F, fig.pos='h', fig.height=6, fig.cap= "Vérification de l'échantillon.">>=
+# ArbresEnTour <- merge(ArbresEnTour, psdrf_essence[,c("id","code")], by.x="essence", by.y="id", all.x=T)
+t1 <- subset(ArbresEnTour, select=c("Cycle","Distance","Diam1","Diam2"))
+t1$Diam <- with(t1, (Diam1+Diam2)/2)
+t1$Type <- "Arbres"
+t1$Diam2 <- NULL
+
+t2 <- subset(PerchesEnTour, select=c("Cycle","Distance","Diam1","Diam2"))
+t2$Diam <- with(t2, (Diam1+Diam2)/2)
+t2$Type <- "Perches"
+t2$Diam2 <- NULL
+
+t3 <- subset(BMPenTour, select=c("Cycle","Distance","Diam1","Diam2"))
+if (dim(BMPenTour)[1] >0) {
+  t3$Diam <- with(t1, (Diam1+Diam2)/2)
+  t3$Type <- "BMP"
+  t3$Diam2 <- NULL
+  tab <- rbind(t1,t2,t3)
+} else {
+  tab <- rbind(t1,t2)
+}
+
+p <- ggplot(tab, aes(Distance, Diam1, colour=Type)) + geom_point(alpha=0.5) + theme_bw()
+p <- p + geom_hline(yintercept=c(7.5,30), colour="blue", linetype=2, size=0.5) 
+p <- p + geom_abline(intercept = 0, slope = Angle, colour="blue")
+p + geom_vline(xintercept=10, colour="blue", linetype=2, size=0.5) + MyTheme +
+  facet_wrap(~ Cycle, ncol=2)
+
+# 
+# 
+# p <- ggplot(ArbresEnTour, aes(Distance, Diam1, colour=Essence)) + geom_point(alpha=0.5) + theme_bw()
+# p <- p + geom_hline(yintercept=c(7.5,17.5), colour="blue", linetype=2, size=0.5) 
+# p <- p + geom_abline(intercept = 0, slope = Angle, colour="blue")
+# p + geom_vline(xintercept=10, colour="blue", linetype=2, size=0.5) + MyTheme +
+#   facet_wrap(~ Cycle, ncol=2)
+@
+
+
+\section{tarifs de cubage}
+Le tableau \ref{Tarifs} rappelle les tarifs de cubage retenus.
+<<Tarifs, echo=FALSE, results='asis', fig.pos="h", comment=F>>=
+tab <- subset(tarifs, NumDisp==Choix, select=-1)
+names(tab) <- c("Essence", "Type de tarif", "Numéro")
+print(xtable(tab, caption = "Tarifs de cubage retenus", 
+      digits=rep(0,4),label = "Tarifs", caption.placement = "top"), include.rownames=F,
+      size="\\footnotesize")
+@
+
+
+
+
+
+\subsection{Localisation des arbres}
+<<PlanArbres, echo=FALSE, fig.height=9, fig.show='asis', fig.cap="Plan de localisation des arbres par placette">>=
+tab <- subset(Arbres, NumDisp==Choix & Cycle==max(Cycle))
+tab <- tab[order(tab$Essence),]
+tab$Col <- with(tab, rgb(Red,Green,Blue, max=255)) 
+
+list <- levels(factor(tab$Placette))
+for (i in 1:length(list)) {
+#   i=1
+    p <- tab[tab$Placette==list[i] ,]
+    MaxDist <- floor(max(p$Distance)/10+1.5)*10
+		pl <- ggplot(p, aes(y=Distance, x=Azimut, fill=Essence, size=Classe))  + 
+      xlim(0,400) + ylim(0,MaxDist) + geom_point(shape=21) + coord_polar() + 
+      MyTheme + ggtitle(paste("Placette",list[i])) + scale_size(range = c(0, 15)) +
+      scale_fill_manual(values=unique(p$Col), labels=unique(p$Essence))
+		print(pl)
+} 
+@
+
+
+\subsection{Evolution de la valeur de consommation}
+% 
+% <<PlanArbresValeurs, echo=FALSE, fig.height=9, fig.show='asis', fig.cap="Plan de localisation des arbres par placette">>=
+% tab <- subset(Arbres, NumDisp==Choix, )
+% 
+% list <- levels(factor(tab$Placette))
+% for (i in 1:length(list)) {
+%   i=1
+%     p <- tab[tab$Placette==list[i] ,]
+%     MaxDist <- floor(max(p$Distance)/10+1.5)*10
+%   	pl <- ggplot(p, aes(y=Distance, x=Azimut, colour=Cycle, fill=Essence, size=Classe))  + xlim(0,400) + ylim(0,MaxDist) + 
+% 			geom_point(shape=21, alpha = I(0.5)) + coord_polar() + MyTheme + ggtitle(paste("Placette",list[i])) + scale_size(range = c(0, 20))
+% 		print(pl)
+% } 
+% @
+
+
+
+% \subsection{Répartition par stade de décomposition}
+% <<BMSline2, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.width=2.5, fig.height=1.7, fig.cap= "Répartition du bois mort au sol par stade de décomposition.", fig.subcap=c("Par stade de dureté du bois", "Par importance de l'écorce", out.width='.49\\linewidth', out.extra='scale=1')>>=
+% StadeDline <- summaryBy(Vha ~ StadeD, data=BMSlineVStadeDEnTour, FUN=sum, keep.names=T)
+% StadeDline$Vha <- StadeDline$Vha/NbPlac
+% if (dim(BMSsup30VStadeDEnTour)[1] > 0) {
+%   StadeDSup30 <- summaryBy(Vha ~ StadeD, data=BMSsup30VStadeDEnTour, FUN=sum, keep.names=T)
+%   StadeDSup30$Vha <- StadeDSup30$Vha/NbPlac
+%   tab <- rbind(StadeDline,StadeDSup30)
+% } else {
+%   tab <- StadeDline
+% }
+% p1 <- ggplot(tab, aes(x=StadeD, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey")
+% p1 + MyTheme
+% 
+% StadeEline <- summaryBy(Vha ~ StadeE, data=BMSlineVStadeEEnTour, FUN=sum, keep.names=T)
+% StadeEline$Vha <- StadeEline$Vha/NbPlac
+% if (dim(BMSsup30VStadeDEnTour)[1] > 0) {
+%   StadeESup30 <- summaryBy(Vha ~ StadeE, data=BMSsup30VStadeEEnTour, FUN=sum, keep.names=T)
+%   StadeESup30$Vha <- StadeESup30$Vha/NbPlac
+%   tab <- rbind(StadeEline,StadeESup30)
+% } else {
+%   tab <- StadeEline
+% }
+% p2 <- ggplot(tab, aes(x=StadeE, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") 
+% p2 + MyTheme
+% @
+% 
+% 
+% \section{Bois mort sur pied}
+% 
+% <<BMP, echo=FALSE, size='footnotesize', include=T, fig.pos='h', fig.height=2, fig.cap= "Importance du bois mort sur pied par classes de diamètre et stades de décomposition.">>= 
+% BMPClasseEnTour <- summaryBy(Vha ~ cycle + Classe, data=BMPEnTour, FUN=sum, keep.names=T)
+% BMPClasseEnTour$Vha <- BMPClasseEnTour$Vha/NbPlac
+% BMPStadeDEnTour <- summaryBy(Vha ~ cycle + rot_stage, data=BMPEnTour, FUN=sum, keep.names=T)
+% BMPStadeDEnTour <- merge(BMPStadeDEnTour,psdrf_rot[,c("id","code")], by.x="rot_stage", by.y="id", all.x=T)
+% BMPStadeDEnTour$StadeD <- BMPStadeDEnTour$code; BMPStadeDEnTour$code <- NULL
+% BMPStadeDEnTour$Vha <- BMPStadeDEnTour$Vha/NbPlac
+% BMPStadeEEnTour <- summaryBy(Vha ~ cycle + bark_stage, data=BMPEnTour, FUN=sum, keep.names=T)
+% BMPStadeEEnTour <- merge(BMPStadeEEnTour,psdrf_bark[,c("id","code")], by.x="bark_stage", by.y="id", all.x=T)
+% BMPStadeEEnTour$StadeE <- BMPStadeEEnTour$code; BMPStadeEEnTour$code <- NULL
+% BMPStadeEEnTour$Vha <- BMPStadeEEnTour$Vha/NbPlac
+% 
+% p1 <- ggplot(BMPClasseEnTour, aes(x=Classe, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey") 
+% p2 <- ggplot(BMPStadeDEnTour, aes(x=StadeD, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey")
+% p3 <- ggplot(BMPStadeEEnTour, aes(x=StadeE, y=Vha)) + geom_bar(stat = "identity", position='stack', fill="grey")
+% 
+% grid.arrange(p1+MyTheme, p2+MyTheme, p3+MyTheme, ncol=3)
+% @
+% 
+% \section{Bois mort total}
+% 
+% <<BMTotal, echo=F, size='footnotesize', include=T, fig.pos='h', fig.height=2, fig.cap= "Importance du bois mort par classes de diamètre et stades de décomposition.">>=
+% t1 <- summaryBy(Vha ~ Classe, data=BMSlineVClasseEnTour, FUN=sum, keep.names=T)
+% t1$Vha <- t1$Vha/NbPlac
+% t1$Type <- "inf30"
+% if (dim(BMSsup30VClasseEnTour)[1] > 0) {
+%   t2 <- summaryBy(Vha ~ Classe, data=BMSsup30VClasseEnTour, FUN=sum, keep.names=T)
+%   t2$Vha <- t2$Vha/NbPlac
+%   t2$Type <- "inf30"
+%   tab <- rbind(t1,t2)
+% } else {
+%   tab <- t1
+% }
+% t3 <- BMPClasseEnTour[,-1]
+% t3$Type <- "Pied"
+% tab <- rbind(tab,t3)
+% p1 <- ggplot(tab, aes(x=Classe, y=Vha, fill=Type)) + geom_bar(stat = "identity", position='stack') + 
+%   scale_fill_grey() + guides(fill=FALSE)
+% 
+% t3 <- BMPStadeDEnTour[,-c(1:2)]
+% t3$Type <- "Pied"
+% StadeDline$Type <- "inf30"
+% if (dim(BMSsup30VStadeDEnTour)[1] > 0) {
+%   StadeDSup30$Type <- "sup30"
+%   tab <- rbind(StadeDline,StadeDSup30,t3)
+% } else {
+%   tab <- rbind(StadeDline,t3)
+% }
+% p2 <- ggplot(tab, aes(x=StadeD, y=Vha, fill=Type)) + geom_bar(stat = "identity", position='stack') +
+%   scale_fill_grey() + guides(fill=FALSE)
+% 
+% t3 <- BMPStadeEEnTour[,-c(1:2)]
+% t3$Type <- "Pied"
+% StadeEline$Type <- "inf30"
+% if (dim(BMSsup30VStadeEEnTour)[1] > 0) {
+%   StadeESup30$Type <- "sup30"
+%   tab <- rbind(StadeEline,StadeESup30,t3)
+% } else {
+%   tab <- rbind(StadeEline,t3)
+% }
+% 
+% p3 <- ggplot(tab, aes(x=StadeE, y=Vha, fill=Type)) + geom_bar(stat = "identity", position='stack') + 
+%   scale_fill_grey() + MyTheme + 
+%   theme(legend.position = c(.8, .8), legend.text=element_text(size=7), legend.title=element_text(size=8)) 
+% 
+% grid.arrange(p1+MyTheme, p2+MyTheme, p3, ncol=3)
+% @
+% 
+% \section {Ratio bois mort sur bois vivant}
+% <<Ratio, echo=F, size='footnotesize', include=T, fig.pos='h', fig.height=2, fig.cap= "Importance relative du bois mort par classes de diamètre.">>=
+% t1 <- rbind(BMSClasse, BMPClasseEnTour[,-1])
+% t1$Type <- "mort"
+% t2 <- DispClasseEnTour[,3:4]
+% t2$Type <- "vivant"
+% tab <- rbind(t1,t2)
+% r <- round(sum(t1$Vha)/sum(t2$Vha)*100,1)
+% X <- max(tab$Classe)-10
+% Y <- max(tab$Vha)-10
+% ggplot(tab, aes(x=Classe, y=Vha, fill=Type)) + geom_bar(stat = "identity", position='stack') + 
+%   scale_fill_grey() + MyTheme + annotate("text", label = paste("ratio =",r,"%"), x = X, y = Y, size = 4)
+% @
+% 
+% 
+% 
+% \chapter{Codes écologiques}
+% 
+% 
+% Hist : N microhabitats ou N arbres porteurs microhabitats (sous ensemble position)
+% 
+% Hist : N microhabitats ou N arbres porteurs microhabitats (vitalité)
+% 
+% Graph : Note écologique/essence/cat diamètre
+% 
+% Graph : camemberts essences / hist (Ncodes/ha/essence) /codes regroupés
+% 
+% 
+% \chapter{Renouvellement}
+% 
+
+
+
+\section{Fiches de remesure}
+
+
+
+\end{document}

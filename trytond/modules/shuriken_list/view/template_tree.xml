@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Lists">
+    <field name="study"/>
+    <field name="name"/>
+    <field name="lists"/>
+    <field name="active" tree_invisible="1"/>
+</tree>

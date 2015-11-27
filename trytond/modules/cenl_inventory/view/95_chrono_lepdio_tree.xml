@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Chrono-ventaire lépidoptères - Zone - Session - Liste de Compartiment - Liste de Taxons">
+    <field name="zonesession"/>
+    <field name="id"/>
+    <field name="zonelistetaxon"/>
+    <field name="zonesession_typinv" tree_invisible="1"/>              
+</tree>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Observation" editable="bottom">
+    <field name="liste"/>
+    <field name="taxon"/>
+    <field name="determination"/>
+    <field name="selsize"/>    
+    <field name="size"/>    
+    <button name="one" string="+1"/>
+    <button name="ten" string="+10"/>
+    <button name="hundred" string="+100"/>    
+    <field name="comment"/>
+    <field name="active" tree_invisible="1"/>
+    <field name="group2" tree_invisible="1"/>
+</tree>

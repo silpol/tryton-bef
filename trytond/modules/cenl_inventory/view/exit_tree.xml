@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="campagne"/>
+    <field name="code"/>
+    <field name="name"/>
+    <field name="date"/>
+    <field name="comment"/>
+    <field name="methode_name" tree_invisible="1"/>
+</tree>

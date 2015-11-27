@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Zone - Session - Liste de Compartiment">
+    <label name="compartiment"/>
+    <field name="compartiment" widget="selection"/>
+    <label name="valeur"/>
+    <field name="valeur"/>                 
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Point - Session - Liste de Compartiment" col="2">
+    <label name="compartiment"/>
+    <field name="compartiment" widget="selection"/>
+    <label name="valeur"/>
+    <field name="valeur"/>                 
+</form>

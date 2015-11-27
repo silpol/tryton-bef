@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form string="Point - Session - Liste de Compartiment - Liste de Taxons" col="2">
+    <group id="group_session" col="2" colspan="2">
+        <label name="pointsession"/>
+        <field name="pointsession"/>
+    </group>    
+    <field name="pointlistecompartiment"/>
+    <field name="pointlistetaxon"/>
+</form>

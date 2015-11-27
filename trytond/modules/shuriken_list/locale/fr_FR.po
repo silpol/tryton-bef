@@ -1,0 +1,734 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pascal Obstetar <pascal.obstetar@bioecoforests.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgctxt "field:observation.misc_obj_line,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:observation.misc_obj_line,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "field:observation.misc_obj_line,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:observation.misc_obj_line,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:observation.misc_obj_line,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:observation.misc_obj_line,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:observation.misc_obj_line,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:observation.misc_obj_line,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:observation.misc_obj_line,observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:observation.misc_obj_line,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:observation.misc_obj_line,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:observation.misc_obj_line,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:observation.misc_obj_point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:observation.misc_obj_point,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "field:observation.misc_obj_point,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:observation.misc_obj_point,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:observation.misc_obj_point,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:observation.misc_obj_point,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:observation.misc_obj_point,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:observation.misc_obj_point,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:observation.misc_obj_point,observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:observation.misc_obj_point,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:observation.misc_obj_point,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:observation.misc_obj_point,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:observation.misc_obj_poly,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:observation.misc_obj_poly,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "field:observation.misc_obj_poly,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:observation.misc_obj_poly,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:observation.misc_obj_poly,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:observation.misc_obj_poly,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:observation.misc_obj_poly,image:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:observation.misc_obj_poly,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "field:observation.misc_obj_poly,observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "field:observation.misc_obj_poly,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:observation.misc_obj_poly,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:observation.misc_obj_poly,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:shuriken_list.list,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:shuriken_list.list,code:"
+msgid "Label"
+msgstr "Libellé"
+
+msgctxt "field:shuriken_list.list,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:shuriken_list.list,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:shuriken_list.list,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:shuriken_list.list,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:shuriken_list.list,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:shuriken_list.list,list_map:"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "field:shuriken_list.list,observations:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "field:shuriken_list.list,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:shuriken_list.list,template:"
+msgid "List Template"
+msgstr "Relevés type modèle"
+
+msgctxt "field:shuriken_list.list,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:shuriken_list.list,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:shuriken_list.observation,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:shuriken_list.observation,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "field:shuriken_list.observation,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:shuriken_list.observation,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:shuriken_list.observation,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "field:shuriken_list.observation,determination:"
+msgid "Determination"
+msgstr "Détermination"
+
+msgctxt "field:shuriken_list.observation,geom:"
+msgid "Geometry"
+msgstr "Géométrie"
+
+msgctxt "field:shuriken_list.observation,google_maps_url:"
+msgid "Google Maps"
+msgstr "Google Maps"
+
+msgctxt "field:shuriken_list.observation,group2:"
+msgid "Groupe INPN"
+msgstr "Groupe INPN"
+
+msgctxt "field:shuriken_list.observation,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:shuriken_list.observation,latlong:"
+msgid "Latitude/Longitude"
+msgstr "Latitude/Longitude"
+
+msgctxt "field:shuriken_list.observation,liste:"
+msgid "List"
+msgstr "Relevés"
+
+msgctxt "field:shuriken_list.observation,misc_obj_line:"
+msgid "Divers objets linéaire"
+msgstr "Divers objets linéaire"
+
+msgctxt "field:shuriken_list.observation,misc_obj_point:"
+msgid "Divers objets point"
+msgstr "Divers objets point"
+
+msgctxt "field:shuriken_list.observation,misc_obj_poly:"
+msgid "Divers objets polygone"
+msgstr "Divers objets polygone"
+
+msgctxt "field:shuriken_list.observation,observation_map:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "field:shuriken_list.observation,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:shuriken_list.observation,selsize:"
+msgid "Size"
+msgstr "Effectif du taxon observé"
+
+msgctxt "field:shuriken_list.observation,size:"
+msgid "Size"
+msgstr "Effectif"
+
+msgctxt "field:shuriken_list.observation,stage:"
+msgid "Stage"
+msgstr "Stade"
+
+msgctxt "field:shuriken_list.observation,stratum:"
+msgid "Stratum"
+msgstr "Strate"
+
+msgctxt "field:shuriken_list.observation,taxon:"
+msgid "Taxinomie"
+msgstr "Taxinomie"
+
+msgctxt "field:shuriken_list.observation,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:shuriken_list.observation,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:shuriken_list.template,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "field:shuriken_list.template,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:shuriken_list.template,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:shuriken_list.template,grouptaxo:"
+msgid "Group Taxo"
+msgstr "Groupe taxonomique"
+
+msgctxt "field:shuriken_list.template,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:shuriken_list.template,lists:"
+msgid "Lists"
+msgstr "Relevés"
+
+msgctxt "field:shuriken_list.template,name:"
+msgid "Label type"
+msgstr "Libellé"
+
+msgctxt "field:shuriken_list.template,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:shuriken_list.template,study:"
+msgid "Study"
+msgstr "Études"
+
+msgctxt "field:shuriken_list.template,surveyprotocol:"
+msgid "Survey protocol"
+msgstr "Code du protocole"
+
+msgctxt "field:shuriken_list.template,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:shuriken_list.template,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:observation.misc_obj_line,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:observation.misc_obj_line,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "help:observation.misc_obj_line,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "help:observation.misc_obj_line,observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:observation.misc_obj_point,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:observation.misc_obj_point,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "help:observation.misc_obj_point,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "help:observation.misc_obj_point,observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:observation.misc_obj_poly,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:observation.misc_obj_poly,comment:"
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgctxt "help:observation.misc_obj_poly,name:"
+msgid "Nom"
+msgstr "Nom"
+
+msgctxt "help:observation.misc_obj_poly,observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "help:shuriken_list.list,code:"
+msgid "List label"
+msgstr "Libellé du relevé"
+
+msgctxt "help:shuriken_list.list,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:shuriken_list.list,geom:"
+msgid "Geometry MultiLine (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiLigne (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:shuriken_list.list,observations:"
+msgid "Observations"
+msgstr "Observations"
+
+msgctxt "help:shuriken_list.list,template:"
+msgid "List Template"
+msgstr "Relevé type modèle"
+
+msgctxt "help:shuriken_list.observation,active:"
+msgid "Active"
+msgstr "Active"
+
+msgctxt "help:shuriken_list.observation,comment:"
+msgid "Comment"
+msgstr "Commentaire"
+
+msgctxt "help:shuriken_list.observation,date:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "help:shuriken_list.observation,determination:"
+msgid "Certain determination"
+msgstr "Détermination certaine"
+
+msgctxt "help:shuriken_list.observation,geom:"
+msgid "Geometry MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+msgstr "Géométrie MultiPoint (EPSG=2154, RGF93/Lambert 93)"
+
+msgctxt "help:shuriken_list.observation,google_maps_url:"
+msgid "Google Maps"
+msgstr "Google Maps"
+
+msgctxt "help:shuriken_list.observation,latlong:"
+msgid "Latitude/Longitude"
+msgstr "Latitude/Longitude"
+
+msgctxt "help:shuriken_list.observation,liste:"
+msgid "List"
+msgstr "Relevé"
+
+msgctxt "help:shuriken_list.observation,observation_map:"
+msgid "Map observation"
+msgstr "Carte observation"
+
+msgctxt "help:shuriken_list.observation,selsize:"
+msgid "Size"
+msgstr "Effectif du taxon observé"
+
+msgctxt "help:shuriken_list.observation,size:"
+msgid "Size"
+msgstr "Effectif du taxon observé"
+
+msgctxt "help:shuriken_list.observation,stage:"
+msgid "Stage"
+msgstr "Stade de développement (Insectes, oiseaux...)"
+
+msgctxt "help:shuriken_list.observation,stratum:"
+msgid "Stratum"
+msgstr "Strate (végétaux...)"
+
+msgctxt "help:shuriken_list.observation,taxon:"
+msgid "taxinomie"
+msgstr "Taxinomie"
+
+msgctxt "help:shuriken_list.template,grouptaxo:"
+msgid "ID group taxo of list"
+msgstr "Identifiant du groupe taxonomique sur lequel porteront les relevés"
+
+msgctxt "help:shuriken_list.template,name:"
+msgid "ID Label type"
+msgstr "Identifiant du relevé-type"
+
+msgctxt "help:shuriken_list.template,study:"
+msgid "Study"
+msgstr "Études"
+
+msgctxt "help:shuriken_list.template,surveyprotocol:"
+msgid "ID survey protocol"
+msgstr "Code du protocole associé au relevé-type"
+
+msgctxt "model:ir.action,name:act_list_form"
+msgid "List"
+msgstr "Relevés"
+
+msgctxt "model:ir.action,name:act_observation_form"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "model:ir.action,name:act_observation_misc_obj_line_form"
+msgid "Lignes"
+msgstr "Lignes"
+
+msgctxt "model:ir.action,name:act_observation_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.action,name:act_observation_misc_obj_poly_form"
+msgid "Polygones"
+msgstr "Polygones"
+
+msgctxt "model:ir.action,name:act_template_form"
+msgid "List template"
+msgstr "Relevés type"
+
+msgctxt "model:ir.action,name:report_list_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGIS..."
+
+msgctxt "model:ir.action,name:report_observation_edit"
+msgid "Open in QGis..."
+msgstr "Ouvrir dans QGIS..."
+
+msgctxt "model:ir.ui.menu,name:menu_list"
+msgid "List"
+msgstr "Relevés"
+
+msgctxt "model:ir.ui.menu,name:menu_observation"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "model:ir.ui.menu,name:menu_observation_misc_obj"
+msgid "Objects divers"
+msgstr "Objets divers"
+
+msgctxt "model:ir.ui.menu,name:menu_observation_misc_obj_line_form"
+msgid "Lignes"
+msgstr "Lignes"
+
+msgctxt "model:ir.ui.menu,name:menu_observation_misc_obj_point_form"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "model:ir.ui.menu,name:menu_observation_misc_obj_poly_form"
+msgid "Polygones"
+msgstr "Polygones"
+
+msgctxt "model:ir.ui.menu,name:menu_template"
+msgid "List template"
+msgstr "Relevés type"
+
+msgctxt "model:observation.misc_obj_line,name:"
+msgid "Miscellaneous line object"
+msgstr "Objet ligne divers"
+
+msgctxt "model:observation.misc_obj_point,name:"
+msgid "Miscellaneous point object"
+msgstr "Objet point divers"
+
+msgctxt "model:observation.misc_obj_poly,name:"
+msgid "Miscellaneous polygon object"
+msgstr "Objet polygone divers"
+
+msgctxt "model:res.group,name:group_list_admin"
+msgid "List Administration"
+msgstr "Administration des relevés"
+
+msgctxt "model:shuriken_list.list,name:"
+msgid "List"
+msgstr "Relevés"
+
+msgctxt "model:shuriken_list.observation,name:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "model:shuriken_list.template,name:"
+msgid "List Template"
+msgstr "Relevés type modèle"
+
+msgctxt "selection:shuriken_list.observation,selsize:"
+msgid "Effectif aux environs de"
+msgstr "Effectif aux environs de"
+
+msgctxt "selection:shuriken_list.observation,selsize:"
+msgid "Effectif inférieur à"
+msgstr "Effectif inférieur à"
+
+msgctxt "selection:shuriken_list.observation,selsize:"
+msgid "Effectif supérieur à"
+msgstr "Effectif supérieur à"
+
+msgctxt "selection:shuriken_list.observation,selsize:"
+msgid "Effectif égal à"
+msgstr "Effectif égal à"
+
+msgctxt "view:observation.misc_obj_line:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:observation.misc_obj_line:"
+msgid "Miscellaneous line object"
+msgstr "Objet ligne divers"
+
+msgctxt "view:observation.misc_obj_point:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:observation.misc_obj_point:"
+msgid "Miscellaneous point object"
+msgstr "Objet point divers"
+
+msgctxt "view:observation.misc_obj_poly:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:observation.misc_obj_poly:"
+msgid "Miscellaneous polygon object"
+msgstr "Objet polygone divers"
+
+msgctxt "view:shuriken_list.list:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:shuriken_list.list:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:shuriken_list.list:"
+msgid "List"
+msgstr "Relevés"
+
+msgctxt "view:shuriken_list.list:"
+msgid "Lists"
+msgstr "Relevés"
+
+msgctxt "view:shuriken_list.list:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:shuriken_list.list:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "+1"
+msgstr "+1"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "+10"
+msgstr "+10"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "+100"
+msgstr "+100"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Edit"
+msgstr "Éditer"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Generate"
+msgstr "Générer"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Lines"
+msgstr "Lignes"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Map"
+msgstr "Carte"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Objects"
+msgstr "Objets"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Observation"
+msgstr "Observation"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Points"
+msgstr "Points"
+
+msgctxt "view:shuriken_list.observation:"
+msgid "Polygones"
+msgstr "Polygones"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Amphibiens"
+msgstr "Amphibiens"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Angiospermes"
+msgstr "Angiospermes"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Arachnides"
+msgstr "Arachnides"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Gymnospermes"
+msgstr "Gymnospermes"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Insectes"
+msgstr "Insectes"
+
+msgctxt "view:shuriken_list.template:"
+msgid "List"
+msgstr "Relevés"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Lists"
+msgstr "Relevés"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Mammiferes"
+msgstr "Mammifères"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Oiseaux"
+msgstr "Oiseaux"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Poissons"
+msgstr "Poissons"
+
+msgctxt "view:shuriken_list.template:"
+msgid "Reptiles"
+msgstr "Reptiles"

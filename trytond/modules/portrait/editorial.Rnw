@@ -1,0 +1,11 @@
+\cleardoublepage % Force l'édito à démarrer sur une page de droite
+\thispagestyle{plain} % Style plain pour cette page
+\bgimgedit % Image de fond (../Image/presentation.pdf)
+\addcontentsline{toc}{chapter}{Éditorial}
+\begingroup
+\par\normalfont\fontsize{25}{30}\sffamily\selectfont
+\begin{center}
+\noindent\textcolor{ocre}{Éditorial}\par % Éditorial
+\end{center}
+\endgroup
+\Sexpr{page3} % texte de l'éditorial de la page 3

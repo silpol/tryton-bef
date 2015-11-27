@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form string="Chrono-ventaire lépidoptères - Zone - Session - Liste de Compartiment - Liste de Taxons" col="1">
+    <group id="group_session" col="2" colspan="1">
+        <label name="zonesession"/>
+        <field name="zonesession"/>
+    </group>
+    <field name="zonelistetaxon" mode="tree,form" view_ids="cenl_inventory.inventory_zone_session_listetaxon_chrono_lepdio_view_tree,cenl_inventory.inventory_zone_session_listetaxon_chrono_lepdio_view_form" colspan="1"/>
+</form>

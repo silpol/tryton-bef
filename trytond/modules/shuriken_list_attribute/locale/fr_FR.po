@@ -1,0 +1,231 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:shuriken_list.list,attributes:"
+msgid "Attributes"
+msgstr "Attributs"
+
+msgctxt "field:shuriken_list.template,attribute_set:"
+msgid "Set"
+msgstr "Attribut"
+
+msgctxt "field:sla.attribute,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:sla.attribute,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:sla.attribute,digits:"
+msgid "Digits"
+msgstr "Unité"
+
+msgctxt "field:sla.attribute,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:sla.attribute,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sla.attribute,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sla.attribute,selection:"
+msgid "Selection"
+msgstr "Sélection"
+
+msgctxt "field:sla.attribute,selection_json:"
+msgid "Selection JSON"
+msgstr "Sélection JSON"
+
+msgctxt "field:sla.attribute,sets:"
+msgid "Sets"
+msgstr "Jeux d'attributs"
+
+msgctxt "field:sla.attribute,string:"
+msgid "String"
+msgstr ""
+
+msgctxt "field:sla.attribute,type_:"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "field:sla.attribute,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:sla.attribute,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:sla.attribute-sla.attribute-set,attribute:"
+msgid "Attribute"
+msgstr "Attribut"
+
+msgctxt "field:sla.attribute-sla.attribute-set,attribute_set:"
+msgid "Set"
+msgstr "Attribut"
+
+msgctxt "field:sla.attribute-sla.attribute-set,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:sla.attribute-sla.attribute-set,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:sla.attribute-sla.attribute-set,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:sla.attribute-sla.attribute-set,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sla.attribute-sla.attribute-set,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:sla.attribute-sla.attribute-set,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "field:sla.attribute.set,attributes:"
+msgid "Attributes"
+msgstr "Attributs"
+
+msgctxt "field:sla.attribute.set,create_date:"
+msgid "Create Date"
+msgstr "Date de création"
+
+msgctxt "field:sla.attribute.set,create_uid:"
+msgid "Create User"
+msgstr "Créé par"
+
+msgctxt "field:sla.attribute.set,id:"
+msgid "ID"
+msgstr "Identifiant"
+
+msgctxt "field:sla.attribute.set,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sla.attribute.set,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:sla.attribute.set,write_date:"
+msgid "Write Date"
+msgstr "Date de mise à jour"
+
+msgctxt "field:sla.attribute.set,write_uid:"
+msgid "Write User"
+msgstr "Mis à jour par"
+
+msgctxt "help:shuriken_list.template,attribute_set:"
+msgid "Sete"
+msgstr "Attribut"
+
+msgctxt "help:sla.attribute,selection:"
+msgid "A couple of key and label separated by \":\" per line"
+msgstr "Un couple \"clef:libellé\" séparé par deux points \":\" par ligne"
+
+msgctxt "help:sla.attribute,sets:"
+msgid "Sest"
+msgstr "Attributs"
+
+msgctxt "help:sla.attribute-sla.attribute-set,attribute:"
+msgid "Attribute"
+msgstr "Attribut"
+
+msgctxt "help:sla.attribute-sla.attribute-set,attribute_set:"
+msgid "Set"
+msgstr "Attribut"
+
+msgctxt "help:sla.attribute.set,attributes:"
+msgid "Attributes"
+msgstr "Attributs"
+
+msgctxt "help:sla.attribute.set,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "model:ir.action,name:act_attribute_form"
+msgid "Attributes"
+msgstr "Attributs"
+
+msgctxt "model:ir.action,name:act_attribute_set_form"
+msgid "Attribute Sets"
+msgstr "Jeux d'attributs"
+
+msgctxt "model:ir.ui.menu,name:menu_attribute"
+msgid "Attribute Sets"
+msgstr "Jeux d'attributs"
+
+msgctxt "model:ir.ui.menu,name:menu_attribute_set"
+msgid "Attribute Sets"
+msgstr "Jeux d'attributs"
+
+msgctxt "model:sla.attribute,name:"
+msgid "List Attribute"
+msgstr "Liste d'attributs"
+
+msgctxt "model:sla.attribute-sla.attribute-set,name:"
+msgid "List Attribute - Set"
+msgstr "Liste d'attributs - Jeux d'attributs"
+
+msgctxt "model:sla.attribute.set,name:"
+msgid "List Attribute Set"
+msgstr "Liste d'attributs - Jeux d'attributs"
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "Boolean"
+msgstr ""
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "Char"
+msgstr ""
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "DateTime"
+msgstr ""
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "Float"
+msgstr ""
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "Integer"
+msgstr ""
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "Numeric"
+msgstr ""
+
+msgctxt "selection:sla.attribute,type_:"
+msgid "Selection"
+msgstr "Sélection"
+
+msgctxt "view:sla.attribute.set:"
+msgid "Attribute Set"
+msgstr "Jeux d'attributs"
+
+msgctxt "view:sla.attribute.set:"
+msgid "Attribute Sets"
+msgstr "Jeux d'attributs"
+
+msgctxt "view:sla.attribute:"
+msgid "Attribute"
+msgstr "Attribut"
+
+msgctxt "view:sla.attribute:"
+msgid "Attributes"
+msgstr "Attributs"

@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="res.group" id="group_list_admin">
+            <field name="name">List Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_list_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_list_admin"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_list_admin">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_list_admin"/>
+        </record>        
+        
+        <!-- Template -->
+        <record model="ir.ui.view" id="template_view_tree">
+            <field name="model">shuriken_list.template</field>
+            <field name="type">tree</field>
+            <field name="name">template_tree</field>
+        </record>
+        <record model="ir.ui.view" id="template_view_form">
+            <field name="model">shuriken_list.template</field>
+            <field name="type">form</field>
+            <field name="name">template_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_template_form">
+            <field name="name">List template</field>
+            <field name="res_model">shuriken_list.template</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_template_list_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="template_view_tree"/>
+            <field name="act_window" ref="act_template_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_template_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="template_view_form"/>
+            <field name="act_window" ref="act_template_form"/>
+        </record>
+        <menuitem parent="shuriken_inventory.menu_shuriken_study" sequence="1" id="menu_template" action="act_template_form"/>
+        
+        <!-- List -->
+        <record model="ir.ui.view" id="list_view_tree">
+            <field name="model">shuriken_list.list</field>
+            <field name="type">tree</field>
+            <field name="inherit" eval="None"/>
+            <field name="name">list_tree</field>
+        </record>
+        <record model="ir.ui.view" id="list_view_form">
+            <field name="model">shuriken_list.list</field>
+            <field name="type">form</field>
+            <field name="inherit" eval="None"/>
+            <field name="name">list_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_list_form">
+            <field name="name">List</field>
+            <field name="res_model">shuriken_list.list</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_list_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="list_view_tree"/>
+            <field name="act_window" ref="act_list_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_list_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="list_view_form"/>
+            <field name="act_window" ref="act_list_form"/>
+        </record>
+        <menuitem parent="menu_template" sequence="1" id="menu_list" action="act_list_form"/>
+        
+        <record model="ir.action.report" id="report_list_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">shuriken_list.list</field>
+            <field name="report_name">shuriken_list.list.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_list_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">shuriken_list.list,-1</field>
+            <field name="action" ref="report_list_edit"/>
+        </record>
+
+        <record model="ir.model.access" id="access_list">
+            <field name="model" search="[('model', '=', 'shuriken_list.list')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_list_admin">
+            <field name="model" search="[('model', '=', 'shuriken_list.list')]"/>
+            <field name="group" ref="group_list_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.model.access" id="access_list_template">
+            <field name="model" search="[('model', '=', 'shuriken_list.template')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_list_template_admin">
+            <field name="model" search="[('model', '=', 'shuriken_list.template')]"/>
+            <field name="group" ref="group_list_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        
+        <!-- Observation -->
+        <record model="ir.ui.view" id="observation_view_tree">
+            <field name="model">shuriken_list.observation</field>
+            <field name="type">tree</field>
+            <field name="inherit" eval="None"/>
+            <field name="name">observation_tree</field>
+        </record>
+        <record model="ir.ui.view" id="observation_view_form">
+            <field name="model">shuriken_list.observation</field>
+            <field name="type">form</field>
+            <field name="inherit" eval="None"/>
+            <field name="name">observation_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_observation_form">
+            <field name="name">Observation</field>
+            <field name="res_model">shuriken_list.observation</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_observation_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="observation_view_tree"/>
+            <field name="act_window" ref="act_observation_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_observation_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="observation_view_form"/>
+            <field name="act_window" ref="act_observation_form"/>
+        </record>
+        <menuitem parent="menu_list" sequence="1" id="menu_observation" action="act_observation_form"/>
+        
+        <record model="ir.action.report" id="report_observation_edit">
+            <field name="name">Open in QGis...</field>
+            <field name="model">shuriken_list.observation</field>
+            <field name="report_name">shuriken_list.observation.qgis</field>
+            <field name="report">qgis/qgis.qgs</field>
+        </record>
+        <record model="ir.action.keyword" id="report_observation_edit_kwd">
+            <field name="keyword">form_action</field>
+            <field name="model">shuriken_list.observation,-1</field>
+            <field name="action" ref="report_observation_edit"/>
+        </record>
+
+    </data>
+</tryton>

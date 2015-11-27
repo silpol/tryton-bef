@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<form string="Observation">
+    <label name="liste"/>
+    <field name="liste"/>
+    <notebook colspan="4">               
+        <page string="Observation" id="observation">
+            <group id="group_date" col="6" colspan="4">
+                <label name="date"/>
+                <field name="date"/>
+                <label name="create_uid"/>
+                <field name="create_uid"/>
+                <label name="active"/>
+                <field name="active"/>
+            </group>
+            <group id="group_taxon" col="2" colspan="4">  
+                <label name="taxon"/>
+                <field name="taxon"/>
+            </group> 
+            <group id="group_determination" col="2" colspan="4">               
+                <label name="determination"/>
+                <field name="determination"/>
+            </group>
+            <group id="group_sizebutton" col="5" colspan="4">
+                <group id="group_size" colspan="2">                    
+                    <field name="selsize"/>
+                    <field name="size"/>
+                </group>
+                <group id="group_button" colspan="3">
+                    <button string="+1" name="one"/>
+                    <button string="+10" name="ten"/>
+                    <button string="+100" name="hundred"/>
+                </group>    
+            </group>
+            <group id="group_stage" col="2" colspan="4">                      
+                <label name="stage"/>
+                <field name="stage" widget="selection"/>
+            </group>
+            <group id="group_stratum" col="2" colspan="4">
+                <label name="stratum"/>
+                <field name="stratum" widget="selection"/>
+            </group>
+            <label name="comment" xalign="0"/>
+            <field name="comment" colspan="4"/>                            
+        </page>
+        <page string="Map" id="map">
+            <label name="latlong"/>
+            <field name="latlong"/>
+            <label name="google_maps_url"/>
+            <field name="google_maps_url" widget="url"/>      
+            <field name="observation_map" widget="image" img_width="1280" img_height="960" colspan="4"/>            
+            <button string="Edit" name="observation_edit" icon="tryton-executable" colspan="2"/>
+            <button string="Generate" name="generate" icon="tryton-executable"  colspan="2"/>            
+        </page>
+        <page string="Objects" id="misc_obj">
+            <notebook colspan="1">
+                <page string="Polygones" id="misc_obj_poly">
+                    <field name="misc_obj_poly" />
+                </page>
+                <page string="Lines" id="misc_obj_line">
+                    <field name="misc_obj_line" />
+                </page>
+                <page string="Points" id="misc_obj_point">
+                    <field name="misc_obj_point" />
+                </page>
+            </notebook>
+        </page>
+        <field name="geom"/>        
+    </notebook> 
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="observation"/>
+    <field name="name"/>
+    <field name="comment"/>
+    <field name="active"/>
+</tree>

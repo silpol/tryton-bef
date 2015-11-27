@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<form string="List" col="8">    
+    <notebook colspan="8">
+        <page string="List" id="list" col="2">
+            <group id="group_template" colspan="2">  
+                <label name="template"/>
+                <field name="template"/>
+            </group>
+            <label name="code"/>
+            <field name="code"/>
+            <label name="date"/>
+            <field name="date"/>
+            <label name="active"/>
+            <field name="active" xexpand="0" width="100"/>       
+        </page>
+        <page string="Observation" id="observation" col="2">
+            <label name="grouptaxo"/>          
+            <field name="grouptaxo"/>                                        
+            <field name="observations" colspan="2"/>            
+        </page> 
+        <page string="Map" id="map" col="2">                                        
+            <field name="list_map" colspan="2" widget="image" img_width="640" img_height="480"/>
+            <button string="Edit" name="list_edit" icon="tryton-executable" />
+            <button string="Generate" name="generate" icon="tryton-executable" />
+        </page>        
+    </notebook>
+</form>

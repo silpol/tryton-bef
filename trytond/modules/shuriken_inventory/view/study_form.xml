@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="Study">
+    <group string="Study " id="group_study" col="8" colspan="4">                
+        <label name="name"/>
+        <field name="name" colspan="3"/>
+        <label name="contractnumber"/>
+        <field name="contractnumber"/>                            
+        <label name="active"/>
+        <field name="active"/>
+    </group>    
+    <notebook colspan="8">
+        <page string="Templates" id="template" col="1">
+            <field name="templates"/>
+        </page>
+        <page string="Map" id="map" col="1">            
+            <field name="study_map" widget="image" img_width="1280" img_height="960"/>
+            <button string="Generate image" name="study_map_gen" icon="tryton-executable"/>
+            <field name="geom"/>            
+        </page>        
+    </notebook>    
+</form>

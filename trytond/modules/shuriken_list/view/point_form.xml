@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Miscellaneous point object" col="2">
+    <label name="observation"/>
+    <field name="observation"/>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="comment"/>
+    <field name="comment"/>
+    <label name="active"/>
+    <field name="active"/>
+    <field colspan="2" name="image" widget="image" img_width="640" img_height="480"/>
+    <button colspan="2" string="Edit" name="misc_obj_point_edit" icon="tryton-executable"/>
+</form>
